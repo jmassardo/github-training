@@ -120,6 +120,7 @@ flowchart TB
 
 ## What You'll Learn
 This module covers:
+
 - Publishing packages to GitHub Packages
 - GitHub Container Registry (GHCR)
 - Package versioning and release strategies
@@ -129,6 +130,7 @@ This module covers:
 
 ## Customer Success Context
 As a CSM, you'll help customers:
+
 - Consolidate from multiple package registries
 - Implement secure package workflows
 - Set up private package sharing across teams

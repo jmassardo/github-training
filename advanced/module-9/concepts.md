@@ -216,12 +216,14 @@ EMU provides the highest level of identity control:
 ### When to Recommend EMU
 
 **Recommend EMU when:**
+
 - Strict compliance requirements (financial services, healthcare)
 - Need complete control over user identity lifecycle
 - Want to prevent data leakage to personal accounts
 - Organization has mature IdP infrastructure
 
 **Recommend Standard Enterprise when:**
+
 - Developers contribute to open source projects
 - Acquisitions bring users with existing GitHub identities
 - Organization wants user flexibility

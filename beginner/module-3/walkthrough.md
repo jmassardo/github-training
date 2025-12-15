@@ -212,6 +212,7 @@ flowchart TB
 ### Workflow Run Details
 
 Click a workflow to see:
+
 - Job steps and duration
 - Logs for each step
 - Artifacts produced
@@ -320,6 +321,7 @@ Navigate to any user profile (click a username):
 ### Contribution Graph
 
 The green squares show daily activity:
+
 - Darker green = more contributions
 - Hover for specific counts
 - Great for evaluating developer activity
@@ -344,6 +346,7 @@ Organizations have additional features:
 ### Teams
 
 Teams organize members with shared permissions:
+
 - Nested teams (parent/child)
 - Team discussions
 - Team-level project access

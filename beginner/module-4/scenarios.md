@@ -50,6 +50,7 @@ prev_section:
 
 **Situation:**
 A financial services customer is preparing for SOC 2 audit. The auditor requires evidence that:
+
 - All production code is reviewed before deployment
 - Developers cannot merge their own code
 - All commits are attributable to verified identities
@@ -122,6 +123,7 @@ A customer is consolidating 50 microservice repositories into a single monorepo.
 ```
 
 Additionally:
+
 - Create repository rulesets for different path patterns if needed
 - Use GitHub Teams that mirror your service teams
 - Consider CODEOWNERS validation in CI to catch syntax errors
@@ -296,6 +298,7 @@ Would you like me to help you map your current security requirements to this tie
 ### What's Next
 
 In **Module 5: GitHub Actions & Automation**, you'll learn how to:
+
 - Create CI/CD workflows
 - Automate code quality checks
 - Build custom automation

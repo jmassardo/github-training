@@ -93,6 +93,7 @@ on:
 - Need to explicitly download artifacts
 - Can filter by branch and completion status
 **Use cases:**
+
 - `needs`: Sequential jobs in same pipeline (build → test → deploy)
 - `workflow_run`: Triggered pipelines (CI completes → trigger CD)
 </details>
@@ -140,6 +141,7 @@ git push
 ```
 
 **Best practice:**
+
 - Have rollback procedures documented
 - Test rollback regularly
 - Keep previous 3-5 versions available
@@ -222,6 +224,7 @@ env:
 ```
 
 **Best practice:**
+
 - Use repository secrets for truly shared values
 - Use environment secrets for environment-specific
 - Use external secret managers for rotation/audit
@@ -230,6 +233,7 @@ env:
 <details markdown="1">
 <summary>View Answer</summary>
 **Configuration:**
+
 1. **Create teams:**
    - `@org/qa-team`
    - `@org/security-team`

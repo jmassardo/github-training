@@ -137,7 +137,7 @@ By the end of this module, you will be able to:
 
 Before starting this module, you should have:
 
-- ✅ Completed Module 1 (SDLC fundamentals)
+- ✅ Completed [Module 1: SDLC Fundamentals](/beginner/module-1/)
 - ✅ A GitHub account (free tier is fine)
 - ✅ Git installed on your computer ([Download Git](https://git-scm.com/downloads))
 - ✅ A text editor (VS Code recommended)

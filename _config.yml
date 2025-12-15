@@ -2,8 +2,8 @@
 title: "GitHub Training"
 tagline: "CSM & CSA Certification Program"
 description: "Comprehensive GitHub training program for Customer Success Managers and Customer Success Architects"
-baseurl: "" # Set to "/github-training" if hosted as a subpath
-url: "" # Set to your domain, e.g., "https://training.example.com"
+baseurl: "/github-training" # Set to "/github-training" if hosted as a subpath
+url: "https://dxrf.com" # Set to your domain, e.g., "https://training.example.com"
 # logo: '/public/logo.png' # Uncomment and add logo file if needed
 
 # Site configurations

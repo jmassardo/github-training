@@ -82,10 +82,12 @@ These metrics predict both organizational performance AND team well-being. Elite
 **DORA research proves this is wrong.** 
 
 The research shows that elite performers have BOTH:
+
 - Higher deployment frequency (multiple deploys per day)
 - Lower change failure rates (0-15%)
 
 This works because:
+
 - Small, frequent changes are easier to test and review
 - Fast feedback loops catch problems quickly
 - Automated pipelines are more reliable than manual processes
@@ -113,6 +115,7 @@ D) Time from deployment to customer feedback
 Lead time measures the efficiency of your delivery pipeline—from when a developer commits code until it's running in production.
 
 Benchmarks:
+
 - **Elite**: Less than one hour
 - **High**: Less than one week
 - **Medium**: One to six months
@@ -156,6 +159,7 @@ Note: Some organizations measure from PR creation to merge, which captures part 
 **Relevance to engineering**:
 
 If you measure and reward:
+
 - **Lines of code** → Developers write verbose, redundant code
 - **Commits per day** → Small, meaningless commits
 - **PR merge time** → Quick approvals without real review

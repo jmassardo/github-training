@@ -95,9 +95,12 @@ By the end of this module, you will be able to:
 
 ## Prerequisites
 
-{% for prereq in page.prerequisites %}
-- {{ prereq }}
-{% endfor %}
+Before starting this module, you should have completed:
+
+- [Module 9: Enterprise Administration](/advanced/module-9/)
+- [Module 10: GitHub APIs, Webhooks & Apps](/advanced/module-10/)
+- Basic understanding of Infrastructure as Code concepts
+- Familiarity with Terraform or similar IaC tools
 
 ---
 

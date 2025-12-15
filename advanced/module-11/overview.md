@@ -63,12 +63,14 @@ Enterprise customers consistently face these GitHub management challenges:
 ### The Business Case for IaC
 
 **For Engineering Leaders:**
+
 - **Consistency**: Every repository follows organizational standards automatically
 - **Speed**: New project setup in minutes, not days
 - **Auditability**: Complete history of every configuration change
 - **Scalability**: Manage 1,000 repos as easily as 10
 
 **For Security & Compliance:**
+
 - **Drift Detection**: Automatically identify configuration that deviates from policy
 - **Change Control**: All modifications go through pull request review
 - **Audit Trail**: Git history provides complete compliance documentation
@@ -94,6 +96,7 @@ flowchart LR
 </div>
 
 **Key Benefits:**
+
 1. **Declarative**: Describe desired state, not imperative steps
 2. **Versioned**: All changes tracked in Git history
 3. **Automated**: CI/CD applies changes automatically
@@ -124,6 +127,7 @@ resource "github_repository" "example" {
 ```
 
 **Strengths:**
+
 - Mature ecosystem, extensive documentation
 - State management handles complex dependencies
 - Large community, many examples available
@@ -148,6 +152,7 @@ const repo = new github.Repository("my-application", {
 ```
 
 **Strengths:**
+
 - Use TypeScript, Python, Go, or C#
 - Full programming language features (loops, conditionals)
 - Easier for developers already familiar with these languages

@@ -60,10 +60,12 @@ sections:
 <details markdown="1">
 <summary>View Answer</summary>
 **`packages: read`:**
+
 - Download/pull packages from GitHub Packages
 - Required for consuming private packages
 - Sufficient for most CI jobs that just need dependencies
 **`packages: write`:**
+
 - Upload/push packages to GitHub Packages
 - Delete package versions
 - Required for publishing workflows
@@ -91,6 +93,7 @@ jobs:
 <details markdown="1">
 <summary>View Answer</summary>
 **Multiple layers of trust:**
+
 1. **Signature verification:**
 
 ```bash
@@ -226,12 +229,14 @@ jobs:
 ```
 
 **Results in tags like:**
+
 - `ghcr.io/org/app:1.2.3` - Specific version
 - `ghcr.io/org/app:1.2` - Minor version (auto-updates)
 - `ghcr.io/org/app:1` - Major version (auto-updates)
 - `ghcr.io/org/app:sha-abc1234` - Immutable
 - `ghcr.io/org/app:latest` - Latest stable
 **For production:**
+
 - **Development:** Use `:main` or `:sha-*` tags
 - **Staging:** Use `:sha-*` or pre-release tags
 - **Production:** Use semantic version tags (`:1.2.3`)

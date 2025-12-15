@@ -116,6 +116,7 @@ You'll encounter customers comparing options:
 | Self-hosted | Enterprise Server | Self-managed | Data Center | Server |
 
 **GitHub's advantages:**
+
 - Largest developer community
 - Best-in-class developer experience
 - Copilot AI integration

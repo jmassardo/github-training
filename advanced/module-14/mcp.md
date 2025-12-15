@@ -428,6 +428,7 @@ Current Status: Degraded
 - Error rate: 5.2%
 
 Recent Events:
+
 - 10:30 AM: Database connection pool exhausted
 - 10:45 AM: Auto-scaling triggered
 - 11:00 AM: Connection pool size increased

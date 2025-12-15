@@ -71,6 +71,7 @@ This will protect:
 ```
 
 For multiple branches, use patterns:
+
 - `release/*` - All release branches
 - `main` - Exact match
 - `*` - All branches (careful!)
@@ -229,6 +230,7 @@ Target branches:
 **Step 5: Create Organization Ruleset (Enterprise)**
 
 For organization-wide rules:
+
 1. Go to **Organization Settings** → **Rules** → **Rulesets**
 2. Create ruleset with target repositories:
    ```

@@ -89,6 +89,7 @@ A large enterprise customer (5000+ developers, 2000+ repositories) wants to roll
 - Require CodeQL checks to pass
 - Enable push protection
 **Key success factors:**
+
 1. **Training before rollout** - Developers need to understand what alerts mean
 2. **Clear ownership** - Define who triages which alert types
 3. **SLA agreements** - Critical: 24h, High: 7d, Medium: 30d
@@ -108,6 +109,7 @@ A customer enabled CodeQL but developers are ignoring alerts because "they're al
 ### Your Response
 "This is a common challenge. Let's diagnose and fix it:
 **Immediate Actions:**
+
 1. **Audit recent dismissals:**
 
 ```graphql
@@ -136,6 +138,7 @@ queries: default  # Instead of +security-extended
 ```
 
 **Configuration Improvements:**
+
 3. **Exclude test code:**
 
 ```yaml
@@ -160,6 +163,7 @@ extensions:
 ```
 
 **Process Improvements:**
+
 5. **Require triage notes:**
 - Every dismissal needs a reason
 - Review dismissals weekly
@@ -167,6 +171,7 @@ extensions:
 - Submit to GitHub for query improvement
 - Helps the whole community
 **Developer Experience:**
+
 7. **Only show high-confidence:**
 - Start with `default` suite
 - Add `security-extended` only for specific high-risk repos
@@ -186,6 +191,7 @@ A customer is going through SOC 2 audit and needs to demonstrate security scanni
 ### Your Response
 "GHAS provides excellent compliance evidence. Here's what auditors typically need:
 **1. Policy Evidence:**
+
 - Screenshot of organization security settings
 - Branch protection rules requiring CodeQL
 - SECURITY.md file documenting policies
@@ -201,11 +207,13 @@ Organization → Security → Security overview → Export CSV
 ```
 
 **3. Detection Evidence:**
+
 - Security Overview dashboard showing:
   - Total alerts by severity
   - Repositories scanned
   - Mean time to remediate
 **4. Remediation Evidence:**
+
 - Closed alerts showing timeline
 - PRs fixing vulnerabilities
 - Audit log of security events
@@ -241,6 +249,7 @@ query {
 ```
 
 **For your SOC 2 specifically:**
+
 - CC6.1 (Security): CodeQL + Secret Scanning
 - CC6.6 (Processing Integrity): Dependency Review
 - CC7.1 (Availability): Scanning doesn't block deploys
@@ -258,6 +267,7 @@ A developer accidentally committed an AWS access key. It was detected by secret 
 ### Your Response
 "Let's move quickly. Here's your incident response checklist:
 **Immediate (Next 15 minutes):**
+
 1. **Rotate the credential NOW:**
    - Go to AWS IAM Console
    - Deactivate the exposed access key
@@ -268,6 +278,7 @@ A developer accidentally committed an AWS access key. It was detected by secret 
    - Check for new resources created
    - Review billing for anomalies
 **Short-term (Next hour):**
+
 3. **Remove from Git history:**
 
 ```bash
@@ -290,12 +301,14 @@ git push origin --force --tags
 - If partner secret, GitHub already notified AWS
 - AWS may auto-revoke if their policy is configured
 **Documentation:**
+
 6. **Document the incident:**
 - When was the secret committed?
 - When was it detected?
 - When was it rotated?
 - Was there unauthorized access?
 **Prevention:**
+
 7. **Enable push protection:**
 - Prevents this from happening again
 - Settings → Code security → Push protection
@@ -345,6 +358,7 @@ Do you need help with any of these steps?"
 
 ## What's Next
 In **Module 7: Dependency & Package Management**, you'll learn about:
+
 - GitHub Packages registry
 - Container registry (GHCR)
 - Package publishing workflows

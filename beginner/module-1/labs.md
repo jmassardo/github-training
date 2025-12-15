@@ -271,11 +271,13 @@ Answer these in your notes:
 <summary>Click to reveal suggested answers</summary>
 
 **Gaps identified:**
+
 - Testing phase (no automation)
 - Deployment phase (manual)
 - Security (reactively found issues)
 
 **Priority GitHub features:**
+
 1. GitHub Actions for CI/CD
 2. GitHub Advanced Security
 3. GitHub Projects (could consolidate from Jira)
@@ -283,11 +285,13 @@ Answer these in your notes:
 **Methodology guess:** Likely Waterfall or Agile without DevOps practices (monthly releases, manual deployment)
 
 **Quick wins:**
+
 - Demo Actions running tests automatically
 - Show secret scanning catching credentials
 - Dependabot finding vulnerable dependencies
 
 **Expansion opportunities:**
+
 - Copilot for developer productivity
 - GitHub Advanced Security full rollout
 - Migrate from Jira to GitHub Projects
@@ -307,6 +311,7 @@ Answer these in your notes:
 <div class="callout-title">📸 Capture Your Work</div>
 
 Take screenshots of your completed labs! They're useful for:
+
 - Reviewing later
 - Showing during customer conversations
 - Building your GitHub portfolio

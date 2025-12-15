@@ -79,6 +79,7 @@ In GitHub, this maps to creating **Issues** with detailed descriptions and **Pro
 **Waterfall**
 
 Key indicators:
+
 - Complete requirements before coding (sequential phases)
 - Quarterly releases (infrequent, large releases)
 - Emphasis on documentation upfront
@@ -122,11 +123,13 @@ Note: GitHub Actions spans both Testing (CI) and Deployment (CD).
 **"Shift left" means moving activities earlier in the development process.**
 
 Examples:
+
 - **Security shift left**: Running security scans during development, not just before release
 - **Testing shift left**: Writing tests as code is written, not after
 - **Quality shift left**: Code review and static analysis during development
 
 GitHub features that enable shift left:
+
 - **Dependabot** - Catches vulnerabilities early
 - **Code scanning** - Finds issues during PR review
 - **Branch protection** - Requires tests before merge
@@ -144,11 +147,13 @@ GitHub features that enable shift left:
 **Violated Principle:** DevOps principle of fast feedback and continuous delivery
 
 **Problems:**
+
 - Slow lead time (time from commit to production)
 - Developer frustration and context switching
 - Batch deployments lead to higher risk
 
 **GitHub Solutions:**
+
 1. **Branch protection rules** - Automated checks replace manual gates
 2. **Required reviewers** - Parallel code review (async, faster)
 3. **GitHub Actions** - Automated testing gives confidence
@@ -175,6 +180,7 @@ GitHub features that enable shift left:
 - **Reducing silos** - Cross-team collaboration
 
 Key enablers in GitHub:
+
 - Internal visibility for repositories
 - GitHub Discussions
 - README files and wikis
@@ -195,6 +201,7 @@ Key enablers in GitHub:
 Concept: You can never fully simulate production, so observe real user behavior and catch issues in the wild.
 
 **Supporting practices:**
+
 - Feature flags (gradual rollout)
 - Monitoring and observability
 - Canary deployments
@@ -230,6 +237,7 @@ Concept: You can never fully simulate production, so observe real user behavior 
    - Shows operational resilience
 
 **Bonus metrics:**
+
 - Pull request cycle time
 - Code review turnaround
 - Build success rate

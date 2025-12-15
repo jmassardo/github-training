@@ -65,7 +65,8 @@ Success with Copilot requires a shift in how you approach coding. Think of Copil
 
 ### The Human-AI Partnership
 
-```mermaid
+<div class="mermaid-container">
+<div class="mermaid">
 flowchart LR
     A[You: Intent & Design] --> B[Copilot: Implementation]
     B --> C[You: Review & Refine]
@@ -75,16 +76,18 @@ flowchart LR
     style B fill:#8250df,color:#fff
     style C fill:#0969da,color:#fff
     style D fill:#1a7f37,color:#fff
-
-```
+</div>
+</div>
 
 **Your Role:**
+
 - Define what needs to be built
 - Provide clear context and requirements
 - Review all suggestions critically
 - Ensure code meets quality standards
 
 **Copilot's Role:**
+
 - Generate implementation options
 - Handle boilerplate and patterns
 - Suggest solutions to common problems
@@ -273,6 +276,7 @@ Teach Copilot usage alongside coding standards:
 **Symptom:** Suggestions are irrelevant or wrong
 
 **Solution:**
+
 - Check that the right files are open
 - Add clarifying comments
 - Break complex tasks into smaller pieces
@@ -282,6 +286,7 @@ Teach Copilot usage alongside coding standards:
 **Symptom:** Copilot suggests deprecated APIs or old practices
 
 **Solution:**
+
 - Verify against official documentation
 - Add comments specifying versions/standards
 - Report significant issues to GitHub
@@ -291,6 +296,7 @@ Teach Copilot usage alongside coding standards:
 **Symptom:** Using AI as a crutch without learning
 
 **Solution:**
+
 - Use `/explain` to understand generated code
 - Modify suggestions to learn how they work
 - Implement simple things yourself for practice

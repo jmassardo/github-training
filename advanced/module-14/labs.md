@@ -600,6 +600,7 @@ export default router;
 ### Task 3.4: Refine Based on Results
 
 If Copilot doesn't follow your patterns:
+
 - Make instructions more specific
 - Add more examples
 - Clarify ambiguous guidance

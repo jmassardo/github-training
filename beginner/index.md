@@ -16,6 +16,7 @@ Welcome to the beginning of your GitHub journey! This phase establishes the foun
 ### What You'll Learn
 
 By the end of this phase, you'll understand:
+
 - How software teams plan, develop, and collaborate
 - The Software Development Lifecycle (SDLC) and DevOps principles
 - Git version control fundamentals and workflows
@@ -39,6 +40,7 @@ By the end of this phase, you'll understand:
 Before diving into tools, understand the problem space: How do software teams work? What problems does GitHub solve?
 
 **Topics:**
+
 - Software Development Lifecycle (SDLC) methodologies
 - Agile, Scrum, and DevOps principles
 - Planning phase: Requirements, user stories, and specifications
@@ -46,6 +48,7 @@ Before diving into tools, understand the problem space: How do software teams wo
 - GitHub Well-Architected Framework introduction
 
 **Learning Outcomes:**
+
 - Explain SDLC phases and common methodologies
 - Understand DevOps culture and practices
 - Identify where GitHub fits in the development workflow
@@ -61,6 +64,7 @@ Before diving into tools, understand the problem space: How do software teams wo
 Master the foundation of all source code management: Git version control system.
 
 **Topics:**
+
 - What is version control and why it matters
 - Git architecture: repositories, commits, branches
 - Essential Git commands (clone, add, commit, push, pull)
@@ -69,6 +73,7 @@ Master the foundation of all source code management: Git version control system.
 - Commit best practices and commit messages
 
 **Learning Outcomes:**
+
 - Create and manage Git repositories
 - Use branching effectively for feature development
 - Resolve merge conflicts confidently
@@ -85,6 +90,7 @@ Master the foundation of all source code management: Git version control system.
 Navigate GitHub.com confidently and master core collaboration features.
 
 **Topics:**
+
 - GitHub account setup and profile optimization
 - Creating and managing repositories
 - Issues: Creating, labeling, assigning, and tracking
@@ -95,6 +101,7 @@ Navigate GitHub.com confidently and master core collaboration features.
 - Discussions and community features
 
 **Learning Outcomes:**
+
 - Navigate GitHub.com interface efficiently
 - Create and manage repositories with proper settings
 - Use Issues and Projects for planning and tracking
@@ -111,6 +118,7 @@ Navigate GitHub.com confidently and master core collaboration features.
 Understand how SCM works in real teams: workflows, collaboration patterns, and best practices.
 
 **Topics:**
+
 - Team collaboration workflows (forking, branching, PR workflows)
 - Code review culture and best practices
 - Branch protection rules and repository settings
@@ -120,6 +128,7 @@ Understand how SCM works in real teams: workflows, collaboration patterns, and b
 - Team communication and notification management
 
 **Learning Outcomes:**
+
 - Design appropriate workflows for different team sizes
 - Configure repository protection rules
 - Conduct effective code reviews
@@ -137,6 +146,7 @@ Understand how SCM works in real teams: workflows, collaboration patterns, and b
 **Objective:** Demonstrate mastery of beginner concepts by building a collaborative documentation repository for a fictional product team.
 
 **Requirements:**
+
 1. Create a repository with proper README, CONTRIBUTING, and CODE_OF_CONDUCT
 2. Set up branch protection rules requiring PR reviews
 3. Create a GitHub Project board with columns for documentation tasks
@@ -147,11 +157,13 @@ Understand how SCM works in real teams: workflows, collaboration patterns, and b
 8. Document the workflow in a wiki or GitHub Pages site
 
 **Deliverables:**
+
 - Live repository demonstrating all requirements
 - 10-minute presentation walking through your workflow
 - Written reflection on lessons learned
 
 **Assessment Criteria:**
+
 - Repository structure and documentation quality (25%)
 - Proper use of Issues and Projects (25%)
 - PR process and code review interactions (25%)

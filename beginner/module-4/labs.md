@@ -127,6 +127,7 @@ git push origin main
 - Security modules in `/src/*/security/`
 
 **Teams:**
+
 - `@acme/frontend-team`
 - `@acme/backend-team`
 - `@acme/platform-team`
@@ -256,6 +257,7 @@ git push origin "$VERSION"
    - v2.0.0-beta.1 - Pre-release
 
 **Validation:**
+
 - Releases appear on repository Releases page
 - Auto-generated notes correctly categorize changes
 - Build artifacts attached to releases

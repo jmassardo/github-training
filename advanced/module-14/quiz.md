@@ -120,6 +120,7 @@ D) Users, Teams, and Permissions
 **A) Resources, Tools, and Prompts**
 
 MCP servers provide three types of capabilities:
+
 - **Resources**: Static data that can be read
 - **Tools**: Actions that can be performed  
 - **Prompts**: Pre-defined prompt templates
@@ -230,6 +231,7 @@ D) Selected repositories
 **D) Selected repositories**
 
 Copilot seats can be assigned to:
+
 - All members (everyone in the organization)
 - Selected members (specific individual users)
 - Selected teams (team-based allocation)
@@ -297,6 +299,7 @@ D) Compare number of commits before and after Copilot
 **B) Combine quantitative metrics with qualitative data like surveys and time savings**
 
 Effective ROI measurement combines:
+
 - Usage metrics (from API data)
 - Quality metrics (acceptance rate, code retention)
 - Impact metrics (surveys, productivity indicators, time savings)
@@ -380,6 +383,7 @@ D) Encrypted configuration files and secrets
 **B) Architecture documentation, coding standards, and API specifications**
 
 Knowledge bases work best with:
+
 - Architecture documentation
 - API specifications
 - Coding standards

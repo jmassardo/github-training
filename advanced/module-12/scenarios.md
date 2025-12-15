@@ -92,6 +92,7 @@ The key insight: Elite teams are both faster AND more stable."
 
 **Phase 3: Connect to Business Value**
 "Rather than measuring 'productivity' directly, these metrics show:
+
 - How efficiently you deliver value (frequency, lead time)
 - How resilient your systems are (MTTR, failure rate)
 - Where bottlenecks exist in your process
@@ -100,6 +101,7 @@ This gives your CEO confidence that engineering is improving continuously."
 
 **Phase 4: Propose Solution**
 "GitHub can help you:
+
 1. Collect these metrics through our APIs and Actions
 2. Build dashboards using your existing BI tools
 3. Set up automated weekly reports
@@ -148,6 +150,7 @@ Would you like to start with a pilot on one or two teams?"
 
 **Phase 3: Evidence Collection**
 "For your auditor, you'll be able to provide:
+
 - **Audit log exports** showing all code changes went through PRs
 - **Branch protection evidence** showing review requirements
 - **Approval records** from merged PRs
@@ -155,6 +158,7 @@ Would you like to start with a pilot on one or two teams?"
 
 **Phase 4: Longer-term Hardening**
 After the audit, let's:
+
 - Implement comprehensive governance policies
 - Set up drift detection
 - Create automated compliance reporting
@@ -184,6 +188,7 @@ The good news: GitHub's features are designed with compliance in mind. We can ge
 
 **Diagnose the Problem**
 Common issues:
+
 - Measuring individual developers (creates competition)
 - Lines of code or commits (encourages gaming)
 - Using metrics for performance reviews (fear-based)
@@ -201,6 +206,7 @@ Most importantly: Teams that improve on DORA metrics also report higher job sati
 
 **Propose Safe Implementation**
 "What if we:
+
 1. Start with private metrics only the team sees
 2. Focus on improvement trends, not absolute numbers
 3. Let the team choose what to focus on
@@ -282,6 +288,7 @@ Let's design guardrails that are invisible to developers unless they try to do s
 
 **Phase 1: Gather Data**
 "Let's collect concrete metrics from your usage:
+
 - Deployment frequency before/after
 - Lead time improvements
 - Security vulnerabilities caught
@@ -318,6 +325,7 @@ Value Categories:
 
 **Phase 3: Build the Narrative**
 "Beyond the numbers, the story matters:
+
 - Before: Manual processes, security gaps, slow delivery
 - After: Automated pipelines, continuous security, faster innovation
 - Future: AI-assisted development with Copilot
@@ -359,6 +367,7 @@ Practice these scenarios with a colleague:
 You've completed Module 12: Governance, Compliance & DORA Metrics.
 
 **Key Takeaways:**
+
 - DORA metrics predict organizational AND team performance
 - Governance enables speed through guardrails, not gates
 - Compliance can be continuous, not just audit-time

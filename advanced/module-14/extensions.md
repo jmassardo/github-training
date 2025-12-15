@@ -128,6 +128,7 @@ flowchart LR
 ### Step 2: Enable Copilot Extension
 
 In your GitHub App settings, enable:
+
 - **Copilot** → Enable as Copilot Extension
 - Configure the agent endpoint URL
 

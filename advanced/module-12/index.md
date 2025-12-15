@@ -95,9 +95,12 @@ By the end of this module, you will be able to:
 
 ## Prerequisites
 
-{% for prereq in page.prerequisites %}
-- {{ prereq }}
-{% endfor %}
+Before starting this module, you should have completed:
+
+- [Module 9: Enterprise Administration](/advanced/module-9/)
+- [Module 11: Infrastructure as Code & Operations](/advanced/module-11/)
+- Understanding of compliance frameworks (SOC 2, GDPR, etc.)
+- Familiarity with audit requirements
 
 ---
 

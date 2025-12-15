@@ -120,6 +120,7 @@ Accepted
 ## Context
 We need to implement dark mode across our React application.
 Options considered:
+
 1. CSS-in-JS with theme context
 2. CSS custom properties (variables)
 3. Separate dark mode stylesheet
@@ -254,6 +255,7 @@ jobs:
 ```
 
 **Status checks appear on the PR:**
+
 - ✅ Tests passed (42 tests)
 - ✅ Lint passed
 - ✅ Build successful

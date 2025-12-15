@@ -73,6 +73,7 @@ A customer uses Artifactory for Maven, npm registry for JavaScript, and Docker H
 | License scanning | ✅ | Via Dependabot |
 | Build info | ✅ | Via attestations |
 **Migration Plan:**
+
 1. **Phase 1: Containers (Week 1-2)**
    - Lowest risk, easiest migration
    - Update CI to push to GHCR
@@ -87,10 +88,12 @@ A customer uses Artifactory for Maven, npm registry for JavaScript, and Docker H
    - Configure Maven settings.xml
    - Test with internal consumers
 **Cost Savings:**
+
 - GitHub Packages included with GitHub Enterprise
 - No additional per-artifact storage fees
 - Single credential management
 **What you might miss:**
+
 - Advanced caching/proxying features
 - Virtual repository aggregation
 - Detailed analytics
@@ -165,10 +168,12 @@ updates:
 ```
 
 **6. Private Registry Proxy:**
+
 - Configure GitHub Packages to proxy public registries
 - All packages go through your controlled endpoint
 - Enables auditing and blocking
 **Defense in Depth:**
+
 - ✅ Dependabot alerts for vulnerabilities
 - ✅ Lock files for reproducible builds
 - ✅ Attestations for provenance
@@ -197,6 +202,7 @@ All packages visible in one place:
 ```
 
 **2. Internal Package Registry (InnerSource):**
+
 - Create a `packages` or `registry` repository
 - Catalog all internal packages
 - Include documentation and examples
@@ -219,6 +225,7 @@ All packages visible in one place:
 ```
 
 **3. Template Repositories:**
+
 - Create starter templates that include internal packages
 - `gh repo create --template org/node-template`
 **4. Access Control Strategy:**
@@ -232,6 +239,7 @@ Organization Packages:
 ```
 
 **5. Package Announcements:**
+
 - Use GitHub Discussions in registry repo
 - Announce new packages and major updates
 - Gather feedback from consumers
@@ -250,6 +258,7 @@ Organization Packages:
 ```
 
 **Adoption Metrics:**
+
 - Track package downloads
 - Survey teams on discovery experience
 - Measure duplicate code reduction
@@ -282,6 +291,7 @@ Would you like help setting up the registry repository?"
 
 ### What's Next
 In **Module 8: CI/CD Pipelines & Deployment**, you'll learn:
+
 - Advanced deployment strategies
 - Environment management
 - Deployment protection rules

@@ -296,6 +296,7 @@ terraform apply
 ### Challenge
 
 Extend the module to:
+
 - Add CODEOWNERS file automatically
 - Configure GitHub Actions permissions
 - Set up required status checks

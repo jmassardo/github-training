@@ -63,6 +63,7 @@ github-training/
 ### Site Configuration
 
 Edit `_config.yml` to customize:
+
 - Site title and tagline
 - Author information
 - Navigation links
@@ -71,6 +72,7 @@ Edit `_config.yml` to customize:
 ### Styling
 
 The site uses a GitHub-inspired design. Modify the SCSS files in `_scss/` to customize:
+
 - `_config.scss` - Color variables and theme settings
 - `_training.scss` - Main layout and component styles
 - `_training-module.scss` - Module-specific styles
@@ -91,6 +93,7 @@ The site uses a GitHub-inspired design. Modify the SCSS files in `_scss/` to cus
 ### Other Platforms
 
 The static site in `_site/` can be deployed to:
+
 - Netlify
 - Vercel
 - AWS S3/CloudFront
@@ -102,6 +105,7 @@ The static site in `_site/` can be deployed to:
 ### Module Layout
 
 Each module follows a consistent structure:
+
 - `index.md` - Module overview and navigation
 - `overview.md` - Context and learning objectives
 - `concepts.md` - Core concepts and theory

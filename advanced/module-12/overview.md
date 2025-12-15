@@ -115,6 +115,7 @@ DORA metrics correlate with both organizational performance AND developer well-b
 ### What is DORA?
 
 The **DevOps Research and Assessment** (DORA) team conducted multi-year research to identify metrics that predict:
+
 - Organizational performance (profitability, market share)
 - Non-commercial performance (customer satisfaction, quality)
 - Team culture and developer well-being
@@ -145,6 +146,7 @@ Traditional thinking: "Fast = Risky" (more deployments = more failures)
 DORA research proved: **Elite performers are both faster AND more stable**
 
 This is because:
+
 - Small, frequent changes are easier to test and debug
 - Fast feedback loops catch issues quickly
 - Automated processes are more reliable than manual ones
@@ -167,6 +169,7 @@ This is because:
 ### GitHub Copilot Metrics
 
 With GitHub Copilot, organizations can measure AI-assisted development:
+
 - **Acceptance Rate**: How often suggestions are accepted
 - **Lines of Code Saved**: Estimated productivity gain
 - **Active Users**: Adoption across the organization

@@ -86,6 +86,7 @@ D) Terraform can only manage new resources
 **B) Use `terraform import` to bring existing resources into state**
 
 The import process:
+
 1. Define the resource in Terraform configuration
 2. Run `terraform import github_repository.name org/repo-name`
 3. Update configuration to match imported state
@@ -111,6 +112,7 @@ D) OAuth user token
 **C) GitHub App with installation token**
 
 GitHub Apps provide:
+
 - **Fine-grained permissions** - Only grant access needed
 - **Organization-scoped** - Not tied to individual user
 - **Audit logging** - Actions attributed to app, not user
@@ -132,11 +134,13 @@ For GitHub Actions, OIDC (OpenID Connect) is even better as it eliminates stored
 **Drift occurs when the actual GitHub configuration differs from the desired state defined in code.**
 
 Examples of drift:
+
 - Someone manually changes branch protection rules via UI
 - A repository setting is modified outside of Terraform
 - Team membership is updated directly in GitHub
 
 Drift detection compares the Terraform state against the live GitHub API to identify these differences. GitOps practices aim to eliminate drift by:
+
 - Making all changes through code (pull requests)
 - Running regular drift detection checks
 - Alerting or auto-remediating when drift is found
@@ -184,6 +188,7 @@ D) `terraform preview`
 **B) `terraform plan`**
 
 The Terraform workflow:
+
 1. `terraform init` - Initialize providers and backend
 2. `terraform validate` - Check syntax and configuration validity
 3. `terraform plan` - **Show proposed changes without applying**
@@ -204,12 +209,14 @@ The Terraform workflow:
 **A Terraform module is a reusable container for multiple resources that are used together.**
 
 Benefits:
+
 - **Consistency** - Same configuration applied everywhere
 - **Abstraction** - Hide complexity behind simple interface
 - **Maintainability** - Update in one place, apply everywhere
 - **Standards enforcement** - Security settings baked in
 
 Example: A "standard-repository" module that always creates repos with:
+
 - Branch protection enabled
 - Vulnerability alerts on
 - Consistent merge settings
@@ -263,6 +270,7 @@ D) Email state files between team members
 **C) Use a remote backend with state locking**
 
 Remote state provides:
+
 - **Shared access** - Team members see same state
 - **Locking** - Prevents concurrent modifications
 - **Encryption** - State often contains sensitive data
@@ -270,6 +278,7 @@ Remote state provides:
 - **Backup** - Cloud storage durability
 
 Common backends:
+
 - AWS S3 with DynamoDB locking
 - Azure Blob Storage
 - Google Cloud Storage
@@ -303,6 +312,7 @@ Common backends:
 | **Observable** | Drift detection alerts when reality differs from code |
 
 Together, these principles create a system where:
+
 - Configuration is always documented (code)
 - Changes are always reviewed (PRs)
 - Deployment is always consistent (automation)

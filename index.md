@@ -27,12 +27,14 @@ This 12-week program is organized into **three progressive phases**, each contai
 Master the fundamentals of software development, version control, and GitHub's core features.
 
 **Modules:**
+
 - **Module 1:** Understanding Software Development & SDLC
 - **Module 2:** Git Fundamentals & Version Control
 - **Module 3:** GitHub.com Platform Essentials
 - **Module 4:** Source Code Management as a Process
 
 **What You'll Build:**
+
 - Your first Git repository with proper version control
 - A collaborative project with issues, PRs, and code reviews
 - Understanding of how software teams work and plan
@@ -45,12 +47,14 @@ Master the fundamentals of software development, version control, and GitHub's c
 Learn GitHub Actions, security features, and continuous integration/deployment pipelines.
 
 **Modules:**
+
 - **Module 5:** GitHub Actions & Automation Basics
 - **Module 6:** Code Security with GitHub Advanced Security (GHAS)
 - **Module 7:** Dependency & Package Management
 - **Module 8:** CI/CD Pipelines & Deployment Strategies
 
 **What You'll Build:**
+
 - Automated testing and CI workflows
 - Security scanning and vulnerability management
 - Complete multi-environment deployment pipeline
@@ -64,6 +68,7 @@ Learn GitHub Actions, security features, and continuous integration/deployment p
 Master enterprise-scale GitHub management, APIs, compliance, DevOps metrics, and AI-powered development with Copilot.
 
 **Modules:**
+
 - **Module 9:** Enterprise Administration & Integration
 - **Module 10:** GitHub APIs, Webhooks & GitHub Apps
 - **Module 11:** Infrastructure as Code & Operations
@@ -72,6 +77,7 @@ Master enterprise-scale GitHub management, APIs, compliance, DevOps metrics, and
 - **Module 14:** GitHub Copilot Advanced
 
 **What You'll Build:**
+
 - Enterprise organization with teams and policies
 - Custom integrations using GitHub APIs
 - Infrastructure as Code deployment pipelines
@@ -131,7 +137,9 @@ Customer use cases and common questions you'll encounter as a CSM/CSA
 - **Advanced Milestone:** Conduct an enterprise security audit with governance recommendations
 
 ### GitHub Certifications
+
 Upon completion, you'll be prepared for:
+
 - ✅ GitHub Foundations Certification
 - ✅ GitHub Actions Certification
 - ✅ GitHub Advanced Security Certification
@@ -143,6 +151,7 @@ Upon completion, you'll be prepared for:
 
 ### Prerequisites
 Before starting, ensure you have:
+
 - [ ] GitHub account (personal or enterprise trial)
 - [ ] Git installed locally ([Download Git](https://git-scm.com/downloads))
 - [ ] Visual Studio Code or preferred IDE ([Download VS Code](https://code.visualstudio.com/))

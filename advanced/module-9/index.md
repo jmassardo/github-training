@@ -66,6 +66,7 @@ This module teaches you to configure enterprise identity providers, design organ
 ### Why This Matters
 
 As a GitHub CSM, you'll help customers:
+
 - Configure SSO, user provisioning, and organizational structures
 - Ensure enterprise deployments meet regulatory and security requirements
 - Guide customers through complex migrations from other platforms
@@ -106,9 +107,10 @@ By the end of this module, you will be able to:
 ## Prerequisites
 
 Before starting this module, ensure you have completed:
-- Module 3: GitHub Platform Essentials
-- Module 4: SCM Process
-- Module 6: Security with GHAS
+
+- [Module 3: GitHub Platform Essentials](/beginner/module-3/)
+- [Module 4: SCM Process](/beginner/module-4/)
+- [Module 6: Security with GHAS](/intermediate/module-6/)
 - Understanding of enterprise identity management concepts
 
 ---

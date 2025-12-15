@@ -204,6 +204,7 @@ Where is the infinite recursion?
 
 ```
 Create a React hook that:
+
 - Fetches data from an API endpoint
 - Handles loading, error, and success states
 - Supports cancellation when component unmounts
@@ -217,6 +218,7 @@ Create a React hook that:
 
 ```
 Refactor this to:
+
 - Use early returns instead of nested if statements
 - Extract the validation logic to a separate function
 - Add error handling for network failures
@@ -285,6 +287,7 @@ Build on previous responses:
 
 ```
 Review this code for:
+
 - Security vulnerabilities
 - Performance issues
 - Code style consistency
@@ -296,6 +299,7 @@ Review this code for:
 
 ```
 I need to design a system that:
+
 - Processes 10,000 events per second
 - Stores events for 30 days
 - Allows real-time queries

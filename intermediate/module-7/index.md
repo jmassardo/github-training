@@ -96,8 +96,9 @@ By the end of this module, you will be able to:
 ## Prerequisites
 
 Before starting this module, you should have completed:
-- **Module 5:** GitHub Actions (for workflow automation)
-- **Module 6:** Security & GHAS (for security foundations)
+
+- **[Module 5: GitHub Actions](/intermediate/module-5/)** (for workflow automation)
+- **[Module 6: Security & GHAS](/intermediate/module-6/)** (for security foundations)
 
 ---
 

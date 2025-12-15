@@ -124,6 +124,7 @@ flowchart TB
 
 ## What You'll Learn
 This module covers:
+
 - CodeQL analysis configuration and custom queries
 - Secret scanning patterns and push protection
 - Dependabot configuration and automation
@@ -133,6 +134,7 @@ This module covers:
 
 ## Customer Success Context
 As a CSM, you'll help customers:
+
 - Roll out GHAS across their organization
 - Configure security policies that balance security and velocity
 - Reduce false positive rates

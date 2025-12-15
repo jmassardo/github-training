@@ -174,6 +174,7 @@ The audit log captures all administrative and security-relevant events:
 ```
 
 **Key audit log categories:**
+
 - `repo.*` - Repository operations
 - `org.*` - Organization settings
 - `team.*` - Team management
@@ -263,6 +264,7 @@ flowchart LR
 Stream audit events to external SIEM/monitoring systems:
 
 **Supported destinations:**
+
 - Amazon S3
 - Azure Blob Storage
 - Azure Event Hubs
@@ -534,6 +536,7 @@ Example:
 ### What is Value Stream Mapping?
 
 Value stream mapping visualizes the flow of work from idea to production, identifying:
+
 - Wait times (waste)
 - Process bottlenecks
 - Automation opportunities
@@ -618,6 +621,7 @@ Documentation ◀──────────── 23 external PRs
 > "When a measure becomes a target, it ceases to be a good measure."
 
 **Mitigation strategies:**
+
 - Use multiple metrics in combination
 - Focus on trends, not absolute numbers
 - Measure outcomes, not outputs

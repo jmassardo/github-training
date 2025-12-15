@@ -86,7 +86,8 @@ GitHub Copilot is powered by **Large Language Models (LLMs)**, a type of AI that
 
 ### How LLMs Generate Code
 
-```mermaid
+<div class="mermaid-container">
+<div class="mermaid">
 flowchart LR
     A[Your Code + Context] --> B[Tokenization]
     B --> C[LLM Processing]
@@ -96,8 +97,8 @@ flowchart LR
     style A fill:#0969da,color:#fff
     style C fill:#8250df,color:#fff
     style E fill:#1a7f37,color:#fff
-
-```
+</div>
+</div>
 
 **Key Concepts:**
 
@@ -111,18 +112,23 @@ flowchart LR
 ### What LLMs Are (and Aren't)
 
 **LLMs ARE:**
+
 - Pattern recognition systems trained on vast code repositories
 - Probabilistic text generators that predict likely next tokens
 - Tools that can understand and generate multiple programming languages
 - Assistants that work best with clear context and guidance
 
 **LLMs ARE NOT:**
+
 - Databases that store and retrieve exact code snippets
 - Deterministic systems that always give the same answer
 - Compilers or interpreters that understand code execution
 - Replacements for understanding what your code does
 
-> **💡 CSM Insight:** When customers ask "Is Copilot just copying code?", explain that LLMs generate new code based on learned patterns, similar to how a skilled developer draws on experience but writes original code.
+> **💡 CSM Insight**
+>
+> When customers ask "Is Copilot just copying code?", explain that LLMs generate new code based on learned patterns, similar to how a skilled developer draws on experience but writes original code.
+{: .callout .callout-info}
 
 ---
 
@@ -150,18 +156,21 @@ Copilot is often the entry point for organizations exploring AI. Being able to d
 
 ### 2. **Measure Impact**
 Copilot provides measurable productivity metrics:
+
 - Code acceptance rates
 - Time saved on repetitive tasks
 - Developer satisfaction scores
 
 ### 3. **Address Concerns**
 Common customer questions you'll encounter:
+
 - "Is our code being used to train AI?"
 - "How do we ensure code quality with AI assistance?"
 - "What about security and compliance?"
 
 ### 4. **Identify Expansion Opportunities**
 Understanding Copilot usage patterns helps identify:
+
 - Teams ready for Business/Enterprise upgrades
 - Use cases for Copilot Extensions
 - Integration opportunities with Actions and Security
@@ -172,8 +181,9 @@ Understanding Copilot usage patterns helps identify:
 
 This module takes you through a comprehensive Copilot journey:
 
-```mermaid
-flowchart TD
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart LR
     A[1. Overview] --> B[2. Core Concepts]
     B --> C[3. IDE Setup]
     C --> D[4. Prompt Crafting]
@@ -186,10 +196,11 @@ flowchart TD
     
     style A fill:#0969da,color:#fff
     style H fill:#1a7f37,color:#fff
-
-```
+</div>
+</div>
 
 **What You'll Learn:**
+
 - ✅ How Copilot works under the hood
 - ✅ Setting up Copilot across different IDEs
 - ✅ Crafting effective prompts for better suggestions

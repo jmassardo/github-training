@@ -63,10 +63,12 @@ A customer currently deploys monthly and wants to move to weekly deployments. Th
 **Your Response:**
 "Moving from monthly to weekly is absolutely achievable. Let's build confidence through automation:
 **Current State Assessment:**
+
 - Monthly deploys = ~12 deployments/year
 - Manual testing = days of lead time
 - Multiple approvals = bottleneck
 **Target State:**
+
 - Weekly deploys = ~52 deployments/year
 - Automated testing = minutes of validation
 - Streamlined approvals = hours not days
@@ -100,11 +102,13 @@ Commit → CI (15 min) → Staging (auto) → Soak 24h → Production (approval)
 - Clear approval criteria documented
 - Automated checks replace manual checks
 **Metrics to Track:**
+
 - Lead time (commit to production)
 - Deployment frequency
 - Change failure rate
 - Mean time to recovery
 **Risk Mitigation:**
+
 - Feature flags for new features
 - Gradual rollout (canary)
 - Automated rollback on failure
@@ -181,6 +185,7 @@ spec:
 ```
 
 **Key Requirements:**
+
 1. **Health checks:**
    - Readiness probe before receiving traffic
    - Liveness probe to detect unhealthy pods
@@ -233,6 +238,7 @@ flowchart TD
 ```
 Repository → Settings → Audit log
 Deployment events captured:
+
 - deployment.created
 - deployment_status.created  
 - environment.created
@@ -246,6 +252,7 @@ Deployment events captured:
 ```
 Actions → Workflow runs
 Each run shows:
+
 - Who triggered (actor)
 - What commit (SHA)
 - Approval timestamps
@@ -296,10 +303,12 @@ gh api /orgs/{org}/audit-log \
 ```
 
 **6. SIEM Integration:**
+
 - Stream audit logs to Splunk/Datadog
 - Real-time alerting on policy violations
 - Long-term retention beyond GitHub limits
 **Documentation for Auditors:**
+
 - Screenshot of environment protection rules
 - Sample deployment approval email/notification
 - Export of recent deployment history
@@ -333,6 +342,7 @@ Want me to help generate a compliance report template?"
 
 ### What's Next
 In **Module 9: Enterprise Administration**, you'll learn:
+
 - Organization and enterprise management
 - User provisioning and SSO
 - Policy enforcement at scale

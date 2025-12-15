@@ -91,6 +91,7 @@ The workflow: modify → stage → commit
 <summary>Show Answer</summary>
 
 Each commit contains:
+
 - **Snapshot** of all tracked files
 - **Author** (who made the commit)
 - **Timestamp** (when it was made)
@@ -110,6 +111,7 @@ Each commit contains:
 **Branches** solve this problem.
 
 Branches create isolated environments for:
+
 - Developing new features
 - Experimenting safely
 - Fixing bugs
@@ -129,10 +131,12 @@ Code on a branch doesn't affect `main` until merged. This enables safe experimen
 <summary>Show Answer</summary>
 
 A conflict occurs when:
+
 1. Two branches modify the **same lines** in the **same file**
 2. Git cannot automatically determine which change to keep
 
 Conflicts require human intervention to resolve by:
+
 1. Opening the conflicted file
 2. Choosing which changes to keep
 3. Removing conflict markers
@@ -208,6 +212,7 @@ Conflicts require human intervention to resolve by:
 **Distributed** means every developer has a **complete copy** of the entire repository history, not just the current files.
 
 Benefits:
+
 - **Work offline** — No server connection needed to commit
 - **Fast operations** — Everything is local
 - **No single point of failure** — If server dies, any clone is a full backup
@@ -231,12 +236,14 @@ This differs from **centralized** systems (SVN, CVS) where the server holds all 
 - The purpose or scope
 
 **Better naming patterns:**
+
 - `feature/user-authentication`
 - `fix/login-error-null-pointer`
 - `hotfix/security-patch-cve-2025-1234`
 - `release/v2.1.0`
 
 Good branch names are:
+
 - **Descriptive** — Clear purpose
 - **Consistent** — Follow a pattern
 - **Prefixed** — Type of work (feature, fix, etc.)
@@ -258,6 +265,7 @@ git blame problematic-file.js
 ```
 
 For more investigation:
+
 - **`git log -p filename`** — Shows commits that changed the file
 - **`git bisect`** — Binary search to find which commit introduced a bug
 

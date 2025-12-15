@@ -105,6 +105,7 @@ Repository instructions live in `.github/copilot-instructions.md` and apply to e
 
 ## Project Overview
 This is a Node.js/React full-stack application using:
+
 - Backend: Express.js with TypeScript
 - Frontend: React with TypeScript
 - Database: PostgreSQL with Prisma ORM
@@ -189,6 +190,7 @@ applyTo: "**/api/**/*.ts"
 # API Development Guidelines
 
 When writing API code:
+
 1. Use the ApiResponse wrapper for all responses
 2. Include request validation with Zod
 3. Add OpenAPI annotations for documentation
@@ -219,6 +221,7 @@ applyTo: "**/components/**/*.tsx"
 # React Component Guidelines
 
 When creating React components:
+
 1. Define Props interface at top of file
 2. Use semantic HTML elements
 3. Include aria attributes for accessibility
@@ -385,6 +388,7 @@ Focus on index usage, query plans, and N+1 patterns.
 ```
 
 **Sources:**
+
 - **Files & Repositories** - Add entire repos or specific files/folders
 - **Links** - GitHub Issues, PRs, and other content via URL
 - **Uploads** - Local files (images, documents, spreadsheets)
@@ -393,6 +397,7 @@ Focus on index usage, query plans, and N+1 patterns.
 ### Quick Add from Code View
 
 While browsing code on GitHub:
+
 1. Open any file
 2. Click the **Add to space** icon at the top
 3. Select an existing space or create new one
@@ -402,18 +407,21 @@ This lets you build context without interrupting your workflow.
 ### Use Cases for CSMs
 
 **Customer Onboarding Space:**
+
 - Customer's architecture docs
 - Relevant GitHub guides
 - Notes from discovery calls
 - Their repo structure
 
 **Migration Project Space:**
+
 - Source and target platform docs
 - Migration runbook
 - Customer's affected repositories
 - Previous migration case studies
 
 **Support Escalation Space:**
+
 - Customer's repo with the issue
 - Related GitHub Issues/PRs
 - Error logs and diagnostics
@@ -455,6 +463,7 @@ Wrap async operations in try-catch blocks.
 Use the CustomError class from /src/errors/.
 Log errors with logger.error() including stack trace.
 Return appropriate HTTP status codes:
+
 - 400 for validation errors
 - 401 for authentication failures
 - 403 for authorization failures

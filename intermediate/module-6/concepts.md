@@ -154,11 +154,13 @@ flowchart TB
 
 ### Secret Types
 **Partner Patterns (auto-revoked):**
+
 - AWS Access Keys → AWS notified, key revoked
 - GitHub Personal Access Tokens → Automatically revoked
 - Stripe API Keys → Stripe notified
 - Azure credentials → Azure AD notified
 **User Patterns (detected only):**
+
 - Generic API keys
 - Private keys
 - Connection strings
@@ -195,6 +197,7 @@ flowchart TB
 
 ### Bypass Options
 When a legitimate secret is detected:
+
 1. **Remove the secret** (recommended)
 2. **Mark as false positive** (appears safe but isn't)
 3. **It's used in tests** (sandbox/test environment)
@@ -314,6 +317,7 @@ jobs:
 ## Reporting a Vulnerability
 Please report security vulnerabilities through GitHub's 
 private vulnerability reporting feature:
+
 1. Go to the Security tab
 2. Click "Report a vulnerability"
 3. Fill out the form with details
@@ -329,6 +333,7 @@ public GitHub issues.**
   - Low: 90 days
 ## Bug Bounty
 We offer bounties for qualifying vulnerabilities:
+
 - Critical: $5,000
 - High: $2,500
 - Medium: $500

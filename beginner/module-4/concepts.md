@@ -71,6 +71,7 @@ main (production)
 **Best for:** Teams with scheduled releases, multiple versions in production
 
 **Considerations:**
+
 - More complex to manage
 - Can lead to long-lived branches with merge conflicts
 - Clear separation between development and production
@@ -90,6 +91,7 @@ main (always deployable)
 **Best for:** Teams practicing continuous deployment, SaaS products
 
 **Characteristics:**
+
 - `main` is always production-ready
 - Features deployed as soon as merged
 - Simple to understand and implement
@@ -107,6 +109,7 @@ main
 **Best for:** High-performing teams, microservices, feature flags
 
 **Requirements:**
+
 - Strong automated testing
 - Feature flag infrastructure
 - High team discipline
@@ -260,6 +263,7 @@ Signed commit:
 ### Vigilant Mode
 
 GitHub's vigilant mode shows verification status:
+
 - ✅ **Verified** - Signature valid, key belongs to committer
 - ⚠️ **Partially verified** - Signature valid, key not linked to account
 - ❌ **Unverified** - No signature or invalid
@@ -305,6 +309,7 @@ v2.1.0-rc.1
 ### Auto-Generated Release Notes
 
 GitHub can automatically generate release notes from:
+
 - Merged pull requests
 - Associated issues
 - Commit messages

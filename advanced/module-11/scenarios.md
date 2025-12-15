@@ -92,12 +92,14 @@ Before proposing solutions, gather more context:
 
 **Phase 3: Quantify the Impact**
 "Organizations like yours typically see:
+
 - Repository provisioning time: 2-3 days → 15 minutes
 - Platform team time savings: 50%+ reduction in repo admin work
 - Security compliance: 100% of repos meeting policy (vs. ~70% with manual)"
 
 **Phase 4: Propose Next Steps**
 "I'd recommend we:
+
 1. Schedule a technical workshop to walk through the architecture
 2. Identify 2-3 pilot projects to start with
 3. Build a proof of concept with your standards baked in"
@@ -137,12 +139,14 @@ Before proposing solutions, gather more context:
 
 **Phase 2: Immediate Actions**
 "For quick wins:
+
 1. GitHub's API can audit all repos for branch protection status immediately
 2. We can bulk-apply branch protection rules using scripts or Terraform
 3. Enable required security features across all repos"
 
 **Phase 3: Sustainable Solution**
 "For ongoing compliance, Infrastructure as Code provides:
+
 - **Audit Trail**: Every configuration change is a git commit with author, timestamp, and PR approval
 - **Drift Detection**: Automated alerts when someone modifies settings outside the approved process
 - **Continuous Compliance**: Scheduled checks ensure policy is always enforced
@@ -150,6 +154,7 @@ Before proposing solutions, gather more context:
 
 **Phase 4: Audit Response**
 "For your auditor, you'll be able to show:
+
 - Git history of all security configuration changes
 - Automated compliance checks running continuously
 - Alerts and remediation when drift occurs
@@ -178,6 +183,7 @@ Before proposing solutions, gather more context:
 
 **Identify Pain Points (if they exist)**
 Ask about:
+
 - How do you handle errors mid-execution?
 - What happens if someone runs a script twice?
 - How do you know what's deployed vs. what's defined?
@@ -198,6 +204,7 @@ The key difference: scripts tell GitHub *what to do*, Terraform tells GitHub *wh
 
 **Meet Them Where They Are**
 "If your scripts work well, that's great. Consider Terraform when:
+
 - You need to know if actual config matches intended config
 - Team members beyond the script author need to make changes
 - Audit requirements demand change documentation
@@ -223,6 +230,7 @@ The key difference: scripts tell GitHub *what to do*, Terraform tells GitHub *wh
 
 **Phase 1: Discovery & Assessment**
 "Before consolidating, let's understand what you have:
+
 1. Inventory all organizations and their configurations
 2. Map teams to repositories across orgs
 3. Identify common patterns and unique requirements
@@ -230,6 +238,7 @@ The key difference: scripts tell GitHub *what to do*, Terraform tells GitHub *wh
 
 **Phase 2: Define Target State**
 "Create a unified standard:
+
 - Repository naming conventions
 - Team structure and access model
 - Branch protection baseline
@@ -238,6 +247,7 @@ The key difference: scripts tell GitHub *what to do*, Terraform tells GitHub *wh
 
 **Phase 3: Terraform Strategy**
 "With Terraform, you can:
+
 1. **Multi-Provider Configuration**: Single codebase managing all 5 orgs
 2. **Consistent Modules**: Same standards applied everywhere
 3. **Incremental Migration**: Import existing repos org by org
@@ -371,6 +381,7 @@ Practice these scenarios with a colleague:
 You've completed Module 11: Infrastructure as Code & Operations.
 
 **Key Takeaways:**
+
 - IaC transforms GitHub administration from manual to automated
 - Terraform provides declarative, version-controlled configuration
 - GitOps practices enable self-service with guardrails

@@ -206,6 +206,86 @@
       });
     </script>
 
+    <!-- Mermaid.js for diagrams with pan/zoom -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js" integrity="sha256-YWoQnxnNGGhC4R1Fs1rAdFazp1UTMQ9uoHU1GqQwseI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js" integrity="sha256-9GNxAyAInGHQ9XzsK4hsAt4E4h65Lr0i6qMn/fCmt8Y=" crossorigin="anonymous"></script>
+    <script>
+      // Initialize Mermaid with theme matching the training modules
+      mermaid.initialize({
+        startOnLoad: false,
+        theme: 'base',
+        themeVariables: {
+          primaryColor: '#ddf4ff',
+          primaryTextColor: '#1f2328',
+          primaryBorderColor: '#0969da',
+          secondaryColor: '#f6f8fa',
+          secondaryTextColor: '#1f2328',
+          secondaryBorderColor: '#d0d7de',
+          tertiaryColor: '#fff8c5',
+          tertiaryTextColor: '#1f2328',
+          tertiaryBorderColor: '#d4a72c',
+          background: '#ffffff',
+          mainBkg: '#ddf4ff',
+          secondBkg: '#f6f8fa',
+          lineColor: '#57606a',
+          border1: '#d0d7de',
+          border2: '#0969da',
+          arrowheadColor: '#57606a',
+          fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif',
+          fontSize: '14px',
+          labelBackground: '#ffffff',
+          nodeTextColor: '#1f2328',
+          clusterBkg: '#f6f8fa',
+          clusterBorder: '#d0d7de',
+          noteBkgColor: '#fff8c5',
+          noteTextColor: '#1f2328',
+          noteBorderColor: '#d4a72c'
+        },
+        flowchart: {
+          useMaxWidth: true,
+          htmlLabels: true,
+          curve: 'basis',
+          padding: 30,
+          nodeSpacing: 50,
+          rankSpacing: 70
+        },
+        securityLevel: 'loose'
+      });
+
+      // Run mermaid after DOM is ready, then add pan/zoom
+      document.addEventListener('DOMContentLoaded', function() {
+        mermaid.run().then(() => {
+          document.querySelectorAll('.mermaid-container svg').forEach((svg, index) => {
+            if (!svg.id) {
+              svg.id = 'mermaid-svg-' + index;
+            }
+            svg.style.minWidth = '100%';
+            svg.style.minHeight = '300px';
+            
+            const panZoom = svgPanZoom(svg, {
+              zoomEnabled: true,
+              controlIconsEnabled: true,
+              fit: true,
+              center: true,
+              minZoom: 0.3,
+              maxZoom: 10,
+              zoomScaleSensitivity: 0.3,
+              dblClickZoomEnabled: true,
+              mouseWheelZoomEnabled: true,
+              preventMouseEventsDefault: true,
+              contain: false
+            });
+
+            window.addEventListener('resize', () => {
+              panZoom.resize();
+              panZoom.fit();
+              panZoom.center();
+            });
+          });
+        });
+      });
+    </script>
+
     <!-- Mobile navigation toggle -->
     <script>
       (function() {

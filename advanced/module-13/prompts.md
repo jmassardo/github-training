@@ -66,6 +66,7 @@ Getting great suggestions from Copilot is like giving instructions to a skilled 
 ### The Prompting Mindset
 
 Think of prompts as communication:
+
 - **Vague prompt** → Generic suggestion
 - **Specific prompt** → Targeted suggestion
 - **Contextual prompt** → Brilliant suggestion

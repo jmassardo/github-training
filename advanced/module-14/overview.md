@@ -92,6 +92,7 @@ Agents move beyond simple question-answering to autonomous task execution:
 | **Output** | Text/code snippets | PRs, commits, deployments |
 
 **Example transformation:**
+
 - **Chat**: "How do I add authentication to this API?"
 - **Agent**: "Add OAuth authentication to the API, create the middleware, update routes, add tests, and open a PR"
 
@@ -118,6 +119,7 @@ flowchart LR
 </div>
 
 **Use cases:**
+
 - Query internal documentation
 - Access company-specific APIs
 - Pull data from databases
@@ -146,6 +148,7 @@ Enterprise Level
 ```
 
 **Applications:**
+
 - Enforce coding standards
 - Apply security guidelines
 - Use internal frameworks
@@ -189,6 +192,7 @@ GitHub Spark is a separate but related AI product that lets you build full-stack
 ### What is GitHub Spark?
 
 Spark is an AI-powered app builder that:
+
 - Generates complete applications from natural language descriptions
 - Handles frontend, backend, and database automatically
 - Deploys to GitHub's infrastructure

@@ -103,6 +103,7 @@ flowchart LR
 
 ## What You'll Learn
 This module covers:
+
 - GitHub Actions architecture and YAML syntax
 - Building CI pipelines (test, build, lint)
 - Working with the Actions Marketplace
@@ -113,6 +114,7 @@ This module covers:
 
 ## Customer Success Context
 As a CSM, you'll help customers:
+
 - Migrate from Jenkins, CircleCI, Azure DevOps, etc.
 - Optimize runner usage for cost savings
 - Implement secure CI/CD practices

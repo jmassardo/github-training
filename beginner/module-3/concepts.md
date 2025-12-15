@@ -178,6 +178,7 @@ flowchart TB
 ### Code Review
 
 Reviewers can:
+
 - **Comment** — Ask questions, suggest improvements
 - **Approve** — Code looks good to merge
 - **Request Changes** — Blocking issues must be addressed

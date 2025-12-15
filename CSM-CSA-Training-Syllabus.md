@@ -35,6 +35,7 @@ This 14-week progressive training program is designed specifically for **experie
 > **📌 Note:** This syllabus organizes content by **SDLC phases** (how software is built) to help you understand the development workflow. The [training modules](/beginner/) are organized by **skill level** (Beginner → Intermediate → Advanced) for a progressive learning experience. Both approaches cover the same 14 modules over 14 weeks.
 
 **Target Audience:**
+
 - Experienced CSMs new to GitHub
 - CSAs transitioning from other platforms
 - Technical account managers entering DevOps space
@@ -42,6 +43,7 @@ This 14-week progressive training program is designed specifically for **experie
 
 **Learning Philosophy:**
 The syllabus follows the **natural software development workflow**, introducing concepts as developers encounter them:
+
 1. Understanding the problem space (planning & requirements)
 2. Writing and organizing code (development & collaboration)
 3. Quality assurance (testing & security)
@@ -57,6 +59,7 @@ The syllabus follows the **natural software development workflow**, introducing 
 | This Syllabus | By SDLC Phase | Understanding the development workflow |
 
 **Learning Objectives:**
+
 - Understand software development workflows and SDLC phases
 - Master GitHub's role in each development stage
 - Navigate GitHub platform with confidence
@@ -78,6 +81,7 @@ The syllabus follows the **natural software development workflow**, introducing 
 **Context:** Before diving into technical features, understand the problem space - how do software teams work, and what role does GitHub play?
 
 **Objectives:**
+
 - Understand SDLC methodologies and DevOps culture
 - Learn GitHub's role in modern software development
 - Navigate GitHub platform confidently
@@ -110,6 +114,7 @@ The syllabus follows the **natural software development workflow**, introducing 
    - GitHub Docs: [About READMEs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)
 
 **Lab Exercise:**
+
 - Create a GitHub account and profile
 - Create a personal repository with comprehensive README
 - Write your first issue describing a "feature request"
@@ -123,6 +128,7 @@ The syllabus follows the **natural software development workflow**, introducing 
 **Context:** How do teams capture requirements, track work, and manage projects in GitHub?
 
 **Objectives:**
+
 - Master Issues for requirements and bug tracking
 - Use GitHub Projects for work management
 - Understand milestones and roadmaps
@@ -157,6 +163,7 @@ The syllabus follows the **natural software development workflow**, introducing 
    - External: [Markdown Architectural Decision Records](https://adr.github.io/madr/)
 
 **Lab Exercise:**
+
 - Create a project board with custom fields and automation
 - Create multiple issues with labels, assignees, and milestones
 - Build issue and PR templates for a sample project
@@ -171,6 +178,7 @@ The syllabus follows the **natural software development workflow**, introducing 
 **Context:** How do teams communicate, review work, and collaborate on GitHub?
 
 **Objectives:**
+
 - Master pull request workflows
 - Learn code review best practices
 - Understand team collaboration patterns
@@ -214,6 +222,7 @@ The syllabus follows the **natural software development workflow**, introducing 
    - GitHub Docs: [Configuring notifications](https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications)
 
 **Lab Exercise:**
+
 - Conduct code reviews on sample pull requests with suggestions
 - Create and share a gist
 - Deploy a documentation site with GitHub Pages
@@ -233,6 +242,7 @@ The syllabus follows the **natural software development workflow**, introducing 
 **Context:** Now that you understand planning and collaboration, learn how developers actually manage their code.
 
 **Objectives:**
+
 - Master Git version control fundamentals
 - Understand branching and merging strategies
 - Handle merge conflicts
@@ -266,6 +276,7 @@ The syllabus follows the **natural software development workflow**, introducing 
    - GitHub Docs: [Configuring Git LFS](https://docs.github.com/en/repositories/working-with-files/managing-large-files/configuring-git-large-file-storage)
 
 **Lab Exercise:**
+
 - Clone repositories and work with remotes
 - Create feature branches and merge them
 - Resolve intentional merge conflicts
@@ -281,6 +292,7 @@ The syllabus follows the **natural software development workflow**, introducing 
 **Context:** How do teams maintain code quality, protect important branches, and ensure the right people review changes?
 
 **Objectives:**
+
 - Configure branch protection rules
 - Set up CODEOWNERS
 - Implement repository rulesets
@@ -314,6 +326,7 @@ The syllabus follows the **natural software development workflow**, introducing 
    - Microsoft Learn: [Explore continuous integration](https://learn.microsoft.com/en-us/training/modules/explore-continuous-integration/)
 
 **Lab Exercise:**
+
 - Configure branch protection rules with required reviewers
 - Create a CODEOWNERS file for automatic reviewer assignment
 - Set up GPG or SSH commit signing
@@ -332,6 +345,7 @@ The syllabus follows the **natural software development workflow**, introducing 
 **Context:** Code must be tested before release. Learn how GitHub Actions automates testing with every code change.
 
 **Objectives:**
+
 - Understand GitHub Actions architecture
 - Create CI workflows for automated testing
 - Use Actions from the marketplace
@@ -376,6 +390,7 @@ The syllabus follows the **natural software development workflow**, introducing 
    - GitHub Docs: [Adding self-hosted runners](https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/adding-self-hosted-runners)
 
 **Lab Exercise:**
+
 - Create a CI workflow for a sample application
 - Implement automated testing for multiple languages
 - Use Actions from the marketplace
@@ -391,6 +406,7 @@ The syllabus follows the **natural software development workflow**, introducing 
 **Context:** Security must be built into every stage. Learn GitHub's security features for vulnerability detection and remediation.
 
 **Objectives:**
+
 - Understand GitHub Advanced Security (GHAS)
 - Configure Dependabot for dependency management
 - Implement secret scanning
@@ -423,6 +439,7 @@ The syllabus follows the **natural software development workflow**, introducing 
    - GitHub Skills: [Secure code game](https://github.com/skills/secure-code-game)
 
 **Lab Exercise:**
+
 - Enable and configure Dependabot alerts and updates
 - Set up secret scanning for a repository
 - Create a CodeQL workflow
@@ -441,6 +458,7 @@ The syllabus follows the **natural software development workflow**, introducing 
 **Context:** Learn how to automatically deploy code to various environments with GitHub Actions and manage releases.
 
 **Objectives:**
+
 - Implement continuous deployment (CD)
 - Work with multiple environments
 - Use deployment protection rules
@@ -478,6 +496,7 @@ The syllabus follows the **natural software development workflow**, introducing 
    - Microsoft Learn: [Deploy to Azure using GitHub Actions](https://learn.microsoft.com/en-us/training/modules/github-actions-deploy-azure/)
 
 **Lab Exercise:**
+
 - Create a multi-environment deployment pipeline (dev, staging, prod)
 - Implement approval gates and deployment protection rules
 - Configure environment-specific secrets
@@ -494,6 +513,7 @@ The syllabus follows the **natural software development workflow**, introducing 
 **Context:** Learn how teams distribute their software using GitHub Packages and container registries.
 
 **Objectives:**
+
 - Understand package management strategies
 - Use GitHub Packages
 - Publish container images
@@ -519,6 +539,7 @@ The syllabus follows the **natural software development workflow**, introducing 
    - Microsoft Learn: [Introduction to infrastructure as code](https://learn.microsoft.com/en-us/training/modules/introduction-to-infrastructure-as-code/)
 
 **Lab Exercise:**
+
 - Publish a package to GitHub Packages (npm, Maven, or NuGet)
 - Create a container image publishing workflow
 - Implement semantic versioning strategies
@@ -537,6 +558,7 @@ The syllabus follows the **natural software development workflow**, introducing 
 **Context:** Learn how teams monitor production systems, respond to incidents, and maintain documentation.
 
 **Objectives:**
+
 - Understand monitoring and observability
 - Implement incident response workflows
 - Use GitHub for operational documentation
@@ -577,6 +599,7 @@ The syllabus follows the **natural software development workflow**, introducing 
    - Use case: Generating infrastructure code and operational scripts
 
 **Lab Exercise:**
+
 - Configure application monitoring with Azure Monitor
 - Create an incident response workflow using GitHub Issues
 - Write a post-mortem document for a simulated incident
@@ -604,6 +627,7 @@ The syllabus follows the **natural software development workflow**, introducing 
 **Context:** Enterprise customers need to integrate GitHub with existing systems (identity providers, CI/CD tools, monitoring platforms) and manage programmatic access securely. This week covers the APIs, authentication mechanisms, webhooks, and integration patterns that enable GitHub to fit into complex enterprise ecosystems.
 
 **Objectives:**
+
 - Understand GitHub Enterprise Cloud/Server administration
 - Manage organizations, teams, and access controls
 - Master GitHub APIs (REST and GraphQL)
@@ -671,6 +695,7 @@ The syllabus follows the **natural software development workflow**, introducing 
    - Microsoft Learn: [Manage GitHub enterprise policies](https://learn.microsoft.com/en-us/training/modules/manage-github-enterprise-policies/)
 
 **Lab Exercise:**
+
 - Set up a sample organization structure with teams and repositories
 - Configure team permissions and access hierarchies
 - Create fine-grained personal access tokens with specific repository permissions
@@ -691,6 +716,7 @@ The syllabus follows the **natural software development workflow**, introducing 
 **Context:** The culmination of enterprise GitHub management requires understanding compliance, audit trails, security governance, and measuring success through metrics like DORA. This week brings together all previous learning to advise customers on organizational governance, regulatory compliance, security policies at scale, and implementing data-driven DevOps improvement practices.
 
 **Objectives:**
+
 - Implement enterprise-wide security and compliance controls
 - Master audit logging and organizational monitoring
 - Configure Enterprise Managed Users (EMU) and SAML/SSO
@@ -749,6 +775,7 @@ The syllabus follows the **natural software development workflow**, introducing 
    - GitHub Docs: [Creating actions](https://docs.github.com/en/actions/creating-actions)
 
 **Lab Exercise:**
+
 - Conduct a comprehensive security audit of a sample organization
 - Create a detailed security policy document (SECURITY.md) with vulnerability disclosure procedures
 - Configure audit log streaming to a SIEM or monitoring platform (Azure Monitor, Splunk, etc.)
@@ -778,6 +805,7 @@ The syllabus follows the **natural software development workflow**, introducing 
 **Context:** GitHub Copilot represents the most significant shift in developer productivity since version control. As CSM/CSAs, understanding Copilot is essential for helping customers maximize their GitHub investment and developer productivity.
 
 **Objectives:**
+
 - Understand GitHub Copilot architecture and AI foundations
 - Master IDE setup across VS Code, JetBrains, Visual Studio, and Neovim
 - Learn effective prompt engineering for code completions
@@ -818,6 +846,7 @@ The syllabus follows the **natural software development workflow**, introducing 
    - GitHub CLI Manual: [gh copilot](https://cli.github.com/manual/gh_copilot)
 
 **Lab Exercise:**
+
 - Install and configure Copilot in your primary IDE
 - Practice prompt crafting techniques with different programming languages
 - Use Copilot Chat to explain unfamiliar code
@@ -833,6 +862,7 @@ The syllabus follows the **natural software development workflow**, introducing 
 **Context:** Beyond code completions, Copilot offers advanced features including Agents (agentic coding), Model Context Protocol (MCP), Extensions, and enterprise administration. This week covers the cutting-edge capabilities and how to deploy Copilot across an organization.
 
 **Objectives:**
+
 - Master Copilot Agents and autonomous coding workflows
 - Understand Model Context Protocol (MCP) for custom integrations
 - Build and use Copilot Extensions
@@ -879,6 +909,7 @@ The syllabus follows the **natural software development workflow**, introducing 
    - GitHub Docs: [Copilot content exclusions](https://docs.github.com/en/copilot/managing-copilot/managing-copilot-for-your-organization/configuring-content-exclusions-for-github-copilot)
 
 **Lab Exercise:**
+
 - Use Copilot Agent mode to implement a multi-file feature
 - Set up a Copilot Workspace session to plan and implement changes
 - Create custom instructions for a sample organization's coding standards
@@ -1035,12 +1066,14 @@ By the end of this 14-week program, successful learners will be able to:
 ## Additional Notes
 
 **Prerequisites:**
+
 - Basic understanding of software development concepts
 - Familiarity with command-line interfaces
 - Access to a GitHub account (personal or enterprise trial)
 - A code editor (VS Code recommended)
 
 **Tools You'll Need:**
+
 - GitHub account (personal or enterprise trial)
 - Git installed locally
 - Visual Studio Code (or preferred IDE)
@@ -1052,6 +1085,7 @@ By the end of this 14-week program, successful learners will be able to:
 - Text editor for configuration files
 
 **Study Tips:**
+
 - Complete all hands-on labs - practical experience is crucial
 - Create a portfolio repository documenting your learning journey
 - Join GitHub Community Discussions to ask questions

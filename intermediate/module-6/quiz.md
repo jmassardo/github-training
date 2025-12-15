@@ -64,17 +64,20 @@ What's the difference between Dependabot alerts and Dependabot security updates?
 <details markdown="1">
 <summary>View Answer</summary>
 **Dependabot Alerts:**
+
 - Notifications about known vulnerabilities in dependencies
 - Does not make any changes
 - Just informs you about the problem
 - Shows affected dependency and severity
 - Links to advisory information
 **Dependabot Security Updates:**
+
 - Automatically creates PRs to fix vulnerable dependencies
 - Only triggered by security advisories
 - Tries to update to the minimum version that fixes the vulnerability
 - Requires alerts to be enabled first
 Additionally, there are **Dependabot Version Updates**:
+
 - Creates PRs to keep ALL dependencies up to date
 - Not just for security, also for features
 - Configured via dependabot.yml
@@ -86,12 +89,14 @@ A developer bypassed push protection with reason "I'll fix it later." What happe
 <details markdown="1">
 <summary>View Answer</summary>
 **What happens:**
+
 1. Push is allowed (secret enters repository)
 2. A secret scanning alert is created
 3. Bypass is logged in audit log
 4. Alert shows "Bypassed: I'll fix it later"
 5. If partner pattern, partner may still be notified
 **Security team should:**
+
 1. Review the bypass in audit log
 2. Contact the developer to understand context
 3. Ensure the secret is:
@@ -110,6 +115,7 @@ How do you reduce false positives in CodeQL scanning?
 <details markdown="1">
 <summary>View Answer</summary>
 **Configuration approaches:**
+
 1. **Use appropriate query suite:**
 
 ```yaml
@@ -144,6 +150,7 @@ query-filters:
 - Mark false positives individually
 - Use "Dismiss: False positive" with clear notes
 **Remediation approaches:**
+
 5. **Add code annotations:**
 
 ```java
@@ -187,11 +194,13 @@ What's the recommended order for rolling out GHAS to a large organization?
 - Require CodeQL checks to pass
 - Enable push protection
 **Key metrics to track:**
+
 - Mean time to remediation (MTTR)
 - False positive rate
 - Developer feedback/adoption
 - Alert backlog size
 **Anti-patterns to avoid:**
+
 - Enabling for all repos simultaneously
 - Requiring checks before baseline established
 - Not training developers first
@@ -249,6 +258,7 @@ How do you configure CodeQL for a compiled language like Java that requires a bu
 ```
 
 **Key considerations:**
+
 - Build must succeed for extraction to work
 - Skip tests to speed up analysis
 - Use same JDK version as production
@@ -265,6 +275,7 @@ What license types should you typically block with dependency review?
 - AGPL-3.0 - Even network use triggers copyleft
 - GPL-2.0 - Similar to GPL-3.0
 **Typically safe to allow:**
+
 - MIT - Very permissive
 - Apache-2.0 - Permissive with patent grant
 - BSD-2-Clause - Permissive

@@ -64,6 +64,7 @@ Before GitHub Actions, teams faced a fragmented automation landscape with multip
 ### Why This Matters
 
 As a CSM, you'll help customers:
+
 - Migrate from legacy CI/CD tools (Jenkins, Travis, CircleCI)
 - Design efficient automation pipelines
 - Reduce build times and compute costs
@@ -104,7 +105,7 @@ By the end of this module, you will be able to:
 
 ## Prerequisites
 
-- Completed Beginner Phase (Modules 1-4)
+- Completed Beginner Phase ([Modules 1-4](/beginner/))
 - GitHub account with Actions enabled
 - Basic understanding of YAML syntax
 - Familiarity with command-line tools

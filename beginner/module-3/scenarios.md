@@ -72,6 +72,7 @@ How do you position GitHub Projects honestly?
 <summary>Show Suggested Approach</summary>
 
 **GitHub Projects advantages:**
+
 1. **Native integration** — Issues and PRs live in Projects automatically
 2. **Simpler pricing** — Included with GitHub, no extra cost
 3. **Developer-centric** — Built for code workflows
@@ -79,6 +80,7 @@ How do you position GitHub Projects honestly?
 5. **Custom fields** — Flexible metadata without admin overhead
 
 **What Jira does better (be honest):**
+
 1. **Advanced reporting** — Burndown charts, velocity tracking
 2. **Portfolio management** — Multi-project roadmaps
 3. **Customization depth** — Complex workflows, custom issue types
@@ -88,6 +90,7 @@ How do you position GitHub Projects honestly?
 > "GitHub Projects excels at developer workflow integration and simplicity. If your current Jira usage is straightforward sprint tracking, Projects can replace it and reduce tool sprawl. If you rely on advanced portfolio features or have heavily customized Jira workflows, you might use both — GitHub for day-to-day and Jira for executive reporting."
 
 **Questions to ask:**
+
 - "What Jira features do you use most?"
 - "How much customization have you built in Jira?"
 - "Who consumes your project data beyond engineering?"
@@ -115,11 +118,13 @@ Help them manage notification overload.
 <summary>Show Suggested Approach</summary>
 
 **Diagnose the problem:**
+
 - "What types of notifications are flooding them?"
 - "Are they subscribed to all repositories?"
 - "Are they watching repositories vs participating?"
 
 **Notification sources:**
+
 - **Watching** — All activity on a repo
 - **Participating** — Only threads you're in
 - **@mentions** — When someone tags you
@@ -274,6 +279,7 @@ Explain GitHub's permission model.
    - Example: "External Contributor" with limited capabilities
 
 **Best practices:**
+
 - Regularly audit collaborator access
 - Use team-based access (not individual invites)
 - Document who has access to what
@@ -308,6 +314,7 @@ You recognize they've reinvented CODEOWNERS. How do you handle this?
 > "That's great that you automated reviewer assignment! I'm curious — have you explored CODEOWNERS? It's a built-in GitHub feature that does exactly this. It might simplify your maintenance if you're open to looking at it."
 
 **Explain CODEOWNERS:**
+
 - Simple text file in repo (`.github/CODEOWNERS`)
 - Pattern-based ownership (by path, file type)
 - Auto-requests reviews from code owners
@@ -331,12 +338,14 @@ package.json @dependency-managers
 ```
 
 **Benefits over custom bot:**
+
 - Zero maintenance
 - Native GitHub integration
 - Visible in PR UI
 - Works with required reviews
 
 **Be sensitive:**
+
 - Don't make them feel bad about their work
 - Acknowledge their solution worked
 - Present CODEOWNERS as an option, not criticism

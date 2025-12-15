@@ -600,6 +600,7 @@ terraform apply
 ## Walkthrough Summary
 
 You've now built:
+
 1. ✅ Modular Terraform project structure
 2. ✅ Reusable repository module with security defaults
 3. ✅ Team configuration with hierarchy

@@ -65,7 +65,8 @@ Understanding Copilot's architecture helps you use it more effectively and addre
 
 ### The Copilot Architecture
 
-```mermaid
+<div class="mermaid-container">
+<div class="mermaid">
 flowchart TB
     subgraph IDE["Your IDE"]
         A[Editor Context]
@@ -91,10 +92,11 @@ flowchart TB
     style IDE fill:#0969da,color:#fff
     style Service fill:#8250df,color:#fff
     style Azure fill:#1a7f37,color:#fff
-
-```
+</div>
+</div>
 
 **Key Points:**
+
 - Your code context is sent securely to GitHub's Copilot service
 - Processing happens on Microsoft Azure infrastructure
 - Suggestions are returned to your IDE in real-time
@@ -127,7 +129,8 @@ When you type code, Copilot:
 4. **Generates** tokens - predicts likely next pieces
 5. **Decodes** output - converts back to readable code
 
-```mermaid
+<div class="mermaid-container">
+<div class="mermaid">
 sequenceDiagram
     participant Dev as Developer
     participant IDE as IDE Extension
@@ -141,8 +144,8 @@ sequenceDiagram
     API->>IDE: Return suggestions
     IDE->>Dev: Display ghost text
     Dev->>IDE: Accept (Tab) or Reject (Esc)
-
-```
+</div>
+</div>
 
 ---
 
@@ -166,12 +169,14 @@ Copilot's suggestions are only as good as the context it receives. Understanding
 > **💡 Pro Tip:** Think of context like explaining a task to a junior developer. The more relevant information you provide, the better the help you'll get.
 
 **DO:**
+
 - Keep related files open in tabs
 - Write descriptive comments before complex functions
 - Use meaningful variable and function names
 - Include type hints in dynamically typed languages
 
 **DON'T:**
+
 - Expect perfect suggestions from an empty file
 - Assume Copilot knows your entire codebase
 - Rely on context from closed files
@@ -196,6 +201,7 @@ This is one of the most common customer concerns. Here's what you need to know:
 ### Key Privacy Features
 
 **For Business and Enterprise:**
+
 - Code is NOT retained after suggestions are generated
 - Prompts and suggestions are encrypted in transit
 - Organization admins can configure policies
@@ -255,7 +261,8 @@ Being honest about limitations builds trust with customers and helps developers 
 
 > **🔑 Key Principle:** Copilot suggests, developers decide. Every suggestion should be reviewed and understood before acceptance.
 
-```mermaid
+<div class="mermaid-container">
+<div class="mermaid">
 flowchart LR
     A[Copilot Suggests] --> B{Developer Reviews}
     B -->|Looks Good| C[Accept & Test]
@@ -267,8 +274,8 @@ flowchart LR
     style A fill:#8250df,color:#fff
     style B fill:#bf8700,color:#fff
     style F fill:#1a7f37,color:#fff
-
-```
+</div>
+</div>
 
 ---
 

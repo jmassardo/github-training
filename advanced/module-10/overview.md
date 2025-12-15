@@ -56,6 +56,7 @@ sections:
 
 ## Why APIs & Apps Matter for Customer Success
 As a CSM supporting technical customers, you'll frequently encounter scenarios requiring custom integrations, automation, and data access. Understanding GitHub's APIs and Apps enables you to:
+
 - **Scope integration projects**: Accurately estimate effort for custom integrations
 - **Recommend solutions**: Choose between APIs, webhooks, and Apps based on requirements
 - **Troubleshoot issues**: Diagnose common integration problems

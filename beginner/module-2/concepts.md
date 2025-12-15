@@ -55,6 +55,7 @@ Understanding Git requires understanding a few key concepts. Let's build your me
 ## The Repository (Repo)
 
 A **repository** is a folder that Git tracks. It contains:
+
 - Your project files (code, docs, images, etc.)
 - A hidden `.git` folder with all the history and metadata
 
@@ -146,6 +147,7 @@ Working Directory  →  Staging Area  →  Repository
 ### Why a Staging Area?
 
 The staging area lets you:
+
 - **Be selective**: Commit only some changes, not everything
 - **Review before committing**: Double-check what you're about to save
 - **Create focused commits**: One logical change per commit
@@ -154,6 +156,7 @@ The staging area lets you:
 ## Branches: Parallel Universes for Your Code
 
 A **branch** is an independent line of development. Branches let you:
+
 - Work on features without affecting the main codebase
 - Experiment safely
 - Collaborate without conflicts
@@ -239,6 +242,7 @@ After:   main:    A---B---E---F (merge commit)
 ## Merge Conflicts: When Git Needs Help
 
 A **conflict** happens when:
+
 1. Two people edit the same line of the same file
 2. Git can't automatically decide which change to keep
 

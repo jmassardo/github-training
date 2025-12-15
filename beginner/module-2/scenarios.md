@@ -72,12 +72,14 @@ How do you diagnose and address this issue?
 <summary>Show Suggested Approach</summary>
 
 **Diagnostic questions:**
+
 1. "How long do feature branches typically live before merging?"
 2. "How often do developers pull from main into their branches?"
 3. "How large is your codebase? Any hotspot files that everyone edits?"
 4. "What's your branching strategy?"
 
 **Common root causes:**
+
 - **Long-lived branches** — More time = more divergence = more conflicts
 - **Infrequent integration** — Not pulling main into feature branches
 - **Monolithic codebase** — Everyone editing the same files
@@ -158,16 +160,19 @@ How do you address this concern?
 
 ```
 ✈️ On the plane:
+
 1. Make commits locally (they're saved!)
 2. Create branches, merge, etc.
 
 📶 Back online:
+
 3. git push to sync with GitHub
 4. Continue collaboration
 
 ```
 
 **GitHub features that help:**
+
 - **GitHub Desktop** — Visual client, queues changes for push
 - **GitHub Mobile** — Review PRs, respond to issues on phone
 - **Codespaces** — When you DO have internet, instant cloud dev environment
@@ -226,6 +231,7 @@ Walk them through incident response.
    - Consider **push protection** to block secrets before they're pushed
 
 **What GitHub Secret Scanning does:**
+
 - Scans commits for known secret patterns
 - Alerts repository admins
 - Can block pushes containing secrets (push protection)
@@ -276,11 +282,13 @@ Address migration concerns and explain options.
    - Lower risk, longer timeline
 
 **GitHub tools:**
+
 - **GitHub Importer** — Web-based import from SVN, Mercurial, TFS
 - **GitHub Enterprise Importer (GEI)** — Enterprise-grade migration tool
 - **Professional Services** — GitHub experts to plan and execute
 
 **Key benefits of migrating:**
+
 - Distributed architecture (work offline)
 - Better branching (SVN branches are expensive)
 - Pull requests and code review
@@ -289,6 +297,7 @@ Address migration concerns and explain options.
 - Modern developer experience
 
 **Migration planning questions:**
+
 1. How many repositories?
 2. How much history is truly valuable?
 3. What's your timeline?
@@ -318,6 +327,7 @@ Propose a training approach.
 <summary>Show Suggested Approach</summary>
 
 **Assessment questions:**
+
 1. What tools did they use before? (TFS, SVN, Perforce?)
 2. What's their development experience level overall?
 3. What workflow will they be using? (Git Flow, GitHub Flow?)
@@ -326,6 +336,7 @@ Propose a training approach.
 **Training resources:**
 
 **Self-paced (free):**
+
 - **[GitHub Skills](https://skills.github.com/)** — Interactive courses
 - **[Git documentation](https://git-scm.com/doc)** — Official guides
 - **[Learn Git Branching](https://learngitbranching.js.org/)** — Visual practice
@@ -333,6 +344,7 @@ Propose a training approach.
 > ⚠️ **Note:** learngitbranching.js.org is a third-party resource not maintained by GitHub.
 
 **Instructor-led options:**
+
 - **GitHub Professional Services** — Custom training
 - **GitHub Certified Partners** — Training delivery partners
 - **Internal champions** — Train-the-trainer approach
@@ -360,6 +372,7 @@ Propose a training approach.
 - Q&A sessions
 
 **Ongoing:**
+
 - Office hours for questions
 - Documentation wiki
 - Slack channel for Git help

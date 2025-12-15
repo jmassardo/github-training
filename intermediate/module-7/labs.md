@@ -58,6 +58,7 @@ sections:
 ## Lab 1: npm Package Publishing Pipeline
 **Objective:** Create a complete npm package with automated publishing
 **Tasks:**
+
 1. **Create a new npm package:**
 
 ```bash
@@ -106,6 +107,7 @@ on:
 ```
 
 **Validation:**
+
 - [ ] Package publishes on release
 - [ ] Package is downloadable via npm
 - [ ] Version bump creates PR with updated version
@@ -114,6 +116,7 @@ on:
 ## Lab 2: Container Registry Workflow
 **Objective:** Build a complete container workflow with multi-stage builds and security scanning
 **Tasks:**
+
 1. **Create a Node.js application:**
 
 ```javascript
@@ -154,6 +157,7 @@ app.listen(3000);
 ```
 
 **Validation:**
+
 - [ ] Container builds on PR
 - [ ] Container pushes on main
 - [ ] Multiple tags generated (sha, latest, semver)
@@ -162,6 +166,7 @@ app.listen(3000);
 ## Lab 3: Private Package Sharing
 **Objective:** Set up cross-repository package consumption
 **Tasks:**
+
 1. **Create a shared library repository:**
    - Create `shared-utils` package
    - Publish to GitHub Packages
@@ -184,6 +189,7 @@ app.listen(3000);
    - Verify build succeeds
    - Document authentication setup
 **Validation:**
+
 - [ ] Private package published
 - [ ] Consumer can install package in CI
 - [ ] Documentation complete

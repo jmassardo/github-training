@@ -104,6 +104,7 @@ If they don't have Enterprise, they'd need to use Private repos and manage colla
 When the PR is merged, Issue #42 will automatically close.
 
 **Linking keywords:**
+
 - `Closes #42`
 - `Fixes #42`
 - `Resolves #42`
@@ -155,6 +156,7 @@ These only work when the PR is merged to the default branch. You can link multip
 <summary>Show Answer</summary>
 
 **Recommendations:**
+
 1. **Audit and consolidate** — Remove unused labels, merge similar ones
 2. **Create clear categories** — Type (bug, feature), Priority (high, low), Status (in progress)
 3. **Document meanings** — Add descriptions to each label
@@ -162,6 +164,7 @@ These only work when the PR is merged to the default branch. You can link multip
 5. **Start simple** — 10-15 well-defined labels is often enough
 
 **Label best practices:**
+
 - Use consistent naming (prefix: `type:bug`, `priority:high`)
 - Color-code by category
 - Keep to 3-4 labels per issue
@@ -178,12 +181,14 @@ These only work when the PR is merged to the default branch. You can link multip
 <summary>Show Answer</summary>
 
 **Milestones:**
+
 - Group issues toward a deadline
 - Show progress percentage
 - Simple: just a name, date, description
 - Good for releases (v1.0, v2.0)
 
 **Projects:**
+
 - Flexible views (board, table, roadmap)
 - Custom fields (priority, size, sprint)
 - Cross-repository support
@@ -202,6 +207,7 @@ These only work when the PR is merged to the default branch. You can link multip
 <summary>Show Answer</summary>
 
 **Enterprise-only features:**
+
 - Internal repository visibility
 - SAML/SSO authentication
 - Advanced audit log
@@ -212,6 +218,7 @@ These only work when the PR is merged to the default branch. You can link multip
 - Multiple organizations under one enterprise
 
 **Available on Team/Free:**
+
 - Issues, PRs, Actions
 - Projects
 - Discussions
@@ -251,6 +258,7 @@ The "request changes" usually blocks merge until that reviewer approves or is di
 <summary>Show Answer</summary>
 
 **Solutions:**
+
 1. **Branch protection** — Require PRs (no direct pushes to main)
 2. **PR templates** — Include "Related Issue: #" field
 3. **CODEOWNERS** — Require review from team leads who can check for linked issues
@@ -258,6 +266,7 @@ The "request changes" usually blocks merge until that reviewer approves or is di
 5. **Required status checks** — Custom check that verifies issue linkage
 
 **Cultural solutions:**
+
 - Educate on why tracking matters
 - Make issue creation fast (good templates)
 - Celebrate completed issues

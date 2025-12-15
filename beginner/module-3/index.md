@@ -191,7 +191,7 @@ flowchart TB
 
 Before starting this module:
 
-- ✅ Completed Module 2 (Git Fundamentals)
+- ✅ Completed [Module 2: Git Fundamentals](/beginner/module-2/)
 - ✅ GitHub account created
 - ✅ Comfortable with basic Git commands
 

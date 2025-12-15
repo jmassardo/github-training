@@ -64,6 +64,7 @@ Traditional security approaches are broken—finding vulnerabilities after deplo
 ### Why This Matters
 
 As a CSM, you'll help customers:
+
 - Roll out GHAS across their organization
 - Configure security policies that balance security and velocity
 - Reduce false positive rates
@@ -104,7 +105,7 @@ By the end of this module, you will be able to:
 
 ## Prerequisites
 
-- Completed Module 5 (GitHub Actions)
+- Completed [Module 5: GitHub Actions](/intermediate/module-5/)
 - GitHub account with access to GHAS features
 - Understanding of basic security concepts
 - Familiarity with YAML configuration

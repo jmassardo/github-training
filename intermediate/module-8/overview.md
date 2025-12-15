@@ -132,6 +132,7 @@ flowchart TB
 
 ## What You'll Learn
 This module covers:
+
 - CI/CD pipeline design patterns
 - GitHub Environments configuration
 - Deployment strategies (blue-green, canary, rolling)
@@ -141,6 +142,7 @@ This module covers:
 
 ## Customer Success Context
 As a CSM, you'll help customers:
+
 - Design deployment pipelines that match their risk tolerance
 - Reduce deployment lead time
 - Implement progressive delivery

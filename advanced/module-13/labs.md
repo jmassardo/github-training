@@ -187,6 +187,7 @@ def process_users(users):
 ### Task 3.1: Define the Feature
 
 You'll build a simple task manager with these capabilities:
+
 - Add tasks with title and priority
 - List all tasks
 - Mark tasks as complete
@@ -201,6 +202,7 @@ You'll build a simple task manager with these capabilities:
 """
 Simple Task Manager
 Features:
+
 - Add tasks with title, priority (low, medium, high), and due date
 - List tasks with optional filtering
 - Mark tasks complete

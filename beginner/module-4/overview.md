@@ -77,6 +77,7 @@ flowchart TB
 ## What You'll Learn
 
 This module teaches you to implement professional-grade SCM processes that:
+
 - Scale from small teams to enterprise organizations
 - Enforce quality without creating bottlenecks
 - Provide clear audit trails for compliance
@@ -85,6 +86,7 @@ This module teaches you to implement professional-grade SCM processes that:
 ## Customer Success Context
 
 As a GitHub CSM, you'll help customers:
+
 - Migrate from legacy SCM tools (SVN, Perforce, TFS)
 - Implement governance that matches their compliance requirements
 - Design branching strategies appropriate for their team size

@@ -66,6 +66,7 @@ This module teaches you to implement professional-grade SCM processes that scale
 ### Why This Matters
 
 As a GitHub CSM, you'll help customers:
+
 - Migrate from legacy SCM tools (SVN, Perforce, TFS)
 - Implement governance that matches their compliance requirements
 - Design branching strategies appropriate for their team size
@@ -106,9 +107,10 @@ By the end of this module, you will be able to:
 ## Prerequisites
 
 Before starting this module, you should have completed:
-- Module 1: SDLC
-- Module 2: Git Fundamentals
-- Module 3: GitHub Platform
+
+- [Module 1: SDLC](/beginner/module-1/)
+- [Module 2: Git Fundamentals](/beginner/module-2/)
+- [Module 3: GitHub Platform](/beginner/module-3/)
 
 ---
 

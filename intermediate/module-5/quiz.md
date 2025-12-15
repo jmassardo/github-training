@@ -83,6 +83,7 @@ What's the difference between `uses` and `run` in a workflow step?
 ```
 
 Key differences:
+
 - `uses` is for pre-built, reusable functionality
 - `run` is for custom shell commands
 - `uses` requires a reference (action path, Docker image)
@@ -175,6 +176,7 @@ jobs:
 ```
 
 Key differences:
+
 - Outputs: Small strings, immediate access
 - Artifacts: Files, stored 90 days by default, downloadable from UI
 </details>
@@ -260,6 +262,7 @@ steps:
 ```
 
 Available status functions:
+
 - `always()` - Always run regardless of status
 - `success()` - Run only if all previous steps succeeded (default)
 - `failure()` - Run only if any previous step failed
@@ -299,6 +302,7 @@ jobs:
 <details markdown="1">
 <summary>View Answer</summary>
 **Issues:**
+
 1. **No checkout step** - Jobs don't have repository code
 2. **No dependency installation** - npm commands will fail
 3. **Test and build run in parallel** - Build might fail before tests complete
@@ -399,6 +403,7 @@ jobs:
 ```
 
 Benefits:
+
 - No long-lived secrets stored in GitHub
 - Token is short-lived and scoped
 - Can be scoped to specific repos/branches

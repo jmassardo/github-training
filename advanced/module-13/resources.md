@@ -229,6 +229,7 @@ Congratulations! You've completed Module 13: GitHub Copilot Fundamentals.
 ### Next Module
 
 Continue to [Module 14: GitHub Copilot Advanced](/advanced/module-14/) to learn about:
+
 - Copilot Extensions
 - Custom Instructions
 - MCP (Model Context Protocol)

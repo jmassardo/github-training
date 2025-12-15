@@ -140,6 +140,7 @@ D) `def fn(x):`
 **C) `def validate_email_format(email: str) -> bool:`**
 
 This prompt provides:
+
 - A descriptive function name that explains the purpose
 - Type hints that clarify input and output
 - Clear semantic meaning

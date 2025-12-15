@@ -135,6 +135,7 @@ In VS Code with GitHub Copilot, agent mode is activated through specific chat in
 
 ```
 @workspace Create a user profile feature including:
+
 - Profile model with avatar, bio, and preferences
 - REST API endpoints for CRUD operations
 - Unit tests for the service layer
@@ -207,6 +208,7 @@ You can assign Copilot to issues through:
 ### Good Issues for Copilot
 
 **Ideal characteristics:**
+
 - Clear, specific requirements
 - Well-defined scope
 - Good test coverage exists
@@ -225,6 +227,7 @@ Add rate limiting middleware to protect API endpoints:
 - Add X-RateLimit headers to responses
 
 Acceptance criteria:
+
 - [ ] Rate limiter middleware created
 - [ ] Applied to all /api routes
 - [ ] Unit tests added
@@ -233,6 +236,7 @@ Acceptance criteria:
 ```
 
 **Issues to avoid:**
+
 - Vague requirements ("Make it better")
 - Massive scope ("Rewrite the entire app")
 - No clear success criteria
@@ -325,6 +329,7 @@ You can add, remove, or modify planned changes.
 **Step 4: Implement and Create PR**
 
 Workspace generates the code. You can:
+
 - Review each file's changes
 - Edit generated code directly
 - Run in integrated Codespace for testing
@@ -333,6 +338,7 @@ Workspace generates the code. You can:
 ### When to Use Workspace
 
 **Ideal scenarios:**
+
 - Complex features needing planning
 - Unfamiliar codebases
 - When you want to guide the approach
@@ -438,6 +444,7 @@ Always review agent-generated changes:
 ### Managing Expectations
 
 **Agents excel at:**
+
 - Implementing well-defined features
 - Adding tests to existing code
 - Refactoring with clear goals
@@ -445,6 +452,7 @@ Always review agent-generated changes:
 - Documentation generation
 
 **Agents struggle with:**
+
 - Ambiguous requirements
 - Cross-system integration
 - Performance optimization
@@ -459,6 +467,7 @@ Always review agent-generated changes:
 Issue: Login fails when email contains '+'
 
 Steps to reproduce:
+
 1. Try to register with email "test+label@example.com"
 2. Receive validation error
 
@@ -475,6 +484,7 @@ Relevant code: src/validators/email.js
 Feature: Add dark mode support
 
 Requirements:
+
 - Detect system preference
 - Add manual toggle in settings
 - Persist preference in localStorage
@@ -493,6 +503,7 @@ Current coverage: 45%
 Target coverage: 80%
 
 Focus areas:
+
 - createOrder validation
 - calculateShipping logic
 - applyPromoCode edge cases

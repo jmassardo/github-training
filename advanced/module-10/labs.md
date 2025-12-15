@@ -60,6 +60,7 @@ sections:
 ### Lab 10.1: API Exploration
 **Objective:** Familiarize yourself with GitHub's APIs using different tools.
 **Tasks:**
+
 1. **REST API with curl:**
    ```bash
    # Exercise 1: Get your user info
@@ -138,6 +139,7 @@ sections:
 - A pull request is approved
 - A deployment succeeds or fails
 **Tasks:**
+
 1. **Document Webhook Requirements:**
    ```markdown
    ## Webhook Integration Design
@@ -199,6 +201,7 @@ sections:
 - Blocks merge if title doesn't match pattern
 - Allows exceptions for specific users
 **Tasks:**
+
 1. **Define App Requirements:**
    ```markdown
    ## App Requirements Document
@@ -267,6 +270,7 @@ sections:
 ### Lab 10.4: Integration Troubleshooting
 **Objective:** Diagnose common API integration issues.
 **Scenarios to troubleshoot:**
+
 1. **Rate Limiting:**
    ```markdown
    ## Issue: API calls failing with 403

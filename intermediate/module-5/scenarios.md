@@ -79,6 +79,7 @@ A customer is migrating from Jenkins to GitHub Actions. They have 200+ Jenkins j
 | Parallel stages | Matrix strategy |
 | Credentials | Secrets |
 **Migration Approach:**
+
 1. **Assessment Phase (Week 1-2):**
    - Inventory all Jenkins jobs
    - Categorize by complexity (simple, medium, complex)
@@ -101,6 +102,7 @@ A customer is migrating from Jenkins to GitHub Actions. They have 200+ Jenkins j
    - Implement caching for performance
    - Set up organization-level secrets
 **What GitHub Actions does better:**
+
 - Native GitHub integration (PRs, issues, deployments)
 - No infrastructure to manage (hosted runners)
 - Modern YAML syntax
@@ -119,6 +121,7 @@ A customer's GitHub Actions usage has grown significantly, and they're seeing hi
 ### Your Response
 "Let's analyze and optimize your Actions usage:
 **Quick Wins (Immediate Impact):**
+
 1. **Add path filters:**
 
 ```yaml
@@ -150,6 +153,7 @@ concurrency:
 ```
 
 **Medium-Term Optimizations:**
+
 4. **Self-hosted runners for heavy jobs:**
    - macOS minutes are 10x Linux cost
    - Consider self-hosted Mac Minis for iOS builds
@@ -183,6 +187,7 @@ gh run list --limit 100 --json conclusion,status,workflowName,createdAt
 ```
 
 **Cost Reduction Checklist:**
+
 - [ ] Add path filters to all workflows
 - [ ] Implement concurrency cancellation
 - [ ] Cache dependencies properly
@@ -237,10 +242,12 @@ jobs:
 ```
 
 **4. Secure secrets handling:**
+
 - Use environment-scoped secrets for production
 - Enable secret scanning on workflow files
 - Consider HashiCorp Vault for dynamic secrets
 **5. Workflow security settings:**
+
 - Repository Settings → Actions → General
   - ☑ Require approval for first-time contributors
   - ☑ Disable Actions for fork PRs (or require approval)
@@ -265,10 +272,12 @@ permissions:
 ```
 
 **8. Audit workflow changes:**
+
 - Use branch protection for `.github/workflows/`
 - Require CODEOWNERS review for workflow changes
 - Monitor audit log for workflow modifications
 **Security Checklist:**
+
 - [ ] All third-party actions pinned to SHA
 - [ ] GITHUB_TOKEN permissions minimized
 - [ ] Production deploys use environments with approval
@@ -290,6 +299,7 @@ A customer has specialized build requirements (GPU, specific hardware) and needs
 ### Your Response
 "Let me walk you through a scalable self-hosted runner architecture:
 **Architecture Options:**
+
 1. **Static Runners (Simple):**
    - Persistent VMs registered as runners
    - Good for: Consistent, predictable load
@@ -361,6 +371,7 @@ spec:
 ```
 
 **Best Practices:**
+
 - Use ephemeral runners for security
 - Label runners by capability (gpu, high-memory, etc.)
 - Monitor runner utilization
@@ -401,6 +412,7 @@ Would you like help setting up ARC or another scaling solution?"
 
 ## What's Next
 In **Module 6: Code Security with GHAS**, you'll learn how to:
+
 - Implement code scanning with CodeQL
 - Configure Dependabot for dependency updates
 - Set up secret scanning

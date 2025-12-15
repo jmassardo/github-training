@@ -420,12 +420,14 @@ Beyond IDEs and CLI, Copilot offers powerful features directly on GitHub.com.
 Request AI-powered code review on pull requests:
 
 **How to use:**
+
 1. Open a pull request
 2. Click **Request review** 
 3. Select **Copilot** as a reviewer
 4. Copilot analyzes changes and leaves comments
 
 **What Copilot reviews:**
+
 - Logic errors and bugs
 - Security vulnerabilities
 - Performance issues
@@ -451,12 +453,14 @@ Consider using parameterized queries:
 Generate AI summaries of pull request changes:
 
 **How to use:**
+
 1. Create or open a pull request
 2. Click **Copilot** icon in the description area
 3. Select **Generate summary**
 4. Edit as needed before publishing
 
 **Generated summary includes:**
+
 - Overview of changes
 - List of modified files with descriptions
 - Potential impacts
@@ -484,11 +488,13 @@ Focus on token expiration handling and error responses.
 AI-assisted text completion for PR descriptions and issue bodies:
 
 **How it works:**
+
 - Start typing in a PR description or issue body
 - Copilot suggests completions as ghost text
 - Press `Tab` to accept suggestions
 
 **Best for:**
+
 - Writing detailed PR descriptions
 - Creating comprehensive issue reports
 - Documenting acceptance criteria
@@ -541,6 +547,7 @@ Next Edit Suggestions predict where you'll edit next and offer completions proac
 ### How It Works
 
 Unlike inline completions (which suggest at your cursor), Next Edit Suggestions:
+
 1. Analyze your recent edits
 2. Predict the next location you'll likely change
 3. Show suggestions at that location before you navigate there

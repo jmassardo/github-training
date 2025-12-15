@@ -73,22 +73,26 @@ How do you identify opportunities and start a conversation about expanding their
 <summary>Show Suggested Approach</summary>
 
 **What you heard:**
+
 - Only using for source control (underutilization)
 - Manual review process (no automation)
 - 2-week QA cycle (long testing phase)
 - Quarterly releases (slow delivery)
 
 **Questions to ask:**
+
 1. "How long does it typically take from when a developer finishes a feature to when customers see it?"
 2. "What does your manual review process look like? How many people are involved?"
 3. "What happens when you need to deploy an urgent security fix?"
 
 **Bridge to value:**
+
 - Lead time sounds long — "Many of our customers have reduced this from months to days"
 - Manual testing is expensive — "What if you could automate 80% of that?"
 - Quarterly releases = higher risk — "Smaller, more frequent releases often reduce deployment failures"
 
 **Features to introduce:**
+
 1. **GitHub Actions** for automated testing
 2. **Branch protection** for streamlined reviews
 3. **GitHub Advanced Security** for continuous security
@@ -119,22 +123,26 @@ How do you help them realize value during this critical adoption phase?
 <summary>Show Suggested Approach</summary>
 
 **Red flags:**
+
 - Team complaints = adoption friction
 - No perceived value = churn risk
 - Investor-driven decision = not bottom-up buy-in
 
 **Discovery questions:**
+
 1. "What specific complaints are you hearing from the team?"
 2. "What were they doing in GitLab that they can't do in GitHub?"
 3. "What does 'productivity gains' look like to you — how would you measure it?"
 
 **Common migration pain points:**
+
 - CI/CD pipeline translation (GitLab CI → GitHub Actions)
 - Different workflow (GitLab MRs vs GitHub PRs)
 - Feature parity gaps (perceived or real)
 - Learning curve on new UI
 
 **Your action plan:**
+
 1. **Office hours session** — Walk through GitHub Actions vs GitLab CI
 2. **Quick wins** — Show something they couldn't do before:
    - GitHub Copilot demos
@@ -184,6 +192,7 @@ How do you help them demonstrate security value?
 
 **Phase 3: Show progress (Week 4-12)**
 Track and report:
+
 - **Vulnerabilities prevented** — Secrets blocked before commit
 - **Vulnerabilities found** — Code scanning alerts
 - **Vulnerabilities fixed** — Dependabot auto-PRs merged
@@ -194,6 +203,7 @@ Track and report:
 ```
 Before GHAS: Unknown vulnerability count
 After 90 days:
+
 - 47 critical secrets blocked
 - 156 vulnerabilities identified
 - 89% auto-fixed by Dependabot
@@ -227,11 +237,13 @@ How do you help them drive organization-wide adoption?
 <summary>Show Suggested Approach</summary>
 
 **Diagnose the problem:**
+
 1. "What do the 20% who adopted have in common?"
 2. "What are the other 80% citing as barriers?"
 3. "Is there executive sponsorship and are there consequences for not adopting?"
 
 **Common adoption barriers:**
+
 - **Skills gap** — Teams don't know how to write CI/CD
 - **Time** — "We don't have time to learn new tools"
 - **Fear** — Automation means less control
@@ -294,12 +306,14 @@ How do you respond effectively to this request?
 > 4. What does success look like after training?"
 
 **Common underlying issues:**
+
 - **No documentation** — They need internal onboarding docs, not generic training
 - **Complex workflow** — The process is hard, not GitHub
 - **Tool overload** — They use 10 tools and GitHub is just one more
 - **Manager expectations** — Managers expect immediate productivity
 
 **Your options:**
+
 1. **GitHub Skills** — Self-paced, free, covers basics
 2. **GitHub Professional Services** — Custom training for specific workflows
 3. **Partner training** — Certified partners offer training programs

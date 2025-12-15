@@ -132,6 +132,7 @@ bypass_actors:
 Configure audit log streaming to your SIEM or storage:
 
 **For AWS S3:**
+
 1. Go to **Enterprise Settings → Audit Log → Log streaming**
 2. Select **Amazon S3**
 3. Configure:

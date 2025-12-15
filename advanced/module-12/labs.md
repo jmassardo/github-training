@@ -212,6 +212,7 @@ jobs:
 ### Challenge
 
 Extend the workflow to:
+
 - Store metrics in a JSON file
 - Calculate weekly averages
 - Post summary to a Slack channel

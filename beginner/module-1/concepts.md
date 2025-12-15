@@ -82,6 +82,7 @@ User Story: "As a customer, I want to reset my password via email
 so that I can regain access if I forget it."
 
 Acceptance Criteria:
+
 - User can click "Forgot Password" link
 - System sends email with reset link within 2 minutes
 - Link expires after 24 hours

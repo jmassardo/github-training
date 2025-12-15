@@ -292,6 +292,7 @@ git push origin main
 
 ### Step 3: Handle Push Protection Bypasses
 When bypass is needed:
+
 1. Visit the URL provided in the rejection message
 2. Select a bypass reason:
    - "It's a false positive"
@@ -302,6 +303,7 @@ When bypass is needed:
 
 ### Step 4: Configure Bypass Alerts
 At organization level, configure who receives notifications when push protection is bypassed:
+
 - Security team
 - Repository administrators
 
@@ -309,9 +311,11 @@ At organization level, configure who receives notifications when push protection
 
 ### Step 1: Access Security Overview
 For organization-wide view:
+
 1. Go to Organization → **Security** tab
 2. View **Security overview**
 For repository:
+
 1. Go to Repository → **Security** tab
 
 ### Step 2: Triage Code Scanning Alerts
@@ -334,6 +338,7 @@ For repository:
 
 ### Step 4: Configure Alert Notifications
 Set up Slack/email notifications:
+
 1. Repository **Settings** → **Notifications**
 2. Configure security alert notifications
 3. Or use GitHub Actions:

@@ -313,6 +313,7 @@ echo "docs.example.com" > CNAME
 ```
 
 Then configure DNS:
+
 - For apex domain: A records pointing to GitHub's IPs
 - For subdomain: CNAME record pointing to `<username>.github.io`
 

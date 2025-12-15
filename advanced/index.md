@@ -16,6 +16,7 @@ You've mastered GitHub features and automation. Now it's time for enterprise-sca
 ### What You'll Learn
 
 By the end of this phase, you'll understand:
+
 - Enterprise GitHub administration
 - GitHub APIs (REST and GraphQL)
 - Webhooks, GitHub Apps, and OAuth
@@ -42,6 +43,7 @@ By the end of this phase, you'll understand:
 Master enterprise GitHub administration and organization management.
 
 **Topics:**
+
 - GitHub Enterprise Cloud vs Server
 - Organization structure and team management
 - Authentication (SAML, SSO, EMU)
@@ -51,6 +53,7 @@ Master enterprise GitHub administration and organization management.
 - Organization insights and reporting
 
 **Learning Outcomes:**
+
 - Design organization structures for enterprise customers
 - Configure SSO and authentication
 - Set enterprise-wide policies
@@ -66,6 +69,7 @@ Master enterprise GitHub administration and organization management.
 Build custom integrations using GitHub's APIs and app platform.
 
 **Topics:**
+
 - REST API fundamentals and best practices
 - GraphQL API for complex queries
 - Authentication (PATs, OAuth, GitHub Apps)
@@ -76,6 +80,7 @@ Build custom integrations using GitHub's APIs and app platform.
 - Marketplace requirements
 
 **Learning Outcomes:**
+
 - Make authenticated API calls (REST and GraphQL)
 - Handle rate limiting and errors
 - Create webhooks for event-driven workflows
@@ -92,6 +97,7 @@ Build custom integrations using GitHub's APIs and app platform.
 Manage infrastructure as code and implement operational best practices.
 
 **Topics:**
+
 - Infrastructure as Code (IaC) principles
 - Terraform/Bicep with GitHub Actions
 - GitOps workflows
@@ -102,6 +108,7 @@ Manage infrastructure as code and implement operational best practices.
 - Notification management
 
 **Learning Outcomes:**
+
 - Deploy infrastructure using IaC pipelines
 - Implement GitOps patterns
 - Set up incident response workflows
@@ -117,6 +124,7 @@ Manage infrastructure as code and implement operational best practices.
 Master compliance, audit, security governance, and DevOps performance measurement.
 
 **Topics:**
+
 - Enterprise security governance
 - Audit log streaming and SIEM integration
 - Compliance requirements (SOC2, HIPAA, FedRAMP)
@@ -128,6 +136,7 @@ Master compliance, audit, security governance, and DevOps performance measuremen
 - Custom reporting with APIs
 
 **Learning Outcomes:**
+
 - Configure audit log streaming
 - Design security governance frameworks
 - Implement complete DORA metrics collection
@@ -144,6 +153,7 @@ Master compliance, audit, security governance, and DevOps performance measuremen
 Master AI-powered development with GitHub Copilot basics.
 
 **Topics:**
+
 - Copilot architecture and capabilities
 - IDE setup (VS Code, JetBrains, Neovim, CLI)
 - Prompt crafting techniques
@@ -152,6 +162,7 @@ Master AI-powered development with GitHub Copilot basics.
 - Context management and optimization
 
 **Learning Outcomes:**
+
 - Configure Copilot across different IDEs
 - Write effective prompts for better suggestions
 - Use Copilot Chat for explanations and code generation
@@ -167,6 +178,7 @@ Master AI-powered development with GitHub Copilot basics.
 Extend Copilot with agents, MCP, extensions, and enterprise administration.
 
 **Topics:**
+
 - Copilot Agents (@workspace, Coding Agent, Edits)
 - Model Context Protocol (MCP) servers
 - Building Copilot Extensions
@@ -175,6 +187,7 @@ Extend Copilot with agents, MCP, extensions, and enterprise administration.
 - Metrics, analytics, and adoption strategies
 
 **Learning Outcomes:**
+
 - Use Copilot Agents for complex, multi-file tasks
 - Create and configure MCP servers
 - Build custom Copilot Extensions
@@ -228,6 +241,7 @@ Extend Copilot with agents, MCP, extensions, and enterprise administration.
 4. ROI analysis
 
 **Deliverables:**
+
 - Enterprise organization design document
 - Working GitHub App or integration
 - Security assessment and policies
@@ -235,6 +249,7 @@ Extend Copilot with agents, MCP, extensions, and enterprise administration.
 - 30-minute presentation (executive + technical)
 
 **Assessment Criteria:**
+
 - Organization design and best practices (20%)
 - API integration functionality (20%)
 - Security and compliance thoroughness (25%)
@@ -308,6 +323,7 @@ Upon completing this phase and the milestone project, you will have:
 ✅ Measured DevOps performance with DORA metrics  
 
 **You're ready to:**
+
 - Guide enterprise customers through complex GitHub implementations
 - Design organization structures for hundreds of developers
 - Build custom integrations and automations

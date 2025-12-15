@@ -75,12 +75,14 @@ next_section:
 ### When to Use Each
 
 **Use Issues for:**
+
 - 🐛 Bug reports
 - ✨ Feature requests with clear scope
 - 📋 Trackable tasks
 - 🔗 Work linked to code changes
 
 **Use Discussions for:**
+
 - ❓ Questions and support
 - 💡 Ideas and brainstorming
 - 📢 Announcements

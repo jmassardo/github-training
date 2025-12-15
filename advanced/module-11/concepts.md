@@ -217,6 +217,7 @@ terraform {
 ```
 
 **Alternative backends:**
+
 - **Azure Blob Storage** - For Azure-centric organizations
 - **Google Cloud Storage** - For GCP users
 - **Terraform Cloud** - Managed solution with collaboration features
@@ -489,6 +490,7 @@ provider "github" {
 ### Least Privilege Permissions
 
 Configure GitHub App with minimal required permissions:
+
 - `administration: write` - Repository settings
 - `members: write` - Team management
 - `organization_administration: write` - Org settings

@@ -190,6 +190,7 @@ git revert <commit>
 ### IDE Integration
 
 Most modern IDEs have excellent Git integration:
+
 - **VS Code** — Built-in Git + GitLens extension
 - **JetBrains IDEs** — Powerful Git tools included
 - **Xcode** — Source Control navigator
