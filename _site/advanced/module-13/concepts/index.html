@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Core Concepts &middot; GitHub Training
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="preload" href="/public/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/public/css/main.css"></noscript>
+
+  <!-- GLightbox CSS for Image Modals -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+</head>
+
+
+  <body class="training-layout">
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="training-header">
+  <div class="container">
+    <div class="training-header-inner">
+      <div class="training-brand">
+        <a href="/" class="training-logo">
+          <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" class="octicon">
+            <path fill="currentColor" d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
+          </svg>
+          <span class="training-title">GitHub Training</span>
+        </a>
+        <span class="training-tagline">CSM & CSA Certification Program</span>
+      </div>
+      
+      <nav class="training-nav" aria-label="Training navigation">
+        <a href="/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8.156 1.835a.25.25 0 00-.312 0l-5.25 4.2a.25.25 0 00-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 01.75-.75h3.5a.75.75 0 01.75.75v5.25h2.75a.25.25 0 00.25-.25V6.23a.25.25 0 00-.094-.195z"></path>
+          </svg>
+          Home
+        </a>
+        <a href="/beginner/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0114.25 16H1.75A1.75 1.75 0 010 14.25V1.75zm1.75-.25a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V1.75a.25.25 0 00-.25-.25H1.75zM3.5 6.25a.75.75 0 01.75-.75h7a.75.75 0 010 1.5h-7a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h4a.75.75 0 000-1.5h-4z"></path>
+          </svg>
+          Beginner
+        </a>
+        <a href="/intermediate/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+            <path fill="currentColor" d="M8 0a8 8 0 110 16A8 8 0 018 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"></path>
+          </svg>
+          Intermediate
+        </a>
+        <a href="/advanced/" class="training-nav-link active">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"></path>
+          </svg>
+          Advanced
+        </a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+    <!-- Main content area with sidebar -->
+    <div class="training-container">
+      
+      <!-- Sidebar navigation -->
+      <aside class="training-sidebar">
+        <div class="training-sidebar-sticky">
+          
+          
+          
+          
+          
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">🏆 Advanced Phase</h3>
+            <nav class="sidebar-nav">
+              <a href="/advanced/" class="sidebar-link">Phase Overview</a>
+              <a href="/advanced/module-9/" class="sidebar-link">Module 9: Enterprise Admin</a>
+              <a href="/advanced/module-10/" class="sidebar-link">Module 10: APIs & Apps</a>
+              <a href="/advanced/module-11/" class="sidebar-link">Module 11: IaC & Ops</a>
+              <a href="/advanced/module-12/" class="sidebar-link">Module 12: Governance</a>
+              <a href="/advanced/module-13/" class="sidebar-link active">Module 13: Copilot Basics</a>
+              <a href="/advanced/module-14/" class="sidebar-link">Module 14: Copilot Advanced</a>
+            </nav>
+          </div>
+          
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">Resources</h3>
+            <nav class="sidebar-nav">
+              <a href="/syllabus/" class="sidebar-link">Full Syllabus</a>
+              <a href="https://docs.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Docs
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+              <a href="https://skills.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Skills
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+            </nav>
+          </div>
+          
+        </div>
+      </aside>
+
+      <!-- Main content area -->
+      <main id="main-content" class="training-main">
+      
+        <div class="training-module">
+        <!-- Module Header -->
+        <header class="module-header">
+          <div class="module-breadcrumb">
+            <a href="/">Training Home</a>
+            <span class="separator">›</span>
+            <a href="/advanced/">Advanced Phase</a>
+            <span class="separator">›</span>
+            <a href="/advanced/module-13/">Module 13</a>
+          </div>
+          
+          <h1 class="module-title">Core Concepts</h1>
+          
+          <div class="module-meta">
+            <span class="badge badge-advanced">Advanced</span>
+            <span class="meta-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm7-3.25v2.992l2.028.812a.75.75 0 0 1-.557 1.392l-2.5-1A.751.751 0 0 1 7 8.25v-3.5a.75.75 0 0 1 1.5 0Z"></path></svg>
+              30 min
+            </span>
+            <span class="meta-item">
+              Section 2 of 10
+            </span>
+          </div>
+        </header>
+
+        <!-- Progress Bar -->
+        <div class="module-progress">
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 20.0%"></div>
+          </div>
+          <div class="progress-steps">
+            
+              
+              <a href="/advanced/module-13/overview/" 
+                 class="progress-step completed"
+                 title="Context & Overview">
+                <span class="step-dot"></span>
+                <span class="step-label">1</span>
+              </a>
+            
+              
+              <a href="/advanced/module-13/concepts/" 
+                 class="progress-step active"
+                 title="Core Concepts">
+                <span class="step-dot"></span>
+                <span class="step-label">2</span>
+              </a>
+            
+              
+              <a href="/advanced/module-13/setup/" 
+                 class="progress-step "
+                 title="IDE Setup">
+                <span class="step-dot"></span>
+                <span class="step-label">3</span>
+              </a>
+            
+              
+              <a href="/advanced/module-13/prompts/" 
+                 class="progress-step "
+                 title="Prompt Crafting">
+                <span class="step-dot"></span>
+                <span class="step-label">4</span>
+              </a>
+            
+              
+              <a href="/advanced/module-13/chat/" 
+                 class="progress-step "
+                 title="Copilot Chat">
+                <span class="step-dot"></span>
+                <span class="step-label">5</span>
+              </a>
+            
+              
+              <a href="/advanced/module-13/ide-differences/" 
+                 class="progress-step "
+                 title="IDE Differences">
+                <span class="step-dot"></span>
+                <span class="step-label">6</span>
+              </a>
+            
+              
+              <a href="/advanced/module-13/best-practices/" 
+                 class="progress-step "
+                 title="Best Practices">
+                <span class="step-dot"></span>
+                <span class="step-label">7</span>
+              </a>
+            
+              
+              <a href="/advanced/module-13/labs/" 
+                 class="progress-step "
+                 title="Hands-On Labs">
+                <span class="step-dot"></span>
+                <span class="step-label">8</span>
+              </a>
+            
+              
+              <a href="/advanced/module-13/quiz/" 
+                 class="progress-step "
+                 title="Knowledge Check">
+                <span class="step-dot"></span>
+                <span class="step-label">9</span>
+              </a>
+            
+              
+              <a href="/advanced/module-13/resources/" 
+                 class="progress-step "
+                 title="Resources">
+                <span class="step-dot"></span>
+                <span class="step-label">10</span>
+              </a>
+            
+          </div>
+        </div>
+
+        <!-- Section Navigation Tabs -->
+        <nav class="section-tabs">
+          
+            
+            <a href="/advanced/module-13/overview/" 
+               class="section-tab ">
+              <span class="tab-icon">📋</span>
+              <span class="tab-title">Overview</span>
+            </a>
+          
+            
+            <a href="/advanced/module-13/concepts/" 
+               class="section-tab active">
+              <span class="tab-icon">📚</span>
+              <span class="tab-title">Concepts</span>
+            </a>
+          
+            
+            <a href="/advanced/module-13/setup/" 
+               class="section-tab ">
+              <span class="tab-icon">⚙️</span>
+              <span class="tab-title">Setup</span>
+            </a>
+          
+            
+            <a href="/advanced/module-13/prompts/" 
+               class="section-tab ">
+              <span class="tab-icon">✍️</span>
+              <span class="tab-title">Prompts</span>
+            </a>
+          
+            
+            <a href="/advanced/module-13/chat/" 
+               class="section-tab ">
+              <span class="tab-icon">💬</span>
+              <span class="tab-title">Chat</span>
+            </a>
+          
+            
+            <a href="/advanced/module-13/ide-differences/" 
+               class="section-tab ">
+              <span class="tab-icon">🔀</span>
+              <span class="tab-title">IDE Differences</span>
+            </a>
+          
+            
+            <a href="/advanced/module-13/best-practices/" 
+               class="section-tab ">
+              <span class="tab-icon">✅</span>
+              <span class="tab-title">Best Practices</span>
+            </a>
+          
+            
+            <a href="/advanced/module-13/labs/" 
+               class="section-tab ">
+              <span class="tab-icon">🧪</span>
+              <span class="tab-title">Labs</span>
+            </a>
+          
+            
+            <a href="/advanced/module-13/quiz/" 
+               class="section-tab ">
+              <span class="tab-icon">📝</span>
+              <span class="tab-title">Quiz</span>
+            </a>
+          
+            
+            <a href="/advanced/module-13/resources/" 
+               class="section-tab ">
+              <span class="tab-icon">📖</span>
+              <span class="tab-title">Resources</span>
+            </a>
+          
+        </nav>
+
+        <!-- Main Content with TOC Sidebar -->
+        <div class="module-content-wrapper">
+          <main id="main-content" class="module-content">
+            <article class="section-content">
+              <h2 id="how-github-copilot-works">How GitHub Copilot Works</h2>
+
+<p>Understanding Copilot’s architecture helps you use it more effectively and address customer questions with confidence.</p>
+
+<h3 id="the-copilot-architecture">The Copilot Architecture</h3>
+
+<pre><code class="language-mermaid">flowchart TB
+    subgraph IDE["Your IDE"]
+        A[Editor Context]
+        B[Open Files]
+        C[Cursor Position]
+    end
+    
+    subgraph Service["GitHub Copilot Service"]
+        D[Context Processing]
+        E[LLM Models]
+        F[Response Generation]
+    end
+    
+    subgraph Azure["Microsoft Azure"]
+        G[Secure Infrastructure]
+        H[SOC 2 Compliant]
+    end
+    
+    IDE --&gt; |Encrypted Request| Service
+    Service --&gt; Azure
+    Service --&gt; |Suggestions| IDE
+    
+    style IDE fill:#0969da,color:#fff
+    style Service fill:#8250df,color:#fff
+    style Azure fill:#1a7f37,color:#fff
+
+</code></pre>
+
+<p><strong>Key Points:</strong>
+- Your code context is sent securely to GitHub’s Copilot service
+- Processing happens on Microsoft Azure infrastructure
+- Suggestions are returned to your IDE in real-time
+- Business/Enterprise plans include additional privacy controls</p>
+
+<blockquote>
+  <p><strong>📚 Learn More:</strong> <a href="https://copilot.github.trust.page/">GitHub Copilot Trust Center</a></p>
+</blockquote>
+
+<hr />
+
+<h2 id="llm-fundamentals-for-developers">LLM Fundamentals for Developers</h2>
+
+<h3 id="what-are-large-language-models">What Are Large Language Models?</h3>
+
+<p>Large Language Models (LLMs) are neural networks trained on massive datasets of text and code. They learn statistical patterns in language and can generate human-like text—including code.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>Description</th>
+      <th>Analogy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Training Data</strong></td>
+      <td>Billions of lines of code and documentation</td>
+      <td>A developer reading thousands of projects</td>
+    </tr>
+    <tr>
+      <td><strong>Neural Network</strong></td>
+      <td>Layers of mathematical transformations</td>
+      <td>Brain synapses learning patterns</td>
+    </tr>
+    <tr>
+      <td><strong>Weights</strong></td>
+      <td>Learned parameters from training</td>
+      <td>Memory of patterns and associations</td>
+    </tr>
+    <tr>
+      <td><strong>Inference</strong></td>
+      <td>Generating predictions from input</td>
+      <td>Applying experience to new problems</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="how-code-generation-works">How Code Generation Works</h3>
+
+<p>When you type code, Copilot:</p>
+
+<ol>
+  <li><strong>Tokenizes</strong> your input - breaks code into meaningful pieces</li>
+  <li><strong>Encodes</strong> context - converts to numerical representations</li>
+  <li><strong>Processes</strong> through the model - applies learned patterns</li>
+  <li><strong>Generates</strong> tokens - predicts likely next pieces</li>
+  <li><strong>Decodes</strong> output - converts back to readable code</li>
+</ol>
+
+<pre><code class="language-mermaid">sequenceDiagram
+    participant Dev as Developer
+    participant IDE as IDE Extension
+    participant API as Copilot API
+    participant LLM as LLM Model
+    
+    Dev-&gt;&gt;IDE: Types code
+    IDE-&gt;&gt;API: Send context (file, cursor, open tabs)
+    API-&gt;&gt;LLM: Process with model
+    LLM-&gt;&gt;API: Generate tokens
+    API-&gt;&gt;IDE: Return suggestions
+    IDE-&gt;&gt;Dev: Display ghost text
+    Dev-&gt;&gt;IDE: Accept (Tab) or Reject (Esc)
+
+</code></pre>
+
+<hr />
+
+<h2 id="context-the-key-to-good-suggestions">Context: The Key to Good Suggestions</h2>
+
+<p>Copilot’s suggestions are only as good as the context it receives. Understanding what context is used helps you write better code and get better suggestions.</p>
+
+<h3 id="what-context-does-copilot-use">What Context Does Copilot Use?</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Context Source</th>
+      <th>Description</th>
+      <th>Priority</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Current File</strong></td>
+      <td>The code in your active editor</td>
+      <td>Highest</td>
+    </tr>
+    <tr>
+      <td><strong>Cursor Position</strong></td>
+      <td>Where you’re typing</td>
+      <td>Highest</td>
+    </tr>
+    <tr>
+      <td><strong>Open Tabs</strong></td>
+      <td>Related files in your IDE</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td><strong>File Type</strong></td>
+      <td>Language and framework detection</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td><strong>Comments</strong></td>
+      <td>Documentation above code</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td><strong>Function Names</strong></td>
+      <td>Semantic meaning from naming</td>
+      <td>Medium</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="tips-for-better-context">Tips for Better Context</h3>
+
+<blockquote>
+  <p><strong>💡 Pro Tip:</strong> Think of context like explaining a task to a junior developer. The more relevant information you provide, the better the help you’ll get.</p>
+</blockquote>
+
+<p><strong>DO:</strong>
+- Keep related files open in tabs
+- Write descriptive comments before complex functions
+- Use meaningful variable and function names
+- Include type hints in dynamically typed languages</p>
+
+<p><strong>DON’T:</strong>
+- Expect perfect suggestions from an empty file
+- Assume Copilot knows your entire codebase
+- Rely on context from closed files
+- Use vague or generic names</p>
+
+<hr />
+
+<h2 id="privacy-and-security">Privacy and Security</h2>
+
+<p>This is one of the most common customer concerns. Here’s what you need to know:</p>
+
+<h3 id="data-handling-by-plan">Data Handling by Plan</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Aspect</th>
+      <th>Free/Pro</th>
+      <th>Business</th>
+      <th>Enterprise</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Code used for training</td>
+      <td>Opt-out available</td>
+      <td>No</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Telemetry collection</td>
+      <td>Yes</td>
+      <td>Configurable</td>
+      <td>Configurable</td>
+    </tr>
+    <tr>
+      <td>Content exclusions</td>
+      <td>No</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Audit logs</td>
+      <td>No</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>IP indemnification</td>
+      <td>No</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="key-privacy-features">Key Privacy Features</h3>
+
+<p><strong>For Business and Enterprise:</strong>
+- Code is NOT retained after suggestions are generated
+- Prompts and suggestions are encrypted in transit
+- Organization admins can configure policies
+- Content exclusion rules can block sensitive repositories</p>
+
+<blockquote>
+  <p><strong>📚 Learn More:</strong> <a href="https://docs.github.com/en/copilot/copilot-individual/about-github-copilot-individual#about-privacy-for-github-copilot-individual">Copilot Privacy FAQ</a></p>
+</blockquote>
+
+<hr />
+
+<h2 id="the-suggestion-lifecycle">The Suggestion Lifecycle</h2>
+
+<p>Understanding how suggestions flow helps you work more efficiently with Copilot.</p>
+
+<h3 id="types-of-suggestions">Types of Suggestions</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Trigger</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Inline</strong></td>
+      <td>Automatic as you type</td>
+      <td>Completing a function body</td>
+    </tr>
+    <tr>
+      <td><strong>Multi-line</strong></td>
+      <td>After comment or signature</td>
+      <td>Generating entire functions</td>
+    </tr>
+    <tr>
+      <td><strong>Ghost Text</strong></td>
+      <td>Visible but not inserted</td>
+      <td>Gray text showing suggestions</td>
+    </tr>
+    <tr>
+      <td><strong>Completions Panel</strong></td>
+      <td>Keyboard shortcut</td>
+      <td>Multiple alternatives to choose from</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="accepting-and-rejecting">Accepting and Rejecting</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Action</th>
+      <th>Keyboard</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Accept all</td>
+      <td><code class="language-plaintext highlighter-rouge">Tab</code></td>
+      <td>Insert entire suggestion</td>
+    </tr>
+    <tr>
+      <td>Accept word</td>
+      <td><code class="language-plaintext highlighter-rouge">Ctrl+→</code></td>
+      <td>Insert next word only</td>
+    </tr>
+    <tr>
+      <td>Accept line</td>
+      <td><code class="language-plaintext highlighter-rouge">Ctrl+End</code></td>
+      <td>Insert to end of line</td>
+    </tr>
+    <tr>
+      <td>Reject</td>
+      <td><code class="language-plaintext highlighter-rouge">Esc</code></td>
+      <td>Dismiss suggestion</td>
+    </tr>
+    <tr>
+      <td>Next suggestion</td>
+      <td><code class="language-plaintext highlighter-rouge">Alt+]</code></td>
+      <td>Cycle through alternatives</td>
+    </tr>
+    <tr>
+      <td>Previous suggestion</td>
+      <td><code class="language-plaintext highlighter-rouge">Alt+[</code></td>
+      <td>Go back to previous</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="understanding-model-limitations">Understanding Model Limitations</h2>
+
+<p>Being honest about limitations builds trust with customers and helps developers use Copilot appropriately.</p>
+
+<h3 id="what-copilot-does-well">What Copilot Does Well</h3>
+
+<ul>
+  <li>✅ Boilerplate code and common patterns</li>
+  <li>✅ API usage with popular libraries</li>
+  <li>✅ Unit test generation</li>
+  <li>✅ Documentation and comments</li>
+  <li>✅ Translating between similar languages</li>
+</ul>
+
+<h3 id="where-copilot-may-struggle">Where Copilot May Struggle</h3>
+
+<ul>
+  <li>⚠️ Very new APIs or libraries (not in training data)</li>
+  <li>⚠️ Highly domain-specific code</li>
+  <li>⚠️ Complex business logic unique to your organization</li>
+  <li>⚠️ Security-critical code (always review!)</li>
+  <li>⚠️ Code requiring real-time data or current information</li>
+</ul>
+
+<h3 id="the-human-in-the-loop">The Human-in-the-Loop</h3>
+
+<blockquote>
+  <p><strong>🔑 Key Principle:</strong> Copilot suggests, developers decide. Every suggestion should be reviewed and understood before acceptance.</p>
+</blockquote>
+
+<pre><code class="language-mermaid">flowchart LR
+    A[Copilot Suggests] --&gt; B{Developer Reviews}
+    B --&gt;|Looks Good| C[Accept &amp; Test]
+    B --&gt;|Needs Work| D[Modify]
+    B --&gt;|Not Right| E[Reject]
+    C --&gt; F[Verify Correctness]
+    D --&gt; F
+    
+    style A fill:#8250df,color:#fff
+    style B fill:#bf8700,color:#fff
+    style F fill:#1a7f37,color:#fff
+
+</code></pre>
+
+<hr />
+
+<h2 id="csm-conversation-starters">CSM Conversation Starters</h2>
+
+<p>Use these talking points with customers:</p>
+
+<h3 id="for-skeptics">For Skeptics</h3>
+<blockquote>
+  <p>“Copilot isn’t about replacing developers—it’s about eliminating the boring parts so they can focus on creative problem-solving.”</p>
+</blockquote>
+
+<h3 id="for-security-conscious">For Security-Conscious</h3>
+<blockquote>
+  <p>“With Copilot Business, your code is never retained and you have full control over policies and exclusions.”</p>
+</blockquote>
+
+<h3 id="for-roi-focused">For ROI-Focused</h3>
+<blockquote>
+  <p>“GitHub’s research shows developers using Copilot complete tasks up to 55% faster, with higher satisfaction rates.”</p>
+</blockquote>
+
+<h3 id="for-the-curious">For the Curious</h3>
+<blockquote>
+  <p>“The best way to understand Copilot is to try it. Would you like to walk through a demo together?”</p>
+</blockquote>
+
+<hr />
+
+<h2 id="summary">Summary</h2>
+
+<p>Key takeaways from this section:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Concept</th>
+      <th>Key Point</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Architecture</strong></td>
+      <td>Secure cloud service processing context in real-time</td>
+    </tr>
+    <tr>
+      <td><strong>LLMs</strong></td>
+      <td>Pattern-based generation, not code retrieval</td>
+    </tr>
+    <tr>
+      <td><strong>Context</strong></td>
+      <td>Better context = better suggestions</td>
+    </tr>
+    <tr>
+      <td><strong>Privacy</strong></td>
+      <td>Business/Enterprise have strongest controls</td>
+    </tr>
+    <tr>
+      <td><strong>Limitations</strong></td>
+      <td>AI assists, humans decide</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="next-steps">Next Steps</h2>
+
+<p>Now that you understand how Copilot works, let’s get it set up in your preferred IDE.</p>
+
+            </article>
+          </main>
+          
+          <!-- Table of Contents Sidebar -->
+          
+          <aside class="section-toc">
+            <h4>On This Page</h4>
+            <nav class="toc-nav">
+              <ul id="toc" class="toc-list">
+<li class="toc-item toc-h2"><a href="#how-github-copilot-works">How GitHub Copilot Works</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#the-copilot-architecture">The Copilot Architecture</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#llm-fundamentals-for-developers">LLM Fundamentals for Developers</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#what-are-large-language-models">What Are Large Language Models?</a></li>
+<li class="toc-item toc-h3"><a href="#how-code-generation-works">How Code Generation Works</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#context-the-key-to-good-suggestions">Context: The Key to Good Suggestions</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#what-context-does-copilot-use">What Context Does Copilot Use?</a></li>
+<li class="toc-item toc-h3"><a href="#tips-for-better-context">Tips for Better Context</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#privacy-and-security">Privacy and Security</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#data-handling-by-plan">Data Handling by Plan</a></li>
+<li class="toc-item toc-h3"><a href="#key-privacy-features">Key Privacy Features</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#the-suggestion-lifecycle">The Suggestion Lifecycle</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#types-of-suggestions">Types of Suggestions</a></li>
+<li class="toc-item toc-h3"><a href="#accepting-and-rejecting">Accepting and Rejecting</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#understanding-model-limitations">Understanding Model Limitations</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#what-copilot-does-well">What Copilot Does Well</a></li>
+<li class="toc-item toc-h3"><a href="#where-copilot-may-struggle">Where Copilot May Struggle</a></li>
+<li class="toc-item toc-h3"><a href="#the-human-in-the-loop">The Human-in-the-Loop</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#csm-conversation-starters">CSM Conversation Starters</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#for-skeptics">For Skeptics</a></li>
+<li class="toc-item toc-h3"><a href="#for-security-conscious">For Security-Conscious</a></li>
+<li class="toc-item toc-h3"><a href="#for-roi-focused">For ROI-Focused</a></li>
+<li class="toc-item toc-h3"><a href="#for-the-curious">For the Curious</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#summary">Summary</a></li>
+<li class="toc-item toc-h2"><a href="#next-steps">Next Steps</a></li>
+</ul>
+            </nav>
+          </aside>
+          
+        </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="module-nav">
+          
+            <a href="/advanced/module-13/overview/" class="nav-button nav-prev">
+              <span class="nav-direction">← Previous</span>
+              <span class="nav-title">Context & Overview</span>
+            </a>
+          
+
+          <div class="nav-center">
+            <a href="/advanced/module-13/" class="nav-index">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.75A.75.75 0 0 1 2.75 2h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 2.75Zm0 5A.75.75 0 0 1 2.75 7h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 7.75ZM2.75 12h10.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5Z"></path></svg>
+              Module Overview
+            </a>
+          </div>
+
+          
+            <a href="/advanced/module-13/setup/" class="nav-button nav-next">
+              <span class="nav-direction">Next →</span>
+              <span class="nav-title">IDE Setup</span>
+            </a>
+          
+        </nav>
+      </div>
+
+      </main>
+    </div>
+
+    <footer class="training-footer">
+  <div class="container">
+    <div class="training-footer-content">
+      <div class="footer-info">
+        <p class="footer-text">GitHub Training Program v1.0 | Last updated: December 2025</p>
+        <p class="footer-links">
+          <a href="https://docs.github.com" target="_blank" rel="noopener">GitHub Docs</a> • 
+          <a href="https://github.community" target="_blank" rel="noopener">Community</a> • 
+          <a href="/syllabus/">Full Syllabus</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- Smooth scroll behavior -->
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const href = this.getAttribute('href');
+          if (href !== '#') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+        });
+      });
+
+      // Add copy button to code blocks
+      document.querySelectorAll('pre').forEach(pre => {
+        // Create wrapper div
+        const wrapper = document.createElement('div');
+        wrapper.className = 'code-block-wrapper';
+        pre.parentNode.insertBefore(wrapper, pre);
+        wrapper.appendChild(pre);
+
+        // Create copy button
+        const button = document.createElement('button');
+        button.className = 'copy-button';
+        button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+        button.title = 'Copy to clipboard';
+        wrapper.appendChild(button);
+
+        // Copy functionality
+        button.addEventListener('click', async () => {
+          const code = pre.querySelector('code') ? pre.querySelector('code').textContent : pre.textContent;
+          try {
+            await navigator.clipboard.writeText(code);
+            button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+            button.classList.add('copied');
+            setTimeout(() => {
+              button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+              button.classList.remove('copied');
+            }, 2000);
+          } catch (err) {
+            console.error('Failed to copy:', err);
+          }
+        });
+      });
+    </script>
+
+    <!-- Mermaid.js for diagrams with pan/zoom -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+    <script>
+      // Initialize Mermaid with theme matching the training modules
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: 'base',
+        themeVariables: {
+          // Primary colors - matching GitHub/training theme
+          primaryColor: '#ddf4ff',
+          primaryTextColor: '#1f2328',
+          primaryBorderColor: '#0969da',
+          
+          // Secondary and tertiary colors
+          secondaryColor: '#f6f8fa',
+          secondaryTextColor: '#1f2328',
+          secondaryBorderColor: '#d0d7de',
+          tertiaryColor: '#fff8c5',
+          tertiaryTextColor: '#1f2328',
+          tertiaryBorderColor: '#d4a72c',
+          
+          // Background colors
+          background: '#ffffff',
+          mainBkg: '#ddf4ff',
+          secondBkg: '#f6f8fa',
+          
+          // Lines and borders
+          lineColor: '#57606a',
+          border1: '#d0d7de',
+          border2: '#0969da',
+          arrowheadColor: '#57606a',
+          
+          // Text styling
+          fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif',
+          fontSize: '14px',
+          labelBackground: '#ffffff',
+          nodeTextColor: '#1f2328',
+          
+          // Subgraph styling
+          clusterBkg: '#f6f8fa',
+          clusterBorder: '#d0d7de',
+          
+          // Note styling
+          noteBkgColor: '#fff8c5',
+          noteTextColor: '#1f2328',
+          noteBorderColor: '#d4a72c'
+        },
+        flowchart: {
+          useMaxWidth: true,
+          htmlLabels: true,
+          curve: 'basis',
+          padding: 30,
+          nodeSpacing: 50,
+          rankSpacing: 70,
+          subGraphTitleMargin: {
+            top: 10,
+            bottom: 20
+          }
+        },
+        securityLevel: 'loose'
+      });
+
+      // Add pan/zoom to Mermaid diagrams after they render
+      mermaid.run().then(() => {
+        document.querySelectorAll('.mermaid-container svg').forEach((svg, index) => {
+          // Ensure SVG has an ID for pan-zoom
+          if (!svg.id) {
+            svg.id = 'mermaid-svg-' + index;
+          }
+          
+          // Set minimum dimensions on SVG for better visibility
+          svg.style.minWidth = '100%';
+          svg.style.minHeight = '300px';
+          
+          // Initialize pan-zoom
+          const panZoom = svgPanZoom(svg, {
+            zoomEnabled: true,
+            controlIconsEnabled: true,
+            fit: true,
+            center: true,
+            minZoom: 0.3,
+            maxZoom: 10,
+            zoomScaleSensitivity: 0.3,
+            dblClickZoomEnabled: true,
+            mouseWheelZoomEnabled: true,
+            preventMouseEventsDefault: true,
+            contain: false
+          });
+
+          // Handle window resize
+          window.addEventListener('resize', () => {
+            panZoom.resize();
+            panZoom.fit();
+            panZoom.center();
+          });
+        });
+      });
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Advanced Phase: Enterprise Mastery &middot; GitHub Training
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="preload" href="/public/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/public/css/main.css"></noscript>
+
+  <!-- GLightbox CSS for Image Modals -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+</head>
+
+
+  <body class="training-layout">
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="training-header">
+  <div class="container">
+    <div class="training-header-inner">
+      <div class="training-brand">
+        <a href="/" class="training-logo">
+          <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" class="octicon">
+            <path fill="currentColor" d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
+          </svg>
+          <span class="training-title">GitHub Training</span>
+        </a>
+        <span class="training-tagline">CSM & CSA Certification Program</span>
+      </div>
+      
+      <nav class="training-nav" aria-label="Training navigation">
+        <a href="/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8.156 1.835a.25.25 0 00-.312 0l-5.25 4.2a.25.25 0 00-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 01.75-.75h3.5a.75.75 0 01.75.75v5.25h2.75a.25.25 0 00.25-.25V6.23a.25.25 0 00-.094-.195z"></path>
+          </svg>
+          Home
+        </a>
+        <a href="/beginner/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0114.25 16H1.75A1.75 1.75 0 010 14.25V1.75zm1.75-.25a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V1.75a.25.25 0 00-.25-.25H1.75zM3.5 6.25a.75.75 0 01.75-.75h7a.75.75 0 010 1.5h-7a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h4a.75.75 0 000-1.5h-4z"></path>
+          </svg>
+          Beginner
+        </a>
+        <a href="/intermediate/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+            <path fill="currentColor" d="M8 0a8 8 0 110 16A8 8 0 018 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"></path>
+          </svg>
+          Intermediate
+        </a>
+        <a href="/advanced/" class="training-nav-link active">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"></path>
+          </svg>
+          Advanced
+        </a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+    <!-- Main content area with sidebar -->
+    <div class="training-container">
+      
+      <!-- Sidebar navigation -->
+      <aside class="training-sidebar">
+        <div class="training-sidebar-sticky">
+          
+          
+          
+          
+          
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">🏆 Advanced Phase</h3>
+            <nav class="sidebar-nav">
+              <a href="/advanced/" class="sidebar-link active">Phase Overview</a>
+              <a href="/advanced/module-9/" class="sidebar-link">Module 9: Enterprise Admin</a>
+              <a href="/advanced/module-10/" class="sidebar-link">Module 10: APIs & Apps</a>
+              <a href="/advanced/module-11/" class="sidebar-link">Module 11: IaC & Ops</a>
+              <a href="/advanced/module-12/" class="sidebar-link">Module 12: Governance</a>
+              <a href="/advanced/module-13/" class="sidebar-link">Module 13: Copilot Basics</a>
+              <a href="/advanced/module-14/" class="sidebar-link">Module 14: Copilot Advanced</a>
+            </nav>
+          </div>
+          
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">Resources</h3>
+            <nav class="sidebar-nav">
+              <a href="/syllabus/" class="sidebar-link">Full Syllabus</a>
+              <a href="https://docs.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Docs
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+              <a href="https://skills.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Skills
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+              <a href="https://github.com/orgs/community/discussions" class="sidebar-link" target="_blank" rel="noopener">
+                Community
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+            </nav>
+          </div>
+
+          <!-- Progress indicator -->
+          
+        </div>
+      </aside>
+
+      <!-- Main content -->
+      <main class="training-main" id="main-content">
+        <div class="training-content">
+          <h1 id="-advanced-phase-enterprise">🏆 Advanced Phase: Enterprise</h1>
+<p><strong>Weeks 9-14 | Administration, Governance, AI &amp; Performance</strong></p>
+
+<hr />
+
+<h2 id="phase-overview">Phase Overview</h2>
+
+<p>You’ve mastered GitHub features and automation. Now it’s time for enterprise-scale concerns: administration, APIs, integrations, compliance, measuring success, and AI-powered development with Copilot.</p>
+
+<h3 id="what-youll-learn">What You’ll Learn</h3>
+
+<p>By the end of this phase, you’ll understand:
+- Enterprise GitHub administration
+- GitHub APIs (REST and GraphQL)
+- Webhooks, GitHub Apps, and OAuth
+- Infrastructure as Code with GitHub
+- Audit logging and compliance
+- DORA metrics implementation
+- Organization insights and analytics
+- GitHub Copilot fundamentals and advanced features
+- AI-powered development workflows</p>
+
+<h3 id="phase-context">Phase Context</h3>
+
+<p><strong>Before:</strong> You can build complete CI/CD pipelines with security scanning and deployment automation.</p>
+
+<p><strong>After:</strong> You’ll advise enterprise customers on organization design, API integrations, compliance requirements, and DevOps performance measurement.</p>
+
+<hr />
+
+<h2 id="modules">Modules</h2>
+
+<h3 id="-module-9-enterprise-administration--integration">📘 Module 9: Enterprise Administration &amp; Integration</h3>
+<p><strong>Duration:</strong> 10-12 hours | <strong>Week:</strong> 9</p>
+
+<p>Master enterprise GitHub administration and organization management.</p>
+
+<p><strong>Topics:</strong>
+- GitHub Enterprise Cloud vs Server
+- Organization structure and team management
+- Authentication (SAML, SSO, EMU)
+- Enterprise policies and settings
+- Repository rulesets at scale
+- Engineering Systems Success Playbook
+- Organization insights and reporting</p>
+
+<p><strong>Learning Outcomes:</strong>
+- Design organization structures for enterprise customers
+- Configure SSO and authentication
+- Set enterprise-wide policies
+- Apply Engineering Systems best practices</p>
+
+<p><a href="/advanced/module-9/"><strong>Start Module 9 →</strong></a></p>
+
+<hr />
+
+<h3 id="-module-10-github-apis-webhooks--github-apps">📘 Module 10: GitHub APIs, Webhooks &amp; GitHub Apps</h3>
+<p><strong>Duration:</strong> 12-14 hours | <strong>Week:</strong> 10</p>
+
+<p>Build custom integrations using GitHub’s APIs and app platform.</p>
+
+<p><strong>Topics:</strong>
+- REST API fundamentals and best practices
+- GraphQL API for complex queries
+- Authentication (PATs, OAuth, GitHub Apps)
+- Rate limiting and pagination
+- Webhooks for event-driven automation
+- GitHub Apps architecture and permissions
+- OAuth Apps vs GitHub Apps
+- Marketplace requirements</p>
+
+<p><strong>Learning Outcomes:</strong>
+- Make authenticated API calls (REST and GraphQL)
+- Handle rate limiting and errors
+- Create webhooks for event-driven workflows
+- Build a basic GitHub App
+- Choose the right authentication method</p>
+
+<p><a href="/advanced/module-10/"><strong>Start Module 10 →</strong></a></p>
+
+<hr />
+
+<h3 id="-module-11-infrastructure-as-code--operations">📘 Module 11: Infrastructure as Code &amp; Operations</h3>
+<p><strong>Duration:</strong> 10-12 hours | <strong>Week:</strong> 10-11</p>
+
+<p>Manage infrastructure as code and implement operational best practices.</p>
+
+<p><strong>Topics:</strong>
+- Infrastructure as Code (IaC) principles
+- Terraform/Bicep with GitHub Actions
+- GitOps workflows
+- Monitoring and observability
+- Incident response with GitHub Issues
+- Documentation best practices
+- Community health files
+- Notification management</p>
+
+<p><strong>Learning Outcomes:</strong>
+- Deploy infrastructure using IaC pipelines
+- Implement GitOps patterns
+- Set up incident response workflows
+- Build comprehensive documentation sites</p>
+
+<p><a href="/advanced/module-11/"><strong>Start Module 11 →</strong></a></p>
+
+<hr />
+
+<h3 id="-module-12-governance-compliance--dora-metrics">📘 Module 12: Governance, Compliance &amp; DORA Metrics</h3>
+<p><strong>Duration:</strong> 12-14 hours | <strong>Week:</strong> 12</p>
+
+<p>Master compliance, audit, security governance, and DevOps performance measurement.</p>
+
+<p><strong>Topics:</strong>
+- Enterprise security governance
+- Audit log streaming and SIEM integration
+- Compliance requirements (SOC2, HIPAA, FedRAMP)
+- Enterprise Managed Users (EMU)
+- IP allow lists and network security
+- Security policies at scale
+- DORA metrics implementation
+- Organization insights and analytics
+- Custom reporting with APIs</p>
+
+<p><strong>Learning Outcomes:</strong>
+- Configure audit log streaming
+- Design security governance frameworks
+- Implement complete DORA metrics collection
+- Build metrics dashboards
+- Assess DevOps maturity</p>
+
+<p><a href="/advanced/module-12/"><strong>Start Module 12 →</strong></a></p>
+
+<hr />
+
+<h3 id="-module-13-github-copilot-fundamentals">📘 Module 13: GitHub Copilot Fundamentals</h3>
+<p><strong>Duration:</strong> 8-10 hours | <strong>Week:</strong> 13</p>
+
+<p>Master AI-powered development with GitHub Copilot basics.</p>
+
+<p><strong>Topics:</strong>
+- Copilot architecture and capabilities
+- IDE setup (VS Code, JetBrains, Neovim, CLI)
+- Prompt crafting techniques
+- Code completions best practices
+- Copilot Chat usage
+- Context management and optimization</p>
+
+<p><strong>Learning Outcomes:</strong>
+- Configure Copilot across different IDEs
+- Write effective prompts for better suggestions
+- Use Copilot Chat for explanations and code generation
+- Apply best practices for developer productivity</p>
+
+<p><a href="/advanced/module-13/"><strong>Start Module 13 →</strong></a></p>
+
+<hr />
+
+<h3 id="-module-14-github-copilot-advanced">📘 Module 14: GitHub Copilot Advanced</h3>
+<p><strong>Duration:</strong> 10-12 hours | <strong>Week:</strong> 14</p>
+
+<p>Extend Copilot with agents, MCP, extensions, and enterprise administration.</p>
+
+<p><strong>Topics:</strong>
+- Copilot Agents (@workspace, Coding Agent, Edits)
+- Model Context Protocol (MCP) servers
+- Building Copilot Extensions
+- Custom instructions and knowledge bases
+- Enterprise Copilot administration
+- Metrics, analytics, and adoption strategies</p>
+
+<p><strong>Learning Outcomes:</strong>
+- Use Copilot Agents for complex, multi-file tasks
+- Create and configure MCP servers
+- Build custom Copilot Extensions
+- Manage Copilot at enterprise scale
+- Measure and drive Copilot adoption</p>
+
+<p><a href="/advanced/module-14/"><strong>Start Module 14 →</strong></a></p>
+
+<hr />
+
+<h2 id="advanced-phase-milestone-project">Advanced Phase Milestone Project</h2>
+
+<h3 id="-project-enterprise-github-assessment--implementation-plan">🎯 Project: Enterprise GitHub Assessment &amp; Implementation Plan</h3>
+
+<p><strong>Objective:</strong> Conduct a comprehensive assessment of an enterprise organization and deliver recommendations with implementation roadmap.</p>
+
+<p><strong>Requirements:</strong></p>
+
+<h3 id="part-1-organization-design-20">Part 1: Organization Design (20%)</h3>
+<ol>
+  <li>Design enterprise organization structure</li>
+  <li>Map teams to repositories</li>
+  <li>Define authentication strategy (SAML/EMU)</li>
+  <li>Create policy framework (Actions, security, access)</li>
+</ol>
+
+<h3 id="part-2-api-integration-20">Part 2: API Integration (20%)</h3>
+<ol>
+  <li>Build a GitHub App or integration</li>
+  <li>Implement webhook handling</li>
+  <li>Create custom reporting dashboard</li>
+  <li>Document API usage and rate limit management</li>
+</ol>
+
+<h3 id="part-3-security--compliance-25">Part 3: Security &amp; Compliance (25%)</h3>
+<ol>
+  <li>Conduct organization-wide security audit</li>
+  <li>Configure audit log streaming</li>
+  <li>Create security governance policies</li>
+  <li>Develop compliance checklist for your industry</li>
+</ol>
+
+<h3 id="part-4-dora-metrics-implementation-25">Part 4: DORA Metrics Implementation (25%)</h3>
+<ol>
+  <li>Implement all four DORA metrics:
+    <ul>
+      <li>Deployment Frequency</li>
+      <li>Lead Time for Changes</li>
+      <li>Mean Time to Recovery</li>
+      <li>Change Failure Rate</li>
+    </ul>
+  </li>
+  <li>Build metrics dashboard</li>
+  <li>Benchmark against DORA research</li>
+  <li>Create improvement recommendations</li>
+</ol>
+
+<h3 id="part-5-presentation-10">Part 5: Presentation (10%)</h3>
+<ol>
+  <li>Executive summary for leadership</li>
+  <li>Technical deep-dive for engineers</li>
+  <li>Implementation roadmap with timeline</li>
+  <li>ROI analysis</li>
+</ol>
+
+<p><strong>Deliverables:</strong>
+- Enterprise organization design document
+- Working GitHub App or integration
+- Security assessment and policies
+- DORA metrics dashboard
+- 30-minute presentation (executive + technical)</p>
+
+<p><strong>Assessment Criteria:</strong>
+- Organization design and best practices (20%)
+- API integration functionality (20%)
+- Security and compliance thoroughness (25%)
+- DORA metrics accuracy and insights (25%)
+- Presentation quality and recommendations (10%)</p>
+
+<hr />
+
+<h2 id="phase-completion-checklist">Phase Completion Checklist</h2>
+
+<p>Before completing the training program, ensure you can:</p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Design enterprise-scale organization structures</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Configure SSO, SAML, and EMU</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Build custom integrations using GitHub APIs</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Create webhooks and GitHub Apps</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Implement Infrastructure as Code pipelines</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Configure audit log streaming and monitoring</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Create security governance frameworks</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Implement complete DORA metrics collection</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Build custom reporting dashboards</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Assess customer DevOps maturity</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Deliver executive and technical presentations</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Complete the Advanced Phase Milestone Project</li>
+</ul>
+
+<hr />
+
+<h2 id="github-certifications">GitHub Certifications</h2>
+
+<p>You’re now ready to pursue official GitHub certifications:</p>
+
+<h3 id="recommended-path">Recommended Path</h3>
+<ol>
+  <li>✅ <strong>GitHub Foundations</strong> - Validate core GitHub knowledge</li>
+  <li>✅ <strong>GitHub Actions</strong> - Demonstrate CI/CD expertise</li>
+  <li>✅ <strong>GitHub Advanced Security</strong> - Prove security capabilities</li>
+  <li>✅ <strong>GitHub Administration</strong> - Show enterprise readiness</li>
+</ol>
+
+<p><a href="https://docs.github.com/en/get-started/showcase-your-expertise-with-github-certifications/about-github-certifications">Learn more about GitHub Certifications →</a></p>
+
+<hr />
+
+<h2 id="resources--support">Resources &amp; Support</h2>
+
+<h3 id="official-training">Official Training</h3>
+<ul>
+  <li><a href="https://learn.microsoft.com/en-us/training/modules/github-administration-for-enterprise-support-adoption/">Microsoft Learn: GitHub Enterprise Administration</a></li>
+  <li><a href="https://docs.github.com/en/rest">GitHub Docs: REST API</a></li>
+  <li><a href="https://docs.github.com/en/graphql">GitHub Docs: GraphQL API</a></li>
+</ul>
+
+<h3 id="documentation">Documentation</h3>
+<ul>
+  <li><a href="https://docs.github.com/en/enterprise-cloud@latest">GitHub Enterprise Documentation</a></li>
+  <li><a href="https://docs.github.com/en/apps">GitHub Apps Documentation</a></li>
+  <li><a href="https://docs.github.com/en/webhooks">Webhooks Documentation</a></li>
+</ul>
+
+<h3 id="community">Community</h3>
+<ul>
+  <li><a href="https://github.com/orgs/community/discussions">GitHub Community Discussions</a></li>
+  <li><a href="https://dora.dev/">DORA Research</a></li>
+  <li><a href="https://github.com/resources/articles/enterprise/engineering-systems-success-playbook">Engineering Systems Success Playbook</a></li>
+</ul>
+
+<hr />
+
+<h2 id="congratulations-">Congratulations! 🎉</h2>
+
+<p>Upon completing this phase and the milestone project, you will have:</p>
+
+<p>✅ Mastered all GitHub core features across the SDLC<br />
+✅ Built production-ready CI/CD pipelines<br />
+✅ Implemented enterprise-scale security and governance<br />
+✅ Created custom integrations using APIs<br />
+✅ Measured DevOps performance with DORA metrics</p>
+
+<p><strong>You’re ready to:</strong>
+- Guide enterprise customers through complex GitHub implementations
+- Design organization structures for hundreds of developers
+- Build custom integrations and automations
+- Advise on security, compliance, and governance
+- Measure and improve DevOps performance
+- Pursue GitHub certifications with confidence</p>
+
+<hr />
+
+<h2 id="ready-to-master-enterprise-github">Ready to Master Enterprise GitHub?</h2>
+
+<div class="cta-buttons">
+  <a href="/advanced/module-9/" class="btn-primary">Start Module 9: Enterprise Admin →</a>
+  <a href="/intermediate/" class="btn-secondary">← Back to Intermediate Phase</a>
+</div>
+
+<hr />
+
+<h2 id="whats-next">What’s Next?</h2>
+
+<h3 id="continue-learning">Continue Learning</h3>
+<ul>
+  <li>Pursue GitHub Certifications</li>
+  <li>Contribute to open source projects</li>
+  <li>Build your portfolio of demonstrations</li>
+  <li>Mentor new CSMs/CSAs</li>
+</ul>
+
+<h3 id="stay-current">Stay Current</h3>
+<ul>
+  <li>Subscribe to GitHub Changelog</li>
+  <li>Join GitHub Universe (annual conference)</li>
+  <li>Participate in GitHub Community</li>
+  <li>Follow GitHub Blog for best practices</li>
+</ul>
+
+<h3 id="apply-your-knowledge">Apply Your Knowledge</h3>
+<ul>
+  <li>Conduct customer assessments</li>
+  <li>Build proof-of-concepts</li>
+  <li>Lead training sessions</li>
+  <li>Share knowledge internally</li>
+</ul>
+
+<p><strong>Thank you for completing the GitHub CSM/CSA Training Program!</strong></p>
+
+        </div>
+
+        <!-- Module navigation footer -->
+        
+      </main>
+    </div>
+
+    <footer class="training-footer">
+  <div class="container">
+    <div class="training-footer-content">
+      <div class="footer-info">
+        <p class="footer-text">GitHub Training Program v1.0 | Last updated: December 2025</p>
+        <p class="footer-links">
+          <a href="https://docs.github.com" target="_blank" rel="noopener">GitHub Docs</a> • 
+          <a href="https://github.community" target="_blank" rel="noopener">Community</a> • 
+          <a href="/syllabus/">Full Syllabus</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- Smooth scroll behavior -->
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const href = this.getAttribute('href');
+          if (href !== '#') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+        });
+      });
+    </script>
+
+  </body>
+</html>

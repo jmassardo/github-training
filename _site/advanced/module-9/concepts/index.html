@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Core Concepts &middot; GitHub Training
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="preload" href="/public/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/public/css/main.css"></noscript>
+
+  <!-- GLightbox CSS for Image Modals -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+</head>
+
+
+  <body class="training-layout">
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="training-header">
+  <div class="container">
+    <div class="training-header-inner">
+      <div class="training-brand">
+        <a href="/" class="training-logo">
+          <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" class="octicon">
+            <path fill="currentColor" d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
+          </svg>
+          <span class="training-title">GitHub Training</span>
+        </a>
+        <span class="training-tagline">CSM & CSA Certification Program</span>
+      </div>
+      
+      <nav class="training-nav" aria-label="Training navigation">
+        <a href="/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8.156 1.835a.25.25 0 00-.312 0l-5.25 4.2a.25.25 0 00-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 01.75-.75h3.5a.75.75 0 01.75.75v5.25h2.75a.25.25 0 00.25-.25V6.23a.25.25 0 00-.094-.195z"></path>
+          </svg>
+          Home
+        </a>
+        <a href="/beginner/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0114.25 16H1.75A1.75 1.75 0 010 14.25V1.75zm1.75-.25a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V1.75a.25.25 0 00-.25-.25H1.75zM3.5 6.25a.75.75 0 01.75-.75h7a.75.75 0 010 1.5h-7a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h4a.75.75 0 000-1.5h-4z"></path>
+          </svg>
+          Beginner
+        </a>
+        <a href="/intermediate/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+            <path fill="currentColor" d="M8 0a8 8 0 110 16A8 8 0 018 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"></path>
+          </svg>
+          Intermediate
+        </a>
+        <a href="/advanced/" class="training-nav-link active">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"></path>
+          </svg>
+          Advanced
+        </a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+    <!-- Main content area with sidebar -->
+    <div class="training-container">
+      
+      <!-- Sidebar navigation -->
+      <aside class="training-sidebar">
+        <div class="training-sidebar-sticky">
+          
+          
+          
+          
+          
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">🏆 Advanced Phase</h3>
+            <nav class="sidebar-nav">
+              <a href="/advanced/" class="sidebar-link">Phase Overview</a>
+              <a href="/advanced/module-9/" class="sidebar-link active">Module 9: Enterprise Admin</a>
+              <a href="/advanced/module-10/" class="sidebar-link">Module 10: APIs & Apps</a>
+              <a href="/advanced/module-11/" class="sidebar-link">Module 11: IaC & Ops</a>
+              <a href="/advanced/module-12/" class="sidebar-link">Module 12: Governance</a>
+              <a href="/advanced/module-13/" class="sidebar-link">Module 13: Copilot Basics</a>
+              <a href="/advanced/module-14/" class="sidebar-link">Module 14: Copilot Advanced</a>
+            </nav>
+          </div>
+          
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">Resources</h3>
+            <nav class="sidebar-nav">
+              <a href="/syllabus/" class="sidebar-link">Full Syllabus</a>
+              <a href="https://docs.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Docs
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+              <a href="https://skills.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Skills
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+            </nav>
+          </div>
+          
+        </div>
+      </aside>
+
+      <!-- Main content area -->
+      <main id="main-content" class="training-main">
+      
+        <div class="training-module">
+        <!-- Module Header -->
+        <header class="module-header">
+          <div class="module-breadcrumb">
+            <a href="/">Training Home</a>
+            <span class="separator">›</span>
+            <a href="/advanced/">Advanced Phase</a>
+            <span class="separator">›</span>
+            <a href="/advanced/module-9/">Module 9</a>
+          </div>
+          
+          <h1 class="module-title">Core Concepts</h1>
+          
+          <div class="module-meta">
+            <span class="badge badge-advanced">Advanced</span>
+            <span class="meta-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm7-3.25v2.992l2.028.812a.75.75 0 0 1-.557 1.392l-2.5-1A.751.751 0 0 1 7 8.25v-3.5a.75.75 0 0 1 1.5 0Z"></path></svg>
+              45 min
+            </span>
+            <span class="meta-item">
+              Section 2 of 7
+            </span>
+          </div>
+        </header>
+
+        <!-- Progress Bar -->
+        <div class="module-progress">
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 28.571428571428573%"></div>
+          </div>
+          <div class="progress-steps">
+            
+              
+              <a href="/advanced/module-9/overview/" 
+                 class="progress-step completed"
+                 title="Context & Overview">
+                <span class="step-dot"></span>
+                <span class="step-label">1</span>
+              </a>
+            
+              
+              <a href="/advanced/module-9/concepts/" 
+                 class="progress-step active"
+                 title="Core Concepts">
+                <span class="step-dot"></span>
+                <span class="step-label">2</span>
+              </a>
+            
+              
+              <a href="/advanced/module-9/walkthrough/" 
+                 class="progress-step "
+                 title="Guided Walkthrough">
+                <span class="step-dot"></span>
+                <span class="step-label">3</span>
+              </a>
+            
+              
+              <a href="/advanced/module-9/labs/" 
+                 class="progress-step "
+                 title="Hands-On Labs">
+                <span class="step-dot"></span>
+                <span class="step-label">4</span>
+              </a>
+            
+              
+              <a href="/advanced/module-9/quiz/" 
+                 class="progress-step "
+                 title="Knowledge Check">
+                <span class="step-dot"></span>
+                <span class="step-label">5</span>
+              </a>
+            
+              
+              <a href="/advanced/module-9/resources/" 
+                 class="progress-step "
+                 title="Resources">
+                <span class="step-dot"></span>
+                <span class="step-label">6</span>
+              </a>
+            
+              
+              <a href="/advanced/module-9/scenarios/" 
+                 class="progress-step "
+                 title="CSM Scenarios">
+                <span class="step-dot"></span>
+                <span class="step-label">7</span>
+              </a>
+            
+          </div>
+        </div>
+
+        <!-- Section Navigation Tabs -->
+        <nav class="section-tabs">
+          
+            
+            <a href="/advanced/module-9/overview/" 
+               class="section-tab ">
+              <span class="tab-icon">🎯</span>
+              <span class="tab-title">Overview</span>
+            </a>
+          
+            
+            <a href="/advanced/module-9/concepts/" 
+               class="section-tab active">
+              <span class="tab-icon">📚</span>
+              <span class="tab-title">Concepts</span>
+            </a>
+          
+            
+            <a href="/advanced/module-9/walkthrough/" 
+               class="section-tab ">
+              <span class="tab-icon">🚶</span>
+              <span class="tab-title">Walkthrough</span>
+            </a>
+          
+            
+            <a href="/advanced/module-9/labs/" 
+               class="section-tab ">
+              <span class="tab-icon">💻</span>
+              <span class="tab-title">Labs</span>
+            </a>
+          
+            
+            <a href="/advanced/module-9/quiz/" 
+               class="section-tab ">
+              <span class="tab-icon">✅</span>
+              <span class="tab-title">Quiz</span>
+            </a>
+          
+            
+            <a href="/advanced/module-9/resources/" 
+               class="section-tab ">
+              <span class="tab-icon">📖</span>
+              <span class="tab-title">Resources</span>
+            </a>
+          
+            
+            <a href="/advanced/module-9/scenarios/" 
+               class="section-tab ">
+              <span class="tab-icon">💼</span>
+              <span class="tab-title">Scenarios</span>
+            </a>
+          
+        </nav>
+
+        <!-- Main Content with TOC Sidebar -->
+        <div class="module-content-wrapper">
+          <main id="main-content" class="module-content">
+            <article class="section-content">
+              <h1 id="core-concepts-deep-dive">Core Concepts Deep Dive</h1>
+
+<h2 id="21-enterprise-account-structure">2.1 Enterprise Account Structure</h2>
+
+<p>GitHub Enterprise Cloud provides a hierarchical structure for managing organizations:</p>
+
+<p><strong>Enterprise Account</strong> → <strong>Organizations</strong> → <strong>Teams</strong> → <strong>Repositories</strong></p>
+
+<h3 id="enterprise-level-controls">Enterprise-Level Controls</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Control</th>
+      <th>Description</th>
+      <th>When to Use</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Enterprise Policies</strong></td>
+      <td>Set defaults for all organizations</td>
+      <td>Enforce consistent security baselines</td>
+    </tr>
+    <tr>
+      <td><strong>Enterprise Owners</strong></td>
+      <td>Full administrative access</td>
+      <td>Limited to trusted administrators</td>
+    </tr>
+    <tr>
+      <td><strong>Enterprise Support</strong></td>
+      <td>Premium support access</td>
+      <td>Enterprise-tier support tickets</td>
+    </tr>
+    <tr>
+      <td><strong>Audit Log Streaming</strong></td>
+      <td>Real-time audit data export</td>
+      <td>SIEM integration, compliance</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="organization-management">Organization Management</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Example organization structure for a large enterprise</span>
+<span class="na">enterprise_structure</span><span class="pi">:</span>
+  <span class="na">enterprise_name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Acme</span><span class="nv"> </span><span class="s">Corporation"</span>
+  <span class="na">organizations</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">acme-platform"</span>
+      <span class="na">purpose</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Shared</span><span class="nv"> </span><span class="s">platform</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">infrastructure"</span>
+      <span class="na">visibility</span><span class="pi">:</span> <span class="s2">"</span><span class="s">internal"</span>
+      <span class="na">teams</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s">platform-core</span>
+        <span class="pi">-</span> <span class="s">sre-team</span>
+        <span class="pi">-</span> <span class="s">security-team</span>
+    
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">acme-products"</span>
+      <span class="na">purpose</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Product</span><span class="nv"> </span><span class="s">development</span><span class="nv"> </span><span class="s">teams"</span>
+      <span class="na">visibility</span><span class="pi">:</span> <span class="s2">"</span><span class="s">internal"</span>
+      <span class="na">teams</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s">product-alpha</span>
+        <span class="pi">-</span> <span class="s">product-beta</span>
+        <span class="pi">-</span> <span class="s">mobile-team</span>
+    
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s2">"</span><span class="s">acme-opensource"</span>
+      <span class="na">purpose</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Public</span><span class="nv"> </span><span class="s">open</span><span class="nv"> </span><span class="s">source</span><span class="nv"> </span><span class="s">projects"</span>
+      <span class="na">visibility</span><span class="pi">:</span> <span class="s2">"</span><span class="s">public"</span>
+      <span class="na">teams</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s">oss-maintainers</span>
+        <span class="pi">-</span> <span class="s">community-team</span>
+
+</code></pre></div></div>
+
+<h2 id="22-identity-management-saml-sso">2.2 Identity Management: SAML SSO</h2>
+
+<p>SAML (Security Assertion Markup Language) provides single sign-on authentication:</p>
+
+<h3 id="how-saml-sso-works">How SAML SSO Works</h3>
+
+<div class="mermaid-container">
+<div class="mermaid">
+sequenceDiagram
+    participant User
+    participant GitHub
+    participant IdP as Identity Provider<br />(Okta, Azure AD, etc.)
+    
+    User-&gt;&gt;GitHub: 1. Access GitHub
+    GitHub-&gt;&gt;User: 2. Redirect to IdP
+    User-&gt;&gt;IdP: 3. Authenticate
+    IdP-&gt;&gt;GitHub: 4. SAML Assertion
+    GitHub-&gt;&gt;User: 5. Access Granted
+</div>
+</div>
+
+<h3 id="supported-identity-providers">Supported Identity Providers</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>IdP</th>
+      <th>Documentation</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Azure AD / Entra ID</strong></td>
+      <td><a href="https://docs.github.com/en/enterprise-cloud@latest/admin/identity-and-access-management/using-saml-for-enterprise-iam">GitHub Docs</a></td>
+      <td>Most common enterprise IdP</td>
+    </tr>
+    <tr>
+      <td><strong>Okta</strong></td>
+      <td><a href="https://www.okta.com/integrations/github-enterprise-cloud/">Okta Integration</a></td>
+      <td>Pre-built integration available</td>
+    </tr>
+    <tr>
+      <td><strong>PingFederate</strong></td>
+      <td>GitHub SAML Guide</td>
+      <td>Common in financial services</td>
+    </tr>
+    <tr>
+      <td><strong>OneLogin</strong></td>
+      <td>GitHub SAML Guide</td>
+      <td>Good for mid-market</td>
+    </tr>
+    <tr>
+      <td><strong>Generic SAML</strong></td>
+      <td>GitHub SAML Guide</td>
+      <td>Any SAML 2.0 provider</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="saml-configuration-checklist">SAML Configuration Checklist</h3>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gu">## SAML SSO Configuration Checklist</span>
+
+<span class="gu">### Identity Provider Setup</span>
+<span class="p">-</span> [ ] Create GitHub Enterprise application in IdP
+<span class="p">-</span> [ ] Configure SAML assertion attributes:
+<span class="p">  -</span> [ ] NameID (required): User identifier
+<span class="p">  -</span> [ ] email: User email address
+<span class="p">  -</span> [ ] name: Display name (optional)
+<span class="p">  -</span> [ ] groups: Group memberships (optional)
+<span class="p">-</span> [ ] Generate IdP metadata/certificate
+
+<span class="gu">### GitHub Enterprise Configuration  </span>
+<span class="p">-</span> [ ] Enable SAML SSO at enterprise level
+<span class="p">-</span> [ ] Upload IdP metadata or configure manually:
+<span class="p">  -</span> [ ] Sign-on URL
+<span class="p">  -</span> [ ] Issuer
+<span class="p">  -</span> [ ] Public certificate
+<span class="p">-</span> [ ] Test SSO with single user
+<span class="p">-</span> [ ] Enable for all organization members
+
+<span class="gu">### Validation</span>
+<span class="p">-</span> [ ] Verify SSO authentication works
+<span class="p">-</span> [ ] Test user provisioning
+<span class="p">-</span> [ ] Validate session timeout behavior
+<span class="p">-</span> [ ] Document recovery/bypass procedures
+
+</code></pre></div></div>
+
+<h2 id="23-scim-user-provisioning">2.3 SCIM User Provisioning</h2>
+
+<p>SCIM (System for Cross-domain Identity Management) automates user lifecycle:</p>
+
+<h3 id="scim-capabilities">SCIM Capabilities</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operation</th>
+      <th>Description</th>
+      <th>Benefit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Provision</strong></td>
+      <td>Create users when added to IdP</td>
+      <td>Automated onboarding</td>
+    </tr>
+    <tr>
+      <td><strong>Update</strong></td>
+      <td>Sync attribute changes</td>
+      <td>Keep data current</td>
+    </tr>
+    <tr>
+      <td><strong>Deprovision</strong></td>
+      <td>Suspend/remove when removed from IdP</td>
+      <td>Security compliance</td>
+    </tr>
+    <tr>
+      <td><strong>Group Sync</strong></td>
+      <td>Map IdP groups to GitHub teams</td>
+      <td>Automated team membership</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="scim-implementation-flow">SCIM Implementation Flow</h3>
+
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart TD
+  subgraph IdP["IDENTITY PROVIDER"]
+    U["👥 Users"]
+    G["📁 Groups"]
+    AR["📋 Assignment Rules"]
+  end
+  
+  IdP --&gt;|"SCIM API<br />(POST, PATCH, DELETE)"| GH
+  
+  subgraph GH["GITHUB ENTERPRISE"]
+    subgraph SCIM["SCIM Endpoint"]
+      S1["Create/Update/Delete Users"]
+      S2["Sync Group → Team Mappings"]
+      S3["Maintain Audit Trail"]
+    end
+    
+    OU["👥 Org Users"]
+    T["👥 Teams"]
+    P["🔐 Permissions"]
+  end
+</div>
+</div>
+
+<h2 id="24-enterprise-managed-users-emu">2.4 Enterprise Managed Users (EMU)</h2>
+
+<p>EMU provides the highest level of identity control:</p>
+
+<h3 id="emu-vs-standard-enterprise">EMU vs. Standard Enterprise</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>Standard Enterprise</th>
+      <th>EMU Enterprise</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>User Identity</strong></td>
+      <td>Personal GitHub accounts</td>
+      <td>IdP-controlled accounts</td>
+    </tr>
+    <tr>
+      <td><strong>Username Format</strong></td>
+      <td>User-chosen</td>
+      <td><code class="language-plaintext highlighter-rouge">shortcode_username</code></td>
+    </tr>
+    <tr>
+      <td><strong>Account Lifecycle</strong></td>
+      <td>User-controlled</td>
+      <td>Fully IdP-controlled</td>
+    </tr>
+    <tr>
+      <td><strong>External Collaboration</strong></td>
+      <td>Users can contribute anywhere</td>
+      <td>Limited to enterprise</td>
+    </tr>
+    <tr>
+      <td><strong>Personal Repos</strong></td>
+      <td>Yes</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td><strong>Account Recovery</strong></td>
+      <td>User password reset</td>
+      <td>IdP only</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="when-to-recommend-emu">When to Recommend EMU</h3>
+
+<p><strong>Recommend EMU when:</strong>
+- Strict compliance requirements (financial services, healthcare)
+- Need complete control over user identity lifecycle
+- Want to prevent data leakage to personal accounts
+- Organization has mature IdP infrastructure</p>
+
+<p><strong>Recommend Standard Enterprise when:</strong>
+- Developers contribute to open source projects
+- Acquisitions bring users with existing GitHub identities
+- Organization wants user flexibility
+- Gradual migration from existing GitHub.com accounts</p>
+
+<h2 id="25-audit-log--compliance">2.5 Audit Log &amp; Compliance</h2>
+
+<p>Enterprise audit logs capture comprehensive activity data:</p>
+
+<h3 id="audit-log-categories">Audit Log Categories</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">audit_log_categories</span><span class="pi">:</span>
+  <span class="na">authentication</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">oauth_authorization.create</span>
+    <span class="pi">-</span> <span class="s">oauth_authorization.destroy</span>
+    <span class="pi">-</span> <span class="s">user_session.create</span>
+    <span class="pi">-</span> <span class="s">user_session.destroy</span>
+  
+  <span class="na">repository_actions</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">repo.create</span>
+    <span class="pi">-</span> <span class="s">repo.destroy</span>
+    <span class="pi">-</span> <span class="s">repo.access</span>
+    <span class="pi">-</span> <span class="s">repo.visibility_change</span>
+    <span class="pi">-</span> <span class="s">protected_branch.update</span>
+  
+  <span class="na">organization_actions</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">org.add_member</span>
+    <span class="pi">-</span> <span class="s">org.remove_member</span>
+    <span class="pi">-</span> <span class="s">org.update_member</span>
+    <span class="pi">-</span> <span class="s">team.create</span>
+    <span class="pi">-</span> <span class="s">team.add_member</span>
+  
+  <span class="na">enterprise_actions</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">enterprise.config.enable</span>
+    <span class="pi">-</span> <span class="s">enterprise.config.disable</span>
+    <span class="pi">-</span> <span class="s">business.sso_response</span>
+    <span class="pi">-</span> <span class="s">audit_log_streaming.enable</span>
+
+</code></pre></div></div>
+
+<h3 id="audit-log-streaming">Audit Log Streaming</h3>
+
+<p>Stream audit logs to external systems for analysis:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Destination</th>
+      <th>Use Case</th>
+      <th>Setup Complexity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Amazon S3</strong></td>
+      <td>Long-term storage, Athena queries</td>
+      <td>Low</td>
+    </tr>
+    <tr>
+      <td><strong>Azure Blob Storage</strong></td>
+      <td>Azure ecosystem integration</td>
+      <td>Low</td>
+    </tr>
+    <tr>
+      <td><strong>Google Cloud Storage</strong></td>
+      <td>GCP ecosystem integration</td>
+      <td>Low</td>
+    </tr>
+    <tr>
+      <td><strong>Splunk</strong></td>
+      <td>Real-time security monitoring</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td><strong>Datadog</strong></td>
+      <td>DevOps monitoring integration</td>
+      <td>Medium</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="sample-audit-log-query-graphql">Sample Audit Log Query (GraphQL)</h3>
+
+<div class="language-graphql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">query</span><span class="w"> </span><span class="n">GetAuditLogs</span><span class="p">(</span><span class="nv">$enterprise</span><span class="p">:</span><span class="w"> </span><span class="nb">String</span><span class="p">!,</span><span class="w"> </span><span class="nv">$first</span><span class="p">:</span><span class="w"> </span><span class="nb">Int</span><span class="p">!)</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="n">enterprise</span><span class="p">(</span><span class="n">slug</span><span class="p">:</span><span class="w"> </span><span class="nv">$enterprise</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="n">auditLog</span><span class="p">(</span><span class="n">first</span><span class="p">:</span><span class="w"> </span><span class="nv">$first</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="n">edges</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="n">node</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="n">action</span><span class="w">
+          </span><span class="n">actor</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="p">...</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="n">login</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+          </span><span class="n">createdAt</span><span class="w">
+          </span><span class="n">operationType</span><span class="w">
+          </span><span class="p">...</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">RepositoryAuditEntry</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="n">repository</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="n">name</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre></div></div>
+
+<h2 id="26-github-connect-hybrid-deployments">2.6 GitHub Connect (Hybrid Deployments)</h2>
+
+<p>For customers running GitHub Enterprise Server alongside GitHub Enterprise Cloud:</p>
+
+<h3 id="github-connect-features">GitHub Connect Features</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>Description</th>
+      <th>Benefit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Unified Search</strong></td>
+      <td>Search across GHES and GHEC</td>
+      <td>Find code anywhere</td>
+    </tr>
+    <tr>
+      <td><strong>Unified Contributions</strong></td>
+      <td>Contribution graph from GHES</td>
+      <td>Developer recognition</td>
+    </tr>
+    <tr>
+      <td><strong>Server Statistics</strong></td>
+      <td>Usage analytics</td>
+      <td>Capacity planning</td>
+    </tr>
+    <tr>
+      <td><strong>Dependabot Updates</strong></td>
+      <td>Advisory database sync</td>
+      <td>Security coverage</td>
+    </tr>
+    <tr>
+      <td><strong>GitHub Actions</strong></td>
+      <td>Action sync from GitHub.com</td>
+      <td>Access marketplace actions</td>
+    </tr>
+  </tbody>
+</table>
+
+            </article>
+          </main>
+          
+          <!-- Table of Contents Sidebar -->
+          
+          <aside class="section-toc">
+            <h4>On This Page</h4>
+            <nav class="toc-nav">
+              <ul id="toc" class="toc-list">
+<li class="toc-item toc-h2"><a href="#21-enterprise-account-structure">2.1 Enterprise Account Structure</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#enterprise-level-controls">Enterprise-Level Controls</a></li>
+<li class="toc-item toc-h3"><a href="#organization-management">Organization Management</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#22-identity-management-saml-sso">2.2 Identity Management: SAML SSO</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#how-saml-sso-works">How SAML SSO Works</a></li>
+<li class="toc-item toc-h3"><a href="#supported-identity-providers">Supported Identity Providers</a></li>
+<li class="toc-item toc-h3"><a href="#saml-configuration-checklist">SAML Configuration Checklist</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#23-scim-user-provisioning">2.3 SCIM User Provisioning</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#scim-capabilities">SCIM Capabilities</a></li>
+<li class="toc-item toc-h3"><a href="#scim-implementation-flow">SCIM Implementation Flow</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#24-enterprise-managed-users-emu">2.4 Enterprise Managed Users (EMU)</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#emu-vs-standard-enterprise">EMU vs. Standard Enterprise</a></li>
+<li class="toc-item toc-h3"><a href="#when-to-recommend-emu">When to Recommend EMU</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#25-audit-log--compliance">2.5 Audit Log &amp; Compliance</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#audit-log-categories">Audit Log Categories</a></li>
+<li class="toc-item toc-h3"><a href="#audit-log-streaming">Audit Log Streaming</a></li>
+<li class="toc-item toc-h3"><a href="#sample-audit-log-query-graphql">Sample Audit Log Query (GraphQL)</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#26-github-connect-hybrid-deployments">2.6 GitHub Connect (Hybrid Deployments)</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#github-connect-features">GitHub Connect Features</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+          </aside>
+          
+        </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="module-nav">
+          
+            <a href="/advanced/module-9/overview/" class="nav-button nav-prev">
+              <span class="nav-direction">← Previous</span>
+              <span class="nav-title">Context & Overview</span>
+            </a>
+          
+
+          <div class="nav-center">
+            <a href="/advanced/module-9/" class="nav-index">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.75A.75.75 0 0 1 2.75 2h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 2.75Zm0 5A.75.75 0 0 1 2.75 7h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 7.75ZM2.75 12h10.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5Z"></path></svg>
+              Module Overview
+            </a>
+          </div>
+
+          
+            <a href="/advanced/module-9/walkthrough/" class="nav-button nav-next">
+              <span class="nav-direction">Next →</span>
+              <span class="nav-title">Guided Walkthrough</span>
+            </a>
+          
+        </nav>
+      </div>
+
+      </main>
+    </div>
+
+    <footer class="training-footer">
+  <div class="container">
+    <div class="training-footer-content">
+      <div class="footer-info">
+        <p class="footer-text">GitHub Training Program v1.0 | Last updated: December 2025</p>
+        <p class="footer-links">
+          <a href="https://docs.github.com" target="_blank" rel="noopener">GitHub Docs</a> • 
+          <a href="https://github.community" target="_blank" rel="noopener">Community</a> • 
+          <a href="/syllabus/">Full Syllabus</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- Smooth scroll behavior -->
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const href = this.getAttribute('href');
+          if (href !== '#') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+        });
+      });
+
+      // Add copy button to code blocks
+      document.querySelectorAll('pre').forEach(pre => {
+        // Create wrapper div
+        const wrapper = document.createElement('div');
+        wrapper.className = 'code-block-wrapper';
+        pre.parentNode.insertBefore(wrapper, pre);
+        wrapper.appendChild(pre);
+
+        // Create copy button
+        const button = document.createElement('button');
+        button.className = 'copy-button';
+        button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+        button.title = 'Copy to clipboard';
+        wrapper.appendChild(button);
+
+        // Copy functionality
+        button.addEventListener('click', async () => {
+          const code = pre.querySelector('code') ? pre.querySelector('code').textContent : pre.textContent;
+          try {
+            await navigator.clipboard.writeText(code);
+            button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+            button.classList.add('copied');
+            setTimeout(() => {
+              button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+              button.classList.remove('copied');
+            }, 2000);
+          } catch (err) {
+            console.error('Failed to copy:', err);
+          }
+        });
+      });
+    </script>
+
+    <!-- Mermaid.js for diagrams with pan/zoom -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+    <script>
+      // Initialize Mermaid with theme matching the training modules
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: 'base',
+        themeVariables: {
+          // Primary colors - matching GitHub/training theme
+          primaryColor: '#ddf4ff',
+          primaryTextColor: '#1f2328',
+          primaryBorderColor: '#0969da',
+          
+          // Secondary and tertiary colors
+          secondaryColor: '#f6f8fa',
+          secondaryTextColor: '#1f2328',
+          secondaryBorderColor: '#d0d7de',
+          tertiaryColor: '#fff8c5',
+          tertiaryTextColor: '#1f2328',
+          tertiaryBorderColor: '#d4a72c',
+          
+          // Background colors
+          background: '#ffffff',
+          mainBkg: '#ddf4ff',
+          secondBkg: '#f6f8fa',
+          
+          // Lines and borders
+          lineColor: '#57606a',
+          border1: '#d0d7de',
+          border2: '#0969da',
+          arrowheadColor: '#57606a',
+          
+          // Text styling
+          fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif',
+          fontSize: '14px',
+          labelBackground: '#ffffff',
+          nodeTextColor: '#1f2328',
+          
+          // Subgraph styling
+          clusterBkg: '#f6f8fa',
+          clusterBorder: '#d0d7de',
+          
+          // Note styling
+          noteBkgColor: '#fff8c5',
+          noteTextColor: '#1f2328',
+          noteBorderColor: '#d4a72c'
+        },
+        flowchart: {
+          useMaxWidth: true,
+          htmlLabels: true,
+          curve: 'basis',
+          padding: 30,
+          nodeSpacing: 50,
+          rankSpacing: 70,
+          subGraphTitleMargin: {
+            top: 10,
+            bottom: 20
+          }
+        },
+        securityLevel: 'loose'
+      });
+
+      // Add pan/zoom to Mermaid diagrams after they render
+      mermaid.run().then(() => {
+        document.querySelectorAll('.mermaid-container svg').forEach((svg, index) => {
+          // Ensure SVG has an ID for pan-zoom
+          if (!svg.id) {
+            svg.id = 'mermaid-svg-' + index;
+          }
+          
+          // Set minimum dimensions on SVG for better visibility
+          svg.style.minWidth = '100%';
+          svg.style.minHeight = '300px';
+          
+          // Initialize pan-zoom
+          const panZoom = svgPanZoom(svg, {
+            zoomEnabled: true,
+            controlIconsEnabled: true,
+            fit: true,
+            center: true,
+            minZoom: 0.3,
+            maxZoom: 10,
+            zoomScaleSensitivity: 0.3,
+            dblClickZoomEnabled: true,
+            mouseWheelZoomEnabled: true,
+            preventMouseEventsDefault: true,
+            contain: false
+          });
+
+          // Handle window resize
+          window.addEventListener('resize', () => {
+            panZoom.resize();
+            panZoom.fit();
+            panZoom.center();
+          });
+        });
+      });
+    </script>
+
+  </body>
+</html>

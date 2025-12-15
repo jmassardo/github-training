@@ -1,0 +1,45 @@
+/* Modern Color System for GitHub Training
+ * GitHub-inspired colors with proper contrast ratios
+ */
+
+// GitHub Brand Colors
+$gh-dark: #24292f;
+$gh-dark-hover: #32383f;
+$gh-blue: #0969da;
+$gh-blue-hover: #0860ca;
+$gh-blue-light: #ddf4ff;
+$gh-green: #1a7f37;
+$gh-green-light: #dafbe1;
+$gh-orange: #bf8700;
+$gh-orange-light: #fff8c5;
+$gh-red: #cf222e;
+$gh-border: #d0d7de;
+$gh-border-light: #e5e8eb;
+$gh-bg: #ffffff;
+$gh-bg-secondary: #f6f8fa;
+$gh-text: #1f2328;
+$gh-text-secondary: #59636e;
+$gh-text-tertiary: #8c959f;
+
+// Phase colors
+$beginner-color: #1f883d;
+$intermediate-color: #0969da;
+$advanced-color: #8250df;
+
+// Semantic Colors
+$success: $gh-green;
+$warning: $gh-orange;
+$error: $gh-red;
+$info: $gh-blue;
+
+// Base Colors
+$white: #ffffff;
+$black: #000000;
+
+// Legacy mappings
+$primary-color: $gh-blue;
+$text-primary: $gh-text;
+$text-muted: $gh-text-secondary;
+$border-color: $gh-border;
+$bg-subtle: $gh-bg-secondary;
+$header-bg: $gh-dark;

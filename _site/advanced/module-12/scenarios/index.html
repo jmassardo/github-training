@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      CSM Scenarios &middot; GitHub Training
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="preload" href="/public/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/public/css/main.css"></noscript>
+
+  <!-- GLightbox CSS for Image Modals -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+</head>
+
+
+  <body class="training-layout">
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="training-header">
+  <div class="container">
+    <div class="training-header-inner">
+      <div class="training-brand">
+        <a href="/" class="training-logo">
+          <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" class="octicon">
+            <path fill="currentColor" d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
+          </svg>
+          <span class="training-title">GitHub Training</span>
+        </a>
+        <span class="training-tagline">CSM & CSA Certification Program</span>
+      </div>
+      
+      <nav class="training-nav" aria-label="Training navigation">
+        <a href="/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8.156 1.835a.25.25 0 00-.312 0l-5.25 4.2a.25.25 0 00-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 01.75-.75h3.5a.75.75 0 01.75.75v5.25h2.75a.25.25 0 00.25-.25V6.23a.25.25 0 00-.094-.195z"></path>
+          </svg>
+          Home
+        </a>
+        <a href="/beginner/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0114.25 16H1.75A1.75 1.75 0 010 14.25V1.75zm1.75-.25a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V1.75a.25.25 0 00-.25-.25H1.75zM3.5 6.25a.75.75 0 01.75-.75h7a.75.75 0 010 1.5h-7a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h4a.75.75 0 000-1.5h-4z"></path>
+          </svg>
+          Beginner
+        </a>
+        <a href="/intermediate/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+            <path fill="currentColor" d="M8 0a8 8 0 110 16A8 8 0 018 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"></path>
+          </svg>
+          Intermediate
+        </a>
+        <a href="/advanced/" class="training-nav-link active">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"></path>
+          </svg>
+          Advanced
+        </a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+    <!-- Main content area with sidebar -->
+    <div class="training-container">
+      
+      <!-- Sidebar navigation -->
+      <aside class="training-sidebar">
+        <div class="training-sidebar-sticky">
+          
+          
+          
+          
+          
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">🏆 Advanced Phase</h3>
+            <nav class="sidebar-nav">
+              <a href="/advanced/" class="sidebar-link">Phase Overview</a>
+              <a href="/advanced/module-9/" class="sidebar-link">Module 9: Enterprise Admin</a>
+              <a href="/advanced/module-10/" class="sidebar-link">Module 10: APIs & Apps</a>
+              <a href="/advanced/module-11/" class="sidebar-link">Module 11: IaC & Ops</a>
+              <a href="/advanced/module-12/" class="sidebar-link active">Module 12: Governance</a>
+              <a href="/advanced/module-13/" class="sidebar-link">Module 13: Copilot Basics</a>
+              <a href="/advanced/module-14/" class="sidebar-link">Module 14: Copilot Advanced</a>
+            </nav>
+          </div>
+          
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">Resources</h3>
+            <nav class="sidebar-nav">
+              <a href="/syllabus/" class="sidebar-link">Full Syllabus</a>
+              <a href="https://docs.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Docs
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+              <a href="https://skills.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Skills
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+            </nav>
+          </div>
+          
+        </div>
+      </aside>
+
+      <!-- Main content area -->
+      <main id="main-content" class="training-main">
+      
+        <div class="training-module">
+        <!-- Module Header -->
+        <header class="module-header">
+          <div class="module-breadcrumb">
+            <a href="/">Training Home</a>
+            <span class="separator">›</span>
+            <a href="/advanced/">Advanced Phase</a>
+            <span class="separator">›</span>
+            <a href="/advanced/module-12/">Module 12</a>
+          </div>
+          
+          <h1 class="module-title">CSM Scenarios</h1>
+          
+          <div class="module-meta">
+            <span class="badge badge-advanced">Advanced</span>
+            <span class="meta-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm7-3.25v2.992l2.028.812a.75.75 0 0 1-.557 1.392l-2.5-1A.751.751 0 0 1 7 8.25v-3.5a.75.75 0 0 1 1.5 0Z"></path></svg>
+              20 min
+            </span>
+            <span class="meta-item">
+              Section 7 of 7
+            </span>
+          </div>
+        </header>
+
+        <!-- Progress Bar -->
+        <div class="module-progress">
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 100.0%"></div>
+          </div>
+          <div class="progress-steps">
+            
+              
+              <a href="/advanced/module-12/overview/" 
+                 class="progress-step completed"
+                 title="Context & Overview">
+                <span class="step-dot"></span>
+                <span class="step-label">1</span>
+              </a>
+            
+              
+              <a href="/advanced/module-12/concepts/" 
+                 class="progress-step completed"
+                 title="Core Concepts">
+                <span class="step-dot"></span>
+                <span class="step-label">2</span>
+              </a>
+            
+              
+              <a href="/advanced/module-12/walkthrough/" 
+                 class="progress-step completed"
+                 title="Guided Walkthrough">
+                <span class="step-dot"></span>
+                <span class="step-label">3</span>
+              </a>
+            
+              
+              <a href="/advanced/module-12/labs/" 
+                 class="progress-step completed"
+                 title="Hands-On Labs">
+                <span class="step-dot"></span>
+                <span class="step-label">4</span>
+              </a>
+            
+              
+              <a href="/advanced/module-12/quiz/" 
+                 class="progress-step completed"
+                 title="Knowledge Check">
+                <span class="step-dot"></span>
+                <span class="step-label">5</span>
+              </a>
+            
+              
+              <a href="/advanced/module-12/resources/" 
+                 class="progress-step completed"
+                 title="Resources">
+                <span class="step-dot"></span>
+                <span class="step-label">6</span>
+              </a>
+            
+              
+              <a href="/advanced/module-12/scenarios/" 
+                 class="progress-step active"
+                 title="CSM Scenarios">
+                <span class="step-dot"></span>
+                <span class="step-label">7</span>
+              </a>
+            
+          </div>
+        </div>
+
+        <!-- Section Navigation Tabs -->
+        <nav class="section-tabs">
+          
+            
+            <a href="/advanced/module-12/overview/" 
+               class="section-tab ">
+              <span class="tab-icon">📋</span>
+              <span class="tab-title">Overview</span>
+            </a>
+          
+            
+            <a href="/advanced/module-12/concepts/" 
+               class="section-tab ">
+              <span class="tab-icon">📚</span>
+              <span class="tab-title">Concepts</span>
+            </a>
+          
+            
+            <a href="/advanced/module-12/walkthrough/" 
+               class="section-tab ">
+              <span class="tab-icon">🔄</span>
+              <span class="tab-title">Walkthrough</span>
+            </a>
+          
+            
+            <a href="/advanced/module-12/labs/" 
+               class="section-tab ">
+              <span class="tab-icon">🧪</span>
+              <span class="tab-title">Labs</span>
+            </a>
+          
+            
+            <a href="/advanced/module-12/quiz/" 
+               class="section-tab ">
+              <span class="tab-icon">✅</span>
+              <span class="tab-title">Quiz</span>
+            </a>
+          
+            
+            <a href="/advanced/module-12/resources/" 
+               class="section-tab ">
+              <span class="tab-icon">📖</span>
+              <span class="tab-title">Resources</span>
+            </a>
+          
+            
+            <a href="/advanced/module-12/scenarios/" 
+               class="section-tab active">
+              <span class="tab-icon">💼</span>
+              <span class="tab-title">Scenarios</span>
+            </a>
+          
+        </nav>
+
+        <!-- Main Content with TOC Sidebar -->
+        <div class="module-content-wrapper">
+          <main id="main-content" class="module-content">
+            <article class="section-content">
+              <h2 id="customer-success-scenarios">Customer Success Scenarios</h2>
+
+<p>Practice handling customer conversations about governance, compliance, and engineering metrics.</p>
+
+<hr />
+
+<h2 id="scenario-1-the-executive-dashboard-request">Scenario 1: The Executive Dashboard Request</h2>
+
+<h3 id="situation">Situation</h3>
+
+<p><strong>Customer:</strong> MegaCorp Industries (Enterprise, 5,000+ developers)</p>
+
+<p><strong>Contact:</strong> Jennifer, VP of Engineering</p>
+
+<p><strong>Request:</strong> “Our CEO keeps asking me how productive engineering is. I need a dashboard showing our team’s performance. What can GitHub provide?”</p>
+
+<h3 id="discovery-questions">Discovery Questions</h3>
+
+<details>
+<summary>Show Discovery Questions</summary>
+
+1. "What does 'productive' mean to your CEO? What outcome are they looking for?"
+2. "How are you measuring engineering success today?"
+3. "What decisions would this dashboard inform?"
+4. "Are there specific concerns driving this request?"
+5. "Who else needs access to this data?"
+</details>
+
+<h3 id="recommended-response">Recommended Response</h3>
+
+<details>
+<summary>Show Response Strategy</summary>
+
+**Phase 1: Reframe the Conversation**
+"Great question, and one we hear often. Before diving into dashboards, let me share what research tells us about engineering measurement."
+
+**Phase 2: Introduce DORA**
+"Google's DORA research studied thousands of teams to find metrics that actually predict both organizational performance AND developer well-being. They identified four key metrics:
+
+1. **Deployment Frequency** - How often you ship
+2. **Lead Time** - How fast you go from code to production
+3. **MTTR** - How quickly you recover from problems
+4. **Change Failure Rate** - How often deploys cause issues
+
+The key insight: Elite teams are both faster AND more stable."
+
+**Phase 3: Connect to Business Value**
+"Rather than measuring 'productivity' directly, these metrics show:
+- How efficiently you deliver value (frequency, lead time)
+- How resilient your systems are (MTTR, failure rate)
+- Where bottlenecks exist in your process
+
+This gives your CEO confidence that engineering is improving continuously."
+
+**Phase 4: Propose Solution**
+"GitHub can help you:
+1. Collect these metrics through our APIs and Actions
+2. Build dashboards using your existing BI tools
+3. Set up automated weekly reports
+4. Benchmark against industry standards
+
+Would you like to start with a pilot on one or two teams?"
+</details>
+
+<hr />
+
+<h2 id="scenario-2-the-compliance-panic">Scenario 2: The Compliance Panic</h2>
+
+<h3 id="situation-1">Situation</h3>
+
+<p><strong>Customer:</strong> HealthFirst Systems (Healthcare, HIPAA-regulated)</p>
+
+<p><strong>Contact:</strong> David, IT Security Director</p>
+
+<p><strong>Problem:</strong> “Our auditor just told us we need to demonstrate change control for all code deployments. We have 30 days before the audit. Help!”</p>
+
+<h3 id="discovery-questions-1">Discovery Questions</h3>
+
+<details>
+<summary>Show Discovery Questions</summary>
+
+1. "What specific evidence is the auditor requesting?"
+2. "How many repositories are in scope?"
+3. "Do you currently have branch protection or review requirements?"
+4. "Are you using GitHub Enterprise Cloud or Server?"
+5. "Do you have audit log streaming configured?"
+</details>
+
+<h3 id="recommended-response-1">Recommended Response</h3>
+
+<details>
+<summary>Show Response Strategy</summary>
+
+**Phase 1: Immediate Assessment**
+"Let's assess what you have today and what gaps exist. GitHub Enterprise Cloud provides several compliance features out of the box."
+
+**Phase 2: Quick Wins (This Week)**
+1. **Enable audit log streaming** to capture all administrative actions
+2. **Create organization ruleset** requiring PR reviews for all default branches
+3. **Export current branch protection** settings as documentation
+4. **Generate repository security report** showing current state
+
+**Phase 3: Evidence Collection**
+"For your auditor, you'll be able to provide:
+- **Audit log exports** showing all code changes went through PRs
+- **Branch protection evidence** showing review requirements
+- **Approval records** from merged PRs
+- **CODEOWNERS files** showing ownership
+
+**Phase 4: Longer-term Hardening**
+After the audit, let's:
+- Implement comprehensive governance policies
+- Set up drift detection
+- Create automated compliance reporting
+
+The good news: GitHub's features are designed with compliance in mind. We can get you compliant and provide ongoing evidence."
+</details>
+
+<hr />
+
+<h2 id="scenario-3-the-metrics-skeptic">Scenario 3: The Metrics Skeptic</h2>
+
+<h3 id="situation-2">Situation</h3>
+
+<p><strong>Customer:</strong> DevFirst Software (Mid-market, 200 developers)</p>
+
+<p><strong>Contact:</strong> Alex, Engineering Manager</p>
+
+<p><strong>Objection:</strong> “We tried measuring engineering metrics before and it backfired. Developers gamed the system and morale tanked. I’m not doing that again.”</p>
+
+<h3 id="handling-the-objection">Handling the Objection</h3>
+
+<details>
+<summary>Show Response Strategy</summary>
+
+**Acknowledge Their Experience**
+"That's a really common experience, and I appreciate your caution. Bad metrics programs can absolutely harm team culture. Can you share what metrics you tried before?"
+
+**Diagnose the Problem**
+Common issues:
+- Measuring individual developers (creates competition)
+- Lines of code or commits (encourages gaming)
+- Using metrics for performance reviews (fear-based)
+- Public rankings (shame culture)
+
+**Introduce DORA Differently**
+"DORA metrics are different because:
+
+1. **They're team-level, not individual** - No comparing developers
+2. **They measure outcomes, not activity** - Can't game by writing more code
+3. **They're balanced** - Speed without stability doesn't help
+4. **Research-validated** - Not just opinions
+
+Most importantly: Teams that improve on DORA metrics also report higher job satisfaction."
+
+**Propose Safe Implementation**
+"What if we:
+1. Start with private metrics only the team sees
+2. Focus on improvement trends, not absolute numbers
+3. Let the team choose what to focus on
+4. Never tie directly to performance reviews
+
+The goal isn't surveillance—it's helping teams identify where they're stuck and celebrating when they improve."
+</details>
+
+<hr />
+
+<h2 id="scenario-4-the-governance-vs-speed-debate">Scenario 4: The Governance vs. Speed Debate</h2>
+
+<h3 id="situation-3">Situation</h3>
+
+<p><strong>Customer:</strong> FastShip Inc (Startup acquired by Enterprise)</p>
+
+<p><strong>Contact:</strong> Maria, CTO (from startup), and Robert, CISO (from enterprise)</p>
+
+<p><strong>Conflict:</strong> Maria wants developer freedom and speed. Robert wants controls and compliance. They’re at an impasse.</p>
+
+<h3 id="facilitating-resolution">Facilitating Resolution</h3>
+
+<details>
+<summary>Show Response Strategy</summary>
+
+**Acknowledge Both Perspectives**
+"You're both right. Developer velocity IS critical for competitive advantage. AND security controls ARE necessary for enterprise scale. The question is: how do we get both?"
+
+**Challenge the False Dichotomy**
+"Here's what research shows: The fastest teams also have the best security posture. They're not trading off—they're using automation to get both."
+
+**Present the 'Paved Path' Model**
+
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart TD
+  subgraph PavedPath["The Paved Path Model"]
+    subgraph Guardrails["🛡️ Guardrails (invisible to developers)"]
+      G1["Branch protection (enforced)"]
+      G2["Security scanning (automated)"]
+      G3["Dependency updates (automated)"]
+      G4["Audit logging (automatic)"]
+    end
+    
+    subgraph SelfService["🚀 Self-Service (developer freedom)"]
+      S1["Repository creation (templated)"]
+      S2["Deployments (automated)"]
+      S3["Environment management"]
+      S4["Tool selection (within bounds)"]
+    end
+  end
+</div>
+</div>
+
+**Propose Concrete Steps**
+"For Maria: Developers can self-serve and ship fast, with automation handling compliance.
+
+For Robert: Every repository automatically has security controls, with audit trail for everything.
+
+Let's design guardrails that are invisible to developers unless they try to do something risky."
+</details>
+
+<hr />
+
+<h2 id="scenario-5-the-value-justification">Scenario 5: The Value Justification</h2>
+
+<h3 id="situation-4">Situation</h3>
+
+<p><strong>Customer:</strong> TechManufacturing Corp (Enterprise renewal coming up)</p>
+
+<p><strong>Contact:</strong> Patricia, Engineering VP</p>
+
+<p><strong>Challenge:</strong> “We’re renewing GitHub Enterprise next quarter. Finance is asking what value we’ve gotten. Can you help me build the business case?”</p>
+
+<h3 id="building-the-case">Building the Case</h3>
+
+<details>
+<summary>Show Response Strategy</summary>
+
+**Phase 1: Gather Data**
+"Let's collect concrete metrics from your usage:
+- Deployment frequency before/after
+- Lead time improvements
+- Security vulnerabilities caught
+- Developer survey results
+- Time saved on manual processes"
+
+**Phase 2: Calculate ROI**
+
+```
+Value Categories:
+
+1. DEVELOPER PRODUCTIVITY
+   - Hours saved per developer per week: X
+   - Number of developers: Y
+   - Cost per developer hour: $Z
+   - Annual value: X × Y × Z × 52
+
+2. SECURITY RISK REDUCTION
+   - Vulnerabilities caught before production
+   - Estimated cost per production vulnerability
+   - Breaches prevented value
+
+3. OPERATIONAL EFFICIENCY
+   - Reduced infrastructure management
+   - Automated compliance reporting
+   - Faster onboarding
+
+4. INNOVATION ACCELERATION
+   - Faster time to market
+   - More experiments shipped
+   - Revenue from faster features
+
+```
+
+**Phase 3: Build the Narrative**
+"Beyond the numbers, the story matters:
+- Before: Manual processes, security gaps, slow delivery
+- After: Automated pipelines, continuous security, faster innovation
+- Future: AI-assisted development with Copilot
+
+Position GitHub as foundational infrastructure for engineering excellence."
+
+**Phase 4: Provide Comparison**
+"What would it cost to NOT have GitHub?
+- Build vs. buy analysis
+- Alternative platform costs
+- Migration risk and cost
+- Lost productivity during transition"
+</details>
+
+<hr />
+
+<h2 id="role-play-exercise">Role Play Exercise</h2>
+
+<p>Practice these scenarios with a colleague:</p>
+
+<ol>
+  <li>One person plays the CSM, the other plays the customer</li>
+  <li>Work through discovery and response</li>
+  <li>Switch roles and repeat</li>
+</ol>
+
+<h3 id="evaluation-criteria">Evaluation Criteria</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Criterion</th>
+      <th>What to Look For</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Discovery</td>
+      <td>Did you ask questions before proposing?</td>
+    </tr>
+    <tr>
+      <td>DORA Knowledge</td>
+      <td>Did you accurately explain metrics?</td>
+    </tr>
+    <tr>
+      <td>Business Value</td>
+      <td>Did you connect features to outcomes?</td>
+    </tr>
+    <tr>
+      <td>Objection Handling</td>
+      <td>Did you acknowledge concerns first?</td>
+    </tr>
+    <tr>
+      <td>Actionable</td>
+      <td>Did you propose concrete next steps?</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="module-complete-">Module Complete! 🎉</h2>
+
+<p>You’ve completed Module 12: Governance, Compliance &amp; DORA Metrics.</p>
+
+<p><strong>Key Takeaways:</strong>
+- DORA metrics predict organizational AND team performance
+- Governance enables speed through guardrails, not gates
+- Compliance can be continuous, not just audit-time
+- Metrics should improve teams, not punish individuals</p>
+
+<p><strong>Next Module:</strong> <a href="/advanced/module-13/">Module 13: GitHub Copilot Fundamentals</a></p>
+
+            </article>
+          </main>
+          
+          <!-- Table of Contents Sidebar -->
+          
+          <aside class="section-toc">
+            <h4>On This Page</h4>
+            <nav class="toc-nav">
+              <ul id="toc" class="toc-list">
+<li class="toc-item toc-h2"><a href="#customer-success-scenarios">Customer Success Scenarios</a></li>
+<li class="toc-item toc-h2"><a href="#scenario-1-the-executive-dashboard-request">Scenario 1: The Executive Dashboard Request</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#situation">Situation</a></li>
+<li class="toc-item toc-h3"><a href="#discovery-questions">Discovery Questions</a></li>
+<li class="toc-item toc-h3"><a href="#recommended-response">Recommended Response</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#scenario-2-the-compliance-panic">Scenario 2: The Compliance Panic</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#situation-1">Situation</a></li>
+<li class="toc-item toc-h3"><a href="#discovery-questions-1">Discovery Questions</a></li>
+<li class="toc-item toc-h3"><a href="#recommended-response-1">Recommended Response</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#scenario-3-the-metrics-skeptic">Scenario 3: The Metrics Skeptic</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#situation-2">Situation</a></li>
+<li class="toc-item toc-h3"><a href="#handling-the-objection">Handling the Objection</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#scenario-4-the-governance-vs-speed-debate">Scenario 4: The Governance vs. Speed Debate</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#situation-3">Situation</a></li>
+<li class="toc-item toc-h3"><a href="#facilitating-resolution">Facilitating Resolution</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#scenario-5-the-value-justification">Scenario 5: The Value Justification</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#situation-4">Situation</a></li>
+<li class="toc-item toc-h3"><a href="#building-the-case">Building the Case</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#role-play-exercise">Role Play Exercise</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#evaluation-criteria">Evaluation Criteria</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#module-complete-">Module Complete! 🎉</a></li>
+</ul>
+            </nav>
+          </aside>
+          
+        </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="module-nav">
+          
+            <a href="/advanced/module-12/resources/" class="nav-button nav-prev">
+              <span class="nav-direction">← Previous</span>
+              <span class="nav-title">Resources</span>
+            </a>
+          
+
+          <div class="nav-center">
+            <a href="/advanced/module-12/" class="nav-index">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.75A.75.75 0 0 1 2.75 2h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 2.75Zm0 5A.75.75 0 0 1 2.75 7h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 7.75ZM2.75 12h10.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5Z"></path></svg>
+              Module Overview
+            </a>
+          </div>
+
+          
+            <div class="nav-button nav-next disabled"></div>
+          
+        </nav>
+      </div>
+
+      </main>
+    </div>
+
+    <footer class="training-footer">
+  <div class="container">
+    <div class="training-footer-content">
+      <div class="footer-info">
+        <p class="footer-text">GitHub Training Program v1.0 | Last updated: December 2025</p>
+        <p class="footer-links">
+          <a href="https://docs.github.com" target="_blank" rel="noopener">GitHub Docs</a> • 
+          <a href="https://github.community" target="_blank" rel="noopener">Community</a> • 
+          <a href="/syllabus/">Full Syllabus</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- Smooth scroll behavior -->
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const href = this.getAttribute('href');
+          if (href !== '#') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+        });
+      });
+
+      // Add copy button to code blocks
+      document.querySelectorAll('pre').forEach(pre => {
+        // Create wrapper div
+        const wrapper = document.createElement('div');
+        wrapper.className = 'code-block-wrapper';
+        pre.parentNode.insertBefore(wrapper, pre);
+        wrapper.appendChild(pre);
+
+        // Create copy button
+        const button = document.createElement('button');
+        button.className = 'copy-button';
+        button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+        button.title = 'Copy to clipboard';
+        wrapper.appendChild(button);
+
+        // Copy functionality
+        button.addEventListener('click', async () => {
+          const code = pre.querySelector('code') ? pre.querySelector('code').textContent : pre.textContent;
+          try {
+            await navigator.clipboard.writeText(code);
+            button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+            button.classList.add('copied');
+            setTimeout(() => {
+              button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+              button.classList.remove('copied');
+            }, 2000);
+          } catch (err) {
+            console.error('Failed to copy:', err);
+          }
+        });
+      });
+    </script>
+
+    <!-- Mermaid.js for diagrams with pan/zoom -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+    <script>
+      // Initialize Mermaid with theme matching the training modules
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: 'base',
+        themeVariables: {
+          // Primary colors - matching GitHub/training theme
+          primaryColor: '#ddf4ff',
+          primaryTextColor: '#1f2328',
+          primaryBorderColor: '#0969da',
+          
+          // Secondary and tertiary colors
+          secondaryColor: '#f6f8fa',
+          secondaryTextColor: '#1f2328',
+          secondaryBorderColor: '#d0d7de',
+          tertiaryColor: '#fff8c5',
+          tertiaryTextColor: '#1f2328',
+          tertiaryBorderColor: '#d4a72c',
+          
+          // Background colors
+          background: '#ffffff',
+          mainBkg: '#ddf4ff',
+          secondBkg: '#f6f8fa',
+          
+          // Lines and borders
+          lineColor: '#57606a',
+          border1: '#d0d7de',
+          border2: '#0969da',
+          arrowheadColor: '#57606a',
+          
+          // Text styling
+          fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif',
+          fontSize: '14px',
+          labelBackground: '#ffffff',
+          nodeTextColor: '#1f2328',
+          
+          // Subgraph styling
+          clusterBkg: '#f6f8fa',
+          clusterBorder: '#d0d7de',
+          
+          // Note styling
+          noteBkgColor: '#fff8c5',
+          noteTextColor: '#1f2328',
+          noteBorderColor: '#d4a72c'
+        },
+        flowchart: {
+          useMaxWidth: true,
+          htmlLabels: true,
+          curve: 'basis',
+          padding: 30,
+          nodeSpacing: 50,
+          rankSpacing: 70,
+          subGraphTitleMargin: {
+            top: 10,
+            bottom: 20
+          }
+        },
+        securityLevel: 'loose'
+      });
+
+      // Add pan/zoom to Mermaid diagrams after they render
+      mermaid.run().then(() => {
+        document.querySelectorAll('.mermaid-container svg').forEach((svg, index) => {
+          // Ensure SVG has an ID for pan-zoom
+          if (!svg.id) {
+            svg.id = 'mermaid-svg-' + index;
+          }
+          
+          // Set minimum dimensions on SVG for better visibility
+          svg.style.minWidth = '100%';
+          svg.style.minHeight = '300px';
+          
+          // Initialize pan-zoom
+          const panZoom = svgPanZoom(svg, {
+            zoomEnabled: true,
+            controlIconsEnabled: true,
+            fit: true,
+            center: true,
+            minZoom: 0.3,
+            maxZoom: 10,
+            zoomScaleSensitivity: 0.3,
+            dblClickZoomEnabled: true,
+            mouseWheelZoomEnabled: true,
+            preventMouseEventsDefault: true,
+            contain: false
+          });
+
+          // Handle window resize
+          window.addEventListener('resize', () => {
+            panZoom.resize();
+            panZoom.fit();
+            panZoom.center();
+          });
+        });
+      });
+    </script>
+
+  </body>
+</html>

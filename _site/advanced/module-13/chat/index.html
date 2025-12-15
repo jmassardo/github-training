@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Copilot Chat &middot; GitHub Training
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="preload" href="/public/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/public/css/main.css"></noscript>
+
+  <!-- GLightbox CSS for Image Modals -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+</head>
+
+
+  <body class="training-layout">
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="training-header">
+  <div class="container">
+    <div class="training-header-inner">
+      <div class="training-brand">
+        <a href="/" class="training-logo">
+          <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" class="octicon">
+            <path fill="currentColor" d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
+          </svg>
+          <span class="training-title">GitHub Training</span>
+        </a>
+        <span class="training-tagline">CSM & CSA Certification Program</span>
+      </div>
+      
+      <nav class="training-nav" aria-label="Training navigation">
+        <a href="/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8.156 1.835a.25.25 0 00-.312 0l-5.25 4.2a.25.25 0 00-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 01.75-.75h3.5a.75.75 0 01.75.75v5.25h2.75a.25.25 0 00.25-.25V6.23a.25.25 0 00-.094-.195z"></path>
+          </svg>
+          Home
+        </a>
+        <a href="/beginner/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0114.25 16H1.75A1.75 1.75 0 010 14.25V1.75zm1.75-.25a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V1.75a.25.25 0 00-.25-.25H1.75zM3.5 6.25a.75.75 0 01.75-.75h7a.75.75 0 010 1.5h-7a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h4a.75.75 0 000-1.5h-4z"></path>
+          </svg>
+          Beginner
+        </a>
+        <a href="/intermediate/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+            <path fill="currentColor" d="M8 0a8 8 0 110 16A8 8 0 018 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"></path>
+          </svg>
+          Intermediate
+        </a>
+        <a href="/advanced/" class="training-nav-link active">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"></path>
+          </svg>
+          Advanced
+        </a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+    <!-- Main content area with sidebar -->
+    <div class="training-container">
+      
+      <!-- Sidebar navigation -->
+      <aside class="training-sidebar">
+        <div class="training-sidebar-sticky">
+          
+          
+          
+          
+          
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">🏆 Advanced Phase</h3>
+            <nav class="sidebar-nav">
+              <a href="/advanced/" class="sidebar-link">Phase Overview</a>
+              <a href="/advanced/module-9/" class="sidebar-link">Module 9: Enterprise Admin</a>
+              <a href="/advanced/module-10/" class="sidebar-link">Module 10: APIs & Apps</a>
+              <a href="/advanced/module-11/" class="sidebar-link">Module 11: IaC & Ops</a>
+              <a href="/advanced/module-12/" class="sidebar-link">Module 12: Governance</a>
+              <a href="/advanced/module-13/" class="sidebar-link active">Module 13: Copilot Basics</a>
+              <a href="/advanced/module-14/" class="sidebar-link">Module 14: Copilot Advanced</a>
+            </nav>
+          </div>
+          
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">Resources</h3>
+            <nav class="sidebar-nav">
+              <a href="/syllabus/" class="sidebar-link">Full Syllabus</a>
+              <a href="https://docs.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Docs
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+              <a href="https://skills.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Skills
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+            </nav>
+          </div>
+          
+        </div>
+      </aside>
+
+      <!-- Main content area -->
+      <main id="main-content" class="training-main">
+      
+        <div class="training-module">
+        <!-- Module Header -->
+        <header class="module-header">
+          <div class="module-breadcrumb">
+            <a href="/">Training Home</a>
+            <span class="separator">›</span>
+            <a href="/advanced/">Advanced Phase</a>
+            <span class="separator">›</span>
+            <a href="/advanced/module-13/">Module 13</a>
+          </div>
+          
+          <h1 class="module-title">Copilot Chat</h1>
+          
+          <div class="module-meta">
+            <span class="badge badge-advanced">Advanced</span>
+            <span class="meta-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm7-3.25v2.992l2.028.812a.75.75 0 0 1-.557 1.392l-2.5-1A.751.751 0 0 1 7 8.25v-3.5a.75.75 0 0 1 1.5 0Z"></path></svg>
+              25 min
+            </span>
+            <span class="meta-item">
+              Section 5 of 10
+            </span>
+          </div>
+        </header>
+
+        <!-- Progress Bar -->
+        <div class="module-progress">
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 50.0%"></div>
+          </div>
+          <div class="progress-steps">
+            
+              
+              <a href="/advanced/module-13/overview/" 
+                 class="progress-step completed"
+                 title="Context & Overview">
+                <span class="step-dot"></span>
+                <span class="step-label">1</span>
+              </a>
+            
+              
+              <a href="/advanced/module-13/concepts/" 
+                 class="progress-step completed"
+                 title="Core Concepts">
+                <span class="step-dot"></span>
+                <span class="step-label">2</span>
+              </a>
+            
+              
+              <a href="/advanced/module-13/setup/" 
+                 class="progress-step completed"
+                 title="IDE Setup">
+                <span class="step-dot"></span>
+                <span class="step-label">3</span>
+              </a>
+            
+              
+              <a href="/advanced/module-13/prompts/" 
+                 class="progress-step completed"
+                 title="Prompt Crafting">
+                <span class="step-dot"></span>
+                <span class="step-label">4</span>
+              </a>
+            
+              
+              <a href="/advanced/module-13/chat/" 
+                 class="progress-step active"
+                 title="Copilot Chat">
+                <span class="step-dot"></span>
+                <span class="step-label">5</span>
+              </a>
+            
+              
+              <a href="/advanced/module-13/ide-differences/" 
+                 class="progress-step "
+                 title="IDE Differences">
+                <span class="step-dot"></span>
+                <span class="step-label">6</span>
+              </a>
+            
+              
+              <a href="/advanced/module-13/best-practices/" 
+                 class="progress-step "
+                 title="Best Practices">
+                <span class="step-dot"></span>
+                <span class="step-label">7</span>
+              </a>
+            
+              
+              <a href="/advanced/module-13/labs/" 
+                 class="progress-step "
+                 title="Hands-On Labs">
+                <span class="step-dot"></span>
+                <span class="step-label">8</span>
+              </a>
+            
+              
+              <a href="/advanced/module-13/quiz/" 
+                 class="progress-step "
+                 title="Knowledge Check">
+                <span class="step-dot"></span>
+                <span class="step-label">9</span>
+              </a>
+            
+              
+              <a href="/advanced/module-13/resources/" 
+                 class="progress-step "
+                 title="Resources">
+                <span class="step-dot"></span>
+                <span class="step-label">10</span>
+              </a>
+            
+          </div>
+        </div>
+
+        <!-- Section Navigation Tabs -->
+        <nav class="section-tabs">
+          
+            
+            <a href="/advanced/module-13/overview/" 
+               class="section-tab ">
+              <span class="tab-icon">📋</span>
+              <span class="tab-title">Overview</span>
+            </a>
+          
+            
+            <a href="/advanced/module-13/concepts/" 
+               class="section-tab ">
+              <span class="tab-icon">📚</span>
+              <span class="tab-title">Concepts</span>
+            </a>
+          
+            
+            <a href="/advanced/module-13/setup/" 
+               class="section-tab ">
+              <span class="tab-icon">⚙️</span>
+              <span class="tab-title">Setup</span>
+            </a>
+          
+            
+            <a href="/advanced/module-13/prompts/" 
+               class="section-tab ">
+              <span class="tab-icon">✍️</span>
+              <span class="tab-title">Prompts</span>
+            </a>
+          
+            
+            <a href="/advanced/module-13/chat/" 
+               class="section-tab active">
+              <span class="tab-icon">💬</span>
+              <span class="tab-title">Chat</span>
+            </a>
+          
+            
+            <a href="/advanced/module-13/ide-differences/" 
+               class="section-tab ">
+              <span class="tab-icon">🔀</span>
+              <span class="tab-title">IDE Differences</span>
+            </a>
+          
+            
+            <a href="/advanced/module-13/best-practices/" 
+               class="section-tab ">
+              <span class="tab-icon">✅</span>
+              <span class="tab-title">Best Practices</span>
+            </a>
+          
+            
+            <a href="/advanced/module-13/labs/" 
+               class="section-tab ">
+              <span class="tab-icon">🧪</span>
+              <span class="tab-title">Labs</span>
+            </a>
+          
+            
+            <a href="/advanced/module-13/quiz/" 
+               class="section-tab ">
+              <span class="tab-icon">📝</span>
+              <span class="tab-title">Quiz</span>
+            </a>
+          
+            
+            <a href="/advanced/module-13/resources/" 
+               class="section-tab ">
+              <span class="tab-icon">📖</span>
+              <span class="tab-title">Resources</span>
+            </a>
+          
+        </nav>
+
+        <!-- Main Content with TOC Sidebar -->
+        <div class="module-content-wrapper">
+          <main id="main-content" class="module-content">
+            <article class="section-content">
+              <h2 id="what-is-copilot-chat">What is Copilot Chat?</h2>
+
+<p>Copilot Chat is a conversational AI interface integrated into your IDE. Unlike inline completions, Chat allows you to have interactive dialogues about code—asking questions, requesting explanations, and getting help with complex tasks.</p>
+
+<h3 id="chat-vs-completions">Chat vs. Completions</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>Inline Completions</th>
+      <th>Copilot Chat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Trigger</strong></td>
+      <td>Automatic as you type</td>
+      <td>Explicit command/shortcut</td>
+    </tr>
+    <tr>
+      <td><strong>Output</strong></td>
+      <td>Code suggestions</td>
+      <td>Conversational responses + code</td>
+    </tr>
+    <tr>
+      <td><strong>Context</strong></td>
+      <td>Current file + open tabs</td>
+      <td>Selected code + conversation history</td>
+    </tr>
+    <tr>
+      <td><strong>Use case</strong></td>
+      <td>Writing new code</td>
+      <td>Understanding, debugging, refactoring</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p><strong>📚 Learn More:</strong> <a href="https://docs.github.com/en/copilot/github-copilot-chat/using-github-copilot-chat-in-your-ide">GitHub Copilot Chat Documentation</a></p>
+</blockquote>
+
+<hr />
+
+<h2 id="opening-copilot-chat">Opening Copilot Chat</h2>
+
+<h3 id="vs-code">VS Code</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Method</th>
+      <th>Shortcut</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Chat Panel</td>
+      <td><code class="language-plaintext highlighter-rouge">Ctrl+Alt+I</code> / <code class="language-plaintext highlighter-rouge">Cmd+Alt+I</code></td>
+      <td>Opens side panel</td>
+    </tr>
+    <tr>
+      <td>Inline Chat</td>
+      <td><code class="language-plaintext highlighter-rouge">Ctrl+I</code> / <code class="language-plaintext highlighter-rouge">Cmd+I</code></td>
+      <td>Opens at cursor position</td>
+    </tr>
+    <tr>
+      <td>Quick Chat</td>
+      <td><code class="language-plaintext highlighter-rouge">Ctrl+Shift+I</code> / <code class="language-plaintext highlighter-rouge">Cmd+Shift+I</code></td>
+      <td>Floating dialog</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="jetbrains">JetBrains</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Method</th>
+      <th>Shortcut</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Chat Panel</td>
+      <td><code class="language-plaintext highlighter-rouge">Alt+C</code></td>
+      <td>Opens tool window</td>
+    </tr>
+    <tr>
+      <td>Inline Chat</td>
+      <td><code class="language-plaintext highlighter-rouge">Ctrl+Shift+G</code></td>
+      <td>Opens at cursor</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="chat-participants-slash-commands">Chat Participants (Slash Commands)</h2>
+
+<p>Copilot Chat supports special participants that provide focused functionality:</p>
+
+<h3 id="workspace">@workspace</h3>
+
+<p>Query your entire workspace for context-aware answers:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@workspace How is authentication implemented in this project?
+
+@workspace Find all API endpoints that don't have rate limiting
+
+@workspace What dependencies does this project use for testing?
+
+</code></pre></div></div>
+
+<h3 id="vscode">@vscode</h3>
+
+<p>Get help with VS Code itself:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@vscode How do I enable word wrap?
+
+@vscode What's the shortcut to duplicate a line?
+
+@vscode How do I configure auto-save?
+
+</code></pre></div></div>
+
+<h3 id="terminal">@terminal</h3>
+
+<p>Terminal and shell assistance:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@terminal How do I find all files modified in the last 24 hours?
+
+@terminal What's the command to see disk usage by folder?
+
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>📚 Learn More:</strong> <a href="https://docs.github.com/en/copilot/github-copilot-chat/copilot-chat-in-ides/using-github-copilot-chat-in-your-ide#using-chat-participants">Chat Participants</a></p>
+</blockquote>
+
+<hr />
+
+<h2 id="slash-commands">Slash Commands</h2>
+
+<p>Slash commands provide quick access to common tasks:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Purpose</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/explain</code></td>
+      <td>Explain selected code</td>
+      <td><code class="language-plaintext highlighter-rouge">/explain what does this regex do</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/tests</code></td>
+      <td>Generate unit tests</td>
+      <td><code class="language-plaintext highlighter-rouge">/tests for this function</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/fix</code></td>
+      <td>Fix bugs in selection</td>
+      <td><code class="language-plaintext highlighter-rouge">/fix this null pointer error</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/doc</code></td>
+      <td>Generate documentation</td>
+      <td><code class="language-plaintext highlighter-rouge">/doc add JSDoc comments</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/simplify</code></td>
+      <td>Simplify complex code</td>
+      <td><code class="language-plaintext highlighter-rouge">/simplify this nested logic</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/new</code></td>
+      <td>Create new code</td>
+      <td><code class="language-plaintext highlighter-rouge">/new React component for user profile</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="using-slash-commands-effectively">Using Slash Commands Effectively</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Explain complex code
+/explain 
+[Select confusing code block]
+
+# Generate tests with specific framework
+/tests using pytest with parametrized inputs
+
+# Fix with specific constraint
+/fix without changing the public API
+
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="effective-chat-patterns">Effective Chat Patterns</h2>
+
+<h3 id="code-explanation">Code Explanation</h3>
+
+<p><strong>Ask specific questions:</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>What is the time complexity of this function?
+
+Why does this use a WeakMap instead of a regular Map?
+
+What edge cases might this code fail to handle?
+
+</code></pre></div></div>
+
+<h3 id="debugging-assistance">Debugging Assistance</h3>
+
+<p><strong>Describe the problem:</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This function returns undefined when the input array is empty. 
+I expected it to return an empty array. What's wrong?
+
+I'm getting a "maximum call stack exceeded" error. 
+Where is the infinite recursion?
+
+</code></pre></div></div>
+
+<h3 id="code-generation">Code Generation</h3>
+
+<p><strong>Be specific about requirements:</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Create a React hook that:
+- Fetches data from an API endpoint
+- Handles loading, error, and success states
+- Supports cancellation when component unmounts
+- Includes TypeScript types
+
+</code></pre></div></div>
+
+<h3 id="refactoring">Refactoring</h3>
+
+<p><strong>State your goals:</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Refactor this to:
+- Use early returns instead of nested if statements
+- Extract the validation logic to a separate function
+- Add error handling for network failures
+
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="context-in-chat">Context in Chat</h2>
+
+<h3 id="selecting-code">Selecting Code</h3>
+
+<p>Always select relevant code before asking questions:</p>
+
+<ol>
+  <li>Highlight code in your editor</li>
+  <li>Open Copilot Chat</li>
+  <li>The selection is automatically included as context</li>
+</ol>
+
+<h3 id="using-file-and-selection">Using #file and #selection</h3>
+
+<p>Reference specific files or selections in your prompts:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#file:package.json What version of React is this project using?
+
+#selection Explain what this code does
+
+Compare #file:old-implementation.js with #file:new-implementation.js
+
+</code></pre></div></div>
+
+<h3 id="conversation-memory">Conversation Memory</h3>
+
+<p>Chat maintains context within a conversation:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>You: Explain this sorting algorithm
+Copilot: [Explanation of quicksort]
+
+You: Now optimize it for nearly-sorted arrays
+Copilot: [References previous context to provide relevant optimization]
+
+You: Add unit tests for both versions
+Copilot: [Creates tests for original and optimized versions]
+
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="advanced-chat-features">Advanced Chat Features</h2>
+
+<h3 id="multi-turn-conversations">Multi-Turn Conversations</h3>
+
+<p>Build on previous responses:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. "Create a user authentication service"
+2. "Add password hashing with bcrypt"
+3. "Include JWT token generation"
+4. "Add rate limiting for login attempts"
+5. "Write integration tests for the complete flow"
+
+</code></pre></div></div>
+
+<h3 id="code-review-simulation">Code Review Simulation</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Review this code for:
+- Security vulnerabilities
+- Performance issues
+- Code style consistency
+- Missing error handling
+
+</code></pre></div></div>
+
+<h3 id="architecture-discussions">Architecture Discussions</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>I need to design a system that:
+- Processes 10,000 events per second
+- Stores events for 30 days
+- Allows real-time queries
+
+What architecture would you recommend using AWS services?
+
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="inline-chat">Inline Chat</h2>
+
+<p>Inline Chat lets you make targeted changes without leaving your code:</p>
+
+<h3 id="when-to-use-inline-chat">When to Use Inline Chat</h3>
+
+<ul>
+  <li>Quick fixes and small modifications</li>
+  <li>Adding documentation to existing code</li>
+  <li>Simple refactoring tasks</li>
+  <li>Generating test cases for specific functions</li>
+</ul>
+
+<h3 id="inline-chat-workflow">Inline Chat Workflow</h3>
+
+<ol>
+  <li>Position cursor or select code</li>
+  <li>Press <code class="language-plaintext highlighter-rouge">Ctrl+I</code> / <code class="language-plaintext highlighter-rouge">Cmd+I</code></li>
+  <li>Type your request</li>
+  <li>Review the diff</li>
+  <li>Accept or reject changes</li>
+</ol>
+
+<h3 id="example-inline-requests">Example Inline Requests</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Add error handling for null input
+
+Convert this to async/await
+
+Add TypeScript types
+
+Extract this to a helper function
+
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="chat-best-practices">Chat Best Practices</h2>
+
+<h3 id="do">DO</h3>
+
+<ul>
+  <li>✅ Provide specific, detailed context</li>
+  <li>✅ Use code selection when relevant</li>
+  <li>✅ Build on conversation history</li>
+  <li>✅ Review generated code carefully</li>
+  <li>✅ Use slash commands for common tasks</li>
+</ul>
+
+<h3 id="dont">DON’T</h3>
+
+<ul>
+  <li>❌ Expect Chat to know your entire codebase (use @workspace for that)</li>
+  <li>❌ Accept code without understanding it</li>
+  <li>❌ Use Chat for simple completions (inline is faster)</li>
+  <li>❌ Ask multiple unrelated questions in one message</li>
+</ul>
+
+<hr />
+
+<h2 id="chat-vs-web-search">Chat vs. Web Search</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Need</th>
+      <th>Use Chat</th>
+      <th>Use Web Search</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Code-specific questions</td>
+      <td>✅</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Your codebase questions</td>
+      <td>✅ (@workspace)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Latest API changes</td>
+      <td> </td>
+      <td>✅</td>
+    </tr>
+    <tr>
+      <td>Library comparisons</td>
+      <td>Sometimes</td>
+      <td>✅</td>
+    </tr>
+    <tr>
+      <td>General programming concepts</td>
+      <td>✅</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Current events/news</td>
+      <td> </td>
+      <td>✅</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="summary">Summary</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>Purpose</th>
+      <th>Trigger</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Chat Panel</strong></td>
+      <td>Extended conversations</td>
+      <td><code class="language-plaintext highlighter-rouge">Ctrl+Alt+I</code></td>
+    </tr>
+    <tr>
+      <td><strong>Inline Chat</strong></td>
+      <td>Quick edits in place</td>
+      <td><code class="language-plaintext highlighter-rouge">Ctrl+I</code></td>
+    </tr>
+    <tr>
+      <td><strong>@workspace</strong></td>
+      <td>Codebase-aware queries</td>
+      <td><code class="language-plaintext highlighter-rouge">@workspace</code> prefix</td>
+    </tr>
+    <tr>
+      <td><strong>Slash commands</strong></td>
+      <td>Common tasks</td>
+      <td><code class="language-plaintext highlighter-rouge">/explain</code>, <code class="language-plaintext highlighter-rouge">/tests</code>, etc.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="next-steps">Next Steps</h2>
+
+<p>Now let’s explore how Copilot features differ across various IDEs.</p>
+
+            </article>
+          </main>
+          
+          <!-- Table of Contents Sidebar -->
+          
+          <aside class="section-toc">
+            <h4>On This Page</h4>
+            <nav class="toc-nav">
+              <ul id="toc" class="toc-list">
+<li class="toc-item toc-h2"><a href="#what-is-copilot-chat">What is Copilot Chat?</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#chat-vs-completions">Chat vs. Completions</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#opening-copilot-chat">Opening Copilot Chat</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#vs-code">VS Code</a></li>
+<li class="toc-item toc-h3"><a href="#jetbrains">JetBrains</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#chat-participants-slash-commands">Chat Participants (Slash Commands)</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#workspace">@workspace</a></li>
+<li class="toc-item toc-h3"><a href="#vscode">@vscode</a></li>
+<li class="toc-item toc-h3"><a href="#terminal">@terminal</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#slash-commands">Slash Commands</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#using-slash-commands-effectively">Using Slash Commands Effectively</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#effective-chat-patterns">Effective Chat Patterns</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#code-explanation">Code Explanation</a></li>
+<li class="toc-item toc-h3"><a href="#debugging-assistance">Debugging Assistance</a></li>
+<li class="toc-item toc-h3"><a href="#code-generation">Code Generation</a></li>
+<li class="toc-item toc-h3"><a href="#refactoring">Refactoring</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#context-in-chat">Context in Chat</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#selecting-code">Selecting Code</a></li>
+<li class="toc-item toc-h3"><a href="#using-file-and-selection">Using #file and #selection</a></li>
+<li class="toc-item toc-h3"><a href="#conversation-memory">Conversation Memory</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#advanced-chat-features">Advanced Chat Features</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#multi-turn-conversations">Multi-Turn Conversations</a></li>
+<li class="toc-item toc-h3"><a href="#code-review-simulation">Code Review Simulation</a></li>
+<li class="toc-item toc-h3"><a href="#architecture-discussions">Architecture Discussions</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#inline-chat">Inline Chat</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#when-to-use-inline-chat">When to Use Inline Chat</a></li>
+<li class="toc-item toc-h3"><a href="#inline-chat-workflow">Inline Chat Workflow</a></li>
+<li class="toc-item toc-h3"><a href="#example-inline-requests">Example Inline Requests</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#chat-best-practices">Chat Best Practices</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#do">DO</a></li>
+<li class="toc-item toc-h3"><a href="#dont">DON’T</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#chat-vs-web-search">Chat vs. Web Search</a></li>
+<li class="toc-item toc-h2"><a href="#summary">Summary</a></li>
+<li class="toc-item toc-h2"><a href="#next-steps">Next Steps</a></li>
+</ul>
+            </nav>
+          </aside>
+          
+        </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="module-nav">
+          
+            <a href="/advanced/module-13/prompts/" class="nav-button nav-prev">
+              <span class="nav-direction">← Previous</span>
+              <span class="nav-title">Prompt Crafting</span>
+            </a>
+          
+
+          <div class="nav-center">
+            <a href="/advanced/module-13/" class="nav-index">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.75A.75.75 0 0 1 2.75 2h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 2.75Zm0 5A.75.75 0 0 1 2.75 7h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 7.75ZM2.75 12h10.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5Z"></path></svg>
+              Module Overview
+            </a>
+          </div>
+
+          
+            <a href="/advanced/module-13/ide-differences/" class="nav-button nav-next">
+              <span class="nav-direction">Next →</span>
+              <span class="nav-title">IDE Differences</span>
+            </a>
+          
+        </nav>
+      </div>
+
+      </main>
+    </div>
+
+    <footer class="training-footer">
+  <div class="container">
+    <div class="training-footer-content">
+      <div class="footer-info">
+        <p class="footer-text">GitHub Training Program v1.0 | Last updated: December 2025</p>
+        <p class="footer-links">
+          <a href="https://docs.github.com" target="_blank" rel="noopener">GitHub Docs</a> • 
+          <a href="https://github.community" target="_blank" rel="noopener">Community</a> • 
+          <a href="/syllabus/">Full Syllabus</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- Smooth scroll behavior -->
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const href = this.getAttribute('href');
+          if (href !== '#') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+        });
+      });
+
+      // Add copy button to code blocks
+      document.querySelectorAll('pre').forEach(pre => {
+        // Create wrapper div
+        const wrapper = document.createElement('div');
+        wrapper.className = 'code-block-wrapper';
+        pre.parentNode.insertBefore(wrapper, pre);
+        wrapper.appendChild(pre);
+
+        // Create copy button
+        const button = document.createElement('button');
+        button.className = 'copy-button';
+        button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+        button.title = 'Copy to clipboard';
+        wrapper.appendChild(button);
+
+        // Copy functionality
+        button.addEventListener('click', async () => {
+          const code = pre.querySelector('code') ? pre.querySelector('code').textContent : pre.textContent;
+          try {
+            await navigator.clipboard.writeText(code);
+            button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+            button.classList.add('copied');
+            setTimeout(() => {
+              button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+              button.classList.remove('copied');
+            }, 2000);
+          } catch (err) {
+            console.error('Failed to copy:', err);
+          }
+        });
+      });
+    </script>
+
+    <!-- Mermaid.js for diagrams with pan/zoom -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+    <script>
+      // Initialize Mermaid with theme matching the training modules
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: 'base',
+        themeVariables: {
+          // Primary colors - matching GitHub/training theme
+          primaryColor: '#ddf4ff',
+          primaryTextColor: '#1f2328',
+          primaryBorderColor: '#0969da',
+          
+          // Secondary and tertiary colors
+          secondaryColor: '#f6f8fa',
+          secondaryTextColor: '#1f2328',
+          secondaryBorderColor: '#d0d7de',
+          tertiaryColor: '#fff8c5',
+          tertiaryTextColor: '#1f2328',
+          tertiaryBorderColor: '#d4a72c',
+          
+          // Background colors
+          background: '#ffffff',
+          mainBkg: '#ddf4ff',
+          secondBkg: '#f6f8fa',
+          
+          // Lines and borders
+          lineColor: '#57606a',
+          border1: '#d0d7de',
+          border2: '#0969da',
+          arrowheadColor: '#57606a',
+          
+          // Text styling
+          fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif',
+          fontSize: '14px',
+          labelBackground: '#ffffff',
+          nodeTextColor: '#1f2328',
+          
+          // Subgraph styling
+          clusterBkg: '#f6f8fa',
+          clusterBorder: '#d0d7de',
+          
+          // Note styling
+          noteBkgColor: '#fff8c5',
+          noteTextColor: '#1f2328',
+          noteBorderColor: '#d4a72c'
+        },
+        flowchart: {
+          useMaxWidth: true,
+          htmlLabels: true,
+          curve: 'basis',
+          padding: 30,
+          nodeSpacing: 50,
+          rankSpacing: 70,
+          subGraphTitleMargin: {
+            top: 10,
+            bottom: 20
+          }
+        },
+        securityLevel: 'loose'
+      });
+
+      // Add pan/zoom to Mermaid diagrams after they render
+      mermaid.run().then(() => {
+        document.querySelectorAll('.mermaid-container svg').forEach((svg, index) => {
+          // Ensure SVG has an ID for pan-zoom
+          if (!svg.id) {
+            svg.id = 'mermaid-svg-' + index;
+          }
+          
+          // Set minimum dimensions on SVG for better visibility
+          svg.style.minWidth = '100%';
+          svg.style.minHeight = '300px';
+          
+          // Initialize pan-zoom
+          const panZoom = svgPanZoom(svg, {
+            zoomEnabled: true,
+            controlIconsEnabled: true,
+            fit: true,
+            center: true,
+            minZoom: 0.3,
+            maxZoom: 10,
+            zoomScaleSensitivity: 0.3,
+            dblClickZoomEnabled: true,
+            mouseWheelZoomEnabled: true,
+            preventMouseEventsDefault: true,
+            contain: false
+          });
+
+          // Handle window resize
+          window.addEventListener('resize', () => {
+            panZoom.resize();
+            panZoom.fit();
+            panZoom.center();
+          });
+        });
+      });
+    </script>
+
+  </body>
+</html>

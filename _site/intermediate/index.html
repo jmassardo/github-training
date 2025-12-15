@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Intermediate Phase: Development &middot; GitHub Training
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="preload" href="/public/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/public/css/main.css"></noscript>
+
+  <!-- GLightbox CSS for Image Modals -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+</head>
+
+
+  <body class="training-layout">
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="training-header">
+  <div class="container">
+    <div class="training-header-inner">
+      <div class="training-brand">
+        <a href="/" class="training-logo">
+          <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" class="octicon">
+            <path fill="currentColor" d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
+          </svg>
+          <span class="training-title">GitHub Training</span>
+        </a>
+        <span class="training-tagline">CSM & CSA Certification Program</span>
+      </div>
+      
+      <nav class="training-nav" aria-label="Training navigation">
+        <a href="/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8.156 1.835a.25.25 0 00-.312 0l-5.25 4.2a.25.25 0 00-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 01.75-.75h3.5a.75.75 0 01.75.75v5.25h2.75a.25.25 0 00.25-.25V6.23a.25.25 0 00-.094-.195z"></path>
+          </svg>
+          Home
+        </a>
+        <a href="/beginner/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0114.25 16H1.75A1.75 1.75 0 010 14.25V1.75zm1.75-.25a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V1.75a.25.25 0 00-.25-.25H1.75zM3.5 6.25a.75.75 0 01.75-.75h7a.75.75 0 010 1.5h-7a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h4a.75.75 0 000-1.5h-4z"></path>
+          </svg>
+          Beginner
+        </a>
+        <a href="/intermediate/" class="training-nav-link active">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+            <path fill="currentColor" d="M8 0a8 8 0 110 16A8 8 0 018 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"></path>
+          </svg>
+          Intermediate
+        </a>
+        <a href="/advanced/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"></path>
+          </svg>
+          Advanced
+        </a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+    <!-- Main content area with sidebar -->
+    <div class="training-container">
+      
+      <!-- Sidebar navigation -->
+      <aside class="training-sidebar">
+        <div class="training-sidebar-sticky">
+          
+          
+          
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">🚀 Intermediate Phase</h3>
+            <nav class="sidebar-nav">
+              <a href="/intermediate/" class="sidebar-link active">Phase Overview</a>
+              <a href="/intermediate/module-5/" class="sidebar-link">Module 5: Actions</a>
+              <a href="/intermediate/module-6/" class="sidebar-link">Module 6: Security</a>
+              <a href="/intermediate/module-7/" class="sidebar-link">Module 7: Packages</a>
+              <a href="/intermediate/module-8/" class="sidebar-link">Module 8: CI/CD</a>
+            </nav>
+          </div>
+          
+          
+          
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">Resources</h3>
+            <nav class="sidebar-nav">
+              <a href="/syllabus/" class="sidebar-link">Full Syllabus</a>
+              <a href="https://docs.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Docs
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+              <a href="https://skills.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Skills
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+              <a href="https://github.com/orgs/community/discussions" class="sidebar-link" target="_blank" rel="noopener">
+                Community
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+            </nav>
+          </div>
+
+          <!-- Progress indicator -->
+          
+        </div>
+      </aside>
+
+      <!-- Main content -->
+      <main class="training-main" id="main-content">
+        <div class="training-content">
+          <h1 id="-intermediate-phase-development">🚀 Intermediate Phase: Development</h1>
+<p><strong>Weeks 5-8 | Automation, Security &amp; CI/CD</strong></p>
+
+<hr />
+
+<h2 id="phase-overview">Phase Overview</h2>
+
+<p>With GitHub fundamentals mastered, it’s time to level up! This phase focuses on automation, security, and building production-ready deployment pipelines.</p>
+
+<h3 id="what-youll-learn">What You’ll Learn</h3>
+
+<p>By the end of this phase, you’ll understand:
+- GitHub Actions for automation and CI/CD
+- Security scanning with GitHub Advanced Security (GHAS)
+- Dependency management and supply chain security
+- Package publishing and artifact management
+- Multi-environment deployment strategies
+- DORA metrics and DevOps performance measurement</p>
+
+<h3 id="phase-context">Phase Context</h3>
+
+<p><strong>Before:</strong> You can navigate GitHub, use Git confidently, and understand basic collaboration workflows.</p>
+
+<p><strong>After:</strong> You’ll build automated pipelines that test code, scan for vulnerabilities, and deploy to production - the heart of modern DevOps.</p>
+
+<hr />
+
+<h2 id="modules">Modules</h2>
+
+<h3 id="-module-5-github-actions--automation-basics">📘 Module 5: GitHub Actions &amp; Automation Basics</h3>
+<p><strong>Duration:</strong> 10-12 hours | <strong>Week:</strong> 5</p>
+
+<p>Learn the fundamentals of GitHub Actions and build your first CI workflows.</p>
+
+<p><strong>Topics:</strong>
+- CI/CD principles and benefits
+- GitHub Actions architecture (workflows, jobs, steps, runners)
+- Workflow syntax and YAML basics
+- Triggering workflows (push, PR, schedule, manual)
+- Using Actions from the marketplace
+- Secrets and environment variables
+- Matrix builds for multiple environments
+- Status checks and branch protection integration</p>
+
+<p><strong>Learning Outcomes:</strong>
+- Create automated test workflows
+- Use community Actions from the marketplace
+- Configure secrets securely
+- Integrate status checks with branch protection</p>
+
+<p><a href="/intermediate/module-5/"><strong>Start Module 5 →</strong></a></p>
+
+<hr />
+
+<h3 id="-module-6-code-security-with-github-advanced-security">📘 Module 6: Code Security with GitHub Advanced Security</h3>
+<p><strong>Duration:</strong> 10-12 hours | <strong>Week:</strong> 6</p>
+
+<p>Master security features to find and fix vulnerabilities before they reach production.</p>
+
+<p><strong>Topics:</strong>
+- Security in the SDLC (shift-left security)
+- Dependabot for dependency updates
+- Secret scanning to prevent credential leaks
+- CodeQL for static code analysis
+- Security advisories and CVE reporting
+- Supply chain security
+- Security policies and SECURITY.md</p>
+
+<p><strong>Learning Outcomes:</strong>
+- Enable and configure all GHAS features
+- Triage security alerts effectively
+- Create security policies for customers
+- Explain supply chain security to stakeholders</p>
+
+<p><a href="/intermediate/module-6/"><strong>Start Module 6 →</strong></a></p>
+
+<hr />
+
+<h3 id="-module-7-dependency--package-management">📘 Module 7: Dependency &amp; Package Management</h3>
+<p><strong>Duration:</strong> 10-12 hours | <strong>Week:</strong> 7</p>
+
+<p>Understand dependency management, GitHub Packages, and artifact publishing.</p>
+
+<p><strong>Topics:</strong>
+- Dependency management strategies
+- GitHub Packages (npm, Maven, NuGet, Docker)
+- Publishing packages with Actions
+- Versioning and release strategies
+- Container registry and Docker images
+- Self-hosted runners
+- Actions caching and artifacts</p>
+
+<p><strong>Learning Outcomes:</strong>
+- Publish packages to GitHub Packages
+- Create container publishing workflows
+- Implement versioning strategies
+- Optimize workflows with caching</p>
+
+<p><a href="/intermediate/module-7/"><strong>Start Module 7 →</strong></a></p>
+
+<hr />
+
+<h3 id="-module-8-cicd-pipelines--deployment-strategies">📘 Module 8: CI/CD Pipelines &amp; Deployment Strategies</h3>
+<p><strong>Duration:</strong> 10-12 hours | <strong>Week:</strong> 8</p>
+
+<p>Build complete deployment pipelines with multiple environments and protection rules.</p>
+
+<p><strong>Topics:</strong>
+- Continuous Deployment principles
+- GitHub Environments and protection rules
+- Multi-environment pipelines (dev, staging, prod)
+- Deployment approval workflows
+- OIDC for secure cloud authentication
+- Reusable workflows
+- Deployment strategies (blue/green, canary)
+- DORA metrics for measuring performance</p>
+
+<p><strong>Learning Outcomes:</strong>
+- Build complete multi-environment CI/CD pipelines
+- Configure environment protection rules
+- Implement OIDC for AWS/Azure
+- Measure DORA metrics from deployment data</p>
+
+<p><a href="/intermediate/module-8/"><strong>Start Module 8 →</strong></a></p>
+
+<hr />
+
+<h2 id="intermediate-phase-milestone-project">Intermediate Phase Milestone Project</h2>
+
+<h3 id="-project-production-ready-application-pipeline">🎯 Project: Production-Ready Application Pipeline</h3>
+
+<p><strong>Objective:</strong> Build a complete CI/CD pipeline with security scanning, testing, and multi-environment deployment.</p>
+
+<p><strong>Requirements:</strong>
+1. Fork/create a sample application (Node.js, Python, or Java)
+2. Implement automated testing with code coverage reports
+3. Enable all GHAS features (Dependabot, secret scanning, CodeQL)
+4. Create a package publishing workflow
+5. Build a multi-environment deployment pipeline:
+   - <strong>Dev:</strong> Deploys automatically on every push to <code class="language-plaintext highlighter-rouge">main</code>
+   - <strong>Staging:</strong> Requires manual approval
+   - <strong>Production:</strong> Requires security review + approval
+6. Implement OIDC authentication (no long-lived secrets)
+7. Add deployment status badges to README
+8. Calculate and display DORA metrics (deployment frequency, lead time)</p>
+
+<p><strong>Deliverables:</strong>
+- Live repository with all workflows configured
+- Deployed application in 3 environments
+- Security scan results with remediation plan
+- 15-minute demo walking through the pipeline
+- DORA metrics dashboard or report</p>
+
+<p><strong>Assessment Criteria:</strong>
+- Pipeline functionality and reliability (30%)
+- Security configuration and best practices (25%)
+- Environment protection and approval process (20%)
+- Code quality and documentation (15%)
+- Presentation and DORA metrics (10%)</p>
+
+<hr />
+
+<h2 id="phase-completion-checklist">Phase Completion Checklist</h2>
+
+<p>Before moving to the Advanced phase, ensure you can:</p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Create GitHub Actions workflows from scratch</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Explain CI/CD benefits to non-technical stakeholders</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Configure all GitHub Advanced Security features</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Triage and remediate security vulnerabilities</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Publish packages to GitHub Packages</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Build multi-environment deployment pipelines</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Implement environment protection rules</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Use OIDC for cloud deployments</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Calculate and explain DORA metrics</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Complete the Intermediate Phase Milestone Project</li>
+</ul>
+
+<hr />
+
+<h2 id="resources--support">Resources &amp; Support</h2>
+
+<h3 id="official-training">Official Training</h3>
+<ul>
+  <li><a href="https://github.com/skills/hello-github-actions">GitHub Skills: GitHub Actions</a></li>
+  <li><a href="https://learn.microsoft.com/en-us/training/modules/github-actions-ci/">Microsoft Learn: GitHub Actions</a></li>
+  <li><a href="https://github.com/skills/secure-repository-supply-chain">GitHub Skills: Secure your repository supply chain</a></li>
+</ul>
+
+<h3 id="documentation">Documentation</h3>
+<ul>
+  <li><a href="https://docs.github.com/en/actions">GitHub Actions Documentation</a></li>
+  <li><a href="https://docs.github.com/en/code-security">GitHub Advanced Security Documentation</a></li>
+  <li><a href="https://docs.github.com/en/packages">GitHub Packages Documentation</a></li>
+</ul>
+
+<hr />
+
+<h2 id="ready-to-continue">Ready to Continue?</h2>
+
+<div class="cta-buttons">
+  <a href="/intermediate/module-5/" class="btn-primary">Start Module 5: GitHub Actions →</a>
+  <a href="/beginner/" class="btn-secondary">← Back to Beginner Phase</a>
+</div>
+
+<hr />
+
+<p><strong>Next Phase:</strong> Once you complete the Intermediate phase, you’ll move to <a href="/advanced/">Advanced Phase</a> covering enterprise administration, APIs, and governance.</p>
+
+        </div>
+
+        <!-- Module navigation footer -->
+        
+      </main>
+    </div>
+
+    <footer class="training-footer">
+  <div class="container">
+    <div class="training-footer-content">
+      <div class="footer-info">
+        <p class="footer-text">GitHub Training Program v1.0 | Last updated: December 2025</p>
+        <p class="footer-links">
+          <a href="https://docs.github.com" target="_blank" rel="noopener">GitHub Docs</a> • 
+          <a href="https://github.community" target="_blank" rel="noopener">Community</a> • 
+          <a href="/syllabus/">Full Syllabus</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- Smooth scroll behavior -->
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const href = this.getAttribute('href');
+          if (href !== '#') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+        });
+      });
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,113 @@
+---
+layout: training
+title: "Module 12: Governance, Compliance & DORA Metrics"
+module_number: 12
+estimated_time: "3 hours"
+difficulty: "Advanced"
+learning_track: "Advanced"
+week_number: 12
+description: "Master organizational governance, compliance frameworks, and engineering effectiveness metrics using DORA standards and GitHub's value stream insights."
+sections:
+  - title: "Context & Overview"
+    url: "/advanced/module-12/overview/"
+    short_title: "Overview"
+    icon: "📋"
+    time: "20 min"
+  - title: "Core Concepts"
+    url: "/advanced/module-12/concepts/"
+    short_title: "Concepts"
+    icon: "📚"
+    time: "30 min"
+  - title: "Guided Walkthrough"
+    url: "/advanced/module-12/walkthrough/"
+    short_title: "Walkthrough"
+    icon: "🔄"
+    time: "30 min"
+  - title: "Hands-On Labs"
+    url: "/advanced/module-12/labs/"
+    short_title: "Labs"
+    icon: "🧪"
+    time: "45 min"
+  - title: "Knowledge Check"
+    url: "/advanced/module-12/quiz/"
+    short_title: "Quiz"
+    icon: "✅"
+    time: "15 min"
+  - title: "Resources"
+    url: "/advanced/module-12/resources/"
+    short_title: "Resources"
+    icon: "📖"
+    time: "10 min"
+  - title: "CSM Scenarios"
+    url: "/advanced/module-12/scenarios/"
+    short_title: "Scenarios"
+    icon: "💼"
+    time: "20 min"
+objectives:
+  - Design and implement governance frameworks for GitHub at enterprise scale
+  - Build compliance reporting systems for regulatory requirements
+  - Implement DORA metrics to measure engineering performance
+  - Create value stream maps to identify bottlenecks and improvements
+  - Establish innersource programs for cross-team collaboration
+  - Measure and communicate ROI of GitHub adoption
+prerequisites:
+  - "Module 9: Enterprise Administration"
+  - "Module 10: GitHub APIs, Webhooks & Apps"
+  - "Module 11: Infrastructure as Code & Operations"
+  - Understanding of software development lifecycle metrics
+prev_module: 11
+prev_module_title: "Infrastructure as Code & Operations"
+prev_module_link: "/advanced/module-11/"
+next_module: 13
+next_module_title: "GitHub Copilot Fundamentals"
+next_module_link: "/advanced/module-13/"
+---
+
+## Module Sections
+
+Work through each section in order for the best learning experience:
+
+<div class="section-cards">
+{% for section in page.sections %}
+<a href="{{ section.url }}" class="section-card">
+  <span class="section-icon">{{ section.icon }}</span>
+  <div class="section-info">
+    <h3>{{ section.title }}</h3>
+    <span class="section-time">{{ section.time }}</span>
+  </div>
+
+  <span class="section-arrow">→</span>
+</a>
+{% endfor %}
+</div>
+
+---
+
+## Learning Objectives
+
+By the end of this module, you will be able to:
+
+{% for objective in page.objectives %}
+- ✅ {{ objective }}
+{% endfor %}
+
+---
+
+## Prerequisites
+
+{% for prereq in page.prerequisites %}
+- {{ prereq }}
+{% endfor %}
+
+---
+
+## 🚀 Ready to Start?
+
+Master organizational governance, compliance frameworks, and DORA metrics.
+
+<div class="module-cta">
+  <a href="/advanced/module-12/overview/" class="btn btn-primary btn-lg">
+    Start Section 1: Context & Overview →
+  </a>
+</div>
+

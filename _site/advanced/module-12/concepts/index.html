@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Core Concepts &middot; GitHub Training
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="preload" href="/public/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/public/css/main.css"></noscript>
+
+  <!-- GLightbox CSS for Image Modals -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+</head>
+
+
+  <body class="training-layout">
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="training-header">
+  <div class="container">
+    <div class="training-header-inner">
+      <div class="training-brand">
+        <a href="/" class="training-logo">
+          <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" class="octicon">
+            <path fill="currentColor" d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
+          </svg>
+          <span class="training-title">GitHub Training</span>
+        </a>
+        <span class="training-tagline">CSM & CSA Certification Program</span>
+      </div>
+      
+      <nav class="training-nav" aria-label="Training navigation">
+        <a href="/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8.156 1.835a.25.25 0 00-.312 0l-5.25 4.2a.25.25 0 00-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 01.75-.75h3.5a.75.75 0 01.75.75v5.25h2.75a.25.25 0 00.25-.25V6.23a.25.25 0 00-.094-.195z"></path>
+          </svg>
+          Home
+        </a>
+        <a href="/beginner/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0114.25 16H1.75A1.75 1.75 0 010 14.25V1.75zm1.75-.25a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V1.75a.25.25 0 00-.25-.25H1.75zM3.5 6.25a.75.75 0 01.75-.75h7a.75.75 0 010 1.5h-7a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h4a.75.75 0 000-1.5h-4z"></path>
+          </svg>
+          Beginner
+        </a>
+        <a href="/intermediate/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+            <path fill="currentColor" d="M8 0a8 8 0 110 16A8 8 0 018 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"></path>
+          </svg>
+          Intermediate
+        </a>
+        <a href="/advanced/" class="training-nav-link active">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"></path>
+          </svg>
+          Advanced
+        </a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+    <!-- Main content area with sidebar -->
+    <div class="training-container">
+      
+      <!-- Sidebar navigation -->
+      <aside class="training-sidebar">
+        <div class="training-sidebar-sticky">
+          
+          
+          
+          
+          
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">🏆 Advanced Phase</h3>
+            <nav class="sidebar-nav">
+              <a href="/advanced/" class="sidebar-link">Phase Overview</a>
+              <a href="/advanced/module-9/" class="sidebar-link">Module 9: Enterprise Admin</a>
+              <a href="/advanced/module-10/" class="sidebar-link">Module 10: APIs & Apps</a>
+              <a href="/advanced/module-11/" class="sidebar-link">Module 11: IaC & Ops</a>
+              <a href="/advanced/module-12/" class="sidebar-link active">Module 12: Governance</a>
+              <a href="/advanced/module-13/" class="sidebar-link">Module 13: Copilot Basics</a>
+              <a href="/advanced/module-14/" class="sidebar-link">Module 14: Copilot Advanced</a>
+            </nav>
+          </div>
+          
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">Resources</h3>
+            <nav class="sidebar-nav">
+              <a href="/syllabus/" class="sidebar-link">Full Syllabus</a>
+              <a href="https://docs.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Docs
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+              <a href="https://skills.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Skills
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+            </nav>
+          </div>
+          
+        </div>
+      </aside>
+
+      <!-- Main content area -->
+      <main id="main-content" class="training-main">
+      
+        <div class="training-module">
+        <!-- Module Header -->
+        <header class="module-header">
+          <div class="module-breadcrumb">
+            <a href="/">Training Home</a>
+            <span class="separator">›</span>
+            <a href="/advanced/">Advanced Phase</a>
+            <span class="separator">›</span>
+            <a href="/advanced/module-12/">Module 12</a>
+          </div>
+          
+          <h1 class="module-title">Core Concepts</h1>
+          
+          <div class="module-meta">
+            <span class="badge badge-advanced">Advanced</span>
+            <span class="meta-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm7-3.25v2.992l2.028.812a.75.75 0 0 1-.557 1.392l-2.5-1A.751.751 0 0 1 7 8.25v-3.5a.75.75 0 0 1 1.5 0Z"></path></svg>
+              30 min
+            </span>
+            <span class="meta-item">
+              Section 2 of 7
+            </span>
+          </div>
+        </header>
+
+        <!-- Progress Bar -->
+        <div class="module-progress">
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 28.571428571428573%"></div>
+          </div>
+          <div class="progress-steps">
+            
+              
+              <a href="/advanced/module-12/overview/" 
+                 class="progress-step completed"
+                 title="Context & Overview">
+                <span class="step-dot"></span>
+                <span class="step-label">1</span>
+              </a>
+            
+              
+              <a href="/advanced/module-12/concepts/" 
+                 class="progress-step active"
+                 title="Core Concepts">
+                <span class="step-dot"></span>
+                <span class="step-label">2</span>
+              </a>
+            
+              
+              <a href="/advanced/module-12/walkthrough/" 
+                 class="progress-step "
+                 title="Guided Walkthrough">
+                <span class="step-dot"></span>
+                <span class="step-label">3</span>
+              </a>
+            
+              
+              <a href="/advanced/module-12/labs/" 
+                 class="progress-step "
+                 title="Hands-On Labs">
+                <span class="step-dot"></span>
+                <span class="step-label">4</span>
+              </a>
+            
+              
+              <a href="/advanced/module-12/quiz/" 
+                 class="progress-step "
+                 title="Knowledge Check">
+                <span class="step-dot"></span>
+                <span class="step-label">5</span>
+              </a>
+            
+              
+              <a href="/advanced/module-12/resources/" 
+                 class="progress-step "
+                 title="Resources">
+                <span class="step-dot"></span>
+                <span class="step-label">6</span>
+              </a>
+            
+              
+              <a href="/advanced/module-12/scenarios/" 
+                 class="progress-step "
+                 title="CSM Scenarios">
+                <span class="step-dot"></span>
+                <span class="step-label">7</span>
+              </a>
+            
+          </div>
+        </div>
+
+        <!-- Section Navigation Tabs -->
+        <nav class="section-tabs">
+          
+            
+            <a href="/advanced/module-12/overview/" 
+               class="section-tab ">
+              <span class="tab-icon">📋</span>
+              <span class="tab-title">Overview</span>
+            </a>
+          
+            
+            <a href="/advanced/module-12/concepts/" 
+               class="section-tab active">
+              <span class="tab-icon">📚</span>
+              <span class="tab-title">Concepts</span>
+            </a>
+          
+            
+            <a href="/advanced/module-12/walkthrough/" 
+               class="section-tab ">
+              <span class="tab-icon">🔄</span>
+              <span class="tab-title">Walkthrough</span>
+            </a>
+          
+            
+            <a href="/advanced/module-12/labs/" 
+               class="section-tab ">
+              <span class="tab-icon">🧪</span>
+              <span class="tab-title">Labs</span>
+            </a>
+          
+            
+            <a href="/advanced/module-12/quiz/" 
+               class="section-tab ">
+              <span class="tab-icon">✅</span>
+              <span class="tab-title">Quiz</span>
+            </a>
+          
+            
+            <a href="/advanced/module-12/resources/" 
+               class="section-tab ">
+              <span class="tab-icon">📖</span>
+              <span class="tab-title">Resources</span>
+            </a>
+          
+            
+            <a href="/advanced/module-12/scenarios/" 
+               class="section-tab ">
+              <span class="tab-icon">💼</span>
+              <span class="tab-title">Scenarios</span>
+            </a>
+          
+        </nav>
+
+        <!-- Main Content with TOC Sidebar -->
+        <div class="module-content-wrapper">
+          <main id="main-content" class="module-content">
+            <article class="section-content">
+              <h2 id="enterprise-governance-framework">Enterprise Governance Framework</h2>
+
+<h3 id="the-governance-pyramid">The Governance Pyramid</h3>
+
+<p>Effective GitHub governance operates at three levels:</p>
+
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart TD
+  subgraph Pyramid["Governance Hierarchy"]
+    E["🏛️ ENTERPRISE<br />Policies<br />(Enforced)"]
+    
+    E --&gt; O1 &amp; O2
+    
+    O1["🏢 ORGANIZATION<br />Policies<br />(Configurable)"]
+    O2["🏢 ORGANIZATION<br />Policies<br />(Configurable)"]
+    
+    O1 --&gt; R1 &amp; R2 &amp; R3
+    O2 --&gt; R4
+    
+    R1["📁 Repo<br />Rules"]
+    R2["📁 Repo<br />Rules"]
+    R3["📁 Repo<br />Rules"]
+    R4["📁 Repo<br />Rules"]
+  end
+</div>
+</div>
+
+<h3 id="enterprise-level-policies">Enterprise-Level Policies</h3>
+
+<p>Set at the enterprise level, these policies cannot be overridden:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Policy</th>
+      <th>Options</th>
+      <th>Recommendation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Base repository permissions</td>
+      <td>None, Read, Write, Admin</td>
+      <td><strong>Read</strong> (least privilege)</td>
+    </tr>
+    <tr>
+      <td>Repository creation</td>
+      <td>All members, Admins only</td>
+      <td><strong>Admins</strong> for enterprise</td>
+    </tr>
+    <tr>
+      <td>Repository forking</td>
+      <td>Enabled, Disabled</td>
+      <td>Context-dependent</td>
+    </tr>
+    <tr>
+      <td>Actions permissions</td>
+      <td>All, Local only, Disabled</td>
+      <td><strong>Local + approved</strong></td>
+    </tr>
+    <tr>
+      <td>Default branch name</td>
+      <td>Any string</td>
+      <td><strong>main</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="organization-level-governance">Organization-Level Governance</h3>
+
+<p>Organizations can configure (within enterprise limits):</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Recommended organization settings</span>
+<span class="na">Member privileges</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">Repository creation</span><span class="pi">:</span> <span class="s">Disabled (or template-based)</span>
+  <span class="pi">-</span> <span class="na">Team creation</span><span class="pi">:</span> <span class="s">Enabled (with naming convention)</span>
+  <span class="pi">-</span> <span class="na">Outside collaborators</span><span class="pi">:</span> <span class="s">Require 2FA</span>
+
+<span class="na">Security</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">2FA requirement</span><span class="pi">:</span> <span class="s">Enforced</span>
+  <span class="pi">-</span> <span class="na">SSH certificate authorities</span><span class="pi">:</span> <span class="s">Configured</span>
+  <span class="pi">-</span> <span class="na">IP allow lists</span><span class="pi">:</span> <span class="s">Enabled for sensitive orgs</span>
+
+<span class="na">Actions</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">Allowed actions</span><span class="pi">:</span> <span class="s">Actions in this enterprise</span>
+  <span class="pi">-</span> <span class="na">Fork PR workflows</span><span class="pi">:</span> <span class="s">Require approval</span>
+  <span class="pi">-</span> <span class="na">Default permissions</span><span class="pi">:</span> <span class="s">Read</span>
+
+</code></pre></div></div>
+
+<h3 id="repository-rulesets">Repository Rulesets</h3>
+
+<p>Rulesets provide consistent protection across repositories:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Example: Production branch ruleset</span>
+<span class="na">name</span><span class="pi">:</span> <span class="s">Production Branches</span>
+<span class="na">target</span><span class="pi">:</span> <span class="s">branch</span>
+<span class="na">conditions</span><span class="pi">:</span>
+  <span class="na">ref_name</span><span class="pi">:</span>
+    <span class="na">include</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">refs/heads/main"</span><span class="pi">,</span> <span class="s2">"</span><span class="s">refs/heads/release/*"</span><span class="pi">]</span>
+<span class="na">rules</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">required_pull_request</span>
+    <span class="na">parameters</span><span class="pi">:</span>
+      <span class="na">required_approving_review_count</span><span class="pi">:</span> <span class="m">2</span>
+      <span class="na">dismiss_stale_reviews_on_push</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">require_code_owner_review</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">require_last_push_approval</span><span class="pi">:</span> <span class="kc">true</span>
+  <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">required_status_checks</span>
+    <span class="na">parameters</span><span class="pi">:</span>
+      <span class="na">strict_required_status_checks_policy</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">required_status_checks</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">context</span><span class="pi">:</span> <span class="s2">"</span><span class="s">ci/build"</span>
+        <span class="pi">-</span> <span class="na">context</span><span class="pi">:</span> <span class="s2">"</span><span class="s">security/scan"</span>
+  <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">required_signatures</span>
+  <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">non_fast_forward</span>
+<span class="na">enforcement</span><span class="pi">:</span> <span class="s">active</span>
+
+</code></pre></div></div>
+
+<h2 id="compliance-frameworks">Compliance Frameworks</h2>
+
+<h3 id="common-compliance-requirements">Common Compliance Requirements</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Framework</th>
+      <th>GitHub Relevance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>SOC 2</strong></td>
+      <td>Access controls, audit logging, change management</td>
+    </tr>
+    <tr>
+      <td><strong>HIPAA</strong></td>
+      <td>PHI protection, access auditing, encryption</td>
+    </tr>
+    <tr>
+      <td><strong>PCI-DSS</strong></td>
+      <td>Code review requirements, access controls</td>
+    </tr>
+    <tr>
+      <td><strong>FedRAMP</strong></td>
+      <td>Government cloud requirements</td>
+    </tr>
+    <tr>
+      <td><strong>GDPR</strong></td>
+      <td>Data handling, right to deletion</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="github-audit-log">GitHub Audit Log</h3>
+
+<p>The audit log captures all administrative and security-relevant events:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"@timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2024-01-15T10:30:00Z"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"repo.update"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"actor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin-user"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"actor_location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"country_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"org"</span><span class="p">:</span><span class="w"> </span><span class="s2">"my-organization"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"repo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"my-organization/sensitive-repo"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"visibility"</span><span class="p">:</span><span class="w"> </span><span class="s2">"private"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre></div></div>
+
+<p><strong>Key audit log categories:</strong>
+- <code class="language-plaintext highlighter-rouge">repo.*</code> - Repository operations
+- <code class="language-plaintext highlighter-rouge">org.*</code> - Organization settings
+- <code class="language-plaintext highlighter-rouge">team.*</code> - Team management
+- <code class="language-plaintext highlighter-rouge">protected_branch.*</code> - Branch protection changes
+- <code class="language-plaintext highlighter-rouge">integration.*</code> - App and OAuth events</p>
+
+<h3 id="compliance-reporting-pattern">Compliance Reporting Pattern</h3>
+
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart LR
+  subgraph Pipeline["Compliance Reporting Pipeline"]
+    GH["📋 GitHub<br />Audit Log"] --&gt; Stream["📤 Stream<br />Export"]
+    Stream --&gt; Storage["💾 Storage<br />(S3/Azure)"]
+    Storage --&gt; Query["🔍 Query<br />&amp; Analyze"]
+    Query --&gt; Process["⚙️ Process<br />&amp; Alert"]
+    Process --&gt; SIEM["📊 SIEM<br />(Splunk/etc)"]
+  end
+</div>
+</div>
+
+<h2 id="dora-metrics-deep-dive">DORA Metrics Deep Dive</h2>
+
+<h3 id="metric-1-deployment-frequency">Metric 1: Deployment Frequency</h3>
+
+<p><strong>Definition</strong>: How often code is successfully deployed to production</p>
+
+<p><strong>Measurement in GitHub</strong>:
+- Count of deployments via GitHub Actions
+- Releases created per time period
+- Merged PRs to main/production branch</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Example: Track deployments in GitHub Actions</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Record Deployment</span>
+  <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/github-script@v7</span>
+  <span class="na">with</span><span class="pi">:</span>
+    <span class="na">script</span><span class="pi">:</span> <span class="pi">|</span>
+      <span class="s">await github.rest.repos.createDeployment({</span>
+        <span class="s">owner: context.repo.owner,</span>
+        <span class="s">repo: context.repo.repo,</span>
+        <span class="s">ref: context.sha,</span>
+        <span class="s">environment: 'production',</span>
+        <span class="s">auto_merge: false</span>
+      <span class="s">});</span>
+
+</code></pre></div></div>
+
+<p><strong>Benchmarks</strong>:
+- Elite: Multiple deploys per day
+- High: Between once per week and once per month
+- Medium: Between once per month and once every 6 months
+- Low: Fewer than once every 6 months</p>
+
+<h3 id="metric-2-lead-time-for-changes">Metric 2: Lead Time for Changes</h3>
+
+<p><strong>Definition</strong>: Time from code committed to code running in production</p>
+
+<p><strong>Measurement in GitHub</strong>:
+- Time from first commit in PR to merge
+- Time from merge to deployment
+- Total time from commit to production</p>
+
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart LR
+  subgraph LeadTime["Lead Time for Changes"]
+    C["📝 Commit<br />Created"] --&gt; PR["🔀 PR<br />Merged"] --&gt; D["🚀 Production<br />Deploy"]
+  end
+</div>
+</div>
+
+<p><strong>Benchmarks</strong>:
+- Elite: Less than one hour
+- High: Between one day and one week
+- Medium: Between one month and six months
+- Low: More than six months</p>
+
+<h3 id="metric-3-mean-time-to-recovery-mttr">Metric 3: Mean Time to Recovery (MTTR)</h3>
+
+<p><strong>Definition</strong>: How quickly you can restore service after an incident</p>
+
+<p><strong>Measurement in GitHub</strong>:
+- Time from incident issue creation to resolution
+- Time from bug report to hotfix deployed
+- Rollback deployment time</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Track incidents with labels</span>
+<span class="na">Incident Opened</span><span class="pi">:</span> <span class="s">2024-01-15 10:00:00</span>
+<span class="na">Incident Closed</span><span class="pi">:</span> <span class="s">2024-01-15 10:45:00</span>
+<span class="na">MTTR</span><span class="pi">:</span> <span class="s">45 minutes</span>
+
+</code></pre></div></div>
+
+<p><strong>Benchmarks</strong>:
+- Elite: Less than one hour
+- High: Less than one day
+- Medium: Less than one week
+- Low: More than six months</p>
+
+<h3 id="metric-4-change-failure-rate">Metric 4: Change Failure Rate</h3>
+
+<p><strong>Definition</strong>: Percentage of deployments causing a failure in production</p>
+
+<p><strong>Measurement in GitHub</strong>:
+- Rollback deployments / Total deployments
+- Hotfix PRs / Total PRs
+- Issues labeled “production-incident” / Deployments</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Change Failure Rate = (Failed Deployments / Total Deployments) × 100
+
+Example:
+  100 deployments this month
+  8 required rollback or hotfix
+  CFR = 8%  (Elite performance)
+
+</code></pre></div></div>
+
+<p><strong>Benchmarks</strong>:
+- Elite: 0-15%
+- High: 16-30%
+- Medium: 16-30%
+- Low: 46-60%</p>
+
+<h2 id="value-stream-mapping">Value Stream Mapping</h2>
+
+<h3 id="what-is-value-stream-mapping">What is Value Stream Mapping?</h3>
+
+<p>Value stream mapping visualizes the flow of work from idea to production, identifying:
+- Wait times (waste)
+- Process bottlenecks
+- Automation opportunities</p>
+
+<h3 id="software-development-value-stream">Software Development Value Stream</h3>
+
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart LR
+  subgraph ValueStream["Software Development Value Stream"]
+    I["💡 Idea<br />────<br />Process: 2d<br />Wait: 5d"] --&gt; D["📐 Design<br />────<br />Process: 3d<br />Wait: 2d"]
+    D --&gt; C["💻 Code<br />────<br />Process: 5d<br />Wait: 0d"]
+    C --&gt; R["👀 Review<br />────<br />Process: 2d<br />Wait: 3d"]
+    R --&gt; T["🧪 Test<br />────<br />Process: 3d<br />Wait: 2d"]
+    T --&gt; DP["🚀 Deploy<br />────<br />Process: 0.5d<br />Wait: 1d"]
+  end
+  
+  subgraph Stats["Summary"]
+    S1["📊 Total Process: 15.5 days"]
+    S2["⏳ Total Wait: 13 days"]
+    S3["📈 Efficiency: 54%"]
+    S4["🎯 Opportunity: Reduce wait in Review &amp; Test"]
+  end
+</div>
+</div>
+
+<h3 id="github-metrics-for-value-stream">GitHub Metrics for Value Stream</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Phase</th>
+      <th>GitHub Data Sources</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Idea → Design</td>
+      <td>Issue creation to assignment time</td>
+    </tr>
+    <tr>
+      <td>Design → Code</td>
+      <td>Issue assignment to first commit</td>
+    </tr>
+    <tr>
+      <td>Code → Review</td>
+      <td>PR creation to first review</td>
+    </tr>
+    <tr>
+      <td>Review → Merge</td>
+      <td>First review to merge</td>
+    </tr>
+    <tr>
+      <td>Merge → Deploy</td>
+      <td>Merge to deployment event</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="innersource-metrics">Innersource Metrics</h2>
+
+<h3 id="measuring-cross-team-collaboration">Measuring Cross-Team Collaboration</h3>
+
+<p>Innersource success indicators:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Metric</th>
+      <th>Definition</th>
+      <th>Target</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>External Contributors</strong></td>
+      <td>PRs from outside the owning team</td>
+      <td>Increasing trend</td>
+    </tr>
+    <tr>
+      <td><strong>Documentation Quality</strong></td>
+      <td>README completeness, contribution guides</td>
+      <td>100% repos have CONTRIBUTING.md</td>
+    </tr>
+    <tr>
+      <td><strong>Response Time</strong></td>
+      <td>Time to first response on external PRs</td>
+      <td>&lt; 2 business days</td>
+    </tr>
+    <tr>
+      <td><strong>Merge Rate</strong></td>
+      <td>% of external PRs merged</td>
+      <td>&gt; 70%</td>
+    </tr>
+    <tr>
+      <td><strong>Discoverability</strong></td>
+      <td>Repos with topics, descriptions</td>
+      <td>100%</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="cross-pollination-tracking">Cross-Pollination Tracking</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>External Contributions by Team:
+
+Team Alpha ──────────────▶ 45 PRs to other teams
+Team Beta ───────────────▶ 32 PRs to other teams
+Team Gamma ──────────────▶ 67 PRs to other teams
+Platform ────────────────▶ 12 PRs to other teams (support focus)
+
+Receiving Teams:
+Shared Libraries ◀──────── 89 external PRs
+Platform Tools ◀─────────── 34 external PRs
+Documentation ◀──────────── 23 external PRs
+
+</code></pre></div></div>
+
+<h2 id="building-metrics-programs">Building Metrics Programs</h2>
+
+<h3 id="anti-patterns-to-avoid">Anti-Patterns to Avoid</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Anti-Pattern</th>
+      <th>Why It’s Harmful</th>
+      <th>Better Approach</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Measuring individuals</td>
+      <td>Creates competition, gaming</td>
+      <td>Measure teams</td>
+    </tr>
+    <tr>
+      <td>Lines of code</td>
+      <td>Rewards verbosity, punishes refactoring</td>
+      <td>Outcome metrics</td>
+    </tr>
+    <tr>
+      <td>Commits per day</td>
+      <td>Encourages small, meaningless commits</td>
+      <td>Lead time, deployment frequency</td>
+    </tr>
+    <tr>
+      <td>PR merge time only</td>
+      <td>Teams game by approving quickly</td>
+      <td>Include quality metrics</td>
+    </tr>
+    <tr>
+      <td>Public rankings</td>
+      <td>Shame-based culture</td>
+      <td>Private team feedback</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="goodharts-law">Goodhart’s Law</h3>
+
+<blockquote>
+  <p>“When a measure becomes a target, it ceases to be a good measure.”</p>
+</blockquote>
+
+<p><strong>Mitigation strategies:</strong>
+- Use multiple metrics in combination
+- Focus on trends, not absolute numbers
+- Measure outcomes, not outputs
+- Involve teams in metric selection
+- Review and adjust metrics regularly</p>
+
+<h3 id="metrics-maturity-model">Metrics Maturity Model</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Level</th>
+      <th>Characteristics</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>1 - None</strong></td>
+      <td>No systematic measurement</td>
+    </tr>
+    <tr>
+      <td><strong>2 - Ad Hoc</strong></td>
+      <td>Manual reporting, inconsistent</td>
+    </tr>
+    <tr>
+      <td><strong>3 - Defined</strong></td>
+      <td>Consistent metrics, regular reporting</td>
+    </tr>
+    <tr>
+      <td><strong>4 - Managed</strong></td>
+      <td>Automated collection, dashboards</td>
+    </tr>
+    <tr>
+      <td><strong>5 - Optimizing</strong></td>
+      <td>Predictive analytics, continuous improvement</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<p><strong>Next:</strong> Learn how to implement these concepts in the Guided Walkthrough.</p>
+
+            </article>
+          </main>
+          
+          <!-- Table of Contents Sidebar -->
+          
+          <aside class="section-toc">
+            <h4>On This Page</h4>
+            <nav class="toc-nav">
+              <ul id="toc" class="toc-list">
+<li class="toc-item toc-h2"><a href="#enterprise-governance-framework">Enterprise Governance Framework</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#the-governance-pyramid">The Governance Pyramid</a></li>
+<li class="toc-item toc-h3"><a href="#enterprise-level-policies">Enterprise-Level Policies</a></li>
+<li class="toc-item toc-h3"><a href="#organization-level-governance">Organization-Level Governance</a></li>
+<li class="toc-item toc-h3"><a href="#repository-rulesets">Repository Rulesets</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#compliance-frameworks">Compliance Frameworks</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#common-compliance-requirements">Common Compliance Requirements</a></li>
+<li class="toc-item toc-h3"><a href="#github-audit-log">GitHub Audit Log</a></li>
+<li class="toc-item toc-h3"><a href="#compliance-reporting-pattern">Compliance Reporting Pattern</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#dora-metrics-deep-dive">DORA Metrics Deep Dive</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#metric-1-deployment-frequency">Metric 1: Deployment Frequency</a></li>
+<li class="toc-item toc-h3"><a href="#metric-2-lead-time-for-changes">Metric 2: Lead Time for Changes</a></li>
+<li class="toc-item toc-h3"><a href="#metric-3-mean-time-to-recovery-mttr">Metric 3: Mean Time to Recovery (MTTR)</a></li>
+<li class="toc-item toc-h3"><a href="#metric-4-change-failure-rate">Metric 4: Change Failure Rate</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#value-stream-mapping">Value Stream Mapping</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#what-is-value-stream-mapping">What is Value Stream Mapping?</a></li>
+<li class="toc-item toc-h3"><a href="#software-development-value-stream">Software Development Value Stream</a></li>
+<li class="toc-item toc-h3"><a href="#github-metrics-for-value-stream">GitHub Metrics for Value Stream</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#innersource-metrics">Innersource Metrics</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#measuring-cross-team-collaboration">Measuring Cross-Team Collaboration</a></li>
+<li class="toc-item toc-h3"><a href="#cross-pollination-tracking">Cross-Pollination Tracking</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#building-metrics-programs">Building Metrics Programs</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#anti-patterns-to-avoid">Anti-Patterns to Avoid</a></li>
+<li class="toc-item toc-h3"><a href="#goodharts-law">Goodhart’s Law</a></li>
+<li class="toc-item toc-h3"><a href="#metrics-maturity-model">Metrics Maturity Model</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+          </aside>
+          
+        </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="module-nav">
+          
+            <a href="/advanced/module-12/overview/" class="nav-button nav-prev">
+              <span class="nav-direction">← Previous</span>
+              <span class="nav-title">Context & Overview</span>
+            </a>
+          
+
+          <div class="nav-center">
+            <a href="/advanced/module-12/" class="nav-index">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.75A.75.75 0 0 1 2.75 2h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 2.75Zm0 5A.75.75 0 0 1 2.75 7h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 7.75ZM2.75 12h10.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5Z"></path></svg>
+              Module Overview
+            </a>
+          </div>
+
+          
+            <a href="/advanced/module-12/walkthrough/" class="nav-button nav-next">
+              <span class="nav-direction">Next →</span>
+              <span class="nav-title">Guided Walkthrough</span>
+            </a>
+          
+        </nav>
+      </div>
+
+      </main>
+    </div>
+
+    <footer class="training-footer">
+  <div class="container">
+    <div class="training-footer-content">
+      <div class="footer-info">
+        <p class="footer-text">GitHub Training Program v1.0 | Last updated: December 2025</p>
+        <p class="footer-links">
+          <a href="https://docs.github.com" target="_blank" rel="noopener">GitHub Docs</a> • 
+          <a href="https://github.community" target="_blank" rel="noopener">Community</a> • 
+          <a href="/syllabus/">Full Syllabus</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- Smooth scroll behavior -->
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const href = this.getAttribute('href');
+          if (href !== '#') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+        });
+      });
+
+      // Add copy button to code blocks
+      document.querySelectorAll('pre').forEach(pre => {
+        // Create wrapper div
+        const wrapper = document.createElement('div');
+        wrapper.className = 'code-block-wrapper';
+        pre.parentNode.insertBefore(wrapper, pre);
+        wrapper.appendChild(pre);
+
+        // Create copy button
+        const button = document.createElement('button');
+        button.className = 'copy-button';
+        button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+        button.title = 'Copy to clipboard';
+        wrapper.appendChild(button);
+
+        // Copy functionality
+        button.addEventListener('click', async () => {
+          const code = pre.querySelector('code') ? pre.querySelector('code').textContent : pre.textContent;
+          try {
+            await navigator.clipboard.writeText(code);
+            button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+            button.classList.add('copied');
+            setTimeout(() => {
+              button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+              button.classList.remove('copied');
+            }, 2000);
+          } catch (err) {
+            console.error('Failed to copy:', err);
+          }
+        });
+      });
+    </script>
+
+    <!-- Mermaid.js for diagrams with pan/zoom -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+    <script>
+      // Initialize Mermaid with theme matching the training modules
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: 'base',
+        themeVariables: {
+          // Primary colors - matching GitHub/training theme
+          primaryColor: '#ddf4ff',
+          primaryTextColor: '#1f2328',
+          primaryBorderColor: '#0969da',
+          
+          // Secondary and tertiary colors
+          secondaryColor: '#f6f8fa',
+          secondaryTextColor: '#1f2328',
+          secondaryBorderColor: '#d0d7de',
+          tertiaryColor: '#fff8c5',
+          tertiaryTextColor: '#1f2328',
+          tertiaryBorderColor: '#d4a72c',
+          
+          // Background colors
+          background: '#ffffff',
+          mainBkg: '#ddf4ff',
+          secondBkg: '#f6f8fa',
+          
+          // Lines and borders
+          lineColor: '#57606a',
+          border1: '#d0d7de',
+          border2: '#0969da',
+          arrowheadColor: '#57606a',
+          
+          // Text styling
+          fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif',
+          fontSize: '14px',
+          labelBackground: '#ffffff',
+          nodeTextColor: '#1f2328',
+          
+          // Subgraph styling
+          clusterBkg: '#f6f8fa',
+          clusterBorder: '#d0d7de',
+          
+          // Note styling
+          noteBkgColor: '#fff8c5',
+          noteTextColor: '#1f2328',
+          noteBorderColor: '#d4a72c'
+        },
+        flowchart: {
+          useMaxWidth: true,
+          htmlLabels: true,
+          curve: 'basis',
+          padding: 30,
+          nodeSpacing: 50,
+          rankSpacing: 70,
+          subGraphTitleMargin: {
+            top: 10,
+            bottom: 20
+          }
+        },
+        securityLevel: 'loose'
+      });
+
+      // Add pan/zoom to Mermaid diagrams after they render
+      mermaid.run().then(() => {
+        document.querySelectorAll('.mermaid-container svg').forEach((svg, index) => {
+          // Ensure SVG has an ID for pan-zoom
+          if (!svg.id) {
+            svg.id = 'mermaid-svg-' + index;
+          }
+          
+          // Set minimum dimensions on SVG for better visibility
+          svg.style.minWidth = '100%';
+          svg.style.minHeight = '300px';
+          
+          // Initialize pan-zoom
+          const panZoom = svgPanZoom(svg, {
+            zoomEnabled: true,
+            controlIconsEnabled: true,
+            fit: true,
+            center: true,
+            minZoom: 0.3,
+            maxZoom: 10,
+            zoomScaleSensitivity: 0.3,
+            dblClickZoomEnabled: true,
+            mouseWheelZoomEnabled: true,
+            preventMouseEventsDefault: true,
+            contain: false
+          });
+
+          // Handle window resize
+          window.addEventListener('resize', () => {
+            panZoom.resize();
+            panZoom.fit();
+            panZoom.center();
+          });
+        });
+      });
+    </script>
+
+  </body>
+</html>

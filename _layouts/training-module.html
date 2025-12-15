@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  {% include head.html %}
+
+  <body class="training-layout">
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    {% include training-header.html %}
+
+    <!-- Main content area with sidebar -->
+    <div class="training-container">
+      
+      <!-- Sidebar navigation -->
+      <aside class="training-sidebar">
+        <div class="training-sidebar-sticky">
+          
+          {% if page.phase == 'beginner' %}
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">🌱 Beginner Phase</h3>
+            <nav class="sidebar-nav">
+              <a href="{{ site.baseurl }}/beginner/" class="sidebar-link">Phase Overview</a>
+              <a href="{{ site.baseurl }}/beginner/module-1/" class="sidebar-link{% if page.url contains 'module-1' %} active{% endif %}">Module 1: SDLC</a>
+              <a href="{{ site.baseurl }}/beginner/module-2/" class="sidebar-link{% if page.url contains 'module-2' %} active{% endif %}">Module 2: Git</a>
+              <a href="{{ site.baseurl }}/beginner/module-3/" class="sidebar-link{% if page.url contains 'module-3' %} active{% endif %}">Module 3: GitHub Platform</a>
+              <a href="{{ site.baseurl }}/beginner/module-4/" class="sidebar-link{% if page.url contains 'module-4' %} active{% endif %}">Module 4: SCM Process</a>
+            </nav>
+          </div>
+          {% endif %}
+          
+          {% if page.phase == 'intermediate' %}
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">🚀 Intermediate Phase</h3>
+            <nav class="sidebar-nav">
+              <a href="{{ site.baseurl }}/intermediate/" class="sidebar-link">Phase Overview</a>
+              <a href="{{ site.baseurl }}/intermediate/module-5/" class="sidebar-link{% if page.url contains 'module-5' %} active{% endif %}">Module 5: Actions</a>
+              <a href="{{ site.baseurl }}/intermediate/module-6/" class="sidebar-link{% if page.url contains 'module-6' %} active{% endif %}">Module 6: Security</a>
+              <a href="{{ site.baseurl }}/intermediate/module-7/" class="sidebar-link{% if page.url contains 'module-7' %} active{% endif %}">Module 7: Packages</a>
+              <a href="{{ site.baseurl }}/intermediate/module-8/" class="sidebar-link{% if page.url contains 'module-8' %} active{% endif %}">Module 8: CI/CD</a>
+            </nav>
+          </div>
+          {% endif %}
+          
+          {% if page.phase == 'advanced' %}
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">🏆 Advanced Phase</h3>
+            <nav class="sidebar-nav">
+              <a href="{{ site.baseurl }}/advanced/" class="sidebar-link">Phase Overview</a>
+              <a href="{{ site.baseurl }}/advanced/module-9/" class="sidebar-link{% if page.url contains 'module-9' %} active{% endif %}">Module 9: Enterprise Admin</a>
+              <a href="{{ site.baseurl }}/advanced/module-10/" class="sidebar-link{% if page.url contains 'module-10' %} active{% endif %}">Module 10: APIs & Apps</a>
+              <a href="{{ site.baseurl }}/advanced/module-11/" class="sidebar-link{% if page.url contains 'module-11' %} active{% endif %}">Module 11: IaC & Ops</a>
+              <a href="{{ site.baseurl }}/advanced/module-12/" class="sidebar-link{% if page.url contains 'module-12' %} active{% endif %}">Module 12: Governance</a>
+              <a href="{{ site.baseurl }}/advanced/module-13/" class="sidebar-link{% if page.url contains 'module-13' %} active{% endif %}">Module 13: Copilot Basics</a>
+              <a href="{{ site.baseurl }}/advanced/module-14/" class="sidebar-link{% if page.url contains 'module-14' %} active{% endif %}">Module 14: Copilot Advanced</a>
+            </nav>
+          </div>
+          {% endif %}
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">Resources</h3>
+            <nav class="sidebar-nav">
+              <a href="{{ site.baseurl }}/syllabus/" class="sidebar-link">Full Syllabus</a>
+              <a href="https://docs.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Docs
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+              <a href="https://skills.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Skills
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+            </nav>
+          </div>
+          
+        </div>
+      </aside>
+
+      <!-- Main content area -->
+      <main id="main-content" class="training-main">
+      
+        <div class="training-module">
+        <!-- Module Header -->
+        <header class="module-header">
+          <div class="module-breadcrumb">
+            <a href="{{ site.baseurl }}/">Training Home</a>
+            <span class="separator">›</span>
+            <a href="{{ site.baseurl }}/{{ page.phase }}/">{{ page.phase | capitalize }} Phase</a>
+            <span class="separator">›</span>
+            <a href="{{ page.module_index }}">Module {{ page.module_number }}</a>
+          </div>
+          
+          <h1 class="module-title">{{ page.title }}</h1>
+          
+          <div class="module-meta">
+            <span class="badge badge-{{ page.phase }}">{{ page.phase | capitalize }}</span>
+            <span class="meta-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm7-3.25v2.992l2.028.812a.75.75 0 0 1-.557 1.392l-2.5-1A.751.751 0 0 1 7 8.25v-3.5a.75.75 0 0 1 1.5 0Z"></path></svg>
+              {{ page.estimated_time }}
+            </span>
+            <span class="meta-item">
+              Section {{ page.section_number }} of {{ page.total_sections }}
+            </span>
+          </div>
+        </header>
+
+        <!-- Progress Bar -->
+        <div class="module-progress">
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: {{ page.section_number | times: 100.0 | divided_by: page.total_sections }}%"></div>
+          </div>
+          <div class="progress-steps">
+            {% for section in page.sections %}
+              {% assign section_num = forloop.index %}
+              <a href="{{ section.url }}" 
+                 class="progress-step {% if section_num == page.section_number %}active{% elsif section_num < page.section_number %}completed{% endif %}"
+                 title="{{ section.title }}">
+                <span class="step-dot"></span>
+                <span class="step-label">{{ section_num }}</span>
+              </a>
+            {% endfor %}
+          </div>
+        </div>
+
+        <!-- Section Navigation Tabs -->
+        <nav class="section-tabs">
+          {% for section in page.sections %}
+            {% assign section_num = forloop.index %}
+            <a href="{{ section.url }}" 
+               class="section-tab {% if section_num == page.section_number %}active{% endif %}">
+              <span class="tab-icon">{{ section.icon }}</span>
+              <span class="tab-title">{{ section.short_title }}</span>
+            </a>
+          {% endfor %}
+        </nav>
+
+        <!-- Main Content with TOC Sidebar -->
+        <div class="module-content-wrapper">
+          <main id="main-content" class="module-content">
+            <article class="section-content">
+              {{ content }}
+            </article>
+          </main>
+          
+          <!-- Table of Contents Sidebar -->
+          {% if page.toc %}
+          <aside class="section-toc">
+            <h4>On This Page</h4>
+            <nav class="toc-nav">
+              {{ content | toc_only }}
+            </nav>
+          </aside>
+          {% endif %}
+        </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="module-nav">
+          {% if page.prev_section %}
+            <a href="{{ page.prev_section.url }}" class="nav-button nav-prev">
+              <span class="nav-direction">← Previous</span>
+              <span class="nav-title">{{ page.prev_section.title }}</span>
+            </a>
+          {% else %}
+            <div class="nav-button nav-prev disabled"></div>
+          {% endif %}
+
+          <div class="nav-center">
+            <a href="{{ page.module_index }}" class="nav-index">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.75A.75.75 0 0 1 2.75 2h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 2.75Zm0 5A.75.75 0 0 1 2.75 7h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 7.75ZM2.75 12h10.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5Z"></path></svg>
+              Module Overview
+            </a>
+          </div>
+
+          {% if page.next_section %}
+            <a href="{{ page.next_section.url }}" class="nav-button nav-next">
+              <span class="nav-direction">Next →</span>
+              <span class="nav-title">{{ page.next_section.title }}</span>
+            </a>
+          {% elsif page.next_module %}
+            <a href="{{ page.next_module.url }}" class="nav-button nav-next nav-module">
+              <span class="nav-direction">Next Module →</span>
+              <span class="nav-title">{{ page.next_module.title }}</span>
+            </a>
+          {% else %}
+            <div class="nav-button nav-next disabled"></div>
+          {% endif %}
+        </nav>
+      </div>
+
+      </main>
+    </div>
+
+    {% include training-footer.html %}
+
+    <!-- Smooth scroll behavior -->
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const href = this.getAttribute('href');
+          if (href !== '#') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+        });
+      });
+
+      // Add copy button to code blocks
+      document.querySelectorAll('pre').forEach(pre => {
+        // Create wrapper div
+        const wrapper = document.createElement('div');
+        wrapper.className = 'code-block-wrapper';
+        pre.parentNode.insertBefore(wrapper, pre);
+        wrapper.appendChild(pre);
+
+        // Create copy button
+        const button = document.createElement('button');
+        button.className = 'copy-button';
+        button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+        button.title = 'Copy to clipboard';
+        wrapper.appendChild(button);
+
+        // Copy functionality
+        button.addEventListener('click', async () => {
+          const code = pre.querySelector('code') ? pre.querySelector('code').textContent : pre.textContent;
+          try {
+            await navigator.clipboard.writeText(code);
+            button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+            button.classList.add('copied');
+            setTimeout(() => {
+              button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+              button.classList.remove('copied');
+            }, 2000);
+          } catch (err) {
+            console.error('Failed to copy:', err);
+          }
+        });
+      });
+    </script>
+
+    <!-- Mermaid.js for diagrams with pan/zoom -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+    <script>
+      // Initialize Mermaid with theme matching the training modules
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: 'base',
+        themeVariables: {
+          // Primary colors - matching GitHub/training theme
+          primaryColor: '#ddf4ff',
+          primaryTextColor: '#1f2328',
+          primaryBorderColor: '#0969da',
+          
+          // Secondary and tertiary colors
+          secondaryColor: '#f6f8fa',
+          secondaryTextColor: '#1f2328',
+          secondaryBorderColor: '#d0d7de',
+          tertiaryColor: '#fff8c5',
+          tertiaryTextColor: '#1f2328',
+          tertiaryBorderColor: '#d4a72c',
+          
+          // Background colors
+          background: '#ffffff',
+          mainBkg: '#ddf4ff',
+          secondBkg: '#f6f8fa',
+          
+          // Lines and borders
+          lineColor: '#57606a',
+          border1: '#d0d7de',
+          border2: '#0969da',
+          arrowheadColor: '#57606a',
+          
+          // Text styling
+          fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif',
+          fontSize: '14px',
+          labelBackground: '#ffffff',
+          nodeTextColor: '#1f2328',
+          
+          // Subgraph styling
+          clusterBkg: '#f6f8fa',
+          clusterBorder: '#d0d7de',
+          
+          // Note styling
+          noteBkgColor: '#fff8c5',
+          noteTextColor: '#1f2328',
+          noteBorderColor: '#d4a72c'
+        },
+        flowchart: {
+          useMaxWidth: true,
+          htmlLabels: true,
+          curve: 'basis',
+          padding: 30,
+          nodeSpacing: 50,
+          rankSpacing: 70,
+          subGraphTitleMargin: {
+            top: 10,
+            bottom: 20
+          }
+        },
+        securityLevel: 'loose'
+      });
+
+      // Add pan/zoom to Mermaid diagrams after they render
+      mermaid.run().then(() => {
+        document.querySelectorAll('.mermaid-container svg').forEach((svg, index) => {
+          // Ensure SVG has an ID for pan-zoom
+          if (!svg.id) {
+            svg.id = 'mermaid-svg-' + index;
+          }
+          
+          // Set minimum dimensions on SVG for better visibility
+          svg.style.minWidth = '100%';
+          svg.style.minHeight = '300px';
+          
+          // Initialize pan-zoom
+          const panZoom = svgPanZoom(svg, {
+            zoomEnabled: true,
+            controlIconsEnabled: true,
+            fit: true,
+            center: true,
+            minZoom: 0.3,
+            maxZoom: 10,
+            zoomScaleSensitivity: 0.3,
+            dblClickZoomEnabled: true,
+            mouseWheelZoomEnabled: true,
+            preventMouseEventsDefault: true,
+            contain: false
+          });
+
+          // Handle window resize
+          window.addEventListener('resize', () => {
+            panZoom.resize();
+            panZoom.fit();
+            panZoom.center();
+          });
+        });
+      });
+    </script>
+
+  </body>
+</html>

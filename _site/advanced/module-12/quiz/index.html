@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Knowledge Check &middot; GitHub Training
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="preload" href="/public/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/public/css/main.css"></noscript>
+
+  <!-- GLightbox CSS for Image Modals -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+</head>
+
+
+  <body class="training-layout">
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="training-header">
+  <div class="container">
+    <div class="training-header-inner">
+      <div class="training-brand">
+        <a href="/" class="training-logo">
+          <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" class="octicon">
+            <path fill="currentColor" d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
+          </svg>
+          <span class="training-title">GitHub Training</span>
+        </a>
+        <span class="training-tagline">CSM & CSA Certification Program</span>
+      </div>
+      
+      <nav class="training-nav" aria-label="Training navigation">
+        <a href="/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8.156 1.835a.25.25 0 00-.312 0l-5.25 4.2a.25.25 0 00-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 01.75-.75h3.5a.75.75 0 01.75.75v5.25h2.75a.25.25 0 00.25-.25V6.23a.25.25 0 00-.094-.195z"></path>
+          </svg>
+          Home
+        </a>
+        <a href="/beginner/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0114.25 16H1.75A1.75 1.75 0 010 14.25V1.75zm1.75-.25a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V1.75a.25.25 0 00-.25-.25H1.75zM3.5 6.25a.75.75 0 01.75-.75h7a.75.75 0 010 1.5h-7a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h4a.75.75 0 000-1.5h-4z"></path>
+          </svg>
+          Beginner
+        </a>
+        <a href="/intermediate/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+            <path fill="currentColor" d="M8 0a8 8 0 110 16A8 8 0 018 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"></path>
+          </svg>
+          Intermediate
+        </a>
+        <a href="/advanced/" class="training-nav-link active">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"></path>
+          </svg>
+          Advanced
+        </a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+    <!-- Main content area with sidebar -->
+    <div class="training-container">
+      
+      <!-- Sidebar navigation -->
+      <aside class="training-sidebar">
+        <div class="training-sidebar-sticky">
+          
+          
+          
+          
+          
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">🏆 Advanced Phase</h3>
+            <nav class="sidebar-nav">
+              <a href="/advanced/" class="sidebar-link">Phase Overview</a>
+              <a href="/advanced/module-9/" class="sidebar-link">Module 9: Enterprise Admin</a>
+              <a href="/advanced/module-10/" class="sidebar-link">Module 10: APIs & Apps</a>
+              <a href="/advanced/module-11/" class="sidebar-link">Module 11: IaC & Ops</a>
+              <a href="/advanced/module-12/" class="sidebar-link active">Module 12: Governance</a>
+              <a href="/advanced/module-13/" class="sidebar-link">Module 13: Copilot Basics</a>
+              <a href="/advanced/module-14/" class="sidebar-link">Module 14: Copilot Advanced</a>
+            </nav>
+          </div>
+          
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">Resources</h3>
+            <nav class="sidebar-nav">
+              <a href="/syllabus/" class="sidebar-link">Full Syllabus</a>
+              <a href="https://docs.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Docs
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+              <a href="https://skills.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Skills
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+            </nav>
+          </div>
+          
+        </div>
+      </aside>
+
+      <!-- Main content area -->
+      <main id="main-content" class="training-main">
+      
+        <div class="training-module">
+        <!-- Module Header -->
+        <header class="module-header">
+          <div class="module-breadcrumb">
+            <a href="/">Training Home</a>
+            <span class="separator">›</span>
+            <a href="/advanced/">Advanced Phase</a>
+            <span class="separator">›</span>
+            <a href="/advanced/module-12/">Module 12</a>
+          </div>
+          
+          <h1 class="module-title">Knowledge Check</h1>
+          
+          <div class="module-meta">
+            <span class="badge badge-advanced">Advanced</span>
+            <span class="meta-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm7-3.25v2.992l2.028.812a.75.75 0 0 1-.557 1.392l-2.5-1A.751.751 0 0 1 7 8.25v-3.5a.75.75 0 0 1 1.5 0Z"></path></svg>
+              15 min
+            </span>
+            <span class="meta-item">
+              Section 5 of 7
+            </span>
+          </div>
+        </header>
+
+        <!-- Progress Bar -->
+        <div class="module-progress">
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 71.42857142857143%"></div>
+          </div>
+          <div class="progress-steps">
+            
+              
+              <a href="/advanced/module-12/overview/" 
+                 class="progress-step completed"
+                 title="Context & Overview">
+                <span class="step-dot"></span>
+                <span class="step-label">1</span>
+              </a>
+            
+              
+              <a href="/advanced/module-12/concepts/" 
+                 class="progress-step completed"
+                 title="Core Concepts">
+                <span class="step-dot"></span>
+                <span class="step-label">2</span>
+              </a>
+            
+              
+              <a href="/advanced/module-12/walkthrough/" 
+                 class="progress-step completed"
+                 title="Guided Walkthrough">
+                <span class="step-dot"></span>
+                <span class="step-label">3</span>
+              </a>
+            
+              
+              <a href="/advanced/module-12/labs/" 
+                 class="progress-step completed"
+                 title="Hands-On Labs">
+                <span class="step-dot"></span>
+                <span class="step-label">4</span>
+              </a>
+            
+              
+              <a href="/advanced/module-12/quiz/" 
+                 class="progress-step active"
+                 title="Knowledge Check">
+                <span class="step-dot"></span>
+                <span class="step-label">5</span>
+              </a>
+            
+              
+              <a href="/advanced/module-12/resources/" 
+                 class="progress-step "
+                 title="Resources">
+                <span class="step-dot"></span>
+                <span class="step-label">6</span>
+              </a>
+            
+              
+              <a href="/advanced/module-12/scenarios/" 
+                 class="progress-step "
+                 title="CSM Scenarios">
+                <span class="step-dot"></span>
+                <span class="step-label">7</span>
+              </a>
+            
+          </div>
+        </div>
+
+        <!-- Section Navigation Tabs -->
+        <nav class="section-tabs">
+          
+            
+            <a href="/advanced/module-12/overview/" 
+               class="section-tab ">
+              <span class="tab-icon">📋</span>
+              <span class="tab-title">Overview</span>
+            </a>
+          
+            
+            <a href="/advanced/module-12/concepts/" 
+               class="section-tab ">
+              <span class="tab-icon">📚</span>
+              <span class="tab-title">Concepts</span>
+            </a>
+          
+            
+            <a href="/advanced/module-12/walkthrough/" 
+               class="section-tab ">
+              <span class="tab-icon">🔄</span>
+              <span class="tab-title">Walkthrough</span>
+            </a>
+          
+            
+            <a href="/advanced/module-12/labs/" 
+               class="section-tab ">
+              <span class="tab-icon">🧪</span>
+              <span class="tab-title">Labs</span>
+            </a>
+          
+            
+            <a href="/advanced/module-12/quiz/" 
+               class="section-tab active">
+              <span class="tab-icon">✅</span>
+              <span class="tab-title">Quiz</span>
+            </a>
+          
+            
+            <a href="/advanced/module-12/resources/" 
+               class="section-tab ">
+              <span class="tab-icon">📖</span>
+              <span class="tab-title">Resources</span>
+            </a>
+          
+            
+            <a href="/advanced/module-12/scenarios/" 
+               class="section-tab ">
+              <span class="tab-icon">💼</span>
+              <span class="tab-title">Scenarios</span>
+            </a>
+          
+        </nav>
+
+        <!-- Main Content with TOC Sidebar -->
+        <div class="module-content-wrapper">
+          <main id="main-content" class="module-content">
+            <article class="section-content">
+              <h2 id="knowledge-check">Knowledge Check</h2>
+
+<p>Test your understanding of governance, compliance, and DORA metrics.</p>
+
+<hr />
+
+<h3 id="question-1">Question 1</h3>
+
+<p><strong>What are the four DORA metrics?</strong></p>
+
+<details>
+<summary>Show Answer</summary>
+
+The four DORA (DevOps Research and Assessment) metrics are:
+
+1. **Deployment Frequency** - How often code is deployed to production
+2. **Lead Time for Changes** - Time from code commit to production
+3. **Mean Time to Recovery (MTTR)** - How quickly service is restored after an incident
+4. **Change Failure Rate** - Percentage of deployments causing failures
+
+These metrics predict both organizational performance AND team well-being. Elite performers score well on all four simultaneously.
+</details>
+
+<hr />
+
+<h3 id="question-2">Question 2</h3>
+
+<p><strong>A customer says: “We deploy less frequently to reduce failures.” What does DORA research say about this approach?</strong></p>
+
+<details>
+<summary>Show Answer</summary>
+
+**DORA research proves this is wrong.** 
+
+The research shows that elite performers have BOTH:
+- Higher deployment frequency (multiple deploys per day)
+- Lower change failure rates (0-15%)
+
+This works because:
+- Small, frequent changes are easier to test and review
+- Fast feedback loops catch problems quickly
+- Automated pipelines are more reliable than manual processes
+- Teams that deploy often build robust recovery capabilities
+
+The key insight: **Speed and stability are not tradeoffs—they reinforce each other.**
+</details>
+
+<hr />
+
+<h3 id="question-3">Question 3</h3>
+
+<p><strong>What is “lead time for changes” in DORA metrics?</strong></p>
+
+<p>A) Time from feature request to deployment<br />
+B) Time from code commit to production deployment<br />
+C) Time from PR creation to merge<br />
+D) Time from deployment to customer feedback</p>
+
+<details>
+<summary>Show Answer</summary>
+
+**B) Time from code commit to production deployment**
+
+Lead time measures the efficiency of your delivery pipeline—from when a developer commits code until it's running in production.
+
+Benchmarks:
+- **Elite**: Less than one hour
+- **High**: Less than one week
+- **Medium**: One to six months
+- **Low**: More than six months
+
+Note: Some organizations measure from PR creation to merge, which captures part of the lead time but misses the deployment phase.
+</details>
+
+<hr />
+
+<h3 id="question-4">Question 4</h3>
+
+<p><strong>What is the difference between Enterprise policies and Organization rulesets?</strong></p>
+
+<details>
+<summary>Show Answer</summary>
+
+| Aspect | Enterprise Policies | Organization Rulesets |
+|--------|--------------------|-----------------------|
+| **Scope** | All organizations in enterprise | Single organization |
+| **Override** | Cannot be overridden | Can be customized within limits |
+| **Purpose** | Security baseline, hard requirements | Flexible branch protection |
+| **Examples** | 2FA requirement, Actions restrictions | PR review requirements, status checks |
+
+**Enterprise policies** set the floor—minimum requirements across all organizations.
+
+**Organization rulesets** allow customization within those limits, such as requiring more reviewers for specific branches.
+</details>
+
+<hr />
+
+<h3 id="question-5">Question 5</h3>
+
+<p><strong>What is “Goodhart’s Law” and why is it relevant to engineering metrics?</strong></p>
+
+<details>
+<summary>Show Answer</summary>
+
+**Goodhart's Law**: "When a measure becomes a target, it ceases to be a good measure."
+
+**Relevance to engineering**:
+
+If you measure and reward:
+- **Lines of code** → Developers write verbose, redundant code
+- **Commits per day** → Small, meaningless commits
+- **PR merge time** → Quick approvals without real review
+- **Story points** → Point inflation
+
+**Mitigation strategies**:
+1. Use multiple metrics in combination
+2. Focus on trends, not absolute numbers
+3. Measure outcomes, not outputs
+4. Involve teams in metric selection
+5. Keep some metrics private to teams
+6. Review and adjust metrics regularly
+</details>
+
+<hr />
+
+<h3 id="question-6">Question 6</h3>
+
+<p><strong>A customer needs to demonstrate compliance for a SOC 2 audit. What GitHub features help?</strong></p>
+
+<details>
+<summary>Show Answer</summary>
+
+**Key GitHub features for SOC 2 compliance:**
+
+| SOC 2 Requirement | GitHub Feature |
+|-------------------|----------------|
+| Access Controls | 2FA, SSO/SAML, Team-based permissions |
+| Change Management | Branch protection, required reviews |
+| Audit Trail | Audit log, audit log streaming |
+| Segregation of Duties | CODEOWNERS, required reviewers |
+| Monitoring | Security alerts, Dependabot |
+
+**Documentation artifacts**:
+- Audit log exports showing all administrative actions
+- Branch protection configuration evidence
+- Security scanning reports
+- Access review documentation from SSO integration
+</details>
+
+<hr />
+
+<h3 id="question-7">Question 7</h3>
+
+<p><strong>What is “drift” in the context of GitHub governance?</strong></p>
+
+<details>
+<summary>Show Answer</summary>
+
+**Drift** occurs when the actual configuration differs from the intended/documented configuration.
+
+**Examples in GitHub**:
+- Branch protection disabled manually via UI
+- Repository made public unexpectedly
+- Team permissions changed outside normal process
+- Security features disabled
+
+**Detecting drift**:
+- Scheduled compliance checks comparing API state to baseline
+- Audit log monitoring for unexpected changes
+- Infrastructure as Code with drift detection (Terraform)
+
+**Preventing drift**:
+- Enterprise policies (can't be overridden)
+- Automated remediation workflows
+- Alert on audit log events
+</details>
+
+<hr />
+
+<h3 id="question-8">Question 8</h3>
+
+<p><strong>What’s the difference between “vanity metrics” and DORA metrics?</strong></p>
+
+<details>
+<summary>Show Answer</summary>
+
+| Vanity Metrics ❌ | DORA Metrics ✅ |
+|------------------|-----------------|
+| Lines of code | Deployment Frequency |
+| Commits per developer | Lead Time for Changes |
+| Story points velocity | Mean Time to Recovery |
+| Hours worked | Change Failure Rate |
+| PRs created | - |
+
+**Why vanity metrics fail**:
+- Easy to game
+- Don't correlate with outcomes
+- Can encourage harmful behavior
+- Measure activity, not value
+
+**Why DORA metrics work**:
+- Research-validated correlation with performance
+- Measure outcomes that matter
+- Balance speed with stability
+- Harder to game (improving one helps others)
+</details>
+
+<hr />
+
+<h3 id="question-9">Question 9</h3>
+
+<p><strong>An organization wants to implement self-service repository creation while maintaining governance. What’s the recommended approach?</strong></p>
+
+<details>
+<summary>Show Answer</summary>
+
+**Recommended self-service pattern:**
+
+```
+Developer Request → Automated Validation → Provisioning
+                         ↓
+              Governance Guardrails Enforced
+
+```
+
+**Implementation**:
+1. **Template-based creation**: Repos created from approved templates with settings pre-configured
+2. **PR-based requests**: Developers submit YAML files, automation provisions
+3. **Rulesets**: Organization rulesets automatically apply to new repos
+4. **Naming conventions**: Validation ensures consistent naming
+5. **Team assignment**: Required field ensures ownership
+
+**Guardrails**:
+- Branch protection applied automatically
+- Security scanning enabled by default
+- Default branch named consistently
+- Topics/metadata required
+- Visibility restricted to private/internal
+</details>
+
+<hr />
+
+<h3 id="question-10">Question 10</h3>
+
+<p><strong>Match the compliance framework to its primary GitHub relevance:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Framework</th>
+      <th>Primary Concern</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SOC 2</td>
+      <td>?</td>
+    </tr>
+    <tr>
+      <td>HIPAA</td>
+      <td>?</td>
+    </tr>
+    <tr>
+      <td>PCI-DSS</td>
+      <td>?</td>
+    </tr>
+    <tr>
+      <td>GDPR</td>
+      <td>?</td>
+    </tr>
+  </tbody>
+</table>
+
+<details>
+<summary>Show Answer</summary>
+
+| Framework | Primary Concern |
+|-----------|-----------------|
+| **SOC 2** | Security controls, audit logging, change management |
+| **HIPAA** | Protected Health Information (PHI), access auditing |
+| **PCI-DSS** | Cardholder data protection, code review requirements |
+| **GDPR** | Personal data handling, right to deletion |
+
+**GitHub relevance by framework**:
+- **SOC 2**: Most comprehensive—audit logs, access controls, branch protection
+- **HIPAA**: Access logging, encryption, breach notification
+- **PCI-DSS**: Required code reviews, access restrictions
+- **GDPR**: Data residency (GitHub Server), deletion capabilities
+</details>
+
+<hr />
+
+<h2 id="score-yourself">Score Yourself</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Score</th>
+      <th>Assessment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>9-10</td>
+      <td>Excellent! Ready for governance and metrics discussions</td>
+    </tr>
+    <tr>
+      <td>7-8</td>
+      <td>Good foundation, review weak areas</td>
+    </tr>
+    <tr>
+      <td>5-6</td>
+      <td>Revisit Core Concepts before customer conversations</td>
+    </tr>
+    <tr>
+      <td>&lt;5</td>
+      <td>Complete the module again before proceeding</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<p><strong>Next:</strong> Explore additional Resources for deeper learning.</p>
+
+            </article>
+          </main>
+          
+          <!-- Table of Contents Sidebar -->
+          
+          <aside class="section-toc">
+            <h4>On This Page</h4>
+            <nav class="toc-nav">
+              <ul id="toc" class="toc-list">
+<li class="toc-item toc-h2"><a href="#knowledge-check">Knowledge Check</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#question-1">Question 1</a></li>
+<li class="toc-item toc-h3"><a href="#question-2">Question 2</a></li>
+<li class="toc-item toc-h3"><a href="#question-3">Question 3</a></li>
+<li class="toc-item toc-h3"><a href="#question-4">Question 4</a></li>
+<li class="toc-item toc-h3"><a href="#question-5">Question 5</a></li>
+<li class="toc-item toc-h3"><a href="#question-6">Question 6</a></li>
+<li class="toc-item toc-h3"><a href="#question-7">Question 7</a></li>
+<li class="toc-item toc-h3"><a href="#question-8">Question 8</a></li>
+<li class="toc-item toc-h3"><a href="#question-9">Question 9</a></li>
+<li class="toc-item toc-h3"><a href="#question-10">Question 10</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#score-yourself">Score Yourself</a></li>
+</ul>
+            </nav>
+          </aside>
+          
+        </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="module-nav">
+          
+            <a href="/advanced/module-12/labs/" class="nav-button nav-prev">
+              <span class="nav-direction">← Previous</span>
+              <span class="nav-title">Hands-On Labs</span>
+            </a>
+          
+
+          <div class="nav-center">
+            <a href="/advanced/module-12/" class="nav-index">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.75A.75.75 0 0 1 2.75 2h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 2.75Zm0 5A.75.75 0 0 1 2.75 7h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 7.75ZM2.75 12h10.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5Z"></path></svg>
+              Module Overview
+            </a>
+          </div>
+
+          
+            <a href="/advanced/module-12/resources/" class="nav-button nav-next">
+              <span class="nav-direction">Next →</span>
+              <span class="nav-title">Resources</span>
+            </a>
+          
+        </nav>
+      </div>
+
+      </main>
+    </div>
+
+    <footer class="training-footer">
+  <div class="container">
+    <div class="training-footer-content">
+      <div class="footer-info">
+        <p class="footer-text">GitHub Training Program v1.0 | Last updated: December 2025</p>
+        <p class="footer-links">
+          <a href="https://docs.github.com" target="_blank" rel="noopener">GitHub Docs</a> • 
+          <a href="https://github.community" target="_blank" rel="noopener">Community</a> • 
+          <a href="/syllabus/">Full Syllabus</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- Smooth scroll behavior -->
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const href = this.getAttribute('href');
+          if (href !== '#') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+        });
+      });
+
+      // Add copy button to code blocks
+      document.querySelectorAll('pre').forEach(pre => {
+        // Create wrapper div
+        const wrapper = document.createElement('div');
+        wrapper.className = 'code-block-wrapper';
+        pre.parentNode.insertBefore(wrapper, pre);
+        wrapper.appendChild(pre);
+
+        // Create copy button
+        const button = document.createElement('button');
+        button.className = 'copy-button';
+        button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+        button.title = 'Copy to clipboard';
+        wrapper.appendChild(button);
+
+        // Copy functionality
+        button.addEventListener('click', async () => {
+          const code = pre.querySelector('code') ? pre.querySelector('code').textContent : pre.textContent;
+          try {
+            await navigator.clipboard.writeText(code);
+            button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+            button.classList.add('copied');
+            setTimeout(() => {
+              button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+              button.classList.remove('copied');
+            }, 2000);
+          } catch (err) {
+            console.error('Failed to copy:', err);
+          }
+        });
+      });
+    </script>
+
+    <!-- Mermaid.js for diagrams with pan/zoom -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+    <script>
+      // Initialize Mermaid with theme matching the training modules
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: 'base',
+        themeVariables: {
+          // Primary colors - matching GitHub/training theme
+          primaryColor: '#ddf4ff',
+          primaryTextColor: '#1f2328',
+          primaryBorderColor: '#0969da',
+          
+          // Secondary and tertiary colors
+          secondaryColor: '#f6f8fa',
+          secondaryTextColor: '#1f2328',
+          secondaryBorderColor: '#d0d7de',
+          tertiaryColor: '#fff8c5',
+          tertiaryTextColor: '#1f2328',
+          tertiaryBorderColor: '#d4a72c',
+          
+          // Background colors
+          background: '#ffffff',
+          mainBkg: '#ddf4ff',
+          secondBkg: '#f6f8fa',
+          
+          // Lines and borders
+          lineColor: '#57606a',
+          border1: '#d0d7de',
+          border2: '#0969da',
+          arrowheadColor: '#57606a',
+          
+          // Text styling
+          fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif',
+          fontSize: '14px',
+          labelBackground: '#ffffff',
+          nodeTextColor: '#1f2328',
+          
+          // Subgraph styling
+          clusterBkg: '#f6f8fa',
+          clusterBorder: '#d0d7de',
+          
+          // Note styling
+          noteBkgColor: '#fff8c5',
+          noteTextColor: '#1f2328',
+          noteBorderColor: '#d4a72c'
+        },
+        flowchart: {
+          useMaxWidth: true,
+          htmlLabels: true,
+          curve: 'basis',
+          padding: 30,
+          nodeSpacing: 50,
+          rankSpacing: 70,
+          subGraphTitleMargin: {
+            top: 10,
+            bottom: 20
+          }
+        },
+        securityLevel: 'loose'
+      });
+
+      // Add pan/zoom to Mermaid diagrams after they render
+      mermaid.run().then(() => {
+        document.querySelectorAll('.mermaid-container svg').forEach((svg, index) => {
+          // Ensure SVG has an ID for pan-zoom
+          if (!svg.id) {
+            svg.id = 'mermaid-svg-' + index;
+          }
+          
+          // Set minimum dimensions on SVG for better visibility
+          svg.style.minWidth = '100%';
+          svg.style.minHeight = '300px';
+          
+          // Initialize pan-zoom
+          const panZoom = svgPanZoom(svg, {
+            zoomEnabled: true,
+            controlIconsEnabled: true,
+            fit: true,
+            center: true,
+            minZoom: 0.3,
+            maxZoom: 10,
+            zoomScaleSensitivity: 0.3,
+            dblClickZoomEnabled: true,
+            mouseWheelZoomEnabled: true,
+            preventMouseEventsDefault: true,
+            contain: false
+          });
+
+          // Handle window resize
+          window.addEventListener('resize', () => {
+            panZoom.resize();
+            panZoom.fit();
+            panZoom.center();
+          });
+        });
+      });
+    </script>
+
+  </body>
+</html>

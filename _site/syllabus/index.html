@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      CSM/CSA Training Syllabus &middot; GitHub Training
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="preload" href="/public/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/public/css/main.css"></noscript>
+
+  <!-- GLightbox CSS for Image Modals -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+</head>
+
+
+  <body class="training-layout">
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="training-header">
+  <div class="container">
+    <div class="training-header-inner">
+      <div class="training-brand">
+        <a href="/" class="training-logo">
+          <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" class="octicon">
+            <path fill="currentColor" d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
+          </svg>
+          <span class="training-title">GitHub Training</span>
+        </a>
+        <span class="training-tagline">CSM & CSA Certification Program</span>
+      </div>
+      
+      <nav class="training-nav" aria-label="Training navigation">
+        <a href="/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8.156 1.835a.25.25 0 00-.312 0l-5.25 4.2a.25.25 0 00-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 01.75-.75h3.5a.75.75 0 01.75.75v5.25h2.75a.25.25 0 00.25-.25V6.23a.25.25 0 00-.094-.195z"></path>
+          </svg>
+          Home
+        </a>
+        <a href="/beginner/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0114.25 16H1.75A1.75 1.75 0 010 14.25V1.75zm1.75-.25a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V1.75a.25.25 0 00-.25-.25H1.75zM3.5 6.25a.75.75 0 01.75-.75h7a.75.75 0 010 1.5h-7a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h4a.75.75 0 000-1.5h-4z"></path>
+          </svg>
+          Beginner
+        </a>
+        <a href="/intermediate/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+            <path fill="currentColor" d="M8 0a8 8 0 110 16A8 8 0 018 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"></path>
+          </svg>
+          Intermediate
+        </a>
+        <a href="/advanced/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"></path>
+          </svg>
+          Advanced
+        </a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+    <!-- Main content area with sidebar -->
+    <div class="training-container">
+      
+      <!-- Sidebar navigation -->
+      <aside class="training-sidebar">
+        <div class="training-sidebar-sticky">
+          
+          
+          
+          
+          
+          
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">Resources</h3>
+            <nav class="sidebar-nav">
+              <a href="/syllabus/" class="sidebar-link">Full Syllabus</a>
+              <a href="https://docs.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Docs
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+              <a href="https://skills.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Skills
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+              <a href="https://github.com/orgs/community/discussions" class="sidebar-link" target="_blank" rel="noopener">
+                Community
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+            </nav>
+          </div>
+
+          <!-- Progress indicator -->
+          
+        </div>
+      </aside>
+
+      <!-- Main content -->
+      <main class="training-main" id="main-content">
+        <div class="training-content">
+          <h1 id="github-csmcsa-training-syllabus">GitHub CSM/CSA Training Syllabus</h1>
+
+<p><strong>Comprehensive Training Program for Customer Success Managers &amp; Customer Success Architects</strong></p>
+
+<p><em>Last Updated: December 9, 2025</em></p>
+
+<hr />
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ol>
+  <li><a href="#program-overview">Program Overview</a></li>
+  <li><a href="#phase-1-foundation---planning--collaboration-weeks-1-3">Phase 1: Foundation - Planning &amp; Collaboration (Weeks 1-3)</a></li>
+  <li><a href="#phase-2-development---code--version-control-weeks-4-5">Phase 2: Development - Code &amp; Version Control (Weeks 4-5)</a></li>
+  <li><a href="#phase-3-quality---testing--security-weeks-6-7">Phase 3: Quality - Testing &amp; Security (Weeks 6-7)</a></li>
+  <li><a href="#phase-4-delivery---cicd--deployment-weeks-8-9">Phase 4: Delivery - CI/CD &amp; Deployment (Weeks 8-9)</a></li>
+  <li><a href="#phase-5-operations---monitoring--maintenance-week-10">Phase 5: Operations - Monitoring &amp; Maintenance (Week 10)</a></li>
+  <li><a href="#phase-6-enterprise---administration--governance-weeks-11-12">Phase 6: Enterprise - Administration &amp; Governance (Weeks 11-12)</a></li>
+  <li><a href="#ongoing-professional-development">Ongoing Professional Development</a></li>
+  <li><a href="#assessment--certification">Assessment &amp; Certification</a></li>
+</ol>
+
+<hr />
+
+<h2 id="program-overview">Program Overview</h2>
+
+<p>This 12-week progressive training program is designed specifically for <strong>experienced Customer Success Managers</strong> transitioning into GitHub CSM/CSA roles. The curriculum assumes strong customer-facing skills but no prior software development or GitHub experience.</p>
+
+<p><strong>Target Audience:</strong>
+- Experienced CSMs new to GitHub
+- CSAs transitioning from other platforms
+- Technical account managers entering DevOps space
+- Customer success professionals upskilling for developer tools</p>
+
+<p><strong>Learning Philosophy:</strong>
+The syllabus follows the <strong>natural software development workflow</strong>, introducing concepts as developers encounter them:
+1. Understanding the problem space (planning &amp; requirements)
+2. Writing and organizing code (development &amp; collaboration)
+3. Quality assurance (testing &amp; security)
+4. Delivery (CI/CD &amp; deployment)
+5. Operations (monitoring &amp; maintenance)
+6. Enterprise governance (administration &amp; compliance)</p>
+
+<p><strong>Learning Objectives:</strong>
+- Understand software development workflows and SDLC phases
+- Master GitHub’s role in each development stage
+- Navigate GitHub platform with confidence
+- Guide customers through GitHub adoption journeys
+- Implement security, compliance, and governance best practices
+- Measure and improve DevOps performance with DORA metrics
+- Communicate technical concepts to diverse audiences</p>
+
+<p><strong>Time Commitment:</strong> 15-20 hours per week (includes hands-on labs, reading, and practice)</p>
+
+<hr />
+
+<h2 id="phase-1-foundation---planning--collaboration-weeks-1-3">Phase 1: Foundation - Planning &amp; Collaboration (Weeks 1-3)</h2>
+
+<p><em>“Before writing code, teams plan, communicate, and organize their work.”</em></p>
+
+<h3 id="week-1-understanding-software-development--github-basics">Week 1: Understanding Software Development &amp; GitHub Basics</h3>
+
+<p><strong>Context:</strong> Before diving into technical features, understand the problem space - how do software teams work, and what role does GitHub play?</p>
+
+<p><strong>Objectives:</strong>
+- Understand SDLC methodologies and DevOps culture
+- Learn GitHub’s role in modern software development
+- Navigate GitHub platform confidently
+- Understand GitHub Well-Architected Framework
+- Grasp the planning phase of SDLC</p>
+
+<p><strong>Training Materials:</strong></p>
+
+<ol>
+  <li><strong>Software Development Fundamentals</strong> (3-4 hours)
+    <ul>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/introduction-to-devops/">Introduction to DevOps</a></li>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/choose-an-agile-approach/">Choose an Agile approach to software development</a></li>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/characterize-devops-continuum/">Characterize the DevOps continuum</a></li>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/assess-your-development-process/">Assess your development process</a></li>
+    </ul>
+  </li>
+  <li><strong>GitHub Platform Introduction</strong> (2-3 hours)
+    <ul>
+      <li>GitHub Skills: <a href="https://github.com/skills/introduction-to-github">Introduction to GitHub</a></li>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/introduction-to-github/">Introduction to GitHub</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/get-started">Get Started</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/get-started/start-your-journey/hello-world">Hello World</a></li>
+    </ul>
+  </li>
+  <li><strong>GitHub Well-Architected Framework</strong> (2-3 hours)
+    <ul>
+      <li>GitHub Resources: <a href="https://github.com/resources/articles/enterprise/well-architected-framework">Well-Architected Framework Overview</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/best-practices-for-organizations">Best practices for organizations</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/best-practices-for-securing-your-organization">Best practices for securing your organization</a></li>
+      <li>External: <a href="https://learn.microsoft.com/en-us/azure/well-architected/">Azure Well-Architected Framework</a></li>
+    </ul>
+  </li>
+  <li><strong>Basic Markdown &amp; Documentation</strong> (2 hours)
+    <ul>
+      <li>GitHub Skills: <a href="https://github.com/skills/communicate-using-markdown">Communicate using Markdown</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">Basic writing and formatting syntax</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes">About READMEs</a></li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Lab Exercise:</strong>
+- Create a GitHub account and profile
+- Create a personal repository with comprehensive README
+- Write your first issue describing a “feature request”
+- Understand the relationship between SDLC phases and GitHub features
+- Map a simple development workflow to GitHub capabilities</p>
+
+<hr />
+
+<h3 id="week-2-planning--requirements-management">Week 2: Planning &amp; Requirements Management</h3>
+
+<p><strong>Context:</strong> How do teams capture requirements, track work, and manage projects in GitHub?</p>
+
+<p><strong>Objectives:</strong>
+- Master Issues for requirements and bug tracking
+- Use GitHub Projects for work management
+- Understand milestones and roadmaps
+- Create issue and PR templates
+- Learn GitHub Discussions for Q&amp;A and ideation</p>
+
+<p><strong>Training Materials:</strong></p>
+
+<ol>
+  <li><strong>Issues &amp; Requirements Tracking</strong> (3 hours)
+    <ul>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues">About issues</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue">Creating an issue</a></li>
+      <li>GitHub Skills: <a href="https://github.com/skills/connect-the-dots">Connect the dots</a></li>
+    </ul>
+  </li>
+  <li><strong>Issue &amp; Pull Request Templates</strong> (2 hours)
+    <ul>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/about-issue-and-pull-request-templates">About issue and pull request templates</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository">Configuring issue templates</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository">Creating a pull request template</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue#creating-an-issue-from-a-url-query">Using query parameters to create issues</a></li>
+    </ul>
+  </li>
+  <li><strong>GitHub Projects</strong> (2-3 hours)
+    <ul>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/manage-work-github-projects/">Manage work with GitHub Projects</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects">About Projects</a></li>
+    </ul>
+  </li>
+  <li><strong>GitHub Discussions &amp; Community</strong> (2 hours)
+    <ul>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/discussions/collaborating-with-your-community-using-discussions/about-discussions">About discussions</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/discussions/guides/best-practices-for-community-conversations-on-github">Best practices for community discussions</a></li>
+    </ul>
+  </li>
+  <li><strong>Architecture &amp; Design Documentation</strong> (2-3 hours)
+    <ul>
+      <li>GitHub Blog: <a href="https://github.blog/2020-08-13-why-write-adrs/">Why write ADRs</a></li>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/azure/architecture/guide/design-principles/self-documenting">Document your architecture decisions</a></li>
+      <li>External: <a href="https://adr.github.io/">Architecture Decision Records</a></li>
+      <li>External: <a href="https://adr.github.io/madr/">Markdown Architectural Decision Records</a></li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Lab Exercise:</strong>
+- Create a project board with custom fields and automation
+- Create multiple issues with labels, assignees, and milestones
+- Build issue and PR templates for a sample project
+- Enable and use Discussions for team Q&amp;A
+- Write an Architecture Decision Record (ADR)
+- Create a project roadmap with phases</p>
+
+<hr />
+
+<h3 id="week-3-collaboration--code-review">Week 3: Collaboration &amp; Code Review</h3>
+
+<p><strong>Context:</strong> How do teams communicate, review work, and collaborate on GitHub?</p>
+
+<p><strong>Objectives:</strong>
+- Master pull request workflows
+- Learn code review best practices
+- Understand team collaboration patterns
+- Use GitHub tools (CLI, Desktop, Mobile)
+- Learn GitHub Pages, Wikis, and Gists</p>
+
+<p><strong>Training Materials:</strong></p>
+
+<ol>
+  <li><strong>Pull Requests &amp; Code Review</strong> (3 hours)
+    <ul>
+      <li>GitHub Skills: <a href="https://github.com/skills/review-pull-requests">Review pull requests</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">About pull requests</a></li>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/collaborate-with-pull-requests-in-github/">Collaborate with pull requests</a></li>
+    </ul>
+  </li>
+  <li><strong>Communication on GitHub</strong> (2 hours)
+    <ul>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/get-started/using-github/communicating-on-github">Communicating on GitHub</a></li>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/communicate-using-markdown/">Communicate effectively on GitHub using Markdown</a></li>
+    </ul>
+  </li>
+  <li><strong>GitHub CLI</strong> (2 hours)
+    <ul>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/github-cli/github-cli/about-github-cli">About GitHub CLI</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/github-cli/github-cli/quickstart">GitHub CLI quickstart</a></li>
+      <li>GitHub CLI Manual: <a href="https://cli.github.com/manual/">Installation and commands</a></li>
+    </ul>
+  </li>
+  <li><strong>GitHub Desktop &amp; Mobile</strong> (1-2 hours)
+    <ul>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop">Getting started with GitHub Desktop</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/get-started/using-github/github-mobile">GitHub Mobile</a></li>
+    </ul>
+  </li>
+  <li><strong>GitHub Pages, Wikis &amp; Gists</strong> (2-3 hours)
+    <ul>
+      <li>GitHub Skills: <a href="https://github.com/skills/github-pages">GitHub Pages</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/communities/documenting-your-project-with-wikis/about-wikis">About wikis</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages">About GitHub Pages</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/get-started/writing-on-github/editing-and-sharing-content-with-gists/creating-gists">Creating gists</a></li>
+    </ul>
+  </li>
+  <li><strong>Community Health Files</strong> (2 hours)
+    <ul>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors">Setting guidelines for repository contributors</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-code-of-conduct-to-your-project">Adding a code of conduct</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-support-resources-to-your-project">Adding support resources</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file">Creating a default community health file</a></li>
+    </ul>
+  </li>
+  <li><strong>Notifications Management</strong> (1-2 hours)
+    <ul>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/about-notifications">About notifications</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications">Configuring notifications</a></li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Lab Exercise:</strong>
+- Conduct code reviews on sample pull requests with suggestions
+- Create and share a gist
+- Deploy a documentation site with GitHub Pages
+- Create a wiki for a project
+- Install and use GitHub CLI for common tasks
+- Set up custom notification preferences
+- Create CONTRIBUTING.md and CODE_OF_CONDUCT.md files</p>
+
+<hr />
+
+<h2 id="phase-2-development---code--version-control-weeks-4-5">Phase 2: Development - Code &amp; Version Control (Weeks 4-5)</h2>
+
+<p><em>“Developers write code using version control to track changes and collaborate.”</em></p>
+
+<h3 id="week-4-git-fundamentals--version-control">Week 4: Git Fundamentals &amp; Version Control</h3>
+
+<p><strong>Context:</strong> Now that you understand planning and collaboration, learn how developers actually manage their code.</p>
+
+<p><strong>Objectives:</strong>
+- Master Git version control fundamentals
+- Understand branching and merging strategies
+- Handle merge conflicts
+- Learn repository best practices
+- Work with forks</p>
+
+<p><strong>Training Materials:</strong></p>
+
+<ol>
+  <li><strong>Getting Started with Git</strong> (3-4 hours)
+    <ul>
+      <li>GitHub Docs: <a href="https://docs.github.com/en-us/get-started/git-basics/set-up-git">Set up Git</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/get-started/using-git/about-git">About Git</a></li>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/intro-to-git/">Introduction to version control with Git</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/get-started/git-basics/git-cheatsheet">Git cheatsheet</a></li>
+    </ul>
+  </li>
+  <li><strong>Git Workflows</strong> (2-3 hours)
+    <ul>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/get-started/git-basics/git-workflows">Git workflows</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/get-started/using-github/github-flow">GitHub flow</a></li>
+    </ul>
+  </li>
+  <li><strong>Resolving Merge Conflicts</strong> (2 hours)
+    <ul>
+      <li>GitHub Skills: <a href="https://github.com/skills/resolve-merge-conflicts">Resolve merge conflicts</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/about-merge-conflicts">About merge conflicts</a></li>
+    </ul>
+  </li>
+  <li><strong>Working with Forks</strong> (2-3 hours)
+    <ul>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks">About forks</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo">Fork a repository</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork">Syncing a fork</a></li>
+    </ul>
+  </li>
+  <li><strong>Repository Templates &amp; Git LFS</strong> (2 hours)
+    <ul>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository">Creating a template repository</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage">About Git Large File Storage</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/repositories/working-with-files/managing-large-files/configuring-git-large-file-storage">Configuring Git LFS</a></li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Lab Exercise:</strong>
+- Clone repositories and work with remotes
+- Create feature branches and merge them
+- Resolve intentional merge conflicts
+- Practice rebasing vs merging
+- Fork a repository, make changes, and create a PR from the fork
+- Create a repository template for standardization
+- Set up Git LFS for a project with large files</p>
+
+<hr />
+
+<h3 id="week-5-repository-management--code-quality">Week 5: Repository Management &amp; Code Quality</h3>
+
+<p><strong>Context:</strong> How do teams maintain code quality, protect important branches, and ensure the right people review changes?</p>
+
+<p><strong>Objectives:</strong>
+- Configure branch protection rules
+- Set up CODEOWNERS
+- Implement repository rulesets
+- Use commit signing for verification
+- Understand release management</p>
+
+<p><strong>Training Materials:</strong></p>
+
+<ol>
+  <li><strong>Branch Protection &amp; CODEOWNERS</strong> (3 hours)
+    <ul>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches">About protected branches</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule">Managing a branch protection rule</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners">About code owners</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets">About rulesets</a></li>
+    </ul>
+  </li>
+  <li><strong>Commit Signing</strong> (2-3 hours)
+    <ul>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/authentication/managing-commit-signature-verification/about-commit-signature-verification">About commit signature verification</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits">Signing commits</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key">Telling Git about your signing key</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/organizations/managing-organization-settings/managing-the-commit-signoff-policy-for-your-organization">Managing commit signature verification policies</a></li>
+    </ul>
+  </li>
+  <li><strong>Release Management</strong> (2-3 hours)
+    <ul>
+      <li>GitHub Skills: <a href="https://github.com/skills/release-based-workflow">Release-based workflow</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases">About releases</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository">Managing releases in a repository</a></li>
+    </ul>
+  </li>
+  <li><strong>Repository Migration</strong> (2 hours)
+    <ul>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/migrations/importing-source-code/using-github-importer/importing-a-repository-with-github-importer">Importing a repository with GitHub Importer</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/migrations/importing-source-code">Migrating from other version control systems</a></li>
+    </ul>
+  </li>
+  <li><strong>Introduction to Continuous Integration</strong> (2 hours)
+    <ul>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/explore-continuous-integration/">Explore continuous integration</a></li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Lab Exercise:</strong>
+- Configure branch protection rules with required reviewers
+- Create a CODEOWNERS file for automatic reviewer assignment
+- Set up GPG or SSH commit signing
+- Create a release with release notes and assets
+- Practice repository migration from another VCS
+- Map customer’s current workflow to GitHub features</p>
+
+<hr />
+
+<h2 id="phase-3-quality---testing--security-weeks-6-7">Phase 3: Quality - Testing &amp; Security (Weeks 6-7)</h2>
+
+<p><em>“Before deploying code, teams test it and scan for vulnerabilities.”</em></p>
+
+<h3 id="week-6-automated-testing-with-github-actions">Week 6: Automated Testing with GitHub Actions</h3>
+
+<p><strong>Context:</strong> Code must be tested before release. Learn how GitHub Actions automates testing with every code change.</p>
+
+<p><strong>Objectives:</strong>
+- Understand GitHub Actions architecture
+- Create CI workflows for automated testing
+- Use Actions from the marketplace
+- Implement workflow best practices
+- Understand Actions security</p>
+
+<p><strong>Training Materials:</strong></p>
+
+<ol>
+  <li><strong>Hello GitHub Actions</strong> (3 hours)
+    <ul>
+      <li>GitHub Skills: <a href="https://github.com/skills/hello-github-actions">Hello GitHub Actions</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/actions/about-github-actions/understanding-github-actions">Understanding GitHub Actions</a></li>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/github-actions-automate-tasks/">Automate development tasks by using GitHub Actions</a></li>
+    </ul>
+  </li>
+  <li><strong>Test with Actions</strong> (3-4 hours)
+    <ul>
+      <li>GitHub Skills: <a href="https://github.com/skills/test-with-actions">Test with Actions</a></li>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/github-actions-ci/">Build continuous integration workflows</a></li>
+    </ul>
+  </li>
+  <li><strong>Workflow Syntax</strong> (2 hours)
+    <ul>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions">Workflow syntax for GitHub Actions</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows">Events that trigger workflows</a></li>
+    </ul>
+  </li>
+  <li><strong>Actions Marketplace</strong> (1 hour)
+    <ul>
+      <li>GitHub Marketplace: <a href="https://github.com/marketplace?type=actions">Actions</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/finding-and-customizing-actions">Finding and customizing actions</a></li>
+    </ul>
+  </li>
+  <li><strong>Secrets &amp; Environment Variables</strong> (3 hours)
+    <ul>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions">Using secrets in GitHub Actions</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/store-information-in-variables">Variables</a></li>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/manage-end-end-deployment-scenarios-using-bicep-github-actions/">Manage secrets in GitHub Actions</a></li>
+    </ul>
+  </li>
+  <li><strong>Actions Security Best Practices</strong> (2-3 hours)
+    <ul>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/actions/security-for-github-actions/security-guides/security-hardening-for-github-actions">Security hardening for GitHub Actions</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/actions/security-for-github-actions/security-guides/automatic-token-authentication">Automatic token authentication</a></li>
+    </ul>
+  </li>
+  <li><strong>Actions Caching &amp; Artifacts</strong> (2 hours)
+    <ul>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/caching-dependencies-to-speed-up-workflows">Caching dependencies to speed up workflows</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/storing-workflow-data-as-artifacts">Storing workflow data as artifacts</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/passing-information-between-jobs">Sharing data between jobs</a></li>
+    </ul>
+  </li>
+  <li><strong>Self-Hosted Runners</strong> (2 hours)
+    <ul>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/about-self-hosted-runners">About self-hosted runners</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/adding-self-hosted-runners">Adding self-hosted runners</a></li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Lab Exercise:</strong>
+- Create a CI workflow for a sample application
+- Implement automated testing for multiple languages
+- Use Actions from the marketplace
+- Configure repository and environment secrets
+- Implement caching for dependencies (npm, pip, maven)
+- Create workflows that share artifacts between jobs
+- Set up a self-hosted runner (optional)</p>
+
+<hr />
+
+<h3 id="week-7-security--vulnerability-management">Week 7: Security &amp; Vulnerability Management</h3>
+
+<p><strong>Context:</strong> Security must be built into every stage. Learn GitHub’s security features for vulnerability detection and remediation.</p>
+
+<p><strong>Objectives:</strong>
+- Understand GitHub Advanced Security (GHAS)
+- Configure Dependabot for dependency management
+- Implement secret scanning
+- Use CodeQL for code analysis
+- Apply security best practices</p>
+
+<p><strong>Training Materials:</strong></p>
+
+<ol>
+  <li><strong>GitHub Advanced Security Overview</strong> (3 hours)
+    <ul>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/introduction-github-advanced-security/">Introduction to GitHub Advanced Security</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/get-started/learning-about-github/about-github-advanced-security">About GitHub Advanced Security</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/code-security">Code security documentation</a></li>
+    </ul>
+  </li>
+  <li><strong>Dependency Management &amp; Dependabot</strong> (3-4 hours)
+    <ul>
+      <li>GitHub Skills: <a href="https://github.com/skills/secure-repository-supply-chain">Secure your repository supply chain</a></li>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/manage-security-vulnerabilities-github/">Manage security vulnerabilities in GitHub</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/code-security/dependabot/dependabot-alerts/about-dependabot-alerts">About Dependabot</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-the-dependency-graph">About dependency graph</a></li>
+    </ul>
+  </li>
+  <li><strong>Secret Scanning</strong> (2 hours)
+    <ul>
+      <li>GitHub Skills: <a href="https://github.com/skills/introduction-to-secret-scanning">Introduction to secret scanning</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/code-security/secret-scanning/introduction/about-secret-scanning">About secret scanning</a></li>
+    </ul>
+  </li>
+  <li><strong>Code Scanning with CodeQL</strong> (3 hours)
+    <ul>
+      <li>GitHub Skills: <a href="https://github.com/skills/introduction-to-codeql">Introduction to CodeQL</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/code-security/code-scanning/introduction-to-code-scanning/about-code-scanning-with-codeql">About code scanning with CodeQL</a></li>
+    </ul>
+  </li>
+  <li><strong>Security Policies</strong> (2 hours)
+    <ul>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/code-security/getting-started/adding-a-security-policy-to-your-repository">Adding a security policy to your repository</a></li>
+      <li>GitHub Skills: <a href="https://github.com/skills/secure-code-game">Secure code game</a></li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Lab Exercise:</strong>
+- Enable and configure Dependabot alerts and updates
+- Set up secret scanning for a repository
+- Create a CodeQL workflow
+- Triage and resolve security alerts
+- Create a SECURITY.md policy
+- Review dependency insights</p>
+
+<hr />
+
+<h2 id="phase-4-delivery---cicd--deployment-weeks-8-9">Phase 4: Delivery - CI/CD &amp; Deployment (Weeks 8-9)</h2>
+
+<p><em>“Once code is tested and secure, teams deploy it to production environments.”</em></p>
+
+<h3 id="week-8-continuous-deployment--release-management">Week 8: Continuous Deployment &amp; Release Management</h3>
+
+<p><strong>Context:</strong> Learn how to automatically deploy code to various environments with GitHub Actions and manage releases.</p>
+
+<p><strong>Objectives:</strong>
+- Implement continuous deployment (CD)
+- Work with multiple environments
+- Use deployment protection rules
+- Manage releases and versioning
+- Understand DORA metrics for deployment</p>
+
+<p><strong>Training Materials:</strong></p>
+
+<ol>
+  <li><strong>Continuous Deployment</strong> (3-4 hours)
+    <ul>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/github-actions-cd/">Build and deploy applications with GitHub Actions</a></li>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/implement-github-actions-continuous-delivery/">Implement GitHub Actions for continuous delivery</a></li>
+    </ul>
+  </li>
+  <li><strong>Environments and Deployments</strong> (3 hours)
+    <ul>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment">Using environments for deployment</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment#deployment-protection-rules">Deployment protection rules</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/actions/managing-workflow-runs-and-deployments/managing-deployments/reviewing-deployments">Reviewing deployments</a></li>
+    </ul>
+  </li>
+  <li><strong>Advanced Secrets &amp; OIDC</strong> (3 hours)
+    <ul>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/actions/security-for-github-actions/security-hardening-your-deployments/configuring-openid-connect-in-cloud-providers">Configuring OpenID Connect in cloud providers</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/actions/security-for-github-actions/security-hardening-your-deployments/about-security-hardening-with-openid-connect">Security hardening with OpenID Connect</a></li>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/azure/developer/github/connect-from-azure-openid-connect">Authenticate with OIDC in GitHub Actions</a></li>
+    </ul>
+  </li>
+  <li><strong>Reusable Workflows</strong> (2 hours)
+    <ul>
+      <li>GitHub Skills: <a href="https://github.com/skills/reusable-workflows">Reusable workflows</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/actions/sharing-automations/reusing-workflows">Reusing workflows</a></li>
+    </ul>
+  </li>
+  <li><strong>DORA Metrics &amp; DevOps Performance</strong> (2-3 hours)
+    <ul>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/assess-your-development-process/">Assess your existing software development process</a></li>
+      <li>External: <a href="https://dora.dev/quickcheck/">DORA DevOps Quick Check</a></li>
+      <li>External: <a href="https://dora.dev/research/">Accelerate: State of DevOps Reports</a></li>
+      <li>GitHub Blog: <a href="https://github.blog/2023-04-19-how-we-use-github-to-track-our-dora-metrics/">How we use GitHub to track our DORA metrics</a></li>
+    </ul>
+  </li>
+  <li><strong>Azure Deployment</strong> (3 hours)
+    <ul>
+      <li>GitHub Skills: <a href="https://github.com/skills/deploy-to-azure">Deploy to Azure</a></li>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/github-actions-deploy-azure/">Deploy to Azure using GitHub Actions</a></li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Lab Exercise:</strong>
+- Create a multi-environment deployment pipeline (dev, staging, prod)
+- Implement approval gates and deployment protection rules
+- Configure environment-specific secrets
+- Set up OIDC authentication for Azure/AWS
+- Build reusable workflow components
+- Deploy an application to a cloud platform
+- Calculate DORA deployment frequency from workflow data
+- Implement manual approval workflows for production</p>
+
+<hr />
+
+<h3 id="week-9-package-management--artifact-distribution">Week 9: Package Management &amp; Artifact Distribution</h3>
+
+<p><strong>Context:</strong> Learn how teams distribute their software using GitHub Packages and container registries.</p>
+
+<p><strong>Objectives:</strong>
+- Understand package management strategies
+- Use GitHub Packages
+- Publish container images
+- Implement versioning strategies
+- Work with different package types</p>
+
+<p><strong>Training Materials:</strong></p>
+
+<ol>
+  <li><strong>GitHub Packages Overview</strong> (3 hours)
+    <ul>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/packages/learn-github-packages/introduction-to-github-packages">Introduction to GitHub Packages</a></li>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/manage-software-packages-github/">Manage software packages with GitHub</a></li>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/publish-packages-github-packages/">Publish packages</a></li>
+    </ul>
+  </li>
+  <li><strong>Publishing Packages with Actions</strong> (3 hours)
+    <ul>
+      <li>GitHub Skills: <a href="https://github.com/skills/publish-packages">Publish packages</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions">Publishing a package using an action</a></li>
+    </ul>
+  </li>
+  <li><strong>Container Registry</strong> (2-3 hours)
+    <ul>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry">Working with the Container registry</a></li>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en/training/modules/manage-release-cadence-github/">Manage release cadence with GitHub</a></li>
+    </ul>
+  </li>
+  <li><strong>Infrastructure as Code Basics</strong> (2 hours)
+    <ul>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/introduction-to-infrastructure-as-code/">Introduction to infrastructure as code</a></li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Lab Exercise:</strong>
+- Publish a package to GitHub Packages (npm, Maven, or NuGet)
+- Create a container image publishing workflow
+- Implement semantic versioning strategies
+- Set up package access controls
+- Configure package visibility (public/private)
+- Create multi-platform container images</p>
+
+<hr />
+
+<h2 id="phase-5-operations---monitoring--maintenance-week-10">Phase 5: Operations - Monitoring &amp; Maintenance (Week 10)</h2>
+
+<p><em>“After deployment, teams monitor applications and respond to incidents.”</em></p>
+
+<h3 id="week-10-monitoring-observability--incident-response">Week 10: Monitoring, Observability &amp; Incident Response</h3>
+
+<p><strong>Context:</strong> Learn how teams monitor production systems, respond to incidents, and maintain documentation.</p>
+
+<p><strong>Objectives:</strong>
+- Understand monitoring and observability
+- Implement incident response workflows
+- Use GitHub for operational documentation
+- Learn Infrastructure as Code practices
+- Apply GitOps principles</p>
+
+<p><strong>Training Materials:</strong></p>
+
+<ol>
+  <li><strong>Monitoring &amp; Observability</strong> (3-4 hours)
+    <ul>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/intro-to-azure-monitor/">Introduction to Azure Monitor</a></li>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/monitor-app-performance/">Monitor application performance</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows">Using workflows for application monitoring</a></li>
+      <li>External: <a href="https://www.honeycomb.io/what-is-observability">Observability best practices</a></li>
+    </ul>
+  </li>
+  <li><strong>Incident Management &amp; Response</strong> (2-3 hours)
+    <ul>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/intro-to-incident-response/">Introduction to incident response</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue">Creating an issue</a></li>
+      <li>External: <a href="https://www.atlassian.com/incident-management/incident-response">Incident response best practices</a></li>
+      <li>External: <a href="https://github.com/dastergon/postmortem-templates">Post-mortem templates</a></li>
+    </ul>
+  </li>
+  <li><strong>Documentation Best Practices</strong> (2 hours)
+    <ul>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/communities/documenting-your-project-with-wikis/about-wikis">About wikis</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/pages/getting-started-with-github-pages">Getting started with GitHub Pages</a></li>
+      <li>External: <a href="https://www.writethedocs.org/guide/">Write the Docs</a></li>
+    </ul>
+  </li>
+  <li><strong>Infrastructure as Code with GitHub</strong> (4 hours)
+    <ul>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/paths/fundamentals-bicep/">Build Azure infrastructure with Bicep</a></li>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/paths/azure-infrastructure-terraform/">Build Azure infrastructure with Terraform</a></li>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/implement-infrastructure-as-code/">Implement infrastructure as code</a></li>
+    </ul>
+  </li>
+  <li><strong>GitOps Principles</strong> (2 hours)
+    <ul>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/intro-to-gitops/">Introduction to GitOps</a></li>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/paths/implement-security-through-pipeline-using-devops/">Implement security through a pipeline using DevOps</a></li>
+    </ul>
+  </li>
+  <li><strong>GitHub Copilot for Operations</strong> (2 hours)
+    <ul>
+      <li>GitHub Skills: <a href="https://github.com/skills/getting-started-with-github-copilot">Getting started with GitHub Copilot</a></li>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/introduction-to-github-copilot/">Introduction to GitHub Copilot</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/copilot/about-github-copilot/what-is-github-copilot">About GitHub Copilot</a></li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Lab Exercise:</strong>
+- Configure application monitoring with Azure Monitor
+- Create an incident response workflow using GitHub Issues
+- Write a post-mortem document for a simulated incident
+- Build operational documentation site using GitHub Pages
+- Create runbooks and standard operating procedures
+- Create infrastructure templates (Terraform or Bicep)
+- Build an IaC deployment pipeline
+- Practice GitOps workflows
+- Use Copilot to generate infrastructure code</p>
+
+<hr />
+
+<h2 id="phase-6-enterprise---administration--governance-weeks-11-12">Phase 6: Enterprise - Administration &amp; Governance (Weeks 11-12)</h2>
+
+<p><strong>Before:</strong> You now understand the complete development lifecycle from planning through operations. This final phase addresses enterprise-scale concerns: authentication, APIs, integrations, compliance, audit, and organizational governance.</p>
+
+<p><strong>Context:</strong> As CSM/CSAs, you’ll work with enterprise customers managing hundreds of developers across multiple teams and projects. This phase covers the administrative and governance features that enable secure, compliant, and measurable software delivery at scale.</p>
+
+<p><strong>After:</strong> You’ll be prepared to advise enterprise customers on organization administration, API integrations, compliance requirements, security governance, and measuring DevOps performance with DORA metrics.</p>
+
+<hr />
+
+<h3 id="week-11-enterprise-administration--integration">Week 11: Enterprise Administration &amp; Integration</h3>
+
+<p><strong>Context:</strong> Enterprise customers need to integrate GitHub with existing systems (identity providers, CI/CD tools, monitoring platforms) and manage programmatic access securely. This week covers the APIs, authentication mechanisms, webhooks, and integration patterns that enable GitHub to fit into complex enterprise ecosystems.</p>
+
+<p><strong>Objectives:</strong>
+- Understand GitHub Enterprise Cloud/Server administration
+- Manage organizations, teams, and access controls
+- Master GitHub APIs (REST and GraphQL)
+- Implement secure authentication patterns (PATs, OAuth, GitHub Apps)
+- Create webhooks and integrations
+- Apply engineering systems best practices</p>
+
+<p><strong>Training Materials:</strong></p>
+
+<ol>
+  <li><strong>GitHub Enterprise Overview</strong> (2-3 hours)
+    <ul>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/get-started/onboarding/getting-started-with-github-enterprise-cloud">Getting started with GitHub Enterprise Cloud</a></li>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/introduction-github-enterprise-cloud/">Introduction to GitHub Enterprise Cloud</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/best-practices-for-organizations">Best practices for organizations</a></li>
+    </ul>
+  </li>
+  <li><strong>Organization &amp; Team Management</strong> (3-4 hours)
+    <ul>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/manage-users-teams-organizations-github/">Manage users, teams, and access</a></li>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/manage-changes-repositories-github/">Manage GitHub repository changes</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles/roles-in-an-organization">Organization roles</a></li>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/github-administration-for-enterprise-support-adoption/">GitHub administration best practices</a></li>
+    </ul>
+  </li>
+  <li><strong>Authentication Fundamentals</strong> (3 hours)
+    <ul>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/authenticate-authorize-user-identities-github/">Authenticate and authorize user identities on GitHub</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github">About authentication to GitHub</a></li>
+    </ul>
+  </li>
+  <li><strong>GitHub REST &amp; GraphQL APIs</strong> (4-5 hours)
+    <ul>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/rest/about-the-rest-api/about-the-rest-api">About the REST API</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api">Getting started with the REST API</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/graphql/guides/introduction-to-graphql">About the GraphQL API</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/graphql/guides/forming-calls-with-graphql">Forming calls with GraphQL</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api">Rate limits for the REST API</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/rest/guides/best-practices-for-using-the-rest-api">Best practices for using the REST API</a></li>
+    </ul>
+  </li>
+  <li><strong>Personal Access Tokens &amp; Security</strong> (2-3 hours)
+    <ul>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api">About authentication to the REST API</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens">Managing your personal access tokens</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token">Creating a fine-grained personal access token</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/organizations/managing-programmatic-access-to-your-organization/setting-a-personal-access-token-policy-for-your-organization">Setting a personal access token policy for your organization</a></li>
+    </ul>
+  </li>
+  <li><strong>Webhooks &amp; Event-Driven Integrations</strong> (3-4 hours)
+    <ul>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/webhooks/about-webhooks">About webhooks</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/webhooks/using-webhooks/creating-webhooks">Creating webhooks</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/webhooks/webhook-events-and-payloads">Webhook events and payloads</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/webhooks/using-webhooks/best-practices-for-using-webhooks">Best practices for using webhooks</a></li>
+    </ul>
+  </li>
+  <li><strong>GitHub Apps &amp; OAuth</strong> (4-5 hours)
+    <ul>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/apps/creating-github-apps/about-creating-github-apps/about-creating-github-apps">About apps</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/apps/creating-github-apps/writing-code-for-a-github-app/quickstart">Creating a GitHub App</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/apps/creating-github-apps/setting-up-a-github-app/choosing-permissions-for-a-github-app">GitHub App permissions</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/authorizing-oauth-apps">Building OAuth apps</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/scopes-for-oauth-apps">OAuth app scopes</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/differences-between-github-apps-and-oauth-apps">Differences between GitHub Apps and OAuth apps</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/organizations/managing-oauth-access-to-your-organizations-data/about-oauth-app-access-restrictions">About OAuth app access restrictions</a></li>
+    </ul>
+  </li>
+  <li><strong>GitHub Marketplace</strong> (1-2 hours)
+    <ul>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/apps/github-marketplace/github-marketplace-overview/about-github-marketplace-for-apps">About GitHub Marketplace</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/apps/github-marketplace/creating-apps-for-github-marketplace/requirements-for-listing-an-app">Requirements for listing an app</a></li>
+    </ul>
+  </li>
+  <li><strong>Engineering Systems Success Playbook</strong> (3-4 hours)
+    <ul>
+      <li>GitHub Resources: <a href="https://github.com/resources/articles/enterprise/engineering-systems-success-playbook">Engineering Systems Success Playbook</a></li>
+      <li>GitHub Blog: <a href="https://github.blog/2023-10-30-the-architecture-of-todays-web-applications/">Lessons from building GitHub’s engineering systems</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/best-practices-for-organizations">Best practices for organizations</a></li>
+    </ul>
+  </li>
+  <li><strong>Enterprise Policies</strong> (2 hours)
+   - GitHub Docs: <a href="https://docs.github.com/en/enterprise-cloud@latest/admin/policies/enforcing-policies-for-your-enterprise/enforcing-policies-for-github-actions-in-your-enterprise">Enforcing policies for GitHub Actions in your enterprise</a>
+   - Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/manage-github-enterprise-policies/">Manage GitHub enterprise policies</a></li>
+</ol>
+
+<p><strong>Lab Exercise:</strong>
+- Set up a sample organization structure with teams and repositories
+- Configure team permissions and access hierarchies
+- Create fine-grained personal access tokens with specific repository permissions
+- Make authenticated REST API calls to list repositories, create issues, and retrieve metrics
+- Query the GraphQL API for complex data (repository statistics, team memberships)
+- Handle API rate limiting and implement retry logic
+- Create a webhook that triggers on pull request events
+- Build a simple GitHub App with basic permissions
+- Implement OAuth authentication flow for a GitHub App
+- Compare GitHub App vs OAuth App authentication for an integration use case
+- Configure OAuth app access restrictions for an organization
+- Apply Engineering Systems Success Playbook principles to an organization design</p>
+
+<hr />
+
+<h3 id="week-12-governance-compliance--performance-measurement">Week 12: Governance, Compliance &amp; Performance Measurement</h3>
+
+<p><strong>Context:</strong> The culmination of enterprise GitHub management requires understanding compliance, audit trails, security governance, and measuring success through metrics like DORA. This week brings together all previous learning to advise customers on organizational governance, regulatory compliance, security policies at scale, and implementing data-driven DevOps improvement practices.</p>
+
+<p><strong>Objectives:</strong>
+- Implement enterprise-wide security and compliance controls
+- Master audit logging and organizational monitoring
+- Configure Enterprise Managed Users (EMU) and SAML/SSO
+- Measure and improve DevOps performance with DORA metrics
+- Create comprehensive security policies and governance frameworks
+- Use organization insights for data-driven decisions</p>
+
+<p><strong>Training Materials:</strong></p>
+
+<ol>
+  <li><strong>Advanced Security Configuration</strong> (3-4 hours)
+    <ul>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/configure-github-advanced-security/">Configure GitHub Advanced Security</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/code-security">Code security documentation</a></li>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/maintain-secure-repository-github/">Maintain secure repositories</a></li>
+    </ul>
+  </li>
+  <li><strong>Security Policies &amp; Governance</strong> (3 hours)
+    <ul>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/implement-security-compliance-github/">Implement security and compliance in GitHub</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/code-security/getting-started/adding-a-security-policy-to-your-repository">Adding a security policy to your repository</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/enterprise-cloud@latest/admin/code-security/managing-supply-chain-security-for-your-enterprise/best-practices-for-securing-your-enterprise">Security best practices for enterprises</a></li>
+    </ul>
+  </li>
+  <li><strong>Audit Log &amp; Compliance Monitoring</strong> (3-4 hours)
+    <ul>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/reviewing-the-audit-log-for-your-organization">Reviewing the audit log for your organization</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/audit-log-events-for-your-organization">Audit log events for your organization</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/streaming-the-audit-log-for-your-enterprise">Streaming the audit log for your enterprise</a></li>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/azure/azure-monitor/logs/github-audit-log">Monitor GitHub by using Azure Monitor</a></li>
+    </ul>
+  </li>
+  <li><strong>Enterprise Managed Users (EMU)</strong> (2-3 hours)
+    <ul>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/enterprise-cloud@latest/admin/identity-and-access-management/using-enterprise-managed-users-for-iam/about-enterprise-managed-users">About Enterprise Managed Users</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/enterprise-cloud@latest/admin/identity-and-access-management/using-enterprise-managed-users-for-iam/getting-started-with-enterprise-managed-users">Getting started with Enterprise Managed Users</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/enterprise-cloud@latest/admin/identity-and-access-management/managing-iam-for-your-enterprise/about-authentication-for-your-enterprise">About authentication for your enterprise</a></li>
+    </ul>
+  </li>
+  <li><strong>Network Security &amp; IP Allow Lists</strong> (1-2 hours)
+    <ul>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/enterprise-cloud@latest/admin/policies/enforcing-policies-for-your-enterprise/enforcing-policies-for-security-settings-in-your-enterprise">Enforcing policies for security settings in your enterprise</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/get-started/using-github/allowing-access-to-githubs-services-from-a-restricted-network">Allowing access to GitHub’s services from a restricted network</a></li>
+    </ul>
+  </li>
+  <li><strong>Organization Insights &amp; Analytics</strong> (2-3 hours)
+    <ul>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/viewing-insights-for-your-organization">Viewing insights for your organization</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/exploring-the-dependencies-of-a-repository">Exploring the dependencies of a repository</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/repositories/viewing-activity-and-data-for-your-repository/viewing-traffic-to-a-repository">Viewing traffic to a repository</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/organizations/managing-organization-settings/viewing-github-actions-usage-metrics-for-your-organization">Viewing GitHub Actions usage metrics for your organization</a></li>
+    </ul>
+  </li>
+  <li><strong>DORA Metrics Implementation</strong> (4-5 hours)
+    <ul>
+      <li>Microsoft Learn: <a href="https://learn.microsoft.com/en-us/training/modules/assess-your-development-process/">Assess your existing software development process</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/rest/metrics">Using GitHub’s APIs for metrics</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/rest/deployments/deployments">Deployments API</a></li>
+      <li>GitHub Blog: <a href="https://github.blog/2023-04-19-how-we-use-github-to-track-our-dora-metrics/">How we use GitHub to track our DORA metrics</a></li>
+      <li>External: <a href="https://dora.dev/quickcheck/">DORA DevOps Quick Check</a></li>
+      <li>External: <a href="https://dora.dev/research/">Accelerate: State of DevOps Reports</a></li>
+      <li>External: <a href="https://cloud.google.com/blog/products/devops-sre/using-the-four-keys-to-measure-your-devops-performance">Measuring the four key metrics</a></li>
+      <li>External: <a href="https://github.com/dora-team/fourkeys">Four Keys Project</a></li>
+    </ul>
+  </li>
+  <li><strong>Secure Code Game</strong> (3-4 hours)
+    <ul>
+      <li>GitHub Skills: <a href="https://github.com/skills/secure-code-game">Secure code game</a></li>
+    </ul>
+  </li>
+  <li><strong>Advanced Custom Actions</strong> (Optional - 3 hours)
+    <ul>
+      <li>GitHub Skills: <a href="https://github.com/skills/write-javascript-actions">Write JavaScript actions</a></li>
+      <li>GitHub Docs: <a href="https://docs.github.com/en/actions/creating-actions">Creating actions</a></li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Lab Exercise:</strong>
+- Conduct a comprehensive security audit of a sample organization
+- Create a detailed security policy document (SECURITY.md) with vulnerability disclosure procedures
+- Configure audit log streaming to a SIEM or monitoring platform (Azure Monitor, Splunk, etc.)
+- Build a security and compliance dashboard using GitHub APIs
+- Review organization insights for repository activity, dependency vulnerabilities, and Actions usage
+- Analyze Actions billing data and optimize workflow efficiency
+- Implement complete DORA metrics collection using GitHub APIs:
+  - <strong>Deployment Frequency</strong>: Track deployments to production via Deployments API
+  - <strong>Lead Time for Changes</strong>: Calculate time from commit to production deployment
+  - <strong>Mean Time to Recovery (MTTR)</strong>: Track incident resolution times via Issues API
+  - <strong>Change Failure Rate</strong>: Measure percentage of deployments causing failures or rollbacks
+- Build a DORA metrics dashboard with historical trends and benchmarking
+- Assess DevOps maturity using DORA capability model (Elite/High/Medium/Low performers)
+- Present improvement recommendations based on DORA assessment
+- Configure IP allow lists for enterprise network security
+- (Optional) Set up Enterprise Managed Users with SAML authentication in demo environment
+- Complete the Secure Code Game challenges</p>
+
+<hr />
+
+<h2 id="ongoing-professional-development">Ongoing Professional Development</h2>
+
+<h3 id="recommended-resources">Recommended Resources</h3>
+
+<ol>
+  <li><strong>GitHub Blog &amp; Changelog</strong>
+    <ul>
+      <li><a href="https://github.blog/">GitHub Blog</a></li>
+      <li><a href="https://github.blog/changelog/">GitHub Changelog</a></li>
+    </ul>
+  </li>
+  <li><strong>Community &amp; Forums</strong>
+    <ul>
+      <li><a href="https://github.com/orgs/community/discussions">GitHub Community</a></li>
+      <li><a href="https://skills.github.com/">GitHub Skills</a></li>
+    </ul>
+  </li>
+  <li><strong>Documentation</strong>
+    <ul>
+      <li><a href="https://docs.github.com/">GitHub Docs</a></li>
+      <li><a href="https://docs.github.com/en/rest">GitHub REST API</a></li>
+      <li><a href="https://docs.github.com/en/graphql">GitHub GraphQL API</a></li>
+      <li><a href="https://cli.github.com/manual/">GitHub CLI Manual</a></li>
+      <li><a href="https://docs.github.com/en/actions">GitHub Actions Documentation</a></li>
+      <li><a href="https://docs.github.com/en/code-security">GitHub Security Documentation</a></li>
+      <li><a href="https://docs.github.com/en/enterprise-cloud@latest">GitHub Enterprise Documentation</a></li>
+      <li><a href="https://docs.github.com/en/webhooks">GitHub Webhooks Documentation</a></li>
+    </ul>
+  </li>
+  <li><strong>Microsoft Learn Paths</strong>
+    <ul>
+      <li><a href="https://learn.microsoft.com/en-us/training/browse/?products=github">GitHub Learning Paths</a></li>
+      <li><a href="https://learn.microsoft.com/en-us/training/browse/?terms=devops">DevOps Learning Paths</a></li>
+    </ul>
+  </li>
+  <li><strong>Additional Advanced Topics</strong> (Beyond Core Syllabus)
+    <ul>
+      <li>GitHub Copilot and AI-assisted development</li>
+      <li>Advanced GitHub Projects automation with custom fields</li>
+      <li>GitHub Mobile for on-the-go repository management</li>
+      <li>GitHub CLI extensions and advanced scripting</li>
+      <li>GitHub Desktop advanced workflows</li>
+      <li>Infrastructure as Code with Terraform/Bicep and GitHub</li>
+      <li>GitHub Sponsors for open source project funding</li>
+      <li>GitHub Connect (linking GitHub Enterprise Server to GitHub.com)</li>
+      <li>GitHub Copilot Extensions development</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="stay-current">Stay Current</h3>
+
+<ul>
+  <li>Subscribe to GitHub’s monthly newsletter</li>
+  <li>Follow GitHub on social media</li>
+  <li>Join GitHub Universe (annual conference)</li>
+  <li>Participate in GitHub Community Discussions</li>
+  <li>Attend local GitHub meetups and events</li>
+  <li>Review the GitHub Changelog weekly for new features</li>
+</ul>
+
+<hr />
+
+<h2 id="assessment--certification">Assessment &amp; Certification</h2>
+
+<h3 id="continuous-assessment">Continuous Assessment</h3>
+
+<p>Throughout the 12-week program, learners should demonstrate proficiency through:</p>
+
+<ol>
+  <li><strong>Weekly Lab Completion</strong> (50%)
+    <ul>
+      <li>Hands-on exercises completed and documented</li>
+      <li>Working repositories showcasing learned skills</li>
+      <li>Lab exercises build progressively on previous weeks</li>
+    </ul>
+  </li>
+  <li><strong>Knowledge Checks</strong> (25%)
+    <ul>
+      <li>End-of-week quizzes covering key concepts</li>
+      <li>Practical demonstrations of features</li>
+      <li>Peer teaching exercises</li>
+    </ul>
+  </li>
+  <li><strong>Phase Milestone Projects</strong> (25%)
+    <ul>
+      <li><strong>Phase 2 (Week 5)</strong>: Present a repository with proper branch protection, CODEOWNERS, commit signing, and release workflow</li>
+      <li><strong>Phase 4 (Week 9)</strong>: Build and demo a complete multi-environment CI/CD pipeline with security scanning, package publishing, and DORA metrics</li>
+      <li><strong>Phase 6 (Week 12)</strong>: Conduct a comprehensive enterprise security audit, present findings with governance recommendations, and demonstrate DORA metrics dashboard</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="github-certifications">GitHub Certifications</h3>
+
+<p>Upon completion of this syllabus, learners are encouraged to pursue official GitHub certifications:</p>
+
+<ol>
+  <li><strong>GitHub Foundations</strong> (Beginner)
+    <ul>
+      <li><a href="https://docs.github.com/en/get-started/showcase-your-expertise-with-github-certifications/about-github-certifications">About GitHub Certifications</a></li>
+      <li><a href="https://docs.github.com/en/get-started/showcase-your-expertise-with-github-certifications/registering-for-a-github-certifications-exam">Register for GitHub Certifications</a></li>
+    </ul>
+  </li>
+  <li><strong>GitHub Actions</strong> (Intermediate)
+    <ul>
+      <li>Validates CI/CD and automation expertise</li>
+    </ul>
+  </li>
+  <li><strong>GitHub Advanced Security</strong> (Advanced)
+    <ul>
+      <li>Demonstrates security and compliance knowledge</li>
+    </ul>
+  </li>
+  <li><strong>GitHub Administration</strong> (Advanced)
+    <ul>
+      <li>For CSAs managing enterprise implementations</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="microsoft-certifications-optional">Microsoft Certifications (Optional)</h3>
+
+<ul>
+  <li><strong>Microsoft Certified: DevOps Engineer Expert</strong>
+    <ul>
+      <li><a href="https://learn.microsoft.com/en-us/credentials/certifications/devops-engineer/">DevOps Engineer Expert</a></li>
+    </ul>
+  </li>
+  <li><strong>Microsoft Certified: Security Operations Analyst Associate</strong>
+    <ul>
+      <li><a href="https://learn.microsoft.com/en-us/credentials/certifications/security-operations-analyst/">Security Operations Analyst</a></li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="success-metrics">Success Metrics</h2>
+
+<p>By the end of this 12-week program, successful learners will be able to:</p>
+
+<h3 id="technical-proficiency">Technical Proficiency</h3>
+<p>✅ Confidently demonstrate all GitHub core features across the entire SDLC<br />
+✅ Design and implement end-to-end CI/CD pipelines using GitHub Actions<br />
+✅ Configure and advise on GitHub Advanced Security (GHAS) features<br />
+✅ Architect enterprise-scale GitHub deployments with proper governance<br />
+✅ Build integrations using GitHub APIs, webhooks, and GitHub Apps</p>
+
+<h3 id="software-development-competency">Software Development Competency</h3>
+<p>✅ Understand and articulate the complete Software Development Lifecycle<br />
+✅ Guide customers through Git workflows, branching strategies, and best practices<br />
+✅ Explain DevOps principles and map them to GitHub capabilities<br />
+✅ Implement and measure DORA metrics for DevOps performance</p>
+
+<h3 id="customer-success-skills">Customer Success Skills</h3>
+<p>✅ Troubleshoot common customer issues independently<br />
+✅ Create compelling demonstrations and proof-of-concepts<br />
+✅ Assess customer maturity and recommend improvement paths<br />
+✅ Apply the GitHub Well-Architected Framework to customer architectures<br />
+✅ Use the Engineering Systems Success Playbook for organizational design</p>
+
+<h3 id="ongoing-excellence">Ongoing Excellence</h3>
+<p>✅ Stay current with GitHub product updates and new features<br />
+✅ Contribute to internal knowledge base and best practices<br />
+✅ Mentor new team members on GitHub capabilities<br />
+✅ Identify upsell and expansion opportunities based on customer needs</p>
+
+<hr />
+
+<h2 id="additional-notes">Additional Notes</h2>
+
+<p><strong>Prerequisites:</strong>
+- Basic understanding of software development concepts
+- Familiarity with command-line interfaces
+- Access to a GitHub account (personal or enterprise trial)
+- A code editor (VS Code recommended)</p>
+
+<p><strong>Tools You’ll Need:</strong>
+- GitHub account (personal or enterprise trial)
+- Git installed locally
+- Visual Studio Code (or preferred IDE)
+- GitHub CLI (<code class="language-plaintext highlighter-rouge">gh</code>) - highly recommended
+- GitHub Desktop (optional for GUI workflows)
+- GitHub Mobile app (iOS/Android)
+- Access to a cloud platform (Azure, AWS, or GCP for deployment labs)
+- API testing tool (Postman, curl, or similar)
+- Text editor for configuration files</p>
+
+<p><strong>Study Tips:</strong>
+- Complete all hands-on labs - practical experience is crucial
+- Create a portfolio repository documenting your learning journey
+- Join GitHub Community Discussions to ask questions
+- Practice explaining concepts as if teaching to customers
+- Build sample projects that showcase multiple skills
+- Collaborate with peers on shared learning repositories</p>
+
+<hr />
+
+<p><strong>Document Version:</strong> 1.0<br />
+<strong>Maintained By:</strong> CSM/CSA Enablement Team<br />
+<strong>Feedback:</strong> Please submit suggestions via [repository issues]</p>
+
+<hr />
+
+<p><em>All links verified as of December 9, 2025. GitHub and Microsoft Learn update their content regularly, so some paths may evolve. Always check the official sites for the most current materials.</em></p>
+
+        </div>
+
+        <!-- Module navigation footer -->
+        
+      </main>
+    </div>
+
+    <footer class="training-footer">
+  <div class="container">
+    <div class="training-footer-content">
+      <div class="footer-info">
+        <p class="footer-text">GitHub Training Program v1.0 | Last updated: December 2025</p>
+        <p class="footer-links">
+          <a href="https://docs.github.com" target="_blank" rel="noopener">GitHub Docs</a> • 
+          <a href="https://github.community" target="_blank" rel="noopener">Community</a> • 
+          <a href="/syllabus/">Full Syllabus</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- Smooth scroll behavior -->
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const href = this.getAttribute('href');
+          if (href !== '#') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+        });
+      });
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Hands-On Labs &middot; GitHub Training
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="preload" href="/public/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/public/css/main.css"></noscript>
+
+  <!-- GLightbox CSS for Image Modals -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+</head>
+
+
+  <body class="training-layout">
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="training-header">
+  <div class="container">
+    <div class="training-header-inner">
+      <div class="training-brand">
+        <a href="/" class="training-logo">
+          <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" class="octicon">
+            <path fill="currentColor" d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
+          </svg>
+          <span class="training-title">GitHub Training</span>
+        </a>
+        <span class="training-tagline">CSM & CSA Certification Program</span>
+      </div>
+      
+      <nav class="training-nav" aria-label="Training navigation">
+        <a href="/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8.156 1.835a.25.25 0 00-.312 0l-5.25 4.2a.25.25 0 00-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 01.75-.75h3.5a.75.75 0 01.75.75v5.25h2.75a.25.25 0 00.25-.25V6.23a.25.25 0 00-.094-.195z"></path>
+          </svg>
+          Home
+        </a>
+        <a href="/beginner/" class="training-nav-link active">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0114.25 16H1.75A1.75 1.75 0 010 14.25V1.75zm1.75-.25a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V1.75a.25.25 0 00-.25-.25H1.75zM3.5 6.25a.75.75 0 01.75-.75h7a.75.75 0 010 1.5h-7a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h4a.75.75 0 000-1.5h-4z"></path>
+          </svg>
+          Beginner
+        </a>
+        <a href="/intermediate/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+            <path fill="currentColor" d="M8 0a8 8 0 110 16A8 8 0 018 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"></path>
+          </svg>
+          Intermediate
+        </a>
+        <a href="/advanced/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"></path>
+          </svg>
+          Advanced
+        </a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+    <!-- Main content area with sidebar -->
+    <div class="training-container">
+      
+      <!-- Sidebar navigation -->
+      <aside class="training-sidebar">
+        <div class="training-sidebar-sticky">
+          
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">🌱 Beginner Phase</h3>
+            <nav class="sidebar-nav">
+              <a href="/beginner/" class="sidebar-link">Phase Overview</a>
+              <a href="/beginner/module-1/" class="sidebar-link">Module 1: SDLC</a>
+              <a href="/beginner/module-2/" class="sidebar-link">Module 2: Git</a>
+              <a href="/beginner/module-3/" class="sidebar-link active">Module 3: GitHub Platform</a>
+              <a href="/beginner/module-4/" class="sidebar-link">Module 4: SCM Process</a>
+            </nav>
+          </div>
+          
+          
+          
+          
+          
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">Resources</h3>
+            <nav class="sidebar-nav">
+              <a href="/syllabus/" class="sidebar-link">Full Syllabus</a>
+              <a href="https://docs.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Docs
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+              <a href="https://skills.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Skills
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+            </nav>
+          </div>
+          
+        </div>
+      </aside>
+
+      <!-- Main content area -->
+      <main id="main-content" class="training-main">
+      
+        <div class="training-module">
+        <!-- Module Header -->
+        <header class="module-header">
+          <div class="module-breadcrumb">
+            <a href="/">Training Home</a>
+            <span class="separator">›</span>
+            <a href="/beginner/">Beginner Phase</a>
+            <span class="separator">›</span>
+            <a href="/beginner/module-3/">Module 3</a>
+          </div>
+          
+          <h1 class="module-title">Hands-On Labs</h1>
+          
+          <div class="module-meta">
+            <span class="badge badge-beginner">Beginner</span>
+            <span class="meta-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm7-3.25v2.992l2.028.812a.75.75 0 0 1-.557 1.392l-2.5-1A.751.751 0 0 1 7 8.25v-3.5a.75.75 0 0 1 1.5 0Z"></path></svg>
+              25 min
+            </span>
+            <span class="meta-item">
+              Section 4 of 7
+            </span>
+          </div>
+        </header>
+
+        <!-- Progress Bar -->
+        <div class="module-progress">
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 57.142857142857146%"></div>
+          </div>
+          <div class="progress-steps">
+            
+              
+              <a href="/beginner/module-3/overview/" 
+                 class="progress-step completed"
+                 title="Context & Overview">
+                <span class="step-dot"></span>
+                <span class="step-label">1</span>
+              </a>
+            
+              
+              <a href="/beginner/module-3/concepts/" 
+                 class="progress-step completed"
+                 title="Core Concepts">
+                <span class="step-dot"></span>
+                <span class="step-label">2</span>
+              </a>
+            
+              
+              <a href="/beginner/module-3/walkthrough/" 
+                 class="progress-step completed"
+                 title="Guided Walkthrough">
+                <span class="step-dot"></span>
+                <span class="step-label">3</span>
+              </a>
+            
+              
+              <a href="/beginner/module-3/labs/" 
+                 class="progress-step active"
+                 title="Hands-On Labs">
+                <span class="step-dot"></span>
+                <span class="step-label">4</span>
+              </a>
+            
+              
+              <a href="/beginner/module-3/quiz/" 
+                 class="progress-step "
+                 title="Knowledge Check">
+                <span class="step-dot"></span>
+                <span class="step-label">5</span>
+              </a>
+            
+              
+              <a href="/beginner/module-3/resources/" 
+                 class="progress-step "
+                 title="Resources">
+                <span class="step-dot"></span>
+                <span class="step-label">6</span>
+              </a>
+            
+              
+              <a href="/beginner/module-3/scenarios/" 
+                 class="progress-step "
+                 title="CSM Scenarios">
+                <span class="step-dot"></span>
+                <span class="step-label">7</span>
+              </a>
+            
+          </div>
+        </div>
+
+        <!-- Section Navigation Tabs -->
+        <nav class="section-tabs">
+          
+            
+            <a href="/beginner/module-3/overview/" 
+               class="section-tab ">
+              <span class="tab-icon">🎯</span>
+              <span class="tab-title">Overview</span>
+            </a>
+          
+            
+            <a href="/beginner/module-3/concepts/" 
+               class="section-tab ">
+              <span class="tab-icon">📚</span>
+              <span class="tab-title">Concepts</span>
+            </a>
+          
+            
+            <a href="/beginner/module-3/walkthrough/" 
+               class="section-tab ">
+              <span class="tab-icon">🚶</span>
+              <span class="tab-title">Walkthrough</span>
+            </a>
+          
+            
+            <a href="/beginner/module-3/labs/" 
+               class="section-tab active">
+              <span class="tab-icon">💻</span>
+              <span class="tab-title">Labs</span>
+            </a>
+          
+            
+            <a href="/beginner/module-3/quiz/" 
+               class="section-tab ">
+              <span class="tab-icon">✅</span>
+              <span class="tab-title">Quiz</span>
+            </a>
+          
+            
+            <a href="/beginner/module-3/resources/" 
+               class="section-tab ">
+              <span class="tab-icon">📖</span>
+              <span class="tab-title">Resources</span>
+            </a>
+          
+            
+            <a href="/beginner/module-3/scenarios/" 
+               class="section-tab ">
+              <span class="tab-icon">💼</span>
+              <span class="tab-title">Scenarios</span>
+            </a>
+          
+        </nav>
+
+        <!-- Main Content with TOC Sidebar -->
+        <div class="module-content-wrapper">
+          <main id="main-content" class="module-content">
+            <article class="section-content">
+              <h2 id="lab-overview">Lab Overview</h2>
+
+<p>Practice using GitHub’s platform features with these hands-on exercises.</p>
+
+<div class="callout callout-info">
+<div class="callout-title">📋 Prerequisites</div>
+
+- GitHub account
+- Repository from Module 2 labs (or create a new one)
+</div>
+
+<hr />
+
+<h2 id="lab-1-create-and-organize-issues">Lab 1: Create and Organize Issues</h2>
+
+<p><strong>Objective:</strong> Practice creating issues with proper formatting and labels.</p>
+
+<p><strong>Time:</strong> 10 minutes</p>
+
+<h3 id="instructions">Instructions</h3>
+
+<ol>
+  <li>
+    <p><strong>Go to your practice repository</strong> (or create one at github.com/new)</p>
+  </li>
+  <li>
+    <p><strong>Create three issues:</strong></p>
+
+    <p><strong>Issue 1 — Bug Report:</strong>
+- Click <strong>Issues</strong> → <strong>New Issue</strong>
+- Title: <code class="language-plaintext highlighter-rouge">[BUG] Homepage loads slowly on mobile</code>
+- Body:
+```markdown
+## Description
+The homepage takes over 5 seconds to load on mobile devices.</p>
+
+    <h2 id="steps-to-reproduce">Steps to Reproduce</h2>
+    <ol>
+      <li>Open site on iPhone</li>
+      <li>Navigate to homepage</li>
+      <li>Measure load time</li>
+    </ol>
+
+    <h2 id="expected-behavior">Expected Behavior</h2>
+    <p>Page should load in under 2 seconds.</p>
+
+    <h2 id="actual-behavior">Actual Behavior</h2>
+    <p>Page takes 5+ seconds to load.</p>
+
+    <h2 id="environment">Environment</h2>
+    <ul>
+      <li>Device: iPhone 13</li>
+      <li>Browser: Safari</li>
+      <li>OS: iOS 16
+```</li>
+    </ul>
+
+    <p><strong>Issue 2 — Feature Request:</strong>
+- Title: <code class="language-plaintext highlighter-rouge">[FEATURE] Add dark mode support</code>
+- Body:
+```markdown
+## Problem Statement
+Users working at night report eye strain from the bright interface.</p>
+
+    <h2 id="proposed-solution">Proposed Solution</h2>
+    <p>Add a dark mode toggle in user settings.</p>
+
+    <h2 id="alternatives-considered">Alternatives Considered</h2>
+    <ul>
+      <li>Browser extension for dark mode</li>
+      <li>CSS media query for system preference</li>
+    </ul>
+
+    <h2 id="additional-context">Additional Context</h2>
+    <p>Many users have requested this feature on social media.
+```</p>
+
+    <p><strong>Issue 3 — Task:</strong>
+- Title: <code class="language-plaintext highlighter-rouge">[TASK] Update dependencies</code>
+- Body:
+```markdown
+## Description
+Run npm update and test all features.</p>
+
+    <h2 id="checklist">Checklist</h2>
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Run <code class="language-plaintext highlighter-rouge">npm update</code></li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Run test suite</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Verify all features work</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Update changelog
+```</li>
+    </ul>
+  </li>
+  <li><strong>Create labels (if they don’t exist):</strong>
+    <ul>
+      <li>Go to <strong>Issues</strong> → <strong>Labels</strong> → <strong>New label</strong></li>
+      <li>Create: <code class="language-plaintext highlighter-rouge">bug</code> (red), <code class="language-plaintext highlighter-rouge">enhancement</code> (blue), <code class="language-plaintext highlighter-rouge">task</code> (yellow)</li>
+    </ul>
+  </li>
+  <li><strong>Apply labels to your issues:</strong>
+    <ul>
+      <li>Bug report → <code class="language-plaintext highlighter-rouge">bug</code></li>
+      <li>Feature request → <code class="language-plaintext highlighter-rouge">enhancement</code></li>
+      <li>Task → <code class="language-plaintext highlighter-rouge">task</code></li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="-success-criteria">✅ Success Criteria</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Three issues created with proper formatting</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Labels created and applied</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Issues visible in Issues list</li>
+</ul>
+
+<h2 id="lab-2-set-up-a-project-board">Lab 2: Set Up a Project Board</h2>
+
+<p><strong>Objective:</strong> Create a project to track your issues.</p>
+
+<p><strong>Time:</strong> 8 minutes</p>
+
+<h3 id="instructions-1">Instructions</h3>
+
+<ol>
+  <li><strong>Create a new Project:</strong>
+    <ul>
+      <li>Go to your repository</li>
+      <li>Click <strong>Projects</strong> tab → <strong>New project</strong></li>
+      <li>Select <strong>Board</strong> template</li>
+      <li>Name: “Sprint 1”</li>
+    </ul>
+  </li>
+  <li><strong>Configure columns:</strong>
+    <ul>
+      <li>Keep default columns or rename:
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">To Do</code></li>
+          <li><code class="language-plaintext highlighter-rouge">In Progress</code></li>
+          <li><code class="language-plaintext highlighter-rouge">Done</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Add your issues to the project:</strong>
+    <ul>
+      <li>Click <strong>+ Add item</strong> in “To Do” column</li>
+      <li>Search for your issues by number or title</li>
+      <li>Add all three issues</li>
+    </ul>
+  </li>
+  <li><strong>Add custom fields:</strong>
+    <ul>
+      <li>Click <strong>⚙️</strong> → <strong>Settings</strong> → <strong>Fields</strong></li>
+      <li>Add a new field: “Priority” (Single select)</li>
+      <li>Options: <code class="language-plaintext highlighter-rouge">High</code>, <code class="language-plaintext highlighter-rouge">Medium</code>, <code class="language-plaintext highlighter-rouge">Low</code></li>
+    </ul>
+  </li>
+  <li><strong>Set priorities:</strong>
+    <ul>
+      <li>Bug: High</li>
+      <li>Feature: Medium</li>
+      <li>Task: Low</li>
+    </ul>
+  </li>
+  <li><strong>Practice moving items:</strong>
+    <ul>
+      <li>Drag the Bug to “In Progress”</li>
+      <li>This simulates starting work</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="-success-criteria-1">✅ Success Criteria</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Project created with three columns</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />All issues added to project</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Custom Priority field added</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Priorities assigned</li>
+</ul>
+
+<hr />
+
+<h2 id="lab-3-create-your-first-pull-request">Lab 3: Create Your First Pull Request</h2>
+
+<p><strong>Objective:</strong> Practice the complete PR workflow.</p>
+
+<p><strong>Time:</strong> 10 minutes</p>
+
+<h3 id="instructions-2">Instructions</h3>
+
+<ol>
+  <li>
+    <p><strong>Clone your repository locally</strong> (if not already):
+<code class="language-plaintext highlighter-rouge">bash
+git clone https://github.com/YOUR-USERNAME/YOUR-REPO.git
+cd YOUR-REPO
+</code></p>
+  </li>
+  <li>
+    <p><strong>Create a feature branch:</strong>
+<code class="language-plaintext highlighter-rouge">bash
+git checkout -b feature/add-contributing-guide
+</code></p>
+  </li>
+  <li>
+    <p><strong>Create a CONTRIBUTING.md file:</strong>
+```bash
+cat &gt; CONTRIBUTING.md &lt;&lt; ‘EOF’
+# Contributing to This Project</p>
+
+    <p>Thank you for your interest in contributing!</p>
+
+    <h2 id="how-to-contribute">How to Contribute</h2>
+
+    <ol>
+      <li>Fork the repository</li>
+      <li>Create a feature branch (<code class="language-plaintext highlighter-rouge">git checkout -b feature/amazing-feature</code>)</li>
+      <li>Commit your changes (<code class="language-plaintext highlighter-rouge">git commit -m 'Add amazing feature'</code>)</li>
+      <li>Push to the branch (<code class="language-plaintext highlighter-rouge">git push origin feature/amazing-feature</code>)</li>
+      <li>Open a Pull Request</li>
+    </ol>
+
+    <h2 id="code-style">Code Style</h2>
+
+    <ul>
+      <li>Use clear, descriptive variable names</li>
+      <li>Comment complex logic</li>
+      <li>Write tests for new features</li>
+    </ul>
+
+    <h2 id="reporting-bugs">Reporting Bugs</h2>
+
+    <p>Use the bug report template when creating issues.</p>
+
+    <h2 id="questions">Questions?</h2>
+
+    <p>Open a Discussion or reach out to maintainers.
+EOF
+```</p>
+  </li>
+  <li>
+    <p><strong>Commit and push:</strong>
+<code class="language-plaintext highlighter-rouge">bash
+git add CONTRIBUTING.md
+git commit -m "Add contributing guidelines"
+git push -u origin feature/add-contributing-guide
+</code></p>
+  </li>
+  <li><strong>Create the Pull Request:</strong>
+    <ul>
+      <li>Go to your repository on GitHub</li>
+      <li>You’ll see a banner: “feature/add-contributing-guide had recent pushes”</li>
+      <li>Click <strong>Compare &amp; pull request</strong></li>
+    </ul>
+  </li>
+  <li><strong>Fill in the PR details:</strong>
+    <ul>
+      <li>Title: <code class="language-plaintext highlighter-rouge">Add contributing guidelines</code></li>
+      <li>Description:
+```markdown
+## Summary
+This PR adds a CONTRIBUTING.md file to help new contributors get started.</li>
+    </ul>
+
+    <h2 id="changes">Changes</h2>
+    <ul>
+      <li>Added CONTRIBUTING.md with:
+        <ul>
+          <li>Contribution workflow</li>
+          <li>Code style guidelines</li>
+          <li>Bug reporting instructions</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2 id="checklist-1">Checklist</h2>
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />File created</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Follows project conventions</li>
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Reviewed by maintainer</li>
+    </ul>
+
+    <p>Closes #[your task issue number]
+```</p>
+  </li>
+  <li><strong>Link to an issue:</strong>
+    <ul>
+      <li>In the description, add: <code class="language-plaintext highlighter-rouge">Closes #3</code> (use your task issue number)</li>
+      <li>This will auto-close the issue when merged</li>
+    </ul>
+  </li>
+  <li><strong>Review the Files Changed tab:</strong>
+    <ul>
+      <li>Click <strong>Files changed</strong></li>
+      <li>See your additions in green</li>
+    </ul>
+  </li>
+  <li><strong>Merge the PR:</strong>
+    <ul>
+      <li>Click <strong>Merge pull request</strong></li>
+      <li>Click <strong>Confirm merge</strong></li>
+      <li>Click <strong>Delete branch</strong></li>
+    </ul>
+  </li>
+  <li><strong>Verify the issue was closed:</strong>
+    <ul>
+      <li>Go to Issues</li>
+      <li>Your task issue should now be closed</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="-success-criteria-2">✅ Success Criteria</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Feature branch created</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />CONTRIBUTING.md file added</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Pull request created with description</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Issue linked and auto-closed</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />PR merged and branch deleted</li>
+</ul>
+
+<h2 id="lab-4-explore-repository-settings">Lab 4: Explore Repository Settings</h2>
+
+<p><strong>Objective:</strong> Familiarize yourself with repository configuration.</p>
+
+<p><strong>Time:</strong> 5 minutes</p>
+
+<h3 id="instructions-3">Instructions</h3>
+
+<ol>
+  <li><strong>Navigate to Settings:</strong>
+    <ul>
+      <li>Go to your repository</li>
+      <li>Click <strong>⚙️ Settings</strong> tab</li>
+    </ul>
+  </li>
+  <li><strong>Explore General settings:</strong>
+    <ul>
+      <li>Note the default branch setting</li>
+      <li>See feature toggles (Wiki, Issues, Projects)</li>
+    </ul>
+  </li>
+  <li><strong>Check Branches settings:</strong>
+    <ul>
+      <li>Click <strong>Branches</strong> in sidebar</li>
+      <li>Note: This is where branch protection rules go</li>
+    </ul>
+  </li>
+  <li><strong>Review Collaborators:</strong>
+    <ul>
+      <li>Click <strong>Collaborators and teams</strong></li>
+      <li>This is where you’d add team members</li>
+    </ul>
+  </li>
+  <li><strong>Look at Actions settings:</strong>
+    <ul>
+      <li>Click <strong>Actions</strong> → <strong>General</strong></li>
+      <li>See workflow permission options</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="reflection-questions">Reflection Questions</h3>
+<ul>
+  <li>What settings would you change for a team project?</li>
+  <li>What branch protection rules would you recommend?</li>
+  <li>How would you configure this for a customer’s needs?</li>
+</ul>
+
+<hr />
+
+<h2 id="-lab-completion-checklist">🎉 Lab Completion Checklist</h2>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Lab 1: Created and labeled issues</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Lab 2: Set up project board</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Lab 3: Created and merged pull request</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Lab 4: Explored repository settings</li>
+</ul>
+
+<div class="callout callout-tip">
+<div class="callout-title">📸 Keep Your Practice Repo</div>
+
+This repository is now a great reference for demonstrating GitHub features to customers!
+</div>
+
+            </article>
+          </main>
+          
+          <!-- Table of Contents Sidebar -->
+          
+        </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="module-nav">
+          
+            <a href="/beginner/module-3/walkthrough/" class="nav-button nav-prev">
+              <span class="nav-direction">← Previous</span>
+              <span class="nav-title">Guided Walkthrough</span>
+            </a>
+          
+
+          <div class="nav-center">
+            <a href="/beginner/module-3/" class="nav-index">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.75A.75.75 0 0 1 2.75 2h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 2.75Zm0 5A.75.75 0 0 1 2.75 7h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 7.75ZM2.75 12h10.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5Z"></path></svg>
+              Module Overview
+            </a>
+          </div>
+
+          
+            <a href="/beginner/module-3/quiz/" class="nav-button nav-next">
+              <span class="nav-direction">Next →</span>
+              <span class="nav-title">Knowledge Check</span>
+            </a>
+          
+        </nav>
+      </div>
+
+      </main>
+    </div>
+
+    <footer class="training-footer">
+  <div class="container">
+    <div class="training-footer-content">
+      <div class="footer-info">
+        <p class="footer-text">GitHub Training Program v1.0 | Last updated: December 2025</p>
+        <p class="footer-links">
+          <a href="https://docs.github.com" target="_blank" rel="noopener">GitHub Docs</a> • 
+          <a href="https://github.community" target="_blank" rel="noopener">Community</a> • 
+          <a href="/syllabus/">Full Syllabus</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- Smooth scroll behavior -->
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const href = this.getAttribute('href');
+          if (href !== '#') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+        });
+      });
+
+      // Add copy button to code blocks
+      document.querySelectorAll('pre').forEach(pre => {
+        // Create wrapper div
+        const wrapper = document.createElement('div');
+        wrapper.className = 'code-block-wrapper';
+        pre.parentNode.insertBefore(wrapper, pre);
+        wrapper.appendChild(pre);
+
+        // Create copy button
+        const button = document.createElement('button');
+        button.className = 'copy-button';
+        button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+        button.title = 'Copy to clipboard';
+        wrapper.appendChild(button);
+
+        // Copy functionality
+        button.addEventListener('click', async () => {
+          const code = pre.querySelector('code') ? pre.querySelector('code').textContent : pre.textContent;
+          try {
+            await navigator.clipboard.writeText(code);
+            button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+            button.classList.add('copied');
+            setTimeout(() => {
+              button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+              button.classList.remove('copied');
+            }, 2000);
+          } catch (err) {
+            console.error('Failed to copy:', err);
+          }
+        });
+      });
+    </script>
+
+    <!-- Mermaid.js for diagrams with pan/zoom -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+    <script>
+      // Initialize Mermaid with theme matching the training modules
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: 'base',
+        themeVariables: {
+          // Primary colors - matching GitHub/training theme
+          primaryColor: '#ddf4ff',
+          primaryTextColor: '#1f2328',
+          primaryBorderColor: '#0969da',
+          
+          // Secondary and tertiary colors
+          secondaryColor: '#f6f8fa',
+          secondaryTextColor: '#1f2328',
+          secondaryBorderColor: '#d0d7de',
+          tertiaryColor: '#fff8c5',
+          tertiaryTextColor: '#1f2328',
+          tertiaryBorderColor: '#d4a72c',
+          
+          // Background colors
+          background: '#ffffff',
+          mainBkg: '#ddf4ff',
+          secondBkg: '#f6f8fa',
+          
+          // Lines and borders
+          lineColor: '#57606a',
+          border1: '#d0d7de',
+          border2: '#0969da',
+          arrowheadColor: '#57606a',
+          
+          // Text styling
+          fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif',
+          fontSize: '14px',
+          labelBackground: '#ffffff',
+          nodeTextColor: '#1f2328',
+          
+          // Subgraph styling
+          clusterBkg: '#f6f8fa',
+          clusterBorder: '#d0d7de',
+          
+          // Note styling
+          noteBkgColor: '#fff8c5',
+          noteTextColor: '#1f2328',
+          noteBorderColor: '#d4a72c'
+        },
+        flowchart: {
+          useMaxWidth: true,
+          htmlLabels: true,
+          curve: 'basis',
+          padding: 30,
+          nodeSpacing: 50,
+          rankSpacing: 70,
+          subGraphTitleMargin: {
+            top: 10,
+            bottom: 20
+          }
+        },
+        securityLevel: 'loose'
+      });
+
+      // Add pan/zoom to Mermaid diagrams after they render
+      mermaid.run().then(() => {
+        document.querySelectorAll('.mermaid-container svg').forEach((svg, index) => {
+          // Ensure SVG has an ID for pan-zoom
+          if (!svg.id) {
+            svg.id = 'mermaid-svg-' + index;
+          }
+          
+          // Set minimum dimensions on SVG for better visibility
+          svg.style.minWidth = '100%';
+          svg.style.minHeight = '300px';
+          
+          // Initialize pan-zoom
+          const panZoom = svgPanZoom(svg, {
+            zoomEnabled: true,
+            controlIconsEnabled: true,
+            fit: true,
+            center: true,
+            minZoom: 0.3,
+            maxZoom: 10,
+            zoomScaleSensitivity: 0.3,
+            dblClickZoomEnabled: true,
+            mouseWheelZoomEnabled: true,
+            preventMouseEventsDefault: true,
+            contain: false
+          });
+
+          // Handle window resize
+          window.addEventListener('resize', () => {
+            panZoom.resize();
+            panZoom.fit();
+            panZoom.center();
+          });
+        });
+      });
+    </script>
+
+  </body>
+</html>

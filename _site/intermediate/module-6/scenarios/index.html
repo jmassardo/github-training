@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Module 6, Section 7: Real-World CSM Scenarios &middot; GitHub Training
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="preload" href="/public/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/public/css/main.css"></noscript>
+
+  <!-- GLightbox CSS for Image Modals -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+</head>
+
+
+  <body class="training-layout">
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="training-header">
+  <div class="container">
+    <div class="training-header-inner">
+      <div class="training-brand">
+        <a href="/" class="training-logo">
+          <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" class="octicon">
+            <path fill="currentColor" d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
+          </svg>
+          <span class="training-title">GitHub Training</span>
+        </a>
+        <span class="training-tagline">CSM & CSA Certification Program</span>
+      </div>
+      
+      <nav class="training-nav" aria-label="Training navigation">
+        <a href="/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8.156 1.835a.25.25 0 00-.312 0l-5.25 4.2a.25.25 0 00-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 01.75-.75h3.5a.75.75 0 01.75.75v5.25h2.75a.25.25 0 00.25-.25V6.23a.25.25 0 00-.094-.195z"></path>
+          </svg>
+          Home
+        </a>
+        <a href="/beginner/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0114.25 16H1.75A1.75 1.75 0 010 14.25V1.75zm1.75-.25a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V1.75a.25.25 0 00-.25-.25H1.75zM3.5 6.25a.75.75 0 01.75-.75h7a.75.75 0 010 1.5h-7a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h4a.75.75 0 000-1.5h-4z"></path>
+          </svg>
+          Beginner
+        </a>
+        <a href="/intermediate/" class="training-nav-link active">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+            <path fill="currentColor" d="M8 0a8 8 0 110 16A8 8 0 018 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"></path>
+          </svg>
+          Intermediate
+        </a>
+        <a href="/advanced/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"></path>
+          </svg>
+          Advanced
+        </a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+    <!-- Main content area with sidebar -->
+    <div class="training-container">
+      
+      <!-- Sidebar navigation -->
+      <aside class="training-sidebar">
+        <div class="training-sidebar-sticky">
+          
+          
+          
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">🚀 Intermediate Phase</h3>
+            <nav class="sidebar-nav">
+              <a href="/intermediate/" class="sidebar-link">Phase Overview</a>
+              <a href="/intermediate/module-5/" class="sidebar-link">Module 5: Actions</a>
+              <a href="/intermediate/module-6/" class="sidebar-link active">Module 6: Security</a>
+              <a href="/intermediate/module-7/" class="sidebar-link">Module 7: Packages</a>
+              <a href="/intermediate/module-8/" class="sidebar-link">Module 8: CI/CD</a>
+            </nav>
+          </div>
+          
+          
+          
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">Resources</h3>
+            <nav class="sidebar-nav">
+              <a href="/syllabus/" class="sidebar-link">Full Syllabus</a>
+              <a href="https://docs.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Docs
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+              <a href="https://skills.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Skills
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+            </nav>
+          </div>
+          
+        </div>
+      </aside>
+
+      <!-- Main content area -->
+      <main id="main-content" class="training-main">
+      
+        <div class="training-module">
+        <!-- Module Header -->
+        <header class="module-header">
+          <div class="module-breadcrumb">
+            <a href="/">Training Home</a>
+            <span class="separator">›</span>
+            <a href="/intermediate/">Intermediate Phase</a>
+            <span class="separator">›</span>
+            <a href="/intermediate/module-6/">Module 6</a>
+          </div>
+          
+          <h1 class="module-title">Module 6, Section 7: Real-World CSM Scenarios</h1>
+          
+          <div class="module-meta">
+            <span class="badge badge-intermediate">Intermediate</span>
+            <span class="meta-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm7-3.25v2.992l2.028.812a.75.75 0 0 1-.557 1.392l-2.5-1A.751.751 0 0 1 7 8.25v-3.5a.75.75 0 0 1 1.5 0Z"></path></svg>
+              
+            </span>
+            <span class="meta-item">
+              Section 7 of 7
+            </span>
+          </div>
+        </header>
+
+        <!-- Progress Bar -->
+        <div class="module-progress">
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 100.0%"></div>
+          </div>
+          <div class="progress-steps">
+            
+              
+              <a href="/intermediate/module-6/overview/" 
+                 class="progress-step completed"
+                 title="Context & Overview">
+                <span class="step-dot"></span>
+                <span class="step-label">1</span>
+              </a>
+            
+              
+              <a href="/intermediate/module-6/concepts/" 
+                 class="progress-step completed"
+                 title="Core Concepts">
+                <span class="step-dot"></span>
+                <span class="step-label">2</span>
+              </a>
+            
+              
+              <a href="/intermediate/module-6/walkthrough/" 
+                 class="progress-step completed"
+                 title="Guided Walkthrough">
+                <span class="step-dot"></span>
+                <span class="step-label">3</span>
+              </a>
+            
+              
+              <a href="/intermediate/module-6/labs/" 
+                 class="progress-step completed"
+                 title="Hands-On Labs">
+                <span class="step-dot"></span>
+                <span class="step-label">4</span>
+              </a>
+            
+              
+              <a href="/intermediate/module-6/quiz/" 
+                 class="progress-step completed"
+                 title="Knowledge Check">
+                <span class="step-dot"></span>
+                <span class="step-label">5</span>
+              </a>
+            
+              
+              <a href="/intermediate/module-6/resources/" 
+                 class="progress-step completed"
+                 title="Resources">
+                <span class="step-dot"></span>
+                <span class="step-label">6</span>
+              </a>
+            
+              
+              <a href="/intermediate/module-6/scenarios/" 
+                 class="progress-step active"
+                 title="CSM Scenarios">
+                <span class="step-dot"></span>
+                <span class="step-label">7</span>
+              </a>
+            
+          </div>
+        </div>
+
+        <!-- Section Navigation Tabs -->
+        <nav class="section-tabs">
+          
+            
+            <a href="/intermediate/module-6/overview/" 
+               class="section-tab ">
+              <span class="tab-icon">🎯</span>
+              <span class="tab-title">Overview</span>
+            </a>
+          
+            
+            <a href="/intermediate/module-6/concepts/" 
+               class="section-tab ">
+              <span class="tab-icon">📚</span>
+              <span class="tab-title">Concepts</span>
+            </a>
+          
+            
+            <a href="/intermediate/module-6/walkthrough/" 
+               class="section-tab ">
+              <span class="tab-icon">🚶</span>
+              <span class="tab-title">Walkthrough</span>
+            </a>
+          
+            
+            <a href="/intermediate/module-6/labs/" 
+               class="section-tab ">
+              <span class="tab-icon">💻</span>
+              <span class="tab-title">Labs</span>
+            </a>
+          
+            
+            <a href="/intermediate/module-6/quiz/" 
+               class="section-tab ">
+              <span class="tab-icon">✅</span>
+              <span class="tab-title">Quiz</span>
+            </a>
+          
+            
+            <a href="/intermediate/module-6/resources/" 
+               class="section-tab ">
+              <span class="tab-icon">📖</span>
+              <span class="tab-title">Resources</span>
+            </a>
+          
+            
+            <a href="/intermediate/module-6/scenarios/" 
+               class="section-tab active">
+              <span class="tab-icon">💼</span>
+              <span class="tab-title">Scenarios</span>
+            </a>
+          
+        </nav>
+
+        <!-- Main Content with TOC Sidebar -->
+        <div class="module-content-wrapper">
+          <main id="main-content" class="module-content">
+            <article class="section-content">
+              
+<h2 id="scenario-1-ghas-enterprise-rollout">Scenario 1: GHAS Enterprise Rollout</h2>
+
+<h3 id="situation">Situation</h3>
+<p>A large enterprise customer (5000+ developers, 2000+ repositories) wants to roll out GHAS. They’re concerned about alert fatigue and developer pushback.</p>
+
+<h3 id="customer-question">Customer Question</h3>
+<p>“How do we roll out GHAS without overwhelming our developers with alerts?”</p>
+
+<h3 id="your-response">Your Response</h3>
+<p>“Great concern to raise upfront. Here’s a battle-tested rollout strategy:
+<strong>Phase 1: Establish Baseline (Weeks 1-2)</strong>
+- Enable Dependabot alerts and secret scanning in ‘audit only’ mode
+- Don’t notify developers yet
+- Measure current vulnerability density
+<strong>Phase 2: Silent Pilot (Weeks 3-4)</strong>
+- Enable CodeQL on 10 representative repos
+- Security team triages ALL alerts
+- Identify false positive patterns
+- Create triage playbook
+<strong>Phase 3: Developer Pilot (Weeks 5-8)</strong>
+- Expand to 50 repos with engaged teams
+- Enable notifications
+- Provide training sessions
+- Measure MTTR and developer feedback
+<strong>Phase 4: Wide Rollout (Weeks 9-16)</strong>
+- Roll out to all active repositories
+- 100-200 repos per week
+- Monitor alert volumes
+- Adjust configurations as needed
+<strong>Phase 5: Enforcement (Week 17+)</strong>
+- Enable branch protection integration
+- Require CodeQL checks to pass
+- Enable push protection
+<strong>Key success factors:</strong>
+1. <strong>Training before rollout</strong> - Developers need to understand what alerts mean
+2. <strong>Clear ownership</strong> - Define who triages which alert types
+3. <strong>SLA agreements</strong> - Critical: 24h, High: 7d, Medium: 30d
+4. <strong>Success metrics</strong> - Track MTTR, not just alert count
+5. <strong>Executive sponsorship</strong> - Security is a priority, not a blocker
+Shall I help create a detailed rollout plan with your specific timeline?”
+---</p>
+
+<h2 id="scenario-2-high-false-positive-rate">Scenario 2: High False Positive Rate</h2>
+
+<h3 id="situation-1">Situation</h3>
+<p>A customer enabled CodeQL but developers are ignoring alerts because “they’re all false positives.” The security team is frustrated.</p>
+
+<h3 id="customer-question-1">Customer Question</h3>
+<p>“Our developers say CodeQL has too many false positives. They’ve stopped paying attention to alerts. How do we fix this?”</p>
+
+<h3 id="your-response-1">Your Response</h3>
+<p>“This is a common challenge. Let’s diagnose and fix it:
+<strong>Immediate Actions:</strong>
+1. <strong>Audit recent dismissals:</strong></p>
+
+<div class="language-graphql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Check dismissed alerts</span><span class="w">
+</span><span class="k">query</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="n">repository</span><span class="p">(</span><span class="n">owner</span><span class="p">:</span><span class="w"> </span><span class="err">\</span><span class="s2">"org\", name: \"repo\"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="n">codeScanning</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="n">alerts</span><span class="p">(</span><span class="n">first</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="n">states</span><span class="p">:</span><span class="w"> </span><span class="n">DISMISSED</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="n">nodes</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="n">dismissedReason</span><span class="w">
+          </span><span class="n">rule</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">description</span><span class="w"> </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre></div></div>
+
+<ol>
+  <li><strong>Check query suite:</strong></li>
+</ol>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># If using security-and-quality, switch to default</span>
+<span class="na">queries</span><span class="pi">:</span> <span class="s">default</span>  <span class="c1"># Instead of +security-extended</span>
+
+</code></pre></div></div>
+
+<p><strong>Configuration Improvements:</strong>
+3. <strong>Exclude test code:</strong></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">paths-ignore</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">\"**/test/**\"</span>
+  <span class="pi">-</span> <span class="s">\"**/tests/**\"</span>
+  <span class="pi">-</span> <span class="s">\"**/__tests__/**\"</span>
+  <span class="pi">-</span> <span class="s">\"**/mock/**\"</span>
+
+</code></pre></div></div>
+
+<ol>
+  <li><strong>Add code models for safe functions:</strong></li>
+</ol>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Mark sanitization functions as safe</span>
+<span class="na">extensions</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">addsTo</span><span class="pi">:</span>
+      <span class="na">pack</span><span class="pi">:</span> <span class="s">codeql/java-queries</span>
+    <span class="na">data</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="pi">[</span><span class="nv">\"com.company.utils\"</span><span class="pi">,</span> <span class="nv">\"Sanitizer\"</span><span class="pi">,</span> <span class="nv">\"sanitize\"</span><span class="pi">,</span> <span class="nv">\"ReturnValue\"</span><span class="pi">,</span> <span class="nv">\"safe\"</span><span class="pi">]</span>
+
+</code></pre></div></div>
+
+<p><strong>Process Improvements:</strong>
+5. <strong>Require triage notes:</strong>
+- Every dismissal needs a reason
+- Review dismissals weekly
+6. <strong>Report real false positives:</strong>
+- Submit to GitHub for query improvement
+- Helps the whole community
+<strong>Developer Experience:</strong>
+7. <strong>Only show high-confidence:</strong>
+- Start with <code class="language-plaintext highlighter-rouge">default</code> suite
+- Add <code class="language-plaintext highlighter-rouge">security-extended</code> only for specific high-risk repos
+8. <strong>Integrate into workflow:</strong>
+- Show alerts in PR, not just Security tab
+- Link to fix guidance
+Want me to review your current configuration and suggest specific improvements?”</p>
+
+<h2 id="scenario-3-compliance-evidence">Scenario 3: Compliance Evidence</h2>
+
+<h3 id="situation-2">Situation</h3>
+<p>A customer is going through SOC 2 audit and needs to demonstrate security scanning controls.</p>
+
+<h3 id="customer-question-2">Customer Question</h3>
+<p>“Our auditors want evidence that we scan all code for vulnerabilities. How do we prove GHAS is working?”</p>
+
+<h3 id="your-response-2">Your Response</h3>
+<p>“GHAS provides excellent compliance evidence. Here’s what auditors typically need:
+<strong>1. Policy Evidence:</strong>
+- Screenshot of organization security settings
+- Branch protection rules requiring CodeQL
+- SECURITY.md file documenting policies
+<strong>2. Coverage Evidence:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Export repo list with security features</span>
+gh api /orgs/<span class="o">{</span>org<span class="o">}</span>/repos <span class="nt">--paginate</span> | <span class="se">\</span>
+  jq <span class="s1">'.[] | {name, security: .security_and_analysis}'</span>
+<span class="c"># Or use Security Overview</span>
+Organization → Security → Security overview → Export CSV
+
+</code></pre></div></div>
+
+<p><strong>3. Detection Evidence:</strong>
+- Security Overview dashboard showing:
+  - Total alerts by severity
+  - Repositories scanned
+  - Mean time to remediate
+<strong>4. Remediation Evidence:</strong>
+- Closed alerts showing timeline
+- PRs fixing vulnerabilities
+- Audit log of security events
+<strong>5. Continuous Monitoring Evidence:</strong></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Scheduled scanning proves continuous monitoring</span>
+<span class="na">on</span><span class="pi">:</span>
+  <span class="na">schedule</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">cron</span><span class="pi">:</span> <span class="s1">'</span><span class="s">0</span><span class="nv"> </span><span class="s">4</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*'</span>  <span class="c1"># Daily at 4 AM</span>
+
+</code></pre></div></div>
+
+<p><strong>Report Generation:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Generate compliance report via API</span>
+gh api graphql <span class="nt">-f</span> <span class="nv">query</span><span class="o">=</span><span class="s1">'
+query {
+  organization(login: \"your-org\") {
+    repositories(first: 100) {
+      nodes {
+        name
+        vulnerabilityAlerts { totalCount }
+        codeScanning {
+          alerts { totalCount }
+        }
+      }
+    }
+  }
+}'</span>
+
+</code></pre></div></div>
+
+<p><strong>For your SOC 2 specifically:</strong>
+- CC6.1 (Security): CodeQL + Secret Scanning
+- CC6.6 (Processing Integrity): Dependency Review
+- CC7.1 (Availability): Scanning doesn’t block deploys
+I can help you create a compliance package with screenshots and API exports if needed.”
+---</p>
+
+<h2 id="scenario-4-secret-leak-incident">Scenario 4: Secret Leak Incident</h2>
+
+<h3 id="situation-3">Situation</h3>
+<p>A developer accidentally committed an AWS access key. It was detected by secret scanning but the customer doesn’t know how to respond.</p>
+
+<h3 id="customer-question-3">Customer Question</h3>
+<p>“We just got an alert that AWS credentials were exposed in a commit. What do we do?”</p>
+
+<h3 id="your-response-3">Your Response</h3>
+<p>“Let’s move quickly. Here’s your incident response checklist:
+<strong>Immediate (Next 15 minutes):</strong>
+1. <strong>Rotate the credential NOW:</strong>
+   - Go to AWS IAM Console
+   - Deactivate the exposed access key
+   - Create a new access key
+   - Update applications using the key
+2. <strong>Check for unauthorized usage:</strong>
+   - AWS CloudTrail: Look for unusual API calls
+   - Check for new resources created
+   - Review billing for anomalies
+<strong>Short-term (Next hour):</strong>
+3. <strong>Remove from Git history:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Using BFG Repo Cleaner</span>
+bfg <span class="nt">--replace-text</span> passwords.txt repo.git
+<span class="c"># Or git-filter-repo</span>
+git filter-repo <span class="nt">--replace-text</span> expressions.txt
+
+</code></pre></div></div>
+
+<ol>
+  <li><strong>Force push cleaned history:</strong></li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push origin <span class="nt">--force</span> <span class="nt">--all</span>
+git push origin <span class="nt">--force</span> <span class="nt">--tags</span>
+
+</code></pre></div></div>
+
+<ol>
+  <li><strong>Notify GitHub:</strong>
+- If partner secret, GitHub already notified AWS
+- AWS may auto-revoke if their policy is configured
+<strong>Documentation:</strong></li>
+  <li><strong>Document the incident:</strong>
+- When was the secret committed?
+- When was it detected?
+- When was it rotated?
+- Was there unauthorized access?
+<strong>Prevention:</strong></li>
+  <li><strong>Enable push protection:</strong>
+- Prevents this from happening again
+- Settings → Code security → Push protection</li>
+  <li><strong>Add pre-commit hooks:</strong></li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Use detect-secrets or similar</span>
+pip <span class="nb">install </span>detect-secrets
+detect-secrets scan <span class="o">&gt;</span> .secrets.baseline
+
+</code></pre></div></div>
+
+<ol>
+  <li><strong>Developer training:</strong>
+- Never commit secrets
+- Use environment variables
+- Use AWS IAM roles instead of access keys
+Do you need help with any of these steps?”</li>
+</ol>
+
+<h2 id="module-summary">Module Summary</h2>
+
+<h3 id="key-takeaways">Key Takeaways</h3>
+<ol>
+  <li><strong>Shift Security Left</strong>
+    <ul>
+      <li>Integrate security into development workflow</li>
+      <li>Catch issues before they reach production</li>
+      <li>Make security feedback fast and actionable</li>
+    </ul>
+  </li>
+  <li><strong>CodeQL Provides Deep Analysis</strong>
+    <ul>
+      <li>Semantic analysis finds complex vulnerabilities</li>
+      <li>Configure for your language and risk tolerance</li>
+      <li>Use query suites appropriate to your needs</li>
+    </ul>
+  </li>
+  <li><strong>Secret Scanning is Essential</strong>
+    <ul>
+      <li>Detects 200+ secret types automatically</li>
+      <li>Push protection prevents accidents</li>
+      <li>Partner program enables auto-revocation</li>
+    </ul>
+  </li>
+  <li><strong>Dependabot Automates Updates</strong>
+    <ul>
+      <li>Alerts notify about vulnerabilities</li>
+      <li>Security updates create fix PRs</li>
+      <li>Version updates keep dependencies current</li>
+    </ul>
+  </li>
+  <li><strong>Phased Rollout Ensures Success</strong>
+    <ul>
+      <li>Don’t enable everything at once</li>
+      <li>Train developers first</li>
+      <li>Establish baselines before enforcement</li>
+    </ul>
+  </li>
+  <li><strong>Metrics Drive Improvement</strong>
+    <ul>
+      <li>Track MTTR, not just alert counts</li>
+      <li>Monitor false positive rates</li>
+      <li>
+        <h2 id="celebrate-security-wins">Celebrate security wins</h2>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="whats-next">What’s Next</h2>
+<p>In <strong>Module 7: Dependency &amp; Package Management</strong>, you’ll learn about:
+- GitHub Packages registry
+- Container registry (GHCR)
+- Package publishing workflows
+- Dependency supply chain security
+The security scanning you’ve learned here integrates directly with package management to create a secure software supply chain.</p>
+
+<h2 id="checklist-module-6-complete">Checklist: Module 6 Complete</h2>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Enabled GHAS features at repository level</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Configured CodeQL with appropriate query suite</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Set up Dependabot with custom configuration</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Enabled secret scanning and push protection</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Triaged at least 5 security alerts</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Completed all three labs</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Reviewed real-world scenarios</li>
+</ul>
+
+<hr />
+<div class="section-navigation">
+  <a href="/intermediate/module-6/resources/" class="nav-button nav-prev">
+    <span class="nav-label">← Previous</span>
+    <span class="nav-title">Resources</span>
+  </a>
+  <a href="/intermediate/module-7/" class="nav-button nav-next">
+    <span class="nav-label">Next →</span>
+    <span class="nav-title">Module 7: GitHub Packages</span>
+  </a>
+</div>
+
+            </article>
+          </main>
+          
+          <!-- Table of Contents Sidebar -->
+          
+          <aside class="section-toc">
+            <h4>On This Page</h4>
+            <nav class="toc-nav">
+              <ul id="toc" class="toc-list">
+<li class="toc-item toc-h2"><a href="#scenario-1-ghas-enterprise-rollout">Scenario 1: GHAS Enterprise Rollout</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#situation">Situation</a></li>
+<li class="toc-item toc-h3"><a href="#customer-question">Customer Question</a></li>
+<li class="toc-item toc-h3"><a href="#your-response">Your Response</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#scenario-2-high-false-positive-rate">Scenario 2: High False Positive Rate</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#situation-1">Situation</a></li>
+<li class="toc-item toc-h3"><a href="#customer-question-1">Customer Question</a></li>
+<li class="toc-item toc-h3"><a href="#your-response-1">Your Response</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#scenario-3-compliance-evidence">Scenario 3: Compliance Evidence</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#situation-2">Situation</a></li>
+<li class="toc-item toc-h3"><a href="#customer-question-2">Customer Question</a></li>
+<li class="toc-item toc-h3"><a href="#your-response-2">Your Response</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#scenario-4-secret-leak-incident">Scenario 4: Secret Leak Incident</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#situation-3">Situation</a></li>
+<li class="toc-item toc-h3"><a href="#customer-question-3">Customer Question</a></li>
+<li class="toc-item toc-h3"><a href="#your-response-3">Your Response</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#module-summary">Module Summary</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#key-takeaways">Key Takeaways</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#celebrate-security-wins">Celebrate security wins</a></li>
+<li class="toc-item toc-h2"><a href="#whats-next">What’s Next</a></li>
+<li class="toc-item toc-h2"><a href="#checklist-module-6-complete">Checklist: Module 6 Complete</a></li>
+</ul>
+            </nav>
+          </aside>
+          
+        </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="module-nav">
+          
+            <a href="/intermediate/module-6/resources/" class="nav-button nav-prev">
+              <span class="nav-direction">← Previous</span>
+              <span class="nav-title">Resources</span>
+            </a>
+          
+
+          <div class="nav-center">
+            <a href="/intermediate/module-6/" class="nav-index">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.75A.75.75 0 0 1 2.75 2h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 2.75Zm0 5A.75.75 0 0 1 2.75 7h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 7.75ZM2.75 12h10.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5Z"></path></svg>
+              Module Overview
+            </a>
+          </div>
+
+          
+            <a href="/intermediate/module-7/" class="nav-button nav-next">
+              <span class="nav-direction">Next →</span>
+              <span class="nav-title">Module 7: GitHub Packages</span>
+            </a>
+          
+        </nav>
+      </div>
+
+      </main>
+    </div>
+
+    <footer class="training-footer">
+  <div class="container">
+    <div class="training-footer-content">
+      <div class="footer-info">
+        <p class="footer-text">GitHub Training Program v1.0 | Last updated: December 2025</p>
+        <p class="footer-links">
+          <a href="https://docs.github.com" target="_blank" rel="noopener">GitHub Docs</a> • 
+          <a href="https://github.community" target="_blank" rel="noopener">Community</a> • 
+          <a href="/syllabus/">Full Syllabus</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- Smooth scroll behavior -->
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const href = this.getAttribute('href');
+          if (href !== '#') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+        });
+      });
+
+      // Add copy button to code blocks
+      document.querySelectorAll('pre').forEach(pre => {
+        // Create wrapper div
+        const wrapper = document.createElement('div');
+        wrapper.className = 'code-block-wrapper';
+        pre.parentNode.insertBefore(wrapper, pre);
+        wrapper.appendChild(pre);
+
+        // Create copy button
+        const button = document.createElement('button');
+        button.className = 'copy-button';
+        button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+        button.title = 'Copy to clipboard';
+        wrapper.appendChild(button);
+
+        // Copy functionality
+        button.addEventListener('click', async () => {
+          const code = pre.querySelector('code') ? pre.querySelector('code').textContent : pre.textContent;
+          try {
+            await navigator.clipboard.writeText(code);
+            button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+            button.classList.add('copied');
+            setTimeout(() => {
+              button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+              button.classList.remove('copied');
+            }, 2000);
+          } catch (err) {
+            console.error('Failed to copy:', err);
+          }
+        });
+      });
+    </script>
+
+    <!-- Mermaid.js for diagrams with pan/zoom -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+    <script>
+      // Initialize Mermaid with theme matching the training modules
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: 'base',
+        themeVariables: {
+          // Primary colors - matching GitHub/training theme
+          primaryColor: '#ddf4ff',
+          primaryTextColor: '#1f2328',
+          primaryBorderColor: '#0969da',
+          
+          // Secondary and tertiary colors
+          secondaryColor: '#f6f8fa',
+          secondaryTextColor: '#1f2328',
+          secondaryBorderColor: '#d0d7de',
+          tertiaryColor: '#fff8c5',
+          tertiaryTextColor: '#1f2328',
+          tertiaryBorderColor: '#d4a72c',
+          
+          // Background colors
+          background: '#ffffff',
+          mainBkg: '#ddf4ff',
+          secondBkg: '#f6f8fa',
+          
+          // Lines and borders
+          lineColor: '#57606a',
+          border1: '#d0d7de',
+          border2: '#0969da',
+          arrowheadColor: '#57606a',
+          
+          // Text styling
+          fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif',
+          fontSize: '14px',
+          labelBackground: '#ffffff',
+          nodeTextColor: '#1f2328',
+          
+          // Subgraph styling
+          clusterBkg: '#f6f8fa',
+          clusterBorder: '#d0d7de',
+          
+          // Note styling
+          noteBkgColor: '#fff8c5',
+          noteTextColor: '#1f2328',
+          noteBorderColor: '#d4a72c'
+        },
+        flowchart: {
+          useMaxWidth: true,
+          htmlLabels: true,
+          curve: 'basis',
+          padding: 30,
+          nodeSpacing: 50,
+          rankSpacing: 70,
+          subGraphTitleMargin: {
+            top: 10,
+            bottom: 20
+          }
+        },
+        securityLevel: 'loose'
+      });
+
+      // Add pan/zoom to Mermaid diagrams after they render
+      mermaid.run().then(() => {
+        document.querySelectorAll('.mermaid-container svg').forEach((svg, index) => {
+          // Ensure SVG has an ID for pan-zoom
+          if (!svg.id) {
+            svg.id = 'mermaid-svg-' + index;
+          }
+          
+          // Set minimum dimensions on SVG for better visibility
+          svg.style.minWidth = '100%';
+          svg.style.minHeight = '300px';
+          
+          // Initialize pan-zoom
+          const panZoom = svgPanZoom(svg, {
+            zoomEnabled: true,
+            controlIconsEnabled: true,
+            fit: true,
+            center: true,
+            minZoom: 0.3,
+            maxZoom: 10,
+            zoomScaleSensitivity: 0.3,
+            dblClickZoomEnabled: true,
+            mouseWheelZoomEnabled: true,
+            preventMouseEventsDefault: true,
+            contain: false
+          });
+
+          // Handle window resize
+          window.addEventListener('resize', () => {
+            panZoom.resize();
+            panZoom.fit();
+            panZoom.center();
+          });
+        });
+      });
+    </script>
+
+  </body>
+</html>

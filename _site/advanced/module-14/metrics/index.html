@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Metrics & Adoption &middot; GitHub Training
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="preload" href="/public/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/public/css/main.css"></noscript>
+
+  <!-- GLightbox CSS for Image Modals -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+</head>
+
+
+  <body class="training-layout">
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="training-header">
+  <div class="container">
+    <div class="training-header-inner">
+      <div class="training-brand">
+        <a href="/" class="training-logo">
+          <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" class="octicon">
+            <path fill="currentColor" d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
+          </svg>
+          <span class="training-title">GitHub Training</span>
+        </a>
+        <span class="training-tagline">CSM & CSA Certification Program</span>
+      </div>
+      
+      <nav class="training-nav" aria-label="Training navigation">
+        <a href="/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8.156 1.835a.25.25 0 00-.312 0l-5.25 4.2a.25.25 0 00-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 01.75-.75h3.5a.75.75 0 01.75.75v5.25h2.75a.25.25 0 00.25-.25V6.23a.25.25 0 00-.094-.195z"></path>
+          </svg>
+          Home
+        </a>
+        <a href="/beginner/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0114.25 16H1.75A1.75 1.75 0 010 14.25V1.75zm1.75-.25a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V1.75a.25.25 0 00-.25-.25H1.75zM3.5 6.25a.75.75 0 01.75-.75h7a.75.75 0 010 1.5h-7a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h4a.75.75 0 000-1.5h-4z"></path>
+          </svg>
+          Beginner
+        </a>
+        <a href="/intermediate/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+            <path fill="currentColor" d="M8 0a8 8 0 110 16A8 8 0 018 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"></path>
+          </svg>
+          Intermediate
+        </a>
+        <a href="/advanced/" class="training-nav-link active">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"></path>
+          </svg>
+          Advanced
+        </a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+    <!-- Main content area with sidebar -->
+    <div class="training-container">
+      
+      <!-- Sidebar navigation -->
+      <aside class="training-sidebar">
+        <div class="training-sidebar-sticky">
+          
+          
+          
+          
+          
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">🏆 Advanced Phase</h3>
+            <nav class="sidebar-nav">
+              <a href="/advanced/" class="sidebar-link">Phase Overview</a>
+              <a href="/advanced/module-9/" class="sidebar-link">Module 9: Enterprise Admin</a>
+              <a href="/advanced/module-10/" class="sidebar-link">Module 10: APIs & Apps</a>
+              <a href="/advanced/module-11/" class="sidebar-link">Module 11: IaC & Ops</a>
+              <a href="/advanced/module-12/" class="sidebar-link">Module 12: Governance</a>
+              <a href="/advanced/module-13/" class="sidebar-link">Module 13: Copilot Basics</a>
+              <a href="/advanced/module-14/" class="sidebar-link active">Module 14: Copilot Advanced</a>
+            </nav>
+          </div>
+          
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">Resources</h3>
+            <nav class="sidebar-nav">
+              <a href="/syllabus/" class="sidebar-link">Full Syllabus</a>
+              <a href="https://docs.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Docs
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+              <a href="https://skills.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Skills
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+            </nav>
+          </div>
+          
+        </div>
+      </aside>
+
+      <!-- Main content area -->
+      <main id="main-content" class="training-main">
+      
+        <div class="training-module">
+        <!-- Module Header -->
+        <header class="module-header">
+          <div class="module-breadcrumb">
+            <a href="/">Training Home</a>
+            <span class="separator">›</span>
+            <a href="/advanced/">Advanced Phase</a>
+            <span class="separator">›</span>
+            <a href="/advanced/module-14/">Module 14</a>
+          </div>
+          
+          <h1 class="module-title">Metrics & Adoption</h1>
+          
+          <div class="module-meta">
+            <span class="badge badge-advanced">Advanced</span>
+            <span class="meta-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm7-3.25v2.992l2.028.812a.75.75 0 0 1-.557 1.392l-2.5-1A.751.751 0 0 1 7 8.25v-3.5a.75.75 0 0 1 1.5 0Z"></path></svg>
+              30 min
+            </span>
+            <span class="meta-item">
+              Section 7 of 10
+            </span>
+          </div>
+        </header>
+
+        <!-- Progress Bar -->
+        <div class="module-progress">
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 70.0%"></div>
+          </div>
+          <div class="progress-steps">
+            
+              
+              <a href="/advanced/module-14/overview/" 
+                 class="progress-step completed"
+                 title="Context & Overview">
+                <span class="step-dot"></span>
+                <span class="step-label">1</span>
+              </a>
+            
+              
+              <a href="/advanced/module-14/agents/" 
+                 class="progress-step completed"
+                 title="Copilot Agents">
+                <span class="step-dot"></span>
+                <span class="step-label">2</span>
+              </a>
+            
+              
+              <a href="/advanced/module-14/mcp/" 
+                 class="progress-step completed"
+                 title="Model Context Protocol">
+                <span class="step-dot"></span>
+                <span class="step-label">3</span>
+              </a>
+            
+              
+              <a href="/advanced/module-14/extensions/" 
+                 class="progress-step completed"
+                 title="Copilot Extensions">
+                <span class="step-dot"></span>
+                <span class="step-label">4</span>
+              </a>
+            
+              
+              <a href="/advanced/module-14/instructions/" 
+                 class="progress-step completed"
+                 title="Custom Instructions">
+                <span class="step-dot"></span>
+                <span class="step-label">5</span>
+              </a>
+            
+              
+              <a href="/advanced/module-14/enterprise/" 
+                 class="progress-step completed"
+                 title="Enterprise Administration">
+                <span class="step-dot"></span>
+                <span class="step-label">6</span>
+              </a>
+            
+              
+              <a href="/advanced/module-14/metrics/" 
+                 class="progress-step active"
+                 title="Metrics & Adoption">
+                <span class="step-dot"></span>
+                <span class="step-label">7</span>
+              </a>
+            
+              
+              <a href="/advanced/module-14/labs/" 
+                 class="progress-step "
+                 title="Hands-On Labs">
+                <span class="step-dot"></span>
+                <span class="step-label">8</span>
+              </a>
+            
+              
+              <a href="/advanced/module-14/quiz/" 
+                 class="progress-step "
+                 title="Knowledge Check">
+                <span class="step-dot"></span>
+                <span class="step-label">9</span>
+              </a>
+            
+              
+              <a href="/advanced/module-14/resources/" 
+                 class="progress-step "
+                 title="Resources">
+                <span class="step-dot"></span>
+                <span class="step-label">10</span>
+              </a>
+            
+          </div>
+        </div>
+
+        <!-- Section Navigation Tabs -->
+        <nav class="section-tabs">
+          
+            
+            <a href="/advanced/module-14/overview/" 
+               class="section-tab ">
+              <span class="tab-icon">📋</span>
+              <span class="tab-title">Overview</span>
+            </a>
+          
+            
+            <a href="/advanced/module-14/agents/" 
+               class="section-tab ">
+              <span class="tab-icon">🤖</span>
+              <span class="tab-title">Agents</span>
+            </a>
+          
+            
+            <a href="/advanced/module-14/mcp/" 
+               class="section-tab ">
+              <span class="tab-icon">🔌</span>
+              <span class="tab-title">MCP</span>
+            </a>
+          
+            
+            <a href="/advanced/module-14/extensions/" 
+               class="section-tab ">
+              <span class="tab-icon">🧩</span>
+              <span class="tab-title">Extensions</span>
+            </a>
+          
+            
+            <a href="/advanced/module-14/instructions/" 
+               class="section-tab ">
+              <span class="tab-icon">📝</span>
+              <span class="tab-title">Instructions</span>
+            </a>
+          
+            
+            <a href="/advanced/module-14/enterprise/" 
+               class="section-tab ">
+              <span class="tab-icon">🏢</span>
+              <span class="tab-title">Enterprise</span>
+            </a>
+          
+            
+            <a href="/advanced/module-14/metrics/" 
+               class="section-tab active">
+              <span class="tab-icon">📊</span>
+              <span class="tab-title">Metrics</span>
+            </a>
+          
+            
+            <a href="/advanced/module-14/labs/" 
+               class="section-tab ">
+              <span class="tab-icon">🧪</span>
+              <span class="tab-title">Labs</span>
+            </a>
+          
+            
+            <a href="/advanced/module-14/quiz/" 
+               class="section-tab ">
+              <span class="tab-icon">📝</span>
+              <span class="tab-title">Quiz</span>
+            </a>
+          
+            
+            <a href="/advanced/module-14/resources/" 
+               class="section-tab ">
+              <span class="tab-icon">📖</span>
+              <span class="tab-title">Resources</span>
+            </a>
+          
+        </nav>
+
+        <!-- Main Content with TOC Sidebar -->
+        <div class="module-content-wrapper">
+          <main id="main-content" class="module-content">
+            <article class="section-content">
+              <h2 id="measuring-copilot-value">Measuring Copilot Value</h2>
+
+<p>Understanding GitHub Copilot’s impact helps justify investment, identify adoption gaps, and optimize configuration. This section covers the metrics framework, data collection, and ROI calculation.</p>
+
+<h3 id="why-measure">Why Measure?</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Goal</th>
+      <th>Metrics Help You</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Justify investment</td>
+      <td>Quantify time savings and ROI</td>
+    </tr>
+    <tr>
+      <td>Improve adoption</td>
+      <td>Identify teams needing support</td>
+    </tr>
+    <tr>
+      <td>Optimize configuration</td>
+      <td>Tune settings based on data</td>
+    </tr>
+    <tr>
+      <td>Track progress</td>
+      <td>Show improvement over time</td>
+    </tr>
+    <tr>
+      <td>Make decisions</td>
+      <td>Data-driven feature rollout</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="metrics-framework">Metrics Framework</h2>
+
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart TD
+  subgraph Framework["Metrics Framework"]
+    Adoption["📊 ADOPTION METRICS<br />• Active users / Total seats<br />• Daily/Weekly active users<br />• Feature utilization"]
+    Quality["✅ QUALITY METRICS<br />• Suggestion acceptance rate<br />• Suggestions per user per day<br />• Code retention rate"]
+    Impact["🎯 IMPACT METRICS<br />• Developer productivity<br />• Time to first commit<br />• Code review velocity<br />• Developer satisfaction"]
+    
+    Adoption --&gt; Quality --&gt; Impact
+  end
+</div>
+</div>
+
+<hr />
+
+<h2 id="adoption-metrics">Adoption Metrics</h2>
+
+<h3 id="seat-utilization">Seat Utilization</h3>
+
+<p>Track how many assigned seats are actively being used.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Get seat utilization via API</span>
+gh api /orgs/<span class="o">{</span>org<span class="o">}</span>/copilot/billing/seats <span class="nt">--jq</span> <span class="s1">'{
+  total_seats: (.seats | length),
+  active_7d: [.seats[] | select(.last_activity_at &gt; (now - 604800 | todate))] | length,
+  active_30d: [.seats[] | select(.last_activity_at &gt; (now - 2592000 | todate))] | length
+}'</span>
+
+</code></pre></div></div>
+
+<h3 id="adoption-funnel">Adoption Funnel</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Stage</th>
+      <th>Definition</th>
+      <th>Target</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Assigned</strong></td>
+      <td>Users with Copilot seats</td>
+      <td>100% of eligible developers</td>
+    </tr>
+    <tr>
+      <td><strong>Activated</strong></td>
+      <td>Used at least once</td>
+      <td>95% of assigned</td>
+    </tr>
+    <tr>
+      <td><strong>Active</strong></td>
+      <td>Used in last 7 days</td>
+      <td>80% of activated</td>
+    </tr>
+    <tr>
+      <td><strong>Power Users</strong></td>
+      <td>Daily usage</td>
+      <td>60% of active</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="tracking-dashboard-query">Tracking Dashboard Query</h3>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- Example analytics query for adoption tracking</span>
+<span class="k">SELECT</span> 
+  <span class="n">DATE_TRUNC</span><span class="p">(</span><span class="s1">'week'</span><span class="p">,</span> <span class="n">activity_date</span><span class="p">)</span> <span class="k">as</span> <span class="n">week</span><span class="p">,</span>
+  <span class="k">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span> <span class="n">user_id</span><span class="p">)</span> <span class="k">as</span> <span class="n">active_users</span><span class="p">,</span>
+  <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">as</span> <span class="n">total_suggestions</span><span class="p">,</span>
+  <span class="k">SUM</span><span class="p">(</span><span class="k">CASE</span> <span class="k">WHEN</span> <span class="n">accepted</span> <span class="k">THEN</span> <span class="mi">1</span> <span class="k">ELSE</span> <span class="mi">0</span> <span class="k">END</span><span class="p">)</span> <span class="k">as</span> <span class="n">accepted</span><span class="p">,</span>
+  <span class="n">ROUND</span><span class="p">(</span><span class="mi">100</span><span class="p">.</span><span class="mi">0</span> <span class="o">*</span> <span class="k">SUM</span><span class="p">(</span><span class="k">CASE</span> <span class="k">WHEN</span> <span class="n">accepted</span> <span class="k">THEN</span> <span class="mi">1</span> <span class="k">ELSE</span> <span class="mi">0</span> <span class="k">END</span><span class="p">)</span> <span class="o">/</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span> <span class="k">as</span> <span class="n">acceptance_rate</span>
+<span class="k">FROM</span> <span class="n">copilot_events</span>
+<span class="k">WHERE</span> <span class="n">activity_date</span> <span class="o">&gt;=</span> <span class="k">CURRENT_DATE</span> <span class="o">-</span> <span class="n">INTERVAL</span> <span class="s1">'90 days'</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="mi">1</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="mi">1</span><span class="p">;</span>
+
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="quality-metrics">Quality Metrics</h2>
+
+<h3 id="acceptance-rate">Acceptance Rate</h3>
+
+<p>The percentage of shown suggestions that users accept.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                    Accepted Suggestions
+Acceptance Rate = ─────────────────────────── × 100
+                   Total Suggestions Shown
+
+</code></pre></div></div>
+
+<p><strong>Benchmarks</strong>:
+- 🔴 &lt; 20% - Review configuration and training needs
+- 🟡 20-30% - Normal range for most organizations
+- 🟢 &gt; 30% - High effectiveness, share best practices</p>
+
+<h3 id="code-assist-rate">Code Assist Rate</h3>
+
+<p>The percentage of code written with Copilot assistance.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                    Lines Accepted from Copilot
+Code Assist Rate = ────────────────────────────── × 100
+                      Total Lines Committed
+
+</code></pre></div></div>
+
+<h3 id="code-retention">Code Retention</h3>
+
+<p>How much accepted Copilot code remains in the codebase after review.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                  Copilot Code Still in Codebase (30d later)
+Retention Rate = ────────────────────────────────────────────── × 100
+                        Total Copilot Code Accepted
+
+</code></pre></div></div>
+
+<p>High retention indicates high-quality suggestions that pass code review.</p>
+
+<hr />
+
+<h2 id="api-based-reporting">API-Based Reporting</h2>
+
+<h3 id="organization-usage-summary">Organization Usage Summary</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Get daily usage metrics</span>
+gh api /orgs/<span class="o">{</span>org<span class="o">}</span>/copilot/usage <span class="se">\</span>
+  <span class="nt">--jq</span> <span class="s1">'.usage_items[] | {
+    date: .day,
+    active_users: .total_active_users,
+    acceptances: .total_acceptances_count,
+    lines_suggested: .total_lines_suggested,
+    lines_accepted: .total_lines_accepted
+  }'</span>
+
+</code></pre></div></div>
+
+<h3 id="per-user-metrics">Per-User Metrics</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Get individual user activity</span>
+gh api /orgs/<span class="o">{</span>org<span class="o">}</span>/copilot/billing/seats <span class="se">\</span>
+  <span class="nt">--jq</span> <span class="s1">'.seats[] | {
+    user: .assignee.login,
+    last_active: .last_activity_at,
+    editor: .last_activity_editor,
+    created: .created_at
+  }'</span>
+
+</code></pre></div></div>
+
+<h3 id="export-to-csv">Export to CSV</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="c"># export-copilot-metrics.sh</span>
+
+<span class="nv">ORG</span><span class="o">=</span><span class="s2">"</span><span class="k">${</span><span class="nv">1</span><span class="k">:-</span><span class="nv">myorg</span><span class="k">}</span><span class="s2">"</span>
+<span class="nv">OUTPUT_DIR</span><span class="o">=</span><span class="s2">"./reports"</span>
+<span class="nv">DATE</span><span class="o">=</span><span class="si">$(</span><span class="nb">date</span> +%Y%m%d<span class="si">)</span>
+
+<span class="nb">mkdir</span> <span class="nt">-p</span> <span class="s2">"</span><span class="nv">$OUTPUT_DIR</span><span class="s2">"</span>
+
+<span class="c"># Export usage metrics</span>
+<span class="nb">echo</span> <span class="s2">"date,active_users,suggestions,acceptances,lines_suggested,lines_accepted"</span> <span class="o">&gt;</span> <span class="s2">"</span><span class="nv">$OUTPUT_DIR</span><span class="s2">/usage_</span><span class="nv">$DATE</span><span class="s2">.csv"</span>
+gh api /orgs/<span class="nv">$ORG</span>/copilot/usage <span class="nt">--paginate</span> <span class="se">\</span>
+  <span class="nt">--jq</span> <span class="s1">'.usage_items[] | [
+    .day,
+    .total_active_users,
+    .total_suggestions_count,
+    .total_acceptances_count,
+    .total_lines_suggested,
+    .total_lines_accepted
+  ] | @csv'</span> <span class="o">&gt;&gt;</span> <span class="s2">"</span><span class="nv">$OUTPUT_DIR</span><span class="s2">/usage_</span><span class="nv">$DATE</span><span class="s2">.csv"</span>
+
+<span class="c"># Export seat assignments</span>
+<span class="nb">echo</span> <span class="s2">"user,last_activity,editor,assigned_date"</span> <span class="o">&gt;</span> <span class="s2">"</span><span class="nv">$OUTPUT_DIR</span><span class="s2">/seats_</span><span class="nv">$DATE</span><span class="s2">.csv"</span>
+gh api /orgs/<span class="nv">$ORG</span>/copilot/billing/seats <span class="se">\</span>
+  <span class="nt">--jq</span> <span class="s1">'.seats[] | [
+    .assignee.login,
+    .last_activity_at,
+    .last_activity_editor,
+    .created_at
+  ] | @csv'</span> <span class="o">&gt;&gt;</span> <span class="s2">"</span><span class="nv">$OUTPUT_DIR</span><span class="s2">/seats_</span><span class="nv">$DATE</span><span class="s2">.csv"</span>
+
+<span class="nb">echo</span> <span class="s2">"Reports exported to </span><span class="nv">$OUTPUT_DIR</span><span class="s2">"</span>
+
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="impact-measurement">Impact Measurement</h2>
+
+<h3 id="developer-surveys">Developer Surveys</h3>
+
+<p>Quarterly surveys capture qualitative impact data.</p>
+
+<p><strong>Survey Questions</strong>:</p>
+
+<ol>
+  <li><strong>Time Savings</strong>: “How much time does Copilot save you per week?”
+    <ul>
+      <li>No time saved</li>
+      <li>1-2 hours</li>
+      <li>3-5 hours</li>
+      <li>5-10 hours</li>
+      <li>More than 10 hours</li>
+    </ul>
+  </li>
+  <li><strong>Quality Impact</strong>: “How has Copilot affected your code quality?”
+    <ul>
+      <li>Decreased</li>
+      <li>No change</li>
+      <li>Slightly improved</li>
+      <li>Significantly improved</li>
+    </ul>
+  </li>
+  <li><strong>Task Helpfulness</strong>: “What tasks is Copilot most helpful for?”
+    <ul>
+      <li>Boilerplate code</li>
+      <li>Test writing</li>
+      <li>Documentation</li>
+      <li>Learning new APIs</li>
+      <li>Debugging</li>
+      <li>Other</li>
+    </ul>
+  </li>
+  <li><strong>Satisfaction</strong>: “How satisfied are you with Copilot?” (1-10 scale)</li>
+</ol>
+
+<h3 id="productivity-indicators">Productivity Indicators</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Indicator</th>
+      <th>How to Measure</th>
+      <th>Expected Impact</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PR Cycle Time</td>
+      <td>Commit to merge duration</td>
+      <td>15-20% faster</td>
+    </tr>
+    <tr>
+      <td>Code Review Time</td>
+      <td>Review duration</td>
+      <td>10-15% faster</td>
+    </tr>
+    <tr>
+      <td>Test Coverage</td>
+      <td>Coverage percentage</td>
+      <td>5-10% increase</td>
+    </tr>
+    <tr>
+      <td>Bug Rate</td>
+      <td>Defects per commit</td>
+      <td>Neutral to improved</td>
+    </tr>
+    <tr>
+      <td>Developer Satisfaction</td>
+      <td>Survey NPS</td>
+      <td>+15-25 points</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="ab-comparison-study">A/B Comparison Study</h3>
+
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart LR
+  subgraph Study["Control vs Treatment"]
+    subgraph Control["🔴 Control Group<br />(No Copilot)"]
+      C1["Avg PR Time: 4.2h"]
+      C2["Lines/Day: 150"]
+      C3["Test Coverage: 72%"]
+      C4["Satisfaction: 7.2"]
+    end
+    
+    subgraph Treatment["🟢 Treatment Group<br />(With Copilot)"]
+      T1["Avg PR Time: 3.1h"]
+      T2["Lines/Day: 185"]
+      T3["Test Coverage: 78%"]
+      T4["Satisfaction: 8.4"]
+    end
+  end
+  
+  Results["📈 Results: 26% faster PRs, 23% more productive,<br />6% better coverage, 17% happier"]
+</div>
+</div>
+
+<hr />
+
+<h2 id="building-a-metrics-program">Building a Metrics Program</h2>
+
+<h3 id="phase-1-baseline-weeks-1-2">Phase 1: Baseline (Weeks 1-2)</h3>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Document current development metrics before Copilot</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Set up API access for Copilot data collection</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Create initial dashboard with key metrics</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Define success criteria with stakeholders</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Establish baseline satisfaction survey</li>
+</ul>
+
+<h3 id="phase-2-monitoring-ongoing">Phase 2: Monitoring (Ongoing)</h3>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Weekly usage reports for team leads</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Monthly trend analysis for leadership</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Quarterly business reviews with ROI</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Annual comprehensive assessment</li>
+</ul>
+
+<h3 id="phase-3-optimization">Phase 3: Optimization</h3>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Identify low-adoption teams</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Conduct targeted training interventions</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Adjust policies based on feedback</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Share success stories and best practices</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Celebrate wins and recognize champions</li>
+</ul>
+
+<hr />
+
+<h2 id="roi-calculation">ROI Calculation</h2>
+
+<h3 id="time-savings-model">Time Savings Model</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Annual Time Savings = 
+  (Hours Saved per Developer per Week) × 
+  (Number of Active Users) × 
+  (52 weeks)
+
+Annual Cost Savings = 
+  Annual Time Savings × 
+  (Fully Loaded Hourly Cost)
+
+Example:
+  2 hours × 100 users × 52 weeks = 10,400 hours
+  10,400 hours × $75/hour = $780,000 annual savings
+
+</code></pre></div></div>
+
+<h3 id="cost-benefit-analysis">Cost-Benefit Analysis</h3>
+
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart TD
+  subgraph Costs["💰 COSTS"]
+    C1["Copilot Licenses<br />$39/user × 100 users × 12 months<br />= $46,800"]
+    C2["Training &amp; Rollout<br />= $5,000"]
+    C3["Administration<br />5 hrs/month × $100<br />= $6,000"]
+    CT["TOTAL COST: $57,800"]
+    C1 --&gt; CT
+    C2 --&gt; CT
+    C3 --&gt; CT
+  end
+  
+  subgraph Benefits["📈 BENEFITS"]
+    B1["Developer Time Savings<br />= $780,000"]
+    B2["Faster Onboarding (20%)<br />= $25,000"]
+    B3["Reduced Context Switching<br />= $50,000"]
+    BT["TOTAL BENEFIT: $855,000"]
+    B1 --&gt; BT
+    B2 --&gt; BT
+    B3 --&gt; BT
+  end
+  
+  CT --&gt; Result["🎯 NET BENEFIT: $797,200<br />ROI: 1,379%"]
+  BT --&gt; Result
+</div>
+</div>
+
+<h3 id="conservative-vs-optimistic-estimates">Conservative vs Optimistic Estimates</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Scenario</th>
+      <th>Hours Saved/Week</th>
+      <th>Users</th>
+      <th>Annual Savings</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Conservative</td>
+      <td>1 hour</td>
+      <td>100</td>
+      <td>$390,000</td>
+    </tr>
+    <tr>
+      <td>Moderate</td>
+      <td>2 hours</td>
+      <td>100</td>
+      <td>$780,000</td>
+    </tr>
+    <tr>
+      <td>Optimistic</td>
+      <td>4 hours</td>
+      <td>100</td>
+      <td>$1,560,000</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="reporting-templates">Reporting Templates</h2>
+
+<h3 id="weekly-report">Weekly Report</h3>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh"># Copilot Weekly Report - Week of [DATE]</span>
+
+<span class="gu">## Summary Metrics</span>
+
+| Metric | This Week | Last Week | Change |
+|--------|-----------|-----------|--------|
+| Active Users | 87 | 83 | +4.8% |
+| Acceptance Rate | 28% | 26% | +2pp |
+| Suggestions/User | 145 | 138 | +5% |
+
+<span class="gu">## Highlights</span>
+<span class="p">-</span> Adoption increased 5% over last week
+<span class="p">-</span> New team onboarded: Platform Engineering
+<span class="p">-</span> Top language by volume: TypeScript (45%)
+
+<span class="gu">## Concerns</span>
+<span class="p">-</span> 13 users with no activity in 14+ days
+<span class="p">-</span> API team acceptance rate below average
+
+<span class="gu">## Action Items</span>
+<span class="p">-</span> [ ] Follow up with 13 inactive users
+<span class="p">-</span> [ ] Schedule training session for API team
+
+</code></pre></div></div>
+
+<h3 id="executive-summary-quarterly">Executive Summary (Quarterly)</h3>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh"># Q4 Copilot Business Review</span>
+
+<span class="gu">## Key Results vs Targets</span>
+
+| Metric | Target | Actual | Status |
+|--------|--------|--------|--------|
+| Adoption Rate | 85% | 90% | ✅ |
+| Acceptance Rate | 22% | 25% | ✅ |
+| Developer NPS | 60 | 72 | ✅ |
+| Est. Time Saved | 150 hrs/wk | 200 hrs/wk | ✅ |
+
+<span class="gu">## Financial Impact</span>
+<span class="p">-</span> Estimated annual savings: $780,000
+<span class="p">-</span> Cost of Copilot licenses: $57,800
+<span class="p">-</span> Net benefit: $722,200
+<span class="p">-</span> ROI: 1,249%
+
+<span class="gu">## Qualitative Feedback</span>
+<span class="gt">&gt; "Copilot has changed how I write tests. What used to take</span>
+<span class="gt">&gt; 30 minutes now takes 5." - Senior Developer</span>
+
+<span class="gu">## Recommendations</span>
+<span class="p">1.</span> Expand to contractor workforce (50 additional seats)
+<span class="p">2.</span> Pilot Copilot Enterprise knowledge bases
+<span class="p">3.</span> Increase training investment for new hires
+
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="key-takeaways">Key Takeaways</h2>
+
+<ol>
+  <li><strong>Track adoption first</strong> - utilization is the foundation of value</li>
+  <li><strong>Acceptance rate</strong> indicates suggestion quality and relevance</li>
+  <li><strong>Combine quantitative and qualitative</strong> data for complete picture</li>
+  <li><strong>Calculate ROI</strong> to justify continued investment</li>
+  <li><strong>Regular reporting</strong> maintains stakeholder buy-in</li>
+  <li><strong>Act on insights</strong> - use data to drive improvements</li>
+</ol>
+
+            </article>
+          </main>
+          
+          <!-- Table of Contents Sidebar -->
+          
+          <aside class="section-toc">
+            <h4>On This Page</h4>
+            <nav class="toc-nav">
+              <ul id="toc" class="toc-list">
+<li class="toc-item toc-h2"><a href="#measuring-copilot-value">Measuring Copilot Value</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#why-measure">Why Measure?</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#metrics-framework">Metrics Framework</a></li>
+<li class="toc-item toc-h2"><a href="#adoption-metrics">Adoption Metrics</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#seat-utilization">Seat Utilization</a></li>
+<li class="toc-item toc-h3"><a href="#adoption-funnel">Adoption Funnel</a></li>
+<li class="toc-item toc-h3"><a href="#tracking-dashboard-query">Tracking Dashboard Query</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#quality-metrics">Quality Metrics</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#acceptance-rate">Acceptance Rate</a></li>
+<li class="toc-item toc-h3"><a href="#code-assist-rate">Code Assist Rate</a></li>
+<li class="toc-item toc-h3"><a href="#code-retention">Code Retention</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#api-based-reporting">API-Based Reporting</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#organization-usage-summary">Organization Usage Summary</a></li>
+<li class="toc-item toc-h3"><a href="#per-user-metrics">Per-User Metrics</a></li>
+<li class="toc-item toc-h3"><a href="#export-to-csv">Export to CSV</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#impact-measurement">Impact Measurement</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#developer-surveys">Developer Surveys</a></li>
+<li class="toc-item toc-h3"><a href="#productivity-indicators">Productivity Indicators</a></li>
+<li class="toc-item toc-h3"><a href="#ab-comparison-study">A/B Comparison Study</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#building-a-metrics-program">Building a Metrics Program</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#phase-1-baseline-weeks-1-2">Phase 1: Baseline (Weeks 1-2)</a></li>
+<li class="toc-item toc-h3"><a href="#phase-2-monitoring-ongoing">Phase 2: Monitoring (Ongoing)</a></li>
+<li class="toc-item toc-h3"><a href="#phase-3-optimization">Phase 3: Optimization</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#roi-calculation">ROI Calculation</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#time-savings-model">Time Savings Model</a></li>
+<li class="toc-item toc-h3"><a href="#cost-benefit-analysis">Cost-Benefit Analysis</a></li>
+<li class="toc-item toc-h3"><a href="#conservative-vs-optimistic-estimates">Conservative vs Optimistic Estimates</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#reporting-templates">Reporting Templates</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#weekly-report">Weekly Report</a></li>
+<li class="toc-item toc-h3"><a href="#executive-summary-quarterly">Executive Summary (Quarterly)</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#key-takeaways">Key Takeaways</a></li>
+</ul>
+            </nav>
+          </aside>
+          
+        </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="module-nav">
+          
+            <a href="/advanced/module-14/enterprise/" class="nav-button nav-prev">
+              <span class="nav-direction">← Previous</span>
+              <span class="nav-title">Enterprise Administration</span>
+            </a>
+          
+
+          <div class="nav-center">
+            <a href="/advanced/module-14/" class="nav-index">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.75A.75.75 0 0 1 2.75 2h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 2.75Zm0 5A.75.75 0 0 1 2.75 7h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 7.75ZM2.75 12h10.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5Z"></path></svg>
+              Module Overview
+            </a>
+          </div>
+
+          
+            <a href="/advanced/module-14/labs/" class="nav-button nav-next">
+              <span class="nav-direction">Next →</span>
+              <span class="nav-title">Hands-On Labs</span>
+            </a>
+          
+        </nav>
+      </div>
+
+      </main>
+    </div>
+
+    <footer class="training-footer">
+  <div class="container">
+    <div class="training-footer-content">
+      <div class="footer-info">
+        <p class="footer-text">GitHub Training Program v1.0 | Last updated: December 2025</p>
+        <p class="footer-links">
+          <a href="https://docs.github.com" target="_blank" rel="noopener">GitHub Docs</a> • 
+          <a href="https://github.community" target="_blank" rel="noopener">Community</a> • 
+          <a href="/syllabus/">Full Syllabus</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- Smooth scroll behavior -->
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const href = this.getAttribute('href');
+          if (href !== '#') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+        });
+      });
+
+      // Add copy button to code blocks
+      document.querySelectorAll('pre').forEach(pre => {
+        // Create wrapper div
+        const wrapper = document.createElement('div');
+        wrapper.className = 'code-block-wrapper';
+        pre.parentNode.insertBefore(wrapper, pre);
+        wrapper.appendChild(pre);
+
+        // Create copy button
+        const button = document.createElement('button');
+        button.className = 'copy-button';
+        button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+        button.title = 'Copy to clipboard';
+        wrapper.appendChild(button);
+
+        // Copy functionality
+        button.addEventListener('click', async () => {
+          const code = pre.querySelector('code') ? pre.querySelector('code').textContent : pre.textContent;
+          try {
+            await navigator.clipboard.writeText(code);
+            button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+            button.classList.add('copied');
+            setTimeout(() => {
+              button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+              button.classList.remove('copied');
+            }, 2000);
+          } catch (err) {
+            console.error('Failed to copy:', err);
+          }
+        });
+      });
+    </script>
+
+    <!-- Mermaid.js for diagrams with pan/zoom -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+    <script>
+      // Initialize Mermaid with theme matching the training modules
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: 'base',
+        themeVariables: {
+          // Primary colors - matching GitHub/training theme
+          primaryColor: '#ddf4ff',
+          primaryTextColor: '#1f2328',
+          primaryBorderColor: '#0969da',
+          
+          // Secondary and tertiary colors
+          secondaryColor: '#f6f8fa',
+          secondaryTextColor: '#1f2328',
+          secondaryBorderColor: '#d0d7de',
+          tertiaryColor: '#fff8c5',
+          tertiaryTextColor: '#1f2328',
+          tertiaryBorderColor: '#d4a72c',
+          
+          // Background colors
+          background: '#ffffff',
+          mainBkg: '#ddf4ff',
+          secondBkg: '#f6f8fa',
+          
+          // Lines and borders
+          lineColor: '#57606a',
+          border1: '#d0d7de',
+          border2: '#0969da',
+          arrowheadColor: '#57606a',
+          
+          // Text styling
+          fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif',
+          fontSize: '14px',
+          labelBackground: '#ffffff',
+          nodeTextColor: '#1f2328',
+          
+          // Subgraph styling
+          clusterBkg: '#f6f8fa',
+          clusterBorder: '#d0d7de',
+          
+          // Note styling
+          noteBkgColor: '#fff8c5',
+          noteTextColor: '#1f2328',
+          noteBorderColor: '#d4a72c'
+        },
+        flowchart: {
+          useMaxWidth: true,
+          htmlLabels: true,
+          curve: 'basis',
+          padding: 30,
+          nodeSpacing: 50,
+          rankSpacing: 70,
+          subGraphTitleMargin: {
+            top: 10,
+            bottom: 20
+          }
+        },
+        securityLevel: 'loose'
+      });
+
+      // Add pan/zoom to Mermaid diagrams after they render
+      mermaid.run().then(() => {
+        document.querySelectorAll('.mermaid-container svg').forEach((svg, index) => {
+          // Ensure SVG has an ID for pan-zoom
+          if (!svg.id) {
+            svg.id = 'mermaid-svg-' + index;
+          }
+          
+          // Set minimum dimensions on SVG for better visibility
+          svg.style.minWidth = '100%';
+          svg.style.minHeight = '300px';
+          
+          // Initialize pan-zoom
+          const panZoom = svgPanZoom(svg, {
+            zoomEnabled: true,
+            controlIconsEnabled: true,
+            fit: true,
+            center: true,
+            minZoom: 0.3,
+            maxZoom: 10,
+            zoomScaleSensitivity: 0.3,
+            dblClickZoomEnabled: true,
+            mouseWheelZoomEnabled: true,
+            preventMouseEventsDefault: true,
+            contain: false
+          });
+
+          // Handle window resize
+          window.addEventListener('resize', () => {
+            panZoom.resize();
+            panZoom.fit();
+            panZoom.center();
+          });
+        });
+      });
+    </script>
+
+  </body>
+</html>

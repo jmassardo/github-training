@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Model Context Protocol &middot; GitHub Training
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="preload" href="/public/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/public/css/main.css"></noscript>
+
+  <!-- GLightbox CSS for Image Modals -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+</head>
+
+
+  <body class="training-layout">
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="training-header">
+  <div class="container">
+    <div class="training-header-inner">
+      <div class="training-brand">
+        <a href="/" class="training-logo">
+          <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" class="octicon">
+            <path fill="currentColor" d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
+          </svg>
+          <span class="training-title">GitHub Training</span>
+        </a>
+        <span class="training-tagline">CSM & CSA Certification Program</span>
+      </div>
+      
+      <nav class="training-nav" aria-label="Training navigation">
+        <a href="/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8.156 1.835a.25.25 0 00-.312 0l-5.25 4.2a.25.25 0 00-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 01.75-.75h3.5a.75.75 0 01.75.75v5.25h2.75a.25.25 0 00.25-.25V6.23a.25.25 0 00-.094-.195z"></path>
+          </svg>
+          Home
+        </a>
+        <a href="/beginner/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0114.25 16H1.75A1.75 1.75 0 010 14.25V1.75zm1.75-.25a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V1.75a.25.25 0 00-.25-.25H1.75zM3.5 6.25a.75.75 0 01.75-.75h7a.75.75 0 010 1.5h-7a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h4a.75.75 0 000-1.5h-4z"></path>
+          </svg>
+          Beginner
+        </a>
+        <a href="/intermediate/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+            <path fill="currentColor" d="M8 0a8 8 0 110 16A8 8 0 018 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"></path>
+          </svg>
+          Intermediate
+        </a>
+        <a href="/advanced/" class="training-nav-link active">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"></path>
+          </svg>
+          Advanced
+        </a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+    <!-- Main content area with sidebar -->
+    <div class="training-container">
+      
+      <!-- Sidebar navigation -->
+      <aside class="training-sidebar">
+        <div class="training-sidebar-sticky">
+          
+          
+          
+          
+          
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">🏆 Advanced Phase</h3>
+            <nav class="sidebar-nav">
+              <a href="/advanced/" class="sidebar-link">Phase Overview</a>
+              <a href="/advanced/module-9/" class="sidebar-link">Module 9: Enterprise Admin</a>
+              <a href="/advanced/module-10/" class="sidebar-link">Module 10: APIs & Apps</a>
+              <a href="/advanced/module-11/" class="sidebar-link">Module 11: IaC & Ops</a>
+              <a href="/advanced/module-12/" class="sidebar-link">Module 12: Governance</a>
+              <a href="/advanced/module-13/" class="sidebar-link">Module 13: Copilot Basics</a>
+              <a href="/advanced/module-14/" class="sidebar-link active">Module 14: Copilot Advanced</a>
+            </nav>
+          </div>
+          
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">Resources</h3>
+            <nav class="sidebar-nav">
+              <a href="/syllabus/" class="sidebar-link">Full Syllabus</a>
+              <a href="https://docs.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Docs
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+              <a href="https://skills.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Skills
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+            </nav>
+          </div>
+          
+        </div>
+      </aside>
+
+      <!-- Main content area -->
+      <main id="main-content" class="training-main">
+      
+        <div class="training-module">
+        <!-- Module Header -->
+        <header class="module-header">
+          <div class="module-breadcrumb">
+            <a href="/">Training Home</a>
+            <span class="separator">›</span>
+            <a href="/advanced/">Advanced Phase</a>
+            <span class="separator">›</span>
+            <a href="/advanced/module-14/">Module 14</a>
+          </div>
+          
+          <h1 class="module-title">Model Context Protocol</h1>
+          
+          <div class="module-meta">
+            <span class="badge badge-advanced">Advanced</span>
+            <span class="meta-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm7-3.25v2.992l2.028.812a.75.75 0 0 1-.557 1.392l-2.5-1A.751.751 0 0 1 7 8.25v-3.5a.75.75 0 0 1 1.5 0Z"></path></svg>
+              30 min
+            </span>
+            <span class="meta-item">
+              Section 3 of 10
+            </span>
+          </div>
+        </header>
+
+        <!-- Progress Bar -->
+        <div class="module-progress">
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 30.0%"></div>
+          </div>
+          <div class="progress-steps">
+            
+              
+              <a href="/advanced/module-14/overview/" 
+                 class="progress-step completed"
+                 title="Context & Overview">
+                <span class="step-dot"></span>
+                <span class="step-label">1</span>
+              </a>
+            
+              
+              <a href="/advanced/module-14/agents/" 
+                 class="progress-step completed"
+                 title="Copilot Agents">
+                <span class="step-dot"></span>
+                <span class="step-label">2</span>
+              </a>
+            
+              
+              <a href="/advanced/module-14/mcp/" 
+                 class="progress-step active"
+                 title="Model Context Protocol">
+                <span class="step-dot"></span>
+                <span class="step-label">3</span>
+              </a>
+            
+              
+              <a href="/advanced/module-14/extensions/" 
+                 class="progress-step "
+                 title="Copilot Extensions">
+                <span class="step-dot"></span>
+                <span class="step-label">4</span>
+              </a>
+            
+              
+              <a href="/advanced/module-14/instructions/" 
+                 class="progress-step "
+                 title="Custom Instructions">
+                <span class="step-dot"></span>
+                <span class="step-label">5</span>
+              </a>
+            
+              
+              <a href="/advanced/module-14/enterprise/" 
+                 class="progress-step "
+                 title="Enterprise Administration">
+                <span class="step-dot"></span>
+                <span class="step-label">6</span>
+              </a>
+            
+              
+              <a href="/advanced/module-14/metrics/" 
+                 class="progress-step "
+                 title="Metrics & Adoption">
+                <span class="step-dot"></span>
+                <span class="step-label">7</span>
+              </a>
+            
+              
+              <a href="/advanced/module-14/labs/" 
+                 class="progress-step "
+                 title="Hands-On Labs">
+                <span class="step-dot"></span>
+                <span class="step-label">8</span>
+              </a>
+            
+              
+              <a href="/advanced/module-14/quiz/" 
+                 class="progress-step "
+                 title="Knowledge Check">
+                <span class="step-dot"></span>
+                <span class="step-label">9</span>
+              </a>
+            
+              
+              <a href="/advanced/module-14/resources/" 
+                 class="progress-step "
+                 title="Resources">
+                <span class="step-dot"></span>
+                <span class="step-label">10</span>
+              </a>
+            
+          </div>
+        </div>
+
+        <!-- Section Navigation Tabs -->
+        <nav class="section-tabs">
+          
+            
+            <a href="/advanced/module-14/overview/" 
+               class="section-tab ">
+              <span class="tab-icon">📋</span>
+              <span class="tab-title">Overview</span>
+            </a>
+          
+            
+            <a href="/advanced/module-14/agents/" 
+               class="section-tab ">
+              <span class="tab-icon">🤖</span>
+              <span class="tab-title">Agents</span>
+            </a>
+          
+            
+            <a href="/advanced/module-14/mcp/" 
+               class="section-tab active">
+              <span class="tab-icon">🔌</span>
+              <span class="tab-title">MCP</span>
+            </a>
+          
+            
+            <a href="/advanced/module-14/extensions/" 
+               class="section-tab ">
+              <span class="tab-icon">🧩</span>
+              <span class="tab-title">Extensions</span>
+            </a>
+          
+            
+            <a href="/advanced/module-14/instructions/" 
+               class="section-tab ">
+              <span class="tab-icon">📝</span>
+              <span class="tab-title">Instructions</span>
+            </a>
+          
+            
+            <a href="/advanced/module-14/enterprise/" 
+               class="section-tab ">
+              <span class="tab-icon">🏢</span>
+              <span class="tab-title">Enterprise</span>
+            </a>
+          
+            
+            <a href="/advanced/module-14/metrics/" 
+               class="section-tab ">
+              <span class="tab-icon">📊</span>
+              <span class="tab-title">Metrics</span>
+            </a>
+          
+            
+            <a href="/advanced/module-14/labs/" 
+               class="section-tab ">
+              <span class="tab-icon">🧪</span>
+              <span class="tab-title">Labs</span>
+            </a>
+          
+            
+            <a href="/advanced/module-14/quiz/" 
+               class="section-tab ">
+              <span class="tab-icon">📝</span>
+              <span class="tab-title">Quiz</span>
+            </a>
+          
+            
+            <a href="/advanced/module-14/resources/" 
+               class="section-tab ">
+              <span class="tab-icon">📖</span>
+              <span class="tab-title">Resources</span>
+            </a>
+          
+        </nav>
+
+        <!-- Main Content with TOC Sidebar -->
+        <div class="module-content-wrapper">
+          <main id="main-content" class="module-content">
+            <article class="section-content">
+              <h2 id="what-is-model-context-protocol">What is Model Context Protocol?</h2>
+
+<p>Model Context Protocol (MCP) is an open standard that enables AI models to connect with external data sources and tools. Think of it as a universal adapter that lets Copilot access information beyond your code.</p>
+
+<h3 id="the-problem-mcp-solves">The Problem MCP Solves</h3>
+
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart LR
+  subgraph Before["Before MCP"]
+    CP1["🤖 Copilot"] --&gt; Code1["📄 Code in editor"]
+    X1["❌ Can't access internal documentation"]
+    X2["❌ Can't query databases"]
+    X3["❌ Can't use internal APIs"]
+    X4["❌ Can't read company wikis"]
+  end
+</div>
+</div>
+
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart LR
+  subgraph After["With MCP"]
+    CP2["🤖 Copilot"]
+    CP2 --&gt; MCP1["🔌 MCP Server"] --&gt; Docs["📚 Internal Docs"]
+    CP2 --&gt; MCP2["🔌 MCP Server"] --&gt; DB["💾 Database"]
+    CP2 --&gt; MCP3["🔌 MCP Server"] --&gt; API["🔗 Company API"]
+    CP2 --&gt; MCP4["🔌 MCP Server"] --&gt; KB["📖 Knowledge Base"]
+  end
+</div>
+</div>
+
+<h3 id="mcp-architecture">MCP Architecture</h3>
+
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart TD
+  subgraph Architecture["MCP Architecture"]
+    Host["🖥️ AI Host (Client)<br />VS Code + Copilot"]
+    Host --&gt;|"MCP Protocol (JSON-RPC)"| Server["🔌 MCP Server<br />(Local or Remote)"]
+    Server --&gt; R["📄 Resources (data sources)"]
+    Server --&gt; T["🛠️ Tools (actions)"]
+    Server --&gt; P["📝 Prompts (templates)"]
+  end
+</div>
+</div>
+
+<h3 id="mcp-capabilities">MCP Capabilities</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Capability</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Resources</strong></td>
+      <td>Read-only data sources</td>
+      <td>Documentation, configs</td>
+    </tr>
+    <tr>
+      <td><strong>Tools</strong></td>
+      <td>Actions that modify state</td>
+      <td>Create ticket, run query</td>
+    </tr>
+    <tr>
+      <td><strong>Prompts</strong></td>
+      <td>Pre-built prompt templates</td>
+      <td>Code review checklist</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="setting-up-mcp-servers">Setting Up MCP Servers</h2>
+
+<h3 id="configuration-location">Configuration Location</h3>
+
+<p>MCP servers are configured in VS Code settings or a dedicated config file:</p>
+
+<p><strong>VS Code Settings (settings.json):</strong></p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"mcp.servers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"company-docs"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"npx"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"args"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"-y"</span><span class="p">,</span><span class="w"> </span><span class="s2">"@company/docs-mcp-server"</span><span class="p">],</span><span class="w">
+      </span><span class="nl">"env"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"API_KEY"</span><span class="p">:</span><span class="w"> </span><span class="s2">"${env:COMPANY_DOCS_API_KEY}"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"database"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"python"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"args"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"-m"</span><span class="p">,</span><span class="w"> </span><span class="s2">"db_mcp_server"</span><span class="p">],</span><span class="w">
+      </span><span class="nl">"cwd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"${workspaceFolder}"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"env"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"DB_CONNECTION"</span><span class="p">:</span><span class="w"> </span><span class="s2">"${env:DATABASE_URL}"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre></div></div>
+
+<h3 id="popular-mcp-servers">Popular MCP Servers</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Server</th>
+      <th>Purpose</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">@modelcontextprotocol/server-filesystem</code></td>
+      <td>Local file access</td>
+      <td>Official</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">@modelcontextprotocol/server-github</code></td>
+      <td>GitHub API access</td>
+      <td>Official</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">@modelcontextprotocol/server-postgres</code></td>
+      <td>PostgreSQL queries</td>
+      <td>Official</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">@modelcontextprotocol/server-sqlite</code></td>
+      <td>SQLite database</td>
+      <td>Official</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">@modelcontextprotocol/server-fetch</code></td>
+      <td>HTTP requests</td>
+      <td>Official</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="installing-a-server">Installing a Server</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install official filesystem server</span>
+npm <span class="nb">install</span> <span class="nt">-g</span> @modelcontextprotocol/server-filesystem
+
+<span class="c"># Or use npx for on-demand</span>
+<span class="c"># (configured in mcp.servers as shown above)</span>
+
+</code></pre></div></div>
+
+<h2 id="using-mcp-in-copilot-chat">Using MCP in Copilot Chat</h2>
+
+<h3 id="querying-mcp-resources">Querying MCP Resources</h3>
+
+<p>Once configured, MCP resources are available through chat participants:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Access company documentation
+@mcp-company-docs How do I configure the payment service?
+
+# Query database
+@mcp-database What are the top 10 customers by order volume?
+
+# Search internal wiki
+@mcp-wiki What's our policy on error handling?
+
+</code></pre></div></div>
+
+<h3 id="using-mcp-tools">Using MCP Tools</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Create a Jira ticket
+@mcp-jira Create a bug ticket for the login issue
+
+# Run a database query
+@mcp-postgres SELECT count(*) FROM orders WHERE status = 'pending'
+
+# Fetch API data
+@mcp-fetch Get the current deployment status from our monitoring API
+
+</code></pre></div></div>
+
+<h2 id="building-custom-mcp-servers">Building Custom MCP Servers</h2>
+
+<h3 id="basic-server-structure-typescript">Basic Server Structure (TypeScript)</h3>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">Server</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@modelcontextprotocol/sdk/server</span><span class="dl">"</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">StdioServerTransport</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">"</span><span class="s2">@modelcontextprotocol/sdk/server/stdio</span><span class="dl">"</span><span class="p">;</span>
+
+<span class="c1">// Create server instance</span>
+<span class="kd">const</span> <span class="nx">server</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Server</span><span class="p">({</span>
+  <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">my-company-server</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">version</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1.0.0</span><span class="dl">"</span>
+<span class="p">},</span> <span class="p">{</span>
+  <span class="na">capabilities</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">resources</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="na">tools</span><span class="p">:</span> <span class="p">{}</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="c1">// Define a resource</span>
+<span class="nx">server</span><span class="p">.</span><span class="nf">setRequestHandler</span><span class="p">(</span><span class="dl">"</span><span class="s2">resources/list</span><span class="dl">"</span><span class="p">,</span> <span class="k">async </span><span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="na">resources</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="na">uri</span><span class="p">:</span> <span class="dl">"</span><span class="s2">docs://api-reference</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">API Reference</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">description</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Internal API documentation</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">mimeType</span><span class="p">:</span> <span class="dl">"</span><span class="s2">text/markdown</span><span class="dl">"</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">};</span>
+<span class="p">});</span>
+
+<span class="c1">// Define a tool</span>
+<span class="nx">server</span><span class="p">.</span><span class="nf">setRequestHandler</span><span class="p">(</span><span class="dl">"</span><span class="s2">tools/list</span><span class="dl">"</span><span class="p">,</span> <span class="k">async </span><span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="na">tools</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">search_docs</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">description</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Search internal documentation</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">inputSchema</span><span class="p">:</span> <span class="p">{</span>
+          <span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">object</span><span class="dl">"</span><span class="p">,</span>
+          <span class="na">properties</span><span class="p">:</span> <span class="p">{</span>
+            <span class="na">query</span><span class="p">:</span> <span class="p">{</span> <span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">,</span> <span class="na">description</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Search query</span><span class="dl">"</span> <span class="p">}</span>
+          <span class="p">},</span>
+          <span class="na">required</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">query</span><span class="dl">"</span><span class="p">]</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">};</span>
+<span class="p">});</span>
+
+<span class="c1">// Handle tool calls</span>
+<span class="nx">server</span><span class="p">.</span><span class="nf">setRequestHandler</span><span class="p">(</span><span class="dl">"</span><span class="s2">tools/call</span><span class="dl">"</span><span class="p">,</span> <span class="k">async </span><span class="p">(</span><span class="nx">request</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">if </span><span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">name</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">search_docs</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">query</span> <span class="o">=</span> <span class="nx">request</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">arguments</span><span class="p">.</span><span class="nx">query</span><span class="p">;</span>
+    <span class="c1">// Implement search logic</span>
+    <span class="kd">const</span> <span class="nx">results</span> <span class="o">=</span> <span class="k">await</span> <span class="nf">searchInternalDocs</span><span class="p">(</span><span class="nx">query</span><span class="p">);</span>
+    <span class="k">return</span> <span class="p">{</span> <span class="na">content</span><span class="p">:</span> <span class="p">[{</span> <span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">text</span><span class="dl">"</span><span class="p">,</span> <span class="na">text</span><span class="p">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nf">stringify</span><span class="p">(</span><span class="nx">results</span><span class="p">)</span> <span class="p">}]</span> <span class="p">};</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="c1">// Start server</span>
+<span class="kd">const</span> <span class="nx">transport</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StdioServerTransport</span><span class="p">();</span>
+<span class="k">await</span> <span class="nx">server</span><span class="p">.</span><span class="nf">connect</span><span class="p">(</span><span class="nx">transport</span><span class="p">);</span>
+
+</code></pre></div></div>
+
+<h3 id="python-server-example">Python Server Example</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">mcp.server</span> <span class="kn">import</span> <span class="n">Server</span>
+<span class="kn">from</span> <span class="n">mcp.server.stdio</span> <span class="kn">import</span> <span class="n">stdio_server</span>
+<span class="kn">from</span> <span class="n">mcp.types</span> <span class="kn">import</span> <span class="n">Resource</span><span class="p">,</span> <span class="n">Tool</span><span class="p">,</span> <span class="n">TextContent</span>
+
+<span class="n">server</span> <span class="o">=</span> <span class="nc">Server</span><span class="p">(</span><span class="sh">"</span><span class="s">company-knowledge</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="nd">@server.list_resources</span><span class="p">()</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">list_resources</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">[</span>
+        <span class="nc">Resource</span><span class="p">(</span>
+            <span class="n">uri</span><span class="o">=</span><span class="sh">"</span><span class="s">knowledge://policies</span><span class="sh">"</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="sh">"</span><span class="s">Company Policies</span><span class="sh">"</span><span class="p">,</span>
+            <span class="n">description</span><span class="o">=</span><span class="sh">"</span><span class="s">Internal policy documents</span><span class="sh">"</span><span class="p">,</span>
+            <span class="n">mimeType</span><span class="o">=</span><span class="sh">"</span><span class="s">text/plain</span><span class="sh">"</span>
+        <span class="p">)</span>
+    <span class="p">]</span>
+
+<span class="nd">@server.read_resource</span><span class="p">()</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">read_resource</span><span class="p">(</span><span class="n">uri</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">uri</span> <span class="o">==</span> <span class="sh">"</span><span class="s">knowledge://policies</span><span class="sh">"</span><span class="p">:</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="nf">load_policies</span><span class="p">()</span>  <span class="c1"># Your implementation
+</span>        <span class="k">return</span> <span class="nc">TextContent</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">content</span><span class="p">)</span>
+
+<span class="nd">@server.list_tools</span><span class="p">()</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">list_tools</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">[</span>
+        <span class="nc">Tool</span><span class="p">(</span>
+            <span class="n">name</span><span class="o">=</span><span class="sh">"</span><span class="s">search_knowledge_base</span><span class="sh">"</span><span class="p">,</span>
+            <span class="n">description</span><span class="o">=</span><span class="sh">"</span><span class="s">Search company knowledge base</span><span class="sh">"</span><span class="p">,</span>
+            <span class="n">inputSchema</span><span class="o">=</span><span class="p">{</span>
+                <span class="sh">"</span><span class="s">type</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">object</span><span class="sh">"</span><span class="p">,</span>
+                <span class="sh">"</span><span class="s">properties</span><span class="sh">"</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="sh">"</span><span class="s">query</span><span class="sh">"</span><span class="p">:</span> <span class="p">{</span><span class="sh">"</span><span class="s">type</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">string</span><span class="sh">"</span><span class="p">}</span>
+                <span class="p">},</span>
+                <span class="sh">"</span><span class="s">required</span><span class="sh">"</span><span class="p">:</span> <span class="p">[</span><span class="sh">"</span><span class="s">query</span><span class="sh">"</span><span class="p">]</span>
+            <span class="p">}</span>
+        <span class="p">)</span>
+    <span class="p">]</span>
+
+<span class="nd">@server.call_tool</span><span class="p">()</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">call_tool</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">arguments</span><span class="p">:</span> <span class="nb">dict</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="sh">"</span><span class="s">search_knowledge_base</span><span class="sh">"</span><span class="p">:</span>
+        <span class="n">results</span> <span class="o">=</span> <span class="nf">search_kb</span><span class="p">(</span><span class="n">arguments</span><span class="p">[</span><span class="sh">"</span><span class="s">query</span><span class="sh">"</span><span class="p">])</span>
+        <span class="k">return</span> <span class="nc">TextContent</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="nf">str</span><span class="p">(</span><span class="n">results</span><span class="p">))</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">async</span> <span class="k">with</span> <span class="nf">stdio_server</span><span class="p">()</span> <span class="nf">as </span><span class="p">(</span><span class="n">read</span><span class="p">,</span> <span class="n">write</span><span class="p">):</span>
+        <span class="k">await</span> <span class="n">server</span><span class="p">.</span><span class="nf">run</span><span class="p">(</span><span class="n">read</span><span class="p">,</span> <span class="n">write</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="sh">"</span><span class="s">__main__</span><span class="sh">"</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="n">asyncio</span>
+    <span class="n">asyncio</span><span class="p">.</span><span class="nf">run</span><span class="p">(</span><span class="nf">main</span><span class="p">())</span>
+
+</code></pre></div></div>
+
+<h2 id="enterprise-mcp-use-cases">Enterprise MCP Use Cases</h2>
+
+<h3 id="use-case-1-internal-documentation">Use Case 1: Internal Documentation</h3>
+
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart TD
+  subgraph DocsMCP["Internal Docs MCP Server"]
+    subgraph Resources["📄 Resources"]
+      R1["Architecture decision records"]
+      R2["API documentation"]
+      R3["Runbooks and playbooks"]
+      R4["Coding standards"]
+    end
+    
+    subgraph Tools["🛠️ Tools"]
+      T1["search_docs(query)"]
+      T2["get_related_docs(topic)"]
+    end
+  end
+</div>
+</div>
+
+<p><strong>Chat interaction:</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>User: @internal-docs How should I implement retry logic in our services?
+
+Copilot: Based on your internal documentation...
+
+[Architecture Decision Record 042: Retry Patterns]
+- Use exponential backoff with jitter
+- Maximum 3 retries for transient failures
+- Circuit breaker for persistent failures
+
+[Code Example from Service Template]
+
+```typescript
+
+import { retryWithBackoff } from '@company/resilience';
+
+const result = await retryWithBackoff(
+  () =&gt; externalApiCall(),
+  { maxRetries: 3, baseDelay: 1000 }
+);
+
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+### Use Case 2: Database Access
+
+&lt;div class="mermaid-container"&gt;
+&lt;div class="mermaid"&gt;
+flowchart TD
+  subgraph DBMCP["Database MCP Server"]
+    subgraph Tools["🛠️ Tools"]
+      T1["query_readonly(sql) - Read-only queries"]
+      T2["describe_table(name) - Get table schema"]
+      T3["list_tables() - Available tables"]
+    end
+    
+    subgraph Security["🔐 Security"]
+      S1["Read-only connection"]
+      S2["Query timeout limits"]
+      S3["Audit logging"]
+    end
+  end
+&lt;/div&gt;
+&lt;/div&gt;
+
+### Use Case 3: Monitoring Integration
+
+&lt;div class="mermaid-container"&gt;
+&lt;div class="mermaid"&gt;
+flowchart TD
+  subgraph MonMCP["Monitoring MCP Server"]
+    subgraph Resources["📄 Resources"]
+      R1["Current alerts"]
+      R2["Recent incidents"]
+      R3["Service health status"]
+    end
+    
+    subgraph Tools["🛠️ Tools"]
+      T1["get_metrics(service, timerange)"]
+      T2["get_logs(service, filter)"]
+      T3["get_deployment_history(service)"]
+    end
+  end
+&lt;/div&gt;
+&lt;/div&gt;
+
+**Chat interaction:**
+
+</code></pre></div></div>
+<p>User: @monitoring Why is the checkout service slow today?</p>
+
+<p>Copilot: I checked your monitoring systems...</p>
+
+<p>Current Status: Degraded
+- Response time: 2.3s (normal: 200ms)
+- Error rate: 5.2%</p>
+
+<p>Recent Events:
+- 10:30 AM: Database connection pool exhausted
+- 10:45 AM: Auto-scaling triggered
+- 11:00 AM: Connection pool size increased</p>
+
+<p>Likely Cause: Traffic spike exceeded connection pool capacity.</p>
+
+<p>Suggested Fix: [Link to runbook-db-connections]</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+## Security Considerations
+
+### Authentication
+
+```json
+{
+  "mcp.servers": {
+    "secure-server": {
+      "command": "node",
+      "args": ["server.js"],
+      "env": {
+        "API_TOKEN": "${env:SECURE_API_TOKEN}",
+        "AUTH_METHOD": "bearer"
+      }
+    }
+  }
+}
+
+</code></pre></div></div>
+
+<h3 id="data-access-controls">Data Access Controls</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Level</th>
+      <th>Control</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Server</td>
+      <td>Only expose what’s needed</td>
+    </tr>
+    <tr>
+      <td>Query</td>
+      <td>Implement read-only modes</td>
+    </tr>
+    <tr>
+      <td>Data</td>
+      <td>Filter sensitive fields</td>
+    </tr>
+    <tr>
+      <td>Audit</td>
+      <td>Log all queries</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="best-practices">Best Practices</h3>
+
+<ol>
+  <li><strong>Principle of least privilege</strong>: Expose minimal necessary data</li>
+  <li><strong>Read-only by default</strong>: Write operations require explicit approval</li>
+  <li><strong>Audit logging</strong>: Track all MCP interactions</li>
+  <li><strong>Secret management</strong>: Use environment variables, not hardcoded keys</li>
+  <li><strong>Network isolation</strong>: Run servers in secure network zones</li>
+</ol>
+
+<hr />
+
+<p><strong>Next:</strong> Learn how to build Copilot Extensions for custom chat participants.</p>
+
+            </article>
+          </main>
+          
+          <!-- Table of Contents Sidebar -->
+          
+          <aside class="section-toc">
+            <h4>On This Page</h4>
+            <nav class="toc-nav">
+              <ul id="toc" class="toc-list">
+<li class="toc-item toc-h2"><a href="#what-is-model-context-protocol">What is Model Context Protocol?</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#the-problem-mcp-solves">The Problem MCP Solves</a></li>
+<li class="toc-item toc-h3"><a href="#mcp-architecture">MCP Architecture</a></li>
+<li class="toc-item toc-h3"><a href="#mcp-capabilities">MCP Capabilities</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#setting-up-mcp-servers">Setting Up MCP Servers</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#configuration-location">Configuration Location</a></li>
+<li class="toc-item toc-h3"><a href="#popular-mcp-servers">Popular MCP Servers</a></li>
+<li class="toc-item toc-h3"><a href="#installing-a-server">Installing a Server</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#using-mcp-in-copilot-chat">Using MCP in Copilot Chat</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#querying-mcp-resources">Querying MCP Resources</a></li>
+<li class="toc-item toc-h3"><a href="#using-mcp-tools">Using MCP Tools</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#building-custom-mcp-servers">Building Custom MCP Servers</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#basic-server-structure-typescript">Basic Server Structure (TypeScript)</a></li>
+<li class="toc-item toc-h3"><a href="#python-server-example">Python Server Example</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#enterprise-mcp-use-cases">Enterprise MCP Use Cases</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#use-case-1-internal-documentation">Use Case 1: Internal Documentation</a></li>
+<li class="toc-item toc-h3"><a href="#data-access-controls">Data Access Controls</a></li>
+<li class="toc-item toc-h3"><a href="#best-practices">Best Practices</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+          </aside>
+          
+        </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="module-nav">
+          
+            <a href="/advanced/module-14/agents/" class="nav-button nav-prev">
+              <span class="nav-direction">← Previous</span>
+              <span class="nav-title">Copilot Agents</span>
+            </a>
+          
+
+          <div class="nav-center">
+            <a href="/advanced/module-14/" class="nav-index">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.75A.75.75 0 0 1 2.75 2h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 2.75Zm0 5A.75.75 0 0 1 2.75 7h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 7.75ZM2.75 12h10.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5Z"></path></svg>
+              Module Overview
+            </a>
+          </div>
+
+          
+            <a href="/advanced/module-14/extensions/" class="nav-button nav-next">
+              <span class="nav-direction">Next →</span>
+              <span class="nav-title">Copilot Extensions</span>
+            </a>
+          
+        </nav>
+      </div>
+
+      </main>
+    </div>
+
+    <footer class="training-footer">
+  <div class="container">
+    <div class="training-footer-content">
+      <div class="footer-info">
+        <p class="footer-text">GitHub Training Program v1.0 | Last updated: December 2025</p>
+        <p class="footer-links">
+          <a href="https://docs.github.com" target="_blank" rel="noopener">GitHub Docs</a> • 
+          <a href="https://github.community" target="_blank" rel="noopener">Community</a> • 
+          <a href="/syllabus/">Full Syllabus</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- Smooth scroll behavior -->
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const href = this.getAttribute('href');
+          if (href !== '#') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+        });
+      });
+
+      // Add copy button to code blocks
+      document.querySelectorAll('pre').forEach(pre => {
+        // Create wrapper div
+        const wrapper = document.createElement('div');
+        wrapper.className = 'code-block-wrapper';
+        pre.parentNode.insertBefore(wrapper, pre);
+        wrapper.appendChild(pre);
+
+        // Create copy button
+        const button = document.createElement('button');
+        button.className = 'copy-button';
+        button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+        button.title = 'Copy to clipboard';
+        wrapper.appendChild(button);
+
+        // Copy functionality
+        button.addEventListener('click', async () => {
+          const code = pre.querySelector('code') ? pre.querySelector('code').textContent : pre.textContent;
+          try {
+            await navigator.clipboard.writeText(code);
+            button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+            button.classList.add('copied');
+            setTimeout(() => {
+              button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+              button.classList.remove('copied');
+            }, 2000);
+          } catch (err) {
+            console.error('Failed to copy:', err);
+          }
+        });
+      });
+    </script>
+
+    <!-- Mermaid.js for diagrams with pan/zoom -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+    <script>
+      // Initialize Mermaid with theme matching the training modules
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: 'base',
+        themeVariables: {
+          // Primary colors - matching GitHub/training theme
+          primaryColor: '#ddf4ff',
+          primaryTextColor: '#1f2328',
+          primaryBorderColor: '#0969da',
+          
+          // Secondary and tertiary colors
+          secondaryColor: '#f6f8fa',
+          secondaryTextColor: '#1f2328',
+          secondaryBorderColor: '#d0d7de',
+          tertiaryColor: '#fff8c5',
+          tertiaryTextColor: '#1f2328',
+          tertiaryBorderColor: '#d4a72c',
+          
+          // Background colors
+          background: '#ffffff',
+          mainBkg: '#ddf4ff',
+          secondBkg: '#f6f8fa',
+          
+          // Lines and borders
+          lineColor: '#57606a',
+          border1: '#d0d7de',
+          border2: '#0969da',
+          arrowheadColor: '#57606a',
+          
+          // Text styling
+          fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif',
+          fontSize: '14px',
+          labelBackground: '#ffffff',
+          nodeTextColor: '#1f2328',
+          
+          // Subgraph styling
+          clusterBkg: '#f6f8fa',
+          clusterBorder: '#d0d7de',
+          
+          // Note styling
+          noteBkgColor: '#fff8c5',
+          noteTextColor: '#1f2328',
+          noteBorderColor: '#d4a72c'
+        },
+        flowchart: {
+          useMaxWidth: true,
+          htmlLabels: true,
+          curve: 'basis',
+          padding: 30,
+          nodeSpacing: 50,
+          rankSpacing: 70,
+          subGraphTitleMargin: {
+            top: 10,
+            bottom: 20
+          }
+        },
+        securityLevel: 'loose'
+      });
+
+      // Add pan/zoom to Mermaid diagrams after they render
+      mermaid.run().then(() => {
+        document.querySelectorAll('.mermaid-container svg').forEach((svg, index) => {
+          // Ensure SVG has an ID for pan-zoom
+          if (!svg.id) {
+            svg.id = 'mermaid-svg-' + index;
+          }
+          
+          // Set minimum dimensions on SVG for better visibility
+          svg.style.minWidth = '100%';
+          svg.style.minHeight = '300px';
+          
+          // Initialize pan-zoom
+          const panZoom = svgPanZoom(svg, {
+            zoomEnabled: true,
+            controlIconsEnabled: true,
+            fit: true,
+            center: true,
+            minZoom: 0.3,
+            maxZoom: 10,
+            zoomScaleSensitivity: 0.3,
+            dblClickZoomEnabled: true,
+            mouseWheelZoomEnabled: true,
+            preventMouseEventsDefault: true,
+            contain: false
+          });
+
+          // Handle window resize
+          window.addEventListener('resize', () => {
+            panZoom.resize();
+            panZoom.fit();
+            panZoom.center();
+          });
+        });
+      });
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Core Concepts &middot; GitHub Training
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="preload" href="/public/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/public/css/main.css"></noscript>
+
+  <!-- GLightbox CSS for Image Modals -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+</head>
+
+
+  <body class="training-layout">
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="training-header">
+  <div class="container">
+    <div class="training-header-inner">
+      <div class="training-brand">
+        <a href="/" class="training-logo">
+          <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" class="octicon">
+            <path fill="currentColor" d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
+          </svg>
+          <span class="training-title">GitHub Training</span>
+        </a>
+        <span class="training-tagline">CSM & CSA Certification Program</span>
+      </div>
+      
+      <nav class="training-nav" aria-label="Training navigation">
+        <a href="/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8.156 1.835a.25.25 0 00-.312 0l-5.25 4.2a.25.25 0 00-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 01.75-.75h3.5a.75.75 0 01.75.75v5.25h2.75a.25.25 0 00.25-.25V6.23a.25.25 0 00-.094-.195z"></path>
+          </svg>
+          Home
+        </a>
+        <a href="/beginner/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0114.25 16H1.75A1.75 1.75 0 010 14.25V1.75zm1.75-.25a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V1.75a.25.25 0 00-.25-.25H1.75zM3.5 6.25a.75.75 0 01.75-.75h7a.75.75 0 010 1.5h-7a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h4a.75.75 0 000-1.5h-4z"></path>
+          </svg>
+          Beginner
+        </a>
+        <a href="/intermediate/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+            <path fill="currentColor" d="M8 0a8 8 0 110 16A8 8 0 018 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"></path>
+          </svg>
+          Intermediate
+        </a>
+        <a href="/advanced/" class="training-nav-link active">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"></path>
+          </svg>
+          Advanced
+        </a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+    <!-- Main content area with sidebar -->
+    <div class="training-container">
+      
+      <!-- Sidebar navigation -->
+      <aside class="training-sidebar">
+        <div class="training-sidebar-sticky">
+          
+          
+          
+          
+          
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">🏆 Advanced Phase</h3>
+            <nav class="sidebar-nav">
+              <a href="/advanced/" class="sidebar-link">Phase Overview</a>
+              <a href="/advanced/module-9/" class="sidebar-link">Module 9: Enterprise Admin</a>
+              <a href="/advanced/module-10/" class="sidebar-link">Module 10: APIs & Apps</a>
+              <a href="/advanced/module-11/" class="sidebar-link active">Module 11: IaC & Ops</a>
+              <a href="/advanced/module-12/" class="sidebar-link">Module 12: Governance</a>
+              <a href="/advanced/module-13/" class="sidebar-link">Module 13: Copilot Basics</a>
+              <a href="/advanced/module-14/" class="sidebar-link">Module 14: Copilot Advanced</a>
+            </nav>
+          </div>
+          
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">Resources</h3>
+            <nav class="sidebar-nav">
+              <a href="/syllabus/" class="sidebar-link">Full Syllabus</a>
+              <a href="https://docs.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Docs
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+              <a href="https://skills.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Skills
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+            </nav>
+          </div>
+          
+        </div>
+      </aside>
+
+      <!-- Main content area -->
+      <main id="main-content" class="training-main">
+      
+        <div class="training-module">
+        <!-- Module Header -->
+        <header class="module-header">
+          <div class="module-breadcrumb">
+            <a href="/">Training Home</a>
+            <span class="separator">›</span>
+            <a href="/advanced/">Advanced Phase</a>
+            <span class="separator">›</span>
+            <a href="/advanced/module-11/">Module 11</a>
+          </div>
+          
+          <h1 class="module-title">Core Concepts</h1>
+          
+          <div class="module-meta">
+            <span class="badge badge-advanced">Advanced</span>
+            <span class="meta-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm7-3.25v2.992l2.028.812a.75.75 0 0 1-.557 1.392l-2.5-1A.751.751 0 0 1 7 8.25v-3.5a.75.75 0 0 1 1.5 0Z"></path></svg>
+              30 min
+            </span>
+            <span class="meta-item">
+              Section 2 of 7
+            </span>
+          </div>
+        </header>
+
+        <!-- Progress Bar -->
+        <div class="module-progress">
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 28.571428571428573%"></div>
+          </div>
+          <div class="progress-steps">
+            
+              
+              <a href="/advanced/module-11/overview/" 
+                 class="progress-step completed"
+                 title="Context & Overview">
+                <span class="step-dot"></span>
+                <span class="step-label">1</span>
+              </a>
+            
+              
+              <a href="/advanced/module-11/concepts/" 
+                 class="progress-step active"
+                 title="Core Concepts">
+                <span class="step-dot"></span>
+                <span class="step-label">2</span>
+              </a>
+            
+              
+              <a href="/advanced/module-11/walkthrough/" 
+                 class="progress-step "
+                 title="Guided Walkthrough">
+                <span class="step-dot"></span>
+                <span class="step-label">3</span>
+              </a>
+            
+              
+              <a href="/advanced/module-11/labs/" 
+                 class="progress-step "
+                 title="Hands-On Labs">
+                <span class="step-dot"></span>
+                <span class="step-label">4</span>
+              </a>
+            
+              
+              <a href="/advanced/module-11/quiz/" 
+                 class="progress-step "
+                 title="Knowledge Check">
+                <span class="step-dot"></span>
+                <span class="step-label">5</span>
+              </a>
+            
+              
+              <a href="/advanced/module-11/resources/" 
+                 class="progress-step "
+                 title="Resources">
+                <span class="step-dot"></span>
+                <span class="step-label">6</span>
+              </a>
+            
+              
+              <a href="/advanced/module-11/scenarios/" 
+                 class="progress-step "
+                 title="CSM Scenarios">
+                <span class="step-dot"></span>
+                <span class="step-label">7</span>
+              </a>
+            
+          </div>
+        </div>
+
+        <!-- Section Navigation Tabs -->
+        <nav class="section-tabs">
+          
+            
+            <a href="/advanced/module-11/overview/" 
+               class="section-tab ">
+              <span class="tab-icon">📋</span>
+              <span class="tab-title">Overview</span>
+            </a>
+          
+            
+            <a href="/advanced/module-11/concepts/" 
+               class="section-tab active">
+              <span class="tab-icon">📚</span>
+              <span class="tab-title">Concepts</span>
+            </a>
+          
+            
+            <a href="/advanced/module-11/walkthrough/" 
+               class="section-tab ">
+              <span class="tab-icon">🔄</span>
+              <span class="tab-title">Walkthrough</span>
+            </a>
+          
+            
+            <a href="/advanced/module-11/labs/" 
+               class="section-tab ">
+              <span class="tab-icon">🧪</span>
+              <span class="tab-title">Labs</span>
+            </a>
+          
+            
+            <a href="/advanced/module-11/quiz/" 
+               class="section-tab ">
+              <span class="tab-icon">✅</span>
+              <span class="tab-title">Quiz</span>
+            </a>
+          
+            
+            <a href="/advanced/module-11/resources/" 
+               class="section-tab ">
+              <span class="tab-icon">📖</span>
+              <span class="tab-title">Resources</span>
+            </a>
+          
+            
+            <a href="/advanced/module-11/scenarios/" 
+               class="section-tab ">
+              <span class="tab-icon">💼</span>
+              <span class="tab-title">Scenarios</span>
+            </a>
+          
+        </nav>
+
+        <!-- Main Content with TOC Sidebar -->
+        <div class="module-content-wrapper">
+          <main id="main-content" class="module-content">
+            <article class="section-content">
+              <h2 id="github-terraform-provider-deep-dive">GitHub Terraform Provider Deep Dive</h2>
+
+<p>The GitHub Terraform Provider enables declarative management of GitHub resources including repositories, teams, branch protection rules, and organization settings.</p>
+
+<h3 id="provider-architecture">Provider Architecture</h3>
+
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart LR
+  subgraph TF["Terraform Workflow"]
+    TFFiles["📄 .tf Files<br />(Desired State)"] --&gt; Core["⚙️ Terraform<br />Core"]
+    Core --&gt; API["🔌 GitHub<br />API"]
+    Core --&gt; State["💾 State File<br />(Current)"]
+  end
+</div>
+</div>
+
+<h3 id="provider-configuration">Provider Configuration</h3>
+
+<div class="language-hcl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Configure the GitHub Provider</span>
+<span class="nx">terraform</span> <span class="p">{</span>
+  <span class="nx">required_providers</span> <span class="p">{</span>
+    <span class="nx">github</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="nx">source</span>  <span class="o">=</span> <span class="s2">"integrations/github"</span>
+      <span class="nx">version</span> <span class="o">=</span> <span class="s2">"~&gt; 6.0"</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">provider</span> <span class="s2">"github"</span> <span class="p">{</span>
+  <span class="nx">owner</span> <span class="o">=</span> <span class="s2">"my-organization"</span>  <span class="c1"># GitHub organization</span>
+  <span class="c1"># Token from environment variable GITHUB_TOKEN</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<p><strong>Authentication Options:</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Method</th>
+      <th>Use Case</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Personal Access Token</td>
+      <td>Development, simple setups</td>
+      <td><code class="language-plaintext highlighter-rouge">GITHUB_TOKEN</code> env var</td>
+    </tr>
+    <tr>
+      <td>GitHub App</td>
+      <td>Production, fine-grained permissions</td>
+      <td>App ID + Private Key</td>
+    </tr>
+    <tr>
+      <td>OIDC</td>
+      <td>CI/CD pipelines (Actions)</td>
+      <td>Workload identity</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="key-resources">Key Resources</h3>
+
+<h4 id="repository-management">Repository Management</h4>
+
+<div class="language-hcl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">resource</span> <span class="s2">"github_repository"</span> <span class="s2">"application"</span> <span class="p">{</span>
+  <span class="nx">name</span>        <span class="o">=</span> <span class="s2">"my-application"</span>
+  <span class="nx">description</span> <span class="o">=</span> <span class="s2">"Production application"</span>
+  <span class="nx">visibility</span>  <span class="o">=</span> <span class="s2">"private"</span>
+  
+  <span class="c1"># Repository features</span>
+  <span class="nx">has_issues</span>      <span class="o">=</span> <span class="kc">true</span>
+  <span class="nx">has_discussions</span> <span class="o">=</span> <span class="kc">true</span>
+  <span class="nx">has_projects</span>    <span class="o">=</span> <span class="kc">true</span>
+  <span class="nx">has_wiki</span>        <span class="o">=</span> <span class="kc">false</span>
+  
+  <span class="c1"># Merge settings</span>
+  <span class="nx">allow_merge_commit</span>     <span class="o">=</span> <span class="kc">false</span>
+  <span class="nx">allow_squash_merge</span>     <span class="o">=</span> <span class="kc">true</span>
+  <span class="nx">allow_rebase_merge</span>     <span class="o">=</span> <span class="kc">true</span>
+  <span class="nx">delete_branch_on_merge</span> <span class="o">=</span> <span class="kc">true</span>
+  <span class="nx">squash_merge_commit_title</span>   <span class="o">=</span> <span class="s2">"PR_TITLE"</span>
+  <span class="nx">squash_merge_commit_message</span> <span class="o">=</span> <span class="s2">"PR_BODY"</span>
+  
+  <span class="c1"># Security</span>
+  <span class="nx">vulnerability_alerts</span> <span class="o">=</span> <span class="kc">true</span>
+  
+  <span class="c1"># Template (optional)</span>
+  <span class="nx">template</span> <span class="p">{</span>
+    <span class="nx">owner</span>      <span class="o">=</span> <span class="s2">"my-organization"</span>
+    <span class="nx">repository</span> <span class="o">=</span> <span class="s2">"repo-template"</span>
+  <span class="p">}</span>
+<span class="err">}</span>
+
+</code></pre></div></div>
+
+<h4 id="branch-protection-rules">Branch Protection Rules</h4>
+
+<div class="language-hcl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">resource</span> <span class="s2">"github_branch_protection"</span> <span class="s2">"main"</span> <span class="p">{</span>
+  <span class="nx">repository_id</span> <span class="o">=</span> <span class="nx">github_repository</span><span class="p">.</span><span class="nx">application</span><span class="p">.</span><span class="nx">node_id</span>
+  <span class="nx">pattern</span>       <span class="o">=</span> <span class="s2">"main"</span>
+  
+  <span class="c1"># Require PR reviews</span>
+  <span class="nx">required_pull_request_reviews</span> <span class="p">{</span>
+    <span class="nx">required_approving_review_count</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="nx">dismiss_stale_reviews</span>           <span class="o">=</span> <span class="kc">true</span>
+    <span class="nx">require_code_owner_reviews</span>      <span class="o">=</span> <span class="kc">true</span>
+    <span class="nx">require_last_push_approval</span>      <span class="o">=</span> <span class="kc">true</span>
+  <span class="p">}</span>
+  
+  <span class="c1"># Require status checks</span>
+  <span class="nx">required_status_checks</span> <span class="p">{</span>
+    <span class="nx">strict</span>   <span class="o">=</span> <span class="kc">true</span>  <span class="c1"># Require branch to be up to date</span>
+    <span class="nx">contexts</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"ci/build"</span><span class="p">,</span> <span class="s2">"ci/test"</span><span class="p">,</span> <span class="s2">"security/scan"</span><span class="p">]</span>
+  <span class="p">}</span>
+  
+  <span class="c1"># Additional protections</span>
+  <span class="nx">enforce_admins</span>                  <span class="o">=</span> <span class="kc">true</span>
+  <span class="nx">require_signed_commits</span>          <span class="o">=</span> <span class="kc">true</span>
+  <span class="nx">required_linear_history</span>         <span class="o">=</span> <span class="kc">true</span>
+  <span class="nx">require_conversation_resolution</span> <span class="o">=</span> <span class="kc">true</span>
+  
+  <span class="c1"># Restrict who can push</span>
+  <span class="nx">restrict_pushes</span> <span class="p">{</span>
+    <span class="nx">push_allowances</span> <span class="o">=</span> <span class="p">[</span>
+      <span class="s2">"my-organization/release-engineers"</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="err">}</span>
+
+</code></pre></div></div>
+
+<h4 id="team-management">Team Management</h4>
+
+<div class="language-hcl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">resource</span> <span class="s2">"github_team"</span> <span class="s2">"platform"</span> <span class="p">{</span>
+  <span class="nx">name</span>        <span class="o">=</span> <span class="s2">"platform-engineering"</span>
+  <span class="nx">description</span> <span class="o">=</span> <span class="s2">"Platform Engineering Team"</span>
+  <span class="nx">privacy</span>     <span class="o">=</span> <span class="s2">"closed"</span>
+<span class="p">}</span>
+
+<span class="nx">resource</span> <span class="s2">"github_team_membership"</span> <span class="s2">"platform_members"</span> <span class="p">{</span>
+  <span class="nx">for_each</span> <span class="o">=</span> <span class="nx">toset</span><span class="p">([</span><span class="s2">"user1"</span><span class="p">,</span> <span class="s2">"user2"</span><span class="p">,</span> <span class="s2">"user3"</span><span class="p">])</span>
+  
+  <span class="nx">team_id</span>  <span class="o">=</span> <span class="nx">github_team</span><span class="p">.</span><span class="nx">platform</span><span class="p">.</span><span class="nx">id</span>
+  <span class="nx">username</span> <span class="o">=</span> <span class="nx">each</span><span class="p">.</span><span class="nx">value</span>
+  <span class="nx">role</span>     <span class="o">=</span> <span class="s2">"member"</span>
+<span class="p">}</span>
+
+<span class="nx">resource</span> <span class="s2">"github_team_repository"</span> <span class="s2">"platform_repos"</span> <span class="p">{</span>
+  <span class="nx">for_each</span> <span class="o">=</span> <span class="nx">toset</span><span class="p">([</span>
+    <span class="nx">github_repository</span><span class="p">.</span><span class="nx">application</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span>
+    <span class="nx">github_repository</span><span class="p">.</span><span class="nx">infrastructure</span><span class="p">.</span><span class="nx">name</span>
+  <span class="p">])</span>
+  
+  <span class="nx">team_id</span>    <span class="o">=</span> <span class="nx">github_team</span><span class="p">.</span><span class="nx">platform</span><span class="p">.</span><span class="nx">id</span>
+  <span class="nx">repository</span> <span class="o">=</span> <span class="nx">each</span><span class="p">.</span><span class="nx">value</span>
+  <span class="nx">permission</span> <span class="o">=</span> <span class="s2">"push"</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<h2 id="state-management">State Management</h2>
+
+<p>Terraform state tracks the mapping between your configuration and real GitHub resources.</p>
+
+<h3 id="remote-state-storage">Remote State Storage</h3>
+
+<p><strong>Never store state locally in production.</strong> Use remote backends:</p>
+
+<div class="language-hcl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">terraform</span> <span class="p">{</span>
+  <span class="nx">backend</span> <span class="s2">"s3"</span> <span class="p">{</span>
+    <span class="nx">bucket</span>         <span class="o">=</span> <span class="s2">"my-terraform-state"</span>
+    <span class="nx">key</span>            <span class="o">=</span> <span class="s2">"github/terraform.tfstate"</span>
+    <span class="nx">region</span>         <span class="o">=</span> <span class="s2">"us-east-1"</span>
+    <span class="nx">encrypt</span>        <span class="o">=</span> <span class="kc">true</span>
+    <span class="nx">dynamodb_table</span> <span class="o">=</span> <span class="s2">"terraform-locks"</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<p><strong>Alternative backends:</strong>
+- <strong>Azure Blob Storage</strong> - For Azure-centric organizations
+- <strong>Google Cloud Storage</strong> - For GCP users
+- <strong>Terraform Cloud</strong> - Managed solution with collaboration features
+- <strong>HashiCorp Consul</strong> - Self-hosted option</p>
+
+<h3 id="state-operations">State Operations</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># View current state</span>
+terraform state list
+
+<span class="c"># Show specific resource</span>
+terraform state show github_repository.application
+
+<span class="c"># Import existing resource into state</span>
+terraform import github_repository.application my-organization/my-application
+
+<span class="c"># Remove resource from state (without destroying)</span>
+terraform state <span class="nb">rm </span>github_repository.old_repo
+
+<span class="c"># Move resource in state (refactoring)</span>
+terraform state <span class="nb">mv </span>github_repository.old github_repository.new
+
+</code></pre></div></div>
+
+<h3 id="importing-existing-resources">Importing Existing Resources</h3>
+
+<p>For organizations with existing GitHub resources:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Import existing repository</span>
+terraform import github_repository.existing my-org/existing-repo
+
+<span class="c"># Import team</span>
+terraform import github_team.existing 1234567
+
+<span class="c"># Import branch protection</span>
+terraform import github_branch_protection.main my-org/repo:main
+
+</code></pre></div></div>
+
+<h2 id="gitops-implementation-patterns">GitOps Implementation Patterns</h2>
+
+<h3 id="pattern-1-centralized-configuration-repository">Pattern 1: Centralized Configuration Repository</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>github-config/
+├── terraform/
+│   ├── main.tf
+│   ├── variables.tf
+│   ├── outputs.tf
+│   ├── repositories/
+│   │   ├── team-alpha.tf
+│   │   ├── team-beta.tf
+│   │   └── shared.tf
+│   └── teams/
+│       ├── engineering.tf
+│       └── security.tf
+├── .github/
+│   └── workflows/
+│       └── terraform.yml
+└── README.md
+
+</code></pre></div></div>
+
+<h3 id="pattern-2-self-service-with-pull-requests">Pattern 2: Self-Service with Pull Requests</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># .github/workflows/terraform.yml</span>
+<span class="na">name</span><span class="pi">:</span> <span class="s">Terraform</span>
+
+<span class="na">on</span><span class="pi">:</span>
+  <span class="na">pull_request</span><span class="pi">:</span>
+    <span class="na">paths</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s1">'</span><span class="s">terraform/**'</span>
+  <span class="na">push</span><span class="pi">:</span>
+    <span class="na">branches</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">main</span>
+    <span class="na">paths</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s1">'</span><span class="s">terraform/**'</span>
+
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">plan</span><span class="pi">:</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">if</span><span class="pi">:</span> <span class="s">github.event_name == 'pull_request'</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v4</span>
+      
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Setup Terraform</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">hashicorp/setup-terraform@v3</span>
+        
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Terraform Init</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="s">terraform init</span>
+        <span class="na">working-directory</span><span class="pi">:</span> <span class="s">terraform</span>
+        
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Terraform Plan</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="s">terraform plan -out=tfplan</span>
+        <span class="na">working-directory</span><span class="pi">:</span> <span class="s">terraform</span>
+        <span class="na">env</span><span class="pi">:</span>
+          <span class="na">GITHUB_TOKEN</span><span class="pi">:</span> <span class="s">$</span>
+          
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Post Plan to PR</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/github-script@v7</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">script</span><span class="pi">:</span> <span class="pi">|</span>
+            <span class="s">// Post plan output as PR comment</span>
+
+  <span class="na">apply</span><span class="pi">:</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">if</span><span class="pi">:</span> <span class="s">github.ref == 'refs/heads/main' &amp;&amp; github.event_name == 'push'</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v4</span>
+      
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Setup Terraform</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">hashicorp/setup-terraform@v3</span>
+        
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Terraform Init</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="s">terraform init</span>
+        <span class="na">working-directory</span><span class="pi">:</span> <span class="s">terraform</span>
+        
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Terraform Apply</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="s">terraform apply -auto-approve</span>
+        <span class="na">working-directory</span><span class="pi">:</span> <span class="s">terraform</span>
+        <span class="na">env</span><span class="pi">:</span>
+          <span class="na">GITHUB_TOKEN</span><span class="pi">:</span> <span class="s">$</span>
+
+</code></pre></div></div>
+
+<h3 id="pattern-3-drift-detection">Pattern 3: Drift Detection</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># .github/workflows/drift-detection.yml</span>
+<span class="na">name</span><span class="pi">:</span> <span class="s">Drift Detection</span>
+
+<span class="na">on</span><span class="pi">:</span>
+  <span class="na">schedule</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">cron</span><span class="pi">:</span> <span class="s1">'</span><span class="s">0</span><span class="nv"> </span><span class="s">*/6</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*'</span>  <span class="c1"># Every 6 hours</span>
+  <span class="na">workflow_dispatch</span><span class="pi">:</span>
+
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">detect-drift</span><span class="pi">:</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v4</span>
+      
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Setup Terraform</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">hashicorp/setup-terraform@v3</span>
+        
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Terraform Init</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="s">terraform init</span>
+        <span class="na">working-directory</span><span class="pi">:</span> <span class="s">terraform</span>
+        
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Terraform Plan</span>
+        <span class="na">id</span><span class="pi">:</span> <span class="s">plan</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s">terraform plan -detailed-exitcode -out=tfplan 2&gt;&amp;1 | tee plan.txt</span>
+          <span class="s">echo "exitcode=$?" &gt;&gt; $GITHUB_OUTPUT</span>
+        <span class="na">working-directory</span><span class="pi">:</span> <span class="s">terraform</span>
+        <span class="na">continue-on-error</span><span class="pi">:</span> <span class="kc">true</span>
+        <span class="na">env</span><span class="pi">:</span>
+          <span class="na">GITHUB_TOKEN</span><span class="pi">:</span> <span class="s">$</span>
+          
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Alert on Drift</span>
+        <span class="na">if</span><span class="pi">:</span> <span class="s">steps.plan.outputs.exitcode == '2'</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s"># Send alert via Slack, email, or create issue</span>
+          <span class="s">gh issue create \</span>
+            <span class="s">--title "Configuration Drift Detected" \</span>
+            <span class="s">--body "$(cat terraform/plan.txt)"</span>
+        <span class="na">env</span><span class="pi">:</span>
+          <span class="na">GH_TOKEN</span><span class="pi">:</span> <span class="s">$</span>
+
+</code></pre></div></div>
+
+<h2 id="modular-terraform-design">Modular Terraform Design</h2>
+
+<h3 id="using-modules-for-consistency">Using Modules for Consistency</h3>
+
+<div class="language-hcl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># modules/standard-repository/main.tf</span>
+<span class="nx">variable</span> <span class="s2">"name"</span> <span class="p">{</span>
+  <span class="nx">type</span> <span class="o">=</span> <span class="nx">string</span>
+<span class="p">}</span>
+
+<span class="nx">variable</span> <span class="s2">"team"</span> <span class="p">{</span>
+  <span class="nx">type</span> <span class="o">=</span> <span class="nx">string</span>
+<span class="p">}</span>
+
+<span class="nx">variable</span> <span class="s2">"visibility"</span> <span class="p">{</span>
+  <span class="nx">type</span>    <span class="o">=</span> <span class="nx">string</span>
+  <span class="nx">default</span> <span class="o">=</span> <span class="s2">"private"</span>
+<span class="p">}</span>
+
+<span class="nx">resource</span> <span class="s2">"github_repository"</span> <span class="s2">"this"</span> <span class="p">{</span>
+  <span class="nx">name</span>        <span class="o">=</span> <span class="nx">var</span><span class="p">.</span><span class="nx">name</span>
+  <span class="nx">visibility</span>  <span class="o">=</span> <span class="nx">var</span><span class="p">.</span><span class="nx">visibility</span>
+  
+  <span class="c1"># Standard settings</span>
+  <span class="nx">has_issues</span>             <span class="o">=</span> <span class="kc">true</span>
+  <span class="nx">delete_branch_on_merge</span> <span class="o">=</span> <span class="kc">true</span>
+  <span class="nx">vulnerability_alerts</span>   <span class="o">=</span> <span class="kc">true</span>
+  <span class="nx">allow_squash_merge</span>     <span class="o">=</span> <span class="kc">true</span>
+  <span class="nx">allow_merge_commit</span>     <span class="o">=</span> <span class="kc">false</span>
+<span class="err">}</span>
+
+<span class="nx">resource</span> <span class="s2">"github_branch_protection"</span> <span class="s2">"main"</span> <span class="p">{</span>
+  <span class="nx">repository_id</span> <span class="o">=</span> <span class="nx">github_repository</span><span class="p">.</span><span class="nx">this</span><span class="p">.</span><span class="nx">node_id</span>
+  <span class="nx">pattern</span>       <span class="o">=</span> <span class="s2">"main"</span>
+  
+  <span class="nx">required_pull_request_reviews</span> <span class="p">{</span>
+    <span class="nx">required_approving_review_count</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="nx">dismiss_stale_reviews</span>           <span class="o">=</span> <span class="kc">true</span>
+  <span class="p">}</span>
+  
+  <span class="nx">required_status_checks</span> <span class="p">{</span>
+    <span class="nx">strict</span> <span class="o">=</span> <span class="kc">true</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">resource</span> <span class="s2">"github_team_repository"</span> <span class="s2">"team_access"</span> <span class="p">{</span>
+  <span class="nx">team_id</span>    <span class="o">=</span> <span class="nx">var</span><span class="p">.</span><span class="nx">team</span>
+  <span class="nx">repository</span> <span class="o">=</span> <span class="nx">github_repository</span><span class="p">.</span><span class="nx">this</span><span class="p">.</span><span class="nx">name</span>
+  <span class="nx">permission</span> <span class="o">=</span> <span class="s2">"push"</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<div class="language-hcl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># repositories/team-alpha.tf</span>
+<span class="nx">module</span> <span class="s2">"service_api"</span> <span class="p">{</span>
+  <span class="nx">source</span> <span class="o">=</span> <span class="s2">"../modules/standard-repository"</span>
+  
+  <span class="nx">name</span>   <span class="o">=</span> <span class="s2">"service-api"</span>
+  <span class="nx">team</span>   <span class="o">=</span> <span class="nx">github_team</span><span class="p">.</span><span class="nx">alpha</span><span class="p">.</span><span class="nx">id</span>
+<span class="p">}</span>
+
+<span class="nx">module</span> <span class="s2">"service_web"</span> <span class="p">{</span>
+  <span class="nx">source</span> <span class="o">=</span> <span class="s2">"../modules/standard-repository"</span>
+  
+  <span class="nx">name</span>   <span class="o">=</span> <span class="s2">"service-web"</span>
+  <span class="nx">team</span>   <span class="o">=</span> <span class="nx">github_team</span><span class="p">.</span><span class="nx">alpha</span><span class="p">.</span><span class="nx">id</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<h2 id="security-considerations">Security Considerations</h2>
+
+<h3 id="token-management">Token Management</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Approach</th>
+      <th>Security Level</th>
+      <th>Use Case</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PAT in env var</td>
+      <td>Low</td>
+      <td>Local development only</td>
+    </tr>
+    <tr>
+      <td>GitHub App</td>
+      <td>High</td>
+      <td>Production automation</td>
+    </tr>
+    <tr>
+      <td>OIDC</td>
+      <td>Highest</td>
+      <td>GitHub Actions pipelines</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="github-app-for-terraform">GitHub App for Terraform</h3>
+
+<div class="language-hcl highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">provider</span> <span class="s2">"github"</span> <span class="p">{</span>
+  <span class="nx">owner</span> <span class="o">=</span> <span class="s2">"my-organization"</span>
+  <span class="nx">app_auth</span> <span class="p">{</span>
+    <span class="nx">id</span>              <span class="o">=</span> <span class="nx">var</span><span class="p">.</span><span class="nx">github_app_id</span>
+    <span class="nx">installation_id</span> <span class="o">=</span> <span class="nx">var</span><span class="p">.</span><span class="nx">github_app_installation_id</span>
+    <span class="nx">pem_file</span>        <span class="o">=</span> <span class="nx">var</span><span class="p">.</span><span class="nx">github_app_pem_file</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<h3 id="least-privilege-permissions">Least Privilege Permissions</h3>
+
+<p>Configure GitHub App with minimal required permissions:
+- <code class="language-plaintext highlighter-rouge">administration: write</code> - Repository settings
+- <code class="language-plaintext highlighter-rouge">members: write</code> - Team management
+- <code class="language-plaintext highlighter-rouge">organization_administration: write</code> - Org settings</p>
+
+<hr />
+
+<p><strong>Next:</strong> Walk through a complete implementation in the Guided Walkthrough section.</p>
+
+            </article>
+          </main>
+          
+          <!-- Table of Contents Sidebar -->
+          
+          <aside class="section-toc">
+            <h4>On This Page</h4>
+            <nav class="toc-nav">
+              <ul id="toc" class="toc-list">
+<li class="toc-item toc-h2"><a href="#github-terraform-provider-deep-dive">GitHub Terraform Provider Deep Dive</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#provider-architecture">Provider Architecture</a></li>
+<li class="toc-item toc-h3"><a href="#provider-configuration">Provider Configuration</a></li>
+<li class="toc-item toc-h3"><a href="#key-resources">Key Resources</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#state-management">State Management</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#remote-state-storage">Remote State Storage</a></li>
+<li class="toc-item toc-h3"><a href="#state-operations">State Operations</a></li>
+<li class="toc-item toc-h3"><a href="#importing-existing-resources">Importing Existing Resources</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#gitops-implementation-patterns">GitOps Implementation Patterns</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#pattern-1-centralized-configuration-repository">Pattern 1: Centralized Configuration Repository</a></li>
+<li class="toc-item toc-h3"><a href="#pattern-2-self-service-with-pull-requests">Pattern 2: Self-Service with Pull Requests</a></li>
+<li class="toc-item toc-h3"><a href="#pattern-3-drift-detection">Pattern 3: Drift Detection</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#modular-terraform-design">Modular Terraform Design</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#using-modules-for-consistency">Using Modules for Consistency</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#security-considerations">Security Considerations</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#token-management">Token Management</a></li>
+<li class="toc-item toc-h3"><a href="#github-app-for-terraform">GitHub App for Terraform</a></li>
+<li class="toc-item toc-h3"><a href="#least-privilege-permissions">Least Privilege Permissions</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+          </aside>
+          
+        </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="module-nav">
+          
+            <a href="/advanced/module-11/overview/" class="nav-button nav-prev">
+              <span class="nav-direction">← Previous</span>
+              <span class="nav-title">Context & Overview</span>
+            </a>
+          
+
+          <div class="nav-center">
+            <a href="/advanced/module-11/" class="nav-index">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.75A.75.75 0 0 1 2.75 2h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 2.75Zm0 5A.75.75 0 0 1 2.75 7h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 7.75ZM2.75 12h10.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5Z"></path></svg>
+              Module Overview
+            </a>
+          </div>
+
+          
+            <a href="/advanced/module-11/walkthrough/" class="nav-button nav-next">
+              <span class="nav-direction">Next →</span>
+              <span class="nav-title">Guided Walkthrough</span>
+            </a>
+          
+        </nav>
+      </div>
+
+      </main>
+    </div>
+
+    <footer class="training-footer">
+  <div class="container">
+    <div class="training-footer-content">
+      <div class="footer-info">
+        <p class="footer-text">GitHub Training Program v1.0 | Last updated: December 2025</p>
+        <p class="footer-links">
+          <a href="https://docs.github.com" target="_blank" rel="noopener">GitHub Docs</a> • 
+          <a href="https://github.community" target="_blank" rel="noopener">Community</a> • 
+          <a href="/syllabus/">Full Syllabus</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- Smooth scroll behavior -->
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const href = this.getAttribute('href');
+          if (href !== '#') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+        });
+      });
+
+      // Add copy button to code blocks
+      document.querySelectorAll('pre').forEach(pre => {
+        // Create wrapper div
+        const wrapper = document.createElement('div');
+        wrapper.className = 'code-block-wrapper';
+        pre.parentNode.insertBefore(wrapper, pre);
+        wrapper.appendChild(pre);
+
+        // Create copy button
+        const button = document.createElement('button');
+        button.className = 'copy-button';
+        button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+        button.title = 'Copy to clipboard';
+        wrapper.appendChild(button);
+
+        // Copy functionality
+        button.addEventListener('click', async () => {
+          const code = pre.querySelector('code') ? pre.querySelector('code').textContent : pre.textContent;
+          try {
+            await navigator.clipboard.writeText(code);
+            button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+            button.classList.add('copied');
+            setTimeout(() => {
+              button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+              button.classList.remove('copied');
+            }, 2000);
+          } catch (err) {
+            console.error('Failed to copy:', err);
+          }
+        });
+      });
+    </script>
+
+    <!-- Mermaid.js for diagrams with pan/zoom -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+    <script>
+      // Initialize Mermaid with theme matching the training modules
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: 'base',
+        themeVariables: {
+          // Primary colors - matching GitHub/training theme
+          primaryColor: '#ddf4ff',
+          primaryTextColor: '#1f2328',
+          primaryBorderColor: '#0969da',
+          
+          // Secondary and tertiary colors
+          secondaryColor: '#f6f8fa',
+          secondaryTextColor: '#1f2328',
+          secondaryBorderColor: '#d0d7de',
+          tertiaryColor: '#fff8c5',
+          tertiaryTextColor: '#1f2328',
+          tertiaryBorderColor: '#d4a72c',
+          
+          // Background colors
+          background: '#ffffff',
+          mainBkg: '#ddf4ff',
+          secondBkg: '#f6f8fa',
+          
+          // Lines and borders
+          lineColor: '#57606a',
+          border1: '#d0d7de',
+          border2: '#0969da',
+          arrowheadColor: '#57606a',
+          
+          // Text styling
+          fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif',
+          fontSize: '14px',
+          labelBackground: '#ffffff',
+          nodeTextColor: '#1f2328',
+          
+          // Subgraph styling
+          clusterBkg: '#f6f8fa',
+          clusterBorder: '#d0d7de',
+          
+          // Note styling
+          noteBkgColor: '#fff8c5',
+          noteTextColor: '#1f2328',
+          noteBorderColor: '#d4a72c'
+        },
+        flowchart: {
+          useMaxWidth: true,
+          htmlLabels: true,
+          curve: 'basis',
+          padding: 30,
+          nodeSpacing: 50,
+          rankSpacing: 70,
+          subGraphTitleMargin: {
+            top: 10,
+            bottom: 20
+          }
+        },
+        securityLevel: 'loose'
+      });
+
+      // Add pan/zoom to Mermaid diagrams after they render
+      mermaid.run().then(() => {
+        document.querySelectorAll('.mermaid-container svg').forEach((svg, index) => {
+          // Ensure SVG has an ID for pan-zoom
+          if (!svg.id) {
+            svg.id = 'mermaid-svg-' + index;
+          }
+          
+          // Set minimum dimensions on SVG for better visibility
+          svg.style.minWidth = '100%';
+          svg.style.minHeight = '300px';
+          
+          // Initialize pan-zoom
+          const panZoom = svgPanZoom(svg, {
+            zoomEnabled: true,
+            controlIconsEnabled: true,
+            fit: true,
+            center: true,
+            minZoom: 0.3,
+            maxZoom: 10,
+            zoomScaleSensitivity: 0.3,
+            dblClickZoomEnabled: true,
+            mouseWheelZoomEnabled: true,
+            preventMouseEventsDefault: true,
+            contain: false
+          });
+
+          // Handle window resize
+          window.addEventListener('resize', () => {
+            panZoom.resize();
+            panZoom.fit();
+            panZoom.center();
+          });
+        });
+      });
+    </script>
+
+  </body>
+</html>

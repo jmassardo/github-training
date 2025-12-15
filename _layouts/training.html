@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  {% include head.html %}
+
+  <body class="training-layout">
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    {% include training-header.html %}
+
+    <!-- Main content area with sidebar -->
+    <div class="training-container">
+      
+      <!-- Sidebar navigation -->
+      <aside class="training-sidebar">
+        <div class="training-sidebar-sticky">
+          
+          {% if page.url contains '/beginner/' %}
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">🌱 Beginner Phase</h3>
+            <nav class="sidebar-nav">
+              <a href="{{ site.baseurl }}/beginner/" class="sidebar-link{% if page.url == '/beginner/' %} active{% endif %}">Phase Overview</a>
+              <a href="{{ site.baseurl }}/beginner/module-1/" class="sidebar-link{% if page.url contains 'module-1' %} active{% endif %}">Module 1: SDLC</a>
+              <a href="{{ site.baseurl }}/beginner/module-2/" class="sidebar-link{% if page.url contains 'module-2' %} active{% endif %}">Module 2: Git</a>
+              <a href="{{ site.baseurl }}/beginner/module-3/" class="sidebar-link{% if page.url contains 'module-3' %} active{% endif %}">Module 3: GitHub Platform</a>
+              <a href="{{ site.baseurl }}/beginner/module-4/" class="sidebar-link{% if page.url contains 'module-4' %} active{% endif %}">Module 4: SCM Process</a>
+            </nav>
+          </div>
+          {% endif %}
+          
+          {% if page.url contains '/intermediate/' %}
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">🚀 Intermediate Phase</h3>
+            <nav class="sidebar-nav">
+              <a href="{{ site.baseurl }}/intermediate/" class="sidebar-link{% if page.url == '/intermediate/' %} active{% endif %}">Phase Overview</a>
+              <a href="{{ site.baseurl }}/intermediate/module-5/" class="sidebar-link{% if page.url contains 'module-5' %} active{% endif %}">Module 5: Actions</a>
+              <a href="{{ site.baseurl }}/intermediate/module-6/" class="sidebar-link{% if page.url contains 'module-6' %} active{% endif %}">Module 6: Security</a>
+              <a href="{{ site.baseurl }}/intermediate/module-7/" class="sidebar-link{% if page.url contains 'module-7' %} active{% endif %}">Module 7: Packages</a>
+              <a href="{{ site.baseurl }}/intermediate/module-8/" class="sidebar-link{% if page.url contains 'module-8' %} active{% endif %}">Module 8: CI/CD</a>
+            </nav>
+          </div>
+          {% endif %}
+          
+          {% if page.url contains '/advanced/' %}
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">🏆 Advanced Phase</h3>
+            <nav class="sidebar-nav">
+              <a href="{{ site.baseurl }}/advanced/" class="sidebar-link{% if page.url == '/advanced/' %} active{% endif %}">Phase Overview</a>
+              <a href="{{ site.baseurl }}/advanced/module-9/" class="sidebar-link{% if page.url contains 'module-9' %} active{% endif %}">Module 9: Enterprise Admin</a>
+              <a href="{{ site.baseurl }}/advanced/module-10/" class="sidebar-link{% if page.url contains 'module-10' %} active{% endif %}">Module 10: APIs & Apps</a>
+              <a href="{{ site.baseurl }}/advanced/module-11/" class="sidebar-link{% if page.url contains 'module-11' %} active{% endif %}">Module 11: IaC & Ops</a>
+              <a href="{{ site.baseurl }}/advanced/module-12/" class="sidebar-link{% if page.url contains 'module-12' %} active{% endif %}">Module 12: Governance</a>
+              <a href="{{ site.baseurl }}/advanced/module-13/" class="sidebar-link{% if page.url contains 'module-13' %} active{% endif %}">Module 13: Copilot Basics</a>
+              <a href="{{ site.baseurl }}/advanced/module-14/" class="sidebar-link{% if page.url contains 'module-14' %} active{% endif %}">Module 14: Copilot Advanced</a>
+            </nav>
+          </div>
+          {% endif %}
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">Resources</h3>
+            <nav class="sidebar-nav">
+              <a href="{{ site.baseurl }}/syllabus/" class="sidebar-link">Full Syllabus</a>
+              <a href="https://docs.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Docs
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+              <a href="https://skills.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Skills
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+              <a href="https://github.com/orgs/community/discussions" class="sidebar-link" target="_blank" rel="noopener">
+                Community
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+            </nav>
+          </div>
+
+          <!-- Progress indicator -->
+          {% if page.module_number %}
+          <div class="sidebar-section progress-section">
+            <h3 class="sidebar-heading">Progress</h3>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: {{ page.module_number | times: 7.143 }}%"></div>
+            </div>
+            <p class="progress-text">Module {{ page.module_number }} of 14</p>
+          </div>
+          {% endif %}
+        </div>
+      </aside>
+
+      <!-- Main content -->
+      <main class="training-main" id="main-content">
+        <div class="training-content">
+          {{ content }}
+        </div>
+
+        <!-- Module navigation footer -->
+        {% if page.prev_module or page.next_module %}
+        <nav class="module-navigation" aria-label="Module navigation">
+          {% if page.prev_module %}
+          <a href="{{ page.prev_module.url }}" class="module-nav-link module-nav-prev">
+            <svg class="nav-arrow" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+              <path fill="currentColor" d="M9.78 12.78a.75.75 0 01-1.06 0L4.47 8.53a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L6.06 8l3.72 3.72a.75.75 0 010 1.06z"></path>
+            </svg>
+            <div class="module-nav-content">
+              <span class="module-nav-label">Previous</span>
+              <span class="module-nav-title">{{ page.prev_module.title }}</span>
+            </div>
+          </a>
+          {% endif %}
+          
+          {% if page.next_module %}
+          <a href="{{ page.next_module.url }}" class="module-nav-link module-nav-next">
+            <div class="module-nav-content">
+              <span class="module-nav-label">Next</span>
+              <span class="module-nav-title">{{ page.next_module.title }}</span>
+            </div>
+            <svg class="nav-arrow" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+              <path fill="currentColor" d="M6.22 3.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L9.94 8 6.22 4.28a.75.75 0 010-1.06z"></path>
+            </svg>
+          </a>
+          {% endif %}
+        </nav>
+        {% endif %}
+      </main>
+    </div>
+
+    {% include training-footer.html %}
+
+    <!-- Smooth scroll behavior -->
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const href = this.getAttribute('href');
+          if (href !== '#') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+        });
+      });
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Module 5, Section 7: Real-World CSM Scenarios &middot; GitHub Training
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="preload" href="/public/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/public/css/main.css"></noscript>
+
+  <!-- GLightbox CSS for Image Modals -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+</head>
+
+
+  <body class="training-layout">
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="training-header">
+  <div class="container">
+    <div class="training-header-inner">
+      <div class="training-brand">
+        <a href="/" class="training-logo">
+          <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" class="octicon">
+            <path fill="currentColor" d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
+          </svg>
+          <span class="training-title">GitHub Training</span>
+        </a>
+        <span class="training-tagline">CSM & CSA Certification Program</span>
+      </div>
+      
+      <nav class="training-nav" aria-label="Training navigation">
+        <a href="/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8.156 1.835a.25.25 0 00-.312 0l-5.25 4.2a.25.25 0 00-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 01.75-.75h3.5a.75.75 0 01.75.75v5.25h2.75a.25.25 0 00.25-.25V6.23a.25.25 0 00-.094-.195z"></path>
+          </svg>
+          Home
+        </a>
+        <a href="/beginner/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0114.25 16H1.75A1.75 1.75 0 010 14.25V1.75zm1.75-.25a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V1.75a.25.25 0 00-.25-.25H1.75zM3.5 6.25a.75.75 0 01.75-.75h7a.75.75 0 010 1.5h-7a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h4a.75.75 0 000-1.5h-4z"></path>
+          </svg>
+          Beginner
+        </a>
+        <a href="/intermediate/" class="training-nav-link active">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+            <path fill="currentColor" d="M8 0a8 8 0 110 16A8 8 0 018 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"></path>
+          </svg>
+          Intermediate
+        </a>
+        <a href="/advanced/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"></path>
+          </svg>
+          Advanced
+        </a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+    <!-- Main content area with sidebar -->
+    <div class="training-container">
+      
+      <!-- Sidebar navigation -->
+      <aside class="training-sidebar">
+        <div class="training-sidebar-sticky">
+          
+          
+          
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">🚀 Intermediate Phase</h3>
+            <nav class="sidebar-nav">
+              <a href="/intermediate/" class="sidebar-link">Phase Overview</a>
+              <a href="/intermediate/module-5/" class="sidebar-link active">Module 5: Actions</a>
+              <a href="/intermediate/module-6/" class="sidebar-link">Module 6: Security</a>
+              <a href="/intermediate/module-7/" class="sidebar-link">Module 7: Packages</a>
+              <a href="/intermediate/module-8/" class="sidebar-link">Module 8: CI/CD</a>
+            </nav>
+          </div>
+          
+          
+          
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">Resources</h3>
+            <nav class="sidebar-nav">
+              <a href="/syllabus/" class="sidebar-link">Full Syllabus</a>
+              <a href="https://docs.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Docs
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+              <a href="https://skills.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Skills
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+            </nav>
+          </div>
+          
+        </div>
+      </aside>
+
+      <!-- Main content area -->
+      <main id="main-content" class="training-main">
+      
+        <div class="training-module">
+        <!-- Module Header -->
+        <header class="module-header">
+          <div class="module-breadcrumb">
+            <a href="/">Training Home</a>
+            <span class="separator">›</span>
+            <a href="/intermediate/">Intermediate Phase</a>
+            <span class="separator">›</span>
+            <a href="/intermediate/module-5/">Module 5</a>
+          </div>
+          
+          <h1 class="module-title">Module 5, Section 7: Real-World CSM Scenarios</h1>
+          
+          <div class="module-meta">
+            <span class="badge badge-intermediate">Intermediate</span>
+            <span class="meta-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm7-3.25v2.992l2.028.812a.75.75 0 0 1-.557 1.392l-2.5-1A.751.751 0 0 1 7 8.25v-3.5a.75.75 0 0 1 1.5 0Z"></path></svg>
+              
+            </span>
+            <span class="meta-item">
+              Section 7 of 7
+            </span>
+          </div>
+        </header>
+
+        <!-- Progress Bar -->
+        <div class="module-progress">
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 100.0%"></div>
+          </div>
+          <div class="progress-steps">
+            
+              
+              <a href="/intermediate/module-5/overview/" 
+                 class="progress-step completed"
+                 title="Context & Overview">
+                <span class="step-dot"></span>
+                <span class="step-label">1</span>
+              </a>
+            
+              
+              <a href="/intermediate/module-5/concepts/" 
+                 class="progress-step completed"
+                 title="Core Concepts">
+                <span class="step-dot"></span>
+                <span class="step-label">2</span>
+              </a>
+            
+              
+              <a href="/intermediate/module-5/walkthrough/" 
+                 class="progress-step completed"
+                 title="Guided Walkthrough">
+                <span class="step-dot"></span>
+                <span class="step-label">3</span>
+              </a>
+            
+              
+              <a href="/intermediate/module-5/labs/" 
+                 class="progress-step completed"
+                 title="Hands-On Labs">
+                <span class="step-dot"></span>
+                <span class="step-label">4</span>
+              </a>
+            
+              
+              <a href="/intermediate/module-5/quiz/" 
+                 class="progress-step completed"
+                 title="Knowledge Check">
+                <span class="step-dot"></span>
+                <span class="step-label">5</span>
+              </a>
+            
+              
+              <a href="/intermediate/module-5/resources/" 
+                 class="progress-step completed"
+                 title="Resources">
+                <span class="step-dot"></span>
+                <span class="step-label">6</span>
+              </a>
+            
+              
+              <a href="/intermediate/module-5/scenarios/" 
+                 class="progress-step active"
+                 title="CSM Scenarios">
+                <span class="step-dot"></span>
+                <span class="step-label">7</span>
+              </a>
+            
+          </div>
+        </div>
+
+        <!-- Section Navigation Tabs -->
+        <nav class="section-tabs">
+          
+            
+            <a href="/intermediate/module-5/overview/" 
+               class="section-tab ">
+              <span class="tab-icon">🎯</span>
+              <span class="tab-title">Overview</span>
+            </a>
+          
+            
+            <a href="/intermediate/module-5/concepts/" 
+               class="section-tab ">
+              <span class="tab-icon">📚</span>
+              <span class="tab-title">Concepts</span>
+            </a>
+          
+            
+            <a href="/intermediate/module-5/walkthrough/" 
+               class="section-tab ">
+              <span class="tab-icon">🚶</span>
+              <span class="tab-title">Walkthrough</span>
+            </a>
+          
+            
+            <a href="/intermediate/module-5/labs/" 
+               class="section-tab ">
+              <span class="tab-icon">💻</span>
+              <span class="tab-title">Labs</span>
+            </a>
+          
+            
+            <a href="/intermediate/module-5/quiz/" 
+               class="section-tab ">
+              <span class="tab-icon">✅</span>
+              <span class="tab-title">Quiz</span>
+            </a>
+          
+            
+            <a href="/intermediate/module-5/resources/" 
+               class="section-tab ">
+              <span class="tab-icon">📖</span>
+              <span class="tab-title">Resources</span>
+            </a>
+          
+            
+            <a href="/intermediate/module-5/scenarios/" 
+               class="section-tab active">
+              <span class="tab-icon">💼</span>
+              <span class="tab-title">Scenarios</span>
+            </a>
+          
+        </nav>
+
+        <!-- Main Content with TOC Sidebar -->
+        <div class="module-content-wrapper">
+          <main id="main-content" class="module-content">
+            <article class="section-content">
+              
+<h2 id="scenario-1-jenkins-migration">Scenario 1: Jenkins Migration</h2>
+
+<h3 id="situation">Situation</h3>
+<p>A customer is migrating from Jenkins to GitHub Actions. They have 200+ Jenkins jobs and are concerned about the migration effort and feature parity.</p>
+
+<h3 id="customer-question">Customer Question</h3>
+<p>“We’ve invested heavily in Jenkins. Can GitHub Actions do everything Jenkins does? How do we migrate?”</p>
+
+<h3 id="your-response">Your Response</h3>
+<p>“Great question! Let me address feature parity and migration strategy:
+<strong>Feature Comparison:</strong></p>
+
+<p>| Jenkins Feature | GitHub Actions Equivalent |
+|----------------|--------------------------|
+| Pipeline as Code | Workflow YAML |
+| Shared Libraries | Reusable Workflows |
+| Plugins | Marketplace Actions |
+| Agents | Runners (hosted/self-hosted) |
+| Jenkinsfile | .github/workflows/*.yml |
+| Parameters | workflow_dispatch inputs |
+| Stages | Jobs |
+| Parallel stages | Matrix strategy |
+| Credentials | Secrets |
+<strong>Migration Approach:</strong>
+1. <strong>Assessment Phase (Week 1-2):</strong>
+   - Inventory all Jenkins jobs
+   - Categorize by complexity (simple, medium, complex)
+   - Identify shared libraries and plugins used
+2. <strong>Pilot Phase (Week 3-4):</strong>
+   - Convert 5-10 representative pipelines
+   - Start with simple builds, add complexity
+   - Use GitHub Actions Importer tool:
+   <code class="language-plaintext highlighter-rouge">bash
+   gh actions-importer audit jenkins --output-dir audit
+   gh actions-importer dry-run jenkins --source-url http://jenkins --output-dir output
+  </code></p>
+
+<ol>
+  <li><strong>Migration Phase (Week 5+):</strong>
+    <ul>
+      <li>Convert in batches</li>
+      <li>Run parallel (Jenkins + Actions) initially</li>
+      <li>Cut over once validated</li>
+    </ul>
+  </li>
+  <li><strong>Optimization Phase:</strong>
+    <ul>
+      <li>Create reusable workflows for common patterns</li>
+      <li>Implement caching for performance</li>
+      <li>Set up organization-level secrets
+<strong>What GitHub Actions does better:</strong>
+     - Native GitHub integration (PRs, issues, deployments)
+     - No infrastructure to manage (hosted runners)
+     - Modern YAML syntax
+     - Built-in secret scanning on workflow files
+Would you like me to help with a specific pipeline migration?”
+---</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="scenario-2-cost-optimization">Scenario 2: Cost Optimization</h2>
+
+<h3 id="situation-1">Situation</h3>
+<p>A customer’s GitHub Actions usage has grown significantly, and they’re seeing high costs from runner minutes.</p>
+
+<h3 id="customer-question-1">Customer Question</h3>
+<p>“Our Actions costs have tripled this quarter. How can we optimize without slowing down our development?”</p>
+
+<h3 id="your-response-1">Your Response</h3>
+<p>“Let’s analyze and optimize your Actions usage:
+<strong>Quick Wins (Immediate Impact):</strong>
+1. <strong>Add path filters:</strong></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">on</span><span class="pi">:</span>
+  <span class="na">push</span><span class="pi">:</span>
+    <span class="na">paths</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s1">'</span><span class="s">src/**'</span>
+      <span class="pi">-</span> <span class="s1">'</span><span class="s">!**/*.md'</span>
+
+</code></pre></div></div>
+
+<ol>
+  <li><strong>Cancel redundant runs:</strong></li>
+</ol>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">concurrency</span><span class="pi">:</span>
+  <span class="na">group</span><span class="pi">:</span> <span class="s">${{ github.workflow }}-${{ github.ref }}</span>
+  <span class="na">cancel-in-progress</span><span class="pi">:</span> <span class="kc">true</span>
+
+</code></pre></div></div>
+
+<ol>
+  <li><strong>Optimize caching:</strong></li>
+</ol>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/cache@v4</span>
+  <span class="na">with</span><span class="pi">:</span>
+    <span class="na">path</span><span class="pi">:</span> <span class="s">node_modules</span>
+    <span class="na">key</span><span class="pi">:</span> <span class="s">${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}</span>
+
+</code></pre></div></div>
+
+<p><strong>Medium-Term Optimizations:</strong>
+4. <strong>Self-hosted runners for heavy jobs:</strong>
+   - macOS minutes are 10x Linux cost
+   - Consider self-hosted Mac Minis for iOS builds</p>
+
+<ol>
+  <li><strong>Larger runners for parallelization:</strong>
+    <ul>
+      <li>Sometimes 1 large runner is cheaper than 4 small</li>
+      <li>Especially for compilation-heavy workflows</li>
+    </ul>
+  </li>
+  <li><strong>Job consolidation:</strong></li>
+</ol>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Instead of 3 separate jobs, each with checkout/setup</span>
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">all-checks</span><span class="pi">:</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v4</span>
+      <span class="pi">-</span> <span class="na">run</span><span class="pi">:</span> <span class="s">npm ci</span>
+      <span class="pi">-</span> <span class="na">run</span><span class="pi">:</span> <span class="s">npm run lint</span>
+      <span class="pi">-</span> <span class="na">run</span><span class="pi">:</span> <span class="s">npm test</span>
+      <span class="pi">-</span> <span class="na">run</span><span class="pi">:</span> <span class="s">npm run build</span>
+
+</code></pre></div></div>
+
+<p><strong>Analysis Tools:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Get usage report</span>
+gh api /orgs/<span class="o">{</span>org<span class="o">}</span>/actions/usage
+<span class="c"># Identify expensive workflows</span>
+gh run list <span class="nt">--limit</span> 100 <span class="nt">--json</span> conclusion,status,workflowName,createdAt
+
+</code></pre></div></div>
+
+<p><strong>Cost Reduction Checklist:</strong>
+- [ ] Add path filters to all workflows
+- [ ] Implement concurrency cancellation
+- [ ] Cache dependencies properly
+- [ ] Use <code class="language-plaintext highlighter-rouge">ubuntu-latest</code> instead of <code class="language-plaintext highlighter-rouge">macos-latest</code> where possible
+- [ ] Consider self-hosted for high-volume repos
+- [ ] Review and remove unused workflows
+Shall I help audit your specific workflows?”</p>
+
+<h2 id="scenario-3-security-hardening">Scenario 3: Security Hardening</h2>
+
+<h3 id="situation-2">Situation</h3>
+<p>A customer in a regulated industry needs to ensure their CI/CD pipelines meet security requirements.</p>
+
+<h3 id="customer-question-2">Customer Question</h3>
+<p>“Our security team is concerned about supply chain attacks through CI/CD. How do we secure our GitHub Actions?”</p>
+
+<h3 id="your-response-2">Your Response</h3>
+<p>“Excellent focus on supply chain security. Here’s a comprehensive hardening guide:
+<strong>1. Pin Actions to SHA:</strong></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Instead of</span>
+<span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v4</span>
+<span class="c1"># Use commit SHA</span>
+<span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608</span>
+
+</code></pre></div></div>
+
+<p><strong>2. Minimize GITHUB_TOKEN permissions:</strong></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">permissions</span><span class="pi">:</span>
+  <span class="na">contents</span><span class="pi">:</span> <span class="s">read</span>    <span class="c1"># Minimum required</span>
+  
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">permissions</span><span class="pi">:</span>
+      <span class="na">contents</span><span class="pi">:</span> <span class="s">read</span>
+      <span class="na">deployments</span><span class="pi">:</span> <span class="s">write</span>  <span class="c1"># Only what's needed</span>
+
+</code></pre></div></div>
+
+<p><strong>3. Use environments with protection:</strong></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">deploy-prod</span><span class="pi">:</span>
+    <span class="na">environment</span><span class="pi">:</span> <span class="s">production</span>  <span class="c1"># Requires approval</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">run</span><span class="pi">:</span> <span class="s">./deploy.sh</span>
+
+</code></pre></div></div>
+
+<p><strong>4. Secure secrets handling:</strong>
+- Use environment-scoped secrets for production
+- Enable secret scanning on workflow files
+- Consider HashiCorp Vault for dynamic secrets
+<strong>5. Workflow security settings:</strong>
+- Repository Settings → Actions → General
+  - ☑ Require approval for first-time contributors
+  - ☑ Disable Actions for fork PRs (or require approval)
+  - Limit Actions to specific repositories/actions
+<strong>6. Use OIDC instead of long-lived secrets:</strong></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">permissions</span><span class="pi">:</span>
+  <span class="na">id-token</span><span class="pi">:</span> <span class="s">write</span>
+<span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">aws-actions/configure-aws-credentials@v4</span>
+  <span class="na">with</span><span class="pi">:</span>
+    <span class="na">role-to-assume</span><span class="pi">:</span> <span class="s">arn:aws:iam::123456789:role/deploy</span>
+
+</code></pre></div></div>
+
+<p><strong>7. Add security scanning to workflows:</strong></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">github/codeql-action/analyze@v3</span>
+<span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">snyk/actions/node@master</span>
+
+</code></pre></div></div>
+
+<p><strong>8. Audit workflow changes:</strong>
+- Use branch protection for <code class="language-plaintext highlighter-rouge">.github/workflows/</code>
+- Require CODEOWNERS review for workflow changes
+- Monitor audit log for workflow modifications
+<strong>Security Checklist:</strong>
+- [ ] All third-party actions pinned to SHA
+- [ ] GITHUB_TOKEN permissions minimized
+- [ ] Production deploys use environments with approval
+- [ ] OIDC used for cloud authentication
+- [ ] Workflows require CODEOWNER approval to modify
+- [ ] Secret scanning enabled
+- [ ] Fork PR workflows require approval
+Would you like me to review your specific workflows for security issues?”
+---</p>
+
+<h2 id="scenario-4-scaling-self-hosted-runners">Scenario 4: Scaling Self-Hosted Runners</h2>
+
+<h3 id="situation-3">Situation</h3>
+<p>A customer has specialized build requirements (GPU, specific hardware) and needs to scale their self-hosted runner infrastructure.</p>
+
+<h3 id="customer-question-3">Customer Question</h3>
+<p>“We need GPU runners for ML model training. How do we set this up and scale it appropriately?”</p>
+
+<h3 id="your-response-3">Your Response</h3>
+<p>“Let me walk you through a scalable self-hosted runner architecture:
+<strong>Architecture Options:</strong>
+1. <strong>Static Runners (Simple):</strong>
+   - Persistent VMs registered as runners
+   - Good for: Consistent, predictable load
+   - Drawback: Pay for idle capacity
+2. <strong>Actions Runner Controller (ARC) on Kubernetes:</strong>
+   - Runners scale based on demand
+   - Good for: Variable load, existing K8s
+   - GPU support via NVIDIA device plugin
+3. <strong>Ephemeral Runners with Auto-scaling:</strong>
+   - New runner per job, destroyed after
+   - Good for: Security, clean environment
+   - Can use AWS/Azure/GCP auto-scaling groups
+<strong>For GPU Runners (Recommended: ARC on Kubernetes):</strong></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># RunnerDeployment for GPU runners</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">actions.summerwind.dev/v1alpha1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">RunnerDeployment</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">gpu-runners</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">replicas</span><span class="pi">:</span> <span class="m">2</span>
+  <span class="na">template</span><span class="pi">:</span>
+    <span class="na">spec</span><span class="pi">:</span>
+      <span class="na">repository</span><span class="pi">:</span> <span class="s">your-org/ml-training</span>
+      <span class="na">labels</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s">gpu</span>
+        <span class="pi">-</span> <span class="s">cuda</span>
+      <span class="na">resources</span><span class="pi">:</span>
+        <span class="na">limits</span><span class="pi">:</span>
+          <span class="na">nvidia.com/gpu</span><span class="pi">:</span> <span class="m">1</span>
+      <span class="na">nodeSelector</span><span class="pi">:</span>
+        <span class="na">gpu</span><span class="pi">:</span> <span class="s1">'</span><span class="s">true'</span>
+
+</code></pre></div></div>
+
+<p><strong>Workflow usage:</strong></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">train-model</span><span class="pi">:</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">self-hosted</span><span class="pi">,</span> <span class="nv">gpu</span><span class="pi">,</span> <span class="nv">cuda</span><span class="pi">]</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v4</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Train model</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="s">python train.py</span>
+
+</code></pre></div></div>
+
+<p><strong>Auto-scaling configuration:</strong></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">actions.summerwind.dev/v1alpha1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">HorizontalRunnerAutoscaler</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">gpu-runners-autoscaler</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">scaleTargetRef</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">gpu-runners</span>
+  <span class="na">minReplicas</span><span class="pi">:</span> <span class="m">1</span>
+  <span class="na">maxReplicas</span><span class="pi">:</span> <span class="m">10</span>
+  <span class="na">metrics</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">PercentageRunnersBusy</span>
+      <span class="na">scaleUpThreshold</span><span class="pi">:</span> <span class="s1">'</span><span class="s">0.75'</span>
+      <span class="na">scaleDownThreshold</span><span class="pi">:</span> <span class="s1">'</span><span class="s">0.25'</span>
+      <span class="na">scaleUpFactor</span><span class="pi">:</span> <span class="s1">'</span><span class="s">2'</span>
+      <span class="na">scaleDownFactor</span><span class="pi">:</span> <span class="s1">'</span><span class="s">0.5'</span>
+
+</code></pre></div></div>
+
+<p><strong>Best Practices:</strong>
+- Use ephemeral runners for security
+- Label runners by capability (gpu, high-memory, etc.)
+- Monitor runner utilization
+- Set up alerting for runner failures
+- Regular security patching
+Would you like help setting up ARC or another scaling solution?”</p>
+
+<h2 id="module-summary">Module Summary</h2>
+
+<h3 id="key-takeaways">Key Takeaways</h3>
+<ol>
+  <li><strong>Workflows are Event-Driven</strong>
+    <ul>
+      <li>Multiple trigger types (push, PR, schedule, manual)</li>
+      <li>Path and branch filtering for efficiency</li>
+      <li>Concurrency controls prevent duplicate runs</li>
+    </ul>
+  </li>
+  <li><strong>Jobs and Steps are the Building Blocks</strong>
+    <ul>
+      <li>Jobs run in parallel by default</li>
+      <li>Steps run sequentially within jobs</li>
+      <li>Use <code class="language-plaintext highlighter-rouge">needs</code> for job dependencies</li>
+    </ul>
+  </li>
+  <li><strong>Matrix Builds Enable Cross-Platform Testing</strong>
+    <ul>
+      <li>Test across OS, language versions simultaneously</li>
+      <li>Use <code class="language-plaintext highlighter-rouge">include</code>/<code class="language-plaintext highlighter-rouge">exclude</code> for special cases</li>
+      <li><code class="language-plaintext highlighter-rouge">fail-fast: false</code> continues testing on failures</li>
+    </ul>
+  </li>
+  <li><strong>Reusable Workflows Enable DRY CI/CD</strong>
+    <ul>
+      <li>Create once, use everywhere</li>
+      <li>Pass inputs, secrets, and receive outputs</li>
+      <li>Version with branches or tags</li>
+    </ul>
+  </li>
+  <li><strong>Security is Multi-Layered</strong>
+    <ul>
+      <li>Pin actions to SHA</li>
+      <li>Minimize GITHUB_TOKEN permissions</li>
+      <li>Use OIDC for cloud authentication</li>
+      <li>Protect sensitive environments</li>
+    </ul>
+  </li>
+  <li><strong>Performance Matters</strong>
+    <ul>
+      <li>Cache dependencies aggressively</li>
+      <li>Use path filters</li>
+      <li>Cancel redundant runs</li>
+      <li>
+        <h2 id="right-size-runners-for-workloads">Right-size runners for workloads</h2>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="whats-next">What’s Next</h2>
+<p>In <strong>Module 6: Code Security with GHAS</strong>, you’ll learn how to:
+- Implement code scanning with CodeQL
+- Configure Dependabot for dependency updates
+- Set up secret scanning
+- Create security policies
+The CI/CD pipelines you’ve built here become even more powerful when combined with GitHub’s security features to shift security left in your development process.</p>
+
+<h2 id="checklist-module-5-complete">Checklist: Module 5 Complete</h2>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Created a CI workflow with linting and testing</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Implemented matrix testing</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Set up caching for dependencies</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Created a reusable workflow</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Configured environment deployments</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Completed all three labs</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Reviewed real-world scenarios</li>
+</ul>
+
+<hr />
+<div class="section-navigation">
+  <a href="/intermediate/module-5/resources/" class="nav-button nav-prev">
+    <span class="nav-label">← Previous</span>
+    <span class="nav-title">Resources</span>
+  </a>
+  <a href="/intermediate/module-6/" class="nav-button nav-next">
+    <span class="nav-label">Next →</span>
+    <span class="nav-title">Module 6: Security &amp; GHAS</span>
+  </a>
+</div>
+
+            </article>
+          </main>
+          
+          <!-- Table of Contents Sidebar -->
+          
+          <aside class="section-toc">
+            <h4>On This Page</h4>
+            <nav class="toc-nav">
+              <ul id="toc" class="toc-list">
+<li class="toc-item toc-h2"><a href="#scenario-1-jenkins-migration">Scenario 1: Jenkins Migration</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#situation">Situation</a></li>
+<li class="toc-item toc-h3"><a href="#customer-question">Customer Question</a></li>
+<li class="toc-item toc-h3"><a href="#your-response">Your Response</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#scenario-2-cost-optimization">Scenario 2: Cost Optimization</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#situation-1">Situation</a></li>
+<li class="toc-item toc-h3"><a href="#customer-question-1">Customer Question</a></li>
+<li class="toc-item toc-h3"><a href="#your-response-1">Your Response</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#scenario-3-security-hardening">Scenario 3: Security Hardening</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#situation-2">Situation</a></li>
+<li class="toc-item toc-h3"><a href="#customer-question-2">Customer Question</a></li>
+<li class="toc-item toc-h3"><a href="#your-response-2">Your Response</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#scenario-4-scaling-self-hosted-runners">Scenario 4: Scaling Self-Hosted Runners</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#situation-3">Situation</a></li>
+<li class="toc-item toc-h3"><a href="#customer-question-3">Customer Question</a></li>
+<li class="toc-item toc-h3"><a href="#your-response-3">Your Response</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#module-summary">Module Summary</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#key-takeaways">Key Takeaways</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#right-size-runners-for-workloads">Right-size runners for workloads</a></li>
+<li class="toc-item toc-h2"><a href="#whats-next">What’s Next</a></li>
+<li class="toc-item toc-h2"><a href="#checklist-module-5-complete">Checklist: Module 5 Complete</a></li>
+</ul>
+            </nav>
+          </aside>
+          
+        </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="module-nav">
+          
+            <a href="/intermediate/module-5/resources/" class="nav-button nav-prev">
+              <span class="nav-direction">← Previous</span>
+              <span class="nav-title">Resources</span>
+            </a>
+          
+
+          <div class="nav-center">
+            <a href="/intermediate/module-5/" class="nav-index">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.75A.75.75 0 0 1 2.75 2h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 2.75Zm0 5A.75.75 0 0 1 2.75 7h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 7.75ZM2.75 12h10.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5Z"></path></svg>
+              Module Overview
+            </a>
+          </div>
+
+          
+            <a href="/intermediate/module-6/" class="nav-button nav-next">
+              <span class="nav-direction">Next →</span>
+              <span class="nav-title">Module 6: Security & GHAS</span>
+            </a>
+          
+        </nav>
+      </div>
+
+      </main>
+    </div>
+
+    <footer class="training-footer">
+  <div class="container">
+    <div class="training-footer-content">
+      <div class="footer-info">
+        <p class="footer-text">GitHub Training Program v1.0 | Last updated: December 2025</p>
+        <p class="footer-links">
+          <a href="https://docs.github.com" target="_blank" rel="noopener">GitHub Docs</a> • 
+          <a href="https://github.community" target="_blank" rel="noopener">Community</a> • 
+          <a href="/syllabus/">Full Syllabus</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- Smooth scroll behavior -->
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const href = this.getAttribute('href');
+          if (href !== '#') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+        });
+      });
+
+      // Add copy button to code blocks
+      document.querySelectorAll('pre').forEach(pre => {
+        // Create wrapper div
+        const wrapper = document.createElement('div');
+        wrapper.className = 'code-block-wrapper';
+        pre.parentNode.insertBefore(wrapper, pre);
+        wrapper.appendChild(pre);
+
+        // Create copy button
+        const button = document.createElement('button');
+        button.className = 'copy-button';
+        button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+        button.title = 'Copy to clipboard';
+        wrapper.appendChild(button);
+
+        // Copy functionality
+        button.addEventListener('click', async () => {
+          const code = pre.querySelector('code') ? pre.querySelector('code').textContent : pre.textContent;
+          try {
+            await navigator.clipboard.writeText(code);
+            button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+            button.classList.add('copied');
+            setTimeout(() => {
+              button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+              button.classList.remove('copied');
+            }, 2000);
+          } catch (err) {
+            console.error('Failed to copy:', err);
+          }
+        });
+      });
+    </script>
+
+    <!-- Mermaid.js for diagrams with pan/zoom -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+    <script>
+      // Initialize Mermaid with theme matching the training modules
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: 'base',
+        themeVariables: {
+          // Primary colors - matching GitHub/training theme
+          primaryColor: '#ddf4ff',
+          primaryTextColor: '#1f2328',
+          primaryBorderColor: '#0969da',
+          
+          // Secondary and tertiary colors
+          secondaryColor: '#f6f8fa',
+          secondaryTextColor: '#1f2328',
+          secondaryBorderColor: '#d0d7de',
+          tertiaryColor: '#fff8c5',
+          tertiaryTextColor: '#1f2328',
+          tertiaryBorderColor: '#d4a72c',
+          
+          // Background colors
+          background: '#ffffff',
+          mainBkg: '#ddf4ff',
+          secondBkg: '#f6f8fa',
+          
+          // Lines and borders
+          lineColor: '#57606a',
+          border1: '#d0d7de',
+          border2: '#0969da',
+          arrowheadColor: '#57606a',
+          
+          // Text styling
+          fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif',
+          fontSize: '14px',
+          labelBackground: '#ffffff',
+          nodeTextColor: '#1f2328',
+          
+          // Subgraph styling
+          clusterBkg: '#f6f8fa',
+          clusterBorder: '#d0d7de',
+          
+          // Note styling
+          noteBkgColor: '#fff8c5',
+          noteTextColor: '#1f2328',
+          noteBorderColor: '#d4a72c'
+        },
+        flowchart: {
+          useMaxWidth: true,
+          htmlLabels: true,
+          curve: 'basis',
+          padding: 30,
+          nodeSpacing: 50,
+          rankSpacing: 70,
+          subGraphTitleMargin: {
+            top: 10,
+            bottom: 20
+          }
+        },
+        securityLevel: 'loose'
+      });
+
+      // Add pan/zoom to Mermaid diagrams after they render
+      mermaid.run().then(() => {
+        document.querySelectorAll('.mermaid-container svg').forEach((svg, index) => {
+          // Ensure SVG has an ID for pan-zoom
+          if (!svg.id) {
+            svg.id = 'mermaid-svg-' + index;
+          }
+          
+          // Set minimum dimensions on SVG for better visibility
+          svg.style.minWidth = '100%';
+          svg.style.minHeight = '300px';
+          
+          // Initialize pan-zoom
+          const panZoom = svgPanZoom(svg, {
+            zoomEnabled: true,
+            controlIconsEnabled: true,
+            fit: true,
+            center: true,
+            minZoom: 0.3,
+            maxZoom: 10,
+            zoomScaleSensitivity: 0.3,
+            dblClickZoomEnabled: true,
+            mouseWheelZoomEnabled: true,
+            preventMouseEventsDefault: true,
+            contain: false
+          });
+
+          // Handle window resize
+          window.addEventListener('resize', () => {
+            panZoom.resize();
+            panZoom.fit();
+            panZoom.center();
+          });
+        });
+      });
+    </script>
+
+  </body>
+</html>

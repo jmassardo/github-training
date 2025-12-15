@@ -1,0 +1,75 @@
+# Site Info
+title: "GitHub Training"
+tagline: "CSM & CSA Certification Program"
+description: "Comprehensive GitHub training program for Customer Success Managers and Customer Success Architects"
+baseurl: "" # Set to "/github-training" if hosted as a subpath
+url: "" # Set to your domain, e.g., "https://training.example.com"
+logo: '/public/logo.png'
+
+# Site configurations
+plugins:
+  - jekyll-feed
+  - jekyll-toc
+
+# TOC settings
+toc:
+  min_level: 2
+  max_level: 3
+  list_class: "toc-list"
+  item_class: "toc-item"
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  gfm_quirks: [no_auto_typographic]
+excerpt_separator: "<!-- more -->"
+sass:
+  style: compressed
+  sass_dir: _scss
+permalink: pretty
+
+version: 1.0.0
+exclude: 
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - "*.md.bak"
+  - module-prompts/
+  - "GitHub Training Module Builder Prompt.md"
+  - TODO.md
+
+# About/contact
+author:
+  name: Jenna Massardo
+  description: Systems engineer. Robotics geek. Maker of shiny things.
+  contact:
+    linkedin: https://www.linkedin.com/in/jenna-massardo/
+    github: https://github.com/jmassardo
+    email: mailto:jenna@dxrf.com
+
+# Navigation
+nav:
+  Home:
+    - '/'
+  Beginner:
+    - '/beginner/'
+  Intermediate:
+    - '/intermediate/'
+  Advanced:
+    - '/advanced/'
+
+# Training-specific settings
+training:
+  total_modules: 14
+  phases:
+    beginner:
+      modules: [1, 2, 3, 4]
+      color: "#1f883d"
+    intermediate:
+      modules: [5, 6, 7, 8]
+      color: "#0969da"
+    advanced:
+      modules: [9, 10, 11, 12, 13, 14]
+      color: "#8250df"

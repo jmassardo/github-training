@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Core Concepts &middot; GitHub Training
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="preload" href="/public/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/public/css/main.css"></noscript>
+
+  <!-- GLightbox CSS for Image Modals -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+</head>
+
+
+  <body class="training-layout">
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="training-header">
+  <div class="container">
+    <div class="training-header-inner">
+      <div class="training-brand">
+        <a href="/" class="training-logo">
+          <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" class="octicon">
+            <path fill="currentColor" d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
+          </svg>
+          <span class="training-title">GitHub Training</span>
+        </a>
+        <span class="training-tagline">CSM & CSA Certification Program</span>
+      </div>
+      
+      <nav class="training-nav" aria-label="Training navigation">
+        <a href="/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8.156 1.835a.25.25 0 00-.312 0l-5.25 4.2a.25.25 0 00-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 01.75-.75h3.5a.75.75 0 01.75.75v5.25h2.75a.25.25 0 00.25-.25V6.23a.25.25 0 00-.094-.195z"></path>
+          </svg>
+          Home
+        </a>
+        <a href="/beginner/" class="training-nav-link active">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0114.25 16H1.75A1.75 1.75 0 010 14.25V1.75zm1.75-.25a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V1.75a.25.25 0 00-.25-.25H1.75zM3.5 6.25a.75.75 0 01.75-.75h7a.75.75 0 010 1.5h-7a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h4a.75.75 0 000-1.5h-4z"></path>
+          </svg>
+          Beginner
+        </a>
+        <a href="/intermediate/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+            <path fill="currentColor" d="M8 0a8 8 0 110 16A8 8 0 018 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"></path>
+          </svg>
+          Intermediate
+        </a>
+        <a href="/advanced/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"></path>
+          </svg>
+          Advanced
+        </a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+    <!-- Main content area with sidebar -->
+    <div class="training-container">
+      
+      <!-- Sidebar navigation -->
+      <aside class="training-sidebar">
+        <div class="training-sidebar-sticky">
+          
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">🌱 Beginner Phase</h3>
+            <nav class="sidebar-nav">
+              <a href="/beginner/" class="sidebar-link">Phase Overview</a>
+              <a href="/beginner/module-1/" class="sidebar-link">Module 1: SDLC</a>
+              <a href="/beginner/module-2/" class="sidebar-link">Module 2: Git</a>
+              <a href="/beginner/module-3/" class="sidebar-link">Module 3: GitHub Platform</a>
+              <a href="/beginner/module-4/" class="sidebar-link active">Module 4: SCM Process</a>
+            </nav>
+          </div>
+          
+          
+          
+          
+          
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">Resources</h3>
+            <nav class="sidebar-nav">
+              <a href="/syllabus/" class="sidebar-link">Full Syllabus</a>
+              <a href="https://docs.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Docs
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+              <a href="https://skills.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Skills
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+            </nav>
+          </div>
+          
+        </div>
+      </aside>
+
+      <!-- Main content area -->
+      <main id="main-content" class="training-main">
+      
+        <div class="training-module">
+        <!-- Module Header -->
+        <header class="module-header">
+          <div class="module-breadcrumb">
+            <a href="/">Training Home</a>
+            <span class="separator">›</span>
+            <a href="/beginner/">Beginner Phase</a>
+            <span class="separator">›</span>
+            <a href="/beginner/module-4/">Module 4</a>
+          </div>
+          
+          <h1 class="module-title">Core Concepts</h1>
+          
+          <div class="module-meta">
+            <span class="badge badge-beginner">Beginner</span>
+            <span class="meta-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm7-3.25v2.992l2.028.812a.75.75 0 0 1-.557 1.392l-2.5-1A.751.751 0 0 1 7 8.25v-3.5a.75.75 0 0 1 1.5 0Z"></path></svg>
+              35 min
+            </span>
+            <span class="meta-item">
+              Section 2 of 7
+            </span>
+          </div>
+        </header>
+
+        <!-- Progress Bar -->
+        <div class="module-progress">
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 28.571428571428573%"></div>
+          </div>
+          <div class="progress-steps">
+            
+              
+              <a href="/beginner/module-4/overview/" 
+                 class="progress-step completed"
+                 title="Context & Overview">
+                <span class="step-dot"></span>
+                <span class="step-label">1</span>
+              </a>
+            
+              
+              <a href="/beginner/module-4/concepts/" 
+                 class="progress-step active"
+                 title="Core Concepts">
+                <span class="step-dot"></span>
+                <span class="step-label">2</span>
+              </a>
+            
+              
+              <a href="/beginner/module-4/walkthrough/" 
+                 class="progress-step "
+                 title="Guided Walkthrough">
+                <span class="step-dot"></span>
+                <span class="step-label">3</span>
+              </a>
+            
+              
+              <a href="/beginner/module-4/labs/" 
+                 class="progress-step "
+                 title="Hands-On Labs">
+                <span class="step-dot"></span>
+                <span class="step-label">4</span>
+              </a>
+            
+              
+              <a href="/beginner/module-4/quiz/" 
+                 class="progress-step "
+                 title="Knowledge Check">
+                <span class="step-dot"></span>
+                <span class="step-label">5</span>
+              </a>
+            
+              
+              <a href="/beginner/module-4/resources/" 
+                 class="progress-step "
+                 title="Resources">
+                <span class="step-dot"></span>
+                <span class="step-label">6</span>
+              </a>
+            
+              
+              <a href="/beginner/module-4/scenarios/" 
+                 class="progress-step "
+                 title="CSM Scenarios">
+                <span class="step-dot"></span>
+                <span class="step-label">7</span>
+              </a>
+            
+          </div>
+        </div>
+
+        <!-- Section Navigation Tabs -->
+        <nav class="section-tabs">
+          
+            
+            <a href="/beginner/module-4/overview/" 
+               class="section-tab ">
+              <span class="tab-icon">🎯</span>
+              <span class="tab-title">Overview</span>
+            </a>
+          
+            
+            <a href="/beginner/module-4/concepts/" 
+               class="section-tab active">
+              <span class="tab-icon">📚</span>
+              <span class="tab-title">Concepts</span>
+            </a>
+          
+            
+            <a href="/beginner/module-4/walkthrough/" 
+               class="section-tab ">
+              <span class="tab-icon">🚶</span>
+              <span class="tab-title">Walkthrough</span>
+            </a>
+          
+            
+            <a href="/beginner/module-4/labs/" 
+               class="section-tab ">
+              <span class="tab-icon">💻</span>
+              <span class="tab-title">Labs</span>
+            </a>
+          
+            
+            <a href="/beginner/module-4/quiz/" 
+               class="section-tab ">
+              <span class="tab-icon">✅</span>
+              <span class="tab-title">Quiz</span>
+            </a>
+          
+            
+            <a href="/beginner/module-4/resources/" 
+               class="section-tab ">
+              <span class="tab-icon">📖</span>
+              <span class="tab-title">Resources</span>
+            </a>
+          
+            
+            <a href="/beginner/module-4/scenarios/" 
+               class="section-tab ">
+              <span class="tab-icon">💼</span>
+              <span class="tab-title">Scenarios</span>
+            </a>
+          
+        </nav>
+
+        <!-- Main Content with TOC Sidebar -->
+        <div class="module-content-wrapper">
+          <main id="main-content" class="module-content">
+            <article class="section-content">
+              <h1 id="core-concepts">Core Concepts</h1>
+
+<h2 id="21-branching-strategies">2.1 Branching Strategies</h2>
+
+<h3 id="git-flow">Git Flow</h3>
+<p>Traditional approach with long-lived branches:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>main (production)
+  │
+  └── develop (integration)
+        │
+        ├── feature/user-auth
+        ├── feature/payment-system
+        │
+        └── release/v1.2.0
+              │
+              └── hotfix/security-patch
+
+</code></pre></div></div>
+
+<p><strong>Best for:</strong> Teams with scheduled releases, multiple versions in production</p>
+
+<p><strong>Considerations:</strong>
+- More complex to manage
+- Can lead to long-lived branches with merge conflicts
+- Clear separation between development and production</p>
+
+<h3 id="github-flow">GitHub Flow</h3>
+<p>Simplified approach with short-lived branches:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>main (always deployable)
+  │
+  ├── feature/add-login ─────────► PR → main
+  ├── fix/button-color ──────────► PR → main
+  └── docs/api-update ───────────► PR → main
+
+</code></pre></div></div>
+
+<p><strong>Best for:</strong> Teams practicing continuous deployment, SaaS products</p>
+
+<p><strong>Characteristics:</strong>
+- <code class="language-plaintext highlighter-rouge">main</code> is always production-ready
+- Features deployed as soon as merged
+- Simple to understand and implement</p>
+
+<h3 id="trunk-based-development">Trunk-Based Development</h3>
+<p>Extreme simplification with very short-lived branches:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>main
+  │
+  └── feature/xyz (lives &lt; 1 day) ──► PR → main
+
+</code></pre></div></div>
+
+<p><strong>Best for:</strong> High-performing teams, microservices, feature flags</p>
+
+<p><strong>Requirements:</strong>
+- Strong automated testing
+- Feature flag infrastructure
+- High team discipline</p>
+
+<h2 id="22-branch-protection-rules">2.2 Branch Protection Rules</h2>
+
+<p>Branch protection prevents direct pushes and enforces review workflows:</p>
+
+<h3 id="key-protection-options">Key Protection Options</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Option</th>
+      <th>Purpose</th>
+      <th>Impact</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Require pull request</td>
+      <td>No direct pushes</td>
+      <td>Medium friction</td>
+    </tr>
+    <tr>
+      <td>Require approvals</td>
+      <td>Peer review enforcement</td>
+      <td>High quality</td>
+    </tr>
+    <tr>
+      <td>Dismiss stale reviews</td>
+      <td>Fresh reviews after changes</td>
+      <td>Medium friction</td>
+    </tr>
+    <tr>
+      <td>Require status checks</td>
+      <td>Automated quality gates</td>
+      <td>Variable</td>
+    </tr>
+    <tr>
+      <td>Require signed commits</td>
+      <td>Identity verification</td>
+      <td>Low friction</td>
+    </tr>
+    <tr>
+      <td>Require linear history</td>
+      <td>Clean git history</td>
+      <td>Medium friction</td>
+    </tr>
+    <tr>
+      <td>Include administrators</td>
+      <td>No bypass for admins</td>
+      <td>High security</td>
+    </tr>
+    <tr>
+      <td>Restrict pushes</td>
+      <td>Limit who can push</td>
+      <td>High control</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="status-check-requirements">Status Check Requirements</h3>
+
+<p>Status checks are external validations that must pass:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Example: Required status checks from CI</span>
+<span class="na">Required Checks</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">ci/build</span>           <span class="c1"># Must compile</span>
+  <span class="pi">-</span> <span class="s">ci/unit-tests</span>      <span class="c1"># Tests must pass</span>
+  <span class="pi">-</span> <span class="s">ci/lint</span>            <span class="c1"># Code style compliance</span>
+  <span class="pi">-</span> <span class="s">security/snyk</span>      <span class="c1"># No new vulnerabilities</span>
+  <span class="pi">-</span> <span class="s">coverage/codecov</span>   <span class="c1"># Coverage threshold met</span>
+
+</code></pre></div></div>
+
+<h2 id="23-codeowners">2.3 CODEOWNERS</h2>
+
+<p>CODEOWNERS automatically assigns reviewers based on file paths:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># CODEOWNERS file (in .github/, root, or docs/)
+
+# Global owners (fallback)
+*                       @org/platform-team
+
+# Directory owners
+/src/api/               @org/api-team
+/src/frontend/          @org/frontend-team
+/infrastructure/        @org/devops-team
+
+# File pattern owners
+*.sql                   @org/database-team @org/security-team
+*.tf                    @org/infrastructure-team
+Dockerfile*             @org/platform-team
+
+# Specific file owners
+/src/auth/              @security-lead @org/security-team
+/.github/workflows/     @org/devops-team
+package.json            @org/frontend-team
+
+</code></pre></div></div>
+
+<h3 id="codeowners-syntax-deep-dive">CODEOWNERS Syntax Deep Dive</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Pattern matching examples
+docs/*                  # Files in docs/ (not subdirectories)
+docs/**                 # All files in docs/ and subdirectories
+*.js                    # All JavaScript files anywhere
+/scripts/               # Only top-level scripts directory
+**/logs/                # Any logs directory at any level
+
+# Multiple owners (any can approve)
+/critical/              @owner1 @owner2 @org/team
+
+# Order matters - last matching pattern wins
+*                       @default-team
+/src/                   @dev-team       # Overrides * for /src/
+/src/security/          @security-team  # Overrides /src/ for /src/security/
+
+</code></pre></div></div>
+
+<h2 id="24-repository-rulesets">2.4 Repository Rulesets</h2>
+
+<p>Rulesets provide more flexible, scalable governance than branch protection:</p>
+
+<h3 id="rulesets-vs-branch-protection">Rulesets vs Branch Protection</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>Branch Protection</th>
+      <th>Rulesets</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Scope</td>
+      <td>Single branch pattern</td>
+      <td>Multiple patterns</td>
+    </tr>
+    <tr>
+      <td>Management</td>
+      <td>Per-repository</td>
+      <td>Org or repo level</td>
+    </tr>
+    <tr>
+      <td>Bypass permissions</td>
+      <td>All or nothing</td>
+      <td>Granular actor bypass</td>
+    </tr>
+    <tr>
+      <td>Tag rules</td>
+      <td>Limited</td>
+      <td>Full support</td>
+    </tr>
+    <tr>
+      <td>Import/Export</td>
+      <td>No</td>
+      <td>Yes (API)</td>
+    </tr>
+    <tr>
+      <td>Status</td>
+      <td>Legacy (still supported)</td>
+      <td>Modern approach</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="ruleset-structure">Ruleset Structure</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">Ruleset</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Production</span><span class="nv"> </span><span class="s">Protection"</span>
+<span class="na">Enforcement</span><span class="pi">:</span> <span class="s">Active</span>
+<span class="na">Bypass List</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">Release Automation Bot</span>
+  <span class="pi">-</span> <span class="s">Emergency Response Team</span>
+
+<span class="na">Target Branches</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">main</span>
+  <span class="pi">-</span> <span class="s">release/*</span>
+
+<span class="na">Rules</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">Require pull request</span>
+      <span class="s">Required approvals</span><span class="err">:</span> <span class="m">2</span>
+      <span class="na">Dismiss stale reviews</span><span class="pi">:</span> <span class="kc">true</span>
+      <span class="na">Require review from CODEOWNERS</span><span class="pi">:</span> <span class="kc">true</span>
+  <span class="pi">-</span> <span class="s">Require status checks</span>
+      <span class="s">Checks</span><span class="err">:</span> <span class="pi">[</span><span class="nv">ci/build</span><span class="pi">,</span> <span class="nv">ci/test</span><span class="pi">,</span> <span class="nv">security/scan</span><span class="pi">]</span>
+      <span class="na">Require branches up to date</span><span class="pi">:</span> <span class="kc">true</span>
+  <span class="pi">-</span> <span class="s">Require signed commits</span>
+  <span class="pi">-</span> <span class="s">Block force pushes</span>
+  <span class="pi">-</span> <span class="s">Require linear history</span>
+
+</code></pre></div></div>
+
+<h2 id="25-commit-signing">2.5 Commit Signing</h2>
+
+<p>Commit signing cryptographically verifies commit authorship:</p>
+
+<h3 id="why-sign-commits">Why Sign Commits?</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Unsigned commit:
+  Author: John Smith &lt;john@company.com&gt;
+  Status: Unknown - anyone could have set this email
+
+Signed commit:
+  Author: John Smith &lt;john@company.com&gt;
+  Signature: Verified ✓
+  Key: GPG/SSH key registered to john@company.com
+  Status: Cryptographically proven to be from John
+
+</code></pre></div></div>
+
+<h3 id="signing-methods">Signing Methods</h3>
+
+<ol>
+  <li><strong>GPG Signing</strong> - Traditional, widely supported</li>
+  <li><strong>SSH Signing</strong> - Simpler setup, uses existing SSH keys</li>
+  <li><strong>S/MIME Signing</strong> - Certificate-based, enterprise PKI integration</li>
+</ol>
+
+<h3 id="vigilant-mode">Vigilant Mode</h3>
+
+<p>GitHub’s vigilant mode shows verification status:
+- ✅ <strong>Verified</strong> - Signature valid, key belongs to committer
+- ⚠️ <strong>Partially verified</strong> - Signature valid, key not linked to account
+- ❌ <strong>Unverified</strong> - No signature or invalid</p>
+
+<h2 id="26-release-management">2.6 Release Management</h2>
+
+<p>GitHub Releases provide version packaging and distribution:</p>
+
+<h3 id="release-components">Release Components</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Release: v2.1.0
+├── Tag: v2.1.0 (git tag pointing to commit)
+├── Title: "Version 2.1.0 - Performance Release"
+├── Release Notes: (markdown description)
+├── Assets:
+│   ├── app-2.1.0-linux-x64.tar.gz
+│   ├── app-2.1.0-macos-x64.tar.gz
+│   ├── app-2.1.0-windows-x64.zip
+│   └── checksums.txt
+├── Pre-release: false
+└── Latest: true
+
+</code></pre></div></div>
+
+<h3 id="semantic-versioning">Semantic Versioning</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>MAJOR.MINOR.PATCH
+
+v2.1.0
+│ │ └── PATCH: Bug fixes (backward compatible)
+│ └──── MINOR: New features (backward compatible)
+└────── MAJOR: Breaking changes
+
+Pre-release versions:
+v2.1.0-alpha.1
+v2.1.0-beta.2
+v2.1.0-rc.1
+
+</code></pre></div></div>
+
+<h3 id="auto-generated-release-notes">Auto-Generated Release Notes</h3>
+
+<p>GitHub can automatically generate release notes from:
+- Merged pull requests
+- Associated issues
+- Commit messages
+- Contributors</p>
+
+<p>Configuration in <code class="language-plaintext highlighter-rouge">.github/release.yml</code>:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">changelog</span><span class="pi">:</span>
+  <span class="na">exclude</span><span class="pi">:</span>
+    <span class="na">labels</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">skip-changelog</span>
+    <span class="na">authors</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">dependabot</span>
+  <span class="na">categories</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">🚀 Features</span>
+      <span class="na">labels</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s">enhancement</span>
+        <span class="pi">-</span> <span class="s">feature</span>
+    <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">🐛 Bug Fixes</span>
+      <span class="na">labels</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s">bug</span>
+        <span class="pi">-</span> <span class="s">fix</span>
+    <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">📚 Documentation</span>
+      <span class="na">labels</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s">documentation</span>
+    <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">🔒 Security</span>
+      <span class="na">labels</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s">security</span>
+    <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s">Other Changes</span>
+      <span class="na">labels</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s2">"</span><span class="s">*"</span>
+
+</code></pre></div></div>
+
+            </article>
+          </main>
+          
+          <!-- Table of Contents Sidebar -->
+          
+          <aside class="section-toc">
+            <h4>On This Page</h4>
+            <nav class="toc-nav">
+              <ul id="toc" class="toc-list">
+<li class="toc-item toc-h2"><a href="#21-branching-strategies">2.1 Branching Strategies</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#git-flow">Git Flow</a></li>
+<li class="toc-item toc-h3"><a href="#github-flow">GitHub Flow</a></li>
+<li class="toc-item toc-h3"><a href="#trunk-based-development">Trunk-Based Development</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#22-branch-protection-rules">2.2 Branch Protection Rules</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#key-protection-options">Key Protection Options</a></li>
+<li class="toc-item toc-h3"><a href="#status-check-requirements">Status Check Requirements</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#23-codeowners">2.3 CODEOWNERS</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#codeowners-syntax-deep-dive">CODEOWNERS Syntax Deep Dive</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#24-repository-rulesets">2.4 Repository Rulesets</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#rulesets-vs-branch-protection">Rulesets vs Branch Protection</a></li>
+<li class="toc-item toc-h3"><a href="#ruleset-structure">Ruleset Structure</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#25-commit-signing">2.5 Commit Signing</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#why-sign-commits">Why Sign Commits?</a></li>
+<li class="toc-item toc-h3"><a href="#signing-methods">Signing Methods</a></li>
+<li class="toc-item toc-h3"><a href="#vigilant-mode">Vigilant Mode</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#26-release-management">2.6 Release Management</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#release-components">Release Components</a></li>
+<li class="toc-item toc-h3"><a href="#semantic-versioning">Semantic Versioning</a></li>
+<li class="toc-item toc-h3"><a href="#auto-generated-release-notes">Auto-Generated Release Notes</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+          </aside>
+          
+        </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="module-nav">
+          
+            <a href="/beginner/module-4/overview/" class="nav-button nav-prev">
+              <span class="nav-direction">← Previous</span>
+              <span class="nav-title">Context & Overview</span>
+            </a>
+          
+
+          <div class="nav-center">
+            <a href="/beginner/module-4/" class="nav-index">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.75A.75.75 0 0 1 2.75 2h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 2.75Zm0 5A.75.75 0 0 1 2.75 7h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 7.75ZM2.75 12h10.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5Z"></path></svg>
+              Module Overview
+            </a>
+          </div>
+
+          
+            <a href="/beginner/module-4/walkthrough/" class="nav-button nav-next">
+              <span class="nav-direction">Next →</span>
+              <span class="nav-title">Guided Walkthrough</span>
+            </a>
+          
+        </nav>
+      </div>
+
+      </main>
+    </div>
+
+    <footer class="training-footer">
+  <div class="container">
+    <div class="training-footer-content">
+      <div class="footer-info">
+        <p class="footer-text">GitHub Training Program v1.0 | Last updated: December 2025</p>
+        <p class="footer-links">
+          <a href="https://docs.github.com" target="_blank" rel="noopener">GitHub Docs</a> • 
+          <a href="https://github.community" target="_blank" rel="noopener">Community</a> • 
+          <a href="/syllabus/">Full Syllabus</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- Smooth scroll behavior -->
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const href = this.getAttribute('href');
+          if (href !== '#') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+        });
+      });
+
+      // Add copy button to code blocks
+      document.querySelectorAll('pre').forEach(pre => {
+        // Create wrapper div
+        const wrapper = document.createElement('div');
+        wrapper.className = 'code-block-wrapper';
+        pre.parentNode.insertBefore(wrapper, pre);
+        wrapper.appendChild(pre);
+
+        // Create copy button
+        const button = document.createElement('button');
+        button.className = 'copy-button';
+        button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+        button.title = 'Copy to clipboard';
+        wrapper.appendChild(button);
+
+        // Copy functionality
+        button.addEventListener('click', async () => {
+          const code = pre.querySelector('code') ? pre.querySelector('code').textContent : pre.textContent;
+          try {
+            await navigator.clipboard.writeText(code);
+            button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+            button.classList.add('copied');
+            setTimeout(() => {
+              button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+              button.classList.remove('copied');
+            }, 2000);
+          } catch (err) {
+            console.error('Failed to copy:', err);
+          }
+        });
+      });
+    </script>
+
+    <!-- Mermaid.js for diagrams with pan/zoom -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+    <script>
+      // Initialize Mermaid with theme matching the training modules
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: 'base',
+        themeVariables: {
+          // Primary colors - matching GitHub/training theme
+          primaryColor: '#ddf4ff',
+          primaryTextColor: '#1f2328',
+          primaryBorderColor: '#0969da',
+          
+          // Secondary and tertiary colors
+          secondaryColor: '#f6f8fa',
+          secondaryTextColor: '#1f2328',
+          secondaryBorderColor: '#d0d7de',
+          tertiaryColor: '#fff8c5',
+          tertiaryTextColor: '#1f2328',
+          tertiaryBorderColor: '#d4a72c',
+          
+          // Background colors
+          background: '#ffffff',
+          mainBkg: '#ddf4ff',
+          secondBkg: '#f6f8fa',
+          
+          // Lines and borders
+          lineColor: '#57606a',
+          border1: '#d0d7de',
+          border2: '#0969da',
+          arrowheadColor: '#57606a',
+          
+          // Text styling
+          fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif',
+          fontSize: '14px',
+          labelBackground: '#ffffff',
+          nodeTextColor: '#1f2328',
+          
+          // Subgraph styling
+          clusterBkg: '#f6f8fa',
+          clusterBorder: '#d0d7de',
+          
+          // Note styling
+          noteBkgColor: '#fff8c5',
+          noteTextColor: '#1f2328',
+          noteBorderColor: '#d4a72c'
+        },
+        flowchart: {
+          useMaxWidth: true,
+          htmlLabels: true,
+          curve: 'basis',
+          padding: 30,
+          nodeSpacing: 50,
+          rankSpacing: 70,
+          subGraphTitleMargin: {
+            top: 10,
+            bottom: 20
+          }
+        },
+        securityLevel: 'loose'
+      });
+
+      // Add pan/zoom to Mermaid diagrams after they render
+      mermaid.run().then(() => {
+        document.querySelectorAll('.mermaid-container svg').forEach((svg, index) => {
+          // Ensure SVG has an ID for pan-zoom
+          if (!svg.id) {
+            svg.id = 'mermaid-svg-' + index;
+          }
+          
+          // Set minimum dimensions on SVG for better visibility
+          svg.style.minWidth = '100%';
+          svg.style.minHeight = '300px';
+          
+          // Initialize pan-zoom
+          const panZoom = svgPanZoom(svg, {
+            zoomEnabled: true,
+            controlIconsEnabled: true,
+            fit: true,
+            center: true,
+            minZoom: 0.3,
+            maxZoom: 10,
+            zoomScaleSensitivity: 0.3,
+            dblClickZoomEnabled: true,
+            mouseWheelZoomEnabled: true,
+            preventMouseEventsDefault: true,
+            contain: false
+          });
+
+          // Handle window resize
+          window.addEventListener('resize', () => {
+            panZoom.resize();
+            panZoom.fit();
+            panZoom.center();
+          });
+        });
+      });
+    </script>
+
+  </body>
+</html>

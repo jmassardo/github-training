@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Module 6, Section 5: Knowledge Check &middot; GitHub Training
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="preload" href="/public/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/public/css/main.css"></noscript>
+
+  <!-- GLightbox CSS for Image Modals -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+</head>
+
+
+  <body class="training-layout">
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="training-header">
+  <div class="container">
+    <div class="training-header-inner">
+      <div class="training-brand">
+        <a href="/" class="training-logo">
+          <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" class="octicon">
+            <path fill="currentColor" d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
+          </svg>
+          <span class="training-title">GitHub Training</span>
+        </a>
+        <span class="training-tagline">CSM & CSA Certification Program</span>
+      </div>
+      
+      <nav class="training-nav" aria-label="Training navigation">
+        <a href="/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8.156 1.835a.25.25 0 00-.312 0l-5.25 4.2a.25.25 0 00-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 01.75-.75h3.5a.75.75 0 01.75.75v5.25h2.75a.25.25 0 00.25-.25V6.23a.25.25 0 00-.094-.195z"></path>
+          </svg>
+          Home
+        </a>
+        <a href="/beginner/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v12.5A1.75 1.75 0 0114.25 16H1.75A1.75 1.75 0 010 14.25V1.75zm1.75-.25a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V1.75a.25.25 0 00-.25-.25H1.75zM3.5 6.25a.75.75 0 01.75-.75h7a.75.75 0 010 1.5h-7a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h4a.75.75 0 000-1.5h-4z"></path>
+          </svg>
+          Beginner
+        </a>
+        <a href="/intermediate/" class="training-nav-link active">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+            <path fill="currentColor" d="M8 0a8 8 0 110 16A8 8 0 018 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"></path>
+          </svg>
+          Intermediate
+        </a>
+        <a href="/advanced/" class="training-nav-link">
+          <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
+            <path fill="currentColor" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"></path>
+          </svg>
+          Advanced
+        </a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+    <!-- Main content area with sidebar -->
+    <div class="training-container">
+      
+      <!-- Sidebar navigation -->
+      <aside class="training-sidebar">
+        <div class="training-sidebar-sticky">
+          
+          
+          
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">🚀 Intermediate Phase</h3>
+            <nav class="sidebar-nav">
+              <a href="/intermediate/" class="sidebar-link">Phase Overview</a>
+              <a href="/intermediate/module-5/" class="sidebar-link">Module 5: Actions</a>
+              <a href="/intermediate/module-6/" class="sidebar-link active">Module 6: Security</a>
+              <a href="/intermediate/module-7/" class="sidebar-link">Module 7: Packages</a>
+              <a href="/intermediate/module-8/" class="sidebar-link">Module 8: CI/CD</a>
+            </nav>
+          </div>
+          
+          
+          
+          
+          <div class="sidebar-section">
+            <h3 class="sidebar-heading">Resources</h3>
+            <nav class="sidebar-nav">
+              <a href="/syllabus/" class="sidebar-link">Full Syllabus</a>
+              <a href="https://docs.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Docs
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+              <a href="https://skills.github.com/" class="sidebar-link" target="_blank" rel="noopener">
+                GitHub Skills
+                <svg class="external-icon" aria-hidden="true" height="12" viewBox="0 0 16 16" width="12">
+                  <path fill="currentColor" d="M3.75 2h3.5a.75.75 0 010 1.5h-3.5a.25.25 0 00-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 00.25-.25v-3.5a.75.75 0 011.5 0v3.5A1.75 1.75 0 0112.25 14h-8.5A1.75 1.75 0 012 12.25v-8.5C2 2.784 2.784 2 3.75 2zm6.854-1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.751.751 0 01-1.042-.018.751.751 0 01-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1z"></path>
+                </svg>
+              </a>
+            </nav>
+          </div>
+          
+        </div>
+      </aside>
+
+      <!-- Main content area -->
+      <main id="main-content" class="training-main">
+      
+        <div class="training-module">
+        <!-- Module Header -->
+        <header class="module-header">
+          <div class="module-breadcrumb">
+            <a href="/">Training Home</a>
+            <span class="separator">›</span>
+            <a href="/intermediate/">Intermediate Phase</a>
+            <span class="separator">›</span>
+            <a href="/intermediate/module-6/">Module 6</a>
+          </div>
+          
+          <h1 class="module-title">Module 6, Section 5: Knowledge Check</h1>
+          
+          <div class="module-meta">
+            <span class="badge badge-intermediate">Intermediate</span>
+            <span class="meta-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm7-3.25v2.992l2.028.812a.75.75 0 0 1-.557 1.392l-2.5-1A.751.751 0 0 1 7 8.25v-3.5a.75.75 0 0 1 1.5 0Z"></path></svg>
+              
+            </span>
+            <span class="meta-item">
+              Section 5 of 7
+            </span>
+          </div>
+        </header>
+
+        <!-- Progress Bar -->
+        <div class="module-progress">
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 71.42857142857143%"></div>
+          </div>
+          <div class="progress-steps">
+            
+              
+              <a href="/intermediate/module-6/overview/" 
+                 class="progress-step completed"
+                 title="Context & Overview">
+                <span class="step-dot"></span>
+                <span class="step-label">1</span>
+              </a>
+            
+              
+              <a href="/intermediate/module-6/concepts/" 
+                 class="progress-step completed"
+                 title="Core Concepts">
+                <span class="step-dot"></span>
+                <span class="step-label">2</span>
+              </a>
+            
+              
+              <a href="/intermediate/module-6/walkthrough/" 
+                 class="progress-step completed"
+                 title="Guided Walkthrough">
+                <span class="step-dot"></span>
+                <span class="step-label">3</span>
+              </a>
+            
+              
+              <a href="/intermediate/module-6/labs/" 
+                 class="progress-step completed"
+                 title="Hands-On Labs">
+                <span class="step-dot"></span>
+                <span class="step-label">4</span>
+              </a>
+            
+              
+              <a href="/intermediate/module-6/quiz/" 
+                 class="progress-step active"
+                 title="Knowledge Check">
+                <span class="step-dot"></span>
+                <span class="step-label">5</span>
+              </a>
+            
+              
+              <a href="/intermediate/module-6/resources/" 
+                 class="progress-step "
+                 title="Resources">
+                <span class="step-dot"></span>
+                <span class="step-label">6</span>
+              </a>
+            
+              
+              <a href="/intermediate/module-6/scenarios/" 
+                 class="progress-step "
+                 title="CSM Scenarios">
+                <span class="step-dot"></span>
+                <span class="step-label">7</span>
+              </a>
+            
+          </div>
+        </div>
+
+        <!-- Section Navigation Tabs -->
+        <nav class="section-tabs">
+          
+            
+            <a href="/intermediate/module-6/overview/" 
+               class="section-tab ">
+              <span class="tab-icon">🎯</span>
+              <span class="tab-title">Overview</span>
+            </a>
+          
+            
+            <a href="/intermediate/module-6/concepts/" 
+               class="section-tab ">
+              <span class="tab-icon">📚</span>
+              <span class="tab-title">Concepts</span>
+            </a>
+          
+            
+            <a href="/intermediate/module-6/walkthrough/" 
+               class="section-tab ">
+              <span class="tab-icon">🚶</span>
+              <span class="tab-title">Walkthrough</span>
+            </a>
+          
+            
+            <a href="/intermediate/module-6/labs/" 
+               class="section-tab ">
+              <span class="tab-icon">💻</span>
+              <span class="tab-title">Labs</span>
+            </a>
+          
+            
+            <a href="/intermediate/module-6/quiz/" 
+               class="section-tab active">
+              <span class="tab-icon">✅</span>
+              <span class="tab-title">Quiz</span>
+            </a>
+          
+            
+            <a href="/intermediate/module-6/resources/" 
+               class="section-tab ">
+              <span class="tab-icon">📖</span>
+              <span class="tab-title">Resources</span>
+            </a>
+          
+            
+            <a href="/intermediate/module-6/scenarios/" 
+               class="section-tab ">
+              <span class="tab-icon">💼</span>
+              <span class="tab-title">Scenarios</span>
+            </a>
+          
+        </nav>
+
+        <!-- Main Content with TOC Sidebar -->
+        <div class="module-content-wrapper">
+          <main id="main-content" class="module-content">
+            <article class="section-content">
+              
+<h2 id="test-your-understanding-of-github-advanced-security-concepts">Test your understanding of GitHub Advanced Security concepts.</h2>
+
+<h2 id="questions">Questions</h2>
+
+<h3 id="question-1">Question 1</h3>
+<p>What’s the difference between Dependabot alerts and Dependabot security updates?</p>
+<details>
+  <summary>View Answer</summary>
+  <p><strong>Dependabot Alerts:</strong>
+- Notifications about known vulnerabilities in dependencies
+- Does not make any changes
+- Just informs you about the problem
+- Shows affected dependency and severity
+- Links to advisory information
+<strong>Dependabot Security Updates:</strong>
+- Automatically creates PRs to fix vulnerable dependencies
+- Only triggered by security advisories
+- Tries to update to the minimum version that fixes the vulnerability
+- Requires alerts to be enabled first
+Additionally, there are <strong>Dependabot Version Updates</strong>:
+- Creates PRs to keep ALL dependencies up to date
+- Not just for security, also for features
+- Configured via dependabot.yml
+- Can be grouped, scheduled, and filtered</p>
+</details>
+
+<h3 id="question-2">Question 2</h3>
+<p>A developer bypassed push protection with reason “I’ll fix it later.” What happens and what should the security team do?</p>
+<details>
+  <summary>View Answer</summary>
+  <p><strong>What happens:</strong>
+1. Push is allowed (secret enters repository)
+2. A secret scanning alert is created
+3. Bypass is logged in audit log
+4. Alert shows “Bypassed: I’ll fix it later”
+5. If partner pattern, partner may still be notified
+<strong>Security team should:</strong>
+1. Review the bypass in audit log
+2. Contact the developer to understand context
+3. Ensure the secret is:
+   - Rotated immediately if production credential
+   - Removed from git history using BFG or git-filter-repo
+   - Added to <code class="language-plaintext highlighter-rouge">.gitignore</code> if configuration file
+4. Document the incident
+5. If chronic bypasser, consider revoking bypass privilege
+<strong>Best practice:</strong> 
+Configure bypass notifications to alert security team immediately when any bypass occurs, regardless of reason.</p>
+</details>
+<hr />
+
+<h3 id="question-3">Question 3</h3>
+<p>How do you reduce false positives in CodeQL scanning?</p>
+<details>
+  <summary>View Answer</summary>
+  <p><strong>Configuration approaches:</strong>
+1. <strong>Use appropriate query suite:</strong></p>
+
+  <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Default suite has fewer false positives</span>
+<span class="na">queries</span><span class="pi">:</span> <span class="s">default</span>
+<span class="c1"># vs extended which is more thorough but noisier</span>
+<span class="na">queries</span><span class="pi">:</span> <span class="s">+security-extended</span>
+
+</code></pre></div>  </div>
+
+  <ol>
+    <li><strong>Exclude test files:</strong></li>
+  </ol>
+
+  <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># codeql-config.yml</span>
+<span class="na">paths-ignore</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s2">"</span><span class="s">**/test/**"</span>
+  <span class="pi">-</span> <span class="s2">"</span><span class="s">**/tests/**"</span>
+  <span class="pi">-</span> <span class="s2">"</span><span class="s">**/*_test.go"</span>
+
+</code></pre></div>  </div>
+
+  <ol>
+    <li><strong>Use query filters:</strong></li>
+  </ol>
+
+  <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">query-filters</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">exclude</span><span class="pi">:</span>
+      <span class="na">tags contain</span><span class="pi">:</span> <span class="s">/experimental/</span>
+
+</code></pre></div>  </div>
+
+  <ol>
+    <li><strong>Dismiss with reason:</strong>
+- Mark false positives individually
+- Use “Dismiss: False positive” with clear notes
+<strong>Remediation approaches:</strong></li>
+    <li><strong>Add code annotations:</strong></li>
+  </ol>
+
+  <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// codeql-disable-next-line</span>
+<span class="nc">String</span> <span class="n">query</span> <span class="o">=</span> <span class="s">"SELECT * FROM "</span> <span class="o">+</span> <span class="n">table</span><span class="o">;</span>
+
+</code></pre></div>  </div>
+
+  <ol>
+    <li><strong>Customize queries:</strong>
+- Create <code class="language-plaintext highlighter-rouge">.github/codeql/</code> directory
+- Add model files to mark safe functions
+- Exclude specific patterns</li>
+    <li><strong>Report to GitHub:</strong>
+- True false positives should be reported
+- Helps improve CodeQL for everyone</li>
+  </ol>
+</details>
+
+<h3 id="question-4">Question 4</h3>
+<p>What’s the recommended order for rolling out GHAS to a large organization?</p>
+<details>
+  <summary>View Answer</summary>
+  <p><strong>Phased rollout approach:</strong>
+<strong>Phase 1: Pilot (2-4 weeks)</strong>
+- Select 5-10 representative repositories
+- Include: high-risk, active development, various languages
+- Enable all GHAS features
+- Measure: alert volume, false positive rate, fix time
+<strong>Phase 2: High-Risk Repositories (4-6 weeks)</strong>
+- Identify repositories with:
+  - Customer data
+  - Payment processing
+  - Authentication systems
+- Enable GHAS with configured policies
+- Train developers on triage
+<strong>Phase 3: All Active Repositories (ongoing)</strong>
+- Roll out to remaining active repos
+- Use organization settings for defaults
+- Prioritize based on commit activity
+<strong>Phase 4: Enforcement (after baseline)</strong>
+- Enable branch protection integration
+- Require CodeQL checks to pass
+- Enable push protection
+<strong>Key metrics to track:</strong>
+- Mean time to remediation (MTTR)
+- False positive rate
+- Developer feedback/adoption
+- Alert backlog size
+<strong>Anti-patterns to avoid:</strong>
+- Enabling for all repos simultaneously
+- Requiring checks before baseline established
+- Not training developers first</p>
+</details>
+<hr />
+
+<h3 id="question-5">Question 5</h3>
+<p>How do you configure CodeQL for a compiled language like Java that requires a build step?</p>
+<details>
+  <summary>View Answer</summary>
+  <p><strong>Option 1: Autobuild (recommended for simple projects)</strong></p>
+
+  <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Initialize CodeQL</span>
+  <span class="na">uses</span><span class="pi">:</span> <span class="s">github/codeql-action/init@v3</span>
+  <span class="na">with</span><span class="pi">:</span>
+    <span class="na">languages</span><span class="pi">:</span> <span class="s">java</span>
+    
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Autobuild</span>
+  <span class="na">uses</span><span class="pi">:</span> <span class="s">github/codeql-action/autobuild@v3</span>
+
+</code></pre></div>  </div>
+
+  <p><strong>Option 2: Manual build (complex projects)</strong></p>
+
+  <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Initialize CodeQL</span>
+  <span class="na">uses</span><span class="pi">:</span> <span class="s">github/codeql-action/init@v3</span>
+  <span class="na">with</span><span class="pi">:</span>
+    <span class="na">languages</span><span class="pi">:</span> <span class="s">java</span>
+    
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Setup Java</span>
+  <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/setup-java@v4</span>
+  <span class="na">with</span><span class="pi">:</span>
+    <span class="na">distribution</span><span class="pi">:</span> <span class="s1">'</span><span class="s">temurin'</span>
+    <span class="na">java-version</span><span class="pi">:</span> <span class="s1">'</span><span class="s">17'</span>
+    
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Build with Maven</span>
+  <span class="na">run</span><span class="pi">:</span> <span class="s">mvn clean compile -DskipTests</span>
+  
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Perform CodeQL Analysis</span>
+  <span class="na">uses</span><span class="pi">:</span> <span class="s">github/codeql-action/analyze@v3</span>
+
+</code></pre></div>  </div>
+
+  <p><strong>Option 3: Build mode none (Java/Kotlin 17+)</strong></p>
+
+  <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Initialize CodeQL</span>
+  <span class="na">uses</span><span class="pi">:</span> <span class="s">github/codeql-action/init@v3</span>
+  <span class="na">with</span><span class="pi">:</span>
+    <span class="na">languages</span><span class="pi">:</span> <span class="s">java-kotlin</span>
+    <span class="na">build-mode</span><span class="pi">:</span> <span class="s">none</span>  <span class="c1"># Extracts without compilation</span>
+
+</code></pre></div>  </div>
+
+  <p><strong>Key considerations:</strong>
+- Build must succeed for extraction to work
+- Skip tests to speed up analysis
+- Use same JDK version as production
+- Multi-module projects may need special handling</p>
+</details>
+
+<h3 id="question-6">Question 6</h3>
+<p>What license types should you typically block with dependency review?</p>
+<details>
+  <summary>View Answer</summary>
+  <p><strong>Commonly blocked licenses:</strong>
+<strong>Copyleft (viral) licenses:</strong>
+- GPL-3.0 - Requires derivative works to be GPL
+- AGPL-3.0 - Even network use triggers copyleft
+- GPL-2.0 - Similar to GPL-3.0
+<strong>Typically safe to allow:</strong>
+- MIT - Very permissive
+- Apache-2.0 - Permissive with patent grant
+- BSD-2-Clause - Permissive
+- BSD-3-Clause - Permissive
+- ISC - Similar to MIT
+<strong>Configuration example:</strong></p>
+
+  <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/dependency-review-action@v4</span>
+  <span class="na">with</span><span class="pi">:</span>
+    <span class="na">fail-on-severity</span><span class="pi">:</span> <span class="s">high</span>
+    <span class="na">deny-licenses</span><span class="pi">:</span> <span class="pi">&gt;-</span>
+      <span class="s">GPL-3.0,</span>
+      <span class="s">AGPL-3.0,</span>
+      <span class="s">GPL-2.0,</span>
+      <span class="s">LGPL-3.0</span>
+    <span class="na">allow-licenses</span><span class="pi">:</span> <span class="pi">&gt;-</span>
+      <span class="s">MIT,</span>
+      <span class="s">Apache-2.0,</span>
+      <span class="s">BSD-2-Clause,</span>
+      <span class="s">BSD-3-Clause,</span>
+      <span class="s">ISC,</span>
+      <span class="s">MPL-2.0</span>
+
+</code></pre></div>  </div>
+
+  <p><strong>Note:</strong> Always consult with legal team for organization-specific requirements. Some companies have different risk tolerances.</p>
+</details>
+
+<hr />
+<div class="section-navigation">
+  <a href="/intermediate/module-6/labs/" class="nav-button nav-prev">
+    <span class="nav-label">← Previous</span>
+    <span class="nav-title">Hands-On Labs</span>
+  </a>
+  <a href="/intermediate/module-6/resources/" class="nav-button nav-next">
+    <span class="nav-label">Next →</span>
+    <span class="nav-title">Resources</span>
+  </a>
+</div>
+
+            </article>
+          </main>
+          
+          <!-- Table of Contents Sidebar -->
+          
+          <aside class="section-toc">
+            <h4>On This Page</h4>
+            <nav class="toc-nav">
+              <ul id="toc" class="toc-list">
+<li class="toc-item toc-h2"><a href="#test-your-understanding-of-github-advanced-security-concepts">Test your understanding of GitHub Advanced Security concepts.</a></li>
+<li class="toc-item toc-h2"><a href="#questions">Questions</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#question-1">Question 1</a></li>
+<li class="toc-item toc-h3"><a href="#question-2">Question 2</a></li>
+<li class="toc-item toc-h3"><a href="#question-3">Question 3</a></li>
+<li class="toc-item toc-h3"><a href="#question-4">Question 4</a></li>
+<li class="toc-item toc-h3"><a href="#question-5">Question 5</a></li>
+<li class="toc-item toc-h3"><a href="#question-6">Question 6</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+          </aside>
+          
+        </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="module-nav">
+          
+            <a href="/intermediate/module-6/labs/" class="nav-button nav-prev">
+              <span class="nav-direction">← Previous</span>
+              <span class="nav-title">Hands-On Labs</span>
+            </a>
+          
+
+          <div class="nav-center">
+            <a href="/intermediate/module-6/" class="nav-index">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.75A.75.75 0 0 1 2.75 2h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 2.75Zm0 5A.75.75 0 0 1 2.75 7h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 7.75ZM2.75 12h10.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5Z"></path></svg>
+              Module Overview
+            </a>
+          </div>
+
+          
+            <a href="/intermediate/module-6/resources/" class="nav-button nav-next">
+              <span class="nav-direction">Next →</span>
+              <span class="nav-title">Resources</span>
+            </a>
+          
+        </nav>
+      </div>
+
+      </main>
+    </div>
+
+    <footer class="training-footer">
+  <div class="container">
+    <div class="training-footer-content">
+      <div class="footer-info">
+        <p class="footer-text">GitHub Training Program v1.0 | Last updated: December 2025</p>
+        <p class="footer-links">
+          <a href="https://docs.github.com" target="_blank" rel="noopener">GitHub Docs</a> • 
+          <a href="https://github.community" target="_blank" rel="noopener">Community</a> • 
+          <a href="/syllabus/">Full Syllabus</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- Smooth scroll behavior -->
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const href = this.getAttribute('href');
+          if (href !== '#') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+        });
+      });
+
+      // Add copy button to code blocks
+      document.querySelectorAll('pre').forEach(pre => {
+        // Create wrapper div
+        const wrapper = document.createElement('div');
+        wrapper.className = 'code-block-wrapper';
+        pre.parentNode.insertBefore(wrapper, pre);
+        wrapper.appendChild(pre);
+
+        // Create copy button
+        const button = document.createElement('button');
+        button.className = 'copy-button';
+        button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+        button.title = 'Copy to clipboard';
+        wrapper.appendChild(button);
+
+        // Copy functionality
+        button.addEventListener('click', async () => {
+          const code = pre.querySelector('code') ? pre.querySelector('code').textContent : pre.textContent;
+          try {
+            await navigator.clipboard.writeText(code);
+            button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+            button.classList.add('copied');
+            setTimeout(() => {
+              button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+              button.classList.remove('copied');
+            }, 2000);
+          } catch (err) {
+            console.error('Failed to copy:', err);
+          }
+        });
+      });
+    </script>
+
+    <!-- Mermaid.js for diagrams with pan/zoom -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+    <script>
+      // Initialize Mermaid with theme matching the training modules
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: 'base',
+        themeVariables: {
+          // Primary colors - matching GitHub/training theme
+          primaryColor: '#ddf4ff',
+          primaryTextColor: '#1f2328',
+          primaryBorderColor: '#0969da',
+          
+          // Secondary and tertiary colors
+          secondaryColor: '#f6f8fa',
+          secondaryTextColor: '#1f2328',
+          secondaryBorderColor: '#d0d7de',
+          tertiaryColor: '#fff8c5',
+          tertiaryTextColor: '#1f2328',
+          tertiaryBorderColor: '#d4a72c',
+          
+          // Background colors
+          background: '#ffffff',
+          mainBkg: '#ddf4ff',
+          secondBkg: '#f6f8fa',
+          
+          // Lines and borders
+          lineColor: '#57606a',
+          border1: '#d0d7de',
+          border2: '#0969da',
+          arrowheadColor: '#57606a',
+          
+          // Text styling
+          fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif',
+          fontSize: '14px',
+          labelBackground: '#ffffff',
+          nodeTextColor: '#1f2328',
+          
+          // Subgraph styling
+          clusterBkg: '#f6f8fa',
+          clusterBorder: '#d0d7de',
+          
+          // Note styling
+          noteBkgColor: '#fff8c5',
+          noteTextColor: '#1f2328',
+          noteBorderColor: '#d4a72c'
+        },
+        flowchart: {
+          useMaxWidth: true,
+          htmlLabels: true,
+          curve: 'basis',
+          padding: 30,
+          nodeSpacing: 50,
+          rankSpacing: 70,
+          subGraphTitleMargin: {
+            top: 10,
+            bottom: 20
+          }
+        },
+        securityLevel: 'loose'
+      });
+
+      // Add pan/zoom to Mermaid diagrams after they render
+      mermaid.run().then(() => {
+        document.querySelectorAll('.mermaid-container svg').forEach((svg, index) => {
+          // Ensure SVG has an ID for pan-zoom
+          if (!svg.id) {
+            svg.id = 'mermaid-svg-' + index;
+          }
+          
+          // Set minimum dimensions on SVG for better visibility
+          svg.style.minWidth = '100%';
+          svg.style.minHeight = '300px';
+          
+          // Initialize pan-zoom
+          const panZoom = svgPanZoom(svg, {
+            zoomEnabled: true,
+            controlIconsEnabled: true,
+            fit: true,
+            center: true,
+            minZoom: 0.3,
+            maxZoom: 10,
+            zoomScaleSensitivity: 0.3,
+            dblClickZoomEnabled: true,
+            mouseWheelZoomEnabled: true,
+            preventMouseEventsDefault: true,
+            contain: false
+          });
+
+          // Handle window resize
+          window.addEventListener('resize', () => {
+            panZoom.resize();
+            panZoom.fit();
+            panZoom.center();
+          });
+        });
+      });
+    </script>
+
+  </body>
+</html>
