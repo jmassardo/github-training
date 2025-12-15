@@ -9,17 +9,94 @@
 
     {% include training-header.html %}
 
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+    
+    <!-- Mobile Navigation Menu -->
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+      <div class="mobile-nav-header">
+        <h2>Navigation</h2>
+        <button class="mobile-nav-close" aria-label="Close navigation menu">
+          <svg aria-hidden="true" height="24" viewBox="0 0 16 16" width="24">
+            <path fill="currentColor" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-nav-content">
+        {% if page.phase == 'beginner' %}
+        <div class="mobile-nav-section">
+          <h3><span aria-hidden="true">🌱</span> Beginner Phase</h3>
+          <ul class="mobile-nav-links">
+            <li><a href="{{ site.baseurl }}/beginner/">Phase Overview</a></li>
+            <li><a href="{{ site.baseurl }}/beginner/module-1/"{% if page.url contains 'module-1' %} class="active"{% endif %}>Module 1: SDLC</a></li>
+            <li><a href="{{ site.baseurl }}/beginner/module-2/"{% if page.url contains 'module-2' %} class="active"{% endif %}>Module 2: Git</a></li>
+            <li><a href="{{ site.baseurl }}/beginner/module-3/"{% if page.url contains 'module-3' %} class="active"{% endif %}>Module 3: GitHub Platform</a></li>
+            <li><a href="{{ site.baseurl }}/beginner/module-4/"{% if page.url contains 'module-4' %} class="active"{% endif %}>Module 4: SCM Process</a></li>
+          </ul>
+        </div>
+        {% elsif page.phase == 'intermediate' %}
+        <div class="mobile-nav-section">
+          <h3><span aria-hidden="true">🚀</span> Intermediate Phase</h3>
+          <ul class="mobile-nav-links">
+            <li><a href="{{ site.baseurl }}/intermediate/">Phase Overview</a></li>
+            <li><a href="{{ site.baseurl }}/intermediate/module-5/"{% if page.url contains 'module-5' %} class="active"{% endif %}>Module 5: Actions</a></li>
+            <li><a href="{{ site.baseurl }}/intermediate/module-6/"{% if page.url contains 'module-6' %} class="active"{% endif %}>Module 6: Security</a></li>
+            <li><a href="{{ site.baseurl }}/intermediate/module-7/"{% if page.url contains 'module-7' %} class="active"{% endif %}>Module 7: Packages</a></li>
+            <li><a href="{{ site.baseurl }}/intermediate/module-8/"{% if page.url contains 'module-8' %} class="active"{% endif %}>Module 8: CI/CD</a></li>
+          </ul>
+        </div>
+        {% elsif page.phase == 'advanced' %}
+        <div class="mobile-nav-section">
+          <h3><span aria-hidden="true">🏆</span> Advanced Phase</h3>
+          <ul class="mobile-nav-links">
+            <li><a href="{{ site.baseurl }}/advanced/">Phase Overview</a></li>
+            <li><a href="{{ site.baseurl }}/advanced/module-9/"{% if page.url contains 'module-9' %} class="active"{% endif %}>Module 9: Enterprise</a></li>
+            <li><a href="{{ site.baseurl }}/advanced/module-10/"{% if page.url contains 'module-10' %} class="active"{% endif %}>Module 10: APIs</a></li>
+            <li><a href="{{ site.baseurl }}/advanced/module-11/"{% if page.url contains 'module-11' %} class="active"{% endif %}>Module 11: IaC</a></li>
+            <li><a href="{{ site.baseurl }}/advanced/module-12/"{% if page.url contains 'module-12' %} class="active"{% endif %}>Module 12: Governance</a></li>
+            <li><a href="{{ site.baseurl }}/advanced/module-13/"{% if page.url contains 'module-13' %} class="active"{% endif %}>Module 13: Copilot</a></li>
+            <li><a href="{{ site.baseurl }}/advanced/module-14/"{% if page.url contains 'module-14' %} class="active"{% endif %}>Module 14: Copilot+</a></li>
+          </ul>
+        </div>
+        {% endif %}
+        
+        <!-- Module sub-navigation for current module -->
+        {% if page.module %}
+        <div class="mobile-nav-section">
+          <h3>{{ page.module_title | default: page.title }}</h3>
+          <ul class="mobile-nav-links">
+            <li><a href="{{ site.baseurl }}/{{ page.phase }}/module-{{ page.module }}/">Overview</a></li>
+            <li><a href="{{ site.baseurl }}/{{ page.phase }}/module-{{ page.module }}/concepts">Concepts</a></li>
+            <li><a href="{{ site.baseurl }}/{{ page.phase }}/module-{{ page.module }}/walkthrough">Walkthrough</a></li>
+            <li><a href="{{ site.baseurl }}/{{ page.phase }}/module-{{ page.module }}/labs">Labs</a></li>
+            <li><a href="{{ site.baseurl }}/{{ page.phase }}/module-{{ page.module }}/quiz">Quiz</a></li>
+            <li><a href="{{ site.baseurl }}/{{ page.phase }}/module-{{ page.module }}/resources">Resources</a></li>
+          </ul>
+        </div>
+        {% endif %}
+        
+        <div class="mobile-nav-section">
+          <h3>Resources</h3>
+          <ul class="mobile-nav-links">
+            <li><a href="{{ site.baseurl }}/syllabus/">Full Syllabus</a></li>
+            <li><a href="https://docs.github.com/" target="_blank" rel="noopener">GitHub Docs ↗</a></li>
+            <li><a href="https://skills.github.com/" target="_blank" rel="noopener">GitHub Skills ↗</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <!-- Main content area with sidebar -->
     <div class="training-container">
       
       <!-- Sidebar navigation -->
-      <aside class="training-sidebar">
+      <aside class="training-sidebar" aria-label="Module navigation">
         <div class="training-sidebar-sticky">
           
           {% if page.phase == 'beginner' %}
           <div class="sidebar-section">
-            <h3 class="sidebar-heading">🌱 Beginner Phase</h3>
-            <nav class="sidebar-nav">
+            <h3 class="sidebar-heading" id="beginner-nav-heading"><span aria-hidden="true">🌱</span> Beginner Phase</h3>
+            <nav class="sidebar-nav" aria-labelledby="beginner-nav-heading">
               <a href="{{ site.baseurl }}/beginner/" class="sidebar-link">Phase Overview</a>
               <a href="{{ site.baseurl }}/beginner/module-1/" class="sidebar-link{% if page.url contains 'module-1' %} active{% endif %}">Module 1: SDLC</a>
               <a href="{{ site.baseurl }}/beginner/module-2/" class="sidebar-link{% if page.url contains 'module-2' %} active{% endif %}">Module 2: Git</a>
@@ -31,8 +108,8 @@
           
           {% if page.phase == 'intermediate' %}
           <div class="sidebar-section">
-            <h3 class="sidebar-heading">🚀 Intermediate Phase</h3>
-            <nav class="sidebar-nav">
+            <h3 class="sidebar-heading" id="intermediate-nav-heading"><span aria-hidden="true">🚀</span> Intermediate Phase</h3>
+            <nav class="sidebar-nav" aria-labelledby="intermediate-nav-heading">
               <a href="{{ site.baseurl }}/intermediate/" class="sidebar-link">Phase Overview</a>
               <a href="{{ site.baseurl }}/intermediate/module-5/" class="sidebar-link{% if page.url contains 'module-5' %} active{% endif %}">Module 5: Actions</a>
               <a href="{{ site.baseurl }}/intermediate/module-6/" class="sidebar-link{% if page.url contains 'module-6' %} active{% endif %}">Module 6: Security</a>
@@ -44,8 +121,8 @@
           
           {% if page.phase == 'advanced' %}
           <div class="sidebar-section">
-            <h3 class="sidebar-heading">🏆 Advanced Phase</h3>
-            <nav class="sidebar-nav">
+            <h3 class="sidebar-heading" id="advanced-nav-heading"><span aria-hidden="true">🏆</span> Advanced Phase</h3>
+            <nav class="sidebar-nav" aria-labelledby="advanced-nav-heading">
               <a href="{{ site.baseurl }}/advanced/" class="sidebar-link">Phase Overview</a>
               <a href="{{ site.baseurl }}/advanced/module-9/" class="sidebar-link{% if page.url contains 'module-9' %} active{% endif %}">Module 9: Enterprise Admin</a>
               <a href="{{ site.baseurl }}/advanced/module-10/" class="sidebar-link{% if page.url contains 'module-10' %} active{% endif %}">Module 10: APIs & Apps</a>
@@ -58,8 +135,8 @@
           {% endif %}
           
           <div class="sidebar-section">
-            <h3 class="sidebar-heading">Resources</h3>
-            <nav class="sidebar-nav">
+            <h3 class="sidebar-heading" id="resources-nav-heading">Resources</h3>
+            <nav class="sidebar-nav" aria-labelledby="resources-nav-heading">
               <a href="{{ site.baseurl }}/syllabus/" class="sidebar-link">Full Syllabus</a>
               <a href="https://docs.github.com/" class="sidebar-link" target="_blank" rel="noopener">
                 GitHub Docs
@@ -139,11 +216,11 @@
 
         <!-- Main Content with TOC Sidebar -->
         <div class="module-content-wrapper">
-          <main id="main-content" class="module-content">
+          <div class="module-content">
             <article class="section-content">
               {{ content }}
             </article>
-          </main>
+          </div>
           
           <!-- Table of Contents Sidebar -->
           {% if page.toc %}
@@ -244,12 +321,12 @@
     </script>
 
     <!-- Mermaid.js for diagrams with pan/zoom -->
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js" integrity="sha256-YWoQnxnNGGhC4R1Fs1rAdFazp1UTMQ9uoHU1GqQwseI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js" integrity="sha256-9GNxAyAInGHQ9XzsK4hsAt4E4h65Lr0i6qMn/fCmt8Y=" crossorigin="anonymous"></script>
     <script>
       // Initialize Mermaid with theme matching the training modules
       mermaid.initialize({
-        startOnLoad: true,
+        startOnLoad: false,
         theme: 'base',
         themeVariables: {
           // Primary colors - matching GitHub/training theme
@@ -306,41 +383,113 @@
         securityLevel: 'loose'
       });
 
-      // Add pan/zoom to Mermaid diagrams after they render
-      mermaid.run().then(() => {
-        document.querySelectorAll('.mermaid-container svg').forEach((svg, index) => {
-          // Ensure SVG has an ID for pan-zoom
-          if (!svg.id) {
-            svg.id = 'mermaid-svg-' + index;
-          }
-          
-          // Set minimum dimensions on SVG for better visibility
-          svg.style.minWidth = '100%';
-          svg.style.minHeight = '300px';
-          
-          // Initialize pan-zoom
-          const panZoom = svgPanZoom(svg, {
-            zoomEnabled: true,
-            controlIconsEnabled: true,
-            fit: true,
-            center: true,
-            minZoom: 0.3,
-            maxZoom: 10,
-            zoomScaleSensitivity: 0.3,
-            dblClickZoomEnabled: true,
-            mouseWheelZoomEnabled: true,
-            preventMouseEventsDefault: true,
-            contain: false
-          });
+      // Run mermaid after DOM is ready, then add pan/zoom
+      document.addEventListener('DOMContentLoaded', function() {
+        mermaid.run().then(() => {
+          document.querySelectorAll('.mermaid-container svg').forEach((svg, index) => {
+            // Ensure SVG has an ID for pan-zoom
+            if (!svg.id) {
+              svg.id = 'mermaid-svg-' + index;
+            }
+            
+            // Set minimum dimensions on SVG for better visibility
+            svg.style.minWidth = '100%';
+            svg.style.minHeight = '300px';
+            
+            // Initialize pan-zoom
+            const panZoom = svgPanZoom(svg, {
+              zoomEnabled: true,
+              controlIconsEnabled: true,
+              fit: true,
+              center: true,
+              minZoom: 0.3,
+              maxZoom: 10,
+              zoomScaleSensitivity: 0.3,
+              dblClickZoomEnabled: true,
+              mouseWheelZoomEnabled: true,
+              preventMouseEventsDefault: true,
+              contain: false
+            });
 
-          // Handle window resize
-          window.addEventListener('resize', () => {
-            panZoom.resize();
-            panZoom.fit();
-            panZoom.center();
+            // Handle window resize
+            window.addEventListener('resize', () => {
+              panZoom.resize();
+              panZoom.fit();
+              panZoom.center();
+            });
           });
         });
       });
+    </script>
+
+    <!-- Mobile navigation toggle -->
+    <script>
+      (function() {
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileNav = document.getElementById('mobile-nav');
+        const overlay = document.getElementById('mobile-nav-overlay');
+        const closeBtn = document.querySelector('.mobile-nav-close');
+        
+        if (!menuToggle || !mobileNav || !overlay) return;
+        
+        function openMenu() {
+          mobileNav.classList.add('is-open');
+          overlay.classList.add('is-open');
+          menuToggle.setAttribute('aria-expanded', 'true');
+          document.body.style.overflow = 'hidden';
+          
+          // Focus first link in menu
+          const firstLink = mobileNav.querySelector('a');
+          if (firstLink) firstLink.focus();
+        }
+        
+        function closeMenu() {
+          mobileNav.classList.remove('is-open');
+          overlay.classList.remove('is-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+          menuToggle.focus();
+        }
+        
+        menuToggle.addEventListener('click', function() {
+          const isExpanded = this.getAttribute('aria-expanded') === 'true';
+          if (isExpanded) {
+            closeMenu();
+          } else {
+            openMenu();
+          }
+        });
+        
+        if (closeBtn) {
+          closeBtn.addEventListener('click', closeMenu);
+        }
+        
+        overlay.addEventListener('click', closeMenu);
+        
+        // Close on escape key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && mobileNav.classList.contains('is-open')) {
+            closeMenu();
+          }
+        });
+        
+        // Trap focus within mobile nav when open
+        mobileNav.addEventListener('keydown', function(e) {
+          if (e.key !== 'Tab') return;
+          
+          const focusable = mobileNav.querySelectorAll('a, button');
+          const firstFocusable = focusable[0];
+          const lastFocusable = focusable[focusable.length - 1];
+          
+          if (e.shiftKey && document.activeElement === firstFocusable) {
+            e.preventDefault();
+            lastFocusable.focus();
+          } else if (!e.shiftKey && document.activeElement === lastFocusable) {
+            e.preventDefault();
+            firstFocusable.focus();
+          }
+        });
+      })();
     </script>
 
   </body>

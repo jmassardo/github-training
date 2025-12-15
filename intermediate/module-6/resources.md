@@ -72,19 +72,12 @@ sections:
 - [GitHub Security Best Practices](https://docs.github.com/en/code-security/getting-started/github-security-features)
 - [OWASP Top 10](https://owasp.org/www-project-top-ten/)
 - [CWE Common Weakness Enumeration](https://cwe.mitre.org/)
+
+> ⚠️ **External Resources:** Links to owasp.org and cwe.mitre.org lead to third-party websites not maintained by GitHub. Content may change without notice.
+
 ---
 
 ## Tools and Integrations
 - [GitHub Advisory Database](https://github.com/advisories)
 - [Dependency Review Action](https://github.com/actions/dependency-review-action)
 - [SARIF Viewer](https://sarifviewer.azurewebsites.net/)
-<div class="section-navigation">
-  <a href="{{ page.prev_section.url }}" class="nav-button nav-prev">
-    <span class="nav-label">← Previous</span>
-    <span class="nav-title">{{ page.prev_section.title }}</span>
-  </a>
-  <a href="{{ page.next_section.url }}" class="nav-button nav-next">
-    <span class="nav-label">Next →</span>
-    <span class="nav-title">{{ page.next_section.title }}</span>
-  </a>
-</div>

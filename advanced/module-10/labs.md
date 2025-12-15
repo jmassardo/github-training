@@ -318,8 +318,4 @@ sections:
    ```
 
 {% endraw %}
-<div class="section-navigation">
-  <a href="{{ page.prev_section.url }}" class="btn btn-outline">← {{ page.prev_section.title }}</a>
-  <a href="{{ page.next_section.url }}" class="btn btn-primary">{{ page.next_section.title }} →</a>
-</div>
 

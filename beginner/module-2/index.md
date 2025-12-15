@@ -5,7 +5,7 @@ description: "Master Git version control fundamentals - repositories, commits, b
 permalink: /beginner/module-2/
 module_number: 2
 phase: beginner
-estimated_time: "90 min"
+estimated_time: "1.5-2 hours total"
 sections:
   - title: "Context & Overview"
     url: "/beginner/module-2/overview/"

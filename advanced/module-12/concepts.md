@@ -195,6 +195,235 @@ flowchart LR
 </div>
 </div>
 
+---
+
+## Observability & Monitoring Integration
+
+### What is DevOps Observability?
+
+**Observability** is the ability to understand a system's internal state from its external outputs. For GitHub-based workflows, this means connecting development activities to runtime behavior.
+
+### The Three Pillars of Observability
+
+| Pillar | Definition | GitHub Connection |
+|--------|------------|-------------------|
+| **Logs** | Timestamped records of events | Audit logs, Actions logs, deployment events |
+| **Metrics** | Numerical measurements over time | DORA metrics, PR velocity, security alerts |
+| **Traces** | Request paths through systems | Commit → PR → Deploy → Production |
+
+### Connecting GitHub to Monitoring Platforms
+
+#### Integration Architecture
+
+```
+┌─────────────────────────────────────────────────────────────────────────┐
+│                         GitHub Enterprise                               │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐   │
+│  │   Actions   │  │  Audit Log  │  │  Webhooks   │  │    API      │   │
+│  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘   │
+└─────────┼────────────────┼────────────────┼────────────────┼──────────┘
+          │                │                │                │
+          ▼                ▼                ▼                ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│                    Data Collection Layer                                 │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐   │
+│  │  Log Agent  │  │   Stream    │  │  Webhook    │  │   Polling   │   │
+│  │  (Fluent)   │  │  Processor  │  │  Receiver   │  │   Service   │   │
+│  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘   │
+└─────────┼────────────────┼────────────────┼────────────────┼──────────┘
+          │                │                │                │
+          └────────────────┴────────────────┴────────────────┘
+                                    │
+                                    ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│                    Observability Platform                                │
+│  ┌─────────────────────────────────────────────────────────────────┐   │
+│  │  Datadog │ Splunk │ Azure Monitor │ Grafana │ New Relic │ etc. │   │
+│  └─────────────────────────────────────────────────────────────────┘   │
+│                                                                         │
+│  ┌───────────┐  ┌───────────┐  ┌───────────┐  ┌───────────┐           │
+│  │ Dashboards│  │  Alerts   │  │  Reports  │  │  Analysis │           │
+│  └───────────┘  └───────────┘  └───────────┘  └───────────┘           │
+└─────────────────────────────────────────────────────────────────────────┘
+```
+
+#### Popular Integration Options
+
+| Platform | Integration Method | Best For |
+|----------|-------------------|----------|
+| **Datadog** | GitHub Integration, Webhooks | Full-stack observability |
+| **Splunk** | Audit log streaming, HEC | Security & compliance |
+| **Azure Monitor** | Azure DevOps integration, Logic Apps | Azure-centric environments |
+| **Grafana** | API polling, Webhooks to Loki | Open-source stack |
+| **New Relic** | CodeStream, Webhooks | Application performance |
+| **PagerDuty** | GitHub App, Actions | Incident management |
+
+### GitHub Audit Log Streaming
+
+Stream audit events to external SIEM/monitoring systems:
+
+**Supported destinations:**
+- Amazon S3
+- Azure Blob Storage
+- Azure Event Hubs
+- Google Cloud Storage
+- Splunk
+- Datadog
+
+```yaml
+# Example: Streaming configuration
+Destination: Azure Event Hubs
+Events: All audit events
+Format: JSON
+Encryption: TLS 1.2+
+```
+
+### Actions Workflow Observability
+
+#### Send Deployment Events to Monitoring
+
+{% raw %}
+```yaml
+# .github/workflows/deploy-with-observability.yml
+name: Deploy with Observability
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy application
+        run: ./deploy.sh
+        
+      - name: Send deployment event to Datadog
+        if: always()
+        run: |
+          curl -X POST "https://api.datadoghq.com/api/v1/events" \
+            -H "DD-API-KEY: ${{ secrets.DATADOG_API_KEY }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "title": "Deployment: ${{ github.repository }}",
+              "text": "Commit: ${{ github.sha }}\nStatus: ${{ job.status }}",
+              "priority": "normal",
+              "tags": [
+                "env:production",
+                "service:${{ github.repository }}",
+                "version:${{ github.sha }}"
+              ],
+              "alert_type": "${{ job.status == 'success' && 'info' || 'error' }}"
+            }'
+            
+      - name: Create deployment annotation in Grafana
+        if: success()
+        run: |
+          curl -X POST "${{ secrets.GRAFANA_URL }}/api/annotations" \
+            -H "Authorization: Bearer ${{ secrets.GRAFANA_API_KEY }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "dashboardUID": "deployment-dashboard",
+              "time": '$(date +%s000)',
+              "tags": ["deployment", "${{ github.repository }}"],
+              "text": "Deployed ${{ github.sha }}"
+            }'
+```
+{% endraw %}
+
+#### Correlating Commits to Production Issues
+
+Link GitHub commits to production incidents:
+
+{% raw %}
+```yaml
+# Add trace context to deployments
+- name: Set deployment metadata
+  run: |
+    echo "DEPLOY_ID=$(uuidgen)" >> $GITHUB_ENV
+    echo "DEPLOY_TIME=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> $GITHUB_ENV
+    
+- name: Tag deployment in APM
+  run: |
+    # Set deployment version in your APM tool
+    curl -X POST "$APM_ENDPOINT/v1/deployments" \
+      -d '{
+        "version": "${{ github.sha }}",
+        "environment": "production",
+        "deploy_id": "${{ env.DEPLOY_ID }}",
+        "repository": "${{ github.repository }}",
+        "author": "${{ github.actor }}"
+      }'
+```
+{% endraw %}
+
+### Security Observability
+
+#### Connecting Security Alerts to SIEM
+
+{% raw %}
+```yaml
+# .github/workflows/security-alerts-to-siem.yml
+name: Forward Security Alerts
+
+on:
+  dependabot_alert:
+    types: [created]
+  code_scanning_alert:
+    types: [created, reopened]
+  secret_scanning_alert:
+    types: [created]
+
+jobs:
+  forward-to-siem:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Forward to Splunk
+        run: |
+          curl -X POST "${{ secrets.SPLUNK_HEC_URL }}" \
+            -H "Authorization: Splunk ${{ secrets.SPLUNK_HEC_TOKEN }}" \
+            -d '{
+              "event": {
+                "source": "github-security",
+                "alert_type": "${{ github.event_name }}",
+                "repository": "${{ github.repository }}",
+                "alert": ${{ toJson(github.event.alert) }}
+              }
+            }'
+```
+{% endraw %}
+
+### Key Observability Metrics from GitHub
+
+| Category | Metric | Source | Use Case |
+|----------|--------|--------|----------|
+| **Velocity** | PR cycle time | API/Webhooks | Engineering efficiency |
+| **Quality** | Failed deployment rate | Actions | Release quality |
+| **Security** | Open vulnerabilities | Security API | Risk posture |
+| **Compliance** | Policy violations | Audit log | Compliance monitoring |
+| **Collaboration** | Review turnaround | API | Team health |
+
+### CSM Observability Talking Points
+
+**For Platform Teams:**
+> "Connect GitHub events to your existing monitoring stack. See deployments, security alerts, and developer activity alongside application metrics."
+
+**For Security Teams:**
+> "Stream audit logs and security alerts to your SIEM in real-time. Get immediate visibility into code changes, access modifications, and vulnerability discoveries."
+
+**For Engineering Leaders:**
+> "Correlate deployment events with production metrics. When an incident occurs, immediately see which commit was deployed and who authored it."
+
+### Best Practices
+
+1. **Start with deployment events** - Correlate releases to production behavior
+2. **Stream audit logs** - Don't poll; use streaming for real-time security
+3. **Add context to events** - Include commit SHA, PR number, author in all events
+4. **Create deployment markers** - Annotate dashboards with deployment times
+5. **Alert on anomalies** - Use monitoring tools to detect unusual patterns
+
+---
+
 ## DORA Metrics Deep Dive
 
 ### Metric 1: Deployment Frequency

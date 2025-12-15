@@ -2,7 +2,7 @@
 <html lang="en-us">
 
   <head>
-  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
@@ -20,7 +20,7 @@
   <noscript><link rel="stylesheet" href="/public/css/main.css"></noscript>
 
   <!-- GLightbox CSS for Image Modals -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css" integrity="sha256-bT9i1NF5afnHDpQ4z2cQBHJQGehoEj8uvClaAG+NXS0=" crossorigin="anonymous">
 
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
@@ -48,6 +48,16 @@
         <span class="training-tagline">CSM & CSA Certification Program</span>
       </div>
       
+      <!-- Mobile menu toggle button -->
+      <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+        <svg class="menu-icon" aria-hidden="true" height="24" viewBox="0 0 16 16" width="24">
+          <path fill="currentColor" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 010 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 010 1.5H1.75A.75.75 0 011 7.75zM1.75 12h12.5a.75.75 0 010 1.5H1.75a.75.75 0 010-1.5z"></path>
+        </svg>
+        <svg class="close-icon" aria-hidden="true" height="24" viewBox="0 0 16 16" width="24">
+          <path fill="currentColor" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"></path>
+        </svg>
+      </button>
+
       <nav class="training-nav" aria-label="Training navigation">
         <a href="/" class="training-nav-link">
           <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
@@ -80,19 +90,60 @@
 </header>
 
 
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+    
+    <!-- Mobile Navigation Menu -->
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+      <div class="mobile-nav-header">
+        <h2>Navigation</h2>
+        <button class="mobile-nav-close" aria-label="Close navigation menu">
+          <svg aria-hidden="true" height="24" viewBox="0 0 16 16" width="24">
+            <path fill="currentColor" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-nav-content">
+        
+        <div class="mobile-nav-section">
+          <h3><span aria-hidden="true">🚀</span> Intermediate Phase</h3>
+          <ul class="mobile-nav-links">
+            <li><a href="/intermediate/">Phase Overview</a></li>
+            <li><a href="/intermediate/module-5/">Module 5: Actions</a></li>
+            <li><a href="/intermediate/module-6/" class="active">Module 6: Security</a></li>
+            <li><a href="/intermediate/module-7/">Module 7: Packages</a></li>
+            <li><a href="/intermediate/module-8/">Module 8: CI/CD</a></li>
+          </ul>
+        </div>
+        
+        
+        <!-- Module sub-navigation for current module -->
+        
+        
+        <div class="mobile-nav-section">
+          <h3>Resources</h3>
+          <ul class="mobile-nav-links">
+            <li><a href="/syllabus/">Full Syllabus</a></li>
+            <li><a href="https://docs.github.com/" target="_blank" rel="noopener">GitHub Docs ↗</a></li>
+            <li><a href="https://skills.github.com/" target="_blank" rel="noopener">GitHub Skills ↗</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <!-- Main content area with sidebar -->
     <div class="training-container">
       
       <!-- Sidebar navigation -->
-      <aside class="training-sidebar">
+      <aside class="training-sidebar" aria-label="Module navigation">
         <div class="training-sidebar-sticky">
           
           
           
           
           <div class="sidebar-section">
-            <h3 class="sidebar-heading">🚀 Intermediate Phase</h3>
-            <nav class="sidebar-nav">
+            <h3 class="sidebar-heading" id="intermediate-nav-heading"><span aria-hidden="true">🚀</span> Intermediate Phase</h3>
+            <nav class="sidebar-nav" aria-labelledby="intermediate-nav-heading">
               <a href="/intermediate/" class="sidebar-link">Phase Overview</a>
               <a href="/intermediate/module-5/" class="sidebar-link">Module 5: Actions</a>
               <a href="/intermediate/module-6/" class="sidebar-link active">Module 6: Security</a>
@@ -105,8 +156,8 @@
           
           
           <div class="sidebar-section">
-            <h3 class="sidebar-heading">Resources</h3>
-            <nav class="sidebar-nav">
+            <h3 class="sidebar-heading" id="resources-nav-heading">Resources</h3>
+            <nav class="sidebar-nav" aria-labelledby="resources-nav-heading">
               <a href="/syllabus/" class="sidebar-link">Full Syllabus</a>
               <a href="https://docs.github.com/" class="sidebar-link" target="_blank" rel="noopener">
                 GitHub Docs
@@ -276,7 +327,7 @@
 
         <!-- Main Content with TOC Sidebar -->
         <div class="module-content-wrapper">
-          <main id="main-content" class="module-content">
+          <div class="module-content">
             <article class="section-content">
               
 <h2 id="lab-1-codeql-deep-dive">Lab 1: CodeQL Deep Dive</h2>
@@ -425,20 +476,9 @@ git push  <span class="c"># Should be blocked</span>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Alert routing configured correctly</li>
 </ul>
 
-<hr />
-<div class="section-navigation">
-  <a href="/intermediate/module-6/walkthrough/" class="nav-button nav-prev">
-    <span class="nav-label">← Previous</span>
-    <span class="nav-title">Guided Walkthrough</span>
-  </a>
-  <a href="/intermediate/module-6/quiz/" class="nav-button nav-next">
-    <span class="nav-label">Next →</span>
-    <span class="nav-title">Knowledge Check</span>
-  </a>
-</div>
 
             </article>
-          </main>
+          </div>
           
           <!-- Table of Contents Sidebar -->
           
@@ -507,7 +547,7 @@ git push  <span class="c"># Should be blocked</span>
         <p class="footer-text">GitHub Training Program v1.0 | Last updated: December 2025</p>
         <p class="footer-links">
           <a href="https://docs.github.com" target="_blank" rel="noopener">GitHub Docs</a> • 
-          <a href="https://github.community" target="_blank" rel="noopener">Community</a> • 
+          <a href="https://github.com/orgs/community/discussions" target="_blank" rel="noopener">Community</a> • 
           <a href="/syllabus/">Full Syllabus</a>
         </p>
       </div>
@@ -565,12 +605,12 @@ git push  <span class="c"># Should be blocked</span>
     </script>
 
     <!-- Mermaid.js for diagrams with pan/zoom -->
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js" integrity="sha256-YWoQnxnNGGhC4R1Fs1rAdFazp1UTMQ9uoHU1GqQwseI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js" integrity="sha256-9GNxAyAInGHQ9XzsK4hsAt4E4h65Lr0i6qMn/fCmt8Y=" crossorigin="anonymous"></script>
     <script>
       // Initialize Mermaid with theme matching the training modules
       mermaid.initialize({
-        startOnLoad: true,
+        startOnLoad: false,
         theme: 'base',
         themeVariables: {
           // Primary colors - matching GitHub/training theme
@@ -627,41 +667,113 @@ git push  <span class="c"># Should be blocked</span>
         securityLevel: 'loose'
       });
 
-      // Add pan/zoom to Mermaid diagrams after they render
-      mermaid.run().then(() => {
-        document.querySelectorAll('.mermaid-container svg').forEach((svg, index) => {
-          // Ensure SVG has an ID for pan-zoom
-          if (!svg.id) {
-            svg.id = 'mermaid-svg-' + index;
-          }
-          
-          // Set minimum dimensions on SVG for better visibility
-          svg.style.minWidth = '100%';
-          svg.style.minHeight = '300px';
-          
-          // Initialize pan-zoom
-          const panZoom = svgPanZoom(svg, {
-            zoomEnabled: true,
-            controlIconsEnabled: true,
-            fit: true,
-            center: true,
-            minZoom: 0.3,
-            maxZoom: 10,
-            zoomScaleSensitivity: 0.3,
-            dblClickZoomEnabled: true,
-            mouseWheelZoomEnabled: true,
-            preventMouseEventsDefault: true,
-            contain: false
-          });
+      // Run mermaid after DOM is ready, then add pan/zoom
+      document.addEventListener('DOMContentLoaded', function() {
+        mermaid.run().then(() => {
+          document.querySelectorAll('.mermaid-container svg').forEach((svg, index) => {
+            // Ensure SVG has an ID for pan-zoom
+            if (!svg.id) {
+              svg.id = 'mermaid-svg-' + index;
+            }
+            
+            // Set minimum dimensions on SVG for better visibility
+            svg.style.minWidth = '100%';
+            svg.style.minHeight = '300px';
+            
+            // Initialize pan-zoom
+            const panZoom = svgPanZoom(svg, {
+              zoomEnabled: true,
+              controlIconsEnabled: true,
+              fit: true,
+              center: true,
+              minZoom: 0.3,
+              maxZoom: 10,
+              zoomScaleSensitivity: 0.3,
+              dblClickZoomEnabled: true,
+              mouseWheelZoomEnabled: true,
+              preventMouseEventsDefault: true,
+              contain: false
+            });
 
-          // Handle window resize
-          window.addEventListener('resize', () => {
-            panZoom.resize();
-            panZoom.fit();
-            panZoom.center();
+            // Handle window resize
+            window.addEventListener('resize', () => {
+              panZoom.resize();
+              panZoom.fit();
+              panZoom.center();
+            });
           });
         });
       });
+    </script>
+
+    <!-- Mobile navigation toggle -->
+    <script>
+      (function() {
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileNav = document.getElementById('mobile-nav');
+        const overlay = document.getElementById('mobile-nav-overlay');
+        const closeBtn = document.querySelector('.mobile-nav-close');
+        
+        if (!menuToggle || !mobileNav || !overlay) return;
+        
+        function openMenu() {
+          mobileNav.classList.add('is-open');
+          overlay.classList.add('is-open');
+          menuToggle.setAttribute('aria-expanded', 'true');
+          document.body.style.overflow = 'hidden';
+          
+          // Focus first link in menu
+          const firstLink = mobileNav.querySelector('a');
+          if (firstLink) firstLink.focus();
+        }
+        
+        function closeMenu() {
+          mobileNav.classList.remove('is-open');
+          overlay.classList.remove('is-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+          menuToggle.focus();
+        }
+        
+        menuToggle.addEventListener('click', function() {
+          const isExpanded = this.getAttribute('aria-expanded') === 'true';
+          if (isExpanded) {
+            closeMenu();
+          } else {
+            openMenu();
+          }
+        });
+        
+        if (closeBtn) {
+          closeBtn.addEventListener('click', closeMenu);
+        }
+        
+        overlay.addEventListener('click', closeMenu);
+        
+        // Close on escape key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && mobileNav.classList.contains('is-open')) {
+            closeMenu();
+          }
+        });
+        
+        // Trap focus within mobile nav when open
+        mobileNav.addEventListener('keydown', function(e) {
+          if (e.key !== 'Tab') return;
+          
+          const focusable = mobileNav.querySelectorAll('a, button');
+          const firstFocusable = focusable[0];
+          const lastFocusable = focusable[focusable.length - 1];
+          
+          if (e.shiftKey && document.activeElement === firstFocusable) {
+            e.preventDefault();
+            lastFocusable.focus();
+          } else if (!e.shiftKey && document.activeElement === lastFocusable) {
+            e.preventDefault();
+            firstFocusable.focus();
+          }
+        });
+      })();
     </script>
 
   </body>

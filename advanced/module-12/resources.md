@@ -69,6 +69,8 @@ next_section:
 
 ## DORA Research
 
+> ⚠️ **External Resources:** Links to dora.dev and itrevolution.com lead to third-party websites not maintained by GitHub. Content may change without notice.
+
 ### Primary Sources
 
 | Resource | Description |

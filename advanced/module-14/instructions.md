@@ -332,6 +332,116 @@ following your established patterns...
 
 ---
 
+## Copilot Spaces
+
+Copilot Spaces let you create curated collections of context—files, repositories, instructions, and notes—that ground Copilot's responses for specific tasks or projects.
+
+### What Are Copilot Spaces?
+
+Think of Spaces as "workspaces" for Copilot conversations. Instead of manually attaching files each time, you create a Space with all relevant context and Copilot uses it automatically.
+
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart TD
+  subgraph Space["📦 Copilot Space: 'Auth Migration'"]
+    I["📝 Instructions<br/>'You are helping migrate from JWT to OAuth2'"]
+    R1["📁 auth-service repo"]
+    R2["📁 user-service repo"]
+    D["📄 OAuth2 spec document"]
+    N["📋 Migration notes"]
+  end
+  
+  Space --> C["💬 Copilot Chat"]
+  C --> A["Contextual answers using all sources"]
+</div>
+</div>
+
+### Spaces vs. Other Context Methods
+
+| Method | Scope | Persistence | Sharing | Best For |
+|--------|-------|-------------|---------|----------|
+| **Spaces** | Task/project | Permanent | Team/org | Cross-repo projects |
+| **@workspace** | Current repo | Session | No | Single repo work |
+| **Instructions** | Repo/org | Permanent | Via repo | Coding standards |
+| **Knowledge Bases** | Organization | Permanent | Org-wide | Documentation |
+
+### Creating a Space
+
+1. Navigate to [github.com/copilot/spaces](https://github.com/copilot/spaces)
+2. Click **Create space**
+3. Name your space (e.g., "Q4 Platform Migration")
+4. Choose ownership: Personal or Organization
+5. Add a description (helps teammates understand the space's purpose)
+
+### Adding Context to a Space
+
+Spaces can include multiple types of content:
+
+**Instructions** - Guide Copilot's behavior:
+```
+You are a SQL optimization expert. Your job is to analyze queries 
+against the schemas in this space and suggest performance improvements.
+Focus on index usage, query plans, and N+1 patterns.
+```
+
+**Sources:**
+- **Files & Repositories** - Add entire repos or specific files/folders
+- **Links** - GitHub Issues, PRs, and other content via URL
+- **Uploads** - Local files (images, documents, spreadsheets)
+- **Text Content** - Notes, transcripts, or any freeform text
+
+### Quick Add from Code View
+
+While browsing code on GitHub:
+1. Open any file
+2. Click the **Add to space** icon at the top
+3. Select an existing space or create new one
+
+This lets you build context without interrupting your workflow.
+
+### Use Cases for CSMs
+
+**Customer Onboarding Space:**
+- Customer's architecture docs
+- Relevant GitHub guides
+- Notes from discovery calls
+- Their repo structure
+
+**Migration Project Space:**
+- Source and target platform docs
+- Migration runbook
+- Customer's affected repositories
+- Previous migration case studies
+
+**Support Escalation Space:**
+- Customer's repo with the issue
+- Related GitHub Issues/PRs
+- Error logs and diagnostics
+- Support playbooks
+
+### Sharing Spaces
+
+Organization-owned Spaces can be shared with team members using GitHub's permission model:
+
+1. Open the Space
+2. Go to **Settings** → **Sharing**
+3. Add team members or teams
+4. Choose permission level (view/edit)
+
+### Space Best Practices
+
+| Do | Don't |
+|----|-------|
+| Create focused spaces per task/project | Create one giant "everything" space |
+| Include clear instructions | Leave instructions empty |
+| Update sources as project evolves | Let spaces become stale |
+| Add context breadcrumbs (why included) | Add files without explanation |
+| Archive completed project spaces | Delete spaces (preserve history) |
+
+> **📚 Learn More:** [About Copilot Spaces](https://docs.github.com/en/copilot/concepts/about-organizing-and-sharing-context-with-copilot-spaces)
+
+---
+
 ## Writing Effective Instructions
 
 ### Be Specific, Not Vague

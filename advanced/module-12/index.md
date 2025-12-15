@@ -2,7 +2,7 @@
 layout: training
 title: "Module 12: Governance, Compliance & DORA Metrics"
 module_number: 12
-estimated_time: "3 hours"
+estimated_time: "3 hours total"
 difficulty: "Advanced"
 learning_track: "Advanced"
 week_number: 12
@@ -55,12 +55,12 @@ prerequisites:
   - "Module 10: GitHub APIs, Webhooks & Apps"
   - "Module 11: Infrastructure as Code & Operations"
   - Understanding of software development lifecycle metrics
-prev_module: 11
-prev_module_title: "Infrastructure as Code & Operations"
-prev_module_link: "/advanced/module-11/"
-next_module: 13
-next_module_title: "GitHub Copilot Fundamentals"
-next_module_link: "/advanced/module-13/"
+prev_module:
+  url: /advanced/module-11/
+  title: "Module 11: Infrastructure as Code & Operations"
+next_module:
+  url: /advanced/module-13/
+  title: "Module 13: GitHub Copilot Fundamentals"
 ---
 
 ## Module Sections

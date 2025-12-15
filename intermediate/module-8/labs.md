@@ -169,4 +169,169 @@ steps:
 - [ ] OIDC configured for all clouds
 - [ ] Single workflow deploys to all
 - [ ] Each deployment verified independently
+
+---
+
+## Lab 4: Deploy a Static Site with GitHub Pages
+**Objective:** Set up automated deployment to GitHub Pages using Actions
+
+GitHub Pages is a free static site hosting service built into GitHub. This lab demonstrates deploying a documentation site or static web app.
+
+### Tasks:
+
+**1. Create a static site:**
+
+```bash
+mkdir pages-lab && cd pages-lab
+git init
+
+# Create a simple site
+cat > index.html << 'EOF'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My GitHub Pages Site</title>
+    <style>
+        body { font-family: -apple-system, sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+        h1 { color: #0969da; }
+        .version { background: #ddf4ff; padding: 0.5rem 1rem; border-radius: 6px; }
+    </style>
+</head>
+<body>
+    <h1>🚀 Deployed with GitHub Actions</h1>
+    <p class="version">Version: <span id="version">1.0.0</span></p>
+    <p>Build time: <span id="time"></span></p>
+    <script>document.getElementById('time').textContent = new Date().toISOString();</script>
+</body>
+</html>
+EOF
+
+# Create a 404 page
+cat > 404.html << 'EOF'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page Not Found</title>
+</head>
+<body>
+    <h1>404 - Page Not Found</h1>
+    <p><a href="/">Return home</a></p>
+</body>
+</html>
+EOF
+```
+
+**2. Create GitHub Pages deployment workflow:**
+
+```yaml
+# .github/workflows/deploy-pages.yml
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+```
+
+**3. Configure GitHub Pages in repository settings:**
+   - Go to Settings → Pages
+   - Source: Select "GitHub Actions"
+   - Wait for first deployment
+
+**4. (Optional) Add a build step for static site generators:**
+
+For Jekyll, Hugo, or other static site generators:
+
+```yaml
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Build site
+        run: npm run build
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './dist'  # Your build output folder
+```
+
+**5. Add custom domain (optional):**
+
+```bash
+# Create CNAME file for custom domain
+echo "docs.example.com" > CNAME
+```
+
+Then configure DNS:
+- For apex domain: A records pointing to GitHub's IPs
+- For subdomain: CNAME record pointing to `<username>.github.io`
+
+### Validation:
+- [ ] Site deploys successfully on push to main
+- [ ] Site accessible at `https://<username>.github.io/<repo>/`
+- [ ] 404 page works for invalid URLs
+- [ ] Deployment shows in repository Environments
+- [ ] (Optional) Custom domain configured and working
+
+### CSM Talking Points
+
+| Scenario | GitHub Pages Value |
+|----------|-------------------|
+| **Documentation** | "Host project docs alongside code. Every push updates docs automatically." |
+| **Marketing/Landing** | "Free hosting for product pages, no separate infrastructure needed." |
+| **Previews** | "Preview branches deploy to separate URLs for review before merge." |
+| **Internal Tools** | "Enterprise can use Pages for internal dashboards and tools." |
+
+---
+
 {% endraw %}

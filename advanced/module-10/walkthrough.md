@@ -349,8 +349,3 @@ if __name__ == '__main__':
 2. Click "Install" and select organizations/repositories
 3. Test by creating a new issue
 {% endraw %}
----
-<div class="section-navigation">
-  <a href="{{ '/advanced/module-10/concepts/' | relative_url }}" class="prev-section">← Core Concepts</a>
-  <a href="{{ '/advanced/module-10/labs/' | relative_url }}" class="next-section">Hands-On Labs →</a>
-</div>

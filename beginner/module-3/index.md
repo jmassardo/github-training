@@ -1,11 +1,11 @@
 ---
 layout: training
 title: "Module 3: GitHub Platform Essentials"
-description: "Navigate and master the GitHub platform - Issues, Projects, Pull Requests, and collaboration features."
+description: "Navigate and master the GitHub platform - Issues, Projects, Pull Requests, Codespaces, Discussions, and collaboration features."
 permalink: /beginner/module-3/
 module_number: 3
 phase: beginner
-estimated_time: "90 min"
+estimated_time: "2-2.5 hours total"
 sections:
   - title: "Context & Overview"
     url: "/beginner/module-3/overview/"
@@ -42,6 +42,16 @@ sections:
     short_title: "Scenarios"
     icon: "💼"
     time: "15 min"
+  - title: "GitHub Codespaces"
+    url: "/beginner/module-3/codespaces/"
+    short_title: "Codespaces"
+    icon: "☁️"
+    time: "20 min"
+  - title: "GitHub Discussions"
+    url: "/beginner/module-3/discussions/"
+    short_title: "Discussions"
+    icon: "💬"
+    time: "15 min"
 objectives:
   - Navigate the GitHub web interface confidently
   - Use Issues for tracking work and bugs
@@ -49,6 +59,8 @@ objectives:
   - Create and review Pull Requests
   - Configure repository settings and permissions
   - Set up GitHub Pages, Wikis, and Discussions
+  - Use GitHub Codespaces for cloud development
+  - Build community with GitHub Discussions
 prev_module:
   url: /beginner/module-2/
   title: "Module 2: Git Fundamentals"

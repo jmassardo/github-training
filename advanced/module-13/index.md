@@ -66,12 +66,12 @@ objectives:
   - Manage context for optimal completions
   - Apply best practices for developer productivity
 tags: [copilot, ai, prompt-engineering, productivity, ide]
-prev_module: 12
-prev_module_title: "Governance, Compliance & DORA Metrics"
-prev_module_link: "/advanced/module-12/"
-next_module: 14
-next_module_title: "GitHub Copilot Advanced"
-next_module_link: "/advanced/module-14/"
+prev_module:
+  url: /advanced/module-12/
+  title: "Module 12: Governance, Compliance & DORA Metrics"
+next_module:
+  url: /advanced/module-14/
+  title: "Module 14: GitHub Copilot Advanced"
 ---
 
 ## Module Sections

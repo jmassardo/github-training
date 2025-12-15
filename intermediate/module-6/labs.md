@@ -170,14 +170,3 @@ pattern: "INTERNAL_[A-Z]{4}_[a-f0-9]{32}"
 - [ ] Historical scan finds existing secrets
 - [ ] Alert routing configured correctly
 {% endraw %}
----
-<div class="section-navigation">
-  <a href="{{ page.prev_section.url }}" class="nav-button nav-prev">
-    <span class="nav-label">← Previous</span>
-    <span class="nav-title">{{ page.prev_section.title }}</span>
-  </a>
-  <a href="{{ page.next_section.url }}" class="nav-button nav-next">
-    <span class="nav-label">Next →</span>
-    <span class="nav-title">{{ page.next_section.title }}</span>
-  </a>
-</div>

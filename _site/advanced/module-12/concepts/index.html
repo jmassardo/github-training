@@ -2,7 +2,7 @@
 <html lang="en-us">
 
   <head>
-  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
@@ -20,7 +20,7 @@
   <noscript><link rel="stylesheet" href="/public/css/main.css"></noscript>
 
   <!-- GLightbox CSS for Image Modals -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css" integrity="sha256-bT9i1NF5afnHDpQ4z2cQBHJQGehoEj8uvClaAG+NXS0=" crossorigin="anonymous">
 
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
@@ -48,6 +48,16 @@
         <span class="training-tagline">CSM & CSA Certification Program</span>
       </div>
       
+      <!-- Mobile menu toggle button -->
+      <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+        <svg class="menu-icon" aria-hidden="true" height="24" viewBox="0 0 16 16" width="24">
+          <path fill="currentColor" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 010 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 010 1.5H1.75A.75.75 0 011 7.75zM1.75 12h12.5a.75.75 0 010 1.5H1.75a.75.75 0 010-1.5z"></path>
+        </svg>
+        <svg class="close-icon" aria-hidden="true" height="24" viewBox="0 0 16 16" width="24">
+          <path fill="currentColor" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"></path>
+        </svg>
+      </button>
+
       <nav class="training-nav" aria-label="Training navigation">
         <a href="/" class="training-nav-link">
           <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
@@ -80,11 +90,54 @@
 </header>
 
 
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+    
+    <!-- Mobile Navigation Menu -->
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+      <div class="mobile-nav-header">
+        <h2>Navigation</h2>
+        <button class="mobile-nav-close" aria-label="Close navigation menu">
+          <svg aria-hidden="true" height="24" viewBox="0 0 16 16" width="24">
+            <path fill="currentColor" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-nav-content">
+        
+        <div class="mobile-nav-section">
+          <h3><span aria-hidden="true">🏆</span> Advanced Phase</h3>
+          <ul class="mobile-nav-links">
+            <li><a href="/advanced/">Phase Overview</a></li>
+            <li><a href="/advanced/module-9/">Module 9: Enterprise</a></li>
+            <li><a href="/advanced/module-10/">Module 10: APIs</a></li>
+            <li><a href="/advanced/module-11/">Module 11: IaC</a></li>
+            <li><a href="/advanced/module-12/" class="active">Module 12: Governance</a></li>
+            <li><a href="/advanced/module-13/">Module 13: Copilot</a></li>
+            <li><a href="/advanced/module-14/">Module 14: Copilot+</a></li>
+          </ul>
+        </div>
+        
+        
+        <!-- Module sub-navigation for current module -->
+        
+        
+        <div class="mobile-nav-section">
+          <h3>Resources</h3>
+          <ul class="mobile-nav-links">
+            <li><a href="/syllabus/">Full Syllabus</a></li>
+            <li><a href="https://docs.github.com/" target="_blank" rel="noopener">GitHub Docs ↗</a></li>
+            <li><a href="https://skills.github.com/" target="_blank" rel="noopener">GitHub Skills ↗</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <!-- Main content area with sidebar -->
     <div class="training-container">
       
       <!-- Sidebar navigation -->
-      <aside class="training-sidebar">
+      <aside class="training-sidebar" aria-label="Module navigation">
         <div class="training-sidebar-sticky">
           
           
@@ -93,8 +146,8 @@
           
           
           <div class="sidebar-section">
-            <h3 class="sidebar-heading">🏆 Advanced Phase</h3>
-            <nav class="sidebar-nav">
+            <h3 class="sidebar-heading" id="advanced-nav-heading"><span aria-hidden="true">🏆</span> Advanced Phase</h3>
+            <nav class="sidebar-nav" aria-labelledby="advanced-nav-heading">
               <a href="/advanced/" class="sidebar-link">Phase Overview</a>
               <a href="/advanced/module-9/" class="sidebar-link">Module 9: Enterprise Admin</a>
               <a href="/advanced/module-10/" class="sidebar-link">Module 10: APIs & Apps</a>
@@ -107,8 +160,8 @@
           
           
           <div class="sidebar-section">
-            <h3 class="sidebar-heading">Resources</h3>
-            <nav class="sidebar-nav">
+            <h3 class="sidebar-heading" id="resources-nav-heading">Resources</h3>
+            <nav class="sidebar-nav" aria-labelledby="resources-nav-heading">
               <a href="/syllabus/" class="sidebar-link">Full Syllabus</a>
               <a href="https://docs.github.com/" class="sidebar-link" target="_blank" rel="noopener">
                 GitHub Docs
@@ -278,7 +331,7 @@
 
         <!-- Main Content with TOC Sidebar -->
         <div class="module-content-wrapper">
-          <main id="main-content" class="module-content">
+          <div class="module-content">
             <article class="section-content">
               <h2 id="enterprise-governance-framework">Enterprise Governance Framework</h2>
 
@@ -476,6 +529,315 @@ flowchart LR
   end
 </div>
 </div>
+
+<hr />
+
+<h2 id="observability--monitoring-integration">Observability &amp; Monitoring Integration</h2>
+
+<h3 id="what-is-devops-observability">What is DevOps Observability?</h3>
+
+<p><strong>Observability</strong> is the ability to understand a system’s internal state from its external outputs. For GitHub-based workflows, this means connecting development activities to runtime behavior.</p>
+
+<h3 id="the-three-pillars-of-observability">The Three Pillars of Observability</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pillar</th>
+      <th>Definition</th>
+      <th>GitHub Connection</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Logs</strong></td>
+      <td>Timestamped records of events</td>
+      <td>Audit logs, Actions logs, deployment events</td>
+    </tr>
+    <tr>
+      <td><strong>Metrics</strong></td>
+      <td>Numerical measurements over time</td>
+      <td>DORA metrics, PR velocity, security alerts</td>
+    </tr>
+    <tr>
+      <td><strong>Traces</strong></td>
+      <td>Request paths through systems</td>
+      <td>Commit → PR → Deploy → Production</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="connecting-github-to-monitoring-platforms">Connecting GitHub to Monitoring Platforms</h3>
+
+<h4 id="integration-architecture">Integration Architecture</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌─────────────────────────────────────────────────────────────────────────┐
+│                         GitHub Enterprise                               │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐   │
+│  │   Actions   │  │  Audit Log  │  │  Webhooks   │  │    API      │   │
+│  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘   │
+└─────────┼────────────────┼────────────────┼────────────────┼──────────┘
+          │                │                │                │
+          ▼                ▼                ▼                ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│                    Data Collection Layer                                 │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐   │
+│  │  Log Agent  │  │   Stream    │  │  Webhook    │  │   Polling   │   │
+│  │  (Fluent)   │  │  Processor  │  │  Receiver   │  │   Service   │   │
+│  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘   │
+└─────────┼────────────────┼────────────────┼────────────────┼──────────┘
+          │                │                │                │
+          └────────────────┴────────────────┴────────────────┘
+                                    │
+                                    ▼
+┌─────────────────────────────────────────────────────────────────────────┐
+│                    Observability Platform                                │
+│  ┌─────────────────────────────────────────────────────────────────┐   │
+│  │  Datadog │ Splunk │ Azure Monitor │ Grafana │ New Relic │ etc. │   │
+│  └─────────────────────────────────────────────────────────────────┘   │
+│                                                                         │
+│  ┌───────────┐  ┌───────────┐  ┌───────────┐  ┌───────────┐           │
+│  │ Dashboards│  │  Alerts   │  │  Reports  │  │  Analysis │           │
+│  └───────────┘  └───────────┘  └───────────┘  └───────────┘           │
+└─────────────────────────────────────────────────────────────────────────┘
+</code></pre></div></div>
+
+<h4 id="popular-integration-options">Popular Integration Options</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Platform</th>
+      <th>Integration Method</th>
+      <th>Best For</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Datadog</strong></td>
+      <td>GitHub Integration, Webhooks</td>
+      <td>Full-stack observability</td>
+    </tr>
+    <tr>
+      <td><strong>Splunk</strong></td>
+      <td>Audit log streaming, HEC</td>
+      <td>Security &amp; compliance</td>
+    </tr>
+    <tr>
+      <td><strong>Azure Monitor</strong></td>
+      <td>Azure DevOps integration, Logic Apps</td>
+      <td>Azure-centric environments</td>
+    </tr>
+    <tr>
+      <td><strong>Grafana</strong></td>
+      <td>API polling, Webhooks to Loki</td>
+      <td>Open-source stack</td>
+    </tr>
+    <tr>
+      <td><strong>New Relic</strong></td>
+      <td>CodeStream, Webhooks</td>
+      <td>Application performance</td>
+    </tr>
+    <tr>
+      <td><strong>PagerDuty</strong></td>
+      <td>GitHub App, Actions</td>
+      <td>Incident management</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="github-audit-log-streaming">GitHub Audit Log Streaming</h3>
+
+<p>Stream audit events to external SIEM/monitoring systems:</p>
+
+<p><strong>Supported destinations:</strong>
+- Amazon S3
+- Azure Blob Storage
+- Azure Event Hubs
+- Google Cloud Storage
+- Splunk
+- Datadog</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Example: Streaming configuration</span>
+<span class="na">Destination</span><span class="pi">:</span> <span class="s">Azure Event Hubs</span>
+<span class="na">Events</span><span class="pi">:</span> <span class="s">All audit events</span>
+<span class="na">Format</span><span class="pi">:</span> <span class="s">JSON</span>
+<span class="na">Encryption</span><span class="pi">:</span> <span class="s">TLS 1.2+</span>
+</code></pre></div></div>
+
+<h3 id="actions-workflow-observability">Actions Workflow Observability</h3>
+
+<h4 id="send-deployment-events-to-monitoring">Send Deployment Events to Monitoring</h4>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># .github/workflows/deploy-with-observability.yml</span>
+<span class="na">name</span><span class="pi">:</span> <span class="s">Deploy with Observability</span>
+
+<span class="na">on</span><span class="pi">:</span>
+  <span class="na">push</span><span class="pi">:</span>
+    <span class="na">branches</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">main</span><span class="pi">]</span>
+
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Deploy application</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="s">./deploy.sh</span>
+        
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Send deployment event to Datadog</span>
+        <span class="na">if</span><span class="pi">:</span> <span class="s">always()</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s">curl -X POST "https://api.datadoghq.com/api/v1/events" \</span>
+            <span class="s">-H "DD-API-KEY: ${{ secrets.DATADOG_API_KEY }}" \</span>
+            <span class="s">-H "Content-Type: application/json" \</span>
+            <span class="s">-d '{</span>
+              <span class="s">"title": "Deployment: ${{ github.repository }}",</span>
+              <span class="s">"text": "Commit: ${{ github.sha }}\nStatus: ${{ job.status }}",</span>
+              <span class="s">"priority": "normal",</span>
+              <span class="s">"tags": [</span>
+                <span class="s">"env:production",</span>
+                <span class="s">"service:${{ github.repository }}",</span>
+                <span class="s">"version:${{ github.sha }}"</span>
+              <span class="s">],</span>
+              <span class="s">"alert_type": "${{ job.status == 'success' &amp;&amp; 'info' || 'error' }}"</span>
+            <span class="s">}'</span>
+          <span class="no">  </span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Create deployment annotation in Grafana</span>
+        <span class="na">if</span><span class="pi">:</span> <span class="s">success()</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s">curl -X POST "${{ secrets.GRAFANA_URL }}/api/annotations" \</span>
+            <span class="s">-H "Authorization: Bearer ${{ secrets.GRAFANA_API_KEY }}" \</span>
+            <span class="s">-H "Content-Type: application/json" \</span>
+            <span class="s">-d '{</span>
+              <span class="s">"dashboardUID": "deployment-dashboard",</span>
+              <span class="s">"time": '$(date +%s000)',</span>
+              <span class="s">"tags": ["deployment", "${{ github.repository }}"],</span>
+              <span class="s">"text": "Deployed ${{ github.sha }}"</span>
+            <span class="s">}'</span>
+</code></pre></div></div>
+
+<h4 id="correlating-commits-to-production-issues">Correlating Commits to Production Issues</h4>
+
+<p>Link GitHub commits to production incidents:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Add trace context to deployments</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Set deployment metadata</span>
+  <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+    <span class="s">echo "DEPLOY_ID=$(uuidgen)" &gt;&gt; $GITHUB_ENV</span>
+    <span class="s">echo "DEPLOY_TIME=$(date -u +%Y-%m-%dT%H:%M:%SZ)" &gt;&gt; $GITHUB_ENV</span>
+    
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Tag deployment in APM</span>
+  <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+    <span class="s"># Set deployment version in your APM tool</span>
+    <span class="s">curl -X POST "$APM_ENDPOINT/v1/deployments" \</span>
+      <span class="s">-d '{</span>
+        <span class="s">"version": "${{ github.sha }}",</span>
+        <span class="s">"environment": "production",</span>
+        <span class="s">"deploy_id": "${{ env.DEPLOY_ID }}",</span>
+        <span class="s">"repository": "${{ github.repository }}",</span>
+        <span class="s">"author": "${{ github.actor }}"</span>
+      <span class="s">}'</span>
+</code></pre></div></div>
+
+<h3 id="security-observability">Security Observability</h3>
+
+<h4 id="connecting-security-alerts-to-siem">Connecting Security Alerts to SIEM</h4>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># .github/workflows/security-alerts-to-siem.yml</span>
+<span class="na">name</span><span class="pi">:</span> <span class="s">Forward Security Alerts</span>
+
+<span class="na">on</span><span class="pi">:</span>
+  <span class="na">dependabot_alert</span><span class="pi">:</span>
+    <span class="na">types</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">created</span><span class="pi">]</span>
+  <span class="na">code_scanning_alert</span><span class="pi">:</span>
+    <span class="na">types</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">created</span><span class="pi">,</span> <span class="nv">reopened</span><span class="pi">]</span>
+  <span class="na">secret_scanning_alert</span><span class="pi">:</span>
+    <span class="na">types</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">created</span><span class="pi">]</span>
+
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">forward-to-siem</span><span class="pi">:</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Forward to Splunk</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s">curl -X POST "${{ secrets.SPLUNK_HEC_URL }}" \</span>
+            <span class="s">-H "Authorization: Splunk ${{ secrets.SPLUNK_HEC_TOKEN }}" \</span>
+            <span class="s">-d '{</span>
+              <span class="s">"event": {</span>
+                <span class="s">"source": "github-security",</span>
+                <span class="s">"alert_type": "${{ github.event_name }}",</span>
+                <span class="s">"repository": "${{ github.repository }}",</span>
+                <span class="s">"alert": ${{ toJson(github.event.alert) }}</span>
+              <span class="s">}</span>
+            <span class="s">}'</span>
+</code></pre></div></div>
+
+<h3 id="key-observability-metrics-from-github">Key Observability Metrics from GitHub</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Metric</th>
+      <th>Source</th>
+      <th>Use Case</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Velocity</strong></td>
+      <td>PR cycle time</td>
+      <td>API/Webhooks</td>
+      <td>Engineering efficiency</td>
+    </tr>
+    <tr>
+      <td><strong>Quality</strong></td>
+      <td>Failed deployment rate</td>
+      <td>Actions</td>
+      <td>Release quality</td>
+    </tr>
+    <tr>
+      <td><strong>Security</strong></td>
+      <td>Open vulnerabilities</td>
+      <td>Security API</td>
+      <td>Risk posture</td>
+    </tr>
+    <tr>
+      <td><strong>Compliance</strong></td>
+      <td>Policy violations</td>
+      <td>Audit log</td>
+      <td>Compliance monitoring</td>
+    </tr>
+    <tr>
+      <td><strong>Collaboration</strong></td>
+      <td>Review turnaround</td>
+      <td>API</td>
+      <td>Team health</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="csm-observability-talking-points">CSM Observability Talking Points</h3>
+
+<p><strong>For Platform Teams:</strong>
+&gt; “Connect GitHub events to your existing monitoring stack. See deployments, security alerts, and developer activity alongside application metrics.”</p>
+
+<p><strong>For Security Teams:</strong>
+&gt; “Stream audit logs and security alerts to your SIEM in real-time. Get immediate visibility into code changes, access modifications, and vulnerability discoveries.”</p>
+
+<p><strong>For Engineering Leaders:</strong>
+&gt; “Correlate deployment events with production metrics. When an incident occurs, immediately see which commit was deployed and who authored it.”</p>
+
+<h3 id="best-practices">Best Practices</h3>
+
+<ol>
+  <li><strong>Start with deployment events</strong> - Correlate releases to production behavior</li>
+  <li><strong>Stream audit logs</strong> - Don’t poll; use streaming for real-time security</li>
+  <li><strong>Add context to events</strong> - Include commit SHA, PR number, author in all events</li>
+  <li><strong>Create deployment markers</strong> - Annotate dashboards with deployment times</li>
+  <li><strong>Alert on anomalies</strong> - Use monitoring tools to detect unusual patterns</li>
+</ol>
+
+<hr />
 
 <h2 id="dora-metrics-deep-dive">DORA Metrics Deep Dive</h2>
 
@@ -794,7 +1156,7 @@ Documentation ◀──────────── 23 external PRs
 <p><strong>Next:</strong> Learn how to implement these concepts in the Guided Walkthrough.</p>
 
             </article>
-          </main>
+          </div>
           
           <!-- Table of Contents Sidebar -->
           
@@ -815,6 +1177,19 @@ Documentation ◀──────────── 23 external PRs
 <li class="toc-item toc-h3"><a href="#common-compliance-requirements">Common Compliance Requirements</a></li>
 <li class="toc-item toc-h3"><a href="#github-audit-log">GitHub Audit Log</a></li>
 <li class="toc-item toc-h3"><a href="#compliance-reporting-pattern">Compliance Reporting Pattern</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#observability--monitoring-integration">Observability &amp; Monitoring Integration</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#what-is-devops-observability">What is DevOps Observability?</a></li>
+<li class="toc-item toc-h3"><a href="#the-three-pillars-of-observability">The Three Pillars of Observability</a></li>
+<li class="toc-item toc-h3"><a href="#connecting-github-to-monitoring-platforms">Connecting GitHub to Monitoring Platforms</a></li>
+<li class="toc-item toc-h3"><a href="#github-audit-log-streaming">GitHub Audit Log Streaming</a></li>
+<li class="toc-item toc-h3"><a href="#actions-workflow-observability">Actions Workflow Observability</a></li>
+<li class="toc-item toc-h3"><a href="#security-observability">Security Observability</a></li>
+<li class="toc-item toc-h3"><a href="#key-observability-metrics-from-github">Key Observability Metrics from GitHub</a></li>
+<li class="toc-item toc-h3"><a href="#csm-observability-talking-points">CSM Observability Talking Points</a></li>
+<li class="toc-item toc-h3"><a href="#best-practices">Best Practices</a></li>
 </ul>
 </li>
 <li class="toc-item toc-h2"><a href="#dora-metrics-deep-dive">DORA Metrics Deep Dive</a>
@@ -886,7 +1261,7 @@ Documentation ◀──────────── 23 external PRs
         <p class="footer-text">GitHub Training Program v1.0 | Last updated: December 2025</p>
         <p class="footer-links">
           <a href="https://docs.github.com" target="_blank" rel="noopener">GitHub Docs</a> • 
-          <a href="https://github.community" target="_blank" rel="noopener">Community</a> • 
+          <a href="https://github.com/orgs/community/discussions" target="_blank" rel="noopener">Community</a> • 
           <a href="/syllabus/">Full Syllabus</a>
         </p>
       </div>
@@ -944,12 +1319,12 @@ Documentation ◀──────────── 23 external PRs
     </script>
 
     <!-- Mermaid.js for diagrams with pan/zoom -->
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js" integrity="sha256-YWoQnxnNGGhC4R1Fs1rAdFazp1UTMQ9uoHU1GqQwseI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js" integrity="sha256-9GNxAyAInGHQ9XzsK4hsAt4E4h65Lr0i6qMn/fCmt8Y=" crossorigin="anonymous"></script>
     <script>
       // Initialize Mermaid with theme matching the training modules
       mermaid.initialize({
-        startOnLoad: true,
+        startOnLoad: false,
         theme: 'base',
         themeVariables: {
           // Primary colors - matching GitHub/training theme
@@ -1006,41 +1381,113 @@ Documentation ◀──────────── 23 external PRs
         securityLevel: 'loose'
       });
 
-      // Add pan/zoom to Mermaid diagrams after they render
-      mermaid.run().then(() => {
-        document.querySelectorAll('.mermaid-container svg').forEach((svg, index) => {
-          // Ensure SVG has an ID for pan-zoom
-          if (!svg.id) {
-            svg.id = 'mermaid-svg-' + index;
-          }
-          
-          // Set minimum dimensions on SVG for better visibility
-          svg.style.minWidth = '100%';
-          svg.style.minHeight = '300px';
-          
-          // Initialize pan-zoom
-          const panZoom = svgPanZoom(svg, {
-            zoomEnabled: true,
-            controlIconsEnabled: true,
-            fit: true,
-            center: true,
-            minZoom: 0.3,
-            maxZoom: 10,
-            zoomScaleSensitivity: 0.3,
-            dblClickZoomEnabled: true,
-            mouseWheelZoomEnabled: true,
-            preventMouseEventsDefault: true,
-            contain: false
-          });
+      // Run mermaid after DOM is ready, then add pan/zoom
+      document.addEventListener('DOMContentLoaded', function() {
+        mermaid.run().then(() => {
+          document.querySelectorAll('.mermaid-container svg').forEach((svg, index) => {
+            // Ensure SVG has an ID for pan-zoom
+            if (!svg.id) {
+              svg.id = 'mermaid-svg-' + index;
+            }
+            
+            // Set minimum dimensions on SVG for better visibility
+            svg.style.minWidth = '100%';
+            svg.style.minHeight = '300px';
+            
+            // Initialize pan-zoom
+            const panZoom = svgPanZoom(svg, {
+              zoomEnabled: true,
+              controlIconsEnabled: true,
+              fit: true,
+              center: true,
+              minZoom: 0.3,
+              maxZoom: 10,
+              zoomScaleSensitivity: 0.3,
+              dblClickZoomEnabled: true,
+              mouseWheelZoomEnabled: true,
+              preventMouseEventsDefault: true,
+              contain: false
+            });
 
-          // Handle window resize
-          window.addEventListener('resize', () => {
-            panZoom.resize();
-            panZoom.fit();
-            panZoom.center();
+            // Handle window resize
+            window.addEventListener('resize', () => {
+              panZoom.resize();
+              panZoom.fit();
+              panZoom.center();
+            });
           });
         });
       });
+    </script>
+
+    <!-- Mobile navigation toggle -->
+    <script>
+      (function() {
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileNav = document.getElementById('mobile-nav');
+        const overlay = document.getElementById('mobile-nav-overlay');
+        const closeBtn = document.querySelector('.mobile-nav-close');
+        
+        if (!menuToggle || !mobileNav || !overlay) return;
+        
+        function openMenu() {
+          mobileNav.classList.add('is-open');
+          overlay.classList.add('is-open');
+          menuToggle.setAttribute('aria-expanded', 'true');
+          document.body.style.overflow = 'hidden';
+          
+          // Focus first link in menu
+          const firstLink = mobileNav.querySelector('a');
+          if (firstLink) firstLink.focus();
+        }
+        
+        function closeMenu() {
+          mobileNav.classList.remove('is-open');
+          overlay.classList.remove('is-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+          menuToggle.focus();
+        }
+        
+        menuToggle.addEventListener('click', function() {
+          const isExpanded = this.getAttribute('aria-expanded') === 'true';
+          if (isExpanded) {
+            closeMenu();
+          } else {
+            openMenu();
+          }
+        });
+        
+        if (closeBtn) {
+          closeBtn.addEventListener('click', closeMenu);
+        }
+        
+        overlay.addEventListener('click', closeMenu);
+        
+        // Close on escape key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && mobileNav.classList.contains('is-open')) {
+            closeMenu();
+          }
+        });
+        
+        // Trap focus within mobile nav when open
+        mobileNav.addEventListener('keydown', function(e) {
+          if (e.key !== 'Tab') return;
+          
+          const focusable = mobileNav.querySelectorAll('a, button');
+          const firstFocusable = focusable[0];
+          const lastFocusable = focusable[focusable.length - 1];
+          
+          if (e.shiftKey && document.activeElement === firstFocusable) {
+            e.preventDefault();
+            lastFocusable.focus();
+          } else if (!e.shiftKey && document.activeElement === lastFocusable) {
+            e.preventDefault();
+            firstFocusable.focus();
+          }
+        });
+      })();
     </script>
 
   </body>

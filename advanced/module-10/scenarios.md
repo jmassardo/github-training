@@ -255,18 +255,3 @@ GitHub Events → Webhook → Event Router → Handler Functions
 - GitOps practices for infrastructure
 - Operational best practices for GitHub administration
 {% endraw %}
-<div class="section-navigation">
-  <div class="nav-previous">
-    <a href="{{ page.prev_section.url }}" class="prev-link">
-      <span class="nav-label">← Previous</span>
-      <span class="nav-title">{{ page.prev_section.title }}</span>
-    </a>
-  </div>
-
-  <div class="nav-next">
-    <a href="{{ page.next_section.url }}" class="next-link">
-      <span class="nav-label">Next →</span>
-      <span class="nav-title">{{ page.next_section.title }}</span>
-    </a>
-  </div>
-</div>

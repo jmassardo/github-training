@@ -330,6 +330,8 @@ Propose a training approach.
 - **[Git documentation](https://git-scm.com/doc)** — Official guides
 - **[Learn Git Branching](https://learngitbranching.js.org/)** — Visual practice
 
+> ⚠️ **Note:** learngitbranching.js.org is a third-party resource not maintained by GitHub.
+
 **Instructor-led options:**
 - **GitHub Professional Services** — Custom training
 - **GitHub Certified Partners** — Training delivery partners

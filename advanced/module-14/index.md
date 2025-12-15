@@ -66,12 +66,9 @@ objectives:
   - Implement custom instructions and knowledge bases
   - Measure and optimize Copilot adoption
 tags: [copilot, agents, mcp, extensions, enterprise, ai]
-prev_module: 13
-prev_module_title: "GitHub Copilot Fundamentals"
-prev_module_link: "/advanced/module-13/"
-next_module: null
-next_module_title: null
-next_module_link: null
+prev_module:
+  url: /advanced/module-13/
+  title: "Module 13: GitHub Copilot Fundamentals"
 ---
 
 ## Module Sections

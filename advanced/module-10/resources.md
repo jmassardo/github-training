@@ -79,14 +79,4 @@ sections:
 - [Probot Settings App](https://github.com/probot/settings) - Repository settings as code
 - [Delete Merged Branch](https://github.com/SvanBoxel/delete-merged-branch) - Auto-delete branches
 - [Auto-assign](https://github.com/kentaro-m/auto-assign) - Auto-assign PR reviewers
----
-<div class="section-navigation">
-  <div class="nav-previous">
-    <a href="{{ '/advanced/module-10/quiz/' | relative_url }}">← Previous: Knowledge Check</a>
-  </div>
-
-  <div class="nav-next">
-    <a href="{{ '/advanced/module-10/scenarios/' | relative_url }}">Next: CSM Scenarios →</a>
-  </div>
-</div>
 

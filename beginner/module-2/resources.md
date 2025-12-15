@@ -60,6 +60,8 @@ next_section:
 - **[Learn Git Branching](https://learngitbranching.js.org/)** — Visual, gamified Git practice
 - **[Oh My Git!](https://ohmygit.org/)** — Git learning game
 
+> ⚠️ **External Resources:** Links to learngitbranching.js.org and ohmygit.org lead to third-party websites not maintained by GitHub. Content may change without notice.
+
 ---
 
 ## Git Cheat Sheet

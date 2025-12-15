@@ -293,6 +293,8 @@ You're now ready to pursue official GitHub certifications:
 - [DORA Research](https://dora.dev/)
 - [Engineering Systems Success Playbook](https://github.com/resources/articles/enterprise/engineering-systems-success-playbook)
 
+> ⚠️ **External Resource:** dora.dev is a third-party website not maintained by GitHub.
+
 ---
 
 ## Congratulations! 🎉

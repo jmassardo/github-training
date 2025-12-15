@@ -180,6 +180,40 @@ Enterprise Level
 | Customization | Private knowledge bases |
 | Measurement | Adoption metrics, ROI tracking |
 
+---
+
+## GitHub Spark (Preview)
+
+GitHub Spark is a separate but related AI product that lets you build full-stack applications using natural language—no coding required.
+
+### What is GitHub Spark?
+
+Spark is an AI-powered app builder that:
+- Generates complete applications from natural language descriptions
+- Handles frontend, backend, and database automatically
+- Deploys to GitHub's infrastructure
+- Integrates with GitHub for version control
+
+### Spark vs. Copilot
+
+| Aspect | GitHub Copilot | GitHub Spark |
+|--------|----------------|--------------|
+| **Purpose** | Assist developers | Build apps without coding |
+| **Output** | Code suggestions | Complete applications |
+| **Users** | Developers | Anyone (no-code) |
+| **Integration** | IDEs, GitHub.com | Standalone web platform |
+
+### Example Spark Use Cases
+
+- Prototyping ideas quickly
+- Building internal tools
+- Creating demos for customer conversations
+- Generating proof-of-concept applications
+
+> **📚 Learn More:** [GitHub Spark](https://docs.github.com/en/copilot/tutorials/spark/build-apps-with-spark)
+
+---
+
 ## Module Learning Path
 
 This module covers:

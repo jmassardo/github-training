@@ -53,7 +53,7 @@ next_section:
 
 - **[GitHub Docs](https://docs.github.com/)** - Comprehensive documentation for all GitHub features
 - **[GitHub Skills](https://skills.github.com/)** - Interactive courses for hands-on learning
-- **[GitHub Guides](https://guides.github.com/)** - Conceptual guides and best practices
+- **[GitHub Docs - Guides](https://docs.github.com/en/get-started)** - Conceptual guides and best practices
 
 ### 🎓 Learning Paths
 
@@ -82,6 +82,8 @@ next_section:
 
 - **[State of DevOps Report](https://cloud.google.com/devops/state-of-devops/)** - Annual research on DevOps practices
 - **[DORA Metrics](https://dora.dev/)** - DevOps Research and Assessment metrics
+
+> ⚠️ **External Resources:** Links to dora.dev and cloud.google.com lead to third-party websites not maintained by GitHub. Content may change without notice.
 
 ---
 

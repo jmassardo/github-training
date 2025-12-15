@@ -1,6 +1,8 @@
 // Training Module Styles - Multi-page Navigation
 // ===============================================
 
+@use "sass:color";
+
 // Variables
 $primary-color: #0969da;
 $success-color: #1a7f37;
@@ -106,18 +108,18 @@ $advanced-color: #8250df;
   letter-spacing: 0.025em;
   
   &.badge-beginner {
-    background: lighten($beginner-color, 45%);
-    color: darken($beginner-color, 10%);
+    background: color.scale($beginner-color, $lightness: 80%);
+    color: color.scale($beginner-color, $lightness: -20%);
   }
   
   &.badge-intermediate {
-    background: lighten($intermediate-color, 40%);
-    color: darken($intermediate-color, 10%);
+    background: color.scale($intermediate-color, $lightness: 75%);
+    color: color.scale($intermediate-color, $lightness: -20%);
   }
   
   &.badge-advanced {
-    background: lighten($advanced-color, 35%);
-    color: darken($advanced-color, 10%);
+    background: color.scale($advanced-color, $lightness: 70%);
+    color: color.scale($advanced-color, $lightness: -20%);
   }
 }
 
@@ -364,7 +366,9 @@ $advanced-color: #8250df;
       background: rgba(255, 255, 255, 0.1);
       border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 4px;
-      padding: 6px 8px;
+      padding: 10px 12px;
+      min-width: 44px;
+      min-height: 44px;
       cursor: pointer;
       color: #8b949e;
       display: flex;
@@ -631,7 +635,7 @@ $advanced-color: #8250df;
   
   &.nav-module {
     border-color: $primary-color;
-    background: lighten($primary-color, 45%);
+    background: color.scale($primary-color, $lightness: 80%);
   }
 }
 

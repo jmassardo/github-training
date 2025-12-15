@@ -2,7 +2,7 @@
 <html lang="en-us">
 
   <head>
-  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
@@ -20,7 +20,7 @@
   <noscript><link rel="stylesheet" href="/public/css/main.css"></noscript>
 
   <!-- GLightbox CSS for Image Modals -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css" integrity="sha256-bT9i1NF5afnHDpQ4z2cQBHJQGehoEj8uvClaAG+NXS0=" crossorigin="anonymous">
 
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
@@ -48,6 +48,16 @@
         <span class="training-tagline">CSM & CSA Certification Program</span>
       </div>
       
+      <!-- Mobile menu toggle button -->
+      <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+        <svg class="menu-icon" aria-hidden="true" height="24" viewBox="0 0 16 16" width="24">
+          <path fill="currentColor" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 010 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 010 1.5H1.75A.75.75 0 011 7.75zM1.75 12h12.5a.75.75 0 010 1.5H1.75a.75.75 0 010-1.5z"></path>
+        </svg>
+        <svg class="close-icon" aria-hidden="true" height="24" viewBox="0 0 16 16" width="24">
+          <path fill="currentColor" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"></path>
+        </svg>
+      </button>
+
       <nav class="training-nav" aria-label="Training navigation">
         <a href="/" class="training-nav-link">
           <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
@@ -80,11 +90,54 @@
 </header>
 
 
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+    
+    <!-- Mobile Navigation Menu -->
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+      <div class="mobile-nav-header">
+        <h2>Navigation</h2>
+        <button class="mobile-nav-close" aria-label="Close navigation menu">
+          <svg aria-hidden="true" height="24" viewBox="0 0 16 16" width="24">
+            <path fill="currentColor" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-nav-content">
+        
+        <div class="mobile-nav-section">
+          <h3><span aria-hidden="true">🏆</span> Advanced Phase</h3>
+          <ul class="mobile-nav-links">
+            <li><a href="/advanced/">Phase Overview</a></li>
+            <li><a href="/advanced/module-9/">Module 9: Enterprise</a></li>
+            <li><a href="/advanced/module-10/">Module 10: APIs</a></li>
+            <li><a href="/advanced/module-11/">Module 11: IaC</a></li>
+            <li><a href="/advanced/module-12/">Module 12: Governance</a></li>
+            <li><a href="/advanced/module-13/" class="active">Module 13: Copilot</a></li>
+            <li><a href="/advanced/module-14/">Module 14: Copilot+</a></li>
+          </ul>
+        </div>
+        
+        
+        <!-- Module sub-navigation for current module -->
+        
+        
+        <div class="mobile-nav-section">
+          <h3>Resources</h3>
+          <ul class="mobile-nav-links">
+            <li><a href="/syllabus/">Full Syllabus</a></li>
+            <li><a href="https://docs.github.com/" target="_blank" rel="noopener">GitHub Docs ↗</a></li>
+            <li><a href="https://skills.github.com/" target="_blank" rel="noopener">GitHub Skills ↗</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <!-- Main content area with sidebar -->
     <div class="training-container">
       
       <!-- Sidebar navigation -->
-      <aside class="training-sidebar">
+      <aside class="training-sidebar" aria-label="Module navigation">
         <div class="training-sidebar-sticky">
           
           
@@ -93,8 +146,8 @@
           
           
           <div class="sidebar-section">
-            <h3 class="sidebar-heading">🏆 Advanced Phase</h3>
-            <nav class="sidebar-nav">
+            <h3 class="sidebar-heading" id="advanced-nav-heading"><span aria-hidden="true">🏆</span> Advanced Phase</h3>
+            <nav class="sidebar-nav" aria-labelledby="advanced-nav-heading">
               <a href="/advanced/" class="sidebar-link">Phase Overview</a>
               <a href="/advanced/module-9/" class="sidebar-link">Module 9: Enterprise Admin</a>
               <a href="/advanced/module-10/" class="sidebar-link">Module 10: APIs & Apps</a>
@@ -107,8 +160,8 @@
           
           
           <div class="sidebar-section">
-            <h3 class="sidebar-heading">Resources</h3>
-            <nav class="sidebar-nav">
+            <h3 class="sidebar-heading" id="resources-nav-heading">Resources</h3>
+            <nav class="sidebar-nav" aria-labelledby="resources-nav-heading">
               <a href="/syllabus/" class="sidebar-link">Full Syllabus</a>
               <a href="https://docs.github.com/" class="sidebar-link" target="_blank" rel="noopener">
                 GitHub Docs
@@ -323,7 +376,7 @@
 
         <!-- Main Content with TOC Sidebar -->
         <div class="module-content-wrapper">
-          <main id="main-content" class="module-content">
+          <div class="module-content">
             <article class="section-content">
               <h2 id="feature-availability-by-ide">Feature Availability by IDE</h2>
 
@@ -823,35 +876,437 @@
 
 <hr />
 
-<h2 id="cli-integration">CLI Integration</h2>
+<h2 id="copilot-in-the-cli">Copilot in the CLI</h2>
 
-<p>Copilot in the CLI provides AI assistance directly in your terminal.</p>
+<p>Copilot in the CLI (<code class="language-plaintext highlighter-rouge">gh copilot</code>) brings AI assistance directly to your terminal, helping you understand commands, get suggestions, and explain errors without leaving your workflow.</p>
 
 <h3 id="installation">Installation</h3>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Install GitHub CLI if not already installed</span>
-brew <span class="nb">install </span>gh
+brew <span class="nb">install </span>gh          <span class="c"># macOS</span>
+winget <span class="nb">install </span>GitHub.cli  <span class="c"># Windows</span>
+<span class="nb">sudo </span>apt <span class="nb">install </span>gh      <span class="c"># Ubuntu/Debian</span>
 
-<span class="c"># Install Copilot extension</span>
+<span class="c"># Authenticate with GitHub</span>
+gh auth login
+
+<span class="c"># Install Copilot CLI extension</span>
 gh extension <span class="nb">install </span>github/gh-copilot
 
+<span class="c"># Verify installation</span>
+gh copilot <span class="nt">--version</span>
 </code></pre></div></div>
 
-<h3 id="usage">Usage</h3>
+<h3 id="core-commands">Core Commands</h3>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Ask questions</span>
+<table>
+  <thead>
+    <tr>
+      <th>Command</th>
+      <th>Purpose</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">gh copilot explain</code></td>
+      <td>Explain a command</td>
+      <td><code class="language-plaintext highlighter-rouge">gh copilot explain "tar -xzvf"</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">gh copilot suggest</code></td>
+      <td>Get command suggestions</td>
+      <td><code class="language-plaintext highlighter-rouge">gh copilot suggest "compress folder"</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="explain-mode">Explain Mode</h3>
+
+<p>Get detailed explanations of complex commands:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Explain a Git command</span>
 gh copilot explain <span class="s2">"git rebase -i HEAD~5"</span>
 
-<span class="c"># Get command suggestions</span>
-gh copilot suggest <span class="s2">"find large files in git history"</span>
+<span class="c"># Explain with natural language</span>
+gh copilot explain <span class="s2">"What does this do: find . -name '*.log' -mtime +30 -delete"</span>
 
-<span class="c"># Explain error output</span>
+<span class="c"># Pipe command output for explanation</span>
 some-command 2&gt;&amp;1 | gh copilot explain
 
+<span class="c"># Explain error messages</span>
+gh copilot explain <span class="s2">"error: ENOSPC: no space left on device"</span>
 </code></pre></div></div>
+
+<p><strong>Example output:</strong>
+```
+Explanation:</p>
+
+<p><code class="language-plaintext highlighter-rouge">git rebase -i HEAD~5</code> starts an interactive rebase of the last 5 commits.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">rebase</code>: Reapply commits on top of another base tip</li>
+  <li><code class="language-plaintext highlighter-rouge">-i</code> / <code class="language-plaintext highlighter-rouge">--interactive</code>: Opens editor to modify commits</li>
+  <li><code class="language-plaintext highlighter-rouge">HEAD~5</code>: Go back 5 commits from current HEAD</li>
+</ul>
+
+<p>This allows you to:
+• Reorder commits
+• Squash multiple commits into one
+• Edit commit messages
+• Drop commits entirely
+```</p>
+
+<h3 id="suggest-mode">Suggest Mode</h3>
+
+<p>Describe what you want to do in natural language:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Find commands you don't remember</span>
+gh copilot suggest <span class="s2">"find large files in git history"</span>
+
+<span class="c"># System administration</span>
+gh copilot suggest <span class="s2">"check disk usage by directory"</span>
+
+<span class="c"># Development tasks</span>
+gh copilot suggest <span class="s2">"run tests only for changed files"</span>
+
+<span class="c"># Docker operations</span>
+gh copilot suggest <span class="s2">"remove all stopped containers and unused images"</span>
+</code></pre></div></div>
+
+<p><strong>Interactive selection:</strong>
+```
+? Select a command:
+&gt; git rev-list --objects --all | git cat-file --batch-check | sort -k3nr | head -20
+  git ls-files | xargs -I{} git log --format=”%H {}” -1 -- {} | sort -k2 -t’ ‘
+  bfg --strip-blobs-bigger-than 100M</p>
+
+<p>? What would you like to do?
+&gt; Run command
+  Explain command
+  Copy to clipboard
+  Cancel
+```</p>
+
+<h3 id="shell-integration-aliases">Shell Integration (Aliases)</h3>
+
+<p>Set up convenient aliases in your shell:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Add to ~/.zshrc or ~/.bashrc</span>
+<span class="nb">alias</span> <span class="s2">"??"</span><span class="o">=</span><span class="s2">"gh copilot suggest"</span>
+<span class="nb">alias</span> <span class="s2">"?!"</span><span class="o">=</span><span class="s2">"gh copilot explain"</span>
+
+<span class="c"># Usage:</span>
+?? <span class="s2">"find and replace in all files"</span>
+?! <span class="s2">"chmod 755"</span>
+</code></pre></div></div>
+
+<h3 id="use-cases-for-csms">Use Cases for CSMs</h3>
+
+<p><strong>Helping customers with Git:</strong>
+<code class="language-plaintext highlighter-rouge">bash
+# When a customer asks about a complex Git operation
+gh copilot explain "git reflog expire --expire=now --all &amp;&amp; git gc --prune=now"
+</code></p>
+
+<p><strong>Troubleshooting Actions:</strong>
+<code class="language-plaintext highlighter-rouge">bash
+# Understanding workflow commands
+gh copilot explain "actions-runner config.sh --url https://github.com/org/repo --token TOKEN"
+</code></p>
+
+<p><strong>Quick demos:</strong>
+<code class="language-plaintext highlighter-rouge">bash
+# Generate commands for demos without memorizing syntax
+gh copilot suggest "list all GitHub Actions secrets for a repo using gh cli"
+</code></p>
+
+<h3 id="requirements">Requirements</h3>
+
+<ul>
+  <li>GitHub CLI (<code class="language-plaintext highlighter-rouge">gh</code>) version 2.0+</li>
+  <li>Active GitHub Copilot subscription (Individual, Business, or Enterprise)</li>
+  <li>Authenticated with <code class="language-plaintext highlighter-rouge">gh auth login</code></li>
+</ul>
 
 <blockquote>
   <p><strong>📚 Learn More:</strong> <a href="https://docs.github.com/en/copilot/github-copilot-in-the-cli/using-github-copilot-in-the-cli">Copilot in the CLI</a></p>
+</blockquote>
+
+<hr />
+
+<h2 id="copilot-on-githubcom">Copilot on GitHub.com</h2>
+
+<p>Beyond IDEs and CLI, Copilot offers powerful features directly on GitHub.com.</p>
+
+<h3 id="copilot-code-review">Copilot Code Review</h3>
+
+<p>Request AI-powered code review on pull requests:</p>
+
+<p><strong>How to use:</strong>
+1. Open a pull request
+2. Click <strong>Request review</strong> 
+3. Select <strong>Copilot</strong> as a reviewer
+4. Copilot analyzes changes and leaves comments</p>
+
+<p><strong>What Copilot reviews:</strong>
+- Logic errors and bugs
+- Security vulnerabilities
+- Performance issues
+- Code style inconsistencies
+- Missing error handling</p>
+
+<p><strong>Example Copilot review comment:</strong>
+```
+⚠️ Potential SQL injection vulnerability</p>
+
+<p>The user input <code class="language-plaintext highlighter-rouge">searchTerm</code> is concatenated directly into the query.
+Consider using parameterized queries:</p>
+
+<ul>
+  <li>query = f”SELECT * FROM users WHERE name = ‘{searchTerm}’”</li>
+  <li>query = “SELECT * FROM users WHERE name = %s”</li>
+  <li>cursor.execute(query, (searchTerm,))
+```</li>
+</ul>
+
+<blockquote>
+  <p><strong>📚 Learn More:</strong> <a href="https://docs.github.com/en/copilot/using-github-copilot/code-review/using-copilot-code-review">Copilot Code Review</a></p>
+</blockquote>
+
+<h3 id="copilot-pull-request-summaries">Copilot Pull Request Summaries</h3>
+
+<p>Generate AI summaries of pull request changes:</p>
+
+<p><strong>How to use:</strong>
+1. Create or open a pull request
+2. Click <strong>Copilot</strong> icon in the description area
+3. Select <strong>Generate summary</strong>
+4. Edit as needed before publishing</p>
+
+<p><strong>Generated summary includes:</strong>
+- Overview of changes
+- List of modified files with descriptions
+- Potential impacts
+- Suggested reviewer focus areas</p>
+
+<p><strong>Example generated summary:</strong>
+```markdown
+## Summary
+This PR adds user authentication using JWT tokens.</p>
+
+<h2 id="changes">Changes</h2>
+<ul>
+  <li><strong>auth/jwt.py</strong>: New JWT token generation and validation</li>
+  <li><strong>routes/login.py</strong>: Login endpoint with credential verification</li>
+  <li><strong>middleware/auth.py</strong>: Request authentication middleware</li>
+  <li><strong>tests/test_auth.py</strong>: Unit tests for authentication flow</li>
+</ul>
+
+<h2 id="reviewer-notes">Reviewer Notes</h2>
+<p>Focus on token expiration handling and error responses.
+```</p>
+
+<blockquote>
+  <p><strong>📚 Learn More:</strong> <a href="https://docs.github.com/en/copilot/using-github-copilot/creating-a-pull-request-summary-with-github-copilot">PR Summaries</a></p>
+</blockquote>
+
+<h3 id="copilot-text-completion">Copilot Text Completion</h3>
+
+<p>AI-assisted text completion for PR descriptions and issue bodies:</p>
+
+<p><strong>How it works:</strong>
+- Start typing in a PR description or issue body
+- Copilot suggests completions as ghost text
+- Press <code class="language-plaintext highlighter-rouge">Tab</code> to accept suggestions</p>
+
+<p><strong>Best for:</strong>
+- Writing detailed PR descriptions
+- Creating comprehensive issue reports
+- Documenting acceptance criteria</p>
+
+<blockquote>
+  <p><strong>📚 Learn More:</strong> <a href="https://docs.github.com/en/copilot/using-github-copilot/using-copilot-text-completion">Text Completion</a></p>
+</blockquote>
+
+<hr />
+
+<h2 id="copilot-in-github-desktop">Copilot in GitHub Desktop</h2>
+
+<p>GitHub Desktop integrates Copilot for commit message generation.</p>
+
+<h3 id="generate-commit-messages">Generate Commit Messages</h3>
+
+<ol>
+  <li>Stage your changes in GitHub Desktop</li>
+  <li>Click the <strong>Copilot</strong> icon in the commit message area</li>
+  <li>Copilot analyzes your staged changes</li>
+  <li>Review and edit the generated message</li>
+  <li>Commit with the AI-generated message</li>
+</ol>
+
+<p><strong>Example:</strong>
+```
+# Staged changes:
+# - Modified src/auth/login.js
+# - Added src/auth/logout.js
+# - Modified tests/auth.test.js</p>
+
+<h1 id="generated-commit-message">Generated commit message:</h1>
+<p>feat(auth): add logout functionality and update tests</p>
+
+<ul>
+  <li>Implement logout endpoint that invalidates session</li>
+  <li>Add logout button to navigation component</li>
+  <li>Update auth tests to cover logout flow
+```</li>
+</ul>
+
+<h3 id="requirements-1">Requirements</h3>
+
+<ul>
+  <li>GitHub Desktop 3.0+</li>
+  <li>Copilot subscription</li>
+  <li>Signed in to GitHub account</li>
+</ul>
+
+<blockquote>
+  <p><strong>📚 Learn More:</strong> <a href="https://docs.github.com/en/desktop">Copilot in GitHub Desktop</a></p>
+</blockquote>
+
+<hr />
+
+<h2 id="next-edit-suggestions-preview">Next Edit Suggestions (Preview)</h2>
+
+<p>Next Edit Suggestions predict where you’ll edit next and offer completions proactively.</p>
+
+<h3 id="how-it-works">How It Works</h3>
+
+<p>Unlike inline completions (which suggest at your cursor), Next Edit Suggestions:
+1. Analyze your recent edits
+2. Predict the next location you’ll likely change
+3. Show suggestions at that location before you navigate there</p>
+
+<h3 id="example-scenario">Example Scenario</h3>
+
+<p>You rename a function parameter:
+<code class="language-plaintext highlighter-rouge">javascript
+// You changed 'data' to 'userData' here
+function processUser(userData) {
+  // Copilot predicts you'll update the reference below
+  console.log(data); // ← Suggestion appears: "userData"
+}
+</code></p>
+
+<h3 id="availability">Availability</h3>
+
+<ul>
+  <li><strong>VS Code</strong>: Available in preview</li>
+  <li><strong>Xcode</strong>: Available in preview</li>
+  <li><strong>Eclipse</strong>: Available in preview</li>
+  <li><strong>Other IDEs</strong>: Coming soon</li>
+</ul>
+
+<blockquote>
+  <p><strong>📚 Learn More:</strong> <a href="https://docs.github.com/en/copilot/using-github-copilot/getting-code-suggestions-in-your-ide-with-github-copilot">Next Edit Suggestions</a></p>
+</blockquote>
+
+<hr />
+
+<h2 id="copilot-edits">Copilot Edits</h2>
+
+<p>Copilot Edits enables multi-file editing from a single prompt.</p>
+
+<h3 id="edit-mode-vs-agent-mode">Edit Mode vs Agent Mode</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Aspect</th>
+      <th>Edit Mode</th>
+      <th>Agent Mode</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Control</strong></td>
+      <td>You specify files</td>
+      <td>Copilot determines files</td>
+    </tr>
+    <tr>
+      <td><strong>Scope</strong></td>
+      <td>Defined set of files</td>
+      <td>Entire workspace</td>
+    </tr>
+    <tr>
+      <td><strong>Autonomy</strong></td>
+      <td>Low (review each change)</td>
+      <td>High (autonomous execution)</td>
+    </tr>
+    <tr>
+      <td><strong>Terminal</strong></td>
+      <td>No terminal commands</td>
+      <td>Can run terminal commands</td>
+    </tr>
+    <tr>
+      <td><strong>Best for</strong></td>
+      <td>Precise, scoped changes</td>
+      <td>Complex multi-step tasks</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="using-edit-mode">Using Edit Mode</h3>
+
+<ol>
+  <li>Open Copilot Chat in VS Code</li>
+  <li>Click <strong>Edit</strong> mode (or use <code class="language-plaintext highlighter-rouge">Ctrl+Shift+I</code>)</li>
+  <li>Add files to the working set</li>
+  <li>Describe your changes</li>
+  <li>Review and accept/reject each change</li>
+</ol>
+
+<p><strong>Example:</strong>
+```
+Working set: src/api/*.ts</p>
+
+<p>Prompt: “Add input validation to all POST endpoints 
+using Zod schemas”</p>
+
+<p>Copilot proposes changes → Review each file → Accept/Reject
+```</p>
+
+<h3 id="using-agent-mode">Using Agent Mode</h3>
+
+<ol>
+  <li>Switch to <strong>Agent</strong> mode in Copilot Edits</li>
+  <li>Describe your task</li>
+  <li>Copilot autonomously:
+    <ul>
+      <li>Determines which files to modify</li>
+      <li>Makes changes</li>
+      <li>Runs terminal commands if needed</li>
+      <li>Iterates until task is complete</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Example:</strong>
+```
+Prompt: “Add a new user preferences API with 
+database migrations and tests”</p>
+
+<p>Agent: Analyzing project structure...
+Agent: Creating migration file...
+Agent: Creating model...
+Agent: Creating API routes...
+Agent: Running migrations...
+Agent: Creating tests...
+Agent: Running tests... ✅ All passing
+```</p>
+
+<blockquote>
+  <p><strong>📚 Learn More:</strong> <a href="https://docs.github.com/en/copilot/using-github-copilot/copilot-edits">Copilot Edits</a></p>
 </blockquote>
 
 <hr />
@@ -941,7 +1396,7 @@ some-command 2&gt;&amp;1 | gh copilot explain
 <p>Now let’s explore best practices for getting the most out of Copilot.</p>
 
             </article>
-          </main>
+          </div>
           
           <!-- Table of Contents Sidebar -->
           
@@ -988,10 +1443,47 @@ some-command 2&gt;&amp;1 | gh copilot explain
 <li class="toc-item toc-h3"><a href="#xcode-installation">Xcode Installation</a></li>
 </ul>
 </li>
-<li class="toc-item toc-h2"><a href="#cli-integration">CLI Integration</a>
+<li class="toc-item toc-h2"><a href="#copilot-in-the-cli">Copilot in the CLI</a>
 <ul>
 <li class="toc-item toc-h3"><a href="#installation">Installation</a></li>
-<li class="toc-item toc-h3"><a href="#usage">Usage</a></li>
+<li class="toc-item toc-h3"><a href="#core-commands">Core Commands</a></li>
+<li class="toc-item toc-h3"><a href="#explain-mode">Explain Mode</a></li>
+<li class="toc-item toc-h3"><a href="#suggest-mode">Suggest Mode</a></li>
+<li class="toc-item toc-h3"><a href="#shell-integration-aliases">Shell Integration (Aliases)</a></li>
+<li class="toc-item toc-h3"><a href="#use-cases-for-csms">Use Cases for CSMs</a></li>
+<li class="toc-item toc-h3"><a href="#requirements">Requirements</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#copilot-on-githubcom">Copilot on GitHub.com</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#copilot-code-review">Copilot Code Review</a></li>
+<li class="toc-item toc-h3"><a href="#copilot-pull-request-summaries">Copilot Pull Request Summaries</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#changes">Changes</a></li>
+<li class="toc-item toc-h2"><a href="#reviewer-notes">Reviewer Notes</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#copilot-text-completion">Copilot Text Completion</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#copilot-in-github-desktop">Copilot in GitHub Desktop</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#generate-commit-messages">Generate Commit Messages</a></li>
+<li class="toc-item toc-h3"><a href="#requirements-1">Requirements</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#next-edit-suggestions-preview">Next Edit Suggestions (Preview)</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#how-it-works">How It Works</a></li>
+<li class="toc-item toc-h3"><a href="#example-scenario">Example Scenario</a></li>
+<li class="toc-item toc-h3"><a href="#availability">Availability</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#copilot-edits">Copilot Edits</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#edit-mode-vs-agent-mode">Edit Mode vs Agent Mode</a></li>
+<li class="toc-item toc-h3"><a href="#using-edit-mode">Using Edit Mode</a></li>
+<li class="toc-item toc-h3"><a href="#using-agent-mode">Using Agent Mode</a></li>
 </ul>
 </li>
 <li class="toc-item toc-h2"><a href="#choosing-the-right-ide">Choosing the Right IDE</a>
@@ -1046,7 +1538,7 @@ some-command 2&gt;&amp;1 | gh copilot explain
         <p class="footer-text">GitHub Training Program v1.0 | Last updated: December 2025</p>
         <p class="footer-links">
           <a href="https://docs.github.com" target="_blank" rel="noopener">GitHub Docs</a> • 
-          <a href="https://github.community" target="_blank" rel="noopener">Community</a> • 
+          <a href="https://github.com/orgs/community/discussions" target="_blank" rel="noopener">Community</a> • 
           <a href="/syllabus/">Full Syllabus</a>
         </p>
       </div>
@@ -1104,12 +1596,12 @@ some-command 2&gt;&amp;1 | gh copilot explain
     </script>
 
     <!-- Mermaid.js for diagrams with pan/zoom -->
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js" integrity="sha256-YWoQnxnNGGhC4R1Fs1rAdFazp1UTMQ9uoHU1GqQwseI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js" integrity="sha256-9GNxAyAInGHQ9XzsK4hsAt4E4h65Lr0i6qMn/fCmt8Y=" crossorigin="anonymous"></script>
     <script>
       // Initialize Mermaid with theme matching the training modules
       mermaid.initialize({
-        startOnLoad: true,
+        startOnLoad: false,
         theme: 'base',
         themeVariables: {
           // Primary colors - matching GitHub/training theme
@@ -1166,41 +1658,113 @@ some-command 2&gt;&amp;1 | gh copilot explain
         securityLevel: 'loose'
       });
 
-      // Add pan/zoom to Mermaid diagrams after they render
-      mermaid.run().then(() => {
-        document.querySelectorAll('.mermaid-container svg').forEach((svg, index) => {
-          // Ensure SVG has an ID for pan-zoom
-          if (!svg.id) {
-            svg.id = 'mermaid-svg-' + index;
-          }
-          
-          // Set minimum dimensions on SVG for better visibility
-          svg.style.minWidth = '100%';
-          svg.style.minHeight = '300px';
-          
-          // Initialize pan-zoom
-          const panZoom = svgPanZoom(svg, {
-            zoomEnabled: true,
-            controlIconsEnabled: true,
-            fit: true,
-            center: true,
-            minZoom: 0.3,
-            maxZoom: 10,
-            zoomScaleSensitivity: 0.3,
-            dblClickZoomEnabled: true,
-            mouseWheelZoomEnabled: true,
-            preventMouseEventsDefault: true,
-            contain: false
-          });
+      // Run mermaid after DOM is ready, then add pan/zoom
+      document.addEventListener('DOMContentLoaded', function() {
+        mermaid.run().then(() => {
+          document.querySelectorAll('.mermaid-container svg').forEach((svg, index) => {
+            // Ensure SVG has an ID for pan-zoom
+            if (!svg.id) {
+              svg.id = 'mermaid-svg-' + index;
+            }
+            
+            // Set minimum dimensions on SVG for better visibility
+            svg.style.minWidth = '100%';
+            svg.style.minHeight = '300px';
+            
+            // Initialize pan-zoom
+            const panZoom = svgPanZoom(svg, {
+              zoomEnabled: true,
+              controlIconsEnabled: true,
+              fit: true,
+              center: true,
+              minZoom: 0.3,
+              maxZoom: 10,
+              zoomScaleSensitivity: 0.3,
+              dblClickZoomEnabled: true,
+              mouseWheelZoomEnabled: true,
+              preventMouseEventsDefault: true,
+              contain: false
+            });
 
-          // Handle window resize
-          window.addEventListener('resize', () => {
-            panZoom.resize();
-            panZoom.fit();
-            panZoom.center();
+            // Handle window resize
+            window.addEventListener('resize', () => {
+              panZoom.resize();
+              panZoom.fit();
+              panZoom.center();
+            });
           });
         });
       });
+    </script>
+
+    <!-- Mobile navigation toggle -->
+    <script>
+      (function() {
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileNav = document.getElementById('mobile-nav');
+        const overlay = document.getElementById('mobile-nav-overlay');
+        const closeBtn = document.querySelector('.mobile-nav-close');
+        
+        if (!menuToggle || !mobileNav || !overlay) return;
+        
+        function openMenu() {
+          mobileNav.classList.add('is-open');
+          overlay.classList.add('is-open');
+          menuToggle.setAttribute('aria-expanded', 'true');
+          document.body.style.overflow = 'hidden';
+          
+          // Focus first link in menu
+          const firstLink = mobileNav.querySelector('a');
+          if (firstLink) firstLink.focus();
+        }
+        
+        function closeMenu() {
+          mobileNav.classList.remove('is-open');
+          overlay.classList.remove('is-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+          menuToggle.focus();
+        }
+        
+        menuToggle.addEventListener('click', function() {
+          const isExpanded = this.getAttribute('aria-expanded') === 'true';
+          if (isExpanded) {
+            closeMenu();
+          } else {
+            openMenu();
+          }
+        });
+        
+        if (closeBtn) {
+          closeBtn.addEventListener('click', closeMenu);
+        }
+        
+        overlay.addEventListener('click', closeMenu);
+        
+        // Close on escape key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && mobileNav.classList.contains('is-open')) {
+            closeMenu();
+          }
+        });
+        
+        // Trap focus within mobile nav when open
+        mobileNav.addEventListener('keydown', function(e) {
+          if (e.key !== 'Tab') return;
+          
+          const focusable = mobileNav.querySelectorAll('a, button');
+          const firstFocusable = focusable[0];
+          const lastFocusable = focusable[focusable.length - 1];
+          
+          if (e.shiftKey && document.activeElement === firstFocusable) {
+            e.preventDefault();
+            lastFocusable.focus();
+          } else if (!e.shiftKey && document.activeElement === lastFocusable) {
+            e.preventDefault();
+            firstFocusable.focus();
+          }
+        });
+      })();
     </script>
 
   </body>

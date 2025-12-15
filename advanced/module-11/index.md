@@ -2,7 +2,7 @@
 layout: training
 title: "Module 11: Infrastructure as Code & Operations"
 module_number: 11
-estimated_time: "3 hours"
+estimated_time: "3 hours total"
 difficulty: "Advanced"
 learning_track: "Advanced"
 week_number: 11
@@ -55,12 +55,12 @@ prerequisites:
   - "Module 10: GitHub APIs, Webhooks & Apps"
   - Basic understanding of Infrastructure as Code concepts
   - Familiarity with Terraform or similar IaC tools
-prev_module: 10
-prev_module_title: "GitHub APIs, Webhooks & Apps"
-prev_module_link: "/advanced/module-10/"
-next_module: 12
-next_module_title: "Governance, Metrics & DORA"
-next_module_link: "/advanced/module-12/"
+prev_module:
+  url: /advanced/module-10/
+  title: "Module 10: GitHub APIs, Webhooks & Apps"
+next_module:
+  url: /advanced/module-12/
+  title: "Module 12: Governance, Metrics & DORA"
 ---
 
 ## Module Sections

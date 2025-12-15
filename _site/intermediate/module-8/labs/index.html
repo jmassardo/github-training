@@ -2,7 +2,7 @@
 <html lang="en-us">
 
   <head>
-  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
@@ -20,7 +20,7 @@
   <noscript><link rel="stylesheet" href="/public/css/main.css"></noscript>
 
   <!-- GLightbox CSS for Image Modals -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css" integrity="sha256-bT9i1NF5afnHDpQ4z2cQBHJQGehoEj8uvClaAG+NXS0=" crossorigin="anonymous">
 
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
@@ -48,6 +48,16 @@
         <span class="training-tagline">CSM & CSA Certification Program</span>
       </div>
       
+      <!-- Mobile menu toggle button -->
+      <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+        <svg class="menu-icon" aria-hidden="true" height="24" viewBox="0 0 16 16" width="24">
+          <path fill="currentColor" d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 010 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 010 1.5H1.75A.75.75 0 011 7.75zM1.75 12h12.5a.75.75 0 010 1.5H1.75a.75.75 0 010-1.5z"></path>
+        </svg>
+        <svg class="close-icon" aria-hidden="true" height="24" viewBox="0 0 16 16" width="24">
+          <path fill="currentColor" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"></path>
+        </svg>
+      </button>
+
       <nav class="training-nav" aria-label="Training navigation">
         <a href="/" class="training-nav-link">
           <svg class="nav-icon" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
@@ -80,19 +90,60 @@
 </header>
 
 
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+    
+    <!-- Mobile Navigation Menu -->
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+      <div class="mobile-nav-header">
+        <h2>Navigation</h2>
+        <button class="mobile-nav-close" aria-label="Close navigation menu">
+          <svg aria-hidden="true" height="24" viewBox="0 0 16 16" width="24">
+            <path fill="currentColor" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-nav-content">
+        
+        <div class="mobile-nav-section">
+          <h3><span aria-hidden="true">🚀</span> Intermediate Phase</h3>
+          <ul class="mobile-nav-links">
+            <li><a href="/intermediate/">Phase Overview</a></li>
+            <li><a href="/intermediate/module-5/">Module 5: Actions</a></li>
+            <li><a href="/intermediate/module-6/">Module 6: Security</a></li>
+            <li><a href="/intermediate/module-7/">Module 7: Packages</a></li>
+            <li><a href="/intermediate/module-8/" class="active">Module 8: CI/CD</a></li>
+          </ul>
+        </div>
+        
+        
+        <!-- Module sub-navigation for current module -->
+        
+        
+        <div class="mobile-nav-section">
+          <h3>Resources</h3>
+          <ul class="mobile-nav-links">
+            <li><a href="/syllabus/">Full Syllabus</a></li>
+            <li><a href="https://docs.github.com/" target="_blank" rel="noopener">GitHub Docs ↗</a></li>
+            <li><a href="https://skills.github.com/" target="_blank" rel="noopener">GitHub Skills ↗</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <!-- Main content area with sidebar -->
     <div class="training-container">
       
       <!-- Sidebar navigation -->
-      <aside class="training-sidebar">
+      <aside class="training-sidebar" aria-label="Module navigation">
         <div class="training-sidebar-sticky">
           
           
           
           
           <div class="sidebar-section">
-            <h3 class="sidebar-heading">🚀 Intermediate Phase</h3>
-            <nav class="sidebar-nav">
+            <h3 class="sidebar-heading" id="intermediate-nav-heading"><span aria-hidden="true">🚀</span> Intermediate Phase</h3>
+            <nav class="sidebar-nav" aria-labelledby="intermediate-nav-heading">
               <a href="/intermediate/" class="sidebar-link">Phase Overview</a>
               <a href="/intermediate/module-5/" class="sidebar-link">Module 5: Actions</a>
               <a href="/intermediate/module-6/" class="sidebar-link">Module 6: Security</a>
@@ -105,8 +156,8 @@
           
           
           <div class="sidebar-section">
-            <h3 class="sidebar-heading">Resources</h3>
-            <nav class="sidebar-nav">
+            <h3 class="sidebar-heading" id="resources-nav-heading">Resources</h3>
+            <nav class="sidebar-nav" aria-labelledby="resources-nav-heading">
               <a href="/syllabus/" class="sidebar-link">Full Syllabus</a>
               <a href="https://docs.github.com/" class="sidebar-link" target="_blank" rel="noopener">
                 GitHub Docs
@@ -276,7 +327,7 @@
 
         <!-- Main Content with TOC Sidebar -->
         <div class="module-content-wrapper">
-          <main id="main-content" class="module-content">
+          <div class="module-content">
             <article class="section-content">
               
 <h2 id="lab-1-build-a-complete-deployment-pipeline">Lab 1: Build a Complete Deployment Pipeline</h2>
@@ -398,9 +449,191 @@ app.listen(3000, () =&gt; console.log(`Server v</span><span class="k">${</span><
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Each deployment verified independently</li>
 </ul>
 
+<hr />
+
+<h2 id="lab-4-deploy-a-static-site-with-github-pages">Lab 4: Deploy a Static Site with GitHub Pages</h2>
+<p><strong>Objective:</strong> Set up automated deployment to GitHub Pages using Actions</p>
+
+<p>GitHub Pages is a free static site hosting service built into GitHub. This lab demonstrates deploying a documentation site or static web app.</p>
+
+<h3 id="tasks-3">Tasks:</h3>
+
+<p><strong>1. Create a static site:</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir </span>pages-lab <span class="o">&amp;&amp;</span> <span class="nb">cd </span>pages-lab
+git init
+
+<span class="c"># Create a simple site</span>
+<span class="nb">cat</span> <span class="o">&gt;</span> index.html <span class="o">&lt;&lt;</span> <span class="sh">'</span><span class="no">EOF</span><span class="sh">'
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My GitHub Pages Site&lt;/title&gt;
+    &lt;style&gt;
+        body { font-family: -apple-system, sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+        h1 { color: #0969da; }
+        .version { background: #ddf4ff; padding: 0.5rem 1rem; border-radius: 6px; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;🚀 Deployed with GitHub Actions&lt;/h1&gt;
+    &lt;p class="version"&gt;Version: &lt;span id="version"&gt;1.0.0&lt;/span&gt;&lt;/p&gt;
+    &lt;p&gt;Build time: &lt;span id="time"&gt;&lt;/span&gt;&lt;/p&gt;
+    &lt;script&gt;document.getElementById('time').textContent = new Date().toISOString();&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</span><span class="no">EOF
+
+</span><span class="c"># Create a 404 page</span>
+<span class="nb">cat</span> <span class="o">&gt;</span> 404.html <span class="o">&lt;&lt;</span> <span class="sh">'</span><span class="no">EOF</span><span class="sh">'
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Page Not Found&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;404 - Page Not Found&lt;/h1&gt;
+    &lt;p&gt;&lt;a href="/"&gt;Return home&lt;/a&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</span><span class="no">EOF
+</span></code></pre></div></div>
+
+<p><strong>2. Create GitHub Pages deployment workflow:</strong></p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># .github/workflows/deploy-pages.yml</span>
+<span class="na">name</span><span class="pi">:</span> <span class="s">Deploy to GitHub Pages</span>
+
+<span class="na">on</span><span class="pi">:</span>
+  <span class="na">push</span><span class="pi">:</span>
+    <span class="na">branches</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">main</span><span class="pi">]</span>
+  <span class="na">workflow_dispatch</span><span class="pi">:</span>
+
+<span class="na">permissions</span><span class="pi">:</span>
+  <span class="na">contents</span><span class="pi">:</span> <span class="s">read</span>
+  <span class="na">pages</span><span class="pi">:</span> <span class="s">write</span>
+  <span class="na">id-token</span><span class="pi">:</span> <span class="s">write</span>
+
+<span class="na">concurrency</span><span class="pi">:</span>
+  <span class="na">group</span><span class="pi">:</span> <span class="s2">"</span><span class="s">pages"</span>
+  <span class="na">cancel-in-progress</span><span class="pi">:</span> <span class="kc">false</span>
+
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">build</span><span class="pi">:</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Checkout</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v4</span>
+      
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Setup Pages</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/configure-pages@v4</span>
+      
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Upload artifact</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/upload-pages-artifact@v3</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">path</span><span class="pi">:</span> <span class="s1">'</span><span class="s">.'</span>
+
+  <span class="na">deploy</span><span class="pi">:</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="na">name</span><span class="pi">:</span> <span class="s">github-pages</span>
+      <span class="na">url</span><span class="pi">:</span> <span class="s">${{ steps.deployment.outputs.page_url }}</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">needs</span><span class="pi">:</span> <span class="s">build</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Deploy to GitHub Pages</span>
+        <span class="na">id</span><span class="pi">:</span> <span class="s">deployment</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/deploy-pages@v4</span>
+</code></pre></div></div>
+
+<p><strong>3. Configure GitHub Pages in repository settings:</strong>
+   - Go to Settings → Pages
+   - Source: Select “GitHub Actions”
+   - Wait for first deployment</p>
+
+<p><strong>4. (Optional) Add a build step for static site generators:</strong></p>
+
+<p>For Jekyll, Hugo, or other static site generators:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">build</span><span class="pi">:</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v4</span>
+      
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Setup Node.js</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/setup-node@v4</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">node-version</span><span class="pi">:</span> <span class="s1">'</span><span class="s">20'</span>
+          <span class="na">cache</span><span class="pi">:</span> <span class="s1">'</span><span class="s">npm'</span>
+      
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Install dependencies</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="s">npm ci</span>
+      
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Build site</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="s">npm run build</span>
+      
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Upload artifact</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/upload-pages-artifact@v3</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">path</span><span class="pi">:</span> <span class="s1">'</span><span class="s">./dist'</span>  <span class="c1"># Your build output folder</span>
+</code></pre></div></div>
+
+<p><strong>5. Add custom domain (optional):</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Create CNAME file for custom domain</span>
+<span class="nb">echo</span> <span class="s2">"docs.example.com"</span> <span class="o">&gt;</span> CNAME
+</code></pre></div></div>
+
+<p>Then configure DNS:
+- For apex domain: A records pointing to GitHub’s IPs
+- For subdomain: CNAME record pointing to <code class="language-plaintext highlighter-rouge">&lt;username&gt;.github.io</code></p>
+
+<h3 id="validation-3">Validation:</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Site deploys successfully on push to main</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Site accessible at <code class="language-plaintext highlighter-rouge">https://&lt;username&gt;.github.io/&lt;repo&gt;/</code></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />404 page works for invalid URLs</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Deployment shows in repository Environments</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />(Optional) Custom domain configured and working</li>
+</ul>
+
+<h3 id="csm-talking-points">CSM Talking Points</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Scenario</th>
+      <th>GitHub Pages Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Documentation</strong></td>
+      <td>“Host project docs alongside code. Every push updates docs automatically.”</td>
+    </tr>
+    <tr>
+      <td><strong>Marketing/Landing</strong></td>
+      <td>“Free hosting for product pages, no separate infrastructure needed.”</td>
+    </tr>
+    <tr>
+      <td><strong>Previews</strong></td>
+      <td>“Preview branches deploy to separate URLs for review before merge.”</td>
+    </tr>
+    <tr>
+      <td><strong>Internal Tools</strong></td>
+      <td>“Enterprise can use Pages for internal dashboards and tools.”</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
 
             </article>
-          </main>
+          </div>
           
           <!-- Table of Contents Sidebar -->
           
@@ -425,6 +658,13 @@ app.listen(3000, () =&gt; console.log(`Server v</span><span class="k">${</span><
 <ul>
 <li class="toc-item toc-h3"><a href="#tasks-2">Tasks:</a></li>
 <li class="toc-item toc-h3"><a href="#validation-2">Validation:</a></li>
+</ul>
+</li>
+<li class="toc-item toc-h2"><a href="#lab-4-deploy-a-static-site-with-github-pages">Lab 4: Deploy a Static Site with GitHub Pages</a>
+<ul>
+<li class="toc-item toc-h3"><a href="#tasks-3">Tasks:</a></li>
+<li class="toc-item toc-h3"><a href="#validation-3">Validation:</a></li>
+<li class="toc-item toc-h3"><a href="#csm-talking-points">CSM Talking Points</a></li>
 </ul>
 </li>
 </ul>
@@ -468,7 +708,7 @@ app.listen(3000, () =&gt; console.log(`Server v</span><span class="k">${</span><
         <p class="footer-text">GitHub Training Program v1.0 | Last updated: December 2025</p>
         <p class="footer-links">
           <a href="https://docs.github.com" target="_blank" rel="noopener">GitHub Docs</a> • 
-          <a href="https://github.community" target="_blank" rel="noopener">Community</a> • 
+          <a href="https://github.com/orgs/community/discussions" target="_blank" rel="noopener">Community</a> • 
           <a href="/syllabus/">Full Syllabus</a>
         </p>
       </div>
@@ -526,12 +766,12 @@ app.listen(3000, () =&gt; console.log(`Server v</span><span class="k">${</span><
     </script>
 
     <!-- Mermaid.js for diagrams with pan/zoom -->
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js" integrity="sha256-YWoQnxnNGGhC4R1Fs1rAdFazp1UTMQ9uoHU1GqQwseI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js" integrity="sha256-9GNxAyAInGHQ9XzsK4hsAt4E4h65Lr0i6qMn/fCmt8Y=" crossorigin="anonymous"></script>
     <script>
       // Initialize Mermaid with theme matching the training modules
       mermaid.initialize({
-        startOnLoad: true,
+        startOnLoad: false,
         theme: 'base',
         themeVariables: {
           // Primary colors - matching GitHub/training theme
@@ -588,41 +828,113 @@ app.listen(3000, () =&gt; console.log(`Server v</span><span class="k">${</span><
         securityLevel: 'loose'
       });
 
-      // Add pan/zoom to Mermaid diagrams after they render
-      mermaid.run().then(() => {
-        document.querySelectorAll('.mermaid-container svg').forEach((svg, index) => {
-          // Ensure SVG has an ID for pan-zoom
-          if (!svg.id) {
-            svg.id = 'mermaid-svg-' + index;
-          }
-          
-          // Set minimum dimensions on SVG for better visibility
-          svg.style.minWidth = '100%';
-          svg.style.minHeight = '300px';
-          
-          // Initialize pan-zoom
-          const panZoom = svgPanZoom(svg, {
-            zoomEnabled: true,
-            controlIconsEnabled: true,
-            fit: true,
-            center: true,
-            minZoom: 0.3,
-            maxZoom: 10,
-            zoomScaleSensitivity: 0.3,
-            dblClickZoomEnabled: true,
-            mouseWheelZoomEnabled: true,
-            preventMouseEventsDefault: true,
-            contain: false
-          });
+      // Run mermaid after DOM is ready, then add pan/zoom
+      document.addEventListener('DOMContentLoaded', function() {
+        mermaid.run().then(() => {
+          document.querySelectorAll('.mermaid-container svg').forEach((svg, index) => {
+            // Ensure SVG has an ID for pan-zoom
+            if (!svg.id) {
+              svg.id = 'mermaid-svg-' + index;
+            }
+            
+            // Set minimum dimensions on SVG for better visibility
+            svg.style.minWidth = '100%';
+            svg.style.minHeight = '300px';
+            
+            // Initialize pan-zoom
+            const panZoom = svgPanZoom(svg, {
+              zoomEnabled: true,
+              controlIconsEnabled: true,
+              fit: true,
+              center: true,
+              minZoom: 0.3,
+              maxZoom: 10,
+              zoomScaleSensitivity: 0.3,
+              dblClickZoomEnabled: true,
+              mouseWheelZoomEnabled: true,
+              preventMouseEventsDefault: true,
+              contain: false
+            });
 
-          // Handle window resize
-          window.addEventListener('resize', () => {
-            panZoom.resize();
-            panZoom.fit();
-            panZoom.center();
+            // Handle window resize
+            window.addEventListener('resize', () => {
+              panZoom.resize();
+              panZoom.fit();
+              panZoom.center();
+            });
           });
         });
       });
+    </script>
+
+    <!-- Mobile navigation toggle -->
+    <script>
+      (function() {
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileNav = document.getElementById('mobile-nav');
+        const overlay = document.getElementById('mobile-nav-overlay');
+        const closeBtn = document.querySelector('.mobile-nav-close');
+        
+        if (!menuToggle || !mobileNav || !overlay) return;
+        
+        function openMenu() {
+          mobileNav.classList.add('is-open');
+          overlay.classList.add('is-open');
+          menuToggle.setAttribute('aria-expanded', 'true');
+          document.body.style.overflow = 'hidden';
+          
+          // Focus first link in menu
+          const firstLink = mobileNav.querySelector('a');
+          if (firstLink) firstLink.focus();
+        }
+        
+        function closeMenu() {
+          mobileNav.classList.remove('is-open');
+          overlay.classList.remove('is-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+          menuToggle.focus();
+        }
+        
+        menuToggle.addEventListener('click', function() {
+          const isExpanded = this.getAttribute('aria-expanded') === 'true';
+          if (isExpanded) {
+            closeMenu();
+          } else {
+            openMenu();
+          }
+        });
+        
+        if (closeBtn) {
+          closeBtn.addEventListener('click', closeMenu);
+        }
+        
+        overlay.addEventListener('click', closeMenu);
+        
+        // Close on escape key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && mobileNav.classList.contains('is-open')) {
+            closeMenu();
+          }
+        });
+        
+        // Trap focus within mobile nav when open
+        mobileNav.addEventListener('keydown', function(e) {
+          if (e.key !== 'Tab') return;
+          
+          const focusable = mobileNav.querySelectorAll('a, button');
+          const firstFocusable = focusable[0];
+          const lastFocusable = focusable[focusable.length - 1];
+          
+          if (e.shiftKey && document.activeElement === firstFocusable) {
+            e.preventDefault();
+            lastFocusable.focus();
+          } else if (!e.shiftKey && document.activeElement === lastFocusable) {
+            e.preventDefault();
+            firstFocusable.focus();
+          }
+        });
+      })();
     </script>
 
   </body>

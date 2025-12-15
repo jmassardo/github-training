@@ -138,14 +138,4 @@ As a CSM, you'll help customers:
 - Reduce false positive rates
 - Build developer security awareness
 - Meet compliance requirements (SOC 2, PCI-DSS, etc.)
----
-<div class="section-navigation">
-  <a href="{{ page.prev_section.url }}" class="nav-button nav-prev">
-    <span class="nav-label">← Previous</span>
-    <span class="nav-title">{{ page.prev_section.title }}</span>
-  </a>
-  <a href="{{ page.next_section.url }}" class="nav-button nav-next">
-    <span class="nav-label">Next →</span>
-    <span class="nav-title">{{ page.next_section.title }}</span>
-  </a>
-</div>
+

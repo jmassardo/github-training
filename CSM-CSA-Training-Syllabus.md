@@ -22,14 +22,17 @@ description: "Comprehensive training program curriculum for Customer Success Man
 5. [Phase 4: Delivery - CI/CD & Deployment (Weeks 8-9)](#phase-4-delivery---cicd--deployment-weeks-8-9)
 6. [Phase 5: Operations - Monitoring & Maintenance (Week 10)](#phase-5-operations---monitoring--maintenance-week-10)
 7. [Phase 6: Enterprise - Administration & Governance (Weeks 11-12)](#phase-6-enterprise---administration--governance-weeks-11-12)
-8. [Ongoing Professional Development](#ongoing-professional-development)
-9. [Assessment & Certification](#assessment--certification)
+8. [Phase 7: AI-Assisted Development - GitHub Copilot (Weeks 13-14)](#phase-7-ai-assisted-development---github-copilot-weeks-13-14)
+9. [Ongoing Professional Development](#ongoing-professional-development)
+10. [Assessment & Certification](#assessment--certification)
 
 ---
 
 ## Program Overview
 
-This 12-week progressive training program is designed specifically for **experienced Customer Success Managers** transitioning into GitHub CSM/CSA roles. The curriculum assumes strong customer-facing skills but no prior software development or GitHub experience.
+This 14-week progressive training program is designed specifically for **experienced Customer Success Managers** transitioning into GitHub CSM/CSA roles. The curriculum assumes strong customer-facing skills but no prior software development or GitHub experience.
+
+> **📌 Note:** This syllabus organizes content by **SDLC phases** (how software is built) to help you understand the development workflow. The [training modules](/beginner/) are organized by **skill level** (Beginner → Intermediate → Advanced) for a progressive learning experience. Both approaches cover the same 14 modules over 14 weeks.
 
 **Target Audience:**
 - Experienced CSMs new to GitHub
@@ -45,6 +48,13 @@ The syllabus follows the **natural software development workflow**, introducing 
 4. Delivery (CI/CD & deployment)
 5. Operations (monitoring & maintenance)
 6. Enterprise governance (administration & compliance)
+7. AI-assisted development (GitHub Copilot)
+
+**Training Structure:**
+| View | Organization | Use Case |
+|------|-------------|----------|
+| [Training Modules](/beginner/) | By Skill Level (Beginner/Intermediate/Advanced) | Self-paced learning progression |
+| This Syllabus | By SDLC Phase | Understanding the development workflow |
 
 **Learning Objectives:**
 - Understand software development workflows and SDLC phases
@@ -561,10 +571,10 @@ The syllabus follows the **natural software development workflow**, introducing 
    - Microsoft Learn: [Introduction to GitOps](https://learn.microsoft.com/en-us/training/modules/intro-to-gitops/)
    - Microsoft Learn: [Implement security through a pipeline using DevOps](https://learn.microsoft.com/en-us/training/paths/implement-security-through-pipeline-using-devops/)
 
-6. **GitHub Copilot for Operations** (2 hours)
-   - GitHub Skills: [Getting started with GitHub Copilot](https://github.com/skills/getting-started-with-github-copilot)
-   - Microsoft Learn: [Introduction to GitHub Copilot](https://learn.microsoft.com/en-us/training/modules/introduction-to-github-copilot/)
+6. **Preview: GitHub Copilot for Operations** (1 hour)
+   - *Note: Full Copilot training is covered in Phase 7 (Weeks 13-14)*
    - GitHub Docs: [About GitHub Copilot](https://docs.github.com/en/copilot/about-github-copilot/what-is-github-copilot)
+   - Use case: Generating infrastructure code and operational scripts
 
 **Lab Exercise:**
 - Configure application monitoring with Azure Monitor
@@ -575,7 +585,7 @@ The syllabus follows the **natural software development workflow**, introducing 
 - Create infrastructure templates (Terraform or Bicep)
 - Build an IaC deployment pipeline
 - Practice GitOps workflows
-- Use Copilot to generate infrastructure code
+- (Preview) Use Copilot to generate infrastructure code
 
 ---
 
@@ -759,6 +769,128 @@ The syllabus follows the **natural software development workflow**, introducing 
 
 ---
 
+## Phase 7: AI-Assisted Development - GitHub Copilot (Weeks 13-14)
+
+*"AI transforms how developers write, review, and maintain code."*
+
+### Week 13: GitHub Copilot Fundamentals
+
+**Context:** GitHub Copilot represents the most significant shift in developer productivity since version control. As CSM/CSAs, understanding Copilot is essential for helping customers maximize their GitHub investment and developer productivity.
+
+**Objectives:**
+- Understand GitHub Copilot architecture and AI foundations
+- Master IDE setup across VS Code, JetBrains, Visual Studio, and Neovim
+- Learn effective prompt engineering for code completions
+- Use Copilot Chat for code explanation, generation, and debugging
+- Apply best practices for responsible AI usage
+
+**Training Materials:**
+
+1. **GitHub Copilot Overview** (2-3 hours)
+   - GitHub Docs: [About GitHub Copilot](https://docs.github.com/en/copilot/about-github-copilot/what-is-github-copilot)
+   - GitHub Docs: [GitHub Copilot features](https://docs.github.com/en/copilot/about-github-copilot/github-copilot-features)
+   - Microsoft Learn: [Introduction to GitHub Copilot](https://learn.microsoft.com/en-us/training/modules/introduction-to-github-copilot/)
+   - GitHub Skills: [Getting started with GitHub Copilot](https://github.com/skills/copilot-codespaces-vscode)
+
+2. **IDE Setup & Configuration** (2-3 hours)
+   - GitHub Docs: [Getting started with Copilot in VS Code](https://docs.github.com/en/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode)
+   - GitHub Docs: [Getting started with Copilot in JetBrains IDEs](https://docs.github.com/en/copilot/using-github-copilot/getting-started-with-github-copilot?tool=jetbrains)
+   - GitHub Docs: [Getting started with Copilot in Visual Studio](https://docs.github.com/en/copilot/using-github-copilot/getting-started-with-github-copilot?tool=visualstudio)
+   - GitHub Docs: [Copilot in Neovim](https://docs.github.com/en/copilot/using-github-copilot/getting-started-with-github-copilot?tool=neovim)
+
+3. **Prompt Engineering & Code Completions** (3-4 hours)
+   - GitHub Docs: [Prompt engineering for GitHub Copilot](https://docs.github.com/en/copilot/using-github-copilot/prompt-engineering-for-github-copilot)
+   - GitHub Docs: [Best practices for using GitHub Copilot](https://docs.github.com/en/copilot/using-github-copilot/best-practices-for-using-github-copilot)
+   - GitHub Blog: [How to write better prompts for GitHub Copilot](https://github.blog/developer-skills/github/how-to-write-better-prompts-for-github-copilot/)
+
+4. **Copilot Chat** (2-3 hours)
+   - GitHub Docs: [Using GitHub Copilot Chat](https://docs.github.com/en/copilot/using-github-copilot/using-github-copilot-chat)
+   - GitHub Docs: [Asking questions in Copilot Chat](https://docs.github.com/en/copilot/using-github-copilot/asking-github-copilot-questions-in-your-ide)
+   - GitHub Docs: [Slash commands in Copilot Chat](https://docs.github.com/en/copilot/using-github-copilot/using-github-copilot-chat#using-slash-commands)
+
+5. **Copilot on GitHub.com** (2 hours)
+   - GitHub Docs: [Using Copilot on GitHub.com](https://docs.github.com/en/copilot/using-github-copilot/using-github-copilot-on-githubdotcom)
+   - GitHub Docs: [Copilot code review](https://docs.github.com/en/copilot/using-github-copilot/code-review/using-copilot-code-review)
+   - GitHub Docs: [Copilot pull request summaries](https://docs.github.com/en/copilot/using-github-copilot/using-copilot-pull-request-summaries)
+
+6. **Copilot CLI** (1-2 hours)
+   - GitHub Docs: [Using Copilot in the CLI](https://docs.github.com/en/copilot/using-github-copilot/using-github-copilot-in-the-command-line)
+   - GitHub CLI Manual: [gh copilot](https://cli.github.com/manual/gh_copilot)
+
+**Lab Exercise:**
+- Install and configure Copilot in your primary IDE
+- Practice prompt crafting techniques with different programming languages
+- Use Copilot Chat to explain unfamiliar code
+- Generate unit tests using Copilot
+- Use Copilot for code review on a sample PR
+- Try Copilot CLI for shell command suggestions
+- Document 5 effective prompts for common development tasks
+
+---
+
+### Week 14: GitHub Copilot Advanced
+
+**Context:** Beyond code completions, Copilot offers advanced features including Agents (agentic coding), Model Context Protocol (MCP), Extensions, and enterprise administration. This week covers the cutting-edge capabilities and how to deploy Copilot across an organization.
+
+**Objectives:**
+- Master Copilot Agents and autonomous coding workflows
+- Understand Model Context Protocol (MCP) for custom integrations
+- Build and use Copilot Extensions
+- Configure custom instructions for organizational standards
+- Implement Copilot at enterprise scale with policies and metrics
+
+**Training Materials:**
+
+1. **Copilot Agents & Agentic Coding** (3-4 hours)
+   - GitHub Docs: [About Copilot coding agent](https://docs.github.com/en/copilot/using-github-copilot/using-copilot-coding-agent)
+   - GitHub Docs: [Using Copilot Workspace](https://docs.github.com/en/copilot/using-github-copilot/using-copilot-workspace)
+   - GitHub Docs: [Agent mode in VS Code](https://docs.github.com/en/copilot/using-github-copilot/using-copilot-agent-mode)
+   - GitHub Blog: [GitHub Copilot: The agent awakens](https://github.blog/news-insights/product-news/github-copilot-the-agent-awakens/)
+
+2. **Model Context Protocol (MCP)** (2-3 hours)
+   - GitHub Docs: [About MCP servers](https://docs.github.com/en/copilot/customizing-copilot/extending-copilot-in-your-organization/using-copilot-extensions)
+   - Anthropic: [Model Context Protocol Documentation](https://modelcontextprotocol.io/)
+   - GitHub: [MCP Servers Repository](https://github.com/modelcontextprotocol/servers)
+
+3. **Copilot Extensions** (2-3 hours)
+   - GitHub Docs: [About Copilot Extensions](https://docs.github.com/en/copilot/using-github-copilot/using-copilot-extensions)
+   - GitHub Docs: [Building Copilot Extensions](https://docs.github.com/en/copilot/building-copilot-extensions)
+   - GitHub Marketplace: [Copilot Extensions](https://github.com/marketplace?type=apps&copilot_app=true)
+
+4. **Custom Instructions & Copilot Spaces** (2 hours)
+   - GitHub Docs: [Adding custom instructions](https://docs.github.com/en/copilot/customizing-copilot/adding-custom-instructions-for-github-copilot)
+   - GitHub Docs: [Repository-level instructions](https://docs.github.com/en/copilot/customizing-copilot/adding-repository-instructions-for-github-copilot)
+   - GitHub Docs: [Using Copilot Spaces](https://docs.github.com/en/copilot/using-github-copilot/using-copilot-spaces)
+
+5. **Enterprise Administration** (3-4 hours)
+   - GitHub Docs: [Managing Copilot for your organization](https://docs.github.com/en/copilot/managing-copilot/managing-copilot-for-your-organization)
+   - GitHub Docs: [Copilot policies](https://docs.github.com/en/copilot/managing-copilot/managing-copilot-for-your-organization/managing-policies-for-copilot-in-your-organization)
+   - GitHub Docs: [Configuring content exclusions](https://docs.github.com/en/copilot/managing-copilot/managing-copilot-for-your-organization/configuring-content-exclusions-for-github-copilot)
+   - Microsoft Learn: [Manage GitHub Copilot for Business](https://learn.microsoft.com/en-us/training/modules/manage-github-copilot-business/)
+
+6. **Metrics & Adoption** (2-3 hours)
+   - GitHub Docs: [Viewing Copilot usage metrics](https://docs.github.com/en/copilot/rolling-out-github-copilot-at-scale/analyzing-usage-over-time-with-the-copilot-metrics-api)
+   - GitHub Docs: [Copilot Metrics API](https://docs.github.com/en/rest/copilot/copilot-metrics)
+   - GitHub Blog: [How GitHub measures Copilot success](https://github.blog/enterprise-software/ai/how-to-measure-the-impact-of-github-copilot/)
+
+7. **Responsible AI & Security** (1-2 hours)
+   - GitHub Docs: [GitHub Copilot Trust Center](https://resources.github.com/copilot-trust-center/)
+   - GitHub Docs: [Privacy and Copilot](https://docs.github.com/en/copilot/about-github-copilot/github-copilot-chat-transparency-note)
+   - GitHub Docs: [Copilot content exclusions](https://docs.github.com/en/copilot/managing-copilot/managing-copilot-for-your-organization/configuring-content-exclusions-for-github-copilot)
+
+**Lab Exercise:**
+- Use Copilot Agent mode to implement a multi-file feature
+- Set up a Copilot Workspace session to plan and implement changes
+- Create custom instructions for a sample organization's coding standards
+- Configure an MCP server for additional context (e.g., database schema)
+- Install and use a Copilot Extension from the Marketplace
+- Build a Copilot metrics dashboard using the Metrics API
+- Create a Copilot rollout plan for an enterprise customer
+- Configure content exclusions for sensitive repositories
+- Practice presenting Copilot ROI metrics to stakeholders
+
+---
+
 ## Ongoing Professional Development
 
 ### Recommended Resources
@@ -780,13 +912,14 @@ The syllabus follows the **natural software development workflow**, introducing 
    - [GitHub Security Documentation](https://docs.github.com/en/code-security)
    - [GitHub Enterprise Documentation](https://docs.github.com/en/enterprise-cloud@latest)
    - [GitHub Webhooks Documentation](https://docs.github.com/en/webhooks)
+   - [GitHub Copilot Documentation](https://docs.github.com/en/copilot)
 
 4. **Microsoft Learn Paths**
    - [GitHub Learning Paths](https://learn.microsoft.com/en-us/training/browse/?products=github)
    - [DevOps Learning Paths](https://learn.microsoft.com/en-us/training/browse/?terms=devops)
+   - [GitHub Copilot Learning Path](https://learn.microsoft.com/en-us/training/paths/copilot/)
 
 5. **Additional Advanced Topics** (Beyond Core Syllabus)
-   - GitHub Copilot and AI-assisted development
    - Advanced GitHub Projects automation with custom fields
    - GitHub Mobile for on-the-go repository management
    - GitHub CLI extensions and advanced scripting
@@ -794,7 +927,8 @@ The syllabus follows the **natural software development workflow**, introducing 
    - Infrastructure as Code with Terraform/Bicep and GitHub
    - GitHub Sponsors for open source project funding
    - GitHub Connect (linking GitHub Enterprise Server to GitHub.com)
-   - GitHub Copilot Extensions development
+   - GitHub Models (AI model hosting/inference platform)
+   - GitHub Spark (natural language app creation)
 
 ### Stay Current
 
@@ -827,6 +961,7 @@ Throughout the 12-week program, learners should demonstrate proficiency through:
    - **Phase 2 (Week 5)**: Present a repository with proper branch protection, CODEOWNERS, commit signing, and release workflow
    - **Phase 4 (Week 9)**: Build and demo a complete multi-environment CI/CD pipeline with security scanning, package publishing, and DORA metrics
    - **Phase 6 (Week 12)**: Conduct a comprehensive enterprise security audit, present findings with governance recommendations, and demonstrate DORA metrics dashboard
+   - **Phase 7 (Week 14)**: Create an enterprise Copilot rollout plan with custom instructions, metrics dashboard, and ROI presentation for stakeholders
 
 ### GitHub Certifications
 
@@ -839,10 +974,13 @@ Upon completion of this syllabus, learners are encouraged to pursue official Git
 2. **GitHub Actions** (Intermediate)
    - Validates CI/CD and automation expertise
 
-3. **GitHub Advanced Security** (Advanced)
+3. **GitHub Copilot** (Intermediate)
+   - Demonstrates AI-assisted development expertise
+
+4. **GitHub Advanced Security** (Advanced)
    - Demonstrates security and compliance knowledge
 
-4. **GitHub Administration** (Advanced)
+5. **GitHub Administration** (Advanced)
    - For CSAs managing enterprise implementations
 
 ### Microsoft Certifications (Optional)
@@ -857,7 +995,7 @@ Upon completion of this syllabus, learners are encouraged to pursue official Git
 
 ## Success Metrics
 
-By the end of this 12-week program, successful learners will be able to:
+By the end of this 14-week program, successful learners will be able to:
 
 ### Technical Proficiency
 ✅ Confidently demonstrate all GitHub core features across the entire SDLC  
@@ -865,6 +1003,13 @@ By the end of this 12-week program, successful learners will be able to:
 ✅ Configure and advise on GitHub Advanced Security (GHAS) features  
 ✅ Architect enterprise-scale GitHub deployments with proper governance  
 ✅ Build integrations using GitHub APIs, webhooks, and GitHub Apps  
+
+### AI-Assisted Development
+✅ Master GitHub Copilot for code completions, chat, and agentic workflows  
+✅ Configure Copilot for enterprise deployment with policies and exclusions  
+✅ Implement custom instructions and Copilot Spaces for organizational standards  
+✅ Measure and report on Copilot adoption and ROI using the Metrics API  
+✅ Advise customers on responsible AI usage and best practices  
 
 ### Software Development Competency  
 ✅ Understand and articulate the complete Software Development Lifecycle  

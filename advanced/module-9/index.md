@@ -78,17 +78,17 @@ As a GitHub CSM, you'll help customers:
 Work through each section in order for the best learning experience:
 
 <div class="section-cards">
-{% raw %}{% for section in page.sections %}{% endraw %}
-<a href="{% raw %}{{ section.url }}{% endraw %}" class="section-card">
-  <span class="section-icon">{% raw %}{{ section.icon }}{% endraw %}</span>
+{% for section in page.sections %}
+<a href="{{ section.url }}" class="section-card">
+  <span class="section-icon">{{ section.icon }}</span>
   <div class="section-info">
-    <h3>{% raw %}{{ section.title }}{% endraw %}</h3>
-    <span class="section-time">{% raw %}{{ section.time }}{% endraw %}</span>
+    <h3>{{ section.title }}</h3>
+    <span class="section-time">{{ section.time }}</span>
   </div>
 
   <span class="section-arrow">→</span>
 </a>
-{% raw %}{% endfor %}{% endraw %}
+{% endfor %}
 </div>
 
 ---
@@ -97,9 +97,9 @@ Work through each section in order for the best learning experience:
 
 By the end of this module, you will be able to:
 
-{% raw %}{% for objective in page.objectives %}{% endraw %}
-- ✅ {% raw %}{{ objective }}{% endraw %}
-{% raw %}{% endfor %}{% endraw %}
+{% for objective in page.objectives %}
+- ✅ {{ objective }}
+{% endfor %}
 
 ---
 

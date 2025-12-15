@@ -268,6 +268,51 @@ Key settings CSMs should know:
 - Allow rebase merging
 - Auto-delete head branches
 
+---
+
+## GitHub Mobile
+
+**GitHub Mobile** brings the GitHub experience to iOS and Android devices, enabling developers to stay connected to their work from anywhere.
+
+### Key Mobile Features
+
+| Feature | Capability |
+|---------|------------|
+| **Notifications** | Triage, filter, and respond to notifications |
+| **Issues** | Create, read, comment, and close issues |
+| **Pull Requests** | Review code, approve PRs, merge changes |
+| **Discussions** | Participate in community conversations |
+| **Search** | Find repositories, issues, users, and code |
+| **Profile** | View activity, contributions, and followers |
+
+### Mobile-Specific Features
+
+- **Push notifications** - Real-time alerts for mentions, reviews, CI status
+- **Swipe gestures** - Quick actions on notifications and issues
+- **Dark mode** - Follows system theme preference
+- **Face ID / Touch ID** - Secure authentication
+- **Home screen widgets** - Contribution graph, notifications count
+
+### Best Use Cases for Mobile
+
+✅ **Great for:**
+- Triaging notifications during commute
+- Quick code review approvals
+- Responding to urgent issues
+- Checking CI/CD status
+- Team communication on the go
+
+⚠️ **Better on desktop:**
+- Writing significant code
+- Complex merge conflict resolution
+- Detailed code review with line comments
+- Repository administration
+
+### CSM Talking Point
+
+> "GitHub Mobile turns waiting time into productive time. Your developers can triage notifications, approve reviews, and stay connected without opening their laptop."
+
+---
 
 ## Visual Summary
 
@@ -285,6 +330,10 @@ Key settings CSMs should know:
 **Milestone**: Groups issues/PRs toward a deadline
 
 **Discussion**: Community conversation outside issues
+
+**Codespaces**: Cloud development environment in your browser
+
+**GitHub Mobile**: iOS/Android app for on-the-go access
 </div>
 
 ---
