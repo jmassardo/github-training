@@ -94,7 +94,7 @@ Work through each section in order for the best learning experience:
 
 <div class="section-cards">
 {% for section in page.sections %}
-<a href="{{ section.url }}" class="section-card">
+<a href="{{ site.baseurl }}{{ section.url }}" class="section-card">
   <span class="section-icon">{{ section.icon }}</span>
   <div class="section-info">
     <h3>{{ section.title }}</h3>

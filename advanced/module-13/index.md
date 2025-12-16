@@ -80,7 +80,7 @@ Work through each section in order for the best learning experience:
 
 <div class="section-cards">
 {% for section in page.sections %}
-<a href="{{ section.url }}" class="section-card">
+<a href="{{ site.baseurl }}{{ section.url }}" class="section-card">
   <span class="section-icon">{{ section.icon }}</span>
   <div class="section-info">
     <h3>{{ section.title }}</h3>
@@ -119,7 +119,7 @@ Before starting this module, it's recommended you complete:
 Master AI-powered development with GitHub Copilot basics.
 
 <div class="module-cta">
-  <a href="/advanced/module-13/overview/" class="btn btn-primary btn-lg">
+  <a href="{{ site.baseurl }}/advanced/module-13/overview/" class="btn btn-primary btn-lg">
     Start Section 1: Context & Overview →
   </a>
 </div>

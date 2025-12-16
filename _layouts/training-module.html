@@ -192,7 +192,7 @@
           <div class="progress-steps">
             {% for section in page.sections %}
               {% assign section_num = forloop.index %}
-              <a href="{{ section.url }}" 
+              <a href="{{ site.baseurl }}{{ section.url }}" 
                  class="progress-step {% if section_num == page.section_number %}active{% elsif section_num < page.section_number %}completed{% endif %}"
                  title="{{ section.title }}">
                 <span class="step-dot"></span>
@@ -206,7 +206,7 @@
         <nav class="section-tabs">
           {% for section in page.sections %}
             {% assign section_num = forloop.index %}
-            <a href="{{ section.url }}" 
+            <a href="{{ site.baseurl }}{{ section.url }}" 
                class="section-tab {% if section_num == page.section_number %}active{% endif %}">
               <span class="tab-icon">{{ section.icon }}</span>
               <span class="tab-title">{{ section.short_title }}</span>
@@ -236,7 +236,7 @@
         <!-- Bottom Navigation -->
         <nav class="module-nav">
           {% if page.prev_section %}
-            <a href="{{ page.prev_section.url }}" class="nav-button nav-prev">
+            <a href="{{ site.baseurl }}{{ page.prev_section.url }}" class="nav-button nav-prev">
               <span class="nav-direction">← Previous</span>
               <span class="nav-title">{{ page.prev_section.title }}</span>
             </a>
@@ -245,19 +245,19 @@
           {% endif %}
 
           <div class="nav-center">
-            <a href="{{ page.module_index }}" class="nav-index">
+            <a href="{{ site.baseurl }}{{ page.module_index }}" class="nav-index">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16" fill="currentColor"><path d="M2 2.75A.75.75 0 0 1 2.75 2h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 2.75Zm0 5A.75.75 0 0 1 2.75 7h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 7.75ZM2.75 12h10.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1 0-1.5Z"></path></svg>
               Module Overview
             </a>
           </div>
 
           {% if page.next_section %}
-            <a href="{{ page.next_section.url }}" class="nav-button nav-next">
+            <a href="{{ site.baseurl }}{{ page.next_section.url }}" class="nav-button nav-next">
               <span class="nav-direction">Next →</span>
               <span class="nav-title">{{ page.next_section.title }}</span>
             </a>
           {% elsif page.next_module %}
-            <a href="{{ page.next_module.url }}" class="nav-button nav-next nav-module">
+            <a href="{{ site.baseurl }}{{ page.next_module.url }}" class="nav-button nav-next nav-module">
               <span class="nav-direction">Next Module →</span>
               <span class="nav-title">{{ page.next_module.title }}</span>
             </a>
