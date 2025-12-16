@@ -398,7 +398,7 @@ Congratulations! You now understand:
 
 In the next module, we'll explore the GitHub platform in depth — the features that transform Git from a command-line tool into a collaboration powerhouse.
 
-[Start Module 3: GitHub Platform →](/beginner/module-3/)
+[Start Module 3: GitHub Platform →]({{ site.baseurl }}/beginner/module-3/)
 </div>
 
 ---

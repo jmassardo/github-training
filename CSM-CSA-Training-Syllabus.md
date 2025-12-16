@@ -32,7 +32,7 @@ description: "Comprehensive training program curriculum for Customer Success Man
 
 This 14-week progressive training program is designed specifically for **experienced Customer Success Managers** transitioning into GitHub CSM/CSA roles. The curriculum assumes strong customer-facing skills but no prior software development or GitHub experience.
 
-> **📌 Note:** This syllabus organizes content by **SDLC phases** (how software is built) to help you understand the development workflow. The [training modules](/beginner/) are organized by **skill level** (Beginner → Intermediate → Advanced) for a progressive learning experience. Both approaches cover the same 14 modules over 14 weeks.
+> **📌 Note:** This syllabus organizes content by **SDLC phases** (how software is built) to help you understand the development workflow. The [training modules]({{ site.baseurl }}/beginner/) are organized by **skill level** (Beginner → Intermediate → Advanced) for a progressive learning experience. Both approaches cover the same 14 modules over 14 weeks.
 
 **Target Audience:**
 
@@ -55,7 +55,7 @@ The syllabus follows the **natural software development workflow**, introducing 
 **Training Structure:**
 | View | Organization | Use Case |
 |------|-------------|----------|
-| [Training Modules](/beginner/) | By Skill Level (Beginner/Intermediate/Advanced) | Self-paced learning progression |
+| [Training Modules]({{ site.baseurl }}/beginner/) | By Skill Level (Beginner/Intermediate/Advanced) | Self-paced learning progression |
 | This Syllabus | By SDLC Phase | Understanding the development workflow |
 
 **Learning Objectives:**
