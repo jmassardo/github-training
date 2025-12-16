@@ -108,9 +108,9 @@ By the end of this module, you will be able to:
 
 Before starting this module, ensure you have completed:
 
-- [Module 3: GitHub Platform Essentials](/beginner/module-3/)
-- [Module 4: SCM Process](/beginner/module-4/)
-- [Module 6: Security with GHAS](/intermediate/module-6/)
+- [Module 3: GitHub Platform Essentials]({{ site.baseurl }}/beginner/module-3/)
+- [Module 4: SCM Process]({{ site.baseurl }}/beginner/module-4/)
+- [Module 6: Security with GHAS]({{ site.baseurl }}/intermediate/module-6/)
 - Understanding of enterprise identity management concepts
 
 ---

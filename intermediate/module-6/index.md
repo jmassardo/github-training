@@ -105,7 +105,7 @@ By the end of this module, you will be able to:
 
 ## Prerequisites
 
-- Completed [Module 5: GitHub Actions](/intermediate/module-5/)
+- Completed [Module 5: GitHub Actions]({{ site.baseurl }}/intermediate/module-5/)
 - GitHub account with access to GHAS features
 - Understanding of basic security concepts
 - Familiarity with YAML configuration

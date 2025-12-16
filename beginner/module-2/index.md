@@ -137,7 +137,7 @@ By the end of this module, you will be able to:
 
 Before starting this module, you should have:
 
-- ✅ Completed [Module 1: SDLC Fundamentals](/beginner/module-1/)
+- ✅ Completed [Module 1: SDLC Fundamentals]({{ site.baseurl }}/beginner/module-1/)
 - ✅ A GitHub account (free tier is fine)
 - ✅ Git installed on your computer ([Download Git](https://git-scm.com/downloads))
 - ✅ A text editor (VS Code recommended)
@@ -149,7 +149,7 @@ Before starting this module, you should have:
 Begin with the first section to understand why version control exists and how Git became the industry standard.
 
 <div class="module-cta">
-  <a href="/beginner/module-2/overview/" class="btn btn-primary btn-lg">
+  <a href="{{ site.baseurl }}/beginner/module-2/overview/" class="btn btn-primary btn-lg">
     Start Section 1: Context & Overview →
   </a>
 </div>

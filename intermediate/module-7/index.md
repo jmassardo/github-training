@@ -97,8 +97,8 @@ By the end of this module, you will be able to:
 
 Before starting this module, you should have completed:
 
-- **[Module 5: GitHub Actions](/intermediate/module-5/)** (for workflow automation)
-- **[Module 6: Security & GHAS](/intermediate/module-6/)** (for security foundations)
+- **[Module 5: GitHub Actions]({{ site.baseurl }}/intermediate/module-5/)** (for workflow automation)
+- **[Module 6: Security & GHAS]({{ site.baseurl }}/intermediate/module-6/)** (for security foundations)
 
 ---
 

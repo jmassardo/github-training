@@ -97,8 +97,8 @@ By the end of this module, you will be able to:
 
 Before starting this module, you should have completed:
 
-- [Module 9: Enterprise Administration](/advanced/module-9/)
-- [Module 10: GitHub APIs, Webhooks & Apps](/advanced/module-10/)
+- [Module 9: Enterprise Administration]({{ site.baseurl }}/advanced/module-9/)
+- [Module 10: GitHub APIs, Webhooks & Apps]({{ site.baseurl }}/advanced/module-10/)
 - Basic understanding of Infrastructure as Code concepts
 - Familiarity with Terraform or similar IaC tools
 

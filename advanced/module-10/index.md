@@ -104,7 +104,7 @@ By the end of this module, you will be able to:
 
 ## Prerequisites
 
-- Completed [Module 5: GitHub Actions](/intermediate/module-5/)
+- Completed [Module 5: GitHub Actions]({{ site.baseurl }}/intermediate/module-5/)
 - Basic understanding of REST APIs and JSON
 - Familiarity with HTTP requests and authentication
 
