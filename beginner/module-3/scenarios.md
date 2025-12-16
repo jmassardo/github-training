@@ -371,7 +371,7 @@ You now understand:
 
 Next, we'll dive into SCM processes — branching strategies, code review workflows, and release management.
 
-[Start Module 4: SCM Process →](/beginner/module-4/)
+[Start Module 4: SCM Process →]({{ site.baseurl }}/beginner/module-4/)
 </div>
 
 ---

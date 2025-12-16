@@ -373,4 +373,4 @@ You've completed Module 12: Governance, Compliance & DORA Metrics.
 - Compliance can be continuous, not just audit-time
 - Metrics should improve teams, not punish individuals
 
-**Next Module:** [Module 13: GitHub Copilot Fundamentals](/advanced/module-13/)
+**Next Module:** [Module 13: GitHub Copilot Fundamentals]({{ site.baseurl }}/advanced/module-13/)

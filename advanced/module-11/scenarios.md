@@ -387,4 +387,4 @@ You've completed Module 11: Infrastructure as Code & Operations.
 - GitOps practices enable self-service with guardrails
 - Drift detection ensures compliance is maintained
 
-**Next Module:** [Module 12: Governance, Metrics & DORA](/advanced/module-12/)
+**Next Module:** [Module 12: Governance, Metrics & DORA]({{ site.baseurl }}/advanced/module-12/)

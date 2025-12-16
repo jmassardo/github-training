@@ -108,9 +108,9 @@ By the end of this module, you will be able to:
 
 Before starting this module, you should have completed:
 
-- [Module 1: SDLC](/beginner/module-1/)
-- [Module 2: Git Fundamentals](/beginner/module-2/)
-- [Module 3: GitHub Platform](/beginner/module-3/)
+- [Module 1: SDLC]({{ site.baseurl }}/beginner/module-1/)
+- [Module 2: Git Fundamentals]({{ site.baseurl }}/beginner/module-2/)
+- [Module 3: GitHub Platform]({{ site.baseurl }}/beginner/module-3/)
 
 ---
 
@@ -119,7 +119,7 @@ Before starting this module, you should have completed:
 Learn how teams implement professional-grade source control management.
 
 <div class="module-cta">
-  <a href="/beginner/module-4/overview/" class="btn btn-primary btn-lg">
+  <a href="{{ site.baseurl }}/beginner/module-4/overview/" class="btn btn-primary btn-lg">
     Start Section 1: Context & Overview →
   </a>
 </div>

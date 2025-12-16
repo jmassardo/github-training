@@ -242,7 +242,7 @@ Before proceeding, ensure you're comfortable with:
 ✅ Context management (file references, selection)  
 ✅ Prompt engineering basics  
 
-If any of these are unfamiliar, review [Module 13: Copilot Fundamentals](/advanced/module-13/) first.
+If any of these are unfamiliar, review [Module 13: Copilot Fundamentals]({{ site.baseurl }}/advanced/module-13/) first.
 
 ---
 

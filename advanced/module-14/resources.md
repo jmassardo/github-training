@@ -308,8 +308,8 @@ Congratulations on completing **Module 14: GitHub Copilot Advanced**!
 
 ### Return to Training
 
-- [Module 14 Index](/advanced/module-14/)
-- [Training Home](/)
+- [Module 14 Index]({{ site.baseurl }}/advanced/module-14/)
+- [Training Home]({{ site.baseurl }}/)
 
 ---
 

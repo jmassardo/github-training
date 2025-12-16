@@ -105,7 +105,7 @@ By the end of this module, you will be able to:
 
 ## Prerequisites
 
-- Completed Beginner Phase ([Modules 1-4](/beginner/))
+- Completed Beginner Phase ([Modules 1-4]({{ site.baseurl }}/beginner/))
 - GitHub account with Actions enabled
 - Basic understanding of YAML syntax
 - Familiarity with command-line tools

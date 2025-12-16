@@ -108,7 +108,7 @@ By the end of this module, you will be able to:
 
 Before starting this module, it's recommended you complete:
 
-- [Modules 1-12](/beginner/) (foundational GitHub knowledge)
+- [Modules 1-12]({{ site.baseurl }}/beginner/) (foundational GitHub knowledge)
 - Access to GitHub Copilot (Individual, Business, or Enterprise)
 - VS Code, JetBrains IDE, or Visual Studio installed
 

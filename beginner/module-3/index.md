@@ -191,7 +191,7 @@ flowchart TB
 
 Before starting this module:
 
-- ✅ Completed [Module 2: Git Fundamentals](/beginner/module-2/)
+- ✅ Completed [Module 2: Git Fundamentals]({{ site.baseurl }}/beginner/module-2/)
 - ✅ GitHub account created
 - ✅ Comfortable with basic Git commands
 
@@ -202,7 +202,7 @@ Before starting this module:
 Let's explore the platform that over 100 million developers call home.
 
 <div class="module-cta">
-  <a href="/beginner/module-3/overview/" class="btn btn-primary btn-lg">
+  <a href="{{ site.baseurl }}/beginner/module-3/overview/" class="btn btn-primary btn-lg">
     Start Section 1: Context & Overview →
   </a>
 </div>

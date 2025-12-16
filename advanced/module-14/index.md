@@ -105,7 +105,7 @@ By the end of this module, you will be able to:
 
 Before starting this module, you should have completed:
 
-- [Module 13: GitHub Copilot Fundamentals](/advanced/module-13/)
+- [Module 13: GitHub Copilot Fundamentals]({{ site.baseurl }}/advanced/module-13/)
 - Hands-on experience with Copilot Chat and code completions
 - Access to Copilot Business or Enterprise features
 

@@ -342,7 +342,7 @@ Congratulations on completing Module 1! You now understand:
 
 In the next module, we'll dive deep into Git and GitHub fundamentals — the technical foundation that powers everything you learned today.
 
-[Start Module 2: Git & GitHub Fundamentals →](/beginner/module-2/)
+[Start Module 2: Git & GitHub Fundamentals →]({{ site.baseurl }}/beginner/module-2/)
 </div>
 
 ---

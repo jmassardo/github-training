@@ -21,7 +21,7 @@ This 12-week program is organized into **three progressive phases**, each contai
 
 <div class="training-phases" markdown="1">
 
-### 🌱 [Beginner Phase (Weeks 1-4)](/beginner/)
+### 🌱 [Beginner Phase (Weeks 1-4)]({{ site.baseurl }}/beginner/)
 **Foundation: Understanding Software Development & GitHub Basics**
 
 Master the fundamentals of software development, version control, and GitHub's core features.
@@ -41,7 +41,7 @@ Master the fundamentals of software development, version control, and GitHub's c
 
 ---
 
-### 🚀 [Intermediate Phase (Weeks 5-8)](/intermediate/)
+### 🚀 [Intermediate Phase (Weeks 5-8)]({{ site.baseurl }}/intermediate/)
 **Development: Automation, Security & CI/CD**
 
 Learn GitHub Actions, security features, and continuous integration/deployment pipelines.
@@ -62,7 +62,7 @@ Learn GitHub Actions, security features, and continuous integration/deployment p
 
 ---
 
-### 🏆 [Advanced Phase (Weeks 9-14)](/advanced/)
+### 🏆 [Advanced Phase (Weeks 9-14)]({{ site.baseurl }}/advanced/)
 **Enterprise: Administration, Governance, AI & Performance**
 
 Master enterprise-scale GitHub management, APIs, compliance, DevOps metrics, and AI-powered development with Copilot.
@@ -161,8 +161,8 @@ Before starting, ensure you have:
 ### Ready to Begin?
 
 <div class="cta-buttons" markdown="1">
-  <a href="/beginner/" class="btn-primary">Start Beginner Phase →</a>
-  <a href="/syllabus/" class="btn-secondary">View Full Syllabus</a>
+  <a href="{{ site.baseurl }}/beginner/" class="btn-primary">Start Beginner Phase →</a>
+  <a href="{{ site.baseurl }}/syllabus/" class="btn-secondary">View Full Syllabus</a>
 </div>
 
 ---

@@ -57,7 +57,7 @@ Learn the fundamentals of GitHub Actions and build your first CI workflows.
 - Configure secrets securely
 - Integrate status checks with branch protection
 
-[**Start Module 5 →**](/intermediate/module-5/)
+[**Start Module 5 →**]({{ site.baseurl }}/intermediate/module-5/)
 
 ---
 
@@ -83,7 +83,7 @@ Master security features to find and fix vulnerabilities before they reach produ
 - Create security policies for customers
 - Explain supply chain security to stakeholders
 
-[**Start Module 6 →**](/intermediate/module-6/)
+[**Start Module 6 →**]({{ site.baseurl }}/intermediate/module-6/)
 
 ---
 
@@ -109,7 +109,7 @@ Understand dependency management, GitHub Packages, and artifact publishing.
 - Implement versioning strategies
 - Optimize workflows with caching
 
-[**Start Module 7 →**](/intermediate/module-7/)
+[**Start Module 7 →**]({{ site.baseurl }}/intermediate/module-7/)
 
 ---
 
@@ -136,7 +136,7 @@ Build complete deployment pipelines with multiple environments and protection ru
 - Implement OIDC for AWS/Azure
 - Measure DORA metrics from deployment data
 
-[**Start Module 8 →**](/intermediate/module-8/)
+[**Start Module 8 →**]({{ site.baseurl }}/intermediate/module-8/)
 
 ---
 
@@ -212,10 +212,10 @@ Before moving to the Advanced phase, ensure you can:
 ## Ready to Continue?
 
 <div class="cta-buttons">
-  <a href="/intermediate/module-5/" class="btn-primary">Start Module 5: GitHub Actions →</a>
-  <a href="/beginner/" class="btn-secondary">← Back to Beginner Phase</a>
+  <a href="{{ site.baseurl }}/intermediate/module-5/" class="btn-primary">Start Module 5: GitHub Actions →</a>
+  <a href="{{ site.baseurl }}/beginner/" class="btn-secondary">← Back to Beginner Phase</a>
 </div>
 
 ---
 
-**Next Phase:** Once you complete the Intermediate phase, you'll move to [Advanced Phase](/advanced/) covering enterprise administration, APIs, and governance.
+**Next Phase:** Once you complete the Intermediate phase, you'll move to [Advanced Phase]({{ site.baseurl }}/advanced/) covering enterprise administration, APIs, and governance.

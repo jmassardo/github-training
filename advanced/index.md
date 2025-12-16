@@ -59,7 +59,7 @@ Master enterprise GitHub administration and organization management.
 - Set enterprise-wide policies
 - Apply Engineering Systems best practices
 
-[**Start Module 9 →**](/advanced/module-9/)
+[**Start Module 9 →**]({{ site.baseurl }}/advanced/module-9/)
 
 ---
 
@@ -87,7 +87,7 @@ Build custom integrations using GitHub's APIs and app platform.
 - Build a basic GitHub App
 - Choose the right authentication method
 
-[**Start Module 10 →**](/advanced/module-10/)
+[**Start Module 10 →**]({{ site.baseurl }}/advanced/module-10/)
 
 ---
 
@@ -114,7 +114,7 @@ Manage infrastructure as code and implement operational best practices.
 - Set up incident response workflows
 - Build comprehensive documentation sites
 
-[**Start Module 11 →**](/advanced/module-11/)
+[**Start Module 11 →**]({{ site.baseurl }}/advanced/module-11/)
 
 ---
 
@@ -143,7 +143,7 @@ Master compliance, audit, security governance, and DevOps performance measuremen
 - Build metrics dashboards
 - Assess DevOps maturity
 
-[**Start Module 12 →**](/advanced/module-12/)
+[**Start Module 12 →**]({{ site.baseurl }}/advanced/module-12/)
 
 ---
 
@@ -168,7 +168,7 @@ Master AI-powered development with GitHub Copilot basics.
 - Use Copilot Chat for explanations and code generation
 - Apply best practices for developer productivity
 
-[**Start Module 13 →**](/advanced/module-13/)
+[**Start Module 13 →**]({{ site.baseurl }}/advanced/module-13/)
 
 ---
 
@@ -194,7 +194,7 @@ Extend Copilot with agents, MCP, extensions, and enterprise administration.
 - Manage Copilot at enterprise scale
 - Measure and drive Copilot adoption
 
-[**Start Module 14 →**](/advanced/module-14/)
+[**Start Module 14 →**]({{ site.baseurl }}/advanced/module-14/)
 
 ---
 
@@ -336,8 +336,8 @@ Upon completing this phase and the milestone project, you will have:
 ## Ready to Master Enterprise GitHub?
 
 <div class="cta-buttons">
-  <a href="/advanced/module-9/" class="btn-primary">Start Module 9: Enterprise Admin →</a>
-  <a href="/intermediate/" class="btn-secondary">← Back to Intermediate Phase</a>
+  <a href="{{ site.baseurl }}/advanced/module-9/" class="btn-primary">Start Module 9: Enterprise Admin →</a>
+  <a href="{{ site.baseurl }}/intermediate/" class="btn-secondary">← Back to Intermediate Phase</a>
 </div>
 
 ---
