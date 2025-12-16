@@ -54,7 +54,7 @@ Before diving into tools, understand the problem space: How do software teams wo
 - Identify where GitHub fits in the development workflow
 - Recognize planning artifacts (epics, user stories, acceptance criteria)
 
-[**Start Module 1 →**](/beginner/module-1/)
+[**Start Module 1 →**]({{ site.baseurl }}/beginner/module-1/)
 
 ---
 
@@ -80,7 +80,7 @@ Master the foundation of all source code management: Git version control system.
 - Write clear, descriptive commit messages
 - Understand distributed version control concepts
 
-[**Start Module 2 →**](/beginner/module-2/)
+[**Start Module 2 →**]({{ site.baseurl }}/beginner/module-2/)
 
 ---
 
@@ -108,7 +108,7 @@ Navigate GitHub.com confidently and master core collaboration features.
 - Collaborate through Pull Requests and code reviews
 - Choose the right GitHub tool for each task (web, CLI, Desktop)
 
-[**Start Module 3 →**](/beginner/module-3/)
+[**Start Module 3 →**]({{ site.baseurl }}/beginner/module-3/)
 
 ---
 
@@ -135,7 +135,7 @@ Understand how SCM works in real teams: workflows, collaboration patterns, and b
 - Manage releases and versions properly
 - Set up team notification strategies
 
-[**Start Module 4 →**](/beginner/module-4/)
+[**Start Module 4 →**]({{ site.baseurl }}/beginner/module-4/)
 
 ---
 
@@ -210,10 +210,10 @@ Before moving to the Intermediate phase, ensure you can:
 ## Ready to Begin?
 
 <div class="cta-buttons">
-  <a href="/beginner/module-1/" class="btn-primary">Start Module 1: SDLC →</a>
-  <a href="/" class="btn-secondary">← Back to Training Home</a>
+  <a href="{{ site.baseurl }}/beginner/module-1/" class="btn-primary">Start Module 1: SDLC →</a>
+  <a href="{{ site.baseurl }}/" class="btn-secondary">← Back to Training Home</a>
 </div>
 
 ---
 
-**Next Phase:** Once you complete the Beginner phase, you'll move to [Intermediate Phase](/intermediate/) covering automation, security, and CI/CD pipelines.
+**Next Phase:** Once you complete the Beginner phase, you'll move to [Intermediate Phase]({{ site.baseurl }}/intermediate/) covering automation, security, and CI/CD pipelines.
