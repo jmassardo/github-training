@@ -720,10 +720,14 @@ body.training-layout {
   background: rgba(0, 0, 0, 0.5);
   z-index: 998;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
   
-  &.active {
+  &.is-open {
     opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
 }
 
@@ -737,11 +741,13 @@ body.training-layout {
   background: $gh-bg;
   z-index: 999;
   overflow-y: auto;
-  transition: right 0.3s ease;
+  transition: right 0.3s ease, visibility 0.3s ease;
   box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
+  visibility: hidden;
   
-  &.active {
+  &.is-open {
     right: 0;
+    visibility: visible;
   }
   
   .mobile-nav-header {
@@ -866,7 +872,7 @@ body.training-layout {
   }
 
   .training-header .training-nav {
-    flex-wrap: wrap;
+    display: none; // Hide header nav on mobile - use mobile menu instead
   }
 
   .module-navigation {
@@ -882,18 +888,7 @@ body.training-layout {
 @media (max-width: 768px) {
   .training-header {
     .training-header-inner {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .training-nav {
-      width: 100%;
-      flex-direction: column;
-      align-items: stretch;
-
-      .training-nav-link {
-        width: 100%;
-      }
+      flex-wrap: wrap;
     }
   }
 

@@ -288,13 +288,16 @@
 
     <!-- Mobile navigation toggle -->
     <script>
-      (function() {
+      document.addEventListener('DOMContentLoaded', function() {
         const menuToggle = document.querySelector('.mobile-menu-toggle');
         const mobileNav = document.getElementById('mobile-nav');
         const overlay = document.getElementById('mobile-nav-overlay');
         const closeBtn = document.querySelector('.mobile-nav-close');
         
-        if (!menuToggle || !mobileNav || !overlay) return;
+        if (!menuToggle || !mobileNav || !overlay) {
+          console.warn('Mobile nav elements not found:', { menuToggle, mobileNav, overlay });
+          return;
+        }
         
         function openMenu() {
           mobileNav.classList.add('is-open');
@@ -353,7 +356,7 @@
             firstFocusable.focus();
           }
         });
-      })();
+      });
     </script>
 
   </body>
