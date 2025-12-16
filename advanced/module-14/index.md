@@ -58,6 +58,11 @@ sections:
     short_title: "Resources"
     icon: "📖"
     time: "10 min"
+  - title: "CSM Scenarios"
+    url: "/advanced/module-14/scenarios/"
+    short_title: "Scenarios"
+    icon: "💼"
+    time: "30 min"
 objectives:
   - Understand and use Copilot Agents for complex tasks
   - Configure Model Context Protocol (MCP) servers
@@ -69,6 +74,22 @@ tags: [copilot, agents, mcp, extensions, enterprise, ai]
 prev_module:
   url: /advanced/module-13/
   title: "Module 13: GitHub Copilot Fundamentals"
+---
+
+## Welcome to Module 14
+
+Beyond code completions, GitHub Copilot offers powerful advanced capabilities including Agents, Model Context Protocol (MCP), Extensions, and enterprise administration features. This module covers these cutting-edge features to help organizations maximize their Copilot investment.
+
+### Why This Matters
+
+As a CSM, you'll help customers:
+
+- Leverage Copilot Agents for complex, multi-step development tasks
+- Configure MCP servers to provide Copilot with custom context
+- Build and deploy Copilot Extensions for specialized workflows
+- Administer Copilot at enterprise scale with policies and controls
+- Track adoption metrics and demonstrate ROI to stakeholders
+
 ---
 
 ## Module Sections

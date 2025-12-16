@@ -63,6 +63,22 @@ next_module:
   title: "Module 13: GitHub Copilot Fundamentals"
 ---
 
+## Welcome to Module 12
+
+Enterprise customers need to demonstrate the value of their GitHub investment while meeting governance and compliance requirements. This module covers DORA metrics, value stream mapping, compliance frameworks, and innersource practices to help organizations measure and improve their software delivery performance.
+
+### Why This Matters
+
+As a CSM, you'll help customers:
+
+- Measure engineering effectiveness with DORA metrics
+- Build compelling ROI narratives for GitHub adoption
+- Implement governance frameworks that satisfy compliance requirements
+- Identify bottlenecks in their software delivery pipeline
+- Foster innersource culture for cross-team collaboration
+
+---
+
 ## Module Sections
 
 Work through each section in order for the best learning experience:

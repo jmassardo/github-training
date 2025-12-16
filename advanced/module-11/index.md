@@ -63,6 +63,22 @@ next_module:
   title: "Module 12: Governance, Metrics & DORA"
 ---
 
+## Welcome to Module 11
+
+Managing GitHub at enterprise scale requires automation and consistency. This module teaches you Infrastructure as Code (IaC) practices using Terraform, Pulumi, and GitOps principles to manage GitHub organizations, repositories, and configurations programmatically.
+
+### Why This Matters
+
+As a CSM, you'll help customers:
+
+- Automate GitHub organization and repository provisioning at scale
+- Implement GitOps workflows for configuration management
+- Reduce manual administration overhead and human error
+- Ensure consistent security and compliance settings across repositories
+- Build self-service platforms that empower development teams
+
+---
+
 ## Module Sections
 
 Work through each section in order for the best learning experience:

@@ -55,7 +55,59 @@ sections:
 ---
 {% raw %}
 
+## Building Production-Ready CI/CD Pipelines
+
+Welcome to the hands-on walkthrough for CI/CD implementation! This section takes you from basic pipelines to production-grade deployment workflows with environments, approvals, and rollback capabilities.
+
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Tip</div>
+CI/CD is where GitHub Actions delivers transformational value. Walk customers through the full lifecycle—from commit to production—and highlight the integration with environments, branch protection, and audit logs. This is the "aha moment" where they see GitHub as a complete platform, not just source control.
+</div>
+
+**What you'll build:**
+- A complete CI pipeline with security scanning
+- Multi-environment CD with staging and production
+- Protected deployments with required approvals
+- Rollback workflows for failed deployments
+- Release automation with tagging
+
+**Documentation Reference:**
+- [Understanding GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)
+- [Deploying with GitHub Actions](https://docs.github.com/en/actions/deployment/about-deployments/deploying-with-github-actions)
+- [Managing environments](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment)
+
+---
+
 ## Walkthrough 1: Complete CI/CD Pipeline
+
+This walkthrough builds a production-ready pipeline that:
+1. **CI**: Validates code quality on every push
+2. **CD**: Deploys to staging automatically, then production with approval
+
+### Architecture Overview
+
+```
+PR Created/Push to main
+        ↓
+    CI Pipeline
+   ┌─────┴─────┐
+ Lint        Test
+   └─────┬─────┘
+       Build
+        ↓
+   Security Scan
+        ↓
+    (main only)
+        ↓
+   CD Pipeline
+        ↓
+    Staging
+        ↓
+  (approval gate)
+        ↓
+   Production
+```
+
 Create a full pipeline from commit to production.
 
 ### Step 1: CI Pipeline
@@ -120,7 +172,20 @@ jobs:
 
 ```
 
+<div class="callout callout-info">
+<div class="callout-title">📖 Understanding Job Dependencies</div>
+The <code>needs</code> keyword creates dependencies between jobs. <code>build</code> needs both <code>lint</code> and <code>test</code> to succeed—this means lint and test run in parallel, and build only starts when both complete successfully.
+</div>
+
 ### Step 2: CD Pipeline
+
+The CD pipeline triggers when CI succeeds, deploying through environments with appropriate gates.
+
+**Key Design Decisions:**
+- **workflow_run trigger**: Starts CD only after CI completes successfully
+- **concurrency control**: Prevents overlapping deployments
+- **environment protection**: Enforces approvals and branch restrictions
+
 `.github/workflows/cd.yml`:
 
 ```yaml
@@ -213,9 +278,28 @@ jobs:
 
 ```
 
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Tip</div>
+The environment URLs (<code>url: https://example.com</code>) are not just documentation—they appear in the GitHub UI as clickable links. This creates a single-click path from a PR to seeing the deployed result. Show this in demos—it's a subtle but powerful UX win.
+</div>
+
 ---
 
 ## Walkthrough 2: Configure GitHub Environments
+
+Environments are GitHub's built-in deployment target abstraction. They provide secret isolation, approval gates, and deployment tracking without external tools.
+
+### Why Use GitHub Environments?
+
+| Capability | Benefit |
+|------------|---------|
+| **Environment-specific secrets** | Same workflow, different credentials per environment |
+| **Required reviewers** | Approval gates before production |
+| **Wait timers** | Staged rollouts with automatic progression |
+| **Branch restrictions** | Only `main` can deploy to production |
+| **Deployment history** | Audit trail with who/what/when |
+
+**Documentation:** [Using environments for deployment](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment)
 
 ### Step 1: Create Environments
 1. Go to repository **Settings** → **Environments**
@@ -277,7 +361,30 @@ jobs:
 
 ```
 
+<div class="callout callout-info">
+<div class="callout-title">📖 Secrets vs. Variables</div>
+Use <code>secrets.</code> for sensitive values (encrypted, masked in logs). Use <code>vars.</code> for non-sensitive configuration (visible in logs, easier to debug). Environment-level secrets/variables are isolated—staging can't access production secrets.
+</div>
+
+---
+
 ## Walkthrough 3: Deploy to Azure
+
+This walkthrough demonstrates OIDC (OpenID Connect) authentication for cloud deployments—the modern, secretless approach to cloud authentication.
+
+### Why OIDC Over Service Principal Secrets?
+
+| Approach | Pros | Cons |
+|----------|------|------|
+| **Service Principal Secret** | Simple setup | Secrets expire, need rotation |
+| **OIDC Federated Credential** | No secrets to manage, auto-rotating | More initial setup |
+
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Tip</div>
+OIDC is a major security and operational win. Show customers the "subject" claim in the federated credential—it specifies exactly which repo/branch can assume this identity. This is least-privilege at the CI/CD level. Works with Azure, AWS, and GCP.
+</div>
+
+**Documentation:** [Configuring OpenID Connect in Azure](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-azure)
 
 ### Step 1: Set Up OIDC in Azure
 
@@ -478,7 +585,27 @@ jobs:
 
 ```
 
+---
+
 ## Walkthrough 5: Implementing Rollback
+
+Rollback capability is essential for production confidence. GitHub Actions can implement both manual (on-demand) and automatic (on-failure) rollback patterns.
+
+### Rollback Strategies
+
+| Strategy | Trigger | Use Case |
+|----------|---------|----------|
+| **Manual** | workflow_dispatch | Planned rollback, discovered issues |
+| **Automatic** | Health check failure | Fast recovery from bad deploys |
+| **Kubernetes native** | kubectl rollout undo | Quick container rollback |
+| **Blue-green** | Traffic switch | Zero-downtime rollback |
+
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Tip</div>
+Rollback workflows are a key risk mitigation story. When customers worry about "what if something goes wrong in production?", show them the manual rollback workflow with audit trail. The combination of approval gates + automated rollback = production safety net.
+</div>
+
+**Documentation:** [Creating a rollback workflow](https://docs.github.com/en/actions/deployment/about-deployments/deploying-with-github-actions#triggering-a-deployment)
 
 ### Step 1: Manual Rollback Workflow
 
@@ -606,5 +733,29 @@ deploy:
       run: exit 1
 
 ```
+
+---
+
+## Summary
+
+You've now built the components of a production-ready CI/CD system:
+
+| Component | Purpose |
+|-----------|---------|
+| **CI Pipeline** | Validate every change with tests and security scans |
+| **Environments** | Isolate secrets and add approval gates |
+| **Cloud Deployment** | OIDC authentication for Azure/AWS/GCP |
+| **Kubernetes Deployment** | Container orchestration with rolling updates |
+| **Rollback** | Recovery from failed deployments |
+
+<div class="callout callout-success">
+<div class="callout-title">✅ Ready for Labs</div>
+You've seen the patterns for enterprise-grade deployment pipelines. In the Hands-On Labs, you'll implement these workflows and see them in action.
+</div>
+
+**Next Steps:**
+- Complete the [Hands-On Labs](/intermediate/module-8/labs/) to build these pipelines
+- Review [Deployment security best practices](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/about-security-hardening-with-openid-connect)
+- Explore [GitHub Actions deployment examples](https://github.com/actions/starter-workflows/tree/main/deployments)
 
 {% endraw %}

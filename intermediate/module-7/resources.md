@@ -59,14 +59,31 @@ sections:
 - [Working with npm Registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry)
 - [Working with Container Registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry)
 - [Package Visibility](https://docs.github.com/en/packages/learn-github-packages/configuring-a-packages-access-control-and-visibility)
+
 ---
 
 ## Security Resources
 - [Supply Chain Security](https://docs.github.com/en/code-security/supply-chain-security)
 - [Artifact Attestations](https://docs.github.com/en/actions/security-guides/using-artifact-attestations-to-establish-provenance-for-builds)
 - [Sigstore](https://www.sigstore.dev/)
+- [SLSA Framework](https://slsa.dev/) - Supply chain Levels for Software Artifacts
 
 ## GitHub Actions for Packages
 - [docker/build-push-action](https://github.com/docker/build-push-action)
 - [docker/metadata-action](https://github.com/docker/metadata-action)
 - [actions/delete-package-versions](https://github.com/actions/delete-package-versions)
+- [actions/setup-node](https://github.com/actions/setup-node) - For npm publishing
+
+---
+
+## Package Management Tools
+- [Renovate](https://docs.renovatebot.com/) - Automated dependency updates
+- [npm audit](https://docs.npmjs.com/cli/v10/commands/npm-audit) - Security vulnerability scanning
+- [Snyk](https://snyk.io/) - Developer-focused security platform
+
+---
+
+## Best Practices
+- [npm Security Best Practices](https://snyk.io/blog/ten-npm-security-best-practices/)
+- [Container Image Best Practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
+- [Semantic Versioning](https://semver.org/)

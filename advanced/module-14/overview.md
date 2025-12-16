@@ -56,6 +56,11 @@ next_section:
   title: "Copilot Agents"
 ---
 
+<div class="callout callout-info">
+<div class="callout-title">🚀 Official Documentation</div>
+For comprehensive reference, see <a href="https://docs.github.com/en/copilot/using-github-copilot/using-extensions-to-integrate-external-tools-with-copilot-chat">Copilot Extensions</a>, <a href="https://docs.github.com/en/copilot/managing-copilot/managing-copilot-for-your-enterprise">Enterprise Administration</a>, and the <a href="https://docs.github.com/en/copilot/about-github-copilot/github-copilot-features">Copilot Features Overview</a>.
+</div>
+
 ## Beyond Code Completion
 
 Module 13 introduced GitHub Copilot fundamentals—inline completions, chat, and prompt engineering. This module explores Copilot's advanced capabilities that transform it from a code completion tool into an intelligent development platform.

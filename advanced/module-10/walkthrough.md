@@ -55,9 +55,46 @@ sections:
 ---
 {% raw %}
 
+## Building GitHub Integrations
+
+Welcome to the hands-on walkthrough for GitHub's integration ecosystem! This section guides you through building real integrations using the REST API, GraphQL API, webhooks, and GitHub Apps.
+
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Tip</div>
+API and integration discussions often arise when customers want to automate workflows beyond Actions, or integrate GitHub with existing tools. This is high-value territory—custom integrations create stickiness and demonstrate GitHub's platform extensibility.
+</div>
+
+**What you'll build:**
+- GraphQL queries for organization dashboards
+- Webhook receivers for automation
+- A GitHub App with authentication
+- Probot-based bot automation
+
+**Documentation Reference:**
+- [GitHub REST API](https://docs.github.com/en/rest)
+- [GitHub GraphQL API](https://docs.github.com/en/graphql)
+- [Webhooks](https://docs.github.com/en/webhooks)
+- [Creating GitHub Apps](https://docs.github.com/en/apps/creating-github-apps)
+
+---
+
 ## Section 3: Guided Walkthrough
 
 ### Walkthrough 3.1: Building a Repository Dashboard with GraphQL
+
+GraphQL excels at complex, nested queries that would require multiple REST calls. This walkthrough builds an organization dashboard showing repository metrics—a common customer request.
+
+### Why GraphQL Over REST for Dashboards?
+
+| Approach | API Calls | Data Control |
+|----------|-----------|--------------|
+| **REST** | 1 per repo + N for details | All fields returned |
+| **GraphQL** | 1 total | Only requested fields |
+
+For an org with 100 repos, this can be 100+ REST calls vs. 1 GraphQL call.
+
+**Documentation:** [Introduction to GraphQL](https://docs.github.com/en/graphql/guides/introduction-to-graphql)
+
 Create a dashboard showing organization repository metrics:
 
 #### Step 1: Define the Query
@@ -154,7 +191,26 @@ def generate_report(data):
 
 ```
 
+<div class="callout callout-info">
+<div class="callout-title">📖 Try It Live</div>
+You can test GraphQL queries interactively in the <a href="https://docs.github.com/en/graphql/overview/explorer">GitHub GraphQL Explorer</a>. It provides autocomplete and documentation right in the browser.
+</div>
+
+---
+
 ### Walkthrough 3.2: Setting Up Webhooks for Slack Notifications
+
+Webhooks enable real-time automation by notifying your systems when events occur in GitHub. This walkthrough builds a webhook receiver for Slack notifications.
+
+### Webhook Security
+
+<div class="callout callout-warning">
+<div class="callout-title">⚠️ Always Verify Webhook Signatures</div>
+Never trust webhook payloads without verification. GitHub signs payloads with your webhook secret using HMAC SHA-256. Always verify this signature before processing the payload.
+</div>
+
+**Documentation:** [Validating webhook deliveries](https://docs.github.com/en/webhooks/using-webhooks/validating-webhook-deliveries)
+
 Create a webhook that sends Slack notifications on PR events:
 
 #### Step 1: Create Webhook Server
@@ -230,7 +286,27 @@ if __name__ == '__main__':
 
 ```
 
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Tip</div>
+For customers building webhook integrations, recommend using <a href="https://smee.io">smee.io</a> during development. It proxies webhooks to localhost, eliminating the need for public URLs during testing.
+</div>
+
+---
+
 ### Walkthrough 3.3: Building a Simple GitHub App
+
+GitHub Apps are the recommended way to build integrations. They offer granular permissions, installation-level access tokens, and better rate limits than personal access tokens.
+
+### When to Use Each Integration Type
+
+| Type | Best For | Authentication |
+|------|----------|----------------|
+| **Personal Access Token** | Scripts, CLI tools | User token |
+| **OAuth App** | User-authorized actions | OAuth flow |
+| **GitHub App** | Automation, bots, services | App installation token |
+
+**Documentation:** [About creating GitHub Apps](https://docs.github.com/en/apps/creating-github-apps/about-creating-github-apps/about-creating-github-apps)
+
 Create a GitHub App that auto-labels issues:
 
 #### Step 1: Register the App
@@ -348,4 +424,29 @@ if __name__ == '__main__':
 1. Navigate to your app's public page
 2. Click "Install" and select organizations/repositories
 3. Test by creating a new issue
+
+---
+
+## Summary
+
+You've now explored GitHub's integration ecosystem:
+
+| Integration | Use Case |
+|-------------|----------|
+| **GraphQL API** | Complex queries, dashboards, batch operations |
+| **REST API** | Simple operations, CLI tools, scripts |
+| **Webhooks** | Real-time event notifications |
+| **GitHub Apps** | Production integrations, bots, automation |
+
+<div class="callout callout-success">
+<div class="callout-title">✅ Ready for Labs</div>
+You've seen the patterns for building GitHub integrations. In the Hands-On Labs, you'll implement these integrations and test them with real events.
+</div>
+
+**Next Steps:**
+- Complete the [Hands-On Labs](/advanced/module-10/labs/) to build working integrations
+- Explore [Octokit](https://github.com/octokit) for official GitHub API clients
+- Check out [Probot](https://probot.github.io/) for rapid GitHub App development
+- Review [GitHub App best practices](https://docs.github.com/en/apps/creating-github-apps/about-creating-github-apps/best-practices-for-creating-a-github-app)
+
 {% endraw %}

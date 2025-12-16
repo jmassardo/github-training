@@ -55,7 +55,42 @@ sections:
 ---
 {% raw %}
 
+## Getting Started with GitHub Advanced Security
+
+Welcome to the hands-on walkthrough for GitHub Advanced Security (GHAS)! This section guides you through enabling, configuring, and operationalizing the security features that protect your code and supply chain.
+
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Tip</div>
+GHAS rollouts are often the starting point for security-focused conversations. Customers frequently ask "where do I start?" The answer: Enable features progressively—start with Dependabot and secret scanning (quick wins), then add CodeQL for deeper analysis. This walkthrough follows that progression.
+</div>
+
+**What you'll configure:**
+- Repository and organization-level security settings
+- CodeQL for code scanning (default and advanced setup)
+- Dependabot for dependency management
+- Push protection for secret scanning
+- Alert triage workflows
+
+**Documentation Reference:**
+- [GitHub Advanced Security overview](https://docs.github.com/en/get-started/learning-about-github/about-github-advanced-security)
+- [Code scanning with CodeQL](https://docs.github.com/en/code-security/code-scanning/introduction-to-code-scanning/about-code-scanning-with-codeql)
+- [Secret scanning](https://docs.github.com/en/code-security/secret-scanning/about-secret-scanning)
+
+---
+
 ## Walkthrough 1: Enabling GHAS Features
+
+Enabling GHAS follows a hierarchy: **Enterprise → Organization → Repository**. Start at the appropriate level for your rollout strategy.
+
+### Understanding the Feature Hierarchy
+
+| Feature | License Required | Enable At |
+|---------|------------------|-----------|
+| **Dependency graph** | Free (public), Team+ (private) | Repository |
+| **Dependabot alerts** | Free (public), Team+ (private) | Organization/Repository |
+| **Secret scanning** | GHAS license | Organization/Repository |
+| **Push protection** | GHAS license | Organization/Repository |
+| **Code scanning** | GHAS license | Repository (workflow) |
 
 ### Step 1: Enable at Repository Level
 1. Go to repository **Settings** → **Code security and analysis**
@@ -80,9 +115,31 @@ sections:
 3. Add required status checks:
    - `CodeQL`
    - `Dependency Review`
+
+<div class="callout callout-info">
+<div class="callout-title">📖 Bulk Enablement</div>
+Organization admins can enable GHAS features across all repositories at once. Go to Organization Settings → Code security and analysis, then use the "Enable all" buttons. This is typically used during initial GHAS rollout to establish a baseline.
+</div>
+
+**Documentation:** [Configuring global security settings](https://docs.github.com/en/code-security/getting-started/securing-your-organization)
+
 ---
 
 ## Walkthrough 2: Configuring CodeQL
+
+CodeQL is GitHub's semantic code analysis engine. It queries your code like a database, finding vulnerabilities and anti-patterns that syntax-based tools miss.
+
+### Default vs. Advanced Setup
+
+| Setup Type | Best For | Configuration |
+|------------|----------|---------------|
+| **Default** | Quick start, standard languages | UI-based, auto-detected languages |
+| **Advanced** | Custom queries, monorepos, compiled languages | Workflow file, full control |
+
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Tip</div>
+Start customers with Default setup—it works for 80% of cases and shows value immediately. Move to Advanced setup when they need custom queries, build-mode control for compiled languages, or integration with their existing CI pipelines.
+</div>
 
 ### Step 1: Default Setup (Quick)
 1. Repository → **Security** tab → **Code scanning**
@@ -163,7 +220,28 @@ Create `.github/codeql/custom-queries/security.qls`:
 
 ```
 
+**Documentation:** [CodeQL CLI](https://docs.github.com/en/code-security/codeql-cli/getting-started-with-the-codeql-cli/about-the-codeql-cli) | [Query suites](https://docs.github.com/en/code-security/code-scanning/managing-your-code-scanning-configuration/codeql-query-suites)
+
+---
+
 ## Walkthrough 3: Configuring Dependabot
+
+Dependabot automates dependency updates, creating PRs when new versions are available. Combined with Dependabot alerts, it creates a complete vulnerability response workflow.
+
+### Dependabot Components
+
+| Component | Function |
+|-----------|----------|
+| **Dependabot alerts** | Notify you of known vulnerabilities |
+| **Dependabot security updates** | Auto-create PRs for security fixes |
+| **Dependabot version updates** | Keep all dependencies current (configurable) |
+
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Tip</div>
+Help customers tune Dependabot to avoid PR fatigue. Use grouping to batch minor/patch updates, schedule updates for low-activity times, and set up auto-merge for safe updates. An overwhelmed team ignores Dependabot; a well-configured team adopts it.
+</div>
+
+**Documentation:** [Configuring Dependabot version updates](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuring-dependabot-version-updates)
 
 ### Step 1: Create Dependabot Configuration
 `.github/dependabot.yml`:
@@ -269,9 +347,37 @@ jobs:
 
 ```
 
+<div class="callout callout-warning">
+<div class="callout-title">⚠️ Auto-Merge Caution</div>
+Auto-merge is powerful but requires good test coverage. Only auto-merge updates that your test suite can validate. Start conservative (patch updates to dev dependencies) and expand as confidence grows.
+</div>
+
 ---
 
 ## Walkthrough 4: Setting Up Push Protection
+
+Push protection prevents secrets from being committed in the first place—a proactive approach compared to alerting after the fact. It's one of the most impactful GHAS features for preventing credential leaks.
+
+### How Push Protection Works
+
+```
+Developer commits file with secret
+         ↓
+    git push
+         ↓
+GitHub detects secret pattern
+         ↓
+  Push is BLOCKED
+         ↓
+Developer removes secret or bypasses (with audit trail)
+```
+
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Tip</div>
+Push protection is often the fastest path to GHAS value. It requires no workflow changes—developers just try to push and get blocked. Use this as the "hook" in demos: commit a fake AWS key and watch it get blocked in real-time.
+</div>
+
+**Documentation:** [Push protection for secret scanning](https://docs.github.com/en/code-security/secret-scanning/push-protection-for-repositories-and-organizations)
 
 ### Step 1: Enable Push Protection
 1. Repository **Settings** → **Code security and analysis**
@@ -307,7 +413,32 @@ At organization level, configure who receives notifications when push protection
 - Security team
 - Repository administrators
 
+---
+
 ## Walkthrough 5: Triaging Security Alerts
+
+Alert triage is where security tooling meets security practice. Having the right workflow turns GHAS from "more alerts" into "actionable security insights."
+
+### Triage Workflow Overview
+
+```
+New Alert Created
+       ↓
+Review in Security Overview (org) or Security tab (repo)
+       ↓
+Assess: Is it real? Is it critical?
+       ↓
+Action: Fix, Dismiss (with reason), or Create Issue
+       ↓
+Track metrics: Mean time to remediate
+```
+
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Tip</div>
+Help customers establish an alert triage process before rollout. Questions to answer: Who reviews alerts? What's the SLA by severity? Who can dismiss? Without answers, alerts pile up and teams lose trust in the tooling.
+</div>
+
+**Documentation:** [Managing code scanning alerts](https://docs.github.com/en/code-security/code-scanning/managing-code-scanning-alerts/managing-code-scanning-alerts-for-your-repository)
 
 ### Step 1: Access Security Overview
 For organization-wide view:
@@ -365,5 +496,29 @@ jobs:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
 
 ```
+
+---
+
+## Summary
+
+You've now configured the core GHAS capabilities:
+
+| Feature | Value Delivered |
+|---------|-----------------|
+| **Dependabot** | Automated dependency updates and vulnerability alerts |
+| **Secret scanning** | Detection of exposed credentials |
+| **Push protection** | Proactive secret leak prevention |
+| **CodeQL** | Deep semantic code analysis |
+| **Alert triage** | Operational security workflow |
+
+<div class="callout callout-success">
+<div class="callout-title">✅ Ready for Labs</div>
+You've seen how to enable and configure GHAS features. In the Hands-On Labs, you'll work with real alerts and practice the triage workflow.
+</div>
+
+**Next Steps:**
+- Complete the [Hands-On Labs](/intermediate/module-6/labs/) to practice alert triage
+- Review [Security Overview documentation](https://docs.github.com/en/code-security/security-overview/about-security-overview)
+- Explore [Custom CodeQL queries](https://codeql.github.com/docs/codeql-language-guides/)
 
 {% endraw %}

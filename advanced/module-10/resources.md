@@ -80,3 +80,20 @@ sections:
 - [Delete Merged Branch](https://github.com/SvanBoxel/delete-merged-branch) - Auto-delete branches
 - [Auto-assign](https://github.com/kentaro-m/auto-assign) - Auto-assign PR reviewers
 
+### Best Practices Guides
+
+| Guide | Focus Area |
+|-------|------------|
+| [GitHub App Best Practices](https://docs.github.com/en/apps/creating-github-apps/about-creating-github-apps/best-practices-for-creating-a-github-app) | App design and security |
+| [Rate Limiting Best Practices](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api) | Handling API limits |
+| [Webhook Security](https://docs.github.com/en/webhooks/using-webhooks/validating-webhook-deliveries) | Validating webhook payloads |
+
+### Development Tools
+
+| Tool | Purpose |
+|------|---------|
+| [Postman GitHub Collection](https://www.postman.com/github-api) | API testing and exploration |
+| [Insomnia](https://insomnia.rest/) | REST/GraphQL client |
+| [ngrok](https://ngrok.com/) | Expose localhost for webhook testing |
+| [act](https://github.com/nektos/act) | Run GitHub Actions locally |
+

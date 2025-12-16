@@ -47,6 +47,11 @@ next_section:
   title: "Guided Walkthrough"
 ---
 
+<div class="callout callout-info">
+<div class="callout-title">🏗️ Official Documentation</div>
+For comprehensive reference, see the <a href="https://registry.terraform.io/providers/integrations/github/latest/docs">GitHub Terraform Provider</a> and <a href="https://docs.github.com/en/rest/orgs">Organization API Documentation</a>.
+</div>
+
 ## GitHub Terraform Provider Deep Dive
 
 The GitHub Terraform Provider enables declarative management of GitHub resources including repositories, teams, branch protection rules, and organization settings.

@@ -59,6 +59,11 @@ next_section:
   title: "IDE Setup"
 ---
 
+<div class="callout callout-info">
+<div class="callout-title">🤖 Official Documentation</div>
+For comprehensive reference, see <a href="https://docs.github.com/en/copilot">GitHub Copilot Documentation</a> and the <a href="https://docs.github.com/en/copilot/getting-started-with-github-copilot">Getting Started Guide</a>.
+</div>
+
 ## How GitHub Copilot Works
 
 Understanding Copilot's architecture helps you use it more effectively and address customer questions with confidence.

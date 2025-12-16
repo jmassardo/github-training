@@ -47,11 +47,50 @@ next_section:
   title: "Hands-On Labs"
 ---
 
+## Building Enterprise Governance & Metrics Programs
+
+Welcome to the hands-on walkthrough for GitHub governance and metrics! This section guides you through implementing enterprise-grade governance policies and DORA metrics collection.
+
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Tip</div>
+Governance and metrics are executive-level conversations. This walkthrough addresses three common concerns: "How do we enforce policies?" (rulesets), "How do we prove compliance?" (audit logs), and "How do we measure improvement?" (DORA metrics). Be prepared to connect these to business outcomes.
+</div>
+
+**What you'll implement:**
+- Enterprise and organization policies
+- Repository rulesets for branch protection at scale
+- Audit log streaming and analysis
+- DORA metrics collection and dashboards
+
+**Documentation Reference:**
+- [GitHub Enterprise administration](https://docs.github.com/en/enterprise-cloud@latest/admin)
+- [Managing rulesets](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets)
+- [Audit log](https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/reviewing-the-audit-log-for-your-organization)
+
+---
+
 ## Walkthrough: Building a Governance & Metrics Program
 
 This walkthrough guides you through implementing enterprise governance and DORA metrics collection for a GitHub organization.
 
+---
+
 ## Part 1: Governance Implementation
+
+Enterprise governance in GitHub follows a hierarchy: **Enterprise → Organization → Repository**. Policies set at higher levels cascade down, with lower levels able to be more restrictive but not more permissive.
+
+### Governance Hierarchy
+
+| Level | Controls | Managed By |
+|-------|----------|------------|
+| **Enterprise** | Cross-org policies, SSO, audit | Enterprise admins |
+| **Organization** | Default settings, rulesets, teams | Org owners |
+| **Repository** | Specific branch rules, secrets | Repo admins |
+
+<div class="callout callout-info">
+<div class="callout-title">📖 Policy Inheritance</div>
+Enterprise policies set the boundaries. For example, if the enterprise disables forking for private repos, no organization can override this. Organizations can add restrictions but cannot remove enterprise-level restrictions.
+</div>
 
 ### Step 1: Enterprise Policy Configuration
 
@@ -127,9 +166,30 @@ bypass_actors:
 
 ```
 
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Tip</div>
+Organization rulesets are a major governance win. They apply to ALL matching repositories automatically—no per-repo configuration. When customers ask "how do we enforce branch protection across 500 repos?", this is the answer.
+</div>
+
+**Documentation:** [Managing rulesets for an organization](https://docs.github.com/en/organizations/managing-organization-settings/managing-rulesets-for-repositories-in-your-organization)
+
+---
+
 ### Step 3: Audit Log Streaming
 
-Configure audit log streaming to your SIEM or storage:
+Audit logs record who did what, when, and where. Streaming sends these logs to external systems for long-term retention and analysis—often required for compliance.
+
+### Supported Streaming Destinations
+
+| Destination | Use Case |
+|-------------|----------|
+| **Amazon S3** | Long-term storage, Athena queries |
+| **Azure Blob Storage** | Azure ecosystem integration |
+| **Azure Event Hubs** | Real-time processing |
+| **Google Cloud Storage** | GCP ecosystem |
+| **Splunk** | SIEM integration |
+
+**Documentation:** [Streaming the audit log](https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/streaming-the-audit-log-for-your-enterprise)
 
 **For AWS S3:**
 
@@ -158,11 +218,31 @@ ORDER BY timestamp DESC;
 
 ```
 
+---
+
 ## Part 2: DORA Metrics Implementation
+
+DORA (DevOps Research and Assessment) metrics measure software delivery performance. They're the gold standard for understanding engineering effectiveness.
+
+### The Four Key Metrics
+
+| Metric | What It Measures | Elite Performance |
+|--------|------------------|-------------------|
+| **Deployment Frequency** | How often you deploy | Multiple times per day |
+| **Lead Time for Changes** | Time from commit to production | Less than 1 hour |
+| **Change Failure Rate** | % of deployments causing incidents | Less than 5% |
+| **Time to Restore** | Time to recover from incidents | Less than 1 hour |
+
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Tip</div>
+DORA metrics resonate with engineering leadership because they're research-backed and industry-standard. Frame GitHub adoption around improving these metrics: "Actions enables higher deployment frequency," "PR reviews reduce change failure rate," etc.
+</div>
+
+**Documentation:** [DORA metrics](https://dora.dev/quickcheck/)
 
 ### Step 4: Define Deployment Events
 
-Create a workflow that records deployments:
+To measure deployment frequency and lead time, you need to record deployments explicitly. GitHub's Deployments API provides this:
 
 ```yaml
 # .github/workflows/deploy-production.yml
@@ -392,7 +472,25 @@ jobs:
 
 ```
 
+---
+
 ## Part 3: Compliance Reporting
+
+Compliance reporting answers the question "are we following our policies?" Automated checks ensure drift is detected early and remediated.
+
+### Common Compliance Requirements
+
+| Requirement | GitHub Feature | Automated Check |
+|-------------|----------------|-----------------|
+| Code review | Branch protection | API check for rules |
+| Access control | Teams, CODEOWNERS | API check for files |
+| Vulnerability management | Dependabot alerts | API check for enabled |
+| Secret protection | Secret scanning | API check for enabled |
+
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Tip</div>
+Compliance automation is a huge time-saver for security teams. Instead of manually auditing repositories, they get weekly reports showing exactly which repos need attention. Frame this as "security at scale" for enterprise customers.
+</div>
 
 ### Step 7: Security Posture Dashboard
 
@@ -526,20 +624,29 @@ gh api /enterprises/ENTERPRISE/audit-log?phrase=action:user.failed_login
 
 ```
 
-## Walkthrough Summary
+---
 
-You've implemented:
+## Summary
+
+You've implemented a comprehensive governance and metrics program:
 
 | Component | Purpose |
 |-----------|---------|
-| Enterprise Policies | Enforce security baseline |
-| Repository Rulesets | Consistent branch protection |
-| Audit Log Streaming | Compliance documentation |
-| Deployment Tracking | DORA: Deployment Frequency |
-| PR Metrics | DORA: Lead Time |
-| Weekly Reports | Automated metrics aggregation |
-| Compliance Checks | Security posture monitoring |
+| **Enterprise Policies** | Enforce security baseline across orgs |
+| **Repository Rulesets** | Consistent branch protection at scale |
+| **Audit Log Streaming** | Compliance documentation and forensics |
+| **Deployment Tracking** | DORA: Deployment Frequency |
+| **PR Metrics** | DORA: Lead Time |
+| **Weekly Reports** | Automated metrics aggregation |
+| **Compliance Checks** | Security posture monitoring |
 
----
+<div class="callout callout-success">
+<div class="callout-title">✅ Ready for Labs</div>
+You've seen how to implement enterprise governance and measure engineering effectiveness. In the Hands-On Labs, you'll apply these patterns to real scenarios.
+</div>
 
-**Next:** Practice these implementations in the Hands-On Labs.
+**Next Steps:**
+- Complete the [Hands-On Labs](/advanced/module-12/labs/) to implement governance
+- Review [GitHub's Security Overview](https://docs.github.com/en/code-security/security-overview/about-security-overview) for org-wide visibility
+- Explore [DORA's State of DevOps reports](https://dora.dev/research/) for benchmarking
+- Consider third-party tools like [Faros AI](https://www.faros.ai/) or [LinearB](https://linearb.io/) for advanced metrics

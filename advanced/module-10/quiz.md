@@ -99,6 +99,18 @@ B) Use page and per_page parameters
 C) Use cursor parameter  
 D) Use limit and skip parameters
 
+**Question 9:** When building a GitHub App, what determines which repositories the app can access?
+A) The permissions requested at app creation  
+B) Where the app is installed and the permissions granted  
+C) The app's client ID  
+D) The app owner's permissions
+
+**Question 10:** What is a key advantage of using a GitHub App over OAuth Apps for automation?
+A) GitHub Apps don't require any configuration  
+B) GitHub Apps have higher rate limits and don't consume a user's rate limit  
+C) GitHub Apps work without webhooks  
+D) GitHub Apps can only be installed organization-wide
+
 ### Answer Key
 1. **C** - GraphQL allows precise data fetching, reducing over-fetching and multiple requests
 2. **B** - GitHub App JWTs can be valid for up to 10 minutes
@@ -108,6 +120,20 @@ D) Use limit and skip parameters
 6. **B** - GitHub returns 403 for rate limiting (check response body for details)
 7. **B** - X-GitHub-Event header contains the event type
 8. **B** - Use page and per_page query parameters for pagination
+9. **B** - App access depends on installation location and the permissions granted during installation
+10. **B** - GitHub Apps get 5,000 requests per installation, separate from user quotas
+
+---
+
+## Self-Assessment
+
+After completing this quiz, assess your understanding:
+
+- **9-10 correct**: Excellent! You have a strong grasp of GitHub APIs and Apps.
+- **7-8 correct**: Good understanding. Review the concepts you missed.
+- **5-6 correct**: Fair understanding. Consider reviewing the Core Concepts section.
+- **Below 5**: Review the entire module before proceeding.
+
 {% endraw %}
 <div class="section-nav">
   <a href="{{ '/advanced/module-10/labs/' | relative_url }}" class="prev">← Hands-On Labs</a>

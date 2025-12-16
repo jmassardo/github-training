@@ -49,9 +49,24 @@ next_section:
 
 # Guided Walkthrough
 
+In this walkthrough, you'll learn how to configure enterprise identity management features that customers commonly implement when adopting GitHub Enterprise Cloud. These are hands-on tasks you'll guide customers through or troubleshoot during their rollout.
+
+> **📚 Official Documentation:** [Managing your enterprise's identity and access](https://docs.github.com/en/enterprise-cloud@latest/admin/identity-and-access-management)
+
+---
+
 ## Walkthrough 3.1: Configuring SAML SSO with Azure AD
 
-This walkthrough demonstrates configuring SAML SSO using Microsoft Entra ID (Azure AD):
+SAML Single Sign-On (SSO) allows enterprise users to authenticate to GitHub using their corporate identity provider. This walkthrough uses Microsoft Entra ID (formerly Azure AD), the most common IdP for GitHub Enterprise customers.
+
+### Why SAML SSO?
+
+- **Centralized authentication** — Users sign in with corporate credentials
+- **Automatic offboarding** — Disabling the IdP account revokes GitHub access
+- **Compliance** — Meet audit requirements for centralized access control
+- **MFA enforcement** — Leverage your IdP's MFA policies
+
+> **📚 Learn more:** [Configuring SAML single sign-on for your enterprise](https://docs.github.com/en/enterprise-cloud@latest/admin/identity-and-access-management/using-saml-for-enterprise-iam/configuring-saml-single-sign-on-for-your-enterprise)
 
 ### Step 1: Create Enterprise Application in Azure AD
 
@@ -109,9 +124,29 @@ SAML Configuration:
 4. Click **Test SAML configuration** with your account
 5. Once verified, enable **Require SAML authentication**
 
+<div class="callout callout-warning">
+<div class="callout-title">⚠️ Before Requiring SAML</div>
+
+Always test with a few users first! Once you require SAML authentication, users who can't authenticate via your IdP will be locked out. Ensure you have:
+- At least one enterprise owner who can authenticate
+- Recovery codes saved for emergency access
+- A communication plan for affected users
+</div>
+
 ---
 
 ## Walkthrough 3.2: Setting Up SCIM Provisioning
+
+SCIM (System for Cross-domain Identity Management) automates user lifecycle management. When you add or remove users in your IdP, those changes automatically sync to GitHub.
+
+### Why SCIM?
+
+- **Automated provisioning** — New hires get GitHub access automatically
+- **Automated deprovisioning** — Departing employees lose access immediately
+- **Group/Team sync** — IdP groups map to GitHub teams
+- **Audit compliance** — All access changes flow through your IdP
+
+> **📚 Learn more:** [Configuring SCIM provisioning for Enterprise Managed Users](https://docs.github.com/en/enterprise-cloud@latest/admin/identity-and-access-management/using-enterprise-managed-users-for-iam/configuring-scim-provisioning-for-enterprise-managed-users)
 
 ### Step 1: Enable SCIM in GitHub
 
@@ -158,13 +193,32 @@ Optional (for team sync):
 3. Once validated, enable **Full sync**
 4. Monitor provisioning logs for errors
 
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Tip</div>
+
+SCIM provisioning runs on a schedule (typically every 40 minutes in Azure AD). For immediate user provisioning, use "Provision on demand" or have customers adjust the provisioning interval.
+</div>
+
 ---
 
 ## Walkthrough 3.3: Enterprise Migration with GitHub Enterprise Importer
 
-Migrate repositories from other platforms to GitHub Enterprise Cloud:
+GitHub Enterprise Importer (GEI) is the recommended tool for migrating repositories from other platforms to GitHub Enterprise Cloud. It handles git history, pull requests, and issues while generating detailed migration logs.
+
+### Supported Source Platforms
+
+| Source | What Migrates | What Doesn't |
+|--------|--------------|--------------|
+| **Azure DevOps** | Repos, PRs, work items (as issues) | Pipelines, boards |
+| **Bitbucket Server** | Repos, PRs | Pipelines, projects |
+| **GitHub Enterprise Server** | Everything | N/A |
+| **GitLab** | Repos, MRs, issues | CI/CD, packages |
+
+> **📚 Learn more:** [About GitHub Enterprise Importer](https://docs.github.com/en/migrations/using-github-enterprise-importer/understanding-github-enterprise-importer/about-github-enterprise-importer)
 
 ### Step 1: Install GitHub CLI Extension
+
+The GEI CLI extension simplifies migration by generating scripts and managing the migration process. It's the recommended approach over manual API calls.
 
 ```bash
 # Install the GitHub Enterprise Importer extension
@@ -226,12 +280,34 @@ gh api repos/target-github-org/my-repository/branches/main/protection
 
 ```
 
+<div class="callout callout-info">
+<div class="callout-title">📋 Post-Migration Checklist</div>
+
+After migration, help customers verify:
+- [ ] All branches migrated correctly
+- [ ] PR history is preserved
+- [ ] Issues and comments are intact
+- [ ] Repository settings configured (visibility, features)
+- [ ] Branch protection rules recreated
+- [ ] Webhooks reconfigured
+- [ ] CI/CD workflows updated for GitHub Actions
+- [ ] Team access configured
+</div>
+
 ---
 
 ## Key Takeaways
 
-1. **SAML SSO** provides enterprise authentication through your identity provider
-2. **SCIM** automates the user provisioning lifecycle
-3. **GitHub Enterprise Importer** simplifies migrations from other platforms
-4. Always **test configurations** with a single user before full rollout
-5. **Document recovery procedures** before enabling SSO requirements
+| Topic | Key Points |
+|-------|------------|
+| **SAML SSO** | Enterprise authentication through identity provider; test before requiring |
+| **SCIM** | Automates user provisioning lifecycle; sync delay is normal |
+| **GEI Migrations** | Use CLI extension; plan for post-migration configuration |
+| **Best Practices** | Always test with small groups; document recovery procedures |
+
+### Additional Resources
+
+- [Enterprise Identity Management](https://docs.github.com/en/enterprise-cloud@latest/admin/identity-and-access-management)
+- [SAML Configuration Guide](https://docs.github.com/en/enterprise-cloud@latest/admin/identity-and-access-management/using-saml-for-enterprise-iam)
+- [GitHub Enterprise Importer](https://docs.github.com/en/migrations/using-github-enterprise-importer)
+- [Migration Best Practices](https://docs.github.com/en/migrations/using-github-enterprise-importer/understanding-github-enterprise-importer/best-practices-for-github-enterprise-importer)

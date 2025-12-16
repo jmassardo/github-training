@@ -56,6 +56,11 @@ sections:
 
 ## 2.1 GitHub Actions Architecture
 
+<div class="callout callout-info">
+<div class="callout-title">📖 Official Documentation</div>
+For comprehensive reference, see the <a href="https://docs.github.com/en/actions">GitHub Actions Documentation</a>.
+</div>
+
 <div class="mermaid-container">
 <div class="mermaid">
 flowchart TB

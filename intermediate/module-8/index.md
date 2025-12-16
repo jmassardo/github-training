@@ -61,6 +61,16 @@ next_module:
 
 This module covers CI/CD pipelines and deployment with GitHub Actions, including deployment strategies, GitHub Environments, cloud platform integrations, and rollback procedures. You'll learn how to build reliable deployment pipelines that meet enterprise requirements.
 
+### Why This Matters
+
+As a CSM, you'll help customers:
+
+- Design deployment pipelines that balance speed and safety
+- Implement environment protection rules for compliance
+- Choose appropriate deployment strategies for their risk tolerance
+- Integrate with major cloud platforms (Azure, AWS, GCP)
+- Build confidence in their release processes with reliable rollbacks
+
 ---
 
 ## Module Sections

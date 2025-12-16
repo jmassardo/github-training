@@ -46,6 +46,11 @@ next_section:
   title: "Guided Walkthrough"
 ---
 
+<div class="callout callout-info">
+<div class="callout-title">📚 Official Documentation</div>
+For comprehensive reference, see <a href="https://git-scm.com/doc">Git Documentation</a> and <a href="https://docs.github.com/en/get-started/getting-started-with-git">GitHub's Git Guide</a>.
+</div>
+
 ## Git's Mental Model
 
 Understanding Git requires understanding a few key concepts. Let's build your mental model step by step.

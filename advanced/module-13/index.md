@@ -58,6 +58,11 @@ sections:
     short_title: "Resources"
     icon: "📖"
     time: "10 min"
+  - title: "CSM Scenarios"
+    url: "/advanced/module-13/scenarios/"
+    short_title: "Scenarios"
+    icon: "💼"
+    time: "30 min"
 objectives:
   - Understand GitHub Copilot architecture and capabilities
   - Configure Copilot across different IDEs
@@ -72,6 +77,22 @@ prev_module:
 next_module:
   url: /advanced/module-14/
   title: "Module 14: GitHub Copilot Advanced"
+---
+
+## Welcome to Module 13
+
+GitHub Copilot is transforming how developers write code. This module covers the fundamentals of AI-assisted development, including IDE setup, prompt engineering techniques, Copilot Chat, and best practices for maximizing developer productivity with AI pair programming.
+
+### Why This Matters
+
+As a CSM, you'll help customers:
+
+- Successfully roll out Copilot across their development teams
+- Train developers on effective prompt crafting techniques
+- Configure Copilot across different IDEs and workflows
+- Measure and communicate productivity improvements
+- Address common adoption challenges and developer concerns
+
 ---
 
 ## Module Sections

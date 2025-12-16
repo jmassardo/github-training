@@ -55,6 +55,11 @@ sections:
 ---
 {% raw %}
 
+<div class="callout callout-info">
+<div class="callout-title">📦 Official Documentation</div>
+For comprehensive reference, see <a href="https://docs.github.com/en/packages">GitHub Packages Documentation</a> and the <a href="https://docs.github.com/en/packages/working-with-a-github-packages-registry">Package Registry Guides</a>.
+</div>
+
 ## 2.1 Supported Package Ecosystems
 
 | Ecosystem | Registry URL | Package Format |
@@ -65,6 +70,7 @@ sections:
 | NuGet | nuget.pkg.github.com | Owner.Package |
 | RubyGems | rubygems.pkg.github.com | owner-package |
 | Containers | ghcr.io | ghcr.io/owner/image |
+
 ---
 
 ## 2.2 Authentication
@@ -125,6 +131,7 @@ ghcr.io/acme/api-server:sha-abc1234
 | Immutable tags | Prevent tag overwriting |
 | Vulnerability scanning | Dependabot for containers |
 | Multi-arch support | AMD64, ARM64, etc. |
+
 ---
 
 ## 2.4 Package Visibility
@@ -196,7 +203,18 @@ ghcr.io/org/app:production
 
 ## 2.6 Supply Chain Security
 
+Modern software relies heavily on open source dependencies, making supply chain security critical. GitHub provides tools to verify the integrity and provenance of packages.
+
 ### Software Bill of Materials (SBOM)
+
+An **SBOM** is a comprehensive inventory of all components in your software—think of it as an "ingredients list" for your application. SBOMs help organizations:
+
+- **Track dependencies** - Know exactly what's in your software
+- **Respond to vulnerabilities** - Quickly identify affected projects when a CVE is announced
+- **Meet compliance requirements** - Many regulations now require SBOM documentation
+- **Audit third-party software** - Verify what vendors include in their products
+
+GitHub can automatically generate SBOMs in industry-standard formats like CycloneDX and SPDX:
 
 ```json
 {
@@ -215,7 +233,15 @@ ghcr.io/org/app:production
 ```
 
 ### Package Provenance
-Cryptographic proof of where a package came from:
+
+**Provenance** is cryptographic proof of where a package came from and how it was built. This addresses supply chain attacks where malicious actors publish compromised packages. With provenance, consumers can verify:
+
+- **Source repository** - The package came from the expected repository
+- **Build process** - It was built by a trusted CI system (not a developer's laptop)
+- **Commit hash** - The exact source code version used
+- **Signing** - The package hasn't been tampered with since building
+
+GitHub Actions can automatically generate and sign provenance attestations using Sigstore:
 
 ```
 Package: my-library@1.2.3

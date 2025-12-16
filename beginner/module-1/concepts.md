@@ -47,6 +47,11 @@ next_section:
   title: "Guided Walkthrough"
 ---
 
+<div class="callout callout-info">
+<div class="callout-title">📚 Getting Started</div>
+New to GitHub? Start with the <a href="https://docs.github.com/en/get-started">Getting Started Guide</a> and explore the <a href="https://github.com/skills">GitHub Skills</a> interactive tutorials.
+</div>
+
 ## Software Development Lifecycle (SDLC)
 
 The SDLC is the process of planning, creating, testing, and deploying software. While models vary, most include these phases:
