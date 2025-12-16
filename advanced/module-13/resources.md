@@ -55,6 +55,8 @@ prev_section:
   url: /advanced/module-13/quiz/
   title: "Knowledge Check"
 next_section:
+  url: /advanced/module-13/scenarios/
+  title: "CSM Scenarios"
 next_module:
   url: /advanced/module-14/
   title: "Module 14: GitHub Copilot Advanced"

@@ -54,6 +54,9 @@ toc: true
 prev_section:
   url: /advanced/module-14/quiz/
   title: "Knowledge Check"
+next_section:
+  url: /advanced/module-14/scenarios/
+  title: "CSM Scenarios"
 ---
 
 ## Documentation & Learning Resources

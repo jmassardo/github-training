@@ -55,6 +55,11 @@ sections:
 ---
 {% raw %}
 
+<div class="callout callout-info">
+<div class="callout-title">🚀 Official Documentation</div>
+For comprehensive reference, see <a href="https://docs.github.com/en/actions/use-cases-and-examples/deploying/deploying-with-github-actions">GitHub Actions Deployment</a> and <a href="https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment">Using Environments</a>.
+</div>
+
 ## 2.1 CI/CD Pipeline Stages
 
 <div class="mermaid-container">
@@ -130,8 +135,13 @@ flowchart TD
 
 ## 2.3 Deployment Strategies
 
+Choosing the right deployment strategy depends on your risk tolerance, infrastructure capabilities, and how quickly you need to roll back if problems occur. Each strategy makes different trade-offs between complexity, cost, and safety.
+
 ### Rolling Deployment
-Gradually replace old instances with new:
+
+A **rolling deployment** gradually replaces old instances with new ones, typically one or a few at a time. This is the default strategy for many orchestration platforms like Kubernetes.
+
+**When to use:** Teams with good health checks and monitoring who want zero-downtime deployments without extra infrastructure.
 
 <div class="mermaid-container">
 <div class="mermaid">
@@ -162,7 +172,10 @@ flowchart LR
 **Cons:** Mixed versions during deployment, slow rollback
 
 ### Blue-Green Deployment
-Maintain two identical environments:
+
+A **blue-green deployment** maintains two identical production environments. At any time, one ("blue") serves live traffic while the other ("green") is idle or running the new version. Switching is instant—just update the load balancer.
+
+**When to use:** Organizations that need instant rollback capability and can afford to run two production environments. Common in regulated industries where rollback speed is critical.
 
 <div class="mermaid-container">
 <div class="mermaid">
@@ -190,7 +203,10 @@ flowchart TD
 **Cons:** Double infrastructure cost
 
 ### Canary Deployment
-Route a percentage of traffic to new version:
+
+A **canary deployment** routes a small percentage of production traffic to the new version while monitoring for errors. If the canary performs well, traffic is gradually increased until the new version serves 100% of requests.
+
+**When to use:** Teams with sophisticated monitoring who want to validate changes with real production traffic before full rollout. Named after the "canary in a coal mine" practice.
 
 <div class="mermaid-container">
 <div class="mermaid">

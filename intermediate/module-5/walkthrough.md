@@ -55,7 +55,40 @@ sections:
 ---
 {% raw %}
 
+## Getting Started with GitHub Actions Workflows
+
+Welcome to the hands-on walkthrough for GitHub Actions! This section takes you through building real CI/CD workflows step-by-step, explaining the reasoning behind each configuration choice.
+
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Tip</div>
+GitHub Actions is often the "aha moment" for customers. Walking through these examples during enablement sessions helps teams see how Actions fits into their existing development workflow. Focus on the progressive complexity—start simple, then show the power of matrices and reusable workflows.
+</div>
+
+**What you'll build:**
+- A complete CI pipeline with linting, testing, and building
+- Matrix testing across multiple platforms and versions  
+- Reusable workflows for organizational standardization
+- Composite actions for custom automation
+- Conditional workflows and advanced patterns
+
+**Documentation Reference:**
+- [Workflow syntax for GitHub Actions](https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions)
+- [Using workflows](https://docs.github.com/en/actions/using-workflows)
+- [Actions marketplace](https://github.com/marketplace?type=actions)
+
+---
+
 ## Walkthrough 1: Your First CI Pipeline
+
+A CI (Continuous Integration) pipeline automatically validates code changes through linting, testing, and building. This ensures every commit meets quality standards before merging.
+
+### Why This Pipeline Structure?
+
+This example demonstrates a **parallel job architecture** where lint and test run simultaneously, with the build job waiting for both to succeed. This pattern:
+- Provides fast feedback on failures
+- Uses runner resources efficiently
+- Creates clear visual progress in the Actions UI
+
 Let's create a complete CI pipeline for a Node.js project.
 
 ### Step 1: Create the Workflow File
@@ -149,9 +182,34 @@ git push origin main
 2. Click on the workflow run
 3. Observe jobs running in parallel
 4. Click into each job to see step logs
+
+<div class="callout callout-info">
+<div class="callout-title">📖 Understanding the Workflow</div>
+Notice how the <code>build</code> job uses <code>needs: [lint, test]</code>. This creates a dependency graph where build only runs after both lint and test succeed. The Actions UI visualizes this as a workflow diagram, making it easy to see where failures occur.
+</div>
+
 ---
 
 ## Walkthrough 2: Matrix Testing
+
+Matrix builds let you test your code across multiple combinations of operating systems, language versions, or other variables—all from a single workflow definition. This is essential for libraries and tools that need to work across diverse environments.
+
+### When to Use Matrix Testing
+
+| Scenario | Matrix Dimensions |
+|----------|-------------------|
+| **Public libraries** | OS + language versions customers might use |
+| **Internal tools** | OS versions matching your fleet |
+| **Web applications** | Browser versions + Node versions |
+| **Microservices** | Runtime versions + database versions |
+
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Tip</div>
+Matrix testing is a powerful selling point for GitHub Actions. Show customers how a single workflow can replace complex Jenkins pipeline matrices or manually maintained test configurations. The <code>fail-fast: false</code> option lets all combinations complete even if one fails—great for understanding the full compatibility picture.
+</div>
+
+**Documentation:** [Using a matrix for your jobs](https://docs.github.com/en/actions/using-jobs/using-a-matrix-for-your-jobs)
+
 Create a cross-platform, multi-version test workflow.
 
 ```yaml
@@ -196,8 +254,27 @@ jobs:
 
 ```
 
+---
+
 ## Walkthrough 3: Reusable Workflows
-Create a reusable workflow that can be called from other workflows.
+
+Reusable workflows let you define a workflow once and call it from multiple other workflows. This is the **key to organizational standardization**—define your CI/CD patterns centrally, then have all teams use them consistently.
+
+### Why Reusable Workflows Matter
+
+Organizations often struggle with:
+- Inconsistent CI/CD patterns across teams
+- Duplicated workflow code that drifts over time
+- No central place to enforce best practices
+
+Reusable workflows solve this by creating a **"workflow library"** that teams can call with different parameters.
+
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Tip</div>
+Reusable workflows are a major governance win for enterprise customers. Help them identify 3-5 common patterns (build, deploy, security scan) that can be standardized. A central DevOps or Platform Engineering team can own these workflows, while product teams simply call them.
+</div>
+
+**Documentation:** [Reusing workflows](https://docs.github.com/en/actions/using-workflows/reusing-workflows)
 
 ### Step 1: Create the Reusable Workflow
 `.github/workflows/reusable-build.yml`:
@@ -297,10 +374,27 @@ jobs:
 
 ```
 
+<div class="callout callout-info">
+<div class="callout-title">📖 Inputs, Secrets, and Outputs</div>
+Reusable workflows support typed inputs (<code>string</code>, <code>boolean</code>, <code>number</code>), inherited secrets, and outputs that can be consumed by downstream jobs. This makes them behave like functions in your CI/CD system.
+</div>
+
 ---
 
 ## Walkthrough 4: Creating a Custom Action
-Create a composite action for common setup steps.
+
+While reusable workflows work at the **workflow level**, composite actions work at the **step level**. They bundle multiple steps into a single reusable action that can be called within any job.
+
+### When to Use Each Approach
+
+| Pattern | Use Case | Scope |
+|---------|----------|-------|
+| **Composite Action** | Bundle related setup steps | Single step in a job |
+| **Reusable Workflow** | Standardize entire workflows | Complete job(s) |
+| **JavaScript Action** | Complex logic, API calls | Single step |
+| **Docker Action** | Language-specific tools | Single step |
+
+**Documentation:** [Creating a composite action](https://docs.github.com/en/actions/creating-actions/creating-a-composite-action)
 
 ### Step 1: Create Action Structure
 `.github/actions/setup-project/action.yml`:
@@ -372,8 +466,26 @@ jobs:
 
 ```
 
+---
+
 ## Walkthrough 5: Environment Deployments
-Set up deployment with environment protection.
+
+GitHub Environments add **deployment gates and protection rules** to your workflows. They integrate approvals, wait timers, and branch restrictions directly into Actions—no external tools needed.
+
+### Why Use Environments?
+
+Environments solve common deployment governance needs:
+- **Required approvals** before deploying to production
+- **Wait timers** for staged rollouts
+- **Branch restrictions** ensuring only `main` can deploy
+- **Environment-specific secrets** for credentials
+
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Tip</div>
+Environments are a key differentiator from basic CI tools. Show customers the deployment history view—it provides audit trails showing who approved what and when. This is often a compliance requirement that previously required external tools like ServiceNow or Jira.
+</div>
+
+**Documentation:** [Using environments for deployment](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment)
 
 ### Step 1: Create Environments
 1. Go to repository **Settings** → **Environments**
@@ -444,5 +556,29 @@ jobs:
           # Add actual deployment commands
 
 ```
+
+---
+
+## Summary
+
+You've now walked through the core GitHub Actions patterns that form the foundation of modern CI/CD:
+
+| Pattern | Key Takeaway |
+|---------|--------------|
+| **CI Pipeline** | Parallel jobs with dependencies create fast feedback loops |
+| **Matrix Testing** | Test across combinations without duplicating workflows |
+| **Reusable Workflows** | Standardize patterns across the organization |
+| **Composite Actions** | Bundle related steps for cleaner workflow files |
+| **Environments** | Add governance and approval gates to deployments |
+
+<div class="callout callout-success">
+<div class="callout-title">✅ Ready for Labs</div>
+You've seen how these concepts work in practice. In the Hands-On Labs, you'll build these workflows yourself and see them execute in real time.
+</div>
+
+**Next Steps:**
+- Try the [Hands-On Labs](/intermediate/module-5/labs/) to implement these patterns
+- Explore the [GitHub Actions documentation](https://docs.github.com/en/actions)
+- Check the [Actions Marketplace](https://github.com/marketplace?type=actions) for pre-built actions
 
 {% endraw %}

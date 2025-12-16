@@ -55,6 +55,11 @@ sections:
 ---
 {% raw %}
 
+<div class="callout callout-info">
+<div class="callout-title">📖 Official Documentation</div>
+For comprehensive reference, see <a href="https://docs.github.com/en/code-security">GitHub Code Security Documentation</a> and the <a href="https://docs.github.com/en/get-started/learning-about-github/about-github-advanced-security">GHAS Overview</a>.
+</div>
+
 ## 2.1 Code Scanning with CodeQL
 CodeQL is GitHub's semantic code analysis engine:
 

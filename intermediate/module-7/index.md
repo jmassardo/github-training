@@ -61,6 +61,16 @@ next_module:
 
 This module covers dependency and package management with GitHub Packages, including npm, Maven, NuGet, RubyGems, and container registries. You'll learn how to publish, consume, and secure packages while implementing supply chain security best practices.
 
+### Why This Matters
+
+As a CSM, you'll help customers:
+
+- Consolidate package management with GitHub's integrated registries
+- Implement software supply chain security best practices
+- Reduce dependency on external package repositories
+- Automate package publishing and versioning in CI/CD pipelines
+- Meet compliance requirements for software bill of materials (SBOM)
+
 ---
 
 ## Module Sections

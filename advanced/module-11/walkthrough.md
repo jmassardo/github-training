@@ -47,9 +47,45 @@ next_section:
   title: "Hands-On Labs"
 ---
 
+## Building Infrastructure as Code for GitHub
+
+Welcome to the hands-on walkthrough for GitHub Infrastructure as Code! This section guides you through managing GitHub configuration—repositories, teams, permissions, and policies—as version-controlled code.
+
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Tip</div>
+IaC for GitHub is a powerful story for enterprise customers. It addresses governance concerns ("how do we ensure consistent configuration?"), compliance needs ("who changed what and when?"), and scalability challenges ("how do we manage 1000+ repos?"). This walkthrough demonstrates the value proposition.
+</div>
+
+**What you'll build:**
+- Complete Terraform project structure for GitHub
+- Reusable modules for standardized repositories
+- Team and permission management
+- GitOps workflows for self-service changes
+
+**Documentation Reference:**
+- [GitHub Terraform Provider](https://registry.terraform.io/providers/integrations/github/latest/docs)
+- [GitHub Provider Authentication](https://registry.terraform.io/providers/integrations/github/latest/docs#authentication)
+- [Managing organization members](https://docs.github.com/en/organizations/managing-membership-in-your-organization)
+
+---
+
 ## Walkthrough: Building a GitHub IaC Solution
 
 This walkthrough guides you through setting up Infrastructure as Code for GitHub from scratch, including project structure, authentication, and a complete GitOps workflow.
+
+### Why IaC for GitHub?
+
+| Challenge | IaC Solution |
+|-----------|--------------|
+| **Inconsistent repos** | Modules enforce standards |
+| **Manual permission changes** | Version-controlled, auditable |
+| **Scaling to 100s of repos** | Terraform loops and modules |
+| **Compliance requirements** | Git history = audit trail |
+
+<div class="callout callout-info">
+<div class="callout-title">📖 The GitOps Pattern</div>
+With IaC, changes follow a standard development workflow: create a branch, make changes, open a PR, get review, merge. Terraform applies the changes automatically. This brings software engineering practices to infrastructure management.
+</div>
 
 ### Prerequisites
 
@@ -57,7 +93,11 @@ This walkthrough guides you through setting up Infrastructure as Code for GitHub
 - GitHub organization with admin access
 - GitHub Personal Access Token or GitHub App
 
+---
+
 ## Step 1: Project Setup
+
+The project structure separates configuration (what to create) from modules (how to create it), enabling reuse and standardization.
 
 ### Create Project Structure
 
@@ -172,7 +212,18 @@ module "repositories" {
 
 ```
 
+---
+
 ## Step 2: Create Reusable Module
+
+Modules are the heart of IaC standardization. This module creates a repository with your organization's standard settings—branch protection, topics, team access—ensuring consistency across all projects.
+
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Tip</div>
+Walk customers through what their "standard repository" looks like: What branch protection rules? Which teams need access? What topics for discoverability? This module encodes those decisions, eliminating drift over time.
+</div>
+
+**Documentation:** [github_repository resource](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository)
 
 Create `terraform/modules/standard-repository/main.tf`:
 
@@ -324,7 +375,16 @@ output "repository_node_id" {
 
 ```
 
+---
+
 ## Step 3: Define Teams
+
+Teams are the foundation of GitHub access control. Define them in Terraform to ensure consistent structure, naming, and membership management.
+
+**Key Concepts:**
+- **Privacy**: `closed` teams are visible but membership requires invitation
+- **Parent teams**: Create hierarchies for cascading permissions
+- **SCIM integration**: For enterprise, teams can sync from IdP groups
 
 Create `terraform/teams/main.tf`:
 
@@ -437,7 +497,25 @@ module "web_app" {
 
 ```
 
+<div class="callout callout-info">
+<div class="callout-title">📖 Scaling to Many Repositories</div>
+For organizations with many repositories, consider using <code>for_each</code> with a map or YAML file to define repositories declaratively. This allows non-Terraform users to add repositories by editing a simple config file.
+</div>
+
+---
+
 ## Step 5: GitOps Workflow
+
+The GitOps workflow automates Terraform operations: `plan` runs on PR to show proposed changes, `apply` runs on merge to make them. This creates a self-service model where teams can request changes via PR.
+
+### Workflow Security
+
+<div class="callout callout-warning">
+<div class="callout-title">⚠️ Protect Your Terraform Token</div>
+The token used for Terraform needs org admin permissions. Store it as a repository secret and restrict who can trigger the apply workflow. Consider using a GitHub App for finer-grained permissions.
+</div>
+
+**Documentation:** [Using OIDC with Terraform](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-hashicorp-vault)
 
 Create `.github/workflows/terraform-plan.yml`:
 
@@ -597,16 +675,26 @@ terraform apply
 
 ```
 
-## Walkthrough Summary
-
-You've now built:
-
-1. ✅ Modular Terraform project structure
-2. ✅ Reusable repository module with security defaults
-3. ✅ Team configuration with hierarchy
-4. ✅ GitOps workflow with PR-based changes
-5. ✅ Automated plan and apply via GitHub Actions
-
 ---
 
-**Next:** Practice these concepts hands-on in the Labs section.
+## Summary
+
+You've now built a complete IaC solution for GitHub management:
+
+| Component | Purpose |
+|-----------|---------|
+| **Project structure** | Organized, maintainable Terraform code |
+| **Standard module** | Consistent repository configuration |
+| **Team definitions** | Codified access control |
+| **GitOps workflow** | Self-service with review gates |
+
+<div class="callout callout-success">
+<div class="callout-title">✅ Ready for Labs</div>
+You've seen how to manage GitHub at scale with Infrastructure as Code. In the Hands-On Labs, you'll apply these patterns to real scenarios.
+</div>
+
+**Next Steps:**
+- Complete the [Hands-On Labs](/advanced/module-11/labs/) to implement IaC
+- Review [Terraform GitHub Provider documentation](https://registry.terraform.io/providers/integrations/github/latest/docs)
+- Explore [GitHub's REST API](https://docs.github.com/en/rest) for operations beyond Terraform
+- Consider [Pulumi](https://www.pulumi.com/registry/packages/github/) as a code-native alternative

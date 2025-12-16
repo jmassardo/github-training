@@ -47,6 +47,11 @@ next_section:
   title: "Guided Walkthrough"
 ---
 
+<div class="callout callout-info">
+<div class="callout-title">📚 Official Documentation</div>
+For comprehensive reference, see <a href="https://docs.github.com/en/pull-requests">Pull Requests Documentation</a> and <a href="https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository">Branch Configuration</a>.
+</div>
+
 # Core Concepts
 
 ## 2.1 Branching Strategies
