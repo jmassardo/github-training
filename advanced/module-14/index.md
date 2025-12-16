@@ -77,7 +77,7 @@ Work through each section in order for the best learning experience:
 
 <div class="section-cards">
 {% for section in page.sections %}
-<a href="{{ section.url }}" class="section-card">
+<a href="{{ site.baseurl }}{{ section.url }}" class="section-card">
   <span class="section-icon">{{ section.icon }}</span>
   <div class="section-info">
     <h3>{{ section.title }}</h3>
@@ -116,7 +116,7 @@ Before starting this module, you should have completed:
 Extend Copilot with agents, MCP, extensions, and enterprise administration.
 
 <div class="module-cta">
-  <a href="/advanced/module-14/overview/" class="btn btn-primary btn-lg">
+  <a href="{{ site.baseurl }}/advanced/module-14/overview/" class="btn btn-primary btn-lg">
     Start Section 1: Context & Overview →
   </a>
 </div>

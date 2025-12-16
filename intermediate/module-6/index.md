@@ -79,7 +79,7 @@ Work through each section in order for the best learning experience:
 
 <div class="section-cards">
 {% for section in page.sections %}
-<a href="{{ section.url }}" class="section-card">
+<a href="{{ site.baseurl }}{{ section.url }}" class="section-card">
   <span class="section-icon">{{ section.icon }}</span>
   <div class="section-info">
     <h3>{{ section.title }}</h3>
@@ -132,7 +132,7 @@ By the end of this module, you will be able to:
 Learn how to secure your code and dependencies with GitHub Advanced Security.
 
 <div class="module-cta">
-  <a href="/intermediate/module-6/overview/" class="btn btn-primary btn-lg">
+  <a href="{{ site.baseurl }}/intermediate/module-6/overview/" class="btn btn-primary btn-lg">
     Start Section 1: Context & Overview →
   </a>
 </div>

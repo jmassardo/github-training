@@ -161,7 +161,7 @@
         {% if page.prev_module or page.next_module %}
         <nav class="module-navigation" aria-label="Module navigation">
           {% if page.prev_module %}
-          <a href="{{ page.prev_module.url }}" class="module-nav-link module-nav-prev">
+          <a href="{{ site.baseurl }}{{ page.prev_module.url }}" class="module-nav-link module-nav-prev">
             <svg class="nav-arrow" aria-hidden="true" height="16" viewBox="0 0 16 16" width="16">
               <path fill="currentColor" d="M9.78 12.78a.75.75 0 01-1.06 0L4.47 8.53a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L6.06 8l3.72 3.72a.75.75 0 010 1.06z"></path>
             </svg>
@@ -173,7 +173,7 @@
           {% endif %}
           
           {% if page.next_module %}
-          <a href="{{ page.next_module.url }}" class="module-nav-link module-nav-next">
+          <a href="{{ site.baseurl }}{{ page.next_module.url }}" class="module-nav-link module-nav-next">
             <div class="module-nav-content">
               <span class="module-nav-label">Next</span>
               <span class="module-nav-title">{{ page.next_module.title }}</span>

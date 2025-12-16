@@ -80,7 +80,7 @@ Work through each section in order for the best learning experience:
 
 <div class="section-cards">
 {% for section in page.sections %}
-<a href="{{ section.url }}" class="section-card">
+<a href="{{ site.baseurl }}{{ section.url }}" class="section-card">
   <span class="section-icon">{{ section.icon }}</span>
   <div class="section-info">
     <h3>{{ section.title }}</h3>
@@ -166,7 +166,7 @@ flowchart TD
 Master enterprise GitHub administration including identity management and governance.
 
 <div class="module-cta">
-  <a href="/advanced/module-9/overview/" class="btn btn-primary btn-lg">
+  <a href="{{ site.baseurl }}/advanced/module-9/overview/" class="btn btn-primary btn-lg">
     Start Section 1: Context & Overview →
   </a>
 </div>
