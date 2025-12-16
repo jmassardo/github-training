@@ -162,7 +162,7 @@ Before starting, ensure you have:
 
 <div class="cta-buttons" markdown="1">
   <a href="{{ site.baseurl }}/beginner/" class="btn-primary">Start Beginner Phase →</a>
-  <a href="/syllabus/" class="btn-secondary">View Full Syllabus</a>
+  <a href="{{ site.baseurl }}/syllabus/" class="btn-secondary">View Full Syllabus</a>
 </div>
 
 ---
