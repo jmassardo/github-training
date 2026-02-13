@@ -128,7 +128,7 @@ next_section:
 | [Splunk](https://www.splunk.com/) | SIEM for audit logs |
 | [Datadog](https://www.datadoghq.com/) | Monitoring and audit |
 | [AWS S3](https://aws.amazon.com/s3/) | Audit log storage |
-| [Azure Sentinel](https://azure.microsoft.com/en-us/products/microsoft-sentinel/) | Microsoft SIEM |
+| [Microsoft Sentinel](https://azure.microsoft.com/en-us/products/microsoft-sentinel/) | Microsoft SIEM |
 
 ### Governance Automation
 
@@ -158,7 +158,7 @@ next_section:
 | LinkedIn Learning | DevOps metrics, DORA |
 | Pluralsight | Engineering analytics |
 | Coursera | Software development metrics |
-| GitHub Learning Lab | GitHub administration |
+| [GitHub Skills](https://skills.github.com) | GitHub administration |
 
 ## Community Resources
 

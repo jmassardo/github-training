@@ -88,9 +88,10 @@ Enabling GHAS follows a hierarchy: **Enterprise → Organization → Repository*
 |---------|------------------|-----------|
 | **Dependency graph** | Free (public), Team+ (private) | Repository |
 | **Dependabot alerts** | Free (public), Team+ (private) | Organization/Repository |
-| **Secret scanning** | GHAS license | Organization/Repository |
-| **Push protection** | GHAS license | Organization/Repository |
-| **Code scanning** | GHAS license | Repository (workflow) |
+| **Secret scanning** | Free (public, default ON), GHAS (private) | Organization/Repository |
+| **Push protection** | Free (public, default ON), GHAS (private) | Organization/Repository |
+| **Code scanning** | Free (public), GHAS (private) | Repository (workflow) |
+| **Copilot Autofix** | GHAS license | Repository (automatic with code scanning) |
 
 ### Step 1: Enable at Repository Level
 1. Go to repository **Settings** → **Code security and analysis**

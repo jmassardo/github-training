@@ -72,9 +72,12 @@ GitHub Copilot is an AI-powered coding assistant that provides:
 | Capability | Description | Use Case |
 |------------|-------------|----------|
 | **Code Completions** | Real-time suggestions as you type | Writing new functions, completing patterns |
-| **Copilot Chat** | Conversational AI in your IDE | Explaining code, debugging, refactoring |
+| **Copilot Chat** | Conversational AI in your IDE and on GitHub.com | Explaining code, debugging, refactoring |
 | **Multi-file Context** | Understands your entire project | Consistent naming, following patterns |
 | **Documentation** | Generates comments and docs | Inline comments, README content |
+| **Model Selection** | Choose your preferred AI model (GPT-4o, Claude, Gemini, etc.) | Optimizing for different tasks |
+| **Code Review** | Automated pull request reviews | Catching issues before human review |
+| **Vision** | Attach images/screenshots for analysis | UI debugging, design implementation |
 
 > **📚 Learn More:** [GitHub Copilot Documentation](https://docs.github.com/en/copilot)
 
@@ -138,10 +141,10 @@ GitHub offers Copilot in several tiers to meet different needs:
 
 | Product | Audience | Key Features |
 |---------|----------|--------------|
-| **Copilot Free** | Individual developers | Limited completions, basic chat |
-| **Copilot Pro** | Power users | Unlimited completions, advanced models |
-| **Copilot Business** | Teams & organizations | Admin controls, policy management |
-| **Copilot Enterprise** | Large enterprises | Knowledge bases, fine-tuning, Bing search |
+| **Copilot Free** | Individual developers | 2,000 completions + 50 chat messages/month |
+| **Copilot Pro** | Power users | Unlimited completions, model selection, advanced features |
+| **Copilot Business** | Teams & organizations | Admin controls, policy management, coding agent |
+| **Copilot Enterprise** | Large enterprises | Knowledge bases, Bing search, enhanced admin controls |
 
 > **📚 Learn More:** [Copilot Plans and Pricing](https://docs.github.com/en/copilot/about-github-copilot/subscription-plans-for-github-copilot)
 

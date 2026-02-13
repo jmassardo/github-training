@@ -209,9 +209,11 @@ flowchart TD
 
 You can assign Copilot to issues through:
 
-1. **Issue comment**: Type `@github-copilot` in a comment
-2. **Assignee field**: Select Copilot as an assignee
-3. **CLI**: `gh issue assign 123 --assignee @github-copilot`
+1. **Assignee field**: Select Copilot as an assignee on the issue
+2. **Issue comment**: Type `@copilot` in a comment to trigger the agent
+3. **CLI**: `gh issue assign 123 --assignee @copilot`
+
+The coding agent is **generally available** on Copilot Business and Enterprise plans.
 
 ### Good Issues for Copilot
 
@@ -250,121 +252,40 @@ Acceptance criteria:
 - No clear success criteria
 - Requires external context not in repo
 
-## Copilot Workspace
+## Agent Capabilities Across GitHub
 
-Copilot Workspace is a web-based agentic development environment that transforms GitHub Issues into implementation plans and pull requests.
+GitHub Copilot's agent capabilities span two environments: **VS Code** (agent mode) and **GitHub.com** (coding agent). Here's how they compare:
 
-### What is Copilot Workspace?
+### Agent Mode vs. Coding Agent
 
-Unlike IDE-based agents, Copilot Workspace operates entirely in your browser on GitHub, providing a dedicated environment for planning and implementing changes from issues.
+| Feature | Agent Mode (VS Code) | Coding Agent (GitHub.com) |
+|---------|---------------------|--------------------------|
+| **Interface** | IDE chat panel | GitHub Issues |
+| **Activation** | Select "Agent" mode in chat | Assign `@copilot` to an issue |
+| **Process** | Interactive, real-time | Autonomous, asynchronous |
+| **Terminal Access** | Yes — runs commands locally | Yes — runs in cloud environment |
+| **Human Involvement** | Approve changes in editor | Review PR when ready |
+| **MCP Support** | Yes — configured via `.vscode/mcp.json` | No |
+| **Best For** | Active development, exploration | Well-defined tasks, delegating work |
+| **Plan Required** | Pro, Business, or Enterprise | Business or Enterprise |
 
-<div class="mermaid-container">
-<div class="mermaid">
-flowchart LR
-  subgraph Workspace["Copilot Workspace Flow"]
-    I["📋 Issue<br/>Requirements"] --> S["📖 Spec<br/>AI generates specification"]
-    S --> P["📝 Plan<br/>File changes outlined"]
-    P --> C["💻 Code<br/>Implementation generated"]
-    C --> PR["🔀 PR<br/>Ready for review"]
-  end
-</div>
-</div>
+### When to Use Each
 
-### Workspace vs. Coding Agent
+**Use Agent Mode (VS Code) when:**
 
-| Feature | Copilot Workspace | Coding Agent |
-|---------|-------------------|---------------|
-| **Interface** | Dedicated web UI | GitHub Issues/PRs |
-| **Process** | Interactive 4-step flow | Autonomous execution |
-| **Human involvement** | Review each step | Review final PR |
-| **Best for** | Complex planning | Well-defined tasks |
-| **Control** | Edit spec, plan, code | Provide clear issue |
+- You're actively working in the codebase
+- You want to iterate interactively
+- You need MCP tools or local resources
+- The task benefits from your real-time guidance
 
-### Using Copilot Workspace
+**Use Coding Agent (GitHub.com) when:**
 
-**Step 1: Open from Issue**
+- The issue has clear, well-defined requirements
+- You want to delegate and come back later
+- The task follows standard patterns in the codebase
+- You want the work captured in a clean PR from the start
 
-From any GitHub Issue, click the "Open in Workspace" button (or navigate to `copilot-workspace.githubnext.com`).
-
-**Step 2: Review the Specification**
-
-Workspace generates a natural language specification:
-
-```markdown
-## Specification
-
-The task is to add user profile avatars to the application.
-
-### Requirements:
-- Users can upload avatar images (JPEG, PNG, max 5MB)
-- Avatars are stored in cloud storage with CDN delivery
-- Default avatar generated from user initials
-- Avatar displayed in header, comments, and profile page
-
-### Technical approach:
-- Use existing S3 integration for storage
-- Add ImageMagick for resizing to standard dimensions
-- Update User model with avatarUrl field
-```
-
-You can edit this specification before proceeding.
-
-**Step 3: Review the Plan**
-
-Workspace creates a file-by-file implementation plan:
-
-```
-📁 Files to modify:
-
-├── src/models/user.js
-│   └── Add avatarUrl field with default value
-│
-├── src/services/avatarService.js (new)
-│   └── Upload, resize, generate default avatar
-│
-├── src/routes/users.js
-│   └── Add POST /users/:id/avatar endpoint
-│
-├── src/components/Avatar.jsx (new)
-│   └── Reusable avatar component
-│
-└── tests/avatarService.test.js (new)
-    └── Unit tests for avatar operations
-```
-
-You can add, remove, or modify planned changes.
-
-**Step 4: Implement and Create PR**
-
-Workspace generates the code. You can:
-
-- Review each file's changes
-- Edit generated code directly
-- Run in integrated Codespace for testing
-- Create PR when satisfied
-
-### When to Use Workspace
-
-**Ideal scenarios:**
-
-- Complex features needing planning
-- Unfamiliar codebases
-- When you want to guide the approach
-- Learning how to implement something
-
-**Example workflow:**
-
-```
-1. Create detailed issue describing feature
-2. Open in Workspace
-3. Review and refine the specification
-4. Adjust the plan (add tests, remove scope)
-5. Review generated code
-6. Test in Codespace
-7. Create PR for team review
-```
-
-> **📚 Learn More:** [Copilot Workspace](https://githubnext.com/projects/copilot-workspace)
+> **📚 Learn More:** [Using agent mode](https://docs.github.com/en/copilot/using-github-copilot/using-copilot-coding-agent)
 
 ---
 

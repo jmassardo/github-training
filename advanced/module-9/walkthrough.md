@@ -287,8 +287,8 @@ gh gei download-logs --migration-id <migration-id>
 # Verify repository content
 gh repo view target-github-org/my-repository
 
-# Validate branch protection rules (manual recreation needed)
-gh api repos/target-github-org/my-repository/branches/main/protection
+# Validate repository rulesets (or recreate branch protection)
+gh api repos/target-github-org/my-repository/rulesets
 
 ```
 
@@ -300,7 +300,8 @@ After migration, help customers verify:
 - [ ] PR history is preserved
 - [ ] Issues and comments are intact
 - [ ] Repository settings configured (visibility, features)
-- [ ] Branch protection rules recreated
+- [ ] Repository rulesets configured (replacing branch protection rules)
+- [ ] Custom properties applied
 - [ ] Webhooks reconfigured
 - [ ] CI/CD workflows updated for GitHub Actions
 - [ ] Team access configured

@@ -220,11 +220,21 @@ Where workflows execute:
 
 | Runner | OS | Specs | Use Case |
 |--------|-------|-------|----------|
-| `ubuntu-latest` | Ubuntu 22.04 | 2 CPU, 7GB RAM | Most workflows |
-| `ubuntu-24.04` | Ubuntu 24.04 | 2 CPU, 7GB RAM | Specific version |
+| `ubuntu-latest` | Ubuntu 24.04 | 2 CPU, 7GB RAM | Most workflows |
+| `ubuntu-22.04` | Ubuntu 22.04 | 2 CPU, 7GB RAM | Specific older version |
 | `windows-latest` | Windows Server 2022 | 2 CPU, 7GB RAM | Windows builds |
-| `macos-latest` | macOS 14 (Sonoma) | 3 CPU, 14GB RAM | iOS/macOS builds |
+| `macos-latest` | macOS 15 (Sequoia) | 3 CPU, 14GB RAM | iOS/macOS builds |
+| `ubuntu-latest-4-cores` | Ubuntu 24.04 | 4 CPU, 16GB RAM | Larger builds (Team/Enterprise) |
+| `ubuntu-latest-16-cores` | Ubuntu 24.04 | 16 CPU, 64GB RAM | Heavy compilation (Team/Enterprise) |
+| Arm64 runners | Ubuntu/Windows | Various | Arm-native builds (e.g., `ubuntu-24.04-arm`) |
+| GPU runners | Ubuntu | GPU-equipped | ML model training, GPU workloads |
 | `self-hosted` | Custom | Custom | Private networks, special hardware |
+
+<div class="callout callout-info">
+<div class="callout-title">💡 Larger Runners</div>
+
+GitHub-hosted larger runners (4 to 64 cores), Arm64 runners, and GPU runners are available on Team and Enterprise plans. These are ideal for intensive builds, ML workloads, and Arm-native compilation without managing self-hosted infrastructure.
+</div>
 
 ## 2.3 Workflow Syntax Deep Dive
 
@@ -367,13 +377,13 @@ macos-latest + node 22
 
 ```yaml
 steps:
-  # Specific version (recommended)
+  # Pinned to commit SHA (recommended for supply chain security)
+  - uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608 # v4
+  
+  # Version tag (convenient, but less secure)
   - uses: actions/checkout@v4
   
-  # Specific commit SHA (most secure)
-  - uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608
-  
-  # Branch (not recommended - can change)
+  # Branch (not recommended - can change unexpectedly)
   - uses: actions/checkout@main
   
   # With inputs
@@ -478,6 +488,29 @@ jobs:
 ```
 
 {% endraw %}
+
+### Artifact Attestations
+
+Artifact attestations generate **SLSA provenance** for your build outputs, proving they were built by a specific workflow in a specific repository. This is a critical supply chain security feature:
+
+```yaml
+steps:
+  - uses: actions/checkout@v4
+  - run: npm run build
+  
+  - uses: actions/attest-build-provenance@v2
+    with:
+      subject-path: dist/my-app.tar.gz
+```
+
+Downstream consumers can verify the attestation:
+
+```bash
+gh attestation verify my-app.tar.gz --repo owner/repo
+```
+
+> **💡 CSM Insight:** Artifact attestations help customers meet supply chain security requirements (SLSA, SSDF) by providing cryptographic proof of build provenance — a growing compliance need in enterprise environments.
+
 ---
 
 ## 2.6 Artifacts and Caching

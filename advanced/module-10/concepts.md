@@ -91,17 +91,37 @@ Examples:
 #### Authentication Methods
 
 ```bash
-# Personal Access Token (classic)
-curl -H "Authorization: token ghp_xxxxxxxxxxxx" \
-  https://api.github.com/user
-# Personal Access Token (fine-grained)
+# Personal Access Token - fine-grained (recommended)
 curl -H "Authorization: Bearer github_pat_xxxxxxxxxxxx" \
   https://api.github.com/user
+
+# Personal Access Token - classic (being phased down)
+curl -H "Authorization: token ghp_xxxxxxxxxxxx" \
+  https://api.github.com/user
+
 # GitHub App Installation Token
 curl -H "Authorization: Bearer ghs_xxxxxxxxxxxx" \
   https://api.github.com/repos/owner/repo
 
 ```
+
+<div class="callout callout-warning">
+<div class="callout-title">⚠️ Classic PATs Are Being Phased Down</div>
+
+Fine-grained personal access tokens (`github_pat_`) are the recommended approach for new integrations. They offer repository-scoped access, granular permissions, and mandatory expiration. Organizations can restrict or disable classic PAT usage via policies.
+</div>
+
+#### API Versioning
+
+GitHub uses date-based API versioning. Always include the version header to ensure consistent behavior:
+
+```bash
+curl -H "X-GitHub-Api-Version: 2022-11-28" \
+  -H "Authorization: Bearer github_pat_xxxxxxxxxxxx" \
+  https://api.github.com/repos/owner/repo
+```
+
+Breaking changes are introduced in new API versions. Pin to a specific version to avoid unexpected changes in your integrations.
 
 #### Pagination
 

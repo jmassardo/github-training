@@ -133,9 +133,63 @@ resource "github_repository" "application" {
 
 ```
 
-#### Branch Protection Rules
+#### Repository Rulesets (Recommended)
 
 ```hcl
+resource "github_repository_ruleset" "main_protection" {
+  name        = "main-protection"
+  repository  = github_repository.application.name
+  target      = "branch"
+  enforcement = "active"
+
+  conditions {
+    ref_name {
+      include = ["~DEFAULT_BRANCH"]
+      exclude = []
+    }
+  }
+
+  bypass_actors {
+    actor_id    = 1  # Organization admin role
+    actor_type  = "OrganizationAdmin"
+    bypass_mode = "always"
+  }
+
+  rules {
+    required_linear_history = true
+    required_signatures     = true
+
+    pull_request {
+      required_approving_review_count   = 2
+      dismiss_stale_reviews_on_push     = true
+      require_code_owner_review         = true
+      require_last_push_approval        = true
+    }
+
+    required_status_checks {
+      required_check {
+        context = "ci/build"
+      }
+      required_check {
+        context = "ci/test"
+      }
+      strict_required_status_checks_policy = true
+    }
+  }
+}
+
+```
+
+<div class="callout callout-tip">
+<div class="callout-title">💡 Rulesets vs Branch Protection</div>
+
+The `github_repository_ruleset` resource is the modern replacement for `github_branch_protection`. Rulesets support organization-level management, granular bypass permissions, tag rules, and import/export. Use rulesets for new configurations.
+</div>
+
+#### Branch Protection Rules (Legacy)
+
+```hcl
+# Legacy approach — still supported but github_repository_ruleset is preferred
 resource "github_branch_protection" "main" {
   repository_id = github_repository.application.node_id
   pattern       = "main"
@@ -259,8 +313,11 @@ terraform import github_repository.existing my-org/existing-repo
 # Import team
 terraform import github_team.existing 1234567
 
-# Import branch protection
+# Import branch protection (legacy — use github_repository_ruleset for new setups)
 terraform import github_branch_protection.main my-org/repo:main
+
+# Import repository ruleset (modern approach)
+terraform import github_repository_ruleset.main my-org/repo:12345
 
 ```
 
@@ -428,6 +485,8 @@ resource "github_repository" "this" {
   allow_merge_commit     = false
 }
 
+# Note: github_branch_protection is legacy. See the Repository Rulesets
+# section above for the modern github_repository_ruleset resource.
 resource "github_branch_protection" "main" {
   repository_id = github_repository.this.node_id
   pattern       = "main"

@@ -203,12 +203,16 @@ env:
 **Option 3: Azure Key Vault / AWS Secrets Manager**
 
 ```yaml
-- name: Get secrets from Key Vault
-  uses: azure/get-keyvault-secrets@v1
+- name: Azure Login
+  uses: azure/login@v2
   with:
-    keyvault: "my-key-vault"
-    secrets: 'API-KEY,DB-PASSWORD'
-  id: secrets
+    creds: ${{ secrets.AZURE_CREDENTIALS }}
+    
+- name: Get secrets from Key Vault
+  run: |
+    secret=$(az keyvault secret show --vault-name my-key-vault --name API-KEY --query value -o tsv)
+    echo "::add-mask::$secret"
+    echo "API_KEY=$secret" >> $GITHUB_ENV
 
 ```
 

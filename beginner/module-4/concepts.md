@@ -238,6 +238,27 @@ Rules:
 
 ```
 
+### Merge Queue
+
+Merge queue ensures that pull requests are always tested against the latest base branch before merging. This prevents "semantic merge conflicts" — situations where two PRs pass CI independently but break when combined.
+
+**How it works:**
+
+1. PR is approved and added to the merge queue
+2. GitHub creates a temporary branch with the PR changes merged on top of the latest base branch (plus any PRs ahead in the queue)
+3. CI runs against this combined result
+4. If CI passes, the PR is merged; if it fails, the PR is removed from the queue
+
+**When to use merge queue:**
+
+- High-traffic repositories where multiple PRs merge daily
+- Projects where CI must pass on the exact merged result
+- Teams that want to eliminate "green PR, red main" situations
+
+Merge queue is configured through **repository rulesets** by adding the "Require merge queue" rule.
+
+> **💡 CSM Insight:** Merge queue is especially valuable for customers with large monorepos or high-velocity teams. It eliminates the manual "update branch, wait for CI, merge" cycle that slows down development.
+
 ## 2.5 Commit Signing
 
 Commit signing cryptographically verifies commit authorship:

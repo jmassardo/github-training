@@ -477,71 +477,72 @@ Configure feature availability:
 
 ---
 
-## Scenario 14.6: Copilot Workspace Questions
+## Scenario 14.6: Copilot Product Family Questions
 
 ### Situation
 
-A customer heard about Copilot Workspace and asks: "Is this the same as Copilot in VS Code? Should we be using this instead? I'm confused about all the different Copilot products."
+A customer is confused about the different Copilot capabilities: "There's Copilot in the IDE, agent mode, the coding agent on GitHub.com, and now Copilot code review. How do they all fit together? What should our developers be using?"
 
 ### CSM Response Framework
 
 **1. Clarify the Copilot product family:**
 
 ```markdown
-## GitHub Copilot Product Family
+## GitHub Copilot Capabilities
 
-### Copilot in IDE (This Module + Module 13)
-- Code completions in your editor
-- Copilot Chat for Q&A
+### Copilot Code Completions (Module 13)
+- Inline code suggestions in your editor
+- Ghost text that appears as you type
 - Works in VS Code, JetBrains, Neovim, etc.
-- **Use for**: Daily coding assistance
+- **Use for**: Line-by-line coding acceleration
 
-### Copilot Workspace (Preview)
-- Task-based development environment
-- Starts from an issue, builds implementation plan
-- AI proposes changes across multiple files
-- **Use for**: Tackling issues end-to-end
+### Copilot Chat (Module 13)
+- AI conversation in your IDE, GitHub.com, or CLI
+- Ask questions, explain code, generate snippets
+- Supports @workspace, @github, and other participants
+- **Use for**: Q&A, learning, code explanation
+
+### Agent Mode (Module 14)
+- Autonomous multi-file editing from a single prompt
+- Runs terminal commands, installs dependencies
+- Iterates on errors automatically
+- **Use for**: Multi-step implementation from a natural language request
+
+### Copilot Coding Agent (Module 14)
+- Assign an issue to Copilot on GitHub.com
+- Copilot opens a PR with the implementation
+- Runs in a cloud environment asynchronously
+- **Use for**: Well-defined issues, bug fixes, small features
+
+### Copilot Code Review
+- Automated review comments on pull requests
+- Suggests improvements, catches issues
+- Complements human reviewers
+- **Use for**: Faster, more consistent code reviews
 
 ### Copilot CLI
 - AI assistance in the terminal
 - Explain commands, suggest solutions
 - **Use for**: DevOps and command-line work
-
-### Copilot for Pull Requests
-- Automated PR descriptions
-- Review suggestions
-- **Use for**: Code review acceleration
-
-### Copilot for Docs (GitHub.com)
-- Chat with documentation
-- **Use for**: Learning GitHub features
 ```
 
 **2. Explain when to use each:**
 
-> "Think of it this way: Copilot in VS Code helps you while you're writing code. Copilot Workspace helps you plan and structure the work before you write code. Most developers will use both—Workspace for starting issues, IDE Copilot for detailed implementation."
+> "Think of it as a spectrum: Code completions help line by line, Chat answers questions, Agent Mode handles bigger tasks interactively, and the Coding Agent works on issues in the background. Most developers use all of these throughout their day depending on the task."
 
-**3. Set expectations on Workspace:**
+**3. Address common confusion:**
 
 ```markdown
-## Copilot Workspace Status
+## Quick Decision Guide
 
-### Current State (as of late 2024)
-- Technical preview / limited availability
-- Not included in Copilot Business by default
-- Rapid iteration and changes expected
-
-### Best Fit Use Cases
-- Well-defined issues with clear requirements
-- Multi-file changes with clear scope
-- Proof-of-concept implementations
-- Learning new codebases
-
-### Not Yet Ideal For
-- Complex architectural decisions
-- Security-critical code
-- Large-scale refactoring
-- Vague or exploratory work
+| I want to... | Use |
+|--------------|-----|
+| Write code faster line by line | Code Completions |
+| Ask a question about my code | Copilot Chat |
+| Implement a feature across multiple files | Agent Mode |
+| Assign a GitHub issue to AI | Coding Agent |
+| Get AI feedback on a pull request | Copilot Code Review |
+| Get help with terminal commands | Copilot CLI |
 ```
 
 ---
@@ -555,7 +556,7 @@ A customer heard about Copilot Workspace and asks: "Is this the same as Copilot 
 | **Custom extensions** | Validate use case; provide clear development roadmap |
 | **ROI justification** | Framework approach; conservative assumptions; track trends |
 | **Enterprise policies** | Map requirements to hierarchy; plan implementation |
-| **Product confusion** | Clear taxonomy; explain use cases for each product |
+| **Product confusion** | Clear taxonomy of capabilities; explain when to use each |
 
 ### Resources for Advanced Copilot Conversations
 

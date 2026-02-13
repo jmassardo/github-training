@@ -71,9 +71,10 @@ Not all Copilot features are available in every IDE. This section helps you unde
 | **Multi-line Completions** | ✅ | ✅ | ✅ | ✅ | ✅ |
 | **Copilot Chat Panel** | ✅ | ✅ | ✅ | ⚠️ | ✅ |
 | **Inline Chat** | ✅ | ✅ | ✅ | ❌ | ❌ |
-| **@workspace** | ✅ | ⚠️ | ⚠️ | ❌ | ❌ |
-| **Voice Commands** | ✅ | ❌ | ❌ | ❌ | ❌ |
-| **Copilot Edits** | ✅ | ❌ | ❌ | ❌ | ❌ |
+| **@workspace** | ✅ | ✅ | ✅ | ❌ | ❌ |
+| **Model Selection** | ✅ | ✅ | ✅ | ❌ | ❌ |
+| **Agent Mode** | ✅ | ✅ | ⚠️ | ❌ | ❌ |
+| **Copilot Edits** | ✅ | ✅ | ⚠️ | ❌ | ❌ |
 
 > **📚 Learn More:** [IDE Feature Availability](https://docs.github.com/en/copilot/github-copilot-chat/copilot-chat-in-ides)
 
@@ -88,8 +89,9 @@ VS Code offers the most complete Copilot experience, being the primary developme
 | Feature | Description |
 |---------|-------------|
 | **Copilot Edits** | Multi-file editing with AI guidance |
+| **Agent Mode** | Autonomous coding with terminal access |
 | **@workspace** | Full codebase queries |
-| **Voice Control** | Hands-free coding with "Hey GitHub" |
+| **Model Selection** | Choose between GPT-4o, Claude, Gemini, and more |
 | **Terminal Integration** | `@terminal` for shell help |
 | **Notebook Support** | Jupyter notebook AI assistance |
 
@@ -257,7 +259,7 @@ Xcode support brings Copilot to iOS and macOS developers.
 | Feature | Status | Notes |
 |---------|--------|-------|
 | **Inline Completions** | ✅ Full | Native integration |
-| **Chat** | ✅ Beta | Separate panel |
+| **Chat** | ✅ Full | Separate panel |
 | **Swift Support** | ✅ Excellent | Strong language understanding |
 | **Objective-C Support** | ✅ Good | Reasonable suggestions |
 | **SwiftUI** | ✅ Good | Understands declarative patterns |
@@ -404,7 +406,7 @@ gh copilot suggest "list all GitHub Actions secrets for a repo using gh cli"
 ### Requirements
 
 - GitHub CLI (`gh`) version 2.0+
-- Active GitHub Copilot subscription (Individual, Business, or Enterprise)
+- Active GitHub Copilot subscription (Free, Pro, Business, or Enterprise)
 - Authenticated with `gh auth login`
 
 > **📚 Learn More:** [Copilot in the CLI](https://docs.github.com/en/copilot/github-copilot-in-the-cli/using-github-copilot-in-the-cli)
@@ -540,7 +542,7 @@ feat(auth): add logout functionality and update tests
 
 ---
 
-## Next Edit Suggestions (Preview)
+## Next Edit Suggestions
 
 Next Edit Suggestions predict where you'll edit next and offer completions proactively.
 
@@ -565,10 +567,10 @@ function processUser(userData) {
 
 ### Availability
 
-- **VS Code**: Available in preview
-- **Xcode**: Available in preview  
+- **VS Code**: Generally available
+- **JetBrains**: Generally available
+- **Xcode**: Generally available
 - **Eclipse**: Available in preview
-- **Other IDEs**: Coming soon
 
 > **📚 Learn More:** [Next Edit Suggestions](https://docs.github.com/en/copilot/using-github-copilot/getting-code-suggestions-in-your-ide-with-github-copilot)
 

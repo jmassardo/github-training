@@ -80,6 +80,11 @@ GitHub Enterprise Cloud provides a hierarchical structure for managing organizat
 | **Enterprise Owners** | Full administrative access | Limited to trusted administrators |
 | **Enterprise Support** | Premium support access | Enterprise-tier support tickets |
 | **Audit Log Streaming** | Real-time audit data export | SIEM integration, compliance |
+| **Repository Rulesets** | Declarative branch/tag/push rules replacing branch protection | Consistent governance at scale |
+| **Custom Repository Roles** | Define fine-grained permission roles beyond built-in | Compliance, least-privilege access |
+| **Custom Properties** | Tag repositories with metadata key-value pairs | Repository classification, policy targeting |
+| **Copilot Policies** | Control Copilot access and features enterprise-wide | AI governance across organizations |
+| **Security Configurations** | Define and apply standardized security settings across orgs | GHAS rollout consistency |
 
 ### Organization Management
 

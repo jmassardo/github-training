@@ -60,7 +60,7 @@ Let's walk through creating and using a Git repository step by step.
 **Check if Git is installed:**
 ```bash
 git --version
-# Should output something like: git version 2.39.0
+# Should output something like: git version 2.x.x (version 2.39 or later recommended)
 ```
 
 </div>

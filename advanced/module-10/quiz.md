@@ -117,7 +117,7 @@ D) GitHub Apps can only be installed organization-wide
 3. **B** - Use HMAC-SHA256 with your secret to verify the signature header
 4. **C** - Authenticated requests are limited to 5,000 per hour
 5. **C** - GitHub Apps provide installation-based authentication with granular permissions
-6. **B** - GitHub returns 403 for rate limiting (check response body for details)
+6. **C** - HTTP 429 (Too Many Requests) is the standard rate-limiting status code. GitHub returns 429 for both primary and secondary rate limits, along with a `Retry-After` header.
 7. **B** - X-GitHub-Event header contains the event type
 8. **B** - Use page and per_page query parameters for pagination
 9. **B** - App access depends on installation location and the permissions granted during installation

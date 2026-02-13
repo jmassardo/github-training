@@ -169,9 +169,7 @@ next_module:
 
 | Extension | Purpose | Link |
 |-----------|---------|------|
-| **GitHub Copilot** | Core extension | [Marketplace](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) |
-| **GitHub Copilot Chat** | Chat functionality | [Marketplace](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat) |
-| **Copilot Labs** | Experimental features | [Marketplace](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-labs) |
+| **GitHub Copilot** | Core extension (includes Chat) | [Marketplace](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) |
 
 ### CLI Tools
 
@@ -212,8 +210,7 @@ next_module:
 |-------------|---------|
 | `@workspace` | Query your entire workspace |
 | `@vscode` | VS Code help |
-| `@terminal` | Terminal/shell assistance |
-
+| `@terminal` | Terminal/shell assistance || `@github` | GitHub platform queries (repos, issues, PRs) |
 ---
 
 ## Module Completion
