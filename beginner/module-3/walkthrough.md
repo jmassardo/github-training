@@ -50,7 +50,7 @@ next_section:
 
 Let's take a tour through a real repository to understand the GitHub interface.
 
-<div class="callout callout-info">
+<div class="callout callout-info" markdown="1">
 <div class="callout-title">🔗 Follow Along</div>
 
 Open [github.com/github/docs](https://github.com/github/docs) in another tab to follow along. This is GitHub's own documentation repository.

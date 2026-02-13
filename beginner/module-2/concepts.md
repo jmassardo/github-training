@@ -46,7 +46,7 @@ next_section:
   title: "Guided Walkthrough"
 ---
 
-<div class="callout callout-info">
+<div class="callout callout-info" markdown="1">
 <div class="callout-title">📚 Official Documentation</div>
 For comprehensive reference, see <a href="https://git-scm.com/doc">Git Documentation</a> and <a href="https://docs.github.com/en/get-started/getting-started-with-git">GitHub's Git Guide</a>.
 </div>
@@ -98,16 +98,12 @@ A **commit** is a snapshot of your entire project at a specific moment. Each com
 
 **Commits are immutable** — once created, they never change. This creates an unbreakable chain of history.
 
-```
-Commit History (like a timeline):
-
-a3f2b91 - "Add user login feature" (Dec 9, 2025)
-    ↑
-b7c8d42 - "Fix homepage typo" (Dec 8, 2025)
-    ↑
-c9e1f53 - "Initial project setup" (Dec 7, 2025)
-
-```
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart BT
+    C["c9e1f53 - Initial project setup\n(Dec 7, 2025)"] --> B["b7c8d42 - Fix homepage typo\n(Dec 8, 2025)"] --> A["a3f2b91 - Add user login feature\n(Dec 9, 2025)"]
+</div>
+</div>
 
 ### Writing Good Commit Messages
 
@@ -140,14 +136,13 @@ Git files exist in three states:
 
 Think of staging as packing a box before shipping it. You choose what goes in.
 
-```
-Working Directory  →  Staging Area  →  Repository
-(modified files)     (files ready      (committed
-                     to commit)         snapshots)
-
-[edit file]       →  [git add]     →  [git commit]
-
-```
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart LR
+    WD["Working Directory\n(modified files)\n\nedit file"] -->|git add| SA["Staging Area\n(files ready to commit)"]
+    SA -->|git commit| Repo["Repository\n(committed snapshots)"]
+</div>
+</div>
 
 ### Why a Staging Area?
 
@@ -167,12 +162,19 @@ A **branch** is an independent line of development. Branches let you:
 - Collaborate without conflicts
 - Organize work by feature, bug fix, or team
 
-```
-main:      A---B---C---------F
-                \           /
-feature:         D---E-----
-
-```
+<div class="mermaid-container">
+<div class="mermaid">
+gitGraph
+    commit id: "A"
+    commit id: "B"
+    commit id: "C"
+    branch feature
+    commit id: "D"
+    commit id: "E"
+    checkout main
+    merge feature id: "F"
+</div>
+</div>
 
 ### Key Branch Types
 
@@ -204,44 +206,52 @@ git checkout -b feature/new-feature
 
 **Merging** brings changes from one branch into another. Git is smart — it automatically combines changes unless there's a conflict.
 
-```
-Before merge:
-main:    A---B---C
-              \
-feature:       D---E
-
-After merge:
-main:    A---B---C-------F
-              \         /
-feature:       D---E----
-
-```
+<div class="mermaid-container">
+<div class="mermaid">
+gitGraph
+    commit id: "A"
+    commit id: "B"
+    commit id: "C"
+    branch feature
+    commit id: "D"
+    commit id: "E"
+    checkout main
+    merge feature id: "F"
+</div>
+</div>
 
 ### Types of Merges
 
 **Fast-Forward Merge** — When main hasn't changed since you branched:
 
-```
-Before:  main: A---B
-                   \
-         feature:   C---D
-
-After:   main: A---B---C---D (fast-forwarded)
-
-```
+<div class="mermaid-container">
+<div class="mermaid">
+gitGraph
+    commit id: "A"
+    commit id: "B"
+    branch feature
+    commit id: "C"
+    commit id: "D"
+    checkout main
+    merge feature
+</div>
+</div>
 
 **Three-Way Merge** — When both branches have new commits:
 
-```
-Before:  main:    A---B---E
-                      \
-         feature:      C---D
-
-After:   main:    A---B---E---F (merge commit)
-                      \      /
-         feature:      C---D-
-
-```
+<div class="mermaid-container">
+<div class="mermaid">
+gitGraph
+    commit id: "A"
+    commit id: "B"
+    branch feature
+    commit id: "C"
+    commit id: "D"
+    checkout main
+    commit id: "E"
+    merge feature id: "F"
+</div>
+</div>
 
 
 ## Merge Conflicts: When Git Needs Help
@@ -311,7 +321,7 @@ Putting it all together, here's a typical workflow:
 
 ## Visual Summary
 
-<div class="callout callout-info">
+<div class="callout callout-info" markdown="1">
 <div class="callout-title">🎨 Key Concepts at a Glance</div>
 
 **Repository**: Your project folder + Git history  

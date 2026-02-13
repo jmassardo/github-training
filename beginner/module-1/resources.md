@@ -177,7 +177,7 @@ DevOps: Automation, CI/CD, shift left, continuous everything
 
 ---
 
-<div class="callout callout-tip">
+<div class="callout callout-tip" markdown="1">
 <div class="callout-title">📌 Bookmark This Page</div>
 
 Keep these resources handy as you progress through the training program. You'll reference them throughout your CSM/CSA journey!

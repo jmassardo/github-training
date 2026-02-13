@@ -5,7 +5,7 @@ permalink: /advanced/module-9/quiz/
 module_number: 9
 module_title: "Enterprise Administration"
 section_number: 5
-total_sections: 7
+total_sections: 10
 phase: advanced
 estimated_time: "15 min"
 module_index: /advanced/module-9/
@@ -38,6 +38,18 @@ sections:
     url: "/advanced/module-9/scenarios/"
     short_title: "Scenarios"
     icon: "💼"
+  - title: "GHES vs GHEC"
+    url: "/advanced/module-9/ghes-vs-ghec/"
+    short_title: "GHES vs GHEC"
+    icon: "⚖️"
+  - title: "GHES Administration"
+    url: "/advanced/module-9/ghes-admin/"
+    short_title: "GHES Admin"
+    icon: "🖥️"
+  - title: "Migrating to GHEC"
+    url: "/advanced/module-9/migrations/"
+    short_title: "Migrations"
+    icon: "🔄"
 toc: true
 prev_section:
   url: /advanced/module-9/labs/

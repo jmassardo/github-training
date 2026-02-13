@@ -270,7 +270,7 @@ git revert        # Undo a commit safely
 | Committed sensitive data | `git reset` if unpushed, rotate credentials if pushed |
 
 
-<div class="callout callout-tip">
+<div class="callout callout-tip" markdown="1">
 <div class="callout-title">📌 Bookmark This Page</div>
 
 Keep this cheat sheet handy! You'll reference these commands frequently as you practice.

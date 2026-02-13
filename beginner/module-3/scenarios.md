@@ -366,7 +366,7 @@ You now understand:
 - ✅ Navigation and key features of the GitHub interface
 - ✅ How to help customers with platform adoption
 
-<div class="callout callout-success">
+<div class="callout callout-success" markdown="1">
 <div class="callout-title">🚀 Ready for Module 4?</div>
 
 Next, we'll dive into SCM processes — branching strategies, code review workflows, and release management.

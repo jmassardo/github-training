@@ -16,3 +16,4 @@ end
 # Dependencies
 gem "kramdown", ">= 2.4.0"
 gem "rouge" # Syntax highlighting
+gem "logger" # Required from Ruby 3.5+

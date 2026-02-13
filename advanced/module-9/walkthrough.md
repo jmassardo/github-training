@@ -5,7 +5,7 @@ permalink: /advanced/module-9/walkthrough/
 module_number: 9
 module_title: "Enterprise Administration"
 section_number: 3
-total_sections: 7
+total_sections: 10
 phase: advanced
 estimated_time: "35 min"
 module_index: /advanced/module-9/
@@ -38,6 +38,18 @@ sections:
     url: "/advanced/module-9/scenarios/"
     short_title: "Scenarios"
     icon: "💼"
+  - title: "GHES vs GHEC"
+    url: "/advanced/module-9/ghes-vs-ghec/"
+    short_title: "GHES vs GHEC"
+    icon: "⚖️"
+  - title: "GHES Administration"
+    url: "/advanced/module-9/ghes-admin/"
+    short_title: "GHES Admin"
+    icon: "🖥️"
+  - title: "Migrating to GHEC"
+    url: "/advanced/module-9/migrations/"
+    short_title: "Migrations"
+    icon: "🔄"
 toc: true
 prev_section:
   url: /advanced/module-9/concepts/
@@ -124,7 +136,7 @@ SAML Configuration:
 4. Click **Test SAML configuration** with your account
 5. Once verified, enable **Require SAML authentication**
 
-<div class="callout callout-warning">
+<div class="callout callout-warning" markdown="1">
 <div class="callout-title">⚠️ Before Requiring SAML</div>
 
 Always test with a few users first! Once you require SAML authentication, users who can't authenticate via your IdP will be locked out. Ensure you have:
@@ -193,7 +205,7 @@ Optional (for team sync):
 3. Once validated, enable **Full sync**
 4. Monitor provisioning logs for errors
 
-<div class="callout callout-tip">
+<div class="callout callout-tip" markdown="1">
 <div class="callout-title">💡 CSM Tip</div>
 
 SCIM provisioning runs on a schedule (typically every 40 minutes in Azure AD). For immediate user provisioning, use "Provision on demand" or have customers adjust the provisioning interval.
@@ -280,7 +292,7 @@ gh api repos/target-github-org/my-repository/branches/main/protection
 
 ```
 
-<div class="callout callout-info">
+<div class="callout callout-info" markdown="1">
 <div class="callout-title">📋 Post-Migration Checklist</div>
 
 After migration, help customers verify:

@@ -51,7 +51,7 @@ next_section:
 
 Welcome to the hands-on walkthrough for GitHub governance and metrics! This section guides you through implementing enterprise-grade governance policies and DORA metrics collection.
 
-<div class="callout callout-tip">
+<div class="callout callout-tip" markdown="1">
 <div class="callout-title">💡 CSM Tip</div>
 Governance and metrics are executive-level conversations. This walkthrough addresses three common concerns: "How do we enforce policies?" (rulesets), "How do we prove compliance?" (audit logs), and "How do we measure improvement?" (DORA metrics). Be prepared to connect these to business outcomes.
 </div>
@@ -87,7 +87,7 @@ Enterprise governance in GitHub follows a hierarchy: **Enterprise → Organizati
 | **Organization** | Default settings, rulesets, teams | Org owners |
 | **Repository** | Specific branch rules, secrets | Repo admins |
 
-<div class="callout callout-info">
+<div class="callout callout-info" markdown="1">
 <div class="callout-title">📖 Policy Inheritance</div>
 Enterprise policies set the boundaries. For example, if the enterprise disables forking for private repos, no organization can override this. Organizations can add restrictions but cannot remove enterprise-level restrictions.
 </div>
@@ -166,7 +166,7 @@ bypass_actors:
 
 ```
 
-<div class="callout callout-tip">
+<div class="callout callout-tip" markdown="1">
 <div class="callout-title">💡 CSM Tip</div>
 Organization rulesets are a major governance win. They apply to ALL matching repositories automatically—no per-repo configuration. When customers ask "how do we enforce branch protection across 500 repos?", this is the answer.
 </div>
@@ -233,7 +233,7 @@ DORA (DevOps Research and Assessment) metrics measure software delivery performa
 | **Change Failure Rate** | % of deployments causing incidents | Less than 5% |
 | **Time to Restore** | Time to recover from incidents | Less than 1 hour |
 
-<div class="callout callout-tip">
+<div class="callout callout-tip" markdown="1">
 <div class="callout-title">💡 CSM Tip</div>
 DORA metrics resonate with engineering leadership because they're research-backed and industry-standard. Frame GitHub adoption around improving these metrics: "Actions enables higher deployment frequency," "PR reviews reduce change failure rate," etc.
 </div>
@@ -487,7 +487,7 @@ Compliance reporting answers the question "are we following our policies?" Autom
 | Vulnerability management | Dependabot alerts | API check for enabled |
 | Secret protection | Secret scanning | API check for enabled |
 
-<div class="callout callout-tip">
+<div class="callout callout-tip" markdown="1">
 <div class="callout-title">💡 CSM Tip</div>
 Compliance automation is a huge time-saver for security teams. Instead of manually auditing repositories, they get weekly reports showing exactly which repos need attention. Frame this as "security at scale" for enterprise customers.
 </div>
@@ -640,7 +640,7 @@ You've implemented a comprehensive governance and metrics program:
 | **Weekly Reports** | Automated metrics aggregation |
 | **Compliance Checks** | Security posture monitoring |
 
-<div class="callout callout-success">
+<div class="callout callout-success" markdown="1">
 <div class="callout-title">✅ Ready for Labs</div>
 You've seen how to implement enterprise governance and measure engineering effectiveness. In the Hands-On Labs, you'll apply these patterns to real scenarios.
 </div>

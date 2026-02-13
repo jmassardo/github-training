@@ -365,7 +365,7 @@ flowchart LR
 3. **Visibility is built-in** — Anyone can see status, history, and decisions
 4. **Collaboration is first-class** — Reviews, discussions, and feedback are native
 
-<div class="callout callout-tip">
+<div class="callout callout-tip" markdown="1">
 <div class="callout-title">💡 CSM Tip</div>
 
 When talking with customers, walk them through this flow with their own examples. Seeing how GitHub connects their workflow phases is often an "aha moment" that drives adoption.

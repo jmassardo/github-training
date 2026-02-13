@@ -59,7 +59,7 @@ next_section:
   title: "IDE Setup"
 ---
 
-<div class="callout callout-info">
+<div class="callout callout-info" markdown="1">
 <div class="callout-title">🤖 Official Documentation</div>
 For comprehensive reference, see <a href="https://docs.github.com/en/copilot">GitHub Copilot Documentation</a> and the <a href="https://docs.github.com/en/copilot/getting-started-with-github-copilot">Getting Started Guide</a>.
 </div>

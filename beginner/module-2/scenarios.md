@@ -393,7 +393,7 @@ Congratulations! You now understand:
 - ✅ How to use essential Git commands
 - ✅ How to address common customer Git questions
 
-<div class="callout callout-success">
+<div class="callout callout-success" markdown="1">
 <div class="callout-title">🚀 Ready for Module 3?</div>
 
 In the next module, we'll explore the GitHub platform in depth — the features that transform Git from a command-line tool into a collaboration powerhouse.

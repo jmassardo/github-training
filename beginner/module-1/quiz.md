@@ -259,7 +259,7 @@ How'd you do?
 | 4-5 | 📚 Good start — revisit the Core Concepts section |
 | 0-3 | 🔄 Consider re-reading the module before moving on |
 
-<div class="callout callout-tip">
+<div class="callout callout-tip" markdown="1">
 <div class="callout-title">💡 Pro Tip</div>
 
 Don't worry if you didn't ace every question! The goal is learning, not perfection. These concepts will reinforce as you work through the remaining modules and apply them in real customer conversations.

@@ -47,7 +47,7 @@ next_section:
   title: "Guided Walkthrough"
 ---
 
-<div class="callout callout-info">
+<div class="callout callout-info" markdown="1">
 <div class="callout-title">📚 Official Documentation</div>
 For comprehensive reference, see <a href="https://docs.github.com/en/pull-requests">Pull Requests Documentation</a> and <a href="https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository">Branch Configuration</a>.
 </div>
@@ -59,19 +59,16 @@ For comprehensive reference, see <a href="https://docs.github.com/en/pull-reques
 ### Git Flow
 Traditional approach with long-lived branches:
 
-```
-main (production)
-  │
-  └── develop (integration)
-        │
-        ├── feature/user-auth
-        ├── feature/payment-system
-        │
-        └── release/v1.2.0
-              │
-              └── hotfix/security-patch
-
-```
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart TB
+    main["main\n(production)"] --> develop["develop\n(integration)"]
+    develop --> feat1["feature/user-auth"]
+    develop --> feat2["feature/payment-system"]
+    develop --> release["release/v1.2.0"]
+    release --> hotfix["hotfix/security-patch"]
+</div>
+</div>
 
 **Best for:** Teams with scheduled releases, multiple versions in production
 
@@ -84,14 +81,15 @@ main (production)
 ### GitHub Flow
 Simplified approach with short-lived branches:
 
-```
-main (always deployable)
-  │
-  ├── feature/add-login ─────────► PR → main
-  ├── fix/button-color ──────────► PR → main
-  └── docs/api-update ───────────► PR → main
-
-```
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart LR
+    main["main\n(always deployable)"]
+    feat["feature/add-login"] -->|PR| main
+    fix["fix/button-color"] -->|PR| main
+    docs["docs/api-update"] -->|PR| main
+</div>
+</div>
 
 **Best for:** Teams practicing continuous deployment, SaaS products
 
@@ -104,12 +102,12 @@ main (always deployable)
 ### Trunk-Based Development
 Extreme simplification with very short-lived branches:
 
-```
-main
-  │
-  └── feature/xyz (lives < 1 day) ──► PR → main
-
-```
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart LR
+    feat["feature/xyz\n(lives less than 1 day)"] -->|PR| main["main"]
+</div>
+</div>
 
 **Best for:** High-performing teams, microservices, feature flags
 
@@ -279,37 +277,39 @@ GitHub Releases provide version packaging and distribution:
 
 ### Release Components
 
-```
-Release: v2.1.0
-├── Tag: v2.1.0 (git tag pointing to commit)
-├── Title: "Version 2.1.0 - Performance Release"
-├── Release Notes: (markdown description)
-├── Assets:
-│   ├── app-2.1.0-linux-x64.tar.gz
-│   ├── app-2.1.0-macos-x64.tar.gz
-│   ├── app-2.1.0-windows-x64.zip
-│   └── checksums.txt
-├── Pre-release: false
-└── Latest: true
-
-```
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart TB
+    subgraph Release["Release: v2.1.0"]
+        direction TB
+        Tag["Tag: v2.1.0\n(git tag pointing to commit)"]
+        Title["Title: Version 2.1.0 - Performance Release"]
+        Notes["Release Notes\n(markdown description)"]
+        subgraph Assets["Assets"]
+            A1["app-2.1.0-linux-x64.tar.gz"]
+            A2["app-2.1.0-macos-x64.tar.gz"]
+            A3["app-2.1.0-windows-x64.zip"]
+            A4["checksums.txt"]
+        end
+        PreRelease["Pre-release: false"]
+        Latest["Latest: true"]
+    end
+</div>
+</div>
 
 ### Semantic Versioning
 
-```
-MAJOR.MINOR.PATCH
-
-v2.1.0
-│ │ └── PATCH: Bug fixes (backward compatible)
-│ └──── MINOR: New features (backward compatible)
-└────── MAJOR: Breaking changes
-
-Pre-release versions:
-v2.1.0-alpha.1
-v2.1.0-beta.2
-v2.1.0-rc.1
-
-```
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart TB
+    SemVer["MAJOR.MINOR.PATCH\nExample: v2.1.0"] --> Major["MAJOR\nBreaking changes"]
+    SemVer --> Minor["MINOR\nNew features\n(backward compatible)"]
+    SemVer --> Patch["PATCH\nBug fixes\n(backward compatible)"]
+    PreRelease["Pre-release versions"] --> Alpha["v2.1.0-alpha.1"]
+    PreRelease --> Beta["v2.1.0-beta.2"]
+    PreRelease --> RC["v2.1.0-rc.1"]
+</div>
+</div>
 
 ### Auto-Generated Release Notes
 

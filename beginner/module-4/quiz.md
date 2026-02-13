@@ -269,14 +269,23 @@ For non-Enterprise customers:
 - Requires rebasing or merging main into feature branch first
 - Ensures status checks run against final merged state
 
-```
-main:    A--B--C--D
-feature: A--B--X--Y  (missing C, D - must update first)
+<div class="mermaid-container">
+<div class="mermaid">
+gitGraph
+    commit id: "A"
+    commit id: "B"
+    branch feature
+    commit id: "X"
+    commit id: "Y"
+    checkout main
+    commit id: "C"
+    commit id: "D"
+    checkout feature
+    merge main
+</div>
+</div>
 
-After update:
-feature: A--B--C--D--X--Y  ✓ Can now merge
-
-```
+> Feature branch must include all commits from main (C, D) before merging. After update, feature has A-B-C-D-X-Y.
 
 **Require linear history:**
 
@@ -285,16 +294,38 @@ feature: A--B--C--D--X--Y  ✓ Can now merge
 - Creates cleaner, linear commit history
 - No merge bubbles in git log
 
-```
-Without linear history:
-A--B--C--D--E--G (merge commit)
-        \     /
-         X--Y
+**Without linear history (merge bubbles):**
 
-With linear history:
-A--B--C--D--E--X'--Y'  (squashed or rebased)
+<div class="mermaid-container">
+<div class="mermaid">
+gitGraph
+    commit id: "A"
+    commit id: "B"
+    commit id: "C"
+    commit id: "D"
+    commit id: "E"
+    branch feature
+    commit id: "X"
+    commit id: "Y"
+    checkout main
+    merge feature id: "G (merge commit)"
+</div>
+</div>
 
-```
+**With linear history (squashed or rebased):**
+
+<div class="mermaid-container">
+<div class="mermaid">
+gitGraph
+    commit id: "A"
+    commit id: "B"
+    commit id: "C"
+    commit id: "D"
+    commit id: "E"
+    commit id: "X' (squashed)"
+    commit id: "Y'"
+</div>
+</div>
 
 Combined effect:
 

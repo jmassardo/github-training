@@ -131,7 +131,7 @@ Git is used throughout the entire software development lifecycle:
 
 ## Why CSMs Need to Understand Git
 
-<div class="callout callout-info">
+<div class="callout callout-info" markdown="1">
 <div class="callout-title">💡 CSM Perspective</div>
 
 You don't need to be a Git expert, but understanding the basics helps you:

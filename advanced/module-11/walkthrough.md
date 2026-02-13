@@ -51,7 +51,7 @@ next_section:
 
 Welcome to the hands-on walkthrough for GitHub Infrastructure as Code! This section guides you through managing GitHub configuration—repositories, teams, permissions, and policies—as version-controlled code.
 
-<div class="callout callout-tip">
+<div class="callout callout-tip" markdown="1">
 <div class="callout-title">💡 CSM Tip</div>
 IaC for GitHub is a powerful story for enterprise customers. It addresses governance concerns ("how do we ensure consistent configuration?"), compliance needs ("who changed what and when?"), and scalability challenges ("how do we manage 1000+ repos?"). This walkthrough demonstrates the value proposition.
 </div>
@@ -82,7 +82,7 @@ This walkthrough guides you through setting up Infrastructure as Code for GitHub
 | **Scaling to 100s of repos** | Terraform loops and modules |
 | **Compliance requirements** | Git history = audit trail |
 
-<div class="callout callout-info">
+<div class="callout callout-info" markdown="1">
 <div class="callout-title">📖 The GitOps Pattern</div>
 With IaC, changes follow a standard development workflow: create a branch, make changes, open a PR, get review, merge. Terraform applies the changes automatically. This brings software engineering practices to infrastructure management.
 </div>
@@ -218,7 +218,7 @@ module "repositories" {
 
 Modules are the heart of IaC standardization. This module creates a repository with your organization's standard settings—branch protection, topics, team access—ensuring consistency across all projects.
 
-<div class="callout callout-tip">
+<div class="callout callout-tip" markdown="1">
 <div class="callout-title">💡 CSM Tip</div>
 Walk customers through what their "standard repository" looks like: What branch protection rules? Which teams need access? What topics for discoverability? This module encodes those decisions, eliminating drift over time.
 </div>
@@ -497,7 +497,7 @@ module "web_app" {
 
 ```
 
-<div class="callout callout-info">
+<div class="callout callout-info" markdown="1">
 <div class="callout-title">📖 Scaling to Many Repositories</div>
 For organizations with many repositories, consider using <code>for_each</code> with a map or YAML file to define repositories declaratively. This allows non-Terraform users to add repositories by editing a simple config file.
 </div>
@@ -510,7 +510,7 @@ The GitOps workflow automates Terraform operations: `plan` runs on PR to show pr
 
 ### Workflow Security
 
-<div class="callout callout-warning">
+<div class="callout callout-warning" markdown="1">
 <div class="callout-title">⚠️ Protect Your Terraform Token</div>
 The token used for Terraform needs org admin permissions. Store it as a repository secret and restrict who can trigger the apply workflow. Consider using a GitHub App for finer-grained permissions.
 </div>
@@ -688,7 +688,7 @@ You've now built a complete IaC solution for GitHub management:
 | **Team definitions** | Codified access control |
 | **GitOps workflow** | Self-service with review gates |
 
-<div class="callout callout-success">
+<div class="callout callout-success" markdown="1">
 <div class="callout-title">✅ Ready for Labs</div>
 You've seen how to manage GitHub at scale with Infrastructure as Code. In the Hands-On Labs, you'll apply these patterns to real scenarios.
 </div>

@@ -337,7 +337,7 @@ Congratulations on completing Module 1! You now understand:
 - ✅ The GitHub Well-Architected Framework
 - ✅ How to apply these concepts in customer conversations
 
-<div class="callout callout-success">
+<div class="callout callout-success" markdown="1">
 <div class="callout-title">🚀 Ready for Module 2?</div>
 
 In the next module, we'll dive deep into Git and GitHub fundamentals — the technical foundation that powers everything you learned today.

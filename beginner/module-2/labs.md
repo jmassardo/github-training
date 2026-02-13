@@ -50,7 +50,7 @@ next_section:
 
 Practice your Git skills with these hands-on exercises. Complete them in order.
 
-<div class="callout callout-info">
+<div class="callout callout-info" markdown="1">
 <div class="callout-title">📋 Prerequisites</div>
 
 - Completed the Guided Walkthrough section
@@ -273,7 +273,7 @@ Two team members edited the same file differently. You need to merge their chang
 - [ ] Successfully resolved the conflict
 - [ ] Completed the merge commit
 
-<div class="callout callout-tip">
+<div class="callout callout-tip" markdown="1">
 <div class="callout-title">💡 Pro Tip</div>
 
 In VS Code, conflicts are highlighted with color coding and you can click "Accept Current Change", "Accept Incoming Change", or "Accept Both Changes" to resolve quickly.
@@ -398,7 +398,7 @@ git log --oneline -3
 - [ ] Amended a commit message
 - [ ] Created a revert commit
 
-<div class="callout callout-warning">
+<div class="callout callout-warning" markdown="1">
 <div class="callout-title">⚠️ Important Note</div>
 
 **Never amend commits that have been pushed** to a shared repository. This rewrites history and causes problems for others. Use `git revert` instead for pushed commits.
@@ -413,7 +413,7 @@ git log --oneline -3
 - [ ] Lab 3: Exploring Git History
 - [ ] Lab 4: Undoing Changes
 
-<div class="callout callout-tip">
+<div class="callout callout-tip" markdown="1">
 <div class="callout-title">📸 Keep Your Lab Repo</div>
 
 Don't delete this repository! You can use it for future practice and experimentation.

@@ -55,7 +55,7 @@ sections:
 ---
 {% raw %}
 
-<div class="callout callout-info">
+<div class="callout callout-info" markdown="1">
 <div class="callout-title">📖 Official Documentation</div>
 For comprehensive reference, see <a href="https://docs.github.com/en/code-security">GitHub Code Security Documentation</a> and the <a href="https://docs.github.com/en/get-started/learning-about-github/about-github-advanced-security">GHAS Overview</a>.
 </div>
@@ -63,13 +63,12 @@ For comprehensive reference, see <a href="https://docs.github.com/en/code-securi
 ## 2.1 Code Scanning with CodeQL
 CodeQL is GitHub's semantic code analysis engine:
 
-```
-Your Code → CodeQL Database → Query Execution → Security Alerts
-    │              │                 │               │
-  Parse      Extract facts     Run security      Report
-  source      about code         queries       vulnerabilities
-
-```
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart LR
+    Code["Your Code\n(Parse source)"] --> DB["CodeQL Database\n(Extract facts about code)"] --> Query["Query Execution\n(Run security queries)"] --> Alerts["Security Alerts\n(Report vulnerabilities)"]
+</div>
+</div>
 
 ### Supported Languages
 
@@ -215,14 +214,12 @@ All bypasses are logged for audit.
 ### Dependabot Alerts
 Automatically notifies when dependencies have known vulnerabilities:
 
-```
-Dependency Graph → Advisory Database → Match → Alert
-      │                    │              │        │
-  package.json      GitHub Advisory   Found    Create alert
-  requirements.txt  Database          CVE      with severity
-  pom.xml          (NVD, vendor)                and fix info
-
-```
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart LR
+    Graph["Dependency Graph\n(package.json,\nrequirements.txt,\npom.xml)"] --> Advisory["Advisory Database\n(GitHub Advisory\nDatabase, NVD, vendor)"] --> Match["Match\n(Found CVE)"] --> Alert["Alert\n(Create alert with\nseverity and fix info)"]
+</div>
+</div>
 
 ### Dependabot Security Updates
 Automatically creates PRs to fix vulnerable dependencies:

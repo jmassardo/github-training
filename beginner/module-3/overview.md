@@ -173,7 +173,7 @@ A typical developer interacts with GitHub throughout their day:
 
 ## Why CSMs Need Platform Fluency
 
-<div class="callout callout-info">
+<div class="callout callout-info" markdown="1">
 <div class="callout-title">💡 CSM Perspective</div>
 
 Understanding the GitHub platform helps you:

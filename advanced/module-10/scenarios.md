@@ -217,16 +217,13 @@ actions:
 ```
 ### Architecture Diagram
 
-```
-
-GitHub Events → Webhook → Event Router → Handler Functions
-                                              ↓
-                                        GitHub API
-                                        (Settings, Teams, Actions)
-
-```
-
-```
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart LR
+    Events["GitHub Events"] --> Webhook["Webhook"] --> Router["Event Router"] --> Handlers["Handler Functions"]
+    Handlers --> API["GitHub API\n(Settings, Teams, Actions)"]
+</div>
+</div>
 
 ---
 

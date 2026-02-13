@@ -82,6 +82,7 @@ GEM
     listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
+    logger (1.7.0)
     mercenary (0.4.0)
     nokogiri (1.18.10-aarch64-linux-gnu)
       racc (~> 1.4)
@@ -148,6 +149,7 @@ DEPENDENCIES
   jekyll-feed
   jekyll-toc
   kramdown (>= 2.4.0)
+  logger
   rouge
   webrick (>= 1.7.0)
 

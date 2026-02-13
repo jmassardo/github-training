@@ -59,7 +59,7 @@ sections:
 
 Welcome to the hands-on walkthrough for GitHub Actions! This section takes you through building real CI/CD workflows step-by-step, explaining the reasoning behind each configuration choice.
 
-<div class="callout callout-tip">
+<div class="callout callout-tip" markdown="1">
 <div class="callout-title">💡 CSM Tip</div>
 GitHub Actions is often the "aha moment" for customers. Walking through these examples during enablement sessions helps teams see how Actions fits into their existing development workflow. Focus on the progressive complexity—start simple, then show the power of matrices and reusable workflows.
 </div>
@@ -183,7 +183,7 @@ git push origin main
 3. Observe jobs running in parallel
 4. Click into each job to see step logs
 
-<div class="callout callout-info">
+<div class="callout callout-info" markdown="1">
 <div class="callout-title">📖 Understanding the Workflow</div>
 Notice how the <code>build</code> job uses <code>needs: [lint, test]</code>. This creates a dependency graph where build only runs after both lint and test succeed. The Actions UI visualizes this as a workflow diagram, making it easy to see where failures occur.
 </div>
@@ -203,7 +203,7 @@ Matrix builds let you test your code across multiple combinations of operating s
 | **Web applications** | Browser versions + Node versions |
 | **Microservices** | Runtime versions + database versions |
 
-<div class="callout callout-tip">
+<div class="callout callout-tip" markdown="1">
 <div class="callout-title">💡 CSM Tip</div>
 Matrix testing is a powerful selling point for GitHub Actions. Show customers how a single workflow can replace complex Jenkins pipeline matrices or manually maintained test configurations. The <code>fail-fast: false</code> option lets all combinations complete even if one fails—great for understanding the full compatibility picture.
 </div>
@@ -269,7 +269,7 @@ Organizations often struggle with:
 
 Reusable workflows solve this by creating a **"workflow library"** that teams can call with different parameters.
 
-<div class="callout callout-tip">
+<div class="callout callout-tip" markdown="1">
 <div class="callout-title">💡 CSM Tip</div>
 Reusable workflows are a major governance win for enterprise customers. Help them identify 3-5 common patterns (build, deploy, security scan) that can be standardized. A central DevOps or Platform Engineering team can own these workflows, while product teams simply call them.
 </div>
@@ -374,7 +374,7 @@ jobs:
 
 ```
 
-<div class="callout callout-info">
+<div class="callout callout-info" markdown="1">
 <div class="callout-title">📖 Inputs, Secrets, and Outputs</div>
 Reusable workflows support typed inputs (<code>string</code>, <code>boolean</code>, <code>number</code>), inherited secrets, and outputs that can be consumed by downstream jobs. This makes them behave like functions in your CI/CD system.
 </div>
@@ -480,7 +480,7 @@ Environments solve common deployment governance needs:
 - **Branch restrictions** ensuring only `main` can deploy
 - **Environment-specific secrets** for credentials
 
-<div class="callout callout-tip">
+<div class="callout callout-tip" markdown="1">
 <div class="callout-title">💡 CSM Tip</div>
 Environments are a key differentiator from basic CI tools. Show customers the deployment history view—it provides audit trails showing who approved what and when. This is often a compliance requirement that previously required external tools like ServiceNow or Jira.
 </div>
@@ -571,7 +571,7 @@ You've now walked through the core GitHub Actions patterns that form the foundat
 | **Composite Actions** | Bundle related steps for cleaner workflow files |
 | **Environments** | Add governance and approval gates to deployments |
 
-<div class="callout callout-success">
+<div class="callout callout-success" markdown="1">
 <div class="callout-title">✅ Ready for Labs</div>
 You've seen how these concepts work in practice. In the Hands-On Labs, you'll build these workflows yourself and see them execute in real time.
 </div>

@@ -50,7 +50,7 @@ next_section:
 
 Practice using GitHub's platform features with these hands-on exercises.
 
-<div class="callout callout-info">
+<div class="callout callout-info" markdown="1">
 <div class="callout-title">📋 Prerequisites</div>
 
 - GitHub account
@@ -340,7 +340,7 @@ Practice using GitHub's platform features with these hands-on exercises.
 - [ ] Lab 3: Created and merged pull request
 - [ ] Lab 4: Explored repository settings
 
-<div class="callout callout-tip">
+<div class="callout callout-tip" markdown="1">
 <div class="callout-title">📸 Keep Your Practice Repo</div>
 
 This repository is now a great reference for demonstrating GitHub features to customers!

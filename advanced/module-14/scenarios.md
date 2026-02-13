@@ -4,8 +4,8 @@ title: "CSM Scenarios"
 permalink: /advanced/module-14/scenarios/
 module_number: 14
 module_title: "GitHub Copilot Advanced"
-section_number: 11
-total_sections: 11
+section_number: 12
+total_sections: 12
 phase: advanced
 estimated_time: "30 min"
 module_index: /advanced/module-14/
@@ -34,6 +34,11 @@ sections:
     url: "/advanced/module-14/instructions/"
     short_title: "Instructions"
     icon: "📝"
+    time: "25 min"
+  - title: "Copilot Spaces"
+    url: "/advanced/module-14/spaces/"
+    short_title: "Spaces"
+    icon: "🗂️"
     time: "25 min"
   - title: "Enterprise Administration"
     url: "/advanced/module-14/enterprise/"
@@ -176,27 +181,26 @@ A customer wants Copilot to understand their internal documentation and propriet
 
 **2. Explain MCP architecture:**
 
-```markdown
-## MCP Solution Architecture
-
-### What MCP Enables
+**What MCP Enables:**
 - Connect Copilot to internal documentation
 - Query internal databases and APIs
 - Access company knowledge bases
 - Integrate with ticketing systems
 
-### How It Works
-┌─────────────┐     ┌─────────────┐     ┌─────────────┐
-│   VS Code   │────▶│ MCP Server  │────▶│ Internal    │
-│  + Copilot  │◀────│  (Custom)   │◀────│ Systems     │
-└─────────────┘     └─────────────┘     └─────────────┘
+**How It Works:**
 
-### Common MCP Use Cases
-- @internal-docs - Query architecture docs
-- @api-spec - Look up internal API definitions
-- @standards - Check coding standards
-- @jira - Query related tickets
-```
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart LR
+    VSCode["VS Code\n+ Copilot"] <--> MCP["MCP Server\n(Custom)"] <--> Internal["Internal\nSystems"]
+</div>
+</div>
+
+**Common MCP Use Cases:**
+- `@internal-docs` — Query architecture docs
+- `@api-spec` — Look up internal API definitions
+- `@standards` — Check coding standards
+- `@jira` — Query related tickets
 
 **3. Provide implementation guidance:**
 
@@ -244,32 +248,21 @@ A customer asks: "Our developers use an internal deployment tool. Can we create 
 
 **2. Outline the architecture:**
 
-```markdown
-## Extension Architecture
+**Components Required:**
+1. **GitHub App** — Handles authentication and permissions
+2. **Backend Service** — Your extension logic (receives messages, returns responses)
+3. **API Integration** — Connects to your deployment system
 
-### Components Required
-1. **GitHub App** - Handles authentication and permissions
-2. **Backend Service** - Your extension logic (receives messages, returns responses)
-3. **API Integration** - Connects to your deployment system
+**Request Flow:**
 
-### Request Flow
-Developer: "@deploy status production"
-     │
-     ▼
-┌─────────────────┐
-│  GitHub App     │──── Verify user permissions
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│  Your Backend   │──── Parse intent, call deployment API
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│  Response       │──── "Production: ✅ Healthy (v2.3.1)"
-└─────────────────┘
-```
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart TD
+    Dev["Developer: @deploy status production"] --> App["GitHub App\n(Verify user permissions)"]
+    App --> Backend["Your Backend\n(Parse intent, call deployment API)"]
+    Backend --> Response["Response\nProduction: ✅ Healthy v2.3.1"]
+</div>
+</div>
 
 **3. Provide development guidance:**
 
