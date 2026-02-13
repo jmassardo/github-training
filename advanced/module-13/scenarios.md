@@ -155,8 +155,8 @@ The CISO reaches out before the Copilot rollout with concerns: "We have strict d
 
 **Resources to share:**
 - [GitHub Copilot Trust Center](https://copilot.github.trust.page/)
-- [Copilot Privacy FAQ](https://docs.github.com/en/copilot/copilot-business/about-github-copilot-business#privacy)
-- [Data handling practices](https://docs.github.com/en/copilot/overview-of-github-copilot/about-github-copilot-individual#about-privacy)
+- [Copilot Privacy FAQ](https://docs.github.com/en/copilot/managing-copilot/managing-github-copilot-in-your-organization/managing-policies-and-features-for-copilot-in-your-organization)
+- [Data handling practices](https://docs.github.com/en/copilot/responsible-use-of-github-copilot-features/github-copilot-general-privacy-notice)
 
 **2. Highlight Business/Enterprise controls:**
 
@@ -380,6 +380,6 @@ A financial services customer asks: "We love Copilot, but our trading systems te
 ### Resources for Customer Conversations
 
 - [GitHub Copilot Trust Center](https://copilot.github.trust.page/)
-- [Copilot for Business FAQ](https://docs.github.com/en/copilot/copilot-business/about-github-copilot-business)
+- [Copilot for Business](https://docs.github.com/en/copilot/about-github-copilot/github-copilot-features)
 - [Copilot Research and Data](https://github.blog/2022-09-07-research-quantifying-github-copilots-impact-on-developer-productivity-and-happiness/)
 - [Best Practices Guide](https://docs.github.com/en/copilot/using-github-copilot/best-practices-for-using-github-copilot)

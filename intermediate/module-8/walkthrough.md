@@ -166,7 +166,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run Snyk
-        uses: snyk/actions/node@master
+        uses: snyk/actions/node@v1  # Always pin to a version tag or SHA
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 

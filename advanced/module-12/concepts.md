@@ -531,10 +531,10 @@ Example:
 ```
 
 **Benchmarks**:
-- Elite: 0-15%
-- High: 16-30%
+- Elite: 0-5%
+- High: 6-15%
 - Medium: 16-30%
-- Low: 46-60%
+- Low: 31-45%
 
 ## Value Stream Mapping
 

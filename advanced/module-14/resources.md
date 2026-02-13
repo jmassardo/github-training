@@ -205,8 +205,7 @@ gh api /orgs/{org}/copilot/...  # API access
 
 | Extension | Purpose |
 |-----------|---------|
-| [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) | Core functionality |
-| [GitHub Copilot Chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat) | Chat interface |
+| [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) | Core functionality (includes Chat) |
 | [GitHub Actions](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-github-actions) | Workflow integration |
 | [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) | Git insights |
 
