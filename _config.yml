@@ -27,6 +27,9 @@ excerpt_separator: "<!-- more -->"
 sass:
   style: compressed
   sass_dir: _scss
+  quiet_deps: true
+  silence_deprecations:
+    - import
 permalink: pretty
 
 version: 1.0.0

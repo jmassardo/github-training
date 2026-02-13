@@ -47,7 +47,7 @@ next_section:
   title: "Guided Walkthrough"
 ---
 
-<div class="callout callout-info">
+<div class="callout callout-info" markdown="1">
 <div class="callout-title">🏛️ Official Documentation</div>
 For comprehensive reference, see <a href="https://docs.github.com/en/enterprise-cloud@latest/admin/policies">Enterprise Policies</a> and <a href="https://dora.dev/">DORA Research</a>.
 </div>
@@ -221,37 +221,38 @@ flowchart LR
 
 #### Integration Architecture
 
-```
-┌─────────────────────────────────────────────────────────────────────────┐
-│                         GitHub Enterprise                               │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐   │
-│  │   Actions   │  │  Audit Log  │  │  Webhooks   │  │    API      │   │
-│  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘   │
-└─────────┼────────────────┼────────────────┼────────────────┼──────────┘
-          │                │                │                │
-          ▼                ▼                ▼                ▼
-┌─────────────────────────────────────────────────────────────────────────┐
-│                    Data Collection Layer                                 │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐   │
-│  │  Log Agent  │  │   Stream    │  │  Webhook    │  │   Polling   │   │
-│  │  (Fluent)   │  │  Processor  │  │  Receiver   │  │   Service   │   │
-│  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘   │
-└─────────┼────────────────┼────────────────┼────────────────┼──────────┘
-          │                │                │                │
-          └────────────────┴────────────────┴────────────────┘
-                                    │
-                                    ▼
-┌─────────────────────────────────────────────────────────────────────────┐
-│                    Observability Platform                                │
-│  ┌─────────────────────────────────────────────────────────────────┐   │
-│  │  Datadog │ Splunk │ Azure Monitor │ Grafana │ New Relic │ etc. │   │
-│  └─────────────────────────────────────────────────────────────────┘   │
-│                                                                         │
-│  ┌───────────┐  ┌───────────┐  ┌───────────┐  ┌───────────┐           │
-│  │ Dashboards│  │  Alerts   │  │  Reports  │  │  Analysis │           │
-│  └───────────┘  └───────────┘  └───────────┘  └───────────┘           │
-└─────────────────────────────────────────────────────────────────────────┘
-```
+<div class="mermaid-container-large">
+<div class="mermaid">
+flowchart TD
+    subgraph GitHub["GitHub Enterprise"]
+        Actions["Actions"]
+        AuditLog["Audit Log"]
+        Webhooks["Webhooks"]
+        API["API"]
+    end
+    subgraph Collection["Data Collection Layer"]
+        LogAgent["Log Agent\n(Fluent)"]
+        Stream["Stream\nProcessor"]
+        WebhookRcv["Webhook\nReceiver"]
+        Polling["Polling\nService"]
+    end
+    subgraph Observability["Observability Platform"]
+        Platforms["Datadog | Splunk | Azure Monitor | Grafana | New Relic | etc."]
+        Dashboards["Dashboards"]
+        Alerts["Alerts"]
+        Reports["Reports"]
+        Analysis["Analysis"]
+    end
+    Actions --> LogAgent
+    AuditLog --> Stream
+    Webhooks --> WebhookRcv
+    API --> Polling
+    LogAgent --> Observability
+    Stream --> Observability
+    WebhookRcv --> Observability
+    Polling --> Observability
+</div>
+</div>
 
 #### Popular Integration Options
 
@@ -594,20 +595,23 @@ Innersource success indicators:
 
 ### Cross-Pollination Tracking
 
-```
-External Contributions by Team:
-
-Team Alpha ──────────────▶ 45 PRs to other teams
-Team Beta ───────────────▶ 32 PRs to other teams
-Team Gamma ──────────────▶ 67 PRs to other teams
-Platform ────────────────▶ 12 PRs to other teams (support focus)
-
-Receiving Teams:
-Shared Libraries ◀──────── 89 external PRs
-Platform Tools ◀─────────── 34 external PRs
-Documentation ◀──────────── 23 external PRs
-
-```
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart LR
+    subgraph Sending["External Contributions by Team"]
+        Alpha["Team Alpha: 45 PRs"]
+        Beta["Team Beta: 32 PRs"]
+        Gamma["Team Gamma: 67 PRs"]
+        Platform["Platform: 12 PRs\n(support focus)"]
+    end
+    subgraph Receiving["Receiving Teams"]
+        SharedLibs["Shared Libraries: 89 external PRs"]
+        PlatTools["Platform Tools: 34 external PRs"]
+        Docs["Documentation: 23 external PRs"]
+    end
+    Sending --> Receiving
+</div>
+</div>
 
 ## Building Metrics Programs
 

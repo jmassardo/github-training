@@ -55,7 +55,7 @@ sections:
 ---
 {% raw %}
 
-<div class="callout callout-info">
+<div class="callout callout-info" markdown="1">
 <div class="callout-title">📦 Official Documentation</div>
 For comprehensive reference, see <a href="https://docs.github.com/en/packages">GitHub Packages Documentation</a> and the <a href="https://docs.github.com/en/packages/working-with-a-github-packages-registry">Package Registry Guides</a>.
 </div>
@@ -165,21 +165,19 @@ flowchart TB
 
 ### Semantic Versioning
 
-```
-MAJOR.MINOR.PATCH
-1.2.3
-│ │ └── PATCH: Bug fixes, no API changes
-│ └──── MINOR: New features, backward compatible
-└────── MAJOR: Breaking changes
-Pre-release versions:
-1.2.3-alpha.1
-1.2.3-beta.2
-1.2.3-rc.1
-Build metadata:
-1.2.3+build.123
-1.2.3+20240115
-
-```
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart TB
+    SemVer["MAJOR.MINOR.PATCH\nExample: 1.2.3"] --> Major["MAJOR\nBreaking changes"]
+    SemVer --> Minor["MINOR\nNew features,\nbackward compatible"]
+    SemVer --> Patch["PATCH\nBug fixes,\nno API changes"]
+    PreRelease["Pre-release versions"] --> Alpha["1.2.3-alpha.1"]
+    PreRelease --> Beta["1.2.3-beta.2"]
+    PreRelease --> RC["1.2.3-rc.1"]
+    BuildMeta["Build metadata"] --> B1["1.2.3+build.123"]
+    BuildMeta --> B2["1.2.3+20240115"]
+</div>
+</div>
 
 ### Container Tagging Strategies
 

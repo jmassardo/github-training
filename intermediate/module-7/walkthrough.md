@@ -179,7 +179,7 @@ In another project:
 
 ```
 
-<div class="callout callout-tip">
+<div class="callout callout-tip" markdown="1">
 <div class="callout-title">💡 CSM Tip</div>
 
 When customers ask about migrating from npmjs.com, explain that GitHub Packages can work alongside the public registry. Scoped packages go to GitHub Packages while public dependencies still come from npmjs.com automatically.
@@ -457,7 +457,7 @@ jobs:
 
 ```
 
-<div class="callout callout-warning">
+<div class="callout callout-warning" markdown="1">
 <div class="callout-title">⚠️ Build Time Consideration</div>
 
 Multi-architecture builds take significantly longer than single-arch builds because each architecture must be built separately (and ARM builds use emulation on x86 runners). Consider using matrix builds with native ARM runners for faster builds in high-volume scenarios.
@@ -513,7 +513,7 @@ jobs:
 
 ```
 
-<div class="callout callout-tip">
+<div class="callout callout-tip" markdown="1">
 <div class="callout-title">💡 Best Practice</div>
 
 Always use `min-versions-to-keep` to ensure you never accidentally delete all versions of a package. Consider keeping more versions for production packages and fewer for development/PR builds.

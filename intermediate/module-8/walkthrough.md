@@ -59,7 +59,7 @@ sections:
 
 Welcome to the hands-on walkthrough for CI/CD implementation! This section takes you from basic pipelines to production-grade deployment workflows with environments, approvals, and rollback capabilities.
 
-<div class="callout callout-tip">
+<div class="callout callout-tip" markdown="1">
 <div class="callout-title">💡 CSM Tip</div>
 CI/CD is where GitHub Actions delivers transformational value. Walk customers through the full lifecycle—from commit to production—and highlight the integration with environments, branch protection, and audit logs. This is the "aha moment" where they see GitHub as a complete platform, not just source control.
 </div>
@@ -86,27 +86,22 @@ This walkthrough builds a production-ready pipeline that:
 
 ### Architecture Overview
 
-```
-PR Created/Push to main
-        ↓
-    CI Pipeline
-   ┌─────┴─────┐
- Lint        Test
-   └─────┬─────┘
-       Build
-        ↓
-   Security Scan
-        ↓
-    (main only)
-        ↓
-   CD Pipeline
-        ↓
-    Staging
-        ↓
-  (approval gate)
-        ↓
-   Production
-```
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart TD
+    A["PR Created / Push to main"] --> CI["CI Pipeline"]
+    CI --> Lint["Lint"]
+    CI --> Test["Test"]
+    Lint --> Build["Build"]
+    Test --> Build
+    Build --> Scan["Security Scan"]
+    Scan --> MainOnly{"main only?"}
+    MainOnly -->|Yes| CD["CD Pipeline"]
+    CD --> Staging["Staging"]
+    Staging --> Approval{"Approval Gate"}
+    Approval -->|Approved| Prod["Production"]
+</div>
+</div>
 
 Create a full pipeline from commit to production.
 
@@ -172,7 +167,7 @@ jobs:
 
 ```
 
-<div class="callout callout-info">
+<div class="callout callout-info" markdown="1">
 <div class="callout-title">📖 Understanding Job Dependencies</div>
 The <code>needs</code> keyword creates dependencies between jobs. <code>build</code> needs both <code>lint</code> and <code>test</code> to succeed—this means lint and test run in parallel, and build only starts when both complete successfully.
 </div>
@@ -278,7 +273,7 @@ jobs:
 
 ```
 
-<div class="callout callout-tip">
+<div class="callout callout-tip" markdown="1">
 <div class="callout-title">💡 CSM Tip</div>
 The environment URLs (<code>url: https://example.com</code>) are not just documentation—they appear in the GitHub UI as clickable links. This creates a single-click path from a PR to seeing the deployed result. Show this in demos—it's a subtle but powerful UX win.
 </div>
@@ -361,7 +356,7 @@ jobs:
 
 ```
 
-<div class="callout callout-info">
+<div class="callout callout-info" markdown="1">
 <div class="callout-title">📖 Secrets vs. Variables</div>
 Use <code>secrets.</code> for sensitive values (encrypted, masked in logs). Use <code>vars.</code> for non-sensitive configuration (visible in logs, easier to debug). Environment-level secrets/variables are isolated—staging can't access production secrets.
 </div>
@@ -379,7 +374,7 @@ This walkthrough demonstrates OIDC (OpenID Connect) authentication for cloud dep
 | **Service Principal Secret** | Simple setup | Secrets expire, need rotation |
 | **OIDC Federated Credential** | No secrets to manage, auto-rotating | More initial setup |
 
-<div class="callout callout-tip">
+<div class="callout callout-tip" markdown="1">
 <div class="callout-title">💡 CSM Tip</div>
 OIDC is a major security and operational win. Show customers the "subject" claim in the federated credential—it specifies exactly which repo/branch can assume this identity. This is least-privilege at the CI/CD level. Works with Azure, AWS, and GCP.
 </div>
@@ -600,7 +595,7 @@ Rollback capability is essential for production confidence. GitHub Actions can i
 | **Kubernetes native** | kubectl rollout undo | Quick container rollback |
 | **Blue-green** | Traffic switch | Zero-downtime rollback |
 
-<div class="callout callout-tip">
+<div class="callout callout-tip" markdown="1">
 <div class="callout-title">💡 CSM Tip</div>
 Rollback workflows are a key risk mitigation story. When customers worry about "what if something goes wrong in production?", show them the manual rollback workflow with audit trail. The combination of approval gates + automated rollback = production safety net.
 </div>
@@ -748,7 +743,7 @@ You've now built the components of a production-ready CI/CD system:
 | **Kubernetes Deployment** | Container orchestration with rolling updates |
 | **Rollback** | Recovery from failed deployments |
 
-<div class="callout callout-success">
+<div class="callout callout-success" markdown="1">
 <div class="callout-title">✅ Ready for Labs</div>
 You've seen the patterns for enterprise-grade deployment pipelines. In the Hands-On Labs, you'll implement these workflows and see them in action.
 </div>

@@ -56,7 +56,7 @@ sections:
 
 ## 2.1 GitHub Actions Architecture
 
-<div class="callout callout-info">
+<div class="callout callout-info" markdown="1">
 <div class="callout-title">📖 Official Documentation</div>
 For comprehensive reference, see the <a href="https://docs.github.com/en/actions">GitHub Actions Documentation</a>.
 </div>
@@ -179,12 +179,13 @@ jobs:
 
 Job dependency visualization:
 
-```
-  lint ──────┐
-             ├──► build
-  test ──────┘
-
-```
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart LR
+    lint["lint"] --> build["build"]
+    test["test"] --> build
+</div>
+</div>
 
 ### Steps
 Steps run sequentially within a job:

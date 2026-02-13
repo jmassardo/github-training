@@ -47,7 +47,7 @@ next_section:
   title: "Guided Walkthrough"
 ---
 
-<div class="callout callout-info">
+<div class="callout callout-info" markdown="1">
 <div class="callout-title">📚 Getting Started</div>
 New to GitHub? Start with the <a href="https://docs.github.com/en/get-started">Getting Started Guide</a> and explore the <a href="https://github.com/skills">GitHub Skills</a> interactive tutorials.
 </div>
@@ -196,12 +196,12 @@ Developers create **branches** for new features, make **commits** (snapshots of 
 
 ### Deployment Environments
 
-```
-Development → Staging → Production
-     │            │           │
-  Dev testing  QA testing  Real users
-
-```
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart LR
+    Dev["Development\n(Dev testing)"] --> Staging["Staging\n(QA testing)"] --> Prod["Production\n(Real users)"]
+</div>
+</div>
 
 ---
 
@@ -241,7 +241,7 @@ Combines development and operations with heavy automation.
 | **Agile** | Projects (Sprint planning), Issues, Labels |
 | **DevOps** | Actions (CI/CD), Packages, Environments, GHAS |
 
-<div class="callout callout-info">
+<div class="callout callout-info" markdown="1">
 <div class="callout-title">💡 Key Insight</div>
 
 GitHub is methodology-agnostic — it supports all approaches. Your job as a CSM is to understand which methodology your customer uses and highlight the relevant GitHub features.

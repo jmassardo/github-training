@@ -47,7 +47,7 @@ next_section:
   title: "Guided Walkthrough"
 ---
 
-<div class="callout callout-info">
+<div class="callout callout-info" markdown="1">
 <div class="callout-title">🏗️ Official Documentation</div>
 For comprehensive reference, see the <a href="https://registry.terraform.io/providers/integrations/github/latest/docs">GitHub Terraform Provider</a> and <a href="https://docs.github.com/en/rest/orgs">Organization API Documentation</a>.
 </div>

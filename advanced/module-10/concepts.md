@@ -55,7 +55,7 @@ sections:
 ---
 {% raw %}
 
-<div class="callout callout-info">
+<div class="callout callout-info" markdown="1">
 <div class="callout-title">🔌 Official Documentation</div>
 For comprehensive reference, see <a href="https://docs.github.com/en/rest">GitHub REST API Documentation</a>, <a href="https://docs.github.com/en/graphql">GraphQL API</a>, and <a href="https://docs.github.com/en/apps">GitHub Apps</a>.
 </div>

@@ -5,7 +5,7 @@ permalink: /advanced/module-9/concepts/
 module_number: 9
 module_title: "Enterprise Administration"
 section_number: 2
-total_sections: 7
+total_sections: 10
 phase: advanced
 estimated_time: "45 min"
 module_index: /advanced/module-9/
@@ -38,6 +38,18 @@ sections:
     url: "/advanced/module-9/scenarios/"
     short_title: "Scenarios"
     icon: "💼"
+  - title: "GHES vs GHEC"
+    url: "/advanced/module-9/ghes-vs-ghec/"
+    short_title: "GHES vs GHEC"
+    icon: "⚖️"
+  - title: "GHES Administration"
+    url: "/advanced/module-9/ghes-admin/"
+    short_title: "GHES Admin"
+    icon: "🖥️"
+  - title: "Migrating to GHEC"
+    url: "/advanced/module-9/migrations/"
+    short_title: "Migrations"
+    icon: "🔄"
 toc: true
 prev_section:
   url: /advanced/module-9/overview/
@@ -47,7 +59,7 @@ next_section:
   title: "Guided Walkthrough"
 ---
 
-<div class="callout callout-info">
+<div class="callout callout-info" markdown="1">
 <div class="callout-title">🏢 Official Documentation</div>
 For comprehensive reference, see <a href="https://docs.github.com/en/enterprise-cloud@latest/admin">GitHub Enterprise Administration</a> and <a href="https://docs.github.com/en/organizations">Organization Management</a>.
 </div>

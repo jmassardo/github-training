@@ -42,6 +42,21 @@ sections:
     short_title: "Scenarios"
     icon: "💼"
     time: "30 min"
+  - title: "GHES vs GHEC"
+    url: "/advanced/module-9/ghes-vs-ghec/"
+    short_title: "GHES vs GHEC"
+    icon: "⚖️"
+    time: "25 min"
+  - title: "GHES Administration"
+    url: "/advanced/module-9/ghes-admin/"
+    short_title: "GHES Admin"
+    icon: "🖥️"
+    time: "35 min"
+  - title: "Migrating to GHEC"
+    url: "/advanced/module-9/migrations/"
+    short_title: "Migrations"
+    icon: "🔄"
+    time: "30 min"
 objectives:
   - Configure enterprise identity providers with SAML SSO and SCIM provisioning
   - Implement Enterprise Managed Users (EMU) for centralized identity control
@@ -49,6 +64,8 @@ objectives:
   - Leverage audit logs for compliance and security monitoring
   - Plan and execute GitHub migrations using GitHub Enterprise Importer
   - Configure GitHub Connect for hybrid enterprise deployments
+  - Compare GHES and GHEC deployment models and advise customers on the right fit
+  - Understand GHES administration including HA, clustering, backups, and upgrades
 prev_module:
   url: /intermediate/module-8/
   title: "Module 8: CI/CD Pipelines & Deployment"

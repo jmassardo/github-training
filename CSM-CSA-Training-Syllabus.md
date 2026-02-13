@@ -9,7 +9,8 @@ description: "Comprehensive training program curriculum for Customer Success Man
 
 **Comprehensive Training Program for Customer Success Managers & Customer Success Architects**
 
-*Last Updated: June 21, 2025*
+*Last Updated: Feb, 13 2026*
+
 
 ---
 
@@ -221,6 +222,14 @@ The syllabus follows the **natural software development workflow**, introducing 
    - GitHub Docs: [About notifications](https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/about-notifications)
    - GitHub Docs: [Configuring notifications](https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/setting-up-notifications/configuring-notifications)
 
+8. **GitHub Codespaces** (2-3 hours)
+   - GitHub Docs: [GitHub Codespaces overview](https://docs.github.com/en/codespaces/overview)
+   - GitHub Docs: [Understanding the codespace lifecycle](https://docs.github.com/en/codespaces/getting-started/understanding-the-codespace-lifecycle)
+   - GitHub Docs: [Setting up your project for Codespaces](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration)
+   - GitHub Docs: [Prebuilding your codespaces](https://docs.github.com/en/codespaces/prebuilding-your-codespaces/about-github-codespaces-prebuilds)
+   - GitHub Docs: [Managing secrets for your codespaces](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-your-account-specific-secrets-for-github-codespaces)
+   - GitHub Docs: [Personalizing Codespaces with dotfiles](https://docs.github.com/en/codespaces/setting-your-user-preferences/personalizing-github-codespaces-for-your-account)
+
 **Lab Exercise:**
 
 - Conduct code reviews on sample pull requests with suggestions
@@ -230,6 +239,8 @@ The syllabus follows the **natural software development workflow**, introducing 
 - Install and use GitHub CLI for common tasks
 - Set up custom notification preferences
 - Create CONTRIBUTING.md and CODE_OF_CONDUCT.md files
+- Create a codespace and explore dev container configuration
+- Configure Codespaces prebuilds for a repository
 
 ---
 
@@ -319,9 +330,13 @@ The syllabus follows the **natural software development workflow**, introducing 
    - GitHub Docs: [About releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases)
    - GitHub Docs: [Managing releases in a repository](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
 
-4. **Repository Migration** (2 hours)
+4. **Repository Migration & Enterprise Migrations** (3-4 hours)
    - GitHub Docs: [Importing a repository with GitHub Importer](https://docs.github.com/en/migrations/importing-source-code/using-github-importer/importing-a-repository-with-github-importer)
    - GitHub Docs: [Migrating from other version control systems](https://docs.github.com/en/migrations/importing-source-code)
+   - GitHub Docs: [About GitHub Enterprise Importer](https://docs.github.com/en/migrations/using-github-enterprise-importer/understanding-github-enterprise-importer/about-github-enterprise-importer)
+   - GitHub Docs: [Migrating from Azure DevOps](https://docs.github.com/en/migrations/using-github-enterprise-importer/migrating-from-azure-devops-to-github-enterprise-cloud)
+   - GitHub Docs: [Migrating from Bitbucket Server](https://docs.github.com/en/migrations/using-github-enterprise-importer/migrating-from-bitbucket-server-to-github-enterprise-cloud)
+   - GitHub Docs: [Migration planning guide](https://docs.github.com/en/migrations/overview/planning-your-migration-to-github)
 
 5. **Introduction to Continuous Integration** (2 hours)
    - Microsoft Learn: [Explore continuous integration](https://learn.microsoft.com/en-us/training/modules/explore-continuous-integration/)
@@ -333,6 +348,7 @@ The syllabus follows the **natural software development workflow**, introducing 
 - Set up GPG or SSH commit signing
 - Create a release with release notes and assets
 - Practice repository migration from another VCS
+- Explore the GitHub Enterprise Importer CLI for enterprise-scale migrations
 - Map customer's current workflow to GitHub features
 
 ---
@@ -630,6 +646,8 @@ The syllabus follows the **natural software development workflow**, introducing 
 **Objectives:**
 
 - Understand GitHub Enterprise Cloud/Server administration
+- Compare GHES and GHEC deployment models and feature parity
+- Understand GHES architecture, HA, and clustering
 - Manage organizations, teams, and access controls
 - Master GitHub APIs (REST and GraphQL)
 - Implement secure authentication patterns (PATs, OAuth, GitHub Apps)
@@ -643,17 +661,33 @@ The syllabus follows the **natural software development workflow**, introducing 
    - Microsoft Learn: [Introduction to GitHub Enterprise Cloud](https://learn.microsoft.com/en-us/training/modules/introduction-github-enterprise-cloud/)
    - GitHub Docs: [Best practices for organizations](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/best-practices-for-organizations)
 
-2. **Organization & Team Management** (3-4 hours)
+2. **GHES vs GHEC Comparison** (2-3 hours)
+   - GitHub Docs: [About GitHub Enterprise Server](https://docs.github.com/en/enterprise-server@latest/admin/overview/about-github-enterprise-server)
+   - GitHub Docs: [GitHub Enterprise Server vs GitHub Enterprise Cloud](https://docs.github.com/en/get-started/onboarding/getting-started-with-github-enterprise-cloud)
+   - GitHub Docs: [About GitHub Connect](https://docs.github.com/en/enterprise-server@latest/admin/configuration/configuring-github-connect/about-github-connect)
+   - GitHub Docs: [Feature comparison across plans](https://docs.github.com/en/get-started/learning-about-github/githubs-products)
+   - GitHub Docs: [Data residency for GitHub Enterprise Cloud](https://docs.github.com/en/enterprise-cloud@latest/admin/data-residency/about-data-residency-for-github-enterprise-cloud)
+
+3. **GHES Administration** (3-4 hours)
+   - GitHub Docs: [Installing GitHub Enterprise Server](https://docs.github.com/en/enterprise-server@latest/admin/installing-your-enterprise-server)
+   - GitHub Docs: [Configuring high availability](https://docs.github.com/en/enterprise-server@latest/admin/monitoring-and-managing-your-instance/configuring-high-availability)
+   - GitHub Docs: [About clustering](https://docs.github.com/en/enterprise-server@latest/admin/monitoring-and-managing-your-instance/configuring-clustering/about-clustering)
+   - GitHub Docs: [Configuring backups](https://docs.github.com/en/enterprise-server@latest/admin/backing-up-and-restoring-your-instance/configuring-backups-on-your-instance)
+   - GitHub Docs: [Upgrading GitHub Enterprise Server](https://docs.github.com/en/enterprise-server@latest/admin/upgrading-your-instance/preparing-to-upgrade)
+   - GitHub Docs: [Management Console](https://docs.github.com/en/enterprise-server@latest/admin/configuration/administering-your-instance-from-the-management-console)
+   - GitHub Docs: [Command-line utilities](https://docs.github.com/en/enterprise-server@latest/admin/configuration/configuring-your-enterprise/command-line-utilities)
+
+4. **Organization & Team Management** (3-4 hours)
    - Microsoft Learn: [Manage users, teams, and access](https://learn.microsoft.com/en-us/training/modules/manage-users-teams-organizations-github/)
    - Microsoft Learn: [Manage GitHub repository changes](https://learn.microsoft.com/en-us/training/modules/manage-changes-repositories-github/)
    - GitHub Docs: [Organization roles](https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles/roles-in-an-organization)
    - Microsoft Learn: [GitHub administration best practices](https://learn.microsoft.com/en-us/training/modules/github-administration-for-enterprise-support-adoption/)
 
-3. **Authentication Fundamentals** (3 hours)
+5. **Authentication Fundamentals** (3 hours)
    - Microsoft Learn: [Authenticate and authorize user identities on GitHub](https://learn.microsoft.com/en-us/training/modules/authenticate-authorize-user-identities-github/)
    - GitHub Docs: [About authentication to GitHub](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github)
 
-4. **GitHub REST & GraphQL APIs** (4-5 hours)
+6. **GitHub REST & GraphQL APIs** (4-5 hours)
    - GitHub Docs: [About the REST API](https://docs.github.com/en/rest/about-the-rest-api/about-the-rest-api)
    - GitHub Docs: [Getting started with the REST API](https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api)
    - GitHub Docs: [About the GraphQL API](https://docs.github.com/en/graphql/guides/introduction-to-graphql)
@@ -661,19 +695,19 @@ The syllabus follows the **natural software development workflow**, introducing 
    - GitHub Docs: [Rate limits for the REST API](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api)
    - GitHub Docs: [Best practices for using the REST API](https://docs.github.com/en/rest/guides/best-practices-for-using-the-rest-api)
 
-5. **Personal Access Tokens & Security** (2-3 hours)
+7. **Personal Access Tokens & Security** (2-3 hours)
    - GitHub Docs: [About authentication to the REST API](https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api)
    - GitHub Docs: [Managing your personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
    - GitHub Docs: [Creating a fine-grained personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token)
    - GitHub Docs: [Setting a personal access token policy for your organization](https://docs.github.com/en/organizations/managing-programmatic-access-to-your-organization/setting-a-personal-access-token-policy-for-your-organization)
 
-6. **Webhooks & Event-Driven Integrations** (3-4 hours)
+8. **Webhooks & Event-Driven Integrations** (3-4 hours)
    - GitHub Docs: [About webhooks](https://docs.github.com/en/webhooks/about-webhooks)
    - GitHub Docs: [Creating webhooks](https://docs.github.com/en/webhooks/using-webhooks/creating-webhooks)
    - GitHub Docs: [Webhook events and payloads](https://docs.github.com/en/webhooks/webhook-events-and-payloads)
    - GitHub Docs: [Best practices for using webhooks](https://docs.github.com/en/webhooks/using-webhooks/best-practices-for-using-webhooks)
 
-7. **GitHub Apps & OAuth** (4-5 hours)
+9. **GitHub Apps & OAuth** (4-5 hours)
    - GitHub Docs: [About apps](https://docs.github.com/en/apps/creating-github-apps/about-creating-github-apps/about-creating-github-apps)
    - GitHub Docs: [Creating a GitHub App](https://docs.github.com/en/apps/creating-github-apps/writing-code-for-a-github-app/quickstart)
    - GitHub Docs: [GitHub App permissions](https://docs.github.com/en/apps/creating-github-apps/setting-up-a-github-app/choosing-permissions-for-a-github-app)
@@ -682,22 +716,25 @@ The syllabus follows the **natural software development workflow**, introducing 
    - GitHub Docs: [Differences between GitHub Apps and OAuth apps](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/differences-between-github-apps-and-oauth-apps)
    - GitHub Docs: [About OAuth app access restrictions](https://docs.github.com/en/organizations/managing-oauth-access-to-your-organizations-data/about-oauth-app-access-restrictions)
 
-8. **GitHub Marketplace** (1-2 hours)
+10. **GitHub Marketplace** (1-2 hours)
    - GitHub Docs: [About GitHub Marketplace](https://docs.github.com/en/apps/github-marketplace/github-marketplace-overview/about-github-marketplace-for-apps)
    - GitHub Docs: [Requirements for listing an app](https://docs.github.com/en/apps/github-marketplace/creating-apps-for-github-marketplace/requirements-for-listing-an-app)
 
-9. **Engineering Systems Success Playbook** (3-4 hours)
+11. **Engineering Systems Success Playbook** (3-4 hours)
    - GitHub Resources: [Engineering Systems Success Playbook](https://github.com/resources/articles/enterprise/engineering-systems-success-playbook)
    - GitHub Blog: [Lessons from building GitHub's engineering systems](https://github.blog/2023-10-30-the-architecture-of-todays-web-applications/)
    - GitHub Docs: [Best practices for organizations](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/best-practices-for-organizations)
 
-10. **Enterprise Policies** (2 hours)
+12. **Enterprise Policies** (2 hours)
    - GitHub Docs: [Enforcing policies for GitHub Actions in your enterprise](https://docs.github.com/en/enterprise-cloud@latest/admin/policies/enforcing-policies-for-your-enterprise/enforcing-policies-for-github-actions-in-your-enterprise)
    - Microsoft Learn: [Manage GitHub enterprise policies](https://learn.microsoft.com/en-us/training/modules/manage-github-enterprise-policies/)
 
 **Lab Exercise:**
 
 - Set up a sample organization structure with teams and repositories
+- Compare GHES vs GHEC feature availability for a customer scenario
+- Review GHES Management Console and administration tools
+- Evaluate GitHub Connect use cases for hybrid deployments
 - Configure team permissions and access hierarchies
 - Create fine-grained personal access tokens with specific repository permissions
 - Make authenticated REST API calls to list repositories, create issues, and retrieve metrics
@@ -887,23 +924,27 @@ The syllabus follows the **natural software development workflow**, introducing 
    - GitHub Docs: [Building Copilot Extensions](https://docs.github.com/en/copilot/building-copilot-extensions)
    - GitHub Marketplace: [Copilot Extensions](https://github.com/marketplace?type=apps&copilot_app=true)
 
-4. **Custom Instructions & Copilot Spaces** (2 hours)
+4. **Custom Instructions** (1-2 hours)
    - GitHub Docs: [Adding custom instructions](https://docs.github.com/en/copilot/customizing-copilot/adding-custom-instructions-for-github-copilot)
    - GitHub Docs: [Repository-level instructions](https://docs.github.com/en/copilot/customizing-copilot/adding-repository-instructions-for-github-copilot)
-   - GitHub Docs: [Using Copilot Spaces](https://docs.github.com/en/copilot/using-github-copilot/using-copilot-spaces)
 
-5. **Enterprise Administration** (3-4 hours)
+5. **Copilot Spaces** (2-3 hours)
+   - GitHub Docs: [Using Copilot Spaces](https://docs.github.com/en/copilot/using-github-copilot/using-copilot-spaces)
+   - GitHub Docs: [Managing Copilot Spaces in your organization](https://docs.github.com/en/copilot/managing-copilot/managing-copilot-for-your-organization)
+   - GitHub Blog: [Introducing Copilot Spaces](https://github.blog/changelog/)
+
+6. **Enterprise Administration** (3-4 hours)
    - GitHub Docs: [Managing Copilot for your organization](https://docs.github.com/en/copilot/managing-copilot/managing-copilot-for-your-organization)
    - GitHub Docs: [Copilot policies](https://docs.github.com/en/copilot/managing-copilot/managing-copilot-for-your-organization/managing-policies-for-copilot-in-your-organization)
    - GitHub Docs: [Configuring content exclusions](https://docs.github.com/en/copilot/managing-copilot/managing-copilot-for-your-organization/configuring-content-exclusions-for-github-copilot)
    - Microsoft Learn: [Manage GitHub Copilot for Business](https://learn.microsoft.com/en-us/training/modules/manage-github-copilot-business/)
 
-6. **Metrics & Adoption** (2-3 hours)
+7. **Metrics & Adoption** (2-3 hours)
    - GitHub Docs: [Viewing Copilot usage metrics](https://docs.github.com/en/copilot/rolling-out-github-copilot-at-scale/analyzing-usage-over-time-with-the-copilot-metrics-api)
    - GitHub Docs: [Copilot Metrics API](https://docs.github.com/en/rest/copilot/copilot-metrics)
    - GitHub Blog: [How GitHub measures Copilot success](https://github.blog/enterprise-software/ai/how-to-measure-the-impact-of-github-copilot/)
 
-7. **Responsible AI & Security** (1-2 hours)
+8. **Responsible AI & Security** (1-2 hours)
    - GitHub Docs: [GitHub Copilot Trust Center](https://resources.github.com/copilot-trust-center/)
    - GitHub Docs: [Privacy and Copilot](https://docs.github.com/en/copilot/about-github-copilot/github-copilot-chat-transparency-note)
    - GitHub Docs: [Copilot content exclusions](https://docs.github.com/en/copilot/managing-copilot/managing-copilot-for-your-organization/configuring-content-exclusions-for-github-copilot)
@@ -913,6 +954,7 @@ The syllabus follows the **natural software development workflow**, introducing 
 - Use Copilot Agent mode to implement a multi-file feature
 - Assign a GitHub issue to Copilot coding agent and review the resulting PR
 - Create custom instructions for a sample organization's coding standards
+- Set up a Copilot Space with curated context for a customer use case
 - Configure an MCP server for additional context (e.g., database schema)
 - Install and use a Copilot Extension from the Marketplace
 - Build a Copilot metrics dashboard using the Metrics API
@@ -957,7 +999,6 @@ The syllabus follows the **natural software development workflow**, introducing 
    - GitHub Desktop advanced workflows
    - Infrastructure as Code with Terraform/Bicep and GitHub
    - GitHub Sponsors for open source project funding
-   - GitHub Connect (linking GitHub Enterprise Server to GitHub.com)
    - GitHub Models (AI model hosting/inference platform)
    - GitHub Spark (natural language app creation)
 
@@ -1034,6 +1075,9 @@ By the end of this 14-week program, successful learners will be able to:
 ✅ Configure and advise on GitHub Advanced Security (GHAS) features  
 ✅ Architect enterprise-scale GitHub deployments with proper governance  
 ✅ Build integrations using GitHub APIs, webhooks, and GitHub Apps  
+✅ Compare GHES and GHEC deployments and advise on deployment model selection  
+✅ Plan and execute enterprise-scale migrations using GitHub Enterprise Importer  
+✅ Configure and manage GitHub Codespaces for development teams  
 
 ### AI-Assisted Development
 ✅ Master GitHub Copilot for code completions, chat, and agentic workflows  
@@ -1101,4 +1145,4 @@ By the end of this 14-week program, successful learners will be able to:
 
 ---
 
-*All links verified as of December 9, 2025. GitHub and Microsoft Learn update their content regularly, so some paths may evolve. Always check the official sites for the most current materials.*
+*All links verified as of July 15, 2025. GitHub and Microsoft Learn update their content regularly, so some paths may evolve. Always check the official sites for the most current materials.*

@@ -269,12 +269,14 @@ If you measure and reward:
 
 **Recommended self-service pattern:**
 
-```
-Developer Request → Automated Validation → Provisioning
-                         ↓
-              Governance Guardrails Enforced
-
-```
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart TD
+    Request["Developer Request"] --> Validation["Automated Validation"]
+    Validation --> Provisioning["Provisioning"]
+    Validation --> Guardrails["Governance Guardrails Enforced"]
+</div>
+</div>
 
 **Implementation**:
 1. **Template-based creation**: Repos created from approved templates with settings pre-configured

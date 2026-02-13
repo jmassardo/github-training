@@ -5,7 +5,7 @@ permalink: /advanced/module-14/mcp/
 module_number: 14
 module_title: "GitHub Copilot Advanced"
 section_number: 3
-total_sections: 10
+total_sections: 12
 phase: advanced
 estimated_time: "30 min"
 module_index: /advanced/module-14/
@@ -30,6 +30,10 @@ sections:
     url: "/advanced/module-14/instructions/"
     short_title: "Instructions"
     icon: "📝"
+  - title: "Copilot Spaces"
+    url: "/advanced/module-14/spaces/"
+    short_title: "Spaces"
+    icon: "🗂️"
   - title: "Enterprise Administration"
     url: "/advanced/module-14/enterprise/"
     short_title: "Enterprise"
@@ -50,6 +54,10 @@ sections:
     url: "/advanced/module-14/resources/"
     short_title: "Resources"
     icon: "📖"
+  - title: "CSM Scenarios"
+    url: "/advanced/module-14/scenarios/"
+    short_title: "Scenarios"
+    icon: "💼"
 toc: true
 prev_section:
   url: /advanced/module-14/agents/

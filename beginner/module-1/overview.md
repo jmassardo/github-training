@@ -105,7 +105,7 @@ By completing all sections, you'll understand:
 4. **GitHub's Role** — How the platform supports each phase
 5. **Customer Conversations** — How to apply this knowledge with customers
 
-<div class="callout callout-tip">
+<div class="callout callout-tip" markdown="1">
 <div class="callout-title">✨ Pro Tip</div>
 
 Don't try to memorize everything. Focus on understanding the *concepts* and *relationships*. You can always look up specific details later.

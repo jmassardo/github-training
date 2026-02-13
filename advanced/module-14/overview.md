@@ -5,7 +5,7 @@ permalink: /advanced/module-14/overview/
 module_number: 14
 module_title: "GitHub Copilot Advanced"
 section_number: 1
-total_sections: 10
+total_sections: 12
 phase: advanced
 estimated_time: "20 min"
 module_index: /advanced/module-14/
@@ -30,6 +30,10 @@ sections:
     url: "/advanced/module-14/instructions/"
     short_title: "Instructions"
     icon: "📝"
+  - title: "Copilot Spaces"
+    url: "/advanced/module-14/spaces/"
+    short_title: "Spaces"
+    icon: "🗂️"
   - title: "Enterprise Administration"
     url: "/advanced/module-14/enterprise/"
     short_title: "Enterprise"
@@ -50,13 +54,17 @@ sections:
     url: "/advanced/module-14/resources/"
     short_title: "Resources"
     icon: "📖"
+  - title: "CSM Scenarios"
+    url: "/advanced/module-14/scenarios/"
+    short_title: "Scenarios"
+    icon: "💼"
 toc: true
 next_section:
   url: /advanced/module-14/agents/
   title: "Copilot Agents"
 ---
 
-<div class="callout callout-info">
+<div class="callout callout-info" markdown="1">
 <div class="callout-title">🚀 Official Documentation</div>
 For comprehensive reference, see <a href="https://docs.github.com/en/copilot/using-github-copilot/using-extensions-to-integrate-external-tools-with-copilot-chat">Copilot Extensions</a>, <a href="https://docs.github.com/en/copilot/managing-copilot/managing-copilot-for-your-enterprise">Enterprise Administration</a>, and the <a href="https://docs.github.com/en/copilot/about-github-copilot/github-copilot-features">Copilot Features Overview</a>.
 </div>

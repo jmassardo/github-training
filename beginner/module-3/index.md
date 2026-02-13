@@ -46,7 +46,7 @@ sections:
     url: "/beginner/module-3/codespaces/"
     short_title: "Codespaces"
     icon: "☁️"
-    time: "20 min"
+    time: "30 min"
   - title: "GitHub Discussions"
     url: "/beginner/module-3/discussions/"
     short_title: "Discussions"

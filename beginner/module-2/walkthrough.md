@@ -50,7 +50,7 @@ next_section:
 
 Let's walk through creating and using a Git repository step by step.
 
-<div class="callout callout-info">
+<div class="callout callout-info" markdown="1">
 <div class="callout-title">📋 Prerequisites</div>
 
 - Git installed on your computer ([Download Git](https://git-scm.com/downloads))
@@ -84,7 +84,7 @@ git config --list
 
 ```
 
-<div class="callout callout-tip">
+<div class="callout callout-tip" markdown="1">
 <div class="callout-title">💡 Why This Matters</div>
 
 Every commit records who made it. This configuration appears in your commit history and GitHub contribution graphs.

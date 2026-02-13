@@ -55,7 +55,7 @@ sections:
 ---
 {% raw %}
 
-<div class="callout callout-info">
+<div class="callout callout-info" markdown="1">
 <div class="callout-title">🚀 Official Documentation</div>
 For comprehensive reference, see <a href="https://docs.github.com/en/actions/use-cases-and-examples/deploying/deploying-with-github-actions">GitHub Actions Deployment</a> and <a href="https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment">Using Environments</a>.
 </div>

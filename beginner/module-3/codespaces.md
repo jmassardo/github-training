@@ -7,7 +7,7 @@ module_title: "GitHub Platform Essentials"
 section_number: 8
 total_sections: 9
 phase: beginner
-estimated_time: "20 min"
+estimated_time: "30 min"
 module_index: /beginner/module-3/
 sections:
   - title: "Context & Overview"
@@ -88,35 +88,24 @@ Traditional development setup challenges:
 
 ## How Codespaces Works
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                     Your Browser                            │
-│  ┌───────────────────────────────────────────────────────┐  │
-│  │                    VS Code Web                        │  │
-│  │  ┌─────────┐  ┌─────────────────────────────────┐    │  │
-│  │  │ Explorer│  │          Editor                  │    │  │
-│  │  │         │  │                                  │    │  │
-│  │  │ 📁 src  │  │   // Your code here             │    │  │
-│  │  │ 📁 tests│  │                                  │    │  │
-│  │  │ 📄 ...  │  │                                  │    │  │
-│  │  └─────────┘  └─────────────────────────────────┘    │  │
-│  │  ┌─────────────────────────────────────────────────┐  │  │
-│  │  │ Terminal: npm run dev                          │  │  │
-│  │  └─────────────────────────────────────────────────┘  │  │
-│  └───────────────────────────────────────────────────────┘  │
-└─────────────────────────────────────────────────────────────┘
-                              │
-                              │ Secure Connection
-                              ▼
-┌─────────────────────────────────────────────────────────────┐
-│                 GitHub Codespaces (Cloud)                   │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────────────┐  │
-│  │ Your Code   │  │ Dev Tools   │  │ Compute Resources   │  │
-│  │ (from repo) │  │ Node, Python│  │ 2-32 cores          │  │
-│  │             │  │ Docker, etc │  │ 4-64 GB RAM         │  │
-│  └─────────────┘  └─────────────┘  └─────────────────────┘  │
-└─────────────────────────────────────────────────────────────┘
-```
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart TB
+    subgraph Browser["Your Browser"]
+        subgraph VSCode["VS Code Web"]
+            Explorer["Explorer\n📁 src\n📁 tests\n📄 ..."]
+            Editor["Editor\n// Your code here"]
+            Terminal["Terminal: npm run dev"]
+        end
+    end
+    subgraph Cloud["GitHub Codespaces - Cloud"]
+        Code["Your Code\n(from repo)"]
+        Tools["Dev Tools\nNode, Python\nDocker, etc"]
+        Compute["Compute Resources\n2-32 cores\n4-64 GB RAM"]
+    end
+    Browser -- "Secure Connection" --> Cloud
+</div>
+</div>
 
 ---
 
@@ -252,6 +241,131 @@ Repositories can include configuration that defines the development environment:
 - Extremely low-latency requirements
 - Legacy systems requiring local hardware
 - Very long-running processes
+
+---
+
+## Connecting via VS Code Desktop
+
+Codespaces aren't limited to the browser. You can connect to a running codespace from **VS Code Desktop** for a native editor experience with cloud compute:
+
+1. Install the **GitHub Codespaces extension** in VS Code
+2. Open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`)
+3. Search for **"Codespaces: Connect to Codespace"**
+4. Select your running codespace
+
+This gives you the best of both worlds — the full VS Code desktop experience with all your local extensions, backed by cloud-hosted compute and storage.
+
+```bash
+# Or connect via GitHub CLI
+gh codespace code -c <codespace-name>
+```
+
+---
+
+## Prebuilds
+
+### What Are Prebuilds?
+
+**Prebuilds** pre-build your dev container image so codespaces launch in seconds instead of minutes. Without prebuilds, every new codespace must build the container from scratch (installing dependencies, compiling, etc.).
+
+> 💡 **Think of it like a restaurant:** Without prebuilds, every order is cooked from raw ingredients (slow). With prebuilds, common dishes are prepped in advance so they're ready almost instantly.
+
+### How Prebuilds Work
+
+| Without Prebuilds | With Prebuilds |
+|-------------------|----------------|
+| Clone repo → Build container → Install deps → Ready | Clone repo → Use pre-built image → Ready |
+| 2-10 minutes | 10-30 seconds |
+| Built on every new codespace | Built once, reused many times |
+| Each user waits | Wait happens in the background |
+
+### Configuring Prebuilds
+
+Prebuilds are configured at the repository level:
+
+1. Go to **Repository Settings** → **Codespaces** → **Prebuilds**
+2. Click **Set up prebuild**
+3. Choose the branch (typically `main`)
+4. Select a region
+5. Configure triggers (on push, on config change, or scheduled)
+
+### When to Recommend Prebuilds
+
+- Repositories with **long setup times** (heavy dependencies, large builds)
+- Teams with **frequent contributor onboarding**
+- Projects used for **demos or training** where fast startup matters
+- Active repositories where **multiple developers** create codespaces daily
+
+<div class="callout callout-info" markdown="1">
+<div class="callout-title">💰 Billing Note</div>
+
+Prebuilds consume **storage** (for the cached images) and **compute** (when rebuilding). The trade-off is faster codespace creation. For high-usage repositories, the time savings typically far outweigh the prebuild cost.
+</div>
+
+---
+
+## Codespace Lifecycle
+
+### Managing Your Codespaces
+
+Codespaces have a lifecycle you should understand:
+
+| State | Description | Billing |
+|-------|-------------|---------|
+| **Running** | Active and usable | Compute + storage billed |
+| **Stopped** | Paused, data preserved | Storage only |
+| **Deleted** | Removed permanently | No billing |
+
+### Key Lifecycle Actions
+
+```bash
+# List all your codespaces
+gh codespace list
+
+# Stop a running codespace
+gh codespace stop -c <codespace-name>
+
+# Restart a stopped codespace
+gh codespace start -c <codespace-name>
+
+# Delete a codespace
+gh codespace delete -c <codespace-name>
+
+# Rebuild a codespace (re-runs container build)
+gh codespace rebuild -c <codespace-name>
+```
+
+### Automatic Lifecycle Policies
+
+Organizations can set policies to manage costs:
+
+- **Idle timeout** — Auto-stop after inactivity (default: 30 minutes)
+- **Retention period** — Auto-delete stopped codespaces after a set time
+- **Maximum lifetime** — Force-stop long-running codespaces
+
+---
+
+## Secrets & Personalization
+
+### Codespace Secrets
+
+You can configure encrypted secrets that are available inside your codespaces:
+
+- **User-level secrets** — Available in all your codespaces (Settings → Codespaces → Secrets)
+- **Organization-level secrets** — Shared across org members' codespaces
+- **Repository-level secrets** — Scoped to codespaces for a specific repo
+
+This lets developers use API keys, tokens, and credentials without hardcoding them.
+
+### Dotfiles
+
+**Dotfiles** let you personalize every codespace with your preferred shell configuration, aliases, and tool settings:
+
+1. Create a repository named `dotfiles` in your GitHub account
+2. Add your config files (`.bashrc`, `.zshrc`, `.gitconfig`, `.vimrc`, etc.)
+3. Go to **Settings** → **Codespaces** → enable **Automatically install dotfiles**
+
+Every new codespace will automatically clone your dotfiles repo and apply your personalization. This means your aliases, shell prompt, and tool preferences follow you everywhere.
 
 ---
 

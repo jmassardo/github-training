@@ -59,7 +59,7 @@ sections:
 
 Welcome to the hands-on walkthrough for GitHub's integration ecosystem! This section guides you through building real integrations using the REST API, GraphQL API, webhooks, and GitHub Apps.
 
-<div class="callout callout-tip">
+<div class="callout callout-tip" markdown="1">
 <div class="callout-title">💡 CSM Tip</div>
 API and integration discussions often arise when customers want to automate workflows beyond Actions, or integrate GitHub with existing tools. This is high-value territory—custom integrations create stickiness and demonstrate GitHub's platform extensibility.
 </div>
@@ -191,7 +191,7 @@ def generate_report(data):
 
 ```
 
-<div class="callout callout-info">
+<div class="callout callout-info" markdown="1">
 <div class="callout-title">📖 Try It Live</div>
 You can test GraphQL queries interactively in the <a href="https://docs.github.com/en/graphql/overview/explorer">GitHub GraphQL Explorer</a>. It provides autocomplete and documentation right in the browser.
 </div>
@@ -204,7 +204,7 @@ Webhooks enable real-time automation by notifying your systems when events occur
 
 ### Webhook Security
 
-<div class="callout callout-warning">
+<div class="callout callout-warning" markdown="1">
 <div class="callout-title">⚠️ Always Verify Webhook Signatures</div>
 Never trust webhook payloads without verification. GitHub signs payloads with your webhook secret using HMAC SHA-256. Always verify this signature before processing the payload.
 </div>
@@ -286,7 +286,7 @@ if __name__ == '__main__':
 
 ```
 
-<div class="callout callout-tip">
+<div class="callout callout-tip" markdown="1">
 <div class="callout-title">💡 CSM Tip</div>
 For customers building webhook integrations, recommend using <a href="https://smee.io">smee.io</a> during development. It proxies webhooks to localhost, eliminating the need for public URLs during testing.
 </div>
@@ -438,7 +438,7 @@ You've now explored GitHub's integration ecosystem:
 | **Webhooks** | Real-time event notifications |
 | **GitHub Apps** | Production integrations, bots, automation |
 
-<div class="callout callout-success">
+<div class="callout callout-success" markdown="1">
 <div class="callout-title">✅ Ready for Labs</div>
 You've seen the patterns for building GitHub integrations. In the Hands-On Labs, you'll implement these integrations and test them with real events.
 </div>

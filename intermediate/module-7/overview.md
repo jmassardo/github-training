@@ -58,26 +58,23 @@ sections:
 ## The Software Supply Chain
 Modern applications don't build everything from scratch:
 
-```
-Your Application
-     │
-     ├── Your Code (10%)
-     │
-     └── Dependencies (90%)
-           │
-           ├── Direct Dependencies
-           │     ├── react
-           │     ├── express
-           │     └── lodash
-           │
-           └── Transitive Dependencies
-                 ├── react-dom → scheduler → loose-envify
-                 ├── express → body-parser → bytes
-                 └── lodash → (none)
-                 
-Average npm project: 683 transitive dependencies
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart TB
+    App["Your Application"] --> YourCode["Your Code (10%)"]
+    App --> Deps["Dependencies (90%)"]
+    Deps --> Direct["Direct Dependencies"]
+    Deps --> Transitive["Transitive Dependencies"]
+    Direct --> react["react"]
+    Direct --> express["express"]
+    Direct --> lodash["lodash"]
+    Transitive --> T1["react-dom → scheduler → loose-envify"]
+    Transitive --> T2["express → body-parser → bytes"]
+    Transitive --> T3["lodash → none"]
+</div>
+</div>
 
-```
+> Average npm project: **683 transitive dependencies**
 
 ---
 

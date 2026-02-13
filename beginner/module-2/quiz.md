@@ -283,7 +283,7 @@ For more investigation:
 | 6-7 | 📚 Good progress — revisit the Core Concepts section |
 | 0-5 | 🔄 Consider re-reading the module before moving on |
 
-<div class="callout callout-tip">
+<div class="callout callout-tip" markdown="1">
 <div class="callout-title">💡 Git Takes Practice</div>
 
 Don't worry if Git concepts feel abstract. They become intuitive with practice. Keep using the commands and concepts will solidify!

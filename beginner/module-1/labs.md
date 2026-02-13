@@ -51,7 +51,7 @@ next_section:
 
 These hands-on exercises will help you practice what you've learned about SDLC and GitHub. Complete them in order for the best experience.
 
-<div class="callout callout-info">
+<div class="callout callout-info" markdown="1">
 <div class="callout-title">📋 Prerequisites</div>
 
 - GitHub account (free tier works)
@@ -307,7 +307,7 @@ Answer these in your notes:
 - [ ] Lab 3: Wrote an Architecture Decision Record
 - [ ] Lab 4: Analyzed customer workflow scenario
 
-<div class="callout callout-tip">
+<div class="callout callout-tip" markdown="1">
 <div class="callout-title">📸 Capture Your Work</div>
 
 Take screenshots of your completed labs! They're useful for:

@@ -59,7 +59,7 @@ sections:
 
 Welcome to the hands-on walkthrough for GitHub Advanced Security (GHAS)! This section guides you through enabling, configuring, and operationalizing the security features that protect your code and supply chain.
 
-<div class="callout callout-tip">
+<div class="callout callout-tip" markdown="1">
 <div class="callout-title">💡 CSM Tip</div>
 GHAS rollouts are often the starting point for security-focused conversations. Customers frequently ask "where do I start?" The answer: Enable features progressively—start with Dependabot and secret scanning (quick wins), then add CodeQL for deeper analysis. This walkthrough follows that progression.
 </div>
@@ -117,7 +117,7 @@ Enabling GHAS follows a hierarchy: **Enterprise → Organization → Repository*
    - `CodeQL`
    - `Dependency Review`
 
-<div class="callout callout-info">
+<div class="callout callout-info" markdown="1">
 <div class="callout-title">📖 Bulk Enablement</div>
 Organization admins can enable GHAS features across all repositories at once. Go to Organization Settings → Code security and analysis, then use the "Enable all" buttons. This is typically used during initial GHAS rollout to establish a baseline.
 </div>
@@ -137,7 +137,7 @@ CodeQL is GitHub's semantic code analysis engine. It queries your code like a da
 | **Default** | Quick start, standard languages | UI-based, auto-detected languages |
 | **Advanced** | Custom queries, monorepos, compiled languages | Workflow file, full control |
 
-<div class="callout callout-tip">
+<div class="callout callout-tip" markdown="1">
 <div class="callout-title">💡 CSM Tip</div>
 Start customers with Default setup—it works for 80% of cases and shows value immediately. Move to Advanced setup when they need custom queries, build-mode control for compiled languages, or integration with their existing CI pipelines.
 </div>
@@ -237,7 +237,7 @@ Dependabot automates dependency updates, creating PRs when new versions are avai
 | **Dependabot security updates** | Auto-create PRs for security fixes |
 | **Dependabot version updates** | Keep all dependencies current (configurable) |
 
-<div class="callout callout-tip">
+<div class="callout callout-tip" markdown="1">
 <div class="callout-title">💡 CSM Tip</div>
 Help customers tune Dependabot to avoid PR fatigue. Use grouping to batch minor/patch updates, schedule updates for low-activity times, and set up auto-merge for safe updates. An overwhelmed team ignores Dependabot; a well-configured team adopts it.
 </div>
@@ -348,7 +348,7 @@ jobs:
 
 ```
 
-<div class="callout callout-warning">
+<div class="callout callout-warning" markdown="1">
 <div class="callout-title">⚠️ Auto-Merge Caution</div>
 Auto-merge is powerful but requires good test coverage. Only auto-merge updates that your test suite can validate. Start conservative (patch updates to dev dependencies) and expand as confidence grows.
 </div>
@@ -361,19 +361,17 @@ Push protection prevents secrets from being committed in the first place—a pro
 
 ### How Push Protection Works
 
-```
-Developer commits file with secret
-         ↓
-    git push
-         ↓
-GitHub detects secret pattern
-         ↓
-  Push is BLOCKED
-         ↓
-Developer removes secret or bypasses (with audit trail)
-```
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart TD
+    A["Developer commits file with secret"] --> B["git push"]
+    B --> C["GitHub detects secret pattern"]
+    C --> D["Push is BLOCKED"]
+    D --> E["Developer removes secret\nor bypasses with audit trail"]
+</div>
+</div>
 
-<div class="callout callout-tip">
+<div class="callout callout-tip" markdown="1">
 <div class="callout-title">💡 CSM Tip</div>
 Push protection is often the fastest path to GHAS value. It requires no workflow changes—developers just try to push and get blocked. Use this as the "hook" in demos: commit a fake AWS key and watch it get blocked in real-time.
 </div>
@@ -422,19 +420,17 @@ Alert triage is where security tooling meets security practice. Having the right
 
 ### Triage Workflow Overview
 
-```
-New Alert Created
-       ↓
-Review in Security Overview (org) or Security tab (repo)
-       ↓
-Assess: Is it real? Is it critical?
-       ↓
-Action: Fix, Dismiss (with reason), or Create Issue
-       ↓
-Track metrics: Mean time to remediate
-```
+<div class="mermaid-container">
+<div class="mermaid">
+flowchart TD
+    A["New Alert Created"] --> B["Review in Security Overview\n(org) or Security tab (repo)"]
+    B --> C["Assess: Is it real?\nIs it critical?"]
+    C --> D["Action: Fix, Dismiss\n(with reason), or Create Issue"]
+    D --> E["Track metrics:\nMean time to remediate"]
+</div>
+</div>
 
-<div class="callout callout-tip">
+<div class="callout callout-tip" markdown="1">
 <div class="callout-title">💡 CSM Tip</div>
 Help customers establish an alert triage process before rollout. Questions to answer: Who reviews alerts? What's the SLA by severity? Who can dismiss? Without answers, alerts pile up and teams lose trust in the tooling.
 </div>
@@ -512,7 +508,7 @@ You've now configured the core GHAS capabilities:
 | **CodeQL** | Deep semantic code analysis |
 | **Alert triage** | Operational security workflow |
 
-<div class="callout callout-success">
+<div class="callout callout-success" markdown="1">
 <div class="callout-title">✅ Ready for Labs</div>
 You've seen how to enable and configure GHAS features. In the Hands-On Labs, you'll work with real alerts and practice the triage workflow.
 </div>
