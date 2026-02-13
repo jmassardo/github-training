@@ -182,33 +182,42 @@ High retention indicates high-quality suggestions that pass code review.
 
 ## API-Based Reporting
 
-### Organization Usage Summary
+<div class="callout callout-info">
+<div class="callout-title">📊 Copilot Dashboard</div>
+
+GitHub provides a built-in **Copilot Dashboard** at the organization and enterprise level (Settings → Copilot → Metrics). This gives you visual charts for adoption, acceptance rates, and active users — no API calls needed. Use the dashboard for at-a-glance reporting and the API for custom integrations.
+</div>
+
+### Copilot Metrics API (v2)
+
+The newer Metrics API provides richer data with breakdown by language, editor, and feature.
 
 ```bash
-# Get daily usage metrics
-gh api /orgs/{org}/copilot/usage \
-  --jq '.usage_items[] | {
-    date: .day,
+# Get Copilot metrics (v2 API)
+gh api /orgs/{org}/copilot/metrics \
+  --jq '.[] | {
+    date: .date,
     active_users: .total_active_users,
-    acceptances: .total_acceptances_count,
-    lines_suggested: .total_lines_suggested,
-    lines_accepted: .total_lines_accepted
+    engaged_users: .total_engaged_users,
+    ide_completions: .copilot_ide_code_completions,
+    ide_chat: .copilot_ide_chat,
+    dotcom_chat: .copilot_dotcom_chat,
+    dotcom_prs: .copilot_dotcom_pull_requests
   }'
-
 ```
 
-### Per-User Metrics
+### Organization Seat Management
 
 ```bash
-# Get individual user activity
+# Get seat utilization
 gh api /orgs/{org}/copilot/billing/seats \
   --jq '.seats[] | {
     user: .assignee.login,
     last_active: .last_activity_at,
     editor: .last_activity_editor,
+    plan: .plan_type,
     created: .created_at
   }'
-
 ```
 
 ### Export to CSV
@@ -223,25 +232,23 @@ DATE=$(date +%Y%m%d)
 
 mkdir -p "$OUTPUT_DIR"
 
-# Export usage metrics
-echo "date,active_users,suggestions,acceptances,lines_suggested,lines_accepted" > "$OUTPUT_DIR/usage_$DATE.csv"
-gh api /orgs/$ORG/copilot/usage --paginate \
-  --jq '.usage_items[] | [
-    .day,
+# Export usage metrics (v2 API)
+echo "date,active_users,engaged_users" > "$OUTPUT_DIR/metrics_$DATE.csv"
+gh api /orgs/$ORG/copilot/metrics --paginate \
+  --jq '.[] | [
+    .date,
     .total_active_users,
-    .total_suggestions_count,
-    .total_acceptances_count,
-    .total_lines_suggested,
-    .total_lines_accepted
-  ] | @csv' >> "$OUTPUT_DIR/usage_$DATE.csv"
+    .total_engaged_users
+  ] | @csv' >> "$OUTPUT_DIR/metrics_$DATE.csv"
 
 # Export seat assignments
-echo "user,last_activity,editor,assigned_date" > "$OUTPUT_DIR/seats_$DATE.csv"
+echo "user,last_activity,editor,plan_type,assigned_date" > "$OUTPUT_DIR/seats_$DATE.csv"
 gh api /orgs/$ORG/copilot/billing/seats \
   --jq '.seats[] | [
     .assignee.login,
     .last_activity_at,
     .last_activity_editor,
+    .plan_type,
     .created_at
   ] | @csv' >> "$OUTPUT_DIR/seats_$DATE.csv"
 

@@ -119,6 +119,34 @@ Organizations can create templates for consistent issue reporting:
 - **Feature Request** — Problem statement, proposed solution
 - **Question** — Context, what you've tried
 
+### Issue Types (Organizations)
+
+Organizations can define **issue types** to categorize work beyond labels:
+
+| Type | Purpose |
+|------|---------|
+| **Bug** | Something isn't working correctly |
+| **Feature** | New functionality request |
+| **Task** | General work item |
+| *Custom types* | Organization-defined categories |
+
+Issue types appear as a dropdown when creating issues, making it easier to standardize how teams categorize work across an organization.
+
+### Sub-Issues
+
+**Sub-issues** let you break large issues into smaller, trackable pieces — creating a parent-child hierarchy:
+
+- A parent issue can have multiple sub-issues
+- Progress is tracked automatically (e.g., "3 of 5 complete")
+- Sub-issues can be reprioritized within the parent
+- Great for epics, project milestones, or multi-step tasks
+
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Insight</div>
+
+Issue types and sub-issues are especially valuable for enterprise customers who need structured project management. They reduce the need for external tools like Jira by bringing hierarchical work tracking directly into GitHub.
+</div>
+
 
 ## Labels: Organizing Issues
 
@@ -264,7 +292,8 @@ Key settings CSMs should know:
 
 ### Access & Security
 - Collaborator permissions
-- Branch protection rules
+- Repository rulesets (modern approach — replaces branch protection rules)
+- Branch protection rules (legacy)
 - Deploy keys
 - Webhooks
 

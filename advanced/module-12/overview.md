@@ -133,7 +133,7 @@ flowchart TB
     
     subgraph Stability["📊 Stability Metrics"]
       MTTR["🔧 Mean Time to Recovery<br/>How fast we recover<br/>────────<br/>Elite: < 1 hour<br/>High: < 1 day<br/>Medium: < 1 week<br/>Low: > 6 months"]
-      CFR["⚠️ Change Failure Rate<br/>% of deploys causing failures<br/>────────<br/>Elite: 0-15%<br/>High: 16-30%<br/>Medium: 16-30%<br/>Low: > 30%"]
+      CFR["⚠️ Change Failure Rate<br/>% of deploys causing failures<br/>────────<br/>Elite: 0-5%<br/>High: 6-15%<br/>Medium: 16-30%<br/>Low: 31-45%"]
     end
   end
 </div>

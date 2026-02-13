@@ -118,13 +118,13 @@ flowchart TD
 
 ### Configuration Location
 
-MCP servers are configured in VS Code settings or a dedicated config file:
+MCP servers are configured in a dedicated project file or VS Code settings:
 
-**VS Code Settings (settings.json):**
+**Recommended: Project-scoped config (.vscode/mcp.json):**
 
 ```json
 {
-  "mcp.servers": {
+  "servers": {
     "company-docs": {
       "command": "npx",
       "args": ["-y", "@company/docs-mcp-server"],
@@ -138,6 +138,26 @@ MCP servers are configured in VS Code settings or a dedicated config file:
       "cwd": "${workspaceFolder}",
       "env": {
         "DB_CONNECTION": "${env:DATABASE_URL}"
+      }
+    }
+  }
+}
+```
+
+Using `.vscode/mcp.json` is the recommended approach for project-scoped configuration — it can be committed to the repository and shared with your team.
+
+**Alternative: VS Code Settings (settings.json):**
+
+```json
+{
+  "mcp": {
+    "servers": {
+      "company-docs": {
+        "command": "npx",
+        "args": ["-y", "@company/docs-mcp-server"],
+        "env": {
+          "API_KEY": "${env:COMPANY_DOCS_API_KEY}"
+        }
       }
     }
   }
@@ -168,33 +188,32 @@ npm install -g @modelcontextprotocol/server-filesystem
 
 ## Using MCP in Copilot Chat
 
-### Querying MCP Resources
+### How MCP Tools Work with Agent Mode
 
-Once configured, MCP resources are available through chat participants:
-
-```
-# Access company documentation
-@mcp-company-docs How do I configure the payment service?
-
-# Query database
-@mcp-database What are the top 10 customers by order volume?
-
-# Search internal wiki
-@mcp-wiki What's our policy on error handling?
+Once configured, MCP tools are **automatically discovered and used by agent mode** in VS Code. You don't need to address a specific participant — when in agent mode, Copilot sees your configured MCP tools and invokes them as needed.
 
 ```
+# In Agent mode, Copilot uses MCP tools automatically
+Look up our payment service configuration in the company docs
 
-### Using MCP Tools
+# Copilot will automatically use the configured MCP server to:
+# 1. Search the documentation
+# 2. Return relevant results
+# 3. Use the information in its response
 
 ```
-# Create a Jira ticket
-@mcp-jira Create a bug ticket for the login issue
 
-# Run a database query
-@mcp-postgres SELECT count(*) FROM orders WHERE status = 'pending'
+### Examples with MCP Tools
 
-# Fetch API data
-@mcp-fetch Get the current deployment status from our monitoring API
+```
+# Agent mode will use the database MCP server
+What are the top 10 customers by order volume?
+
+# Agent mode will use the Jira MCP server
+Create a bug ticket for the login issue we just discussed
+
+# Agent mode will use the fetch MCP server
+Check our monitoring API for the current deployment status
 
 ```
 

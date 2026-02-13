@@ -9,7 +9,7 @@ description: "Comprehensive training program curriculum for Customer Success Man
 
 **Comprehensive Training Program for Customer Success Managers & Customer Success Architects**
 
-*Last Updated: December 9, 2025*
+*Last Updated: June 21, 2025*
 
 ---
 
@@ -301,7 +301,8 @@ The syllabus follows the **natural software development workflow**, introducing 
 
 **Training Materials:**
 
-1. **Branch Protection & CODEOWNERS** (3 hours)
+1. **Repository Rulesets & Branch Protection** (3 hours)
+   - GitHub Docs: [About rulesets](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets)
    - GitHub Docs: [About protected branches](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches)
    - GitHub Docs: [Managing a branch protection rule](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule)
    - GitHub Docs: [About code owners](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners)
@@ -327,7 +328,7 @@ The syllabus follows the **natural software development workflow**, introducing 
 
 **Lab Exercise:**
 
-- Configure branch protection rules with required reviewers
+- Configure repository rulesets with required reviewers and status checks
 - Create a CODEOWNERS file for automatic reviewer assignment
 - Set up GPG or SSH commit signing
 - Create a release with release notes and assets
@@ -873,7 +874,6 @@ The syllabus follows the **natural software development workflow**, introducing 
 
 1. **Copilot Agents & Agentic Coding** (3-4 hours)
    - GitHub Docs: [About Copilot coding agent](https://docs.github.com/en/copilot/using-github-copilot/using-copilot-coding-agent)
-   - GitHub Docs: [Using Copilot Workspace](https://docs.github.com/en/copilot/using-github-copilot/using-copilot-workspace)
    - GitHub Docs: [Agent mode in VS Code](https://docs.github.com/en/copilot/using-github-copilot/using-copilot-agent-mode)
    - GitHub Blog: [GitHub Copilot: The agent awakens](https://github.blog/news-insights/product-news/github-copilot-the-agent-awakens/)
 
@@ -911,7 +911,7 @@ The syllabus follows the **natural software development workflow**, introducing 
 **Lab Exercise:**
 
 - Use Copilot Agent mode to implement a multi-file feature
-- Set up a Copilot Workspace session to plan and implement changes
+- Assign a GitHub issue to Copilot coding agent and review the resulting PR
 - Create custom instructions for a sample organization's coding standards
 - Configure an MCP server for additional context (e.g., database schema)
 - Install and use a Copilot Extension from the Marketplace

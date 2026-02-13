@@ -66,12 +66,15 @@ GitHub Copilot supports a wide range of development environments. Here's the cur
 | IDE | Extension | Copilot Chat | Notes |
 |-----|-----------|--------------|-------|
 | **VS Code** | ✅ Full | ✅ Full | Best experience, most features |
-| **Visual Studio** | ✅ Full | ✅ Full | 2022 17.4+ required |
+| **Visual Studio** | ✅ Full | ✅ Full | 2022 17.8+ required |
 | **JetBrains IDEs** | ✅ Full | ✅ Full | IntelliJ, PyCharm, WebStorm, etc. |
 | **Neovim** | ✅ Full | ⚠️ Limited | Lua plugin required |
 | **Vim** | ✅ Basic | ❌ No | Basic completions only |
-| **Xcode** | ✅ Full | ✅ Beta | macOS only |
+| **Xcode** | ✅ Full | ✅ Full | macOS only |
 | **Eclipse** | ⚠️ Preview | ❌ No | Limited functionality |
+| **GitHub.com** | N/A | ✅ Full | Chat, PR summaries, code review |
+| **GitHub Mobile** | N/A | ✅ Full | Chat on iOS and Android |
+| **GitHub CLI** | N/A | ✅ Full | `gh copilot` for terminal |
 
 > **📚 Learn More:** [Supported IDEs](https://docs.github.com/en/copilot/github-copilot-chat/using-github-copilot-chat-in-your-ide)
 
@@ -237,18 +240,14 @@ For administrators managing Copilot across an organization:
 
 ### Content Exclusions
 
-Block Copilot from accessing specific repositories or paths:
+Block Copilot from accessing specific repositories or paths. Content exclusions are configured through the GitHub.com UI, **not** via repository files:
 
-```yaml
-# .github/copilot-policy.yml
-content_exclusion:
-  - "secrets/**"
-  - "*.env"
-  - "internal-tools/**"
+1. Go to **Organization Settings** → **Copilot** → **Content exclusion**
+2. Add repository or path patterns to exclude:
+   - Entire repositories (e.g., `my-org/secrets-repo`)
+   - Specific paths within repositories (e.g., `*.env`, `internal-tools/**`)
 
-```
-
-> **📚 Learn More:** [Managing Copilot Policies](https://docs.github.com/en/copilot/managing-copilot/managing-copilot-for-your-enterprise/managing-policies-and-features-for-copilot-in-your-enterprise)
+> **📚 Learn More:** [Configuring Content Exclusions](https://docs.github.com/en/copilot/managing-copilot/managing-github-copilot-in-your-organization/setting-up-github-copilot-for-your-organization/configuring-content-exclusions-for-github-copilot)
 
 ---
 

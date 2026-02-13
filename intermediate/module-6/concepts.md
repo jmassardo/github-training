@@ -82,7 +82,8 @@ Your Code → CodeQL Database → Query Execution → Security Alerts
 | JavaScript/TypeScript | Full | XSS, injection, prototype pollution |
 | Python | Full | Injection, SSRF, path traversal |
 | Ruby | Full | Injection, command execution |
-| Swift | Beta | Common vulnerabilities |
+| Swift | Full | Common vulnerabilities, injection |
+| Kotlin | Full | Injection, data flow analysis |
 
 ### CodeQL Workflow
 
@@ -136,6 +137,17 @@ jobs:
 | `default` | High-confidence findings | Production-ready alerts |
 | `security-extended` | More rules, some false positives | Thorough security review |
 | `security-and-quality` | Security + code quality | Comprehensive analysis |
+
+### Copilot Autofix
+
+When CodeQL detects a vulnerability in a pull request, **Copilot Autofix** automatically generates a suggested fix. This AI-powered feature:
+
+- Analyzes the CodeQL alert and surrounding code context
+- Generates a code fix with an explanation of the change
+- Presents the fix as a suggestion you can commit directly from the PR
+
+> **💡 CSM Insight:** Copilot Autofix dramatically reduces mean-time-to-remediate for security vulnerabilities. Instead of developers needing to understand the vulnerability and write a fix, they review an AI-generated solution. This is one of GHAS's strongest selling points for developer adoption.
+
 ---
 
 ## 2.2 Secret Scanning
@@ -208,6 +220,17 @@ When a legitimate secret is detected:
 3. **It's used in tests** (sandbox/test environment)
 4. **I'll fix it later** (creates alert, allows push)
 All bypasses are logged for audit.
+
+### Validity Checks
+
+GitHub can verify whether detected secrets are still active with the service provider. This helps teams prioritize remediation:
+
+- **Active** — the secret is still valid and should be rotated immediately
+- **Inactive** — the secret has already been revoked or expired
+- **Unknown** — the provider doesn't support validity checks for this type
+
+> **💡 CSM Insight:** Validity checks help address "alert fatigue" — teams can focus on active credentials first rather than treating all alerts equally.
+
 ---
 
 ## 2.4 Dependabot
@@ -278,6 +301,18 @@ updates:
         update-types: ["version-update:semver-major"]
 
 ```
+
+### Dependabot Auto-Triage with Copilot
+
+Copilot can automatically assess Dependabot alerts to determine whether vulnerable code paths are actually **reachable** in your codebase. This AI-powered triage helps teams:
+
+- **Prioritize** alerts where the vulnerable function is actually called
+- **Dismiss** alerts where the vulnerability isn't reachable
+- **Reduce alert fatigue** by focusing developer attention on real risks
+
+Auto-triage results appear directly on the Dependabot alert with a reachability assessment.
+
+---
 
 ## 2.5 Dependency Review
 Catches vulnerabilities introduced in pull requests:

@@ -17,7 +17,7 @@ permalink: /
 
 ## 📚 Program Structure
 
-This 12-week program is organized into **three progressive phases**, each containing multiple focused modules that build upon each other:
+This 14-week program is organized into **three progressive phases**, each containing multiple focused modules that build upon each other:
 
 <div class="training-phases" markdown="1">
 
@@ -120,7 +120,7 @@ Customer use cases and common questions you'll encounter as a CSM/CSA
 
 - **Per Module:** 8-12 hours (reading, videos, labs)
 - **Per Week:** 15-20 hours
-- **Total Program:** 12 weeks (~200 hours)
+- **Total Program:** 14 weeks (~200 hours)
 
 ---
 

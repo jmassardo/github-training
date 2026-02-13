@@ -136,7 +136,47 @@ Terminal and shell assistance:
 
 ```
 
+### @github
+
+Search and interact with GitHub directly from chat:
+
+```
+@github What are the latest open issues in this repo?
+
+@github Show me recent PRs that modified the auth module
+
+@github Search for repositories related to MCP servers
+
+```
+
 > **📚 Learn More:** [Chat Participants](https://docs.github.com/en/copilot/github-copilot-chat/copilot-chat-in-ides/using-github-copilot-chat-in-your-ide#using-chat-participants)
+
+---
+
+## Model Selection
+
+Copilot Chat lets you choose which AI model powers your conversation. Use the model picker dropdown in the chat panel to switch between available models:
+
+| Model | Best For |
+|-------|----------|
+| **GPT-4o** | General-purpose coding, fast responses |
+| **Claude Sonnet** | Nuanced explanations, documentation |
+| **Gemini** | Multi-modal tasks, broad knowledge |
+| **o1 / o3-mini** | Complex reasoning, algorithmic problems |
+
+> **💡 Tip:** Different models excel at different tasks. Experiment to find which works best for your use case. Model availability depends on your Copilot plan tier.
+
+---
+
+## Vision and Image Support
+
+Copilot Chat supports attaching images and screenshots for analysis. This is useful for:
+
+- **UI debugging** — "What's wrong with this layout?" + screenshot
+- **Design implementation** — "Build this UI from this mockup" + design image
+- **Error analysis** — "Help me understand this error" + screenshot of error dialog
+
+To use vision, click the attachment icon in the chat input or drag-and-drop an image into the chat panel.
 
 ---
 

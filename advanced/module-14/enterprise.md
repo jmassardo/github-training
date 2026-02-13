@@ -69,11 +69,14 @@ GitHub Copilot Enterprise provides centralized controls for managing AI assistan
 |---------|-----------------|-------------------|
 | Code completions | ✅ | ✅ |
 | Chat in IDE | ✅ | ✅ |
-| Chat in GitHub.com | ❌ | ✅ |
+| Chat in GitHub.com | ✅ | ✅ |
+| Model selection | ✅ | ✅ |
+| PR summaries | ✅ | ✅ |
+| Copilot code review | ✅ | ✅ |
+| Copilot Autofix | ✅ | ✅ |
+| Coding agent | ✅ | ✅ |
 | Knowledge bases | ❌ | ✅ |
-| PR summaries | ❌ | ✅ |
-| Coding agent | ❌ | ✅ |
-| Fine-tuned models | ❌ | Coming soon |
+| Copilot Dashboard | ❌ | ✅ |
 
 ---
 
@@ -317,7 +320,7 @@ Configure streaming: Organization → Settings → Audit log → Log streaming
 <div class="mermaid">
 flowchart LR
   subgraph DataFlow["Data Flow"]
-    Code["📄 Your Code<br/>Controlled by Exclusions"] --> API["🔗 GitHub API<br/>Encrypted in Transit"] --> AI["🤖 Azure OpenAI<br/>Not Used for Training"]
+    Code["📄 Your Code<br/>Controlled by Exclusions"] --> API["🔗 GitHub API<br/>Encrypted in Transit"] --> AI["🤖 AI Models<br/>Not Used for Training"]
   end
   
   subgraph Commitments["Key Commitments"]

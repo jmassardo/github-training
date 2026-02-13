@@ -197,7 +197,7 @@ This is one of the most common customer concerns. Here's what you need to know:
 
 | Aspect | Free/Pro | Business | Enterprise |
 |--------|----------|----------|------------|
-| Code used for training | Opt-out available | No | No |
+| Code used for training | Not by default (opt-in) | No | No |
 | Telemetry collection | Yes | Configurable | Configurable |
 | Content exclusions | No | Yes | Yes |
 | Audit logs | No | Yes | Yes |
