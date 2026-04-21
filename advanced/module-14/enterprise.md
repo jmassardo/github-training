@@ -212,6 +212,27 @@ repo:myorg/confidential-repo
 
 ```
 
+### Managing Exclusions Programmatically (Public Preview)
+
+As of February 2026, the **Copilot Content Exclusion REST API** is in public preview, enabling teams to manage exclusion rules programmatically — no UI required.
+
+```bash
+# List current content exclusions for an org
+gh api /orgs/{org}/copilot/content-exclusions
+
+# Add a new exclusion via API
+gh api -X POST /orgs/{org}/copilot/content-exclusions \
+  -f "content_exclusion_rules[][type]=repository_path" \
+  -f "content_exclusion_rules[][pattern]=**/secrets/**"
+
+# Remove an exclusion
+gh api -X DELETE /orgs/{org}/copilot/content-exclusions/{exclusion_id}
+```
+
+This is especially useful for large enterprises that manage many organizations and want to enforce consistent exclusion policies through automation (CI/CD pipelines, Terraform, etc.) rather than manually through the UI.
+
+> **📚 Learn More:** [Managing Content Exclusions](https://docs.github.com/en/copilot/managing-copilot/managing-copilot-for-your-enterprise/managing-policies-and-features-for-copilot-in-your-enterprise)
+
 ### How Exclusions Work
 
 <div class="mermaid-container">

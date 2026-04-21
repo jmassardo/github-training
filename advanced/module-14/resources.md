@@ -97,9 +97,11 @@ This section provides curated links to official documentation, tools, and learni
 
 | Resource | Description |
 |----------|-------------|
-| [Enterprise Overview](https://docs.github.com/en/copilot/copilot-enterprise-overview) | Enterprise features and capabilities |
-| [Managing Copilot](https://docs.github.com/en/copilot/managing-github-copilot-in-your-organization) | Organization management |
-| [Policy Configuration](https://docs.github.com/en/copilot/managing-copilot-for-business/managing-policies-for-copilot-for-business) | Policy settings reference |
+| [Enterprise Overview](https://docs.github.com/en/copilot/github-copilot-enterprise/overview/about-github-copilot-enterprise) | Enterprise features and capabilities |
+| [Managing Copilot](https://docs.github.com/en/copilot/managing-copilot) | Organization management |
+| [Policy Configuration](https://docs.github.com/en/copilot/managing-copilot/managing-copilot-for-your-enterprise/managing-policies-and-features-for-copilot-in-your-enterprise) | Policy settings reference |
+| [Content Exclusion REST API](https://docs.github.com/en/copilot/managing-copilot/managing-copilot-for-your-enterprise/managing-policies-and-features-for-copilot-in-your-enterprise) | Programmatic exclusion management (public preview) |
+| [Copilot Metrics Dashboard](https://docs.github.com/en/copilot/managing-copilot) | GA dashboard for adoption tracking |
 | [Audit Log Events](https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/reviewing-the-audit-log-for-your-organization) | Audit logging guide |
 
 ---
@@ -110,8 +112,8 @@ This section provides curated links to official documentation, tools, and learni
 
 | Resource | Description |
 |----------|-------------|
-| [Coding Agent Overview](https://docs.github.com/en/copilot/using-github-copilot/using-copilot-coding-agent) | Agent capabilities and usage |
-| [Agent Best Practices](https://docs.github.com/en/copilot/using-github-copilot/using-copilot-coding-agent/best-practices-for-copilot-coding-agent) | Optimization tips |
+| [Coding Agent Overview](https://docs.github.com/en/copilot/using-github-copilot/coding-agent) | Agent capabilities and usage |
+| [Agent Best Practices](https://docs.github.com/en/copilot/using-github-copilot/coding-agent) | Optimization tips |
 | [Workspace Agent](https://docs.github.com/en/copilot/github-copilot-chat/copilot-chat-in-your-ide/using-github-copilot-chat-in-your-ide#using-participants-in-copilot-chat) | @workspace usage |
 
 ### Model Context Protocol (MCP)
@@ -169,7 +171,9 @@ POST /orgs/{org}/copilot/billing/selected_users  # Assign seats
 gh copilot explain "command"    # Explain a command
 gh copilot suggest "task"       # Get command suggestions
 gh api /orgs/{org}/copilot/...  # API access
-
+gh skill list                   # List available agent skills
+gh skill install {skill}        # Install an agent skill
+gh skill search "keyword"       # Search agent skill marketplace
 ```
 
 | Resource | Description |
@@ -257,7 +261,7 @@ gh api /orgs/{org}/copilot/...  # API access
 |-------|----------|
 | Copilot not working | [Troubleshooting Guide](https://docs.github.com/en/copilot/troubleshooting-github-copilot) |
 | Network/proxy issues | [Firewall Configuration](https://docs.github.com/en/copilot/troubleshooting-github-copilot/troubleshooting-firewall-settings-for-github-copilot) |
-| Extension issues | [VS Code Logs](https://code.visualstudio.com/docs/copilot/copilot-troubleshooting) |
+| Extension issues | [VS Code Logs](https://code.visualstudio.com/docs/copilot/troubleshooting) |
 
 ### Support Channels
 

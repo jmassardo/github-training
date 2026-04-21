@@ -284,6 +284,51 @@ flowchart LR
 
 ---
 
+## Copilot CLI: Terminal-Native AI Assistance
+
+Copilot CLI (generally available as of February 2026) brings AI assistance directly to the terminal — no IDE required.
+
+### What Copilot CLI Does
+
+Copilot CLI extends the familiar `gh` GitHub CLI with two AI-powered commands:
+
+| Command | Purpose | Example |
+|---------|---------|---------|
+| `gh copilot explain` | Explains shell commands in plain language | `gh copilot explain "find . -name '*.log' -mtime +7 -delete"` |
+| `gh copilot suggest` | Suggests commands for a described task | `gh copilot suggest "compress all PNG files in this folder"` |
+
+### Why This Matters
+
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Insight</div>
+
+Copilot CLI is available to **all Copilot subscribers** — Free, Pro, Business, and Enterprise. It's an easy win for developers who spend significant time in the terminal, especially DevOps engineers and platform teams who may not use a traditional IDE.
+</div>
+
+### Getting Started
+
+```bash
+# Install the GitHub CLI extension
+gh extension install github/gh-copilot
+
+# Explain a mysterious command
+gh copilot explain "awk '{print $1}' /var/log/auth.log | sort | uniq -c | sort -rn"
+
+# Get command suggestions
+gh copilot suggest "list all running Docker containers and their resource usage"
+
+# Update to latest version
+gh extension upgrade gh-copilot
+```
+
+### How It Works
+
+Like Copilot in the IDE, Copilot CLI uses your prompt as context and generates suggestions using LLMs. The difference is the interface: terminal-first, no window switching, no IDE required.
+
+> **📚 Learn More:** [Copilot in the CLI Documentation](https://docs.github.com/en/copilot/github-copilot-in-the-cli/using-github-copilot-in-the-cli)
+
+---
+
 ## CSM Conversation Starters
 
 Use these talking points with customers:
@@ -313,6 +358,7 @@ Key takeaways from this section:
 | **Context** | Better context = better suggestions |
 | **Privacy** | Business/Enterprise have strongest controls |
 | **Limitations** | AI assists, humans decide |
+| **Copilot CLI** | Terminal-native AI assistance via `gh copilot` — available to all plan tiers |
 
 ---
 

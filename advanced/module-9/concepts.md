@@ -328,6 +328,54 @@ query GetAuditLogs($enterprise: String!, $first: Int!) {
 
 ```
 
+### Deployment Context in Repository Properties (April 2026)
+
+GitHub introduced two new **built-in repository properties** to help organizations track deployment status across their portfolio:
+
+| Property | Values | Meaning |
+|----------|--------|---------|
+| `deployable` | `true` / `false` | Whether the repository is intended to be deployed |
+| `deployed` | `true` / `false` | Whether the repository currently has an active deployment |
+
+**Why this matters:** Large enterprises often have hundreds or thousands of repositories, and it's hard to know at a glance which ones are actively deployed production systems versus internal tools, libraries, or archived projects.
+
+With these properties, organization admins can:
+- Filter repositories by deployment status in the org dashboard
+- Target security policies specifically at deployed repositories
+- Build dashboards that show risk posture for actively-deployed software
+
+```bash
+# Set the deployable property on a repository
+gh api -X PATCH /repos/{owner}/{repo}/properties/values \
+  -f "properties[][property_name]=deployable" \
+  -f "properties[][value]=true"
+
+# Find all deployed repositories in an org
+gh api /orgs/{org}/repos \
+  --jq '[.[] | select(.custom_properties.deployed == "true") | .name]'
+```
+
+### Rule Insights Dashboard (April 2026)
+
+The new **Rule Insights dashboard** gives enterprise administrators trend data for ruleset enforcement — specifically tracking what's getting blocked and who's bypassing rules.
+
+**Location**: Enterprise or Organization → Settings → Rules → Insights
+
+**What it shows:**
+
+| Metric | Description |
+|--------|-------------|
+| **Blocked pushes** | How many pushes were blocked by rulesets over time |
+| **Bypass activity** | Who bypassed rules, when, and which rules were bypassed |
+| **Rule effectiveness** | Which rules trigger most often (helping prioritize which to keep) |
+| **Trends** | Week-over-week and month-over-month views |
+
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Talking Point</div>
+
+The Rule Insights dashboard answers a common governance question: "Are our branch protection rules actually working?" Before, admins had to parse audit logs manually. Now it's a visual dashboard showing rule violations and bypass trends over time — perfect for quarterly compliance reviews.
+</div>
+
 ## 2.6 GitHub Connect (Hybrid Deployments)
 
 For customers running GitHub Enterprise Server alongside GitHub Enterprise Cloud:

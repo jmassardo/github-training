@@ -63,6 +63,14 @@ sections:
 - [Security Advisories](https://docs.github.com/en/code-security/security-advisories)
 ---
 
+## Recent Security Feature Updates
+
+- [Link Code Scanning Alerts to Issues (Public Preview)](https://docs.github.com/en/code-security/code-scanning/managing-code-scanning-alerts/managing-code-scanning-alerts-for-your-repository)
+- [OIDC Support for Dependabot](https://docs.github.com/en/code-security/dependabot/working-with-dependabot/configuring-access-to-private-registries-for-dependabot)
+- [SBOM Generation and Export](https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/exporting-a-software-bill-of-materials-for-your-repository)
+- [Secret Scanning Supported Patterns](https://docs.github.com/en/code-security/secret-scanning/introduction/supported-secret-scanning-patterns)
+---
+
 ## CodeQL Resources
 - [CodeQL Query Help](https://codeql.github.com/codeql-query-help/)
 - [CodeQL GitHub Repository](https://github.com/github/codeql)
@@ -80,4 +88,4 @@ sections:
 ## Tools and Integrations
 - [GitHub Advisory Database](https://github.com/advisories)
 - [Dependency Review Action](https://github.com/actions/dependency-review-action)
-- [SARIF Viewer](https://sarifviewer.azurewebsites.net/)
+- [SARIF Viewer Extension for VS Code](https://marketplace.visualstudio.com/items?itemName=MS-SarifVSCode.sarif-viewer)

@@ -119,6 +119,22 @@ Organizations can create templates for consistent issue reporting:
 - **Feature Request** — Problem statement, proposed solution
 - **Question** — Context, what you've tried
 
+### Semantic Search on the Issues Dashboard (February 2026)
+
+The **issues dashboard** now supports **semantic (natural language) search** — you don't need to remember exact label names or filter syntax. Just describe what you're looking for in plain English:
+
+- `"login bugs reported last week"`
+- `"high priority features for the mobile team"`
+- `"authentication issues assigned to me"`
+
+GitHub interprets the intent behind your query and returns relevant issues, even if the exact words don't match. This complements the existing structured filter syntax.
+
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Insight</div>
+
+This is a great feature to highlight for project managers and non-technical stakeholders who find GitHub's filter syntax intimidating. Natural language search lowers the barrier to using GitHub as a project management tool.
+</div>
+
 ### Issue Types (Organizations)
 
 Organizations can define **issue types** to categorize work beyond labels:

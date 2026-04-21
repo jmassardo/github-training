@@ -94,7 +94,7 @@ The syllabus follows the **natural software development workflow**, introducing 
 1. **Software Development Fundamentals** (3-4 hours)
    - Microsoft Learn: [Introduction to DevOps](https://learn.microsoft.com/en-us/training/modules/introduction-to-devops/)
    - Microsoft Learn: [Choose an Agile approach to software development](https://learn.microsoft.com/en-us/training/modules/choose-an-agile-approach/)
-   - Microsoft Learn: [Characterize the DevOps continuum](https://learn.microsoft.com/en-us/training/modules/characterize-devops-continuum/)
+   - Microsoft Learn: [Discover DevOps](https://learn.microsoft.com/en-us/training/modules/discover-devops/)
    - Microsoft Learn: [Assess your development process](https://learn.microsoft.com/en-us/training/modules/assess-your-development-process/)
 
 2. **GitHub Platform Introduction** (2-3 hours)
@@ -159,7 +159,7 @@ The syllabus follows the **natural software development workflow**, introducing 
 
 5. **Architecture & Design Documentation** (2-3 hours)
    - GitHub Blog: [Why write ADRs](https://github.blog/2020-08-13-why-write-adrs/)
-   - Microsoft Learn: [Document your architecture decisions](https://learn.microsoft.com/en-us/azure/architecture/guide/design-principles/self-documenting)
+   - Microsoft Learn: [Azure Architecture design principles](https://learn.microsoft.com/en-us/azure/architecture/guide/design-principles/)
    - External: [Architecture Decision Records](https://adr.github.io/)
    - External: [Markdown Architectural Decision Records](https://adr.github.io/madr/)
 
@@ -553,7 +553,7 @@ The syllabus follows the **natural software development workflow**, introducing 
    - Microsoft Learn: [Manage release cadence with GitHub](https://learn.microsoft.com/en/training/modules/manage-release-cadence-github/)
 
 4. **Infrastructure as Code Basics** (2 hours)
-   - Microsoft Learn: [Introduction to infrastructure as code](https://learn.microsoft.com/en-us/training/modules/introduction-to-infrastructure-as-code/)
+   - Microsoft Learn: [Explore infrastructure as code and configuration management](https://learn.microsoft.com/en-us/training/modules/explore-infrastructure-code-configuration-management/)
 
 **Lab Exercise:**
 
@@ -591,7 +591,7 @@ The syllabus follows the **natural software development workflow**, introducing 
    - External: [Observability best practices](https://www.honeycomb.io/what-is-observability)
 
 2. **Incident Management & Response** (2-3 hours)
-   - Microsoft Learn: [Introduction to incident response](https://learn.microsoft.com/en-us/training/modules/intro-to-incident-response/)
+   - Microsoft Learn: [Improve reliability with modern operations: Incident response](https://learn.microsoft.com/en-us/training/modules/improve-reliability-incidents/)
    - GitHub Docs: [Creating an issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue)
    - External: [Incident response best practices](https://www.atlassian.com/incident-management/incident-response)
    - External: [Post-mortem templates](https://github.com/dastergon/postmortem-templates)
@@ -603,8 +603,8 @@ The syllabus follows the **natural software development workflow**, introducing 
 
 4. **Infrastructure as Code with GitHub** (4 hours)
    - Microsoft Learn: [Build Azure infrastructure with Bicep](https://learn.microsoft.com/en-us/training/paths/fundamentals-bicep/)
-   - Microsoft Learn: [Build Azure infrastructure with Terraform](https://learn.microsoft.com/en-us/training/paths/azure-infrastructure-terraform/)
-   - Microsoft Learn: [Implement infrastructure as code](https://learn.microsoft.com/en-us/training/modules/implement-infrastructure-as-code/)
+   - Microsoft Learn: [Fundamentals of Terraform on Azure](https://learn.microsoft.com/en-us/training/paths/terraform-fundamentals/)
+   - Microsoft Learn: [Manage infrastructure as code using Azure and DSC](https://learn.microsoft.com/en-us/training/paths/az-400-manage-infrastructure-as-code-using-azure/)
 
 5. **GitOps Principles** (2 hours)
    - Microsoft Learn: [Introduction to GitOps](https://learn.microsoft.com/en-us/training/modules/intro-to-gitops/)

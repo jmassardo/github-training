@@ -274,13 +274,35 @@ This response accurately frames Copilot as a productivity tool that enhances dev
 
 ---
 
+### Question 11: Copilot CLI
+
+**What is the primary purpose of the `gh copilot suggest` command available in Copilot CLI (GA)?**
+
+A) Create a new GitHub repository from the terminal  
+B) Generate a shell command for a task described in natural language  
+C) Commit staged files with an AI-generated commit message  
+D) Open Copilot Chat inside the terminal  
+
+<details>
+<summary>Show Answer</summary>
+
+**B) Generate a shell command for a task described in natural language**
+
+`gh copilot suggest` takes a natural language description of what you want to do and returns one or more shell commands to accomplish it. For example, `gh copilot suggest "find all Python files modified in the last 7 days"` returns the appropriate `find` command. This is available to **all Copilot plan tiers** (Free, Pro, Business, Enterprise) via the `gh` CLI extension.
+
+**Why this matters for CSMs:** Copilot CLI is a low-friction entry point for teams that live in the terminal — DevOps engineers, SREs, and platform teams. It demonstrates Copilot value outside the IDE.
+
+</details>
+
+---
+
 ## Scoring
 
 | Score | Assessment |
 |-------|------------|
-| 9-10 | Excellent! Ready for Module 14 |
-| 7-8 | Good understanding, review missed topics |
-| 5-6 | Review the concepts section again |
+| 10-11 | Excellent! Ready for Module 14 |
+| 8-9 | Good understanding, review missed topics |
+| 5-7 | Review the concepts section again |
 | Below 5 | Re-read the module before proceeding |
 
 ---
@@ -296,6 +318,7 @@ If you missed any questions, review these key points:
 5. **Always review security-critical code** before accepting
 6. **VS Code** has the most complete feature set
 7. **Copilot augments**, doesn't replace, developers
+8. **Copilot CLI** (`gh copilot`) works in the terminal and is available to all plan tiers
 
 ---
 

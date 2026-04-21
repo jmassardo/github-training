@@ -147,6 +147,25 @@ When CodeQL detects a vulnerability in a pull request, **Copilot Autofix** autom
 
 > **💡 CSM Insight:** Copilot Autofix dramatically reduces mean-time-to-remediate for security vulnerabilities. Instead of developers needing to understand the vulnerability and write a fix, they review an AI-generated solution. This is one of GHAS's strongest selling points for developer adoption.
 
+### CodeQL 2.25.0: Swift 6.2.4 Support
+
+CodeQL 2.25.0 (released March 2026) adds full support for **Swift 6.2.4**, expanding coverage for iOS and macOS applications.
+
+### Linking Code Scanning Alerts to GitHub Issues (Public Preview)
+
+As of April 2026, you can link code scanning alerts directly to GitHub Issues, bringing security remediation into your existing planning workflows.
+
+**How it works:**
+1. Open a code scanning alert
+2. Click **Create issue** to open a pre-populated issue with alert details
+3. The issue stays linked to the alert — when the alert is resolved, the issue is automatically updated
+
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Insight</div>
+
+This bridges the gap between security teams (who work in alerts) and development teams (who work in issues). Security findings no longer live in a silo — they become trackable work items in the team's existing sprint workflow.
+</div>
+
 ---
 
 ## 2.2 Secret Scanning
@@ -196,6 +215,23 @@ patterns:
     type: "connection_string"
 
 ```
+
+### New Secret Detectors (March 2026)
+
+GitHub expanded secret scanning coverage with **nine new detectors** from seven providers:
+
+| Provider | What's Detected |
+|----------|----------------|
+| **Langchain** | LangChain API keys |
+| **Salesforce** | Salesforce Connected App secrets |
+| **Figma** | Figma personal access tokens |
+| **Google** | Additional Google service credentials |
+| **OpenVSX** | OpenVSX marketplace tokens |
+| *(+ two others)* | Additional provider-specific patterns |
+
+> 📚 Secret scanning now covers **200+ patterns from 100+ providers**. When a new provider is added, GitHub automatically scans existing history — not just new commits.
+
+---
 
 ## 2.3 Push Protection
 Push protection blocks secrets BEFORE they enter the repository:
@@ -308,6 +344,37 @@ Copilot can automatically assess Dependabot alerts to determine whether vulnerab
 - **Reduce alert fatigue** by focusing developer attention on real risks
 
 Auto-triage results appear directly on the Dependabot alert with a reachability assessment.
+
+### OIDC Support for Dependabot (April 2026)
+
+Dependabot can now authenticate to private registries using **OpenID Connect (OIDC)** at the organization level — eliminating the need for long-lived credentials stored as secrets.
+
+**Why this matters:** Previously, teams had to store long-lived tokens (PATs, API keys) as repository secrets to allow Dependabot to fetch packages from private registries. With OIDC, the organization's identity provider issues short-lived tokens automatically — just as GitHub Actions has done for cloud deployments.
+
+**Configuration:**
+
+```yaml
+# .github/dependabot.yml — OIDC-authenticated private registry
+version: 2
+registries:
+  my-private-npm:
+    type: npm-registry
+    url: https://registry.mycompany.com
+    token: ${{ secrets.DEPENDABOT_OIDC_TOKEN }}  # OIDC-issued, no long-lived creds
+
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    registries: [my-private-npm]
+    schedule:
+      interval: "daily"
+```
+
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Insight</div>
+
+OIDC for Dependabot is a direct response to the "long-lived credentials are a risk" concern that security-conscious enterprise customers raise. This lets them use Dependabot with internal registries without compromising their credential hygiene.
+</div>
 
 ---
 

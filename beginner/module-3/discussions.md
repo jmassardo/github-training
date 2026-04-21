@@ -180,6 +180,25 @@ When a discussion reveals actionable work:
 
 ---
 
+## GitHub Copilot Agent Activity in Issues and Projects
+
+As of March 2026, when the Copilot coding agent is assigned to an issue, its activity appears directly in the GitHub Issues and Projects UI:
+
+- **Issues**: The Copilot agent appears as an **assignee** on the issue — just like a human team member — so you can see at a glance which issues have active agent sessions
+- **Projects**: Agent tasks surface in GitHub Projects boards, allowing the full team to track agent-driven work alongside human work in sprint planning views
+
+### What This Means for Teams
+
+For organizations already using GitHub Projects for sprint planning, agent-driven work becomes a first-class citizen in your workflow — no special views or plugins needed. It just shows up.
+
+<div class="callout callout-info">
+<div class="callout-title">📋 Prerequisite</div>
+
+The Copilot coding agent is available on **Copilot Business** and **Copilot Enterprise** plans. The agent activity in Issues and Projects UI is available automatically when the coding agent is enabled for your organization.
+</div>
+
+---
+
 ## Best Practices
 
 ### For Maintainers

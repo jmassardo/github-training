@@ -191,9 +191,11 @@ High retention indicates high-quality suggestions that pass code review.
 ## API-Based Reporting
 
 <div class="callout callout-info">
-<div class="callout-title">📊 Copilot Dashboard</div>
+<div class="callout-title">📊 Copilot Dashboard — Now Generally Available</div>
 
-GitHub provides a built-in **Copilot Dashboard** at the organization and enterprise level (Settings → Copilot → Metrics). This gives you visual charts for adoption, acceptance rates, and active users — no API calls needed. Use the dashboard for at-a-glance reporting and the API for custom integrations.
+GitHub's built-in **Copilot Dashboard** reached general availability in February 2026. It provides a single place to track Copilot adoption trends, acceptance rates, and active user counts across your organization or enterprise — no API calls or custom tooling needed.
+
+Find it at: **Organization or Enterprise** → **Settings** → **Copilot** → **Metrics**
 </div>
 
 ### Copilot Metrics API (v2)

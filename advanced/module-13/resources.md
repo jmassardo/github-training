@@ -92,8 +92,8 @@ next_module:
 |----------|-------------|------|
 | **Managing Copilot** | Organization and enterprise administration | [Managing Copilot](https://docs.github.com/en/copilot/managing-copilot) |
 | **Policy Configuration** | Setting up policies and content exclusions | [Managing Policies](https://docs.github.com/en/copilot/managing-copilot/managing-copilot-for-your-enterprise/managing-policies-and-features-for-copilot-in-your-enterprise) |
-| **Usage Analytics** | Tracking adoption and metrics | [Analyzing Usage](https://docs.github.com/en/copilot/rolling-out-github-copilot-at-scale/analyzing-copilot-usage-in-your-organization) |
-| **Rollout Guide** | Best practices for enterprise deployment | [Rolling Out Copilot](https://docs.github.com/en/copilot/rolling-out-github-copilot-at-scale) |
+| **Usage Analytics** | Tracking adoption and metrics | [Analyzing Usage](https://docs.github.com/en/copilot/managing-copilot) |
+| **Rollout Guide** | Best practices for enterprise deployment | [Rolling Out Copilot](https://docs.github.com/en/copilot/tutorials/roll-out-at-scale) |
 
 ### Pricing and Plans
 
@@ -175,7 +175,8 @@ next_module:
 
 | Tool | Purpose | Link |
 |------|---------|------|
-| **gh copilot** | Copilot in terminal | [Installation](https://docs.github.com/en/copilot/github-copilot-in-the-cli/using-github-copilot-in-the-cli) |
+| **gh copilot** | Copilot in terminal (GA) | [Installation](https://docs.github.com/en/copilot/github-copilot-in-the-cli/using-github-copilot-in-the-cli) |
+| **gh skill** | Discover and manage agent skills | [gh skill docs](https://docs.github.com/en/copilot/using-github-copilot/coding-agent) |
 | **GitHub CLI** | GitHub from command line | [cli.github.com](https://cli.github.com/) |
 
 ---
