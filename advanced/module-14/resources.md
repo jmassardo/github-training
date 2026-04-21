@@ -126,6 +126,14 @@ This section provides curated links to official documentation, tools, and learni
 | [Example MCP Servers](https://github.com/modelcontextprotocol/servers) | Reference implementations |
 | [MCP Inspector](https://github.com/modelcontextprotocol/inspector) | Testing and debugging tool |
 
+### GitHub Models
+
+| Resource | Description |
+|----------|-------------|
+| [GitHub Models Documentation](https://docs.github.com/en/github-models) | Official docs for the playground and API |
+| [Model Marketplace](https://github.com/marketplace/models) | Browse and try available models |
+| [GitHub Models REST API](https://docs.github.com/en/github-models/prototyping-with-ai-models) | API reference for inference calls |
+
 ### Copilot Extensions
 
 | Resource | Description |

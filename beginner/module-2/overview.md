@@ -109,6 +109,8 @@ In 2005, Linus Torvalds (creator of Linux) needed a new version control system a
 1. **Speed**: Linux kernel had massive history
 2. **Distributed**: Contributors worldwide
 3. **Strong safeguards against corruption**: SHA-1 hashes for integrity
+
+   > **ℹ️ Note for CSMs:** Git's internal SHA-1 use (for commit IDs and object hashing) is a separate topic from the HTTPS SHA-1 cipher deprecation that GitHub announced in April 2026. When customers ask about SHA-1 and GitHub, clarify which context they mean: Git's data integrity mechanism (still in use) vs. TLS cipher suite support for HTTPS connections (being removed for legacy cipher suites). See Module 9 for more on the HTTPS change.
 4. **Support for non-linear development**: Thousands of parallel branches
 
 He wrote Git in about 2 weeks. The Linux kernel team adopted it immediately. Open source projects followed. Then companies. Today, **over 90% of developers use Git**.

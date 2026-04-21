@@ -91,7 +91,7 @@ VS Code offers the most complete Copilot experience, being the primary developme
 | **Copilot Edits** | Multi-file editing with AI guidance |
 | **Agent Mode** | Autonomous coding with terminal access |
 | **@workspace** | Full codebase queries |
-| **Model Selection** | Choose between GPT-4o, Claude, Gemini, and more |
+| **Model Selection** | Choose between available models (GPT-4o, Claude, and more — see [supported models](https://docs.github.com/en/copilot/using-github-copilot/ai-models/supported-ai-models-in-copilot)) |
 | **Terminal Integration** | `@terminal` for shell help |
 | **Notebook Support** | Jupyter notebook AI assistance |
 

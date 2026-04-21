@@ -75,7 +75,7 @@ GitHub Copilot is an AI-powered coding assistant that provides:
 | **Copilot Chat** | Conversational AI in your IDE and on GitHub.com | Explaining code, debugging, refactoring |
 | **Multi-file Context** | Understands your entire project | Consistent naming, following patterns |
 | **Documentation** | Generates comments and docs | Inline comments, README content |
-| **Model Selection** | Choose your preferred AI model (GPT-4o, Claude Opus 4.7, Gemini, etc.) | Optimizing for different tasks |
+| **Model Selection** | Choose your preferred AI model (GPT-4o, Claude Opus 4.7, etc.) | Optimizing for different tasks |
 | **Copilot CLI** | AI assistance directly in your terminal | Shell command explanation and generation |
 | **Code Review** | Automated pull request reviews | Catching issues before human review |
 | **Vision** | Attach images/screenshots for analysis | UI debugging, design implementation |
@@ -148,9 +148,13 @@ GitHub offers Copilot in several tiers to meet different needs:
 | **Copilot Enterprise** | Large enterprises | Knowledge bases, enhanced admin controls, Copilot Dashboard |
 
 <div class="callout callout-info">
-<div class="callout-title">🆕 Recently Added Models</div>
+<div class="callout-title">🆕 Model Changes (2026)</div>
 
-**Claude Opus 4.7** became generally available in April 2026, bringing stronger multi-step reasoning and task performance to all Copilot subscribers. Model availability and the list of supported models changes over time — always check the [Copilot model documentation](https://docs.github.com/en/copilot/using-github-copilot/ai-models/changing-the-ai-model-for-copilot-chat) for the current list.
+**Claude Opus 4.7** became generally available in April 2026, bringing stronger multi-step reasoning and task performance to all Copilot subscribers.
+
+**Gemini 3 Pro was removed** from all Copilot experiences on March 26, 2026. If customers ask about Gemini in Copilot, refer them to the supported models page for what's currently available.
+
+Model availability changes over time — always check the [supported AI models documentation](https://docs.github.com/en/copilot/using-github-copilot/ai-models/supported-ai-models-in-copilot) for the current list.
 </div>
 
 > **📚 Learn More:** [Copilot Plans and Pricing](https://docs.github.com/en/copilot/about-github-copilot/subscription-plans-for-github-copilot)

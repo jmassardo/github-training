@@ -231,6 +231,68 @@ Spark is an AI-powered app builder that:
 
 ---
 
+## GitHub Models
+
+GitHub Models (available at [github.com/marketplace/models](https://github.com/marketplace/models)) is GitHub's AI model playground and unified inference API. Think of it as a test kitchen for AI: you can experiment with dozens of foundation models from OpenAI, Anthropic, Meta (Llama), Mistral, Microsoft (Phi), and others — directly from GitHub, for free, with no infrastructure setup.
+
+### What GitHub Models Provides
+
+| Capability | Description |
+|-----------|-------------|
+| **Model Playground** | Interactive chat UI to test any supported model with your own prompts |
+| **Unified Inference API** | One consistent API (OpenAI SDK-compatible) for all models |
+| **Free experimentation** | Rate-limited free tier — no Azure subscription required |
+| **Production path** | Production usage routes through Azure AI Foundry |
+
+### Available Models (representative list)
+
+Models available through GitHub Models include (subject to change):
+
+- **OpenAI** — GPT-4o, GPT-4o mini, o1, o3-mini
+- **Anthropic** — Claude Sonnet, Claude Haiku, Claude Opus
+- **Meta** — Llama 4, Llama 3.x
+- **Mistral** — Mistral Large, Mistral Nemo
+- **Microsoft** — Phi-4, Phi-3.5
+
+> **💡 Tip:** The full list changes as new models are added. Check [github.com/marketplace/models](https://github.com/marketplace/models) for the current catalog.
+
+### GitHub Models vs. Copilot
+
+Copilot uses these same models under the hood, but GitHub Models gives developers **direct access** for building their own AI-powered applications.
+
+| Aspect | GitHub Copilot | GitHub Models |
+|--------|----------------|---------------|
+| **Who uses it** | Developers wanting coding help | Developers *building* AI apps |
+| **Interface** | IDE, github.com, CLI | Playground UI + API |
+| **Output** | Code suggestions, chat responses | Direct model completions via API |
+| **Use case** | Developer productivity | AI app development, prompt engineering |
+| **Copilot Extensions** | Built on top of Copilot | Can use the Models API as their backend |
+
+### Why It Matters for CSMs
+
+GitHub Models is a key piece of GitHub's **end-to-end AI developer platform** story:
+
+- **Copilot** makes developers more productive today
+- **GitHub Models** empowers developers to *build* AI-powered products themselves
+- **Copilot Extensions** can use the Models API as their inference backend
+
+When a customer asks "Is GitHub just a code host with Copilot bolted on?", GitHub Models is part of your answer. GitHub is building the platform where AI applications are developed, tested, and shipped — not just written.
+
+### Example CSM Talking Point
+
+> "Your developers can go from idea to production AI feature using GitHub the whole way: experiment with any foundation model in the GitHub playground, prototype with the free API, build their app, review it in a pull request, and ship it through Actions — all without leaving GitHub."
+
+### Use Cases for Your Customers
+
+- **Prompt engineering** — Test and compare how different models respond to the same prompt before committing to one
+- **Prototyping** — Build proof-of-concept AI features before investing in production infrastructure
+- **Copilot Extensions** — Extensions can call the Models API to power custom AI chat experiences
+- **Model comparison** — Evaluate cost/quality trade-offs across models for a specific task
+
+> **📚 Learn More:** [GitHub Models Documentation](https://docs.github.com/en/github-models)
+
+---
+
 ## Module Learning Path
 
 This module covers:

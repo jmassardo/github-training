@@ -247,6 +247,7 @@ The Copilot coding agent is available on **Copilot Business** and **Copilot Ente
 | **Pull Requests** | Reference discussions in PRs |
 | **Projects** | Add discussions to project boards |
 | **Actions** | Automate responses to new discussions |
+| **Slack** | Create issues from Slack with `@GitHub` + Copilot (March 2026) |
 | **Search** | Discussions included in repo search |
 | **Notifications** | Subscribe to categories or discussions |
 
@@ -290,6 +291,9 @@ jobs:
 
 **For Support Teams:**
 > "Reduce support ticket volume. Users can search existing discussions and help each other, with maintainers stepping in when needed."
+
+**For Teams in Slack:**
+> "GitHub meets you where you work. Mention `@GitHub` in Slack to create issues using natural language — Copilot handles the formatting and routing so nothing falls through the cracks."
 
 ### Discovery Questions
 
