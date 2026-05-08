@@ -119,6 +119,22 @@ Organizations can create templates for consistent issue reporting:
 - **Feature Request** — Problem statement, proposed solution
 - **Question** — Context, what you've tried
 
+### Semantic Search on the Issues Dashboard (February 2026)
+
+The **issues dashboard** now supports **semantic (natural language) search** — you don't need to remember exact label names or filter syntax. Just describe what you're looking for in plain English:
+
+- `"login bugs reported last week"`
+- `"high priority features for the mobile team"`
+- `"authentication issues assigned to me"`
+
+GitHub interprets the intent behind your query and returns relevant issues, even if the exact words don't match. This complements the existing structured filter syntax.
+
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Insight</div>
+
+This is a great feature to highlight for project managers and non-technical stakeholders who find GitHub's filter syntax intimidating. Natural language search lowers the barrier to using GitHub as a project management tool.
+</div>
+
 ### Issue Types (Organizations)
 
 Organizations can define **issue types** to categorize work beyond labels:
@@ -147,8 +163,34 @@ Issue types appear as a dropdown when creating issues, making it easier to stand
 Issue types and sub-issues are especially valuable for enterprise customers who need structured project management. They reduce the need for external tools like Jira by bringing hierarchical work tracking directly into GitHub.
 </div>
 
+### Create Issues from Slack with Copilot (March 2026)
 
-## Labels: Organizing Issues
+As of March 30, 2026, you can create GitHub Issues directly from Slack using natural language — without switching to a browser or the GitHub app.
+
+**How it works:**
+
+1. In any Slack channel, mention `@GitHub` and describe the work you want to track
+2. Copilot interprets your message and creates a properly formatted GitHub Issue in the appropriate repository
+3. The issue is linked back to the Slack conversation for context
+
+**Example:**
+
+```
+@GitHub track a bug: the login page is slow on mobile Safari — 
+assign to the frontend team and tag it high priority
+```
+
+Copilot creates the issue, applies relevant labels, and posts the link back to the channel.
+
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Talking Point</div>
+
+This is a strong adoption story: GitHub meets developers where they already work. Teams that live in Slack no longer have to break their flow to open a browser and navigate to GitHub. Less friction means better issue hygiene and faster backlog capture.
+
+> **"You don't have to change how your team communicates — GitHub works where you already are."**
+</div>
+
+> **📚 Learn More:** [Creating issues from Slack](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue)
 
 **Labels** categorize issues with colored tags:
 

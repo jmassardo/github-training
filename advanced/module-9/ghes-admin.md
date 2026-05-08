@@ -190,8 +190,8 @@ GHES includes a suite of administrative command-line tools accessible via SSH:
 
 GitHub Enterprise Server follows a regular release cadence:
 
-- **Feature releases** (e.g., 3.12, 3.13) — Quarterly, include new features
-- **Patch releases** (e.g., 3.12.1, 3.12.2) — As needed, include bug fixes and security patches
+- **Feature releases** (e.g., 3.19, 3.20) — Quarterly, include new features
+- **Patch releases** (e.g., 3.19.1, 3.19.2) — As needed, include bug fixes and security patches
 - **Support window** — Each feature release is supported for approximately 12 months
 
 ### Upgrade Process
@@ -218,13 +218,29 @@ flowchart TD
 | **Read release notes** | Check for deprecations, breaking changes, and migration notes |
 | **Schedule maintenance windows** | Communicate downtime to users in advance |
 | **Back up before upgrading** | Always run a full backup with `ghe-backup-utils`) |
-| **Don't skip versions** | Sequential upgrades are required (3.11→3.12→3.13, not 3.11→3.13) |
+| **Don't skip versions** | Sequential upgrades are required (3.18→3.19→3.20, not 3.18→3.20) |
 | **Keep within support window** | Unsupported versions don't receive security patches |
 
 <div class="callout callout-info" markdown="1">
 <div class="callout-title">📋 Upgrade Support</div>
 
 Customers can use **hotpatching** for patch releases on supported versions, which applies updates without a full maintenance window. Feature release upgrades still require maintenance mode and a restart.
+</div>
+
+### GHES 3.20 (March 2026)
+
+GHES 3.20 was released in March 2026. Key new capabilities to know for customer conversations:
+
+| Feature | Description |
+|---------|-------------|
+| **Backup service GA** | The built-in backup service is now generally available — no longer requires the separate `backup-utils` toolchain, simplifying backup configuration and monitoring |
+| **Horizontal HA scaling** | Nodes can now be added to an existing HA configuration without requiring a full reconfiguration of the cluster — reduces the operational burden of scaling up |
+| **Enterprise team management** | Simplified team and role management at the enterprise level, reducing the manual overhead of coordinating permissions across multiple organizations |
+
+<div class="callout callout-tip" markdown="1">
+<div class="callout-title">💡 CSM Tip: Backup Service GA</div>
+
+The backup service GA in 3.20 is a meaningful improvement for customers who found `backup-utils` cumbersome to set up and maintain. If you have GHES customers with fragile or untested backup configurations, 3.20 is a compelling upgrade reason — not just for new features, but for operational reliability.
 </div>
 
 ---

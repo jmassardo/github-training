@@ -157,14 +157,24 @@ Search and interact with GitHub directly from chat:
 
 Copilot Chat lets you choose which AI model powers your conversation. Use the model picker dropdown in the chat panel to switch between available models:
 
-| Model | Best For |
-|-------|----------|
-| **GPT-4o** | General-purpose coding, fast responses |
-| **Claude Sonnet** | Nuanced explanations, documentation |
-| **Gemini** | Multi-modal tasks, broad knowledge |
-| **o1 / o3-mini** | Complex reasoning, algorithmic problems |
+| Model | Best For | Credit Cost |
+|-------|----------|-------------|
+| **GPT-4.1** | General-purpose coding, fast responses | Low |
+| **GPT-5.2 / GPT-5.4** | Complex coding, versatile tasks | Medium |
+| **Claude Sonnet 4.x** | Nuanced explanations, documentation | Medium |
+| **Claude Opus 4.7** | Complex multi-step reasoning | High |
+| **GPT-5 mini** | Quick tasks, cost-efficient | Very Low |
+| **Gemini** | ⚠️ *See note below* | Varies |
 
-> **💡 Tip:** Different models excel at different tasks. Experiment to find which works best for your use case. Model availability depends on your Copilot plan tier.
+<div class="callout callout-warning">
+<div class="callout-title">⚠️ Gemini 3 Pro Removed (March 26, 2026)</div>
+
+**Gemini 3 Pro was removed from all GitHub Copilot experiences on March 26, 2026.** If your customers are asking about Gemini in Copilot, direct them to the official supported models page — other Gemini versions may become available through future updates or via GitHub Models.
+
+Always check the [supported AI models page](https://docs.github.com/en/copilot/using-github-copilot/ai-models/supported-ai-models-in-copilot) for the current list, as model availability changes frequently.
+</div>
+
+> **💡 Tip:** Different models excel at different tasks and consume AI Credits at different rates. Under the new usage-based billing, choosing cost-effective models (like GPT-4.1 or GPT-5 mini) for routine tasks helps stretch your credits further. Model availability depends on your Copilot plan tier and changes over time — always verify against the current supported models documentation.
 
 ---
 
@@ -413,6 +423,22 @@ Extract this to a helper function
 | Library comparisons | Sometimes | ✅ |
 | General programming concepts | ✅ | |
 | Current events/news | | ✅ |
+
+### Model-Native Web Search in Copilot Chat (February 2026)
+
+As of February 25, 2026, Copilot Chat on **github.com** supports **model-native web search** — certain models can use their built-in web browsing capability directly within Copilot chat, rather than relying on a separate search integration.
+
+<div class="callout callout-info">
+<div class="callout-title">🌐 What This Means</div>
+
+When you're using a model that supports native web search, Copilot can answer questions about very recent events, fetch current documentation, and access information beyond its training data — all within the chat conversation. Results are contextually integrated into the response, not just links.
+
+**This changes the table above:** with model-native web search enabled, Copilot Chat can increasingly answer questions about "latest API changes" and recent documentation without you needing to switch to a separate browser search.
+</div>
+
+**What models support it?** Availability depends on the model selected. Check the model picker in github.com Copilot Chat — models with web search support will indicate this capability.
+
+> **💡 CSM Talking Point:** Web search in Copilot Chat reduces context switching for developers. Instead of Alt-Tab to the browser to check a docs page, then back to the IDE, they can ask directly in the chat panel. The answer is grounded in both their codebase context *and* current external information.
 
 ---
 

@@ -284,6 +284,76 @@ flowchart LR
 
 ---
 
+## Copilot CLI: Terminal-Native AI Assistance
+
+GitHub Copilot CLI is a **standalone terminal tool** that brings full conversational AI and agentic capabilities directly to your command line — no IDE required.
+
+<div class="callout callout-warning">
+<div class="callout-title">⚠️ Deprecation Notice</div>
+
+The previous `gh copilot` extension was **deprecated in October 2025** and is no longer functional. All terminal-based Copilot usage now goes through the standalone `copilot` CLI. If customers mention `gh copilot`, guide them to migrate to the new tool.
+</div>
+
+### What Copilot CLI Does
+
+The standalone Copilot CLI provides an interactive, conversational AI experience in the terminal:
+
+| Feature | Description |
+|---------|-------------|
+| **Interactive chat** | Full conversational interface with context awareness |
+| **File editing** | Read, create, and edit files directly from the terminal |
+| **Command execution** | Run shell commands with AI guidance and approval flows |
+| **Plan mode** | Multi-step task planning and execution |
+| **Autopilot mode** | Autonomous agentic workflows with trust controls |
+| **MCP support** | Connect to external tools via Model Context Protocol |
+
+### Why This Matters
+
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Insight</div>
+
+Copilot CLI is available to **all Copilot subscribers** — Free, Pro, Business, and Enterprise. It's an easy win for developers who spend significant time in the terminal, especially DevOps engineers and platform teams who may not use a traditional IDE. The standalone CLI is far more capable than the old `gh copilot` extension — it supports full agentic workflows, not just explain/suggest.
+</div>
+
+### Getting Started
+
+```bash
+# Install the standalone Copilot CLI
+brew install copilot-cli          # macOS
+winget install GitHub.Copilot     # Windows
+npm install -g @github/copilot    # Cross-platform via npm
+
+# Authenticate with GitHub
+copilot login
+
+# Launch the interactive interface
+copilot
+
+# Check version and updates
+copilot version
+copilot update
+```
+
+### Key Commands and Shortcuts
+
+| Command / Shortcut | Purpose |
+|---------|---------|
+| `copilot` | Launch interactive interface |
+| `copilot login` | Authenticate via OAuth device flow |
+| `copilot init` | Initialize custom instructions for a repository |
+| `Shift+Tab` | Cycle between standard, plan, and autopilot mode |
+| `@ FILENAME` | Include file contents in context |
+| `# NUMBER` | Include a GitHub issue or PR in context |
+| `! COMMAND` | Execute a shell command directly |
+
+### How It Works
+
+Copilot CLI provides a full interactive terminal session powered by LLMs. Unlike the old `gh copilot` extension (which only offered explain/suggest), the standalone CLI supports multi-turn conversations, file operations, command execution with approval prompts, and agentic plan-and-execute workflows.
+
+> **📚 Learn More:** [Copilot CLI Command Reference](https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference)
+
+---
+
 ## CSM Conversation Starters
 
 Use these talking points with customers:
@@ -313,6 +383,7 @@ Key takeaways from this section:
 | **Context** | Better context = better suggestions |
 | **Privacy** | Business/Enterprise have strongest controls |
 | **Limitations** | AI assists, humans decide |
+| **Copilot CLI** | Terminal-native AI via standalone `copilot` CLI — available to all plan tiers |
 
 ---
 

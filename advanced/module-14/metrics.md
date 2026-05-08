@@ -191,9 +191,11 @@ High retention indicates high-quality suggestions that pass code review.
 ## API-Based Reporting
 
 <div class="callout callout-info">
-<div class="callout-title">📊 Copilot Dashboard</div>
+<div class="callout-title">📊 Copilot Dashboard — Now Generally Available</div>
 
-GitHub provides a built-in **Copilot Dashboard** at the organization and enterprise level (Settings → Copilot → Metrics). This gives you visual charts for adoption, acceptance rates, and active users — no API calls needed. Use the dashboard for at-a-glance reporting and the API for custom integrations.
+GitHub's built-in **Copilot Dashboard** reached general availability in February 2026. It provides a single place to track Copilot adoption trends, acceptance rates, and active user counts across your organization or enterprise — no API calls or custom tooling needed.
+
+Find it at: **Organization or Enterprise** → **Settings** → **Copilot** → **Metrics**
 </div>
 
 ### Copilot Metrics API (v2)
@@ -383,15 +385,23 @@ Example:
 
 ### Cost-Benefit Analysis
 
+<div class="callout callout-info">
+<div class="callout-title">🆕 Updated for Usage-Based Billing (June 2026)</div>
+
+The example below uses Copilot Enterprise ($39/user/month) with estimated AI Credit overages. Under the new billing model, costs include both subscription fees and potential credit overage charges. Code completions remain free and do not consume credits.
+</div>
+
 <div class="mermaid-container">
 <div class="mermaid">
 flowchart TD
   subgraph Costs["💰 COSTS"]
-    C1["Copilot Licenses<br/>$39/user × 100 users × 12 months<br/>= $46,800"]
+    C1["Copilot Subscriptions<br/>$39/user × 100 users × 12 months<br/>= $46,800"]
+    C1a["AI Credit Overages (est.)<br/>= $12,000"]
     C2["Training & Rollout<br/>= $5,000"]
     C3["Administration<br/>5 hrs/month × $100<br/>= $6,000"]
-    CT["TOTAL COST: $57,800"]
+    CT["TOTAL COST: $69,800"]
     C1 --> CT
+    C1a --> CT
     C2 --> CT
     C3 --> CT
   end
@@ -406,9 +416,19 @@ flowchart TD
     B3 --> BT
   end
   
-  CT --> Result["🎯 NET BENEFIT: $797,200<br/>ROI: 1,379%"]
+  CT --> Result["🎯 NET BENEFIT: $785,200<br/>ROI: 1,125%"]
   BT --> Result
 </div>
+</div>
+
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Tip: AI Credit Cost Management</div>
+
+Help customers manage AI Credit costs by:
+- **Monitoring model selection**: Premium models (Claude Opus, GPT-5.5) consume credits faster than efficient models (GPT-5 mini, Raptor mini)
+- **Leveraging pooled credits**: Light users' unused credits offset power users in Business/Enterprise plans
+- **Setting budget controls**: Enterprise admins can set per-user or per-cost-center spend limits
+- **Tracking credit consumption trends**: Use the Copilot metrics API to identify teams approaching limits
 </div>
 
 ### Conservative vs Optimistic Estimates
@@ -467,9 +487,9 @@ flowchart TD
 
 ## Financial Impact
 - Estimated annual savings: $780,000
-- Cost of Copilot licenses: $57,800
-- Net benefit: $722,200
-- ROI: 1,249%
+- Cost of Copilot subscriptions + AI Credit overages: $69,800
+- Net benefit: $710,200
+- ROI: 1,017%
 
 ## Qualitative Feedback
 > "Copilot has changed how I write tests. What used to take

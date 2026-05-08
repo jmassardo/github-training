@@ -92,6 +92,19 @@ echo "//npm.pkg.github.com/:_authToken=YOUR_PAT" >> ~/.npmrc
 
 ```
 
+### OIDC Authentication for Dependabot (April 2026)
+
+In addition to GITHUB_TOKEN and Personal Access Tokens, Dependabot now supports **OIDC authentication** at the organization level for accessing private package registries.
+
+This removes the need to store long-lived tokens as secrets. Instead, your identity provider issues short-lived credentials automatically each time Dependabot needs to authenticate.
+
+**When to recommend this:**
+- Customers with strict secrets management policies (no long-lived tokens)
+- Organizations using internal package registries (Artifactory, Nexus, Azure Artifacts)
+- Teams that already use OIDC for GitHub Actions cloud deployments
+
+> **📚 Learn More:** [Configuring access to private registries for Dependabot](https://docs.github.com/en/code-security/dependabot/working-with-dependabot/configuring-access-to-private-registries-for-dependabot)
+
 ### GITHUB_TOKEN in Actions
 
 ```yaml
@@ -229,6 +242,31 @@ GitHub can automatically generate SBOMs in industry-standard formats like Cyclon
 }
 
 ```
+
+### SBOM Exports: Now Computed Asynchronously (April 2026)
+
+As of April 2026, SBOM generation runs **asynchronously** for repositories via both the repository page and new dedicated API endpoints. This means:
+
+- Large repositories no longer time out during SBOM generation
+- Exports are queued and completed in the background
+- New API endpoints let you poll for export status and download when ready
+
+```bash
+# Trigger an async SBOM export via API
+gh api -X POST /repos/{owner}/{repo}/dependency-graph/sboms/exports
+
+# Check export status
+gh api /repos/{owner}/{repo}/dependency-graph/sboms/exports/{export_id}
+
+# Download when ready
+gh api /repos/{owner}/{repo}/dependency-graph/sboms/exports/{export_id}/download
+```
+
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Insight</div>
+
+Compliance teams often need SBOMs for every release. Async exports remove the previous pain point of SBOM generation timing out on large monorepos — making this viable for enterprise-scale projects.
+</div>
 
 ### Package Provenance
 

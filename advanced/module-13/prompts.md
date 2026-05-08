@@ -414,6 +414,57 @@ def test_<function_name>_<scenario>():
 | **Type hints** | Clarify data shapes | `list[dict[str, int]]` |
 | **Docstrings** | Full specification | Args, Returns, Examples |
 | **Constraints** | Limit solution space | `# Don't use external libs` |
+| **Prompt files** | Reusable slash commands | `.github/prompts/review.prompt.md` |
+| **Custom instructions** | Persistent guidance | `.github/copilot-instructions.md` |
+
+---
+
+## Prompt Files and Custom Instructions
+
+Beyond inline prompts, Copilot supports **persistent prompt customization** through files in your repository:
+
+### Prompt Files (`.prompt.md`)
+
+Prompt files are reusable templates that appear as slash commands in Copilot Chat. Store them in `.github/prompts/`:
+
+```markdown
+<!-- .github/prompts/code-review.prompt.md -->
+---
+name: "Code Review"
+description: "Perform a thorough code review of the selected code"
+argument-hint: "file or selection to review"
+---
+
+Review the provided code for:
+
+1. **Correctness**: Logic errors, off-by-one, null handling
+2. **Security**: Input validation, injection, secrets exposure
+3. **Performance**: N+1 queries, unnecessary allocations
+4. **Maintainability**: Naming, complexity, test coverage
+
+Provide actionable feedback with specific line references.
+```
+
+After creating this file, type `/code-review` in Copilot Chat to invoke it.
+
+### Custom Instructions
+
+Custom instructions provide **always-on** guidance for Copilot at multiple levels:
+
+| Level | File/Location | Scope |
+|-------|--------------|-------|
+| **Repository** | `.github/copilot-instructions.md` | Everyone in the repo |
+| **Path-specific** | `.github/instructions/*.instructions.md` | Files matching `applyTo` glob |
+| **Organization** | Admin settings | All repos in the org |
+| **Personal** | IDE settings or `~/.copilot/copilot-instructions.md` | Your sessions only |
+
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Tip</div>
+
+Custom instructions and prompt files are a powerful selling point for **Copilot Business/Enterprise** adoption. Teams can codify their standards once and have Copilot follow them automatically — no manual setup per developer. See [Module 14: Custom Instructions]({{ site.baseurl }}/advanced/module-14/instructions/) for deep coverage.
+</div>
+
+> **📚 Learn More:** [Adding custom instructions for Copilot](https://docs.github.com/en/copilot/customizing-copilot/adding-custom-instructions-for-github-copilot)
 
 ---
 

@@ -71,6 +71,8 @@ next_section:
 | [Enterprise Managed Users](https://docs.github.com/en/enterprise-cloud@latest/admin/identity-and-access-management/using-enterprise-managed-users-for-iam) | EMU documentation |
 | [GitHub Enterprise Importer](https://docs.github.com/en/enterprise-cloud@latest/migrations/using-github-enterprise-importer) | Migration tool documentation |
 | [Audit Log Reference](https://docs.github.com/en/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/audit-log-events-for-your-enterprise) | Complete audit event reference |
+| [Repository Properties](https://docs.github.com/en/organizations/managing-organization-settings/managing-custom-properties-for-repositories-in-your-organization) | Custom and built-in repo properties |
+| [Rulesets](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets) | Repository ruleset documentation |
 
 ## Video Resources
 

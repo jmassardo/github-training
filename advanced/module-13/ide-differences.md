@@ -91,7 +91,7 @@ VS Code offers the most complete Copilot experience, being the primary developme
 | **Copilot Edits** | Multi-file editing with AI guidance |
 | **Agent Mode** | Autonomous coding with terminal access |
 | **@workspace** | Full codebase queries |
-| **Model Selection** | Choose between GPT-4o, Claude, Gemini, and more |
+| **Model Selection** | Choose between available models (GPT-4o, Claude, and more — see [supported models](https://docs.github.com/en/copilot/using-github-copilot/ai-models/supported-ai-models-in-copilot)) |
 | **Terminal Integration** | `@terminal` for shell help |
 | **Notebook Support** | Jupyter notebook AI assistance |
 
@@ -275,141 +275,132 @@ Xcode support brings Copilot to iOS and macOS developers.
 
 ## Copilot in the CLI
 
-Copilot in the CLI (`gh copilot`) brings AI assistance directly to your terminal, helping you understand commands, get suggestions, and explain errors without leaving your workflow.
+GitHub Copilot CLI is a **standalone terminal tool** that brings full conversational AI and agentic capabilities directly to your command line. The previous `gh copilot` extension was deprecated in October 2025 and replaced by this more powerful standalone tool.
+
+<div class="callout callout-warning">
+<div class="callout-title">⚠️ Migration Notice</div>
+
+If your customers are still using `gh copilot`, they need to migrate to the standalone `copilot` CLI. The old extension is no longer functional. See the [migration guide](https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference) for details.
+</div>
 
 ### Installation
 
 ```bash
-# Install GitHub CLI if not already installed
-brew install gh          # macOS
-winget install GitHub.cli  # Windows
-sudo apt install gh      # Ubuntu/Debian
+# Install the standalone Copilot CLI
+brew install copilot-cli          # macOS
+winget install GitHub.Copilot     # Windows
+npm install -g @github/copilot    # Cross-platform via npm
 
 # Authenticate with GitHub
-gh auth login
+copilot login
 
-# Install Copilot CLI extension
-gh extension install github/gh-copilot
+# For GitHub Enterprise Cloud with data residency
+copilot login --host https://example.ghe.com
 
-# Verify installation
-gh copilot --version
+# Launch the interactive interface
+copilot
+
+# Check version
+copilot version
 ```
 
-### Core Commands
+### Core Features
 
-| Command | Purpose | Example |
-|---------|---------|--------|
-| `gh copilot explain` | Explain a command | `gh copilot explain "tar -xzvf"` |
-| `gh copilot suggest` | Get command suggestions | `gh copilot suggest "compress folder"` |
+| Feature | Description |
+|---------|-------------|
+| **Interactive chat** | Full conversational interface with multi-turn context |
+| **Plan mode** | Multi-step task planning and autonomous execution |
+| **Autopilot mode** | Fully autonomous agentic workflows |
+| **File operations** | Read, create, and edit files from the terminal |
+| **Command execution** | Run shell commands with approval prompts |
+| **MCP support** | Connect external tools via Model Context Protocol |
+| **Tab completion** | Shell completions for bash, zsh, and fish |
 
-### Explain Mode
+### Interactive Interface
 
-Get detailed explanations of complex commands:
+The Copilot CLI provides a rich interactive experience:
 
 ```bash
-# Explain a Git command
-gh copilot explain "git rebase -i HEAD~5"
+# Launch and start chatting
+copilot
 
-# Explain with natural language
-gh copilot explain "What does this do: find . -name '*.log' -mtime +30 -delete"
+# Include files in context with @
+# @src/auth.js Explain this authentication flow
 
-# Pipe command output for explanation
-some-command 2>&1 | gh copilot explain
+# Reference GitHub issues/PRs with #
+# #42 What changes are needed for this issue?
 
-# Explain error messages
-gh copilot explain "error: ENOSPC: no space left on device"
+# Run shell commands directly with !
+# !npm test
+
+# Cycle modes with Shift+Tab:
+# Standard → Plan → Autopilot
 ```
 
-**Example output:**
-```
-Explanation:
+### Key Shortcuts
 
-`git rebase -i HEAD~5` starts an interactive rebase of the last 5 commits.
+| Shortcut | Purpose |
+|----------|---------|
+| `Shift+Tab` | Cycle between standard, plan, and autopilot mode |
+| `@ FILENAME` | Include file contents in context |
+| `# NUMBER` | Reference a GitHub issue or PR |
+| `! COMMAND` | Execute a shell command |
+| `Ctrl+C` | Cancel / clear (press twice to exit) |
+| `Ctrl+V` | Paste from clipboard as attachment |
+| `Ctrl+R` | Reverse search command history |
 
-- `rebase`: Reapply commits on top of another base tip
-- `-i` / `--interactive`: Opens editor to modify commits
-- `HEAD~5`: Go back 5 commits from current HEAD
+### Shell Integration
 
-This allows you to:
-• Reorder commits
-• Squash multiple commits into one
-• Edit commit messages
-• Drop commits entirely
-```
-
-### Suggest Mode
-
-Describe what you want to do in natural language:
+Set up tab completion for your shell:
 
 ```bash
-# Find commands you don't remember
-gh copilot suggest "find large files in git history"
+# Bash (persistent, Linux)
+copilot completion bash | sudo tee /etc/bash_completion.d/copilot
 
-# System administration
-gh copilot suggest "check disk usage by directory"
+# Zsh
+copilot completion zsh > "${fpath[1]}/_copilot"
 
-# Development tasks
-gh copilot suggest "run tests only for changed files"
-
-# Docker operations
-gh copilot suggest "remove all stopped containers and unused images"
-```
-
-**Interactive selection:**
-```
-? Select a command:
-> git rev-list --objects --all | git cat-file --batch-check | sort -k3nr | head -20
-  git ls-files | xargs -I{} git log --format="%H {}" -1 -- {} | sort -k2 -t' '
-  bfg --strip-blobs-bigger-than 100M
-
-? What would you like to do?
-> Run command
-  Explain command
-  Copy to clipboard
-  Cancel
-```
-
-### Shell Integration (Aliases)
-
-Set up convenient aliases in your shell:
-
-```bash
-# Add to ~/.zshrc or ~/.bashrc
-alias "??"="gh copilot suggest"
-alias "?!"="gh copilot explain"
-
-# Usage:
-?? "find and replace in all files"
-?! "chmod 755"
+# Fish
+copilot completion fish > ~/.config/fish/completions/copilot.fish
 ```
 
 ### Use Cases for CSMs
 
 **Helping customers with Git:**
 ```bash
-# When a customer asks about a complex Git operation
-gh copilot explain "git reflog expire --expire=now --all && git gc --prune=now"
+# Ask Copilot CLI about a complex Git operation interactively
+copilot
+# "Explain what git reflog expire --expire=now --all && git gc --prune=now does"
 ```
 
 **Troubleshooting Actions:**
 ```bash
 # Understanding workflow commands
-gh copilot explain "actions-runner config.sh --url https://github.com/org/repo --token TOKEN"
+copilot
+# "What does this Actions runner config command do: config.sh --url https://github.com/org/repo --token TOKEN"
 ```
 
 **Quick demos:**
 ```bash
 # Generate commands for demos without memorizing syntax
-gh copilot suggest "list all GitHub Actions secrets for a repo using gh cli"
+copilot
+# "Show me how to list all GitHub Actions secrets for a repo using the gh CLI"
 ```
+
+### Authentication
+
+Copilot CLI supports multiple authentication methods:
+
+- **Browser-based OAuth** (default): `copilot login`
+- **Environment variables**: `COPILOT_GITHUB_TOKEN`, `GH_TOKEN`, or `GITHUB_TOKEN`
+- **Fine-grained PATs**: With the "Copilot Requests" permission
 
 ### Requirements
 
-- GitHub CLI (`gh`) version 2.0+
 - Active GitHub Copilot subscription (Free, Pro, Business, or Enterprise)
-- Authenticated with `gh auth login`
+- Authenticated via `copilot login` or environment variable
 
-> **📚 Learn More:** [Copilot in the CLI](https://docs.github.com/en/copilot/github-copilot-in-the-cli/using-github-copilot-in-the-cli)
+> **📚 Learn More:** [Copilot CLI Command Reference](https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference)
 
 ---
 

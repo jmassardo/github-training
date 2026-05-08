@@ -92,17 +92,20 @@ next_module:
 |----------|-------------|------|
 | **Managing Copilot** | Organization and enterprise administration | [Managing Copilot](https://docs.github.com/en/copilot/managing-copilot) |
 | **Policy Configuration** | Setting up policies and content exclusions | [Managing Policies](https://docs.github.com/en/copilot/managing-copilot/managing-copilot-for-your-enterprise/managing-policies-and-features-for-copilot-in-your-enterprise) |
-| **Usage Analytics** | Tracking adoption and metrics | [Analyzing Usage](https://docs.github.com/en/copilot/rolling-out-github-copilot-at-scale/analyzing-copilot-usage-in-your-organization) |
-| **Rollout Guide** | Best practices for enterprise deployment | [Rolling Out Copilot](https://docs.github.com/en/copilot/rolling-out-github-copilot-at-scale) |
+| **Usage Analytics** | Tracking adoption and metrics | [Analyzing Usage](https://docs.github.com/en/copilot/managing-copilot) |
+| **Rollout Guide** | Best practices for enterprise deployment | [Rolling Out Copilot](https://docs.github.com/en/copilot/tutorials/roll-out-at-scale) |
 
 ### Pricing and Plans
 
-| Plan | Features | Link |
-|------|----------|------|
-| **Copilot Free** | Limited completions, basic chat | [Plans](https://docs.github.com/en/copilot/about-github-copilot/subscription-plans-for-github-copilot) |
-| **Copilot Pro** | Unlimited completions, priority access | [Plans](https://docs.github.com/en/copilot/about-github-copilot/subscription-plans-for-github-copilot) |
-| **Copilot Business** | Team management, policy controls | [Plans](https://docs.github.com/en/copilot/about-github-copilot/subscription-plans-for-github-copilot) |
-| **Copilot Enterprise** | Knowledge bases, fine-tuning | [Plans](https://docs.github.com/en/copilot/about-github-copilot/subscription-plans-for-github-copilot) |
+| Plan | Features | AI Credits/Month | Link |
+|------|----------|-----------------|------|
+| **Copilot Free** | Limited completions, basic chat | Limited | [Plans](https://docs.github.com/en/copilot/about-github-copilot/subscription-plans-for-github-copilot) |
+| **Copilot Pro** | Unlimited completions, model selection | 1,000 ($10/mo) | [Plans](https://docs.github.com/en/copilot/about-github-copilot/subscription-plans-for-github-copilot) |
+| **Copilot Pro+** | Advanced models, premium features | 3,900 ($39/mo) | [Plans](https://docs.github.com/en/copilot/about-github-copilot/subscription-plans-for-github-copilot) |
+| **Copilot Business** | Team management, policy controls | 1,900/user ($19/user/mo) | [Plans](https://docs.github.com/en/copilot/about-github-copilot/subscription-plans-for-github-copilot) |
+| **Copilot Enterprise** | Knowledge bases, dashboard, enhanced admin | 3,900/user ($39/user/mo) | [Plans](https://docs.github.com/en/copilot/about-github-copilot/subscription-plans-for-github-copilot) |
+
+> **🆕 Note:** As of June 1, 2026, Copilot uses [usage-based billing with AI Credits](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing). Code completions remain free and unlimited on paid plans. Credits are pooled for Business/Enterprise plans.
 
 ---
 
@@ -175,7 +178,8 @@ next_module:
 
 | Tool | Purpose | Link |
 |------|---------|------|
-| **gh copilot** | Copilot in terminal | [Installation](https://docs.github.com/en/copilot/github-copilot-in-the-cli/using-github-copilot-in-the-cli) |
+| **Copilot CLI** | Standalone terminal AI tool (replaced deprecated `gh copilot`) | [CLI Command Reference](https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference) |
+| **gh skill** | Discover and manage agent skills | [gh skill docs](https://docs.github.com/en/copilot/using-github-copilot/coding-agent) |
 | **GitHub CLI** | GitHub from command line | [cli.github.com](https://cli.github.com/) |
 
 ---

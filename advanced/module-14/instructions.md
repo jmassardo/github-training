@@ -633,4 +633,77 @@ class UserController {
 3. **Keep updated** as your codebase evolves
 4. **Scope appropriately** using applyTo patterns
 5. **Use knowledge bases** for organizational context
-6. **Test and iterate** on instruction effectiveness
+6. **Use prompt files** for repeatable team workflows
+7. **Leverage agent skills** to extend the coding agent's capabilities
+8. **Test and iterate** on instruction effectiveness
+
+---
+
+## Agent Skills
+
+Agent skills extend the Copilot coding agent with modular, portable capabilities that are automatically activated when relevant to a task.
+
+### What Are Agent Skills?
+
+Skills are packaged capabilities — like review checklists, environment setup routines, or framework-specific workflows — that the Copilot coding agent can invoke autonomously. They're similar to how MCP servers extend Copilot in the IDE, but designed for the cloud agent's autonomous workflow.
+
+### Skill Structure
+
+Skills live in `.github/skills/<skill-name>/SKILL.md`:
+
+```markdown
+<!-- .github/skills/terraform-review/SKILL.md -->
+---
+name: "Terraform Review"
+description: "Review Terraform modules for best practices and security"
+---
+
+# Terraform Review Skill
+
+When reviewing Terraform code, check:
+
+## Security
+- No hardcoded secrets or credentials
+- Encryption at rest enabled for storage resources
+- Least-privilege IAM policies
+
+## Best Practices
+- All variables have descriptions
+- Outputs are documented
+- Provider versions are pinned
+- Resources use consistent naming (snake_case with project prefix)
+
+## Performance
+- Use data sources instead of hardcoded values
+- Leverage count/for_each for similar resources
+- Use lifecycle rules where appropriate
+```
+
+### Managing Skills with GitHub CLI
+
+```bash
+# List available skills
+gh skill list
+
+# Search for a specific skill
+gh skill search "database migrations"
+
+# Install a skill for your organization
+gh skill install github/skill-rails-migrations
+
+# View installed skills
+gh skill list --installed
+
+# Remove a skill
+gh skill uninstall github/skill-rails-migrations
+```
+
+### When Skills vs. Instructions vs. Prompts
+
+| Feature | Scope | Activation | Best For |
+|---------|-------|------------|----------|
+| **Custom Instructions** | Always-on | Automatic | Coding standards, conventions |
+| **Prompt Files** | On-demand | User triggers slash command | Repeatable tasks, templates |
+| **Agent Skills** | Task-based | Agent selects when relevant | Specialized workflows for coding agent |
+| **Knowledge Bases** | Organization | Automatic for Enterprise | Documentation, architecture |
+| **Copilot Spaces** | Project/task | User selects a Space | Cross-repo context for conversations |

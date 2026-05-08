@@ -274,13 +274,35 @@ This response accurately frames Copilot as a productivity tool that enhances dev
 
 ---
 
+### Question 11: Copilot CLI
+
+**The standalone `copilot` CLI replaced the deprecated `gh copilot` extension. Which of the following is a key capability of the new Copilot CLI that was NOT available in the old extension?**
+
+A) Explaining shell commands in plain language  
+B) Full interactive conversational interface with plan and autopilot modes  
+C) Suggesting commands for a described task  
+D) Requiring a GitHub Copilot subscription  
+
+<details>
+<summary>Show Answer</summary>
+
+**B) Full interactive conversational interface with plan and autopilot modes**
+
+The standalone `copilot` CLI (which replaced the deprecated `gh copilot` extension in October 2025) provides a full interactive terminal experience including multi-turn conversations, file editing, command execution with approval flows, and agentic plan/autopilot modes. The old extension only supported `explain` and `suggest` commands. The CLI is available to **all Copilot plan tiers** (Free, Pro, Business, Enterprise) and is installed as a standalone tool (`brew install copilot-cli`, `winget install GitHub.Copilot`, or `npm install -g @github/copilot`).
+
+**Why this matters for CSMs:** The standalone Copilot CLI is a significant upgrade for terminal-heavy users — DevOps engineers, SREs, and platform teams. It demonstrates Copilot's value well beyond the IDE and supports full agentic workflows from the command line.
+
+</details>
+
+---
+
 ## Scoring
 
 | Score | Assessment |
 |-------|------------|
-| 9-10 | Excellent! Ready for Module 14 |
-| 7-8 | Good understanding, review missed topics |
-| 5-6 | Review the concepts section again |
+| 10-11 | Excellent! Ready for Module 14 |
+| 8-9 | Good understanding, review missed topics |
+| 5-7 | Review the concepts section again |
 | Below 5 | Re-read the module before proceeding |
 
 ---
@@ -296,6 +318,7 @@ If you missed any questions, review these key points:
 5. **Always review security-critical code** before accepting
 6. **VS Code** has the most complete feature set
 7. **Copilot augments**, doesn't replace, developers
+8. **Copilot CLI** (standalone `copilot` command) works in the terminal and is available to all plan tiers
 
 ---
 

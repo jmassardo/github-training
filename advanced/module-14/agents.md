@@ -285,7 +285,7 @@ GitHub Copilot's agent capabilities span two environments: **VS Code** (agent mo
 - The task follows standard patterns in the codebase
 - You want the work captured in a clean PR from the start
 
-> **📚 Learn More:** [Using agent mode](https://docs.github.com/en/copilot/using-github-copilot/using-copilot-coding-agent)
+> **📚 Learn More:** [Using the Copilot coding agent](https://docs.github.com/en/copilot/using-github-copilot/coding-agent)
 
 ---
 
@@ -387,6 +387,78 @@ Always review agent-generated changes:
 - Performance optimization
 - Security hardening
 - Architecture decisions
+
+## Agent Activity in Issues and Projects
+
+As of March 2026, when Copilot is working on an issue, its activity is visible directly in the GitHub UI — no need to hunt for status updates.
+
+### Where Agent Activity Appears
+
+- **Issues**: The Copilot coding agent shows up under **Assignees** on the issue, just like a human team member. This makes it clear at a glance which issues are being actively worked on by the agent.
+- **Projects**: Agent tasks surface in GitHub Projects boards, so product managers and team leads can track agent work alongside human work in their planning views.
+
+### Why This Matters for CSMs
+
+> "Enterprise customers with established GitHub Projects workflows can now incorporate Copilot agent tasks into their existing planning boards without any configuration. It just shows up."
+
+---
+
+## Controlling Copilot Cloud Agent at Scale
+
+Organizations can now enable the Copilot coding agent using **custom repository properties** (generally available April 2026), enabling granular, org-level control without touching each repository individually.
+
+### How It Works
+
+Instead of enabling the coding agent repository-by-repository, organization admins can:
+
+1. Create a custom repository property (e.g., `copilot_agent_enabled: true`)
+2. Apply that property to target repositories or teams via org-level policies
+3. The Copilot coding agent becomes available only in repositories matching the property
+
+This is particularly useful for phased rollouts — pilot teams get access first, then broader rollout follows once you're confident in the workflow.
+
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Talking Point</div>
+
+When a customer asks "How do we roll out the coding agent responsibly without enabling it everywhere at once?" — custom properties are your answer. It's the same pattern they already use for other org-level governance.
+</div>
+
+> **📚 Learn More:** [Managing Copilot](https://docs.github.com/en/copilot/managing-copilot)
+
+---
+
+## Managing Agent Skills with GitHub CLI
+
+The `gh skill` command (generally available April 2026) lets developers discover, install, and manage **agent skills** directly from the terminal.
+
+### What Are Agent Skills?
+
+Agent skills extend what the Copilot coding agent can do — similar to how MCP servers extend Copilot in the IDE, but designed for the cloud agent's autonomous workflow.
+
+### gh skill Commands
+
+```bash
+# List available skills
+gh skill list
+
+# Search for a specific skill
+gh skill search "database migrations"
+
+# Install a skill for your organization
+gh skill install github/skill-rails-migrations
+
+# View installed skills
+gh skill list --installed
+
+# Remove a skill
+gh skill uninstall github/skill-rails-migrations
+```
+
+### CSM Use Case
+
+Teams that have standardized on particular frameworks or toolchains can install relevant skills once at the org level, so every coding agent session benefits automatically.
+
+---
 
 ## Practical Applications
 

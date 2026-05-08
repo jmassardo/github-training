@@ -75,7 +75,8 @@ GitHub Copilot is an AI-powered coding assistant that provides:
 | **Copilot Chat** | Conversational AI in your IDE and on GitHub.com | Explaining code, debugging, refactoring |
 | **Multi-file Context** | Understands your entire project | Consistent naming, following patterns |
 | **Documentation** | Generates comments and docs | Inline comments, README content |
-| **Model Selection** | Choose your preferred AI model (GPT-4o, Claude, Gemini, etc.) | Optimizing for different tasks |
+| **Model Selection** | Choose your preferred AI model (GPT-4o, Claude Opus 4.7, etc.) | Optimizing for different tasks |
+| **Copilot CLI** | AI assistance directly in your terminal | Shell command explanation and generation |
 | **Code Review** | Automated pull request reviews | Catching issues before human review |
 | **Vision** | Attach images/screenshots for analysis | UI debugging, design implementation |
 
@@ -139,14 +140,40 @@ flowchart LR
 
 GitHub offers Copilot in several tiers to meet different needs:
 
-| Product | Audience | Key Features |
-|---------|----------|--------------|
-| **Copilot Free** | Individual developers | 2,000 completions + 50 chat messages/month |
-| **Copilot Pro** | Power users | Unlimited completions, model selection, advanced features |
-| **Copilot Business** | Teams & organizations | Admin controls, policy management, coding agent |
-| **Copilot Enterprise** | Large enterprises | Knowledge bases, Bing search, enhanced admin controls |
+| Product | Audience | Key Features | AI Credits/Month |
+|---------|----------|--------------|-----------------|
+| **Copilot Free** | Individual developers | 2,000 completions + 50 chat messages/month | Limited |
+| **Copilot Pro** | Power users | Unlimited completions, model selection | 1,000 ($10/mo) |
+| **Copilot Pro+** | Advanced users | All Pro features + premium models | 3,900 ($39/mo) |
+| **Copilot Business** | Teams & organizations | Admin controls, policy management, coding agent | 1,900/user ($19/user/mo, pooled) |
+| **Copilot Enterprise** | Large enterprises | Knowledge bases, enhanced admin controls, Copilot Dashboard | 3,900/user ($39/user/mo, pooled) |
 
-> **📚 Learn More:** [Copilot Plans and Pricing](https://docs.github.com/en/copilot/about-github-copilot/subscription-plans-for-github-copilot)
+<div class="callout callout-warning">
+<div class="callout-title">🆕 Usage-Based Billing (June 2026)</div>
+
+Starting **June 1, 2026**, Copilot billing transitions from request-based to **usage-based billing with AI Credits** (1 credit = $0.01 USD). Key changes:
+
+- **Token-based pricing**: Usage is measured by input, output, and cached tokens consumed per interaction
+- **Model-specific rates**: Different AI models cost different amounts per million tokens (e.g., GPT-4.1 is cheaper than Claude Opus)
+- **Monthly credit allotment**: Each plan includes credits equal to its dollar price; overage credits can be purchased
+- **Code completions stay free**: Standard ghost text suggestions remain unlimited on all paid plans
+- **Pooled credits**: For Business and Enterprise plans, credits are pooled across all org users
+- **Budget controls**: Enterprise admins can set spend limits at enterprise, cost center, or user levels
+
+For detailed per-model pricing, see the [Models and Pricing documentation](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing).
+</div>
+
+<div class="callout callout-info">
+<div class="callout-title">🆕 Model Changes (2026)</div>
+
+**Claude Opus 4.7** became generally available in April 2026, bringing stronger multi-step reasoning and task performance to all Copilot subscribers.
+
+**Gemini 3 Pro was removed** from all Copilot experiences on March 26, 2026. If customers ask about Gemini in Copilot, refer them to the supported models page for what's currently available.
+
+Model availability changes over time — always check the [supported AI models documentation](https://docs.github.com/en/copilot/using-github-copilot/ai-models/supported-ai-models-in-copilot) for the current list.
+</div>
+
+> **📚 Learn More:** [Copilot Plans and Pricing](https://docs.github.com/en/copilot/about-github-copilot/subscription-plans-for-github-copilot) | [Models and Pricing](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing)
 
 ---
 

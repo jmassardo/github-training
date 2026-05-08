@@ -328,6 +328,106 @@ query GetAuditLogs($enterprise: String!, $first: Int!) {
 
 ```
 
+### Deployment Context in Repository Properties (April 2026)
+
+GitHub introduced two new **built-in repository properties** to help organizations track deployment status across their portfolio:
+
+| Property | Values | Meaning |
+|----------|--------|---------|
+| `deployable` | `true` / `false` | Whether the repository is intended to be deployed |
+| `deployed` | `true` / `false` | Whether the repository currently has an active deployment |
+
+**Why this matters:** Large enterprises often have hundreds or thousands of repositories, and it's hard to know at a glance which ones are actively deployed production systems versus internal tools, libraries, or archived projects.
+
+With these properties, organization admins can:
+- Filter repositories by deployment status in the org dashboard
+- Target security policies specifically at deployed repositories
+- Build dashboards that show risk posture for actively-deployed software
+
+```bash
+# Set the deployable property on a repository
+gh api -X PATCH /repos/{owner}/{repo}/properties/values \
+  -f "properties[][property_name]=deployable" \
+  -f "properties[][value]=true"
+
+# Find all deployed repositories in an org
+gh api /orgs/{org}/repos \
+  --jq '[.[] | select(.custom_properties.deployed == "true") | .name]'
+```
+
+### Rule Insights Dashboard (April 2026)
+
+The new **Rule Insights dashboard** gives enterprise administrators trend data for ruleset enforcement — specifically tracking what's getting blocked and who's bypassing rules.
+
+**Location**: Enterprise or Organization → Settings → Rules → Insights
+
+**What it shows:**
+
+| Metric | Description |
+|--------|-------------|
+| **Blocked pushes** | How many pushes were blocked by rulesets over time |
+| **Bypass activity** | Who bypassed rules, when, and which rules were bypassed |
+| **Rule effectiveness** | Which rules trigger most often (helping prioritize which to keep) |
+| **Trends** | Week-over-week and month-over-month views |
+
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Talking Point</div>
+
+The Rule Insights dashboard answers a common governance question: "Are our branch protection rules actually working?" Before, admins had to parse audit logs manually. Now it's a visual dashboard showing rule violations and bypass trends over time — perfect for quarterly compliance reviews.
+</div>
+
+## 2.7 Platform Security: SHA-1 HTTPS Sunset
+
+On April 20, 2026, GitHub announced it is removing support for **SHA-1 cipher suites from HTTPS connections** to GitHub.com and its CDNs. This is a TLS-layer change — it is **not** related to how Git uses SHA-1 internally for commit hashing.
+
+### What Is Changing
+
+GitHub is dropping SHA-1 from the list of acceptable TLS cipher suites for HTTPS connections to:
+- github.com and api.github.com
+- GitHub's CDN endpoints (raw.githubusercontent.com, objects.githubusercontent.com, etc.)
+
+Modern HTTPS connections use SHA-256 or SHA-384 cipher suites and are unaffected.
+
+### Who Is Affected
+
+| Affected Scenario | Example |
+|------------------|---------|
+| **Legacy browsers** | Older browsers that only support SHA-1 for TLS negotiation |
+| **Outdated Git clients** | Git versions with old OpenSSL/LibreSSL dependencies |
+| **Legacy CI/CD tooling** | Build agents running on older OS images (e.g., older Ubuntu LTS, RHEL 7) |
+| **Custom integrations** | Webhook consumers or scripts using system TLS libraries that haven't been updated |
+| **On-premises proxies** | Corporate SSL inspection proxies with outdated cipher support |
+
+**Most developers are unaffected** — modern Git clients, current OS versions, and up-to-date browsers all use SHA-256 ciphers by default.
+
+### How to Check Customer Exposure
+
+If a customer reports connection failures after this change, the diagnostic question is: **"What is the TLS library version on the system making the connection?"**
+
+```bash
+# Check OpenSSL version on Linux/macOS
+openssl version
+
+# Check Git's TLS version
+git --version && curl --version
+```
+
+Any system running a reasonably current OS (Ubuntu 20.04+, RHEL 8+, macOS 12+, Windows 10+) will already use SHA-256 by default.
+
+### CSM Action Items
+
+1. **Proactively flag GHES customers** running older operating systems on their build infrastructure — self-hosted runners on older OS images are the most likely to be affected
+2. **Ask about on-premises proxies** — SSL inspection proxies that haven't been updated in several years may need cipher suite configuration changes
+3. **Confirm Git client currency** — Customers still running Git 2.17 or earlier (shipped with Ubuntu 18.04) should upgrade
+
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Talking Point</div>
+
+This is a good opportunity to ask customers, "When did you last audit the OS versions on your CI runners and internal tooling?" SHA-1 HTTPS removal is low-risk for most, but it surfaces the broader question of keeping infrastructure current — which matters for security patch coverage and GHAS compatibility too.
+</div>
+
+> **📚 Reference:** [GitHub Changelog: Sunsetting SHA-1 in HTTPS on GitHub](https://github.blog/changelog/2026-04-20-sunsetting-sha-1-in-https-on-github)
+
 ## 2.6 GitHub Connect (Hybrid Deployments)
 
 For customers running GitHub Enterprise Server alongside GitHub Enterprise Cloud:
