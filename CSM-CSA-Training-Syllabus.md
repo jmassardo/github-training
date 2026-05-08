@@ -9,7 +9,7 @@ description: "Comprehensive training program curriculum for Customer Success Man
 
 **Comprehensive Training Program for Customer Success Managers & Customer Success Architects**
 
-*Last Updated: Feb, 13 2026*
+*Last Updated: May, 8 2026*
 
 
 ---
@@ -880,8 +880,8 @@ The syllabus follows the **natural software development workflow**, introducing 
    - GitHub Docs: [Copilot pull request summaries](https://docs.github.com/en/copilot/using-github-copilot/using-copilot-pull-request-summaries)
 
 6. **Copilot CLI** (1-2 hours)
-   - GitHub Docs: [Using Copilot in the CLI](https://docs.github.com/en/copilot/using-github-copilot/using-github-copilot-in-the-command-line)
-   - GitHub CLI Manual: [gh copilot](https://cli.github.com/manual/gh_copilot)
+   - GitHub Docs: [Copilot CLI Command Reference](https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference)
+   - Note: The standalone `copilot` CLI replaced the deprecated `gh copilot` extension (Oct 2025)
 
 **Lab Exercise:**
 
@@ -890,7 +890,7 @@ The syllabus follows the **natural software development workflow**, introducing 
 - Use Copilot Chat to explain unfamiliar code
 - Generate unit tests using Copilot
 - Use Copilot for code review on a sample PR
-- Try Copilot CLI for shell command suggestions
+- Install the standalone Copilot CLI and explore interactive, plan, and autopilot modes
 - Document 5 effective prompts for common development tasks
 
 ---
@@ -924,19 +924,23 @@ The syllabus follows the **natural software development workflow**, introducing 
    - GitHub Docs: [Building Copilot Extensions](https://docs.github.com/en/copilot/building-copilot-extensions)
    - GitHub Marketplace: [Copilot Extensions](https://github.com/marketplace?type=apps&copilot_app=true)
 
-4. **Custom Instructions** (1-2 hours)
+4. **Custom Instructions, Prompt Files & Agent Skills** (2-3 hours)
    - GitHub Docs: [Adding custom instructions](https://docs.github.com/en/copilot/customizing-copilot/adding-custom-instructions-for-github-copilot)
    - GitHub Docs: [Repository-level instructions](https://docs.github.com/en/copilot/customizing-copilot/adding-repository-instructions-for-github-copilot)
+   - Prompt files (`.github/prompts/*.prompt.md`) — reusable slash commands for Copilot Chat
+   - Agent skills (`.github/skills/`) — modular capabilities for the coding agent
 
 5. **Copilot Spaces** (2-3 hours)
    - GitHub Docs: [Using Copilot Spaces](https://docs.github.com/en/copilot/using-github-copilot/using-copilot-spaces)
    - GitHub Docs: [Managing Copilot Spaces in your organization](https://docs.github.com/en/copilot/managing-copilot/managing-copilot-for-your-organization)
    - GitHub Blog: [Introducing Copilot Spaces](https://github.blog/changelog/)
 
-6. **Enterprise Administration** (3-4 hours)
+6. **Enterprise Administration & Billing** (3-4 hours)
    - GitHub Docs: [Managing Copilot for your organization](https://docs.github.com/en/copilot/managing-copilot/managing-copilot-for-your-organization)
    - GitHub Docs: [Copilot policies](https://docs.github.com/en/copilot/managing-copilot/managing-copilot-for-your-organization/managing-policies-for-copilot-in-your-organization)
    - GitHub Docs: [Configuring content exclusions](https://docs.github.com/en/copilot/managing-copilot/managing-copilot-for-your-organization/configuring-content-exclusions-for-github-copilot)
+   - GitHub Docs: [Models and Pricing (AI Credits)](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing)
+   - Note: As of June 2026, Copilot uses usage-based billing with AI Credits (1 credit = $0.01). Credits are pooled for org plans, and code completions remain free.
    - Microsoft Learn: [Manage GitHub Copilot for Business](https://learn.microsoft.com/en-us/training/modules/manage-github-copilot-business/)
 
 7. **Metrics & Adoption** (2-3 hours)
@@ -954,13 +958,15 @@ The syllabus follows the **natural software development workflow**, introducing 
 - Use Copilot Agent mode to implement a multi-file feature
 - Assign a GitHub issue to Copilot coding agent and review the resulting PR
 - Create custom instructions for a sample organization's coding standards
+- Create reusable prompt files (`.prompt.md`) for team workflows
+- Install and manage agent skills using `gh skill`
 - Set up a Copilot Space with curated context for a customer use case
 - Configure an MCP server for additional context (e.g., database schema)
 - Install and use a Copilot Extension from the Marketplace
 - Build a Copilot metrics dashboard using the Metrics API
-- Create a Copilot rollout plan for an enterprise customer
+- Create a Copilot rollout plan for an enterprise customer including AI Credit budget planning
 - Configure content exclusions for sensitive repositories
-- Practice presenting Copilot ROI metrics to stakeholders
+- Practice presenting Copilot ROI metrics (including AI Credit costs) to stakeholders
 
 ---
 

@@ -95,7 +95,7 @@ GitHub Copilot Enterprise provides centralized controls for managing AI assistan
 <div class="mermaid">
 flowchart TD
   subgraph AdminHierarchy["Administration Hierarchy"]
-    Enterprise["🏛️ Enterprise Level<br/>• Enterprise-wide policies<br/>• Cross-org license management<br/>• Consolidated billing"]
+    Enterprise["🏛️ Enterprise Level<br/>• Enterprise-wide policies<br/>• Cross-org license management<br/>• Consolidated billing &amp; AI Credit budgets"]
     
     Enterprise --> Org1 & Org2 & Org3
     
@@ -492,6 +492,32 @@ gh api /orgs/{org}/copilot/billing/seats \
 | Chargeback to departments | Medium | High |
 | Usage-based eligibility | High | Medium |
 
+### AI Credits Billing (June 2026)
+
+Starting June 1, 2026, Copilot uses **usage-based billing with AI Credits** alongside seat management:
+
+| Aspect | Details |
+|--------|---------|
+| **Credit value** | 1 AI Credit = $0.01 USD |
+| **Business allocation** | 1,900 credits/user/month (pooled across org) |
+| **Enterprise allocation** | 3,900 credits/user/month (pooled across org) |
+| **What consumes credits** | Copilot Chat, CLI, cloud agents, Spaces, code review, advanced models |
+| **What stays free** | Standard code completions (ghost text) remain unlimited |
+| **Budget controls** | Set spending limits at enterprise, cost center, or user level |
+| **Overage** | Additional credits can be purchased; usage stops when credits are exhausted |
+
+<div class="callout callout-tip">
+<div class="callout-title">💡 CSM Talking Point</div>
+
+When enterprise customers ask about cost predictability under the new model, emphasize:
+- **Pooled credits** mean light users offset heavy users within the org
+- **Budget controls** prevent surprise overages
+- **Code completions are still free** — the highest-volume feature costs nothing extra
+- **Model choice matters** — steering teams toward cost-effective models (like GPT-4.1 or GPT-5 mini) stretches credits further
+</div>
+
+> **📚 Learn More:** [Models and Pricing](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing)
+
 ---
 
 ## Key Takeaways
@@ -501,4 +527,5 @@ gh api /orgs/{org}/copilot/billing/seats \
 3. **Audit logging** supports compliance and security requirements
 4. **Phased rollout** reduces risk and improves adoption success
 5. **Regular reviews** optimize costs and maintain appropriate access
-6. **Clear documentation** empowers users and reduces support burden
+6. **AI Credits billing** requires new cost management strategies — monitor credit consumption alongside seat utilization
+7. **Clear documentation** empowers users and reduces support burden

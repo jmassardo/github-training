@@ -140,12 +140,28 @@ flowchart LR
 
 GitHub offers Copilot in several tiers to meet different needs:
 
-| Product | Audience | Key Features |
-|---------|----------|--------------|
-| **Copilot Free** | Individual developers | 2,000 completions + 50 chat messages/month |
-| **Copilot Pro** | Power users | Unlimited completions, model selection, advanced features |
-| **Copilot Business** | Teams & organizations | Admin controls, policy management, coding agent |
-| **Copilot Enterprise** | Large enterprises | Knowledge bases, enhanced admin controls, Copilot Dashboard |
+| Product | Audience | Key Features | AI Credits/Month |
+|---------|----------|--------------|-----------------|
+| **Copilot Free** | Individual developers | 2,000 completions + 50 chat messages/month | Limited |
+| **Copilot Pro** | Power users | Unlimited completions, model selection | 1,000 ($10/mo) |
+| **Copilot Pro+** | Advanced users | All Pro features + premium models | 3,900 ($39/mo) |
+| **Copilot Business** | Teams & organizations | Admin controls, policy management, coding agent | 1,900/user ($19/user/mo, pooled) |
+| **Copilot Enterprise** | Large enterprises | Knowledge bases, enhanced admin controls, Copilot Dashboard | 3,900/user ($39/user/mo, pooled) |
+
+<div class="callout callout-warning">
+<div class="callout-title">🆕 Usage-Based Billing (June 2026)</div>
+
+Starting **June 1, 2026**, Copilot billing transitions from request-based to **usage-based billing with AI Credits** (1 credit = $0.01 USD). Key changes:
+
+- **Token-based pricing**: Usage is measured by input, output, and cached tokens consumed per interaction
+- **Model-specific rates**: Different AI models cost different amounts per million tokens (e.g., GPT-4.1 is cheaper than Claude Opus)
+- **Monthly credit allotment**: Each plan includes credits equal to its dollar price; overage credits can be purchased
+- **Code completions stay free**: Standard ghost text suggestions remain unlimited on all paid plans
+- **Pooled credits**: For Business and Enterprise plans, credits are pooled across all org users
+- **Budget controls**: Enterprise admins can set spend limits at enterprise, cost center, or user levels
+
+For detailed per-model pricing, see the [Models and Pricing documentation](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing).
+</div>
 
 <div class="callout callout-info">
 <div class="callout-title">🆕 Model Changes (2026)</div>
@@ -157,7 +173,7 @@ GitHub offers Copilot in several tiers to meet different needs:
 Model availability changes over time — always check the [supported AI models documentation](https://docs.github.com/en/copilot/using-github-copilot/ai-models/supported-ai-models-in-copilot) for the current list.
 </div>
 
-> **📚 Learn More:** [Copilot Plans and Pricing](https://docs.github.com/en/copilot/about-github-copilot/subscription-plans-for-github-copilot)
+> **📚 Learn More:** [Copilot Plans and Pricing](https://docs.github.com/en/copilot/about-github-copilot/subscription-plans-for-github-copilot) | [Models and Pricing](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing)
 
 ---
 

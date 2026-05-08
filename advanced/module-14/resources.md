@@ -176,8 +176,9 @@ POST /orgs/{org}/copilot/billing/selected_users  # Assign seats
 
 ```bash
 # Useful Copilot CLI commands
-gh copilot explain "command"    # Explain a command
-gh copilot suggest "task"       # Get command suggestions
+copilot                            # Launch interactive Copilot CLI
+copilot login                      # Authenticate with GitHub
+copilot init                       # Initialize custom instructions for a repo
 gh api /orgs/{org}/copilot/...  # API access
 gh skill list                   # List available agent skills
 gh skill install {skill}        # Install an agent skill

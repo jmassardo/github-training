@@ -74,7 +74,7 @@ GitHub Copilot supports a wide range of development environments. Here's the cur
 | **Eclipse** | ⚠️ Preview | ❌ No | Limited functionality |
 | **GitHub.com** | N/A | ✅ Full | Chat, PR summaries, code review |
 | **GitHub Mobile** | N/A | ✅ Full | Chat on iOS and Android |
-| **GitHub CLI** | N/A | ✅ Full | `gh copilot` for terminal |
+| **GitHub CLI** | N/A | ✅ Full | Standalone `copilot` CLI for terminal |
 
 > **📚 Learn More:** [Supported IDEs](https://docs.github.com/en/copilot/github-copilot-chat/using-github-copilot-chat-in-your-ide)
 

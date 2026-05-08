@@ -276,21 +276,21 @@ This response accurately frames Copilot as a productivity tool that enhances dev
 
 ### Question 11: Copilot CLI
 
-**What is the primary purpose of the `gh copilot suggest` command available in Copilot CLI (GA)?**
+**The standalone `copilot` CLI replaced the deprecated `gh copilot` extension. Which of the following is a key capability of the new Copilot CLI that was NOT available in the old extension?**
 
-A) Create a new GitHub repository from the terminal  
-B) Generate a shell command for a task described in natural language  
-C) Commit staged files with an AI-generated commit message  
-D) Open Copilot Chat inside the terminal  
+A) Explaining shell commands in plain language  
+B) Full interactive conversational interface with plan and autopilot modes  
+C) Suggesting commands for a described task  
+D) Requiring a GitHub Copilot subscription  
 
 <details>
 <summary>Show Answer</summary>
 
-**B) Generate a shell command for a task described in natural language**
+**B) Full interactive conversational interface with plan and autopilot modes**
 
-`gh copilot suggest` takes a natural language description of what you want to do and returns one or more shell commands to accomplish it. For example, `gh copilot suggest "find all Python files modified in the last 7 days"` returns the appropriate `find` command. This is available to **all Copilot plan tiers** (Free, Pro, Business, Enterprise) via the `gh` CLI extension.
+The standalone `copilot` CLI (which replaced the deprecated `gh copilot` extension in October 2025) provides a full interactive terminal experience including multi-turn conversations, file editing, command execution with approval flows, and agentic plan/autopilot modes. The old extension only supported `explain` and `suggest` commands. The CLI is available to **all Copilot plan tiers** (Free, Pro, Business, Enterprise) and is installed as a standalone tool (`brew install copilot-cli`, `winget install GitHub.Copilot`, or `npm install -g @github/copilot`).
 
-**Why this matters for CSMs:** Copilot CLI is a low-friction entry point for teams that live in the terminal — DevOps engineers, SREs, and platform teams. It demonstrates Copilot value outside the IDE.
+**Why this matters for CSMs:** The standalone Copilot CLI is a significant upgrade for terminal-heavy users — DevOps engineers, SREs, and platform teams. It demonstrates Copilot's value well beyond the IDE and supports full agentic workflows from the command line.
 
 </details>
 
@@ -318,7 +318,7 @@ If you missed any questions, review these key points:
 5. **Always review security-critical code** before accepting
 6. **VS Code** has the most complete feature set
 7. **Copilot augments**, doesn't replace, developers
-8. **Copilot CLI** (`gh copilot`) works in the terminal and is available to all plan tiers
+8. **Copilot CLI** (standalone `copilot` command) works in the terminal and is available to all plan tiers
 
 ---
 
